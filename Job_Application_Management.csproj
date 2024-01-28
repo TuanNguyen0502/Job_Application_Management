@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FCandidate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FCandidate.Designer.cs">
+      <DependentUpon>FCandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEmployer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployer.Designer.cs">
+      <DependentUpon>FEmployer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FForgetPassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FForgetPassWord.Designer.cs">
+      <DependentUpon>FForgetPassWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRegister.Designer.cs">
+      <DependentUpon>FRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
