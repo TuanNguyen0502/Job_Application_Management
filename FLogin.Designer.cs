@@ -83,9 +83,9 @@
             // button_Login
             // 
             this.button_Login.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Login.Location = new System.Drawing.Point(241, 307);
+            this.button_Login.Location = new System.Drawing.Point(235, 307);
             this.button_Login.Name = "button_Login";
-            this.button_Login.Size = new System.Drawing.Size(337, 53);
+            this.button_Login.Size = new System.Drawing.Size(343, 53);
             this.button_Login.TabIndex = 4;
             this.button_Login.Text = "Login";
             this.button_Login.UseVisualStyleBackColor = true;
@@ -93,19 +93,19 @@
             // button_ForgerPassword
             // 
             this.button_ForgerPassword.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ForgerPassword.Location = new System.Drawing.Point(359, 379);
+            this.button_ForgerPassword.Location = new System.Drawing.Point(330, 379);
             this.button_ForgerPassword.Name = "button_ForgerPassword";
-            this.button_ForgerPassword.Size = new System.Drawing.Size(219, 42);
+            this.button_ForgerPassword.Size = new System.Drawing.Size(248, 42);
             this.button_ForgerPassword.TabIndex = 5;
             this.button_ForgerPassword.Text = "Forget password ?";
             this.button_ForgerPassword.UseVisualStyleBackColor = true;
             // 
             // button_SignUp
             // 
-            this.button_SignUp.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_SignUp.Location = new System.Drawing.Point(400, 455);
+            this.button_SignUp.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_SignUp.Location = new System.Drawing.Point(330, 473);
             this.button_SignUp.Name = "button_SignUp";
-            this.button_SignUp.Size = new System.Drawing.Size(178, 53);
+            this.button_SignUp.Size = new System.Drawing.Size(248, 53);
             this.button_SignUp.TabIndex = 6;
             this.button_SignUp.Text = "Sign Up";
             this.button_SignUp.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(118, 473);
+            this.label3.Location = new System.Drawing.Point(326, 447);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(252, 23);
             this.label3.TabIndex = 8;
