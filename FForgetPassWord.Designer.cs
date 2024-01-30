@@ -44,9 +44,9 @@
             this.button_Login.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Login.Location = new System.Drawing.Point(95, 48);
             this.button_Login.Name = "button_Login";
-            this.button_Login.Size = new System.Drawing.Size(109, 42);
+            this.button_Login.Size = new System.Drawing.Size(134, 42);
             this.button_Login.TabIndex = 0;
-            this.button_Login.Text = "Go Back";
+            this.button_Login.Text = "< Go Back";
             this.button_Login.UseVisualStyleBackColor = true;
             // 
             // button_ResetPassword
