@@ -16,7 +16,7 @@ namespace Job_Application_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FForgetPassWord());
+            Application.Run(new FEmployer());
         }
     }
 }

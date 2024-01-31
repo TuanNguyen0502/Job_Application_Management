@@ -87,6 +87,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FEmployer.resx">
+      <DependentUpon>FEmployer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FForgetPassWord.resx">
       <DependentUpon>FForgetPassWord.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,8 +122,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\Login free icons designed by Good Ware.jpg" />
+    <None Include="Resources\ShakeHand.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
