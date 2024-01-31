@@ -61,6 +61,30 @@
     <Compile Include="FEmployer.Designer.cs">
       <DependentUpon>FEmployer.cs</DependentUpon>
     </Compile>
+    <Compile Include="FEmployer_FindCandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployer_FindCandidate.Designer.cs">
+      <DependentUpon>FEmployer_FindCandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEmployer_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployer_Information.Designer.cs">
+      <DependentUpon>FEmployer_Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEmployer_PostedJobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployer_PostedJobs.Designer.cs">
+      <DependentUpon>FEmployer_PostedJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEmployer_PostJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployer_PostJob.Designer.cs">
+      <DependentUpon>FEmployer_PostJob.cs</DependentUpon>
+    </Compile>
     <Compile Include="FForgetPassWord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +113,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FEmployer.resx">
       <DependentUpon>FEmployer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEmployer_FindCandidate.resx">
+      <DependentUpon>FEmployer_FindCandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEmployer_Information.resx">
+      <DependentUpon>FEmployer_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEmployer_PostedJobs.resx">
+      <DependentUpon>FEmployer_PostedJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEmployer_PostJob.resx">
+      <DependentUpon>FEmployer_PostJob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FForgetPassWord.resx">
       <DependentUpon>FForgetPassWord.cs</DependentUpon>
