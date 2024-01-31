@@ -51,17 +51,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(54, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(225, 19);
+            this.label2.Size = new System.Drawing.Size(250, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Already have an account?";
             // 
             // button_Login
             // 
             this.button_Login.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Login.Location = new System.Drawing.Point(285, 145);
+            this.button_Login.Location = new System.Drawing.Point(310, 147);
             this.button_Login.Name = "button_Login";
             this.button_Login.Size = new System.Drawing.Size(93, 37);
             this.button_Login.TabIndex = 2;
