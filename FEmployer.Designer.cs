@@ -61,7 +61,7 @@
             this.flowLayoutPanel_Left.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel_Left.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel_Left.Name = "flowLayoutPanel_Left";
-            this.flowLayoutPanel_Left.Size = new System.Drawing.Size(237, 744);
+            this.flowLayoutPanel_Left.Size = new System.Drawing.Size(237, 844);
             this.flowLayoutPanel_Left.TabIndex = 2;
             // 
             // pictureBox1
@@ -120,20 +120,22 @@
             this.panel_Center.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Center.Location = new System.Drawing.Point(237, 100);
             this.panel_Center.Name = "panel_Center";
-            this.panel_Center.Size = new System.Drawing.Size(1241, 644);
+            this.panel_Center.Size = new System.Drawing.Size(1241, 744);
             this.panel_Center.TabIndex = 4;
             // 
             // FEmployer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1478, 744);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1478, 844);
             this.Controls.Add(this.panel_Center);
             this.Controls.Add(this.panel_Top);
             this.Controls.Add(this.flowLayoutPanel_Left);
             this.Name = "FEmployer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.flowLayoutPanel_Left.ResumeLayout(false);
             this.flowLayoutPanel_Left.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
