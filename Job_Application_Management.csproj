@@ -67,6 +67,12 @@
     <Compile Include="FEmployer_ApprovedCandidate.Designer.cs">
       <DependentUpon>FEmployer_ApprovedCandidate.cs</DependentUpon>
     </Compile>
+    <Compile Include="FEmployer_CandidateCVDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployer_CandidateCVDetail.Designer.cs">
+      <DependentUpon>FEmployer_CandidateCVDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FEmployer_FindCandidate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +97,11 @@
     <Compile Include="FEmployer_SeeCandidate.Designer.cs">
       <DependentUpon>FEmployer_SeeCandidate.cs</DependentUpon>
     </Compile>
-    <Compile Include="FForgetPassWord.cs">
+    <Compile Include="FForgetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FForgetPassWord.Designer.cs">
-      <DependentUpon>FForgetPassWord.cs</DependentUpon>
+    <Compile Include="FForgetPassword.Designer.cs">
+      <DependentUpon>FForgetPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
@@ -135,8 +141,8 @@
     <EmbeddedResource Include="FEmployer_SeeCandidate.resx">
       <DependentUpon>FEmployer_SeeCandidate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FForgetPassWord.resx">
-      <DependentUpon>FForgetPassWord.cs</DependentUpon>
+    <EmbeddedResource Include="FForgetPassword.resx">
+      <DependentUpon>FForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
