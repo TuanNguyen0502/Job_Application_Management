@@ -56,9 +56,10 @@
             this.comboBox_WorkType = new System.Windows.Forms.ComboBox();
             this.panel_Center = new System.Windows.Forms.Panel();
             this.panel_Button = new System.Windows.Forms.Panel();
+            this.button_SeeCandidate = new System.Windows.Forms.Button();
             this.button_Delete = new System.Windows.Forms.Button();
             this.button_Change = new System.Windows.Forms.Button();
-            this.button_SeeCandidate = new System.Windows.Forms.Button();
+            this.button_ApprovedCandidate = new System.Windows.Forms.Button();
             this.panel_Bottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Job)).BeginInit();
             this.tableLayoutPanel_Information.SuspendLayout();
@@ -89,7 +90,7 @@
             // button_Post
             // 
             this.button_Post.Font = new System.Drawing.Font("Consolas", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Post.Location = new System.Drawing.Point(115, 3);
+            this.button_Post.Location = new System.Drawing.Point(43, 3);
             this.button_Post.Name = "button_Post";
             this.button_Post.Size = new System.Drawing.Size(170, 65);
             this.button_Post.TabIndex = 0;
@@ -382,6 +383,7 @@
             // 
             // panel_Button
             // 
+            this.panel_Button.Controls.Add(this.button_ApprovedCandidate);
             this.panel_Button.Controls.Add(this.button_SeeCandidate);
             this.panel_Button.Controls.Add(this.button_Delete);
             this.panel_Button.Controls.Add(this.button_Change);
@@ -392,10 +394,20 @@
             this.panel_Button.Size = new System.Drawing.Size(1395, 76);
             this.panel_Button.TabIndex = 6;
             // 
+            // button_SeeCandidate
+            // 
+            this.button_SeeCandidate.Font = new System.Drawing.Font("Consolas", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_SeeCandidate.Location = new System.Drawing.Point(640, 3);
+            this.button_SeeCandidate.Name = "button_SeeCandidate";
+            this.button_SeeCandidate.Size = new System.Drawing.Size(271, 65);
+            this.button_SeeCandidate.TabIndex = 3;
+            this.button_SeeCandidate.Text = "See Candidate";
+            this.button_SeeCandidate.UseVisualStyleBackColor = true;
+            // 
             // button_Delete
             // 
             this.button_Delete.Font = new System.Drawing.Font("Consolas", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Delete.Location = new System.Drawing.Point(604, 3);
+            this.button_Delete.Location = new System.Drawing.Point(448, 3);
             this.button_Delete.Name = "button_Delete";
             this.button_Delete.Size = new System.Drawing.Size(170, 65);
             this.button_Delete.TabIndex = 2;
@@ -405,22 +417,22 @@
             // button_Change
             // 
             this.button_Change.Font = new System.Drawing.Font("Consolas", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Change.Location = new System.Drawing.Point(361, 3);
+            this.button_Change.Location = new System.Drawing.Point(242, 3);
             this.button_Change.Name = "button_Change";
             this.button_Change.Size = new System.Drawing.Size(170, 65);
             this.button_Change.TabIndex = 1;
             this.button_Change.Text = "Change";
             this.button_Change.UseVisualStyleBackColor = true;
             // 
-            // button_SeeCandidate
+            // button_ApprovedCandidate
             // 
-            this.button_SeeCandidate.Font = new System.Drawing.Font("Consolas", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_SeeCandidate.Location = new System.Drawing.Point(860, 3);
-            this.button_SeeCandidate.Name = "button_SeeCandidate";
-            this.button_SeeCandidate.Size = new System.Drawing.Size(271, 65);
-            this.button_SeeCandidate.TabIndex = 3;
-            this.button_SeeCandidate.Text = "See Candidate";
-            this.button_SeeCandidate.UseVisualStyleBackColor = true;
+            this.button_ApprovedCandidate.Font = new System.Drawing.Font("Consolas", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ApprovedCandidate.Location = new System.Drawing.Point(930, 3);
+            this.button_ApprovedCandidate.Name = "button_ApprovedCandidate";
+            this.button_ApprovedCandidate.Size = new System.Drawing.Size(368, 65);
+            this.button_ApprovedCandidate.TabIndex = 4;
+            this.button_ApprovedCandidate.Text = "Approved Candidate";
+            this.button_ApprovedCandidate.UseVisualStyleBackColor = true;
             // 
             // FEmployer_PostJob
             // 
@@ -474,5 +486,6 @@
         private System.Windows.Forms.Button button_Delete;
         private System.Windows.Forms.Button button_Change;
         private System.Windows.Forms.Button button_SeeCandidate;
+        private System.Windows.Forms.Button button_ApprovedCandidate;
     }
 }
