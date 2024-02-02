@@ -32,7 +32,6 @@
             this.flowLayoutPanel_Left = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_PostJob = new System.Windows.Forms.Button();
-            this.button_SeeCandidate = new System.Windows.Forms.Button();
             this.button_FindCandidate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_Top = new System.Windows.Forms.Panel();
@@ -58,7 +57,6 @@
             this.flowLayoutPanel_Left.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel_Left.Controls.Add(this.button_Infomation);
             this.flowLayoutPanel_Left.Controls.Add(this.button_PostJob);
-            this.flowLayoutPanel_Left.Controls.Add(this.button_SeeCandidate);
             this.flowLayoutPanel_Left.Controls.Add(this.button_FindCandidate);
             this.flowLayoutPanel_Left.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel_Left.Location = new System.Drawing.Point(0, 0);
@@ -87,21 +85,10 @@
             this.button_PostJob.UseVisualStyleBackColor = true;
             this.button_PostJob.Click += new System.EventHandler(this.button_PostJob_Click);
             // 
-            // button_SeeCandidate
-            // 
-            this.button_SeeCandidate.Font = new System.Drawing.Font("Consolas", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_SeeCandidate.Location = new System.Drawing.Point(3, 277);
-            this.button_SeeCandidate.Name = "button_SeeCandidate";
-            this.button_SeeCandidate.Size = new System.Drawing.Size(232, 56);
-            this.button_SeeCandidate.TabIndex = 3;
-            this.button_SeeCandidate.Text = "See Candidate";
-            this.button_SeeCandidate.UseVisualStyleBackColor = true;
-            this.button_SeeCandidate.Click += new System.EventHandler(this.button_SeeCandidate_Click);
-            // 
             // button_FindCandidate
             // 
             this.button_FindCandidate.Font = new System.Drawing.Font("Consolas", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_FindCandidate.Location = new System.Drawing.Point(3, 339);
+            this.button_FindCandidate.Location = new System.Drawing.Point(3, 277);
             this.button_FindCandidate.Name = "button_FindCandidate";
             this.button_FindCandidate.Size = new System.Drawing.Size(232, 56);
             this.button_FindCandidate.TabIndex = 4;
@@ -165,7 +152,6 @@
         private System.Windows.Forms.Button button_PostJob;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel_Top;
-        private System.Windows.Forms.Button button_SeeCandidate;
         private System.Windows.Forms.Panel panel_Center;
         private System.Windows.Forms.Button button_FindCandidate;
     }
