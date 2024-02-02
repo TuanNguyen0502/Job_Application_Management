@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class FForgetPassWord : Form
+    public partial class FForgetPassword : Form
     {
-        public FForgetPassWord()
+        public FForgetPassword()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Job_Application_Management
 {
-    partial class FForgetPassWord
+    partial class FForgetPassword
     {
         /// <summary>
         /// Required designer variable.
