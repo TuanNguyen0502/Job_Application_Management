@@ -79,6 +79,12 @@
     <Compile Include="FEmployer_PostJob.Designer.cs">
       <DependentUpon>FEmployer_PostJob.cs</DependentUpon>
     </Compile>
+    <Compile Include="FEmployer_SeeCandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployer_SeeCandidate.Designer.cs">
+      <DependentUpon>FEmployer_SeeCandidate.cs</DependentUpon>
+    </Compile>
     <Compile Include="FForgetPassWord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_PostJob.resx">
       <DependentUpon>FEmployer_PostJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEmployer_SeeCandidate.resx">
+      <DependentUpon>FEmployer_SeeCandidate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FForgetPassWord.resx">
       <DependentUpon>FForgetPassWord.cs</DependentUpon>
