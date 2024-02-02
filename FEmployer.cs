@@ -45,11 +45,6 @@ namespace Job_Application_Management
             OpenChildForm(new FEmployer_PostJob());
         }
 
-        private void button_PostedJobs_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FEmployer_PostedJobs());
-        }
-
         private void button_FindCandidate_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FEmployer_FindCandidate());

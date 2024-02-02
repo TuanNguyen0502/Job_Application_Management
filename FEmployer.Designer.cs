@@ -32,7 +32,6 @@
             this.flowLayoutPanel_Left = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_PostJob = new System.Windows.Forms.Button();
-            this.button_PostedJobs = new System.Windows.Forms.Button();
             this.button_FindCandidate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_Top = new System.Windows.Forms.Panel();
@@ -58,12 +57,11 @@
             this.flowLayoutPanel_Left.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel_Left.Controls.Add(this.button_Infomation);
             this.flowLayoutPanel_Left.Controls.Add(this.button_PostJob);
-            this.flowLayoutPanel_Left.Controls.Add(this.button_PostedJobs);
             this.flowLayoutPanel_Left.Controls.Add(this.button_FindCandidate);
             this.flowLayoutPanel_Left.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel_Left.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel_Left.Name = "flowLayoutPanel_Left";
-            this.flowLayoutPanel_Left.Size = new System.Drawing.Size(237, 670);
+            this.flowLayoutPanel_Left.Size = new System.Drawing.Size(237, 744);
             this.flowLayoutPanel_Left.TabIndex = 2;
             // 
             // pictureBox1
@@ -87,21 +85,10 @@
             this.button_PostJob.UseVisualStyleBackColor = true;
             this.button_PostJob.Click += new System.EventHandler(this.button_PostJob_Click);
             // 
-            // button_PostedJobs
-            // 
-            this.button_PostedJobs.Font = new System.Drawing.Font("Consolas", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_PostedJobs.Location = new System.Drawing.Point(3, 277);
-            this.button_PostedJobs.Name = "button_PostedJobs";
-            this.button_PostedJobs.Size = new System.Drawing.Size(232, 56);
-            this.button_PostedJobs.TabIndex = 2;
-            this.button_PostedJobs.Text = "Posted Jobs";
-            this.button_PostedJobs.UseVisualStyleBackColor = true;
-            this.button_PostedJobs.Click += new System.EventHandler(this.button_PostedJobs_Click);
-            // 
             // button_FindCandidate
             // 
             this.button_FindCandidate.Font = new System.Drawing.Font("Consolas", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_FindCandidate.Location = new System.Drawing.Point(3, 339);
+            this.button_FindCandidate.Location = new System.Drawing.Point(3, 277);
             this.button_FindCandidate.Name = "button_FindCandidate";
             this.button_FindCandidate.Size = new System.Drawing.Size(232, 56);
             this.button_FindCandidate.TabIndex = 3;
@@ -125,7 +112,7 @@
             this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Top.Location = new System.Drawing.Point(237, 0);
             this.panel_Top.Name = "panel_Top";
-            this.panel_Top.Size = new System.Drawing.Size(1051, 100);
+            this.panel_Top.Size = new System.Drawing.Size(1241, 100);
             this.panel_Top.TabIndex = 3;
             // 
             // panel_Center
@@ -133,21 +120,20 @@
             this.panel_Center.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Center.Location = new System.Drawing.Point(237, 100);
             this.panel_Center.Name = "panel_Center";
-            this.panel_Center.Size = new System.Drawing.Size(1051, 570);
+            this.panel_Center.Size = new System.Drawing.Size(1241, 644);
             this.panel_Center.TabIndex = 4;
             // 
             // FEmployer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1288, 670);
+            this.ClientSize = new System.Drawing.Size(1478, 744);
             this.Controls.Add(this.panel_Center);
             this.Controls.Add(this.panel_Top);
             this.Controls.Add(this.flowLayoutPanel_Left);
             this.Name = "FEmployer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employer";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.flowLayoutPanel_Left.ResumeLayout(false);
             this.flowLayoutPanel_Left.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -164,7 +150,6 @@
         private System.Windows.Forms.Button button_PostJob;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel_Top;
-        private System.Windows.Forms.Button button_PostedJobs;
         private System.Windows.Forms.Button button_FindCandidate;
         private System.Windows.Forms.Panel panel_Center;
     }
