@@ -73,12 +73,6 @@
     <Compile Include="FEmployer_Information.Designer.cs">
       <DependentUpon>FEmployer_Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="FEmployer_PostedJobs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FEmployer_PostedJobs.Designer.cs">
-      <DependentUpon>FEmployer_PostedJobs.cs</DependentUpon>
-    </Compile>
     <Compile Include="FEmployer_PostJob.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,9 +113,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_Information.resx">
       <DependentUpon>FEmployer_Information.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FEmployer_PostedJobs.resx">
-      <DependentUpon>FEmployer_PostedJobs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_PostJob.resx">
       <DependentUpon>FEmployer_PostJob.cs</DependentUpon>
