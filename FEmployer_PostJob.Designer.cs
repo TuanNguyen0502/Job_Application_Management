@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel_Bottom = new System.Windows.Forms.Panel();
+            this.dataGridView_Job = new System.Windows.Forms.DataGridView();
             this.button_Post = new System.Windows.Forms.Button();
             this.tableLayoutPanel_Information = new System.Windows.Forms.TableLayoutPanel();
             this.textBox_JobName = new System.Windows.Forms.TextBox();
@@ -55,14 +56,14 @@
             this.comboBox_WorkType = new System.Windows.Forms.ComboBox();
             this.panel_Center = new System.Windows.Forms.Panel();
             this.panel_Button = new System.Windows.Forms.Panel();
-            this.dataGridView_Job = new System.Windows.Forms.DataGridView();
-            this.button_Change = new System.Windows.Forms.Button();
             this.button_Delete = new System.Windows.Forms.Button();
+            this.button_Change = new System.Windows.Forms.Button();
+            this.button_SeeCandidate = new System.Windows.Forms.Button();
             this.panel_Bottom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Job)).BeginInit();
             this.tableLayoutPanel_Information.SuspendLayout();
             this.panel_Center.SuspendLayout();
             this.panel_Button.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Job)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Bottom
@@ -74,6 +75,16 @@
             this.panel_Bottom.Name = "panel_Bottom";
             this.panel_Bottom.Size = new System.Drawing.Size(1395, 359);
             this.panel_Bottom.TabIndex = 4;
+            // 
+            // dataGridView_Job
+            // 
+            this.dataGridView_Job.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Job.Location = new System.Drawing.Point(12, 0);
+            this.dataGridView_Job.Name = "dataGridView_Job";
+            this.dataGridView_Job.RowHeadersWidth = 62;
+            this.dataGridView_Job.RowTemplate.Height = 28;
+            this.dataGridView_Job.Size = new System.Drawing.Size(1371, 347);
+            this.dataGridView_Job.TabIndex = 0;
             // 
             // button_Post
             // 
@@ -371,6 +382,7 @@
             // 
             // panel_Button
             // 
+            this.panel_Button.Controls.Add(this.button_SeeCandidate);
             this.panel_Button.Controls.Add(this.button_Delete);
             this.panel_Button.Controls.Add(this.button_Change);
             this.panel_Button.Controls.Add(this.button_Post);
@@ -379,26 +391,6 @@
             this.panel_Button.Name = "panel_Button";
             this.panel_Button.Size = new System.Drawing.Size(1395, 76);
             this.panel_Button.TabIndex = 6;
-            // 
-            // dataGridView_Job
-            // 
-            this.dataGridView_Job.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Job.Location = new System.Drawing.Point(12, 0);
-            this.dataGridView_Job.Name = "dataGridView_Job";
-            this.dataGridView_Job.RowHeadersWidth = 62;
-            this.dataGridView_Job.RowTemplate.Height = 28;
-            this.dataGridView_Job.Size = new System.Drawing.Size(1371, 347);
-            this.dataGridView_Job.TabIndex = 0;
-            // 
-            // button_Change
-            // 
-            this.button_Change.Font = new System.Drawing.Font("Consolas", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Change.Location = new System.Drawing.Point(361, 3);
-            this.button_Change.Name = "button_Change";
-            this.button_Change.Size = new System.Drawing.Size(170, 65);
-            this.button_Change.TabIndex = 1;
-            this.button_Change.Text = "Change";
-            this.button_Change.UseVisualStyleBackColor = true;
             // 
             // button_Delete
             // 
@@ -410,6 +402,26 @@
             this.button_Delete.Text = "Delete";
             this.button_Delete.UseVisualStyleBackColor = true;
             // 
+            // button_Change
+            // 
+            this.button_Change.Font = new System.Drawing.Font("Consolas", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Change.Location = new System.Drawing.Point(361, 3);
+            this.button_Change.Name = "button_Change";
+            this.button_Change.Size = new System.Drawing.Size(170, 65);
+            this.button_Change.TabIndex = 1;
+            this.button_Change.Text = "Change";
+            this.button_Change.UseVisualStyleBackColor = true;
+            // 
+            // button_SeeCandidate
+            // 
+            this.button_SeeCandidate.Font = new System.Drawing.Font("Consolas", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_SeeCandidate.Location = new System.Drawing.Point(860, 3);
+            this.button_SeeCandidate.Name = "button_SeeCandidate";
+            this.button_SeeCandidate.Size = new System.Drawing.Size(271, 65);
+            this.button_SeeCandidate.TabIndex = 3;
+            this.button_SeeCandidate.Text = "See Candidate";
+            this.button_SeeCandidate.UseVisualStyleBackColor = true;
+            // 
             // FEmployer_PostJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -420,11 +432,11 @@
             this.Name = "FEmployer_PostJob";
             this.Text = "FEmployer_PostJob";
             this.panel_Bottom.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Job)).EndInit();
             this.tableLayoutPanel_Information.ResumeLayout(false);
             this.tableLayoutPanel_Information.PerformLayout();
             this.panel_Center.ResumeLayout(false);
             this.panel_Button.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Job)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -461,5 +473,6 @@
         private System.Windows.Forms.DataGridView dataGridView_Job;
         private System.Windows.Forms.Button button_Delete;
         private System.Windows.Forms.Button button_Change;
+        private System.Windows.Forms.Button button_SeeCandidate;
     }
 }
