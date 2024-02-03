@@ -32,7 +32,7 @@
             this.panel_Center = new System.Windows.Forms.Panel();
             this.panel_Button = new System.Windows.Forms.Panel();
             this.button_Delete = new System.Windows.Forms.Button();
-            this.button_Post = new System.Windows.Forms.Button();
+            this.button_Find = new System.Windows.Forms.Button();
             this.tableLayoutPanel_Information = new System.Windows.Forms.TableLayoutPanel();
             this.textBox_JobName = new System.Windows.Forms.TextBox();
             this.label_ID = new System.Windows.Forms.Label();
@@ -57,22 +57,22 @@
             this.textBox_Company = new System.Windows.Forms.TextBox();
             this.comboBox_WorkType = new System.Windows.Forms.ComboBox();
             this.panel_Bottom = new System.Windows.Forms.Panel();
-            this.dataGridView_Job = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Candidate = new System.Windows.Forms.DataGridView();
             this.panel_Center.SuspendLayout();
             this.panel_Button.SuspendLayout();
             this.tableLayoutPanel_Information.SuspendLayout();
             this.panel_Bottom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Job)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Candidate)).BeginInit();
             this.SuspendLayout();
             // 
             // button_Change
             // 
             this.button_Change.Font = new System.Drawing.Font("Consolas", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Change.Location = new System.Drawing.Point(361, 3);
+            this.button_Change.Location = new System.Drawing.Point(328, 3);
             this.button_Change.Name = "button_Change";
             this.button_Change.Size = new System.Drawing.Size(170, 65);
             this.button_Change.TabIndex = 1;
-            this.button_Change.Text = "Change";
+            this.button_Change.Text = "Invite";
             this.button_Change.UseVisualStyleBackColor = true;
             // 
             // panel_Center
@@ -89,7 +89,7 @@
             // 
             this.panel_Button.Controls.Add(this.button_Delete);
             this.panel_Button.Controls.Add(this.button_Change);
-            this.panel_Button.Controls.Add(this.button_Post);
+            this.panel_Button.Controls.Add(this.button_Find);
             this.panel_Button.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel_Button.Location = new System.Drawing.Point(0, 441);
             this.panel_Button.Name = "panel_Button";
@@ -99,22 +99,22 @@
             // button_Delete
             // 
             this.button_Delete.Font = new System.Drawing.Font("Consolas", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Delete.Location = new System.Drawing.Point(604, 3);
+            this.button_Delete.Location = new System.Drawing.Point(535, 3);
             this.button_Delete.Name = "button_Delete";
             this.button_Delete.Size = new System.Drawing.Size(170, 65);
             this.button_Delete.TabIndex = 2;
             this.button_Delete.Text = "Delete";
             this.button_Delete.UseVisualStyleBackColor = true;
             // 
-            // button_Post
+            // button_Find
             // 
-            this.button_Post.Font = new System.Drawing.Font("Consolas", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Post.Location = new System.Drawing.Point(115, 3);
-            this.button_Post.Name = "button_Post";
-            this.button_Post.Size = new System.Drawing.Size(170, 65);
-            this.button_Post.TabIndex = 0;
-            this.button_Post.Text = "Post";
-            this.button_Post.UseVisualStyleBackColor = true;
+            this.button_Find.Font = new System.Drawing.Font("Consolas", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Find.Location = new System.Drawing.Point(115, 3);
+            this.button_Find.Name = "button_Find";
+            this.button_Find.Size = new System.Drawing.Size(170, 65);
+            this.button_Find.TabIndex = 0;
+            this.button_Find.Text = "Find";
+            this.button_Find.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel_Information
             // 
@@ -392,7 +392,7 @@
             // 
             // panel_Bottom
             // 
-            this.panel_Bottom.Controls.Add(this.dataGridView_Job);
+            this.panel_Bottom.Controls.Add(this.dataGridView_Candidate);
             this.panel_Bottom.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel_Bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel_Bottom.Location = new System.Drawing.Point(0, 517);
@@ -400,15 +400,15 @@
             this.panel_Bottom.Size = new System.Drawing.Size(1395, 359);
             this.panel_Bottom.TabIndex = 7;
             // 
-            // dataGridView_Job
+            // dataGridView_Candidate
             // 
-            this.dataGridView_Job.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Job.Location = new System.Drawing.Point(12, 0);
-            this.dataGridView_Job.Name = "dataGridView_Job";
-            this.dataGridView_Job.RowHeadersWidth = 62;
-            this.dataGridView_Job.RowTemplate.Height = 28;
-            this.dataGridView_Job.Size = new System.Drawing.Size(1371, 347);
-            this.dataGridView_Job.TabIndex = 0;
+            this.dataGridView_Candidate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Candidate.Location = new System.Drawing.Point(12, 0);
+            this.dataGridView_Candidate.Name = "dataGridView_Candidate";
+            this.dataGridView_Candidate.RowHeadersWidth = 62;
+            this.dataGridView_Candidate.RowTemplate.Height = 28;
+            this.dataGridView_Candidate.Size = new System.Drawing.Size(1371, 347);
+            this.dataGridView_Candidate.TabIndex = 0;
             // 
             // FEmployer_FindCandidate
             // 
@@ -424,7 +424,7 @@
             this.tableLayoutPanel_Information.ResumeLayout(false);
             this.tableLayoutPanel_Information.PerformLayout();
             this.panel_Bottom.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Job)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Candidate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -435,7 +435,7 @@
         private System.Windows.Forms.Panel panel_Center;
         private System.Windows.Forms.Panel panel_Button;
         private System.Windows.Forms.Button button_Delete;
-        private System.Windows.Forms.Button button_Post;
+        private System.Windows.Forms.Button button_Find;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_Information;
         private System.Windows.Forms.TextBox textBox_JobName;
         private System.Windows.Forms.Label label_ID;
@@ -460,6 +460,6 @@
         private System.Windows.Forms.TextBox textBox_Company;
         private System.Windows.Forms.ComboBox comboBox_WorkType;
         private System.Windows.Forms.Panel panel_Bottom;
-        private System.Windows.Forms.DataGridView dataGridView_Job;
+        private System.Windows.Forms.DataGridView dataGridView_Candidate;
     }
 }
