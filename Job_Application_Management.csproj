@@ -129,6 +129,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FCandidate.resx">
+      <DependentUpon>FCandidate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FEmployer.resx">
       <DependentUpon>FEmployer.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,7 +185,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Search-icon.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ShakeHand.jpg" />
   </ItemGroup>
