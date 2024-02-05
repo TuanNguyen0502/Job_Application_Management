@@ -138,6 +138,9 @@
     <EmbeddedResource Include="FEmployer_ApprovedCandidate.resx">
       <DependentUpon>FEmployer_ApprovedCandidate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FEmployer_CandidateCVDetail.resx">
+      <DependentUpon>FEmployer_CandidateCVDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_CandidateDetail.resx">
       <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +193,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ShakeHand.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1144760.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-home-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Natural-Link-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
