@@ -43,29 +43,29 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.txtBirthday = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.txtDecription = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtJob = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.ptbLink = new System.Windows.Forms.PictureBox();
             this.ptbHouse = new System.Windows.Forms.PictureBox();
             this.ptbEmail = new System.Windows.Forms.PictureBox();
             this.ptbTel = new System.Windows.Forms.PictureBox();
             this.ptbBirthday = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txtDecription = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtJob = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.ptbPerson = new System.Windows.Forms.PictureBox();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHouse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBirthday)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPerson)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,7 +85,6 @@
             this.txtGoal.Location = new System.Drawing.Point(6, 17);
             this.txtGoal.Multiline = true;
             this.txtGoal.Name = "txtGoal";
-            this.txtGoal.ReadOnly = true;
             this.txtGoal.Size = new System.Drawing.Size(533, 158);
             this.txtGoal.TabIndex = 11;
             // 
@@ -105,7 +104,6 @@
             this.txtCertificate.Location = new System.Drawing.Point(9, 21);
             this.txtCertificate.Multiline = true;
             this.txtCertificate.Name = "txtCertificate";
-            this.txtCertificate.ReadOnly = true;
             this.txtCertificate.Size = new System.Drawing.Size(386, 92);
             this.txtCertificate.TabIndex = 12;
             // 
@@ -125,7 +123,6 @@
             this.txtTitleAndAward.Location = new System.Drawing.Point(6, 21);
             this.txtTitleAndAward.Multiline = true;
             this.txtTitleAndAward.Name = "txtTitleAndAward";
-            this.txtTitleAndAward.ReadOnly = true;
             this.txtTitleAndAward.Size = new System.Drawing.Size(389, 92);
             this.txtTitleAndAward.TabIndex = 11;
             // 
@@ -145,7 +142,6 @@
             this.txtSkill.Location = new System.Drawing.Point(6, 21);
             this.txtSkill.Multiline = true;
             this.txtSkill.Name = "txtSkill";
-            this.txtSkill.ReadOnly = true;
             this.txtSkill.Size = new System.Drawing.Size(389, 131);
             this.txtSkill.TabIndex = 10;
             // 
@@ -171,102 +167,47 @@
             // txtLink
             // 
             this.txtLink.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLink.Location = new System.Drawing.Point(57, 154);
+            this.txtLink.Location = new System.Drawing.Point(54, 161);
             this.txtLink.Multiline = true;
             this.txtLink.Name = "txtLink";
-            this.txtLink.ReadOnly = true;
             this.txtLink.Size = new System.Drawing.Size(344, 27);
             this.txtLink.TabIndex = 9;
             // 
             // txtHouse
             // 
             this.txtHouse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHouse.Location = new System.Drawing.Point(57, 121);
+            this.txtHouse.Location = new System.Drawing.Point(54, 127);
             this.txtHouse.Multiline = true;
             this.txtHouse.Name = "txtHouse";
-            this.txtHouse.ReadOnly = true;
             this.txtHouse.Size = new System.Drawing.Size(344, 27);
             this.txtHouse.TabIndex = 8;
             // 
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Location = new System.Drawing.Point(57, 90);
+            this.txtEmail.Location = new System.Drawing.Point(54, 90);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(344, 27);
             this.txtEmail.TabIndex = 7;
             // 
             // txtTel
             // 
             this.txtTel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTel.Location = new System.Drawing.Point(57, 56);
+            this.txtTel.Location = new System.Drawing.Point(54, 57);
             this.txtTel.Multiline = true;
             this.txtTel.Name = "txtTel";
-            this.txtTel.ReadOnly = true;
             this.txtTel.Size = new System.Drawing.Size(344, 27);
             this.txtTel.TabIndex = 6;
             // 
             // txtBirthday
             // 
             this.txtBirthday.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBirthday.Location = new System.Drawing.Point(57, 21);
+            this.txtBirthday.Location = new System.Drawing.Point(54, 22);
             this.txtBirthday.Multiline = true;
             this.txtBirthday.Name = "txtBirthday";
-            this.txtBirthday.ReadOnly = true;
             this.txtBirthday.Size = new System.Drawing.Size(344, 27);
             this.txtBirthday.TabIndex = 5;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.txtDecription);
-            this.panel7.Location = new System.Drawing.Point(425, 319);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(545, 422);
-            this.panel7.TabIndex = 11;
-            // 
-            // txtDecription
-            // 
-            this.txtDecription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDecription.Location = new System.Drawing.Point(6, 3);
-            this.txtDecription.Multiline = true;
-            this.txtDecription.Name = "txtDecription";
-            this.txtDecription.ReadOnly = true;
-            this.txtDecription.Size = new System.Drawing.Size(533, 413);
-            this.txtDecription.TabIndex = 11;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.txtJob);
-            this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.ptbPerson);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(958, 113);
-            this.panel1.TabIndex = 10;
-            // 
-            // txtJob
-            // 
-            this.txtJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtJob.Location = new System.Drawing.Point(230, 65);
-            this.txtJob.Multiline = true;
-            this.txtJob.Name = "txtJob";
-            this.txtJob.ReadOnly = true;
-            this.txtJob.Size = new System.Drawing.Size(520, 34);
-            this.txtJob.TabIndex = 2;
-            this.txtJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(230, 13);
-            this.txtName.Multiline = true;
-            this.txtName.Name = "txtName";
-            this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(520, 34);
-            this.txtName.TabIndex = 1;
-            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ptbLink
             // 
@@ -281,7 +222,7 @@
             // ptbHouse
             // 
             this.ptbHouse.Image = global::Job_Application_Management.Properties.Resources.Actions_home_icon;
-            this.ptbHouse.Location = new System.Drawing.Point(6, 121);
+            this.ptbHouse.Location = new System.Drawing.Point(6, 127);
             this.ptbHouse.Name = "ptbHouse";
             this.ptbHouse.Size = new System.Drawing.Size(32, 28);
             this.ptbHouse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -291,7 +232,7 @@
             // ptbEmail
             // 
             this.ptbEmail.Image = global::Job_Application_Management.Properties.Resources.email_icon;
-            this.ptbEmail.Location = new System.Drawing.Point(6, 89);
+            this.ptbEmail.Location = new System.Drawing.Point(6, 90);
             this.ptbEmail.Name = "ptbEmail";
             this.ptbEmail.Size = new System.Drawing.Size(32, 28);
             this.ptbEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -318,6 +259,53 @@
             this.ptbBirthday.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbBirthday.TabIndex = 0;
             this.ptbBirthday.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.txtDecription);
+            this.panel7.Location = new System.Drawing.Point(425, 319);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(545, 422);
+            this.panel7.TabIndex = 11;
+            // 
+            // txtDecription
+            // 
+            this.txtDecription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDecription.Location = new System.Drawing.Point(6, 3);
+            this.txtDecription.Multiline = true;
+            this.txtDecription.Name = "txtDecription";
+            this.txtDecription.Size = new System.Drawing.Size(533, 413);
+            this.txtDecription.TabIndex = 11;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.txtJob);
+            this.panel1.Controls.Add(this.txtName);
+            this.panel1.Controls.Add(this.ptbPerson);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(958, 113);
+            this.panel1.TabIndex = 10;
+            // 
+            // txtJob
+            // 
+            this.txtJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.txtJob.Location = new System.Drawing.Point(230, 65);
+            this.txtJob.Multiline = true;
+            this.txtJob.Name = "txtJob";
+            this.txtJob.Size = new System.Drawing.Size(520, 34);
+            this.txtJob.TabIndex = 2;
+            this.txtJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(230, 13);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(520, 34);
+            this.txtName.TabIndex = 1;
+            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ptbPerson
             // 
@@ -356,15 +344,15 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHouse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBirthday)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPerson)).EndInit();
             this.ResumeLayout(false);
 

@@ -162,6 +162,9 @@
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FRegister.resx">
+      <DependentUpon>FRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FSignUp.resx">
       <DependentUpon>FSignUp.cs</DependentUpon>
     </EmbeddedResource>

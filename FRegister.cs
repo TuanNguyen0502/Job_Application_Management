@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class frmRegister : Form
+    public partial class FRegister : Form
     {
-        public frmRegister()
+        public FRegister()
         {
             InitializeComponent();
         }
