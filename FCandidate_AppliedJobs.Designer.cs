@@ -1,6 +1,6 @@
 ﻿namespace Job_Application_Management
 {
-    partial class FCandidate_Applied
+    partial class FCandidate_AppliedJobs
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class FCandidate_Applied : Form
+    public partial class FCandidate_SubmitApplication : Form
     {
-        public FCandidate_Applied()
+        public FCandidate_SubmitApplication()
         {
             InitializeComponent();
         }
