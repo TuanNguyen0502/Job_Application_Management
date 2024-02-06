@@ -26,5 +26,6 @@ namespace Job_Application_Management
                 this.Close();
             }
         }
+
     }
 }

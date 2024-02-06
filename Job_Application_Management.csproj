@@ -242,5 +242,26 @@
   <ItemGroup>
     <None Include="Resources\Natural-Link-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newspaper-plus-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Function-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52757-direct-hit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-5-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52757-direct-hit-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-5-icon1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
