@@ -55,11 +55,11 @@
     <Compile Include="FCandidate.Designer.cs">
       <DependentUpon>FCandidate.cs</DependentUpon>
     </Compile>
-    <Compile Include="FCandidate_Applied.cs">
+    <Compile Include="FCandidate_AppliedJobs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FCandidate_Applied.Designer.cs">
-      <DependentUpon>FCandidate_Applied.cs</DependentUpon>
+    <Compile Include="FCandidate_AppliedJobs.Designer.cs">
+      <DependentUpon>FCandidate_AppliedJobs.cs</DependentUpon>
     </Compile>
     <Compile Include="FCandidate_SavedJobs.cs">
       <SubType>Form</SubType>
@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="FCandidate_SelectedJobDetail.Designer.cs">
       <DependentUpon>FCandidate_SelectedJobDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCandidate_SubmitApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCandidate_SubmitApplication.Designer.cs">
+      <DependentUpon>FCandidate_SubmitApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="FEmployer.cs">
       <SubType>Form</SubType>
@@ -150,14 +156,17 @@
     <EmbeddedResource Include="FCandidate.resx">
       <DependentUpon>FCandidate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FCandidate_Applied.resx">
-      <DependentUpon>FCandidate_Applied.cs</DependentUpon>
+    <EmbeddedResource Include="FCandidate_AppliedJobs.resx">
+      <DependentUpon>FCandidate_AppliedJobs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCandidate_SavedJobs.resx">
       <DependentUpon>FCandidate_SavedJobs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCandidate_SelectedJobDetail.resx">
       <DependentUpon>FCandidate_SelectedJobDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCandidate_SubmitApplication.resx">
+      <DependentUpon>FCandidate_SubmitApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer.resx">
       <DependentUpon>FEmployer.cs</DependentUpon>
