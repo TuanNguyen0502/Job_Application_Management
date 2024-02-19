@@ -16,5 +16,6 @@ namespace Job_Application_Management
         {
             InitializeComponent();
         }
+
     }
 }

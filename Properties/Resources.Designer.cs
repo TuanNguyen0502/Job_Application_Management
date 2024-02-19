@@ -183,6 +183,16 @@ namespace Job_Application_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap personIcon_pnj {
+            get {
+                object obj = ResourceManager.GetObject("personIcon.pnj", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap phone_icon {
             get {
                 object obj = ResourceManager.GetObject("phone-icon", resourceCulture);
