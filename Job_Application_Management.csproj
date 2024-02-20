@@ -97,12 +97,6 @@
     <Compile Include="FEmployer_CandidateCVDetail.Designer.cs">
       <DependentUpon>FEmployer_CandidateCVDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="FEmployer_CandidateDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FEmployer_CandidateDetail.Designer.cs">
-      <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
-    </Compile>
     <Compile Include="FEmployer_FindCandidate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,9 +170,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_CandidateCVDetail.resx">
       <DependentUpon>FEmployer_CandidateCVDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FEmployer_CandidateDetail.resx">
-      <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_FindCandidate.resx">
       <DependentUpon>FEmployer_FindCandidate.cs</DependentUpon>
