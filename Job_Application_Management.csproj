@@ -272,5 +272,8 @@
   <ItemGroup>
     <None Include="Resources\Settings-5-icon1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personIcon.pnj.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
