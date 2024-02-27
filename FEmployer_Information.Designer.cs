@@ -485,7 +485,7 @@
             this.button_Save.StateTracking.Border.Rounding = 20;
             this.button_Save.StateTracking.Border.Width = 1;
             this.button_Save.TabIndex = 15;
-            this.button_Save.Values.Text = "Login";
+            this.button_Save.Values.Text = "Save";
             // 
             // kryptonPalette1
             // 
