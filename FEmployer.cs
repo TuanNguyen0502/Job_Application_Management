@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace Job_Application_Management
 {
-    public partial class FEmployer : Form
+    public partial class FEmployer : KryptonForm
     {
         private Form currentFormChild;
         public FEmployer()
@@ -35,7 +36,7 @@ namespace Job_Application_Management
             childForm.Show();
         }
 
-        private void button_Infomation_Click(object sender, EventArgs e)
+        private void button_Information_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FEmployer_Information());
         }
@@ -52,7 +53,8 @@ namespace Job_Application_Management
 
         private void button_Home_Click(object sender, EventArgs e)
         {
-            currentFormChild.Close();
+            if (currentFormChild != null)
+                currentFormChild.Close();
         }
     }
 }
