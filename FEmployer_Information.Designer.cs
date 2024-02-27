@@ -33,6 +33,7 @@
             this.tableLayoutPanel_Information = new System.Windows.Forms.TableLayoutPanel();
             this.richTextBox_CompanyAddress = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.textBox_Email = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.comboBox_CompanyType = new System.Windows.Forms.ComboBox();
             this.textBox_WorkPlace = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox_Phone = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -42,7 +43,6 @@
             this.label_Company = new System.Windows.Forms.Label();
             this.label_CompanyAddress = new System.Windows.Forms.Label();
             this.label_CompanyType = new System.Windows.Forms.Label();
-            this.comboBox_CompanyType = new System.Windows.Forms.ComboBox();
             this.label_Phone = new System.Windows.Forms.Label();
             this.label_Name = new System.Windows.Forms.Label();
             this.label_Sex = new System.Windows.Forms.Label();
@@ -154,6 +154,25 @@
             this.textBox_Email.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Email.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.textBox_Email.TabIndex = 18;
+            // 
+            // comboBox_CompanyType
+            // 
+            this.comboBox_CompanyType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox_CompanyType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_CompanyType.Font = new System.Drawing.Font("Consolas", 14F);
+            this.comboBox_CompanyType.FormattingEnabled = true;
+            this.comboBox_CompanyType.Items.AddRange(new object[] {
+            "100% vốn nước ngoài",
+            "Cá nhân",
+            "Đa quốc gia",
+            "Cổ phần",
+            "Liên doanh",
+            "Nhà nước",
+            "Trách nhiệm hữu hạn"});
+            this.comboBox_CompanyType.Location = new System.Drawing.Point(978, 132);
+            this.comboBox_CompanyType.Name = "comboBox_CompanyType";
+            this.comboBox_CompanyType.Size = new System.Drawing.Size(500, 41);
+            this.comboBox_CompanyType.TabIndex = 9;
             // 
             // textBox_WorkPlace
             // 
@@ -321,25 +340,6 @@
             this.label_CompanyType.TabIndex = 5;
             this.label_CompanyType.Text = "Company Type";
             // 
-            // comboBox_CompanyType
-            // 
-            this.comboBox_CompanyType.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox_CompanyType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_CompanyType.Font = new System.Drawing.Font("Consolas", 14F);
-            this.comboBox_CompanyType.FormattingEnabled = true;
-            this.comboBox_CompanyType.Items.AddRange(new object[] {
-            "100% vốn nước ngoài",
-            "Cá nhân",
-            "Đa quốc gia",
-            "Cổ phần",
-            "Liên doanh",
-            "Nhà nước",
-            "Trách nhiệm hữu hạn"});
-            this.comboBox_CompanyType.Location = new System.Drawing.Point(978, 135);
-            this.comboBox_CompanyType.Name = "comboBox_CompanyType";
-            this.comboBox_CompanyType.Size = new System.Drawing.Size(500, 41);
-            this.comboBox_CompanyType.TabIndex = 9;
-            // 
             // label_Phone
             // 
             this.label_Phone.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -430,7 +430,7 @@
             // 
             // button_Save
             // 
-            this.button_Save.Location = new System.Drawing.Point(328, 0);
+            this.button_Save.Location = new System.Drawing.Point(267, 3);
             this.button_Save.Name = "button_Save";
             this.button_Save.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Save.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
