@@ -49,5 +49,10 @@ namespace Job_Application_Management
         {
             OpenChildForm(new FEmployer_FindCandidate());
         }
+
+        private void button_Home_Click(object sender, EventArgs e)
+        {
+            currentFormChild.Close();
+        }
     }
 }
