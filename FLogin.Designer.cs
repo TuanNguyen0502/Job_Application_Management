@@ -38,6 +38,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.radioButton_Candidate = new System.Windows.Forms.RadioButton();
+            this.radioButton_Employer = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // textBox_UserName
@@ -83,7 +86,7 @@
             // button_Login
             // 
             this.button_Login.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Login.Location = new System.Drawing.Point(235, 307);
+            this.button_Login.Location = new System.Drawing.Point(241, 406);
             this.button_Login.Name = "button_Login";
             this.button_Login.Size = new System.Drawing.Size(343, 53);
             this.button_Login.TabIndex = 4;
@@ -93,7 +96,7 @@
             // button_ForgerPassword
             // 
             this.button_ForgerPassword.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ForgerPassword.Location = new System.Drawing.Point(330, 379);
+            this.button_ForgerPassword.Location = new System.Drawing.Point(336, 478);
             this.button_ForgerPassword.Name = "button_ForgerPassword";
             this.button_ForgerPassword.Size = new System.Drawing.Size(248, 42);
             this.button_ForgerPassword.TabIndex = 5;
@@ -103,7 +106,7 @@
             // button_SignUp
             // 
             this.button_SignUp.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_SignUp.Location = new System.Drawing.Point(330, 473);
+            this.button_SignUp.Location = new System.Drawing.Point(336, 572);
             this.button_SignUp.Name = "button_SignUp";
             this.button_SignUp.Size = new System.Drawing.Size(248, 53);
             this.button_SignUp.TabIndex = 6;
@@ -134,17 +137,56 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(326, 447);
+            this.label3.Location = new System.Drawing.Point(332, 546);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(252, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "Don\'t have an account?";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Consolas", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(235, 307);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 33);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "You are";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // radioButton_Candidate
+            // 
+            this.radioButton_Candidate.AutoSize = true;
+            this.radioButton_Candidate.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_Candidate.Location = new System.Drawing.Point(387, 305);
+            this.radioButton_Candidate.Name = "radioButton_Candidate";
+            this.radioButton_Candidate.Size = new System.Drawing.Size(175, 37);
+            this.radioButton_Candidate.TabIndex = 10;
+            this.radioButton_Candidate.TabStop = true;
+            this.radioButton_Candidate.Text = "Candidate";
+            this.radioButton_Candidate.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_Employer
+            // 
+            this.radioButton_Employer.AutoSize = true;
+            this.radioButton_Employer.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_Employer.Location = new System.Drawing.Point(387, 348);
+            this.radioButton_Employer.Name = "radioButton_Employer";
+            this.radioButton_Employer.Size = new System.Drawing.Size(160, 37);
+            this.radioButton_Employer.TabIndex = 11;
+            this.radioButton_Employer.TabStop = true;
+            this.radioButton_Employer.Text = "Employer";
+            this.radioButton_Employer.UseVisualStyleBackColor = true;
             // 
             // FLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 634);
+            this.Controls.Add(this.radioButton_Employer);
+            this.Controls.Add(this.radioButton_Candidate);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -175,6 +217,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton radioButton_Candidate;
+        private System.Windows.Forms.RadioButton radioButton_Employer;
     }
 }
 
