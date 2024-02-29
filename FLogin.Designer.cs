@@ -39,8 +39,6 @@
             this.textBox_Password = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton_Login = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton_SignUp = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -122,9 +120,9 @@
             // 
             // textBox_UserName
             // 
-            this.textBox_UserName.Location = new System.Drawing.Point(337, 162);
+            this.textBox_UserName.Location = new System.Drawing.Point(178, 162);
             this.textBox_UserName.Name = "textBox_UserName";
-            this.textBox_UserName.Size = new System.Drawing.Size(253, 47);
+            this.textBox_UserName.Size = new System.Drawing.Size(349, 47);
             this.textBox_UserName.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -142,13 +140,13 @@
             this.textBox_UserName.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_UserName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.textBox_UserName.TabIndex = 12;
+            this.textBox_UserName.Text = "Enter user name";
             // 
             // textBox_Password
             // 
-            this.textBox_Password.Location = new System.Drawing.Point(337, 236);
+            this.textBox_Password.Location = new System.Drawing.Point(178, 236);
             this.textBox_Password.Name = "textBox_Password";
-            this.textBox_Password.PasswordChar = '*';
-            this.textBox_Password.Size = new System.Drawing.Size(253, 47);
+            this.textBox_Password.Size = new System.Drawing.Size(349, 47);
             this.textBox_Password.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.textBox_Password.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox_Password.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -158,14 +156,15 @@
             this.textBox_Password.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.textBox_Password.StateCommon.Border.Rounding = 20;
             this.textBox_Password.StateCommon.Border.Width = 1;
-            this.textBox_Password.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.textBox_Password.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.textBox_Password.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Password.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.textBox_Password.TabIndex = 13;
+            this.textBox_Password.Text = "Enter password";
             // 
             // kryptonButton_Login
             // 
-            this.kryptonButton_Login.Location = new System.Drawing.Point(241, 407);
+            this.kryptonButton_Login.Location = new System.Drawing.Point(178, 406);
             this.kryptonButton_Login.Name = "kryptonButton_Login";
             this.kryptonButton_Login.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.kryptonButton_Login.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -224,7 +223,7 @@
             // 
             // kryptonButton_SignUp
             // 
-            this.kryptonButton_SignUp.Location = new System.Drawing.Point(241, 493);
+            this.kryptonButton_SignUp.Location = new System.Drawing.Point(178, 493);
             this.kryptonButton_SignUp.Name = "kryptonButton_SignUp";
             this.kryptonButton_SignUp.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.kryptonButton_SignUp.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -282,38 +281,12 @@
             this.kryptonButton_SignUp.TabIndex = 15;
             this.kryptonButton_SignUp.Values.Text = "Sign Up";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Consolas", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(172, 176);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 33);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "User name";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Consolas", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(172, 250);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 33);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Password";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(913, 560);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.kryptonButton_SignUp);
             this.Controls.Add(this.kryptonButton_Login);
             this.Controls.Add(this.textBox_Password);
@@ -346,8 +319,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Password;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton_Login;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton_SignUp;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
     }
 }
 
