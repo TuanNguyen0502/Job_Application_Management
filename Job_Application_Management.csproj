@@ -167,6 +167,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_Jobs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Jobs.Designer.cs">
+      <DependentUpon>UC_Jobs.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FCandidate.resx">
       <DependentUpon>FCandidate.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +231,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC_Jobs.resx">
+      <DependentUpon>UC_Jobs.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -288,6 +297,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start-Menu-Search-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

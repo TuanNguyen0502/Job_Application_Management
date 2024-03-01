@@ -75,5 +75,6 @@ namespace Job_Application_Management
                 textBox_UserName.Text = "Enter user name";
             }
         }
+
     }
 }

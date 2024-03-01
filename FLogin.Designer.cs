@@ -45,9 +45,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(164, 29);
+            this.label1.Location = new System.Drawing.Point(146, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 47);
+            this.label1.Size = new System.Drawing.Size(245, 40);
             this.label1.TabIndex = 7;
             this.label1.Text = "Welcome Back";
             // 
@@ -55,9 +55,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(173, 100);
+            this.label2.Location = new System.Drawing.Point(154, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(272, 28);
+            this.label2.Size = new System.Drawing.Size(230, 23);
             this.label2.TabIndex = 8;
             this.label2.Text = "Login up to continue";
             // 
@@ -66,9 +66,9 @@
             this.label4.AutoSize = true;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Consolas", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(172, 307);
+            this.label4.Location = new System.Drawing.Point(153, 246);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 33);
+            this.label4.Size = new System.Drawing.Size(103, 28);
             this.label4.TabIndex = 9;
             this.label4.Text = "You are";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,9 +77,10 @@
             // 
             this.radioButton_Candidate.AutoSize = true;
             this.radioButton_Candidate.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Candidate.Location = new System.Drawing.Point(337, 305);
+            this.radioButton_Candidate.Location = new System.Drawing.Point(300, 244);
+            this.radioButton_Candidate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton_Candidate.Name = "radioButton_Candidate";
-            this.radioButton_Candidate.Size = new System.Drawing.Size(175, 37);
+            this.radioButton_Candidate.Size = new System.Drawing.Size(150, 32);
             this.radioButton_Candidate.TabIndex = 10;
             this.radioButton_Candidate.TabStop = true;
             this.radioButton_Candidate.Text = "Candidate";
@@ -89,9 +90,10 @@
             // 
             this.radioButton_Employer.AutoSize = true;
             this.radioButton_Employer.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Employer.Location = new System.Drawing.Point(337, 348);
+            this.radioButton_Employer.Location = new System.Drawing.Point(300, 278);
+            this.radioButton_Employer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton_Employer.Name = "radioButton_Employer";
-            this.radioButton_Employer.Size = new System.Drawing.Size(160, 37);
+            this.radioButton_Employer.Size = new System.Drawing.Size(137, 32);
             this.radioButton_Employer.TabIndex = 11;
             this.radioButton_Employer.TabStop = true;
             this.radioButton_Employer.Text = "Employer";
@@ -120,9 +122,10 @@
             // 
             // textBox_UserName
             // 
-            this.textBox_UserName.Location = new System.Drawing.Point(178, 162);
+            this.textBox_UserName.Location = new System.Drawing.Point(158, 130);
+            this.textBox_UserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_UserName.Name = "textBox_UserName";
-            this.textBox_UserName.Size = new System.Drawing.Size(349, 47);
+            this.textBox_UserName.Size = new System.Drawing.Size(310, 42);
             this.textBox_UserName.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -144,9 +147,10 @@
             // 
             // textBox_Password
             // 
-            this.textBox_Password.Location = new System.Drawing.Point(178, 236);
+            this.textBox_Password.Location = new System.Drawing.Point(158, 189);
+            this.textBox_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Password.Name = "textBox_Password";
-            this.textBox_Password.Size = new System.Drawing.Size(349, 47);
+            this.textBox_Password.Size = new System.Drawing.Size(310, 42);
             this.textBox_Password.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.textBox_Password.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox_Password.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -164,7 +168,8 @@
             // 
             // kryptonButton_Login
             // 
-            this.kryptonButton_Login.Location = new System.Drawing.Point(178, 406);
+            this.kryptonButton_Login.Location = new System.Drawing.Point(158, 325);
+            this.kryptonButton_Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonButton_Login.Name = "kryptonButton_Login";
             this.kryptonButton_Login.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.kryptonButton_Login.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -179,7 +184,7 @@
             this.kryptonButton_Login.OverrideDefault.Border.Rounding = 20;
             this.kryptonButton_Login.OverrideDefault.Border.Width = 1;
             this.kryptonButton_Login.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonButton_Login.Size = new System.Drawing.Size(349, 66);
+            this.kryptonButton_Login.Size = new System.Drawing.Size(310, 53);
             this.kryptonButton_Login.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.kryptonButton_Login.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.kryptonButton_Login.StateCommon.Back.ColorAngle = 45F;
@@ -223,7 +228,8 @@
             // 
             // kryptonButton_SignUp
             // 
-            this.kryptonButton_SignUp.Location = new System.Drawing.Point(178, 493);
+            this.kryptonButton_SignUp.Location = new System.Drawing.Point(158, 394);
+            this.kryptonButton_SignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonButton_SignUp.Name = "kryptonButton_SignUp";
             this.kryptonButton_SignUp.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.kryptonButton_SignUp.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -238,7 +244,7 @@
             this.kryptonButton_SignUp.OverrideDefault.Border.Rounding = 20;
             this.kryptonButton_SignUp.OverrideDefault.Border.Width = 1;
             this.kryptonButton_SignUp.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonButton_SignUp.Size = new System.Drawing.Size(349, 66);
+            this.kryptonButton_SignUp.Size = new System.Drawing.Size(310, 53);
             this.kryptonButton_SignUp.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.kryptonButton_SignUp.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.kryptonButton_SignUp.StateCommon.Back.ColorAngle = 45F;
@@ -283,10 +289,10 @@
             // 
             // FLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(913, 560);
+            this.ClientSize = new System.Drawing.Size(812, 448);
             this.Controls.Add(this.kryptonButton_SignUp);
             this.Controls.Add(this.kryptonButton_Login);
             this.Controls.Add(this.textBox_Password);
@@ -296,6 +302,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FLogin";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;

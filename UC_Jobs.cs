@@ -10,16 +10,20 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class FCandidate_SavedJobs : Form
+    public partial class UC_Jobs : UserControl
     {
-        public FCandidate_SavedJobs()
+        public UC_Jobs()
         {
             InitializeComponent();
         }
 
-        private void FCandidate_SavedJobs_Load(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            uC_JobsSavedList.LblTitleM.Text = "Saved Jobs List";
+            
+        }
+        public Label LblTitleM
+        {
+            get { return lblTitle; }
         }
     }
 }

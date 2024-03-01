@@ -16,5 +16,10 @@ namespace Job_Application_Management
         {
             InitializeComponent();
         }
+
+        private void FCandidate_AppliedJobs_Load(object sender, EventArgs e)
+        {
+            uC_AppliedList.LblTitleM.Text = "Applied Jobs List";
+        }
     }
 }
