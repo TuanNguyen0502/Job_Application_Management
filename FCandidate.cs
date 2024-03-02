@@ -7,17 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace Job_Application_Management
 {
-    public partial class FCandidate : Form
+    public partial class FCandidate : KryptonForm
     {
         public FCandidate()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Are you sure want to exit this program?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             // Xử lý kết quả từ Message Box
@@ -31,13 +32,13 @@ namespace Job_Application_Management
         {
             if (cbbFunctions.SelectedItem.ToString().Equals("Việc làm đã ứng tuyển"))
             {
-                FCandidate_AppliedJobs aj = new FCandidate_AppliedJobs();
-                aj.ShowDialog();
+                FCandidate_AppliedJobs fCandidate_AppliedJobs = new FCandidate_AppliedJobs();
+                fCandidate_AppliedJobs.ShowDialog();
             }
             else if (cbbFunctions.SelectedItem.ToString().Equals("Việc làm đã lưu"))
             {
-                FCandidate_SavedJobs sj = new FCandidate_SavedJobs();
-                sj.ShowDialog();
+                FCandidate_SavedJobs fCandidate_SavedJobs = new FCandidate_SavedJobs();
+                fCandidate_SavedJobs.ShowDialog();
             }
         }
 
@@ -45,14 +46,15 @@ namespace Job_Application_Management
         {
             if (cbbSetting.SelectedItem.ToString().Equals("Cài đặt thông tin cá nhân"))
             {
-                FCandidate_SubmitApplication sa = new FCandidate_SubmitApplication();
-                sa.ShowDialog();
+                FCandidate_SubmitApplication fCandidate_SubmitApplication = new FCandidate_SubmitApplication();
+                fCandidate_SubmitApplication.ShowDialog();
             }
             else if (cbbSetting.SelectedItem.ToString().Equals("Đăng xuất"))
             {
-                FLogin log = new FLogin();
-                log.ShowDialog();
+                FLogin fLogin = new FLogin();
+                fLogin.ShowDialog();
             }
         }
+
     }
 }

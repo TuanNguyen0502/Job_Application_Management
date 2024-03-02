@@ -76,5 +76,10 @@ namespace Job_Application_Management
             }
         }
 
+        private void btn_SignUp_Click(object sender, EventArgs e)
+        {
+            FSignUp signUp = new FSignUp();
+            signUp.ShowDialog();
+        }
     }
 }

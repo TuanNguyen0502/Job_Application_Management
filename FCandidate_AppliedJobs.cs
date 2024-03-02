@@ -19,7 +19,13 @@ namespace Job_Application_Management
 
         private void FCandidate_AppliedJobs_Load(object sender, EventArgs e)
         {
-            uC_AppliedList.LblTitleM.Text = "Applied Jobs List";
+
+        }
+
+        private void btn_FindJob_Click(object sender, EventArgs e)
+        {
+            FCandidate fCandidate = new FCandidate();
+            fCandidate.ShowDialog();
         }
     }
 }
