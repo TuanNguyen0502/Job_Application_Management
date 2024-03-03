@@ -28,7 +28,7 @@ namespace Job_Application_Management
             }
 
             currentFormChild = childForm;
-            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.FormBorderStyle = FormBorderStyle.Sizable;
             childForm.BringToFront();
             childForm.Show();
         }
