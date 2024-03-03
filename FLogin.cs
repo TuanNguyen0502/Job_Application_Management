@@ -26,6 +26,26 @@ namespace Job_Application_Management
             textBox_Password.LostFocus += textBox_Password_LostFocus;
         }
 
+        private bool CheckEmpty()
+        {
+            if (textBox_UserName.Text.Length == 0) 
+            {
+                MessageBox.Show("Please enter your user name");
+                return false; 
+            }
+            if (textBox_Password.Text.Length == 0) 
+            {
+                MessageBox.Show("Please enter your password");
+                return false; 
+            }
+            if (radioButton_Candidate.Checked == false && radioButton_Employer.Checked == false) 
+            {
+                MessageBox.Show("Please choose your role");
+                return false; 
+            }
+            return true;
+        }
+
         private void textBox_Password_Click(object sender, EventArgs e)
         {
             // Clear the text in the KryptonTextBox when the button is clicked
@@ -80,6 +100,21 @@ namespace Job_Application_Management
         {
             FSignUp signUp = new FSignUp();
             signUp.ShowDialog();
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            if (CheckEmpty())
+            {
+                if (radioButton_Candidate.Checked)
+                {
+                    Program.MainFormManager.CurrentForm = new FCandidate();
+                }
+                if (radioButton_Employer.Checked)
+                {
+                    Program.MainFormManager.CurrentForm = new FEmployer();
+                }
+            }
         }
     }
 }

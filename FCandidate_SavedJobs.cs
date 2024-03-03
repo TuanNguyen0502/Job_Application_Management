@@ -19,7 +19,7 @@ namespace Job_Application_Management
 
         private void FCandidate_SavedJobs_Load(object sender, EventArgs e)
         {
-            uC_JobsSavedList.LblTitleM.Text = "Saved Jobs List";
+            // uC_JobsSavedList.LblTitleM.Text = "Saved Jobs List";
         }
     }
 }

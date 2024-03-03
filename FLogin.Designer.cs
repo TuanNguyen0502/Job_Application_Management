@@ -45,9 +45,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(146, 23);
+            this.label1.Location = new System.Drawing.Point(164, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 40);
+            this.label1.Size = new System.Drawing.Size(284, 47);
             this.label1.TabIndex = 7;
             this.label1.Text = "Welcome Back";
             // 
@@ -55,9 +55,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(154, 80);
+            this.label2.Location = new System.Drawing.Point(173, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 23);
+            this.label2.Size = new System.Drawing.Size(272, 28);
             this.label2.TabIndex = 8;
             this.label2.Text = "Login up to continue";
             // 
@@ -66,9 +66,9 @@
             this.label4.AutoSize = true;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Consolas", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(153, 246);
+            this.label4.Location = new System.Drawing.Point(172, 308);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 28);
+            this.label4.Size = new System.Drawing.Size(120, 33);
             this.label4.TabIndex = 9;
             this.label4.Text = "You are";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,10 +77,10 @@
             // 
             this.radioButton_Candidate.AutoSize = true;
             this.radioButton_Candidate.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Candidate.Location = new System.Drawing.Point(300, 244);
+            this.radioButton_Candidate.Location = new System.Drawing.Point(338, 305);
             this.radioButton_Candidate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton_Candidate.Name = "radioButton_Candidate";
-            this.radioButton_Candidate.Size = new System.Drawing.Size(150, 32);
+            this.radioButton_Candidate.Size = new System.Drawing.Size(175, 37);
             this.radioButton_Candidate.TabIndex = 10;
             this.radioButton_Candidate.TabStop = true;
             this.radioButton_Candidate.Text = "Candidate";
@@ -90,10 +90,10 @@
             // 
             this.radioButton_Employer.AutoSize = true;
             this.radioButton_Employer.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Employer.Location = new System.Drawing.Point(300, 278);
+            this.radioButton_Employer.Location = new System.Drawing.Point(338, 348);
             this.radioButton_Employer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton_Employer.Name = "radioButton_Employer";
-            this.radioButton_Employer.Size = new System.Drawing.Size(137, 32);
+            this.radioButton_Employer.Size = new System.Drawing.Size(160, 37);
             this.radioButton_Employer.TabIndex = 11;
             this.radioButton_Employer.TabStop = true;
             this.radioButton_Employer.Text = "Employer";
@@ -122,10 +122,10 @@
             // 
             // textBox_UserName
             // 
-            this.textBox_UserName.Location = new System.Drawing.Point(158, 130);
+            this.textBox_UserName.Location = new System.Drawing.Point(178, 162);
             this.textBox_UserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_UserName.Name = "textBox_UserName";
-            this.textBox_UserName.Size = new System.Drawing.Size(310, 42);
+            this.textBox_UserName.Size = new System.Drawing.Size(349, 47);
             this.textBox_UserName.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -147,10 +147,10 @@
             // 
             // textBox_Password
             // 
-            this.textBox_Password.Location = new System.Drawing.Point(158, 189);
+            this.textBox_Password.Location = new System.Drawing.Point(178, 236);
             this.textBox_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Password.Name = "textBox_Password";
-            this.textBox_Password.Size = new System.Drawing.Size(310, 42);
+            this.textBox_Password.Size = new System.Drawing.Size(349, 47);
             this.textBox_Password.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.textBox_Password.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox_Password.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -168,7 +168,7 @@
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(158, 325);
+            this.btn_Login.Location = new System.Drawing.Point(178, 406);
             this.btn_Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -184,7 +184,7 @@
             this.btn_Login.OverrideDefault.Border.Rounding = 20;
             this.btn_Login.OverrideDefault.Border.Width = 1;
             this.btn_Login.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btn_Login.Size = new System.Drawing.Size(310, 53);
+            this.btn_Login.Size = new System.Drawing.Size(349, 66);
             this.btn_Login.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btn_Login.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.btn_Login.StateCommon.Back.ColorAngle = 45F;
@@ -225,10 +225,11 @@
             this.btn_Login.StateTracking.Border.Width = 1;
             this.btn_Login.TabIndex = 14;
             this.btn_Login.Values.Text = "Login";
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // btn_SignUp
             // 
-            this.btn_SignUp.Location = new System.Drawing.Point(158, 394);
+            this.btn_SignUp.Location = new System.Drawing.Point(178, 492);
             this.btn_SignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_SignUp.Name = "btn_SignUp";
             this.btn_SignUp.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -244,7 +245,7 @@
             this.btn_SignUp.OverrideDefault.Border.Rounding = 20;
             this.btn_SignUp.OverrideDefault.Border.Width = 1;
             this.btn_SignUp.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btn_SignUp.Size = new System.Drawing.Size(310, 53);
+            this.btn_SignUp.Size = new System.Drawing.Size(349, 66);
             this.btn_SignUp.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.btn_SignUp.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.btn_SignUp.StateCommon.Back.ColorAngle = 45F;
@@ -290,10 +291,10 @@
             // 
             // FLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(812, 448);
+            this.ClientSize = new System.Drawing.Size(914, 560);
             this.Controls.Add(this.btn_SignUp);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.textBox_Password);

@@ -56,5 +56,10 @@ namespace Job_Application_Management
             if (currentFormChild != null)
                 currentFormChild.Close();
         }
+
+        private void button_SignOut_Click(object sender, EventArgs e)
+        {
+            Program.MainFormManager.CurrentForm = new FLogin();
+        }
     }
 }

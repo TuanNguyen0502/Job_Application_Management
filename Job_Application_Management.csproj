@@ -165,6 +165,7 @@
     <Compile Include="FSignUp.Designer.cs">
       <DependentUpon>FSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainFormManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FCandidate.resx">
