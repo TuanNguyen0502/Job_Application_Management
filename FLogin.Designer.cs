@@ -44,8 +44,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(164, 29);
+            this.label1.ForeColor = System.Drawing.Color.DeepPink;
+            this.label1.Location = new System.Drawing.Point(77, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(284, 47);
             this.label1.TabIndex = 7;
@@ -54,8 +57,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(173, 100);
+            this.label2.ForeColor = System.Drawing.Color.DeepPink;
+            this.label2.Location = new System.Drawing.Point(86, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(272, 28);
             this.label2.TabIndex = 8;
@@ -64,9 +69,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Consolas", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(172, 308);
+            this.label4.ForeColor = System.Drawing.Color.DeepPink;
+            this.label4.Location = new System.Drawing.Point(85, 296);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 33);
             this.label4.TabIndex = 9;
@@ -76,28 +83,32 @@
             // radioButton_Candidate
             // 
             this.radioButton_Candidate.AutoSize = true;
+            this.radioButton_Candidate.BackColor = System.Drawing.Color.Transparent;
             this.radioButton_Candidate.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Candidate.Location = new System.Drawing.Point(338, 305);
+            this.radioButton_Candidate.ForeColor = System.Drawing.Color.DeepPink;
+            this.radioButton_Candidate.Location = new System.Drawing.Point(251, 293);
             this.radioButton_Candidate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton_Candidate.Name = "radioButton_Candidate";
             this.radioButton_Candidate.Size = new System.Drawing.Size(175, 37);
             this.radioButton_Candidate.TabIndex = 10;
             this.radioButton_Candidate.TabStop = true;
             this.radioButton_Candidate.Text = "Candidate";
-            this.radioButton_Candidate.UseVisualStyleBackColor = true;
+            this.radioButton_Candidate.UseVisualStyleBackColor = false;
             // 
             // radioButton_Employer
             // 
             this.radioButton_Employer.AutoSize = true;
+            this.radioButton_Employer.BackColor = System.Drawing.Color.Transparent;
             this.radioButton_Employer.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Employer.Location = new System.Drawing.Point(338, 348);
+            this.radioButton_Employer.ForeColor = System.Drawing.Color.DeepPink;
+            this.radioButton_Employer.Location = new System.Drawing.Point(251, 336);
             this.radioButton_Employer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton_Employer.Name = "radioButton_Employer";
             this.radioButton_Employer.Size = new System.Drawing.Size(160, 37);
             this.radioButton_Employer.TabIndex = 11;
             this.radioButton_Employer.TabStop = true;
             this.radioButton_Employer.Text = "Employer";
-            this.radioButton_Employer.UseVisualStyleBackColor = true;
+            this.radioButton_Employer.UseVisualStyleBackColor = false;
             // 
             // kryptonPalette1
             // 
@@ -122,7 +133,7 @@
             // 
             // textBox_UserName
             // 
-            this.textBox_UserName.Location = new System.Drawing.Point(178, 162);
+            this.textBox_UserName.Location = new System.Drawing.Point(91, 150);
             this.textBox_UserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_UserName.Name = "textBox_UserName";
             this.textBox_UserName.Size = new System.Drawing.Size(349, 47);
@@ -147,7 +158,7 @@
             // 
             // textBox_Password
             // 
-            this.textBox_Password.Location = new System.Drawing.Point(178, 236);
+            this.textBox_Password.Location = new System.Drawing.Point(91, 224);
             this.textBox_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Password.Name = "textBox_Password";
             this.textBox_Password.Size = new System.Drawing.Size(349, 47);
@@ -168,7 +179,7 @@
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(178, 406);
+            this.btn_Login.Location = new System.Drawing.Point(91, 394);
             this.btn_Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -229,7 +240,7 @@
             // 
             // btn_SignUp
             // 
-            this.btn_SignUp.Location = new System.Drawing.Point(178, 492);
+            this.btn_SignUp.Location = new System.Drawing.Point(91, 480);
             this.btn_SignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_SignUp.Name = "btn_SignUp";
             this.btn_SignUp.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -294,7 +305,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(914, 560);
+            this.BackgroundImage = global::Job_Application_Management.Properties.Resources.login_Pic;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(541, 597);
             this.Controls.Add(this.btn_SignUp);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.textBox_Password);
@@ -304,6 +317,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FLogin";
             this.Palette = this.kryptonPalette1;
