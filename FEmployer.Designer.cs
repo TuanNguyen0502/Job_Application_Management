@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.flowLayoutPanel_Left = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_Home = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_Information = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_PostJob = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -40,9 +39,10 @@
             this.panel_Top = new System.Windows.Forms.Panel();
             this.panel_Center = new System.Windows.Forms.Panel();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel_Left.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_Top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel_Left
@@ -58,16 +58,6 @@
             this.flowLayoutPanel_Left.Name = "flowLayoutPanel_Left";
             this.flowLayoutPanel_Left.Size = new System.Drawing.Size(299, 844);
             this.flowLayoutPanel_Left.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.ShakeHand;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // button_Home
             // 
@@ -86,10 +76,13 @@
             this.button_Home.OverrideDefault.Border.Rounding = 20;
             this.button_Home.OverrideDefault.Border.Width = 1;
             this.button_Home.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_Home.Size = new System.Drawing.Size(290, 66);
+            this.button_Home.Size = new System.Drawing.Size(290, 91);
             this.button_Home.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Home.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_Home.StateCommon.Back.ColorAngle = 45F;
+            this.button_Home.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_home_64;
+            this.button_Home.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.button_Home.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft;
             this.button_Home.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Home.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_Home.StateCommon.Border.ColorAngle = 45F;
@@ -131,7 +124,7 @@
             // 
             // button_Information
             // 
-            this.button_Information.Location = new System.Drawing.Point(3, 225);
+            this.button_Information.Location = new System.Drawing.Point(3, 250);
             this.button_Information.Name = "button_Information";
             this.button_Information.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Information.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -191,7 +184,7 @@
             // 
             // button_PostJob
             // 
-            this.button_PostJob.Location = new System.Drawing.Point(3, 297);
+            this.button_PostJob.Location = new System.Drawing.Point(3, 322);
             this.button_PostJob.Name = "button_PostJob";
             this.button_PostJob.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_PostJob.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -251,7 +244,7 @@
             // 
             // button_FindCandidate
             // 
-            this.button_FindCandidate.Location = new System.Drawing.Point(3, 369);
+            this.button_FindCandidate.Location = new System.Drawing.Point(3, 394);
             this.button_FindCandidate.Name = "button_FindCandidate";
             this.button_FindCandidate.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_FindCandidate.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -311,7 +304,7 @@
             // 
             // button_SignOut
             // 
-            this.button_SignOut.Location = new System.Drawing.Point(3, 441);
+            this.button_SignOut.Location = new System.Drawing.Point(3, 466);
             this.button_SignOut.Name = "button_SignOut";
             this.button_SignOut.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_SignOut.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -417,6 +410,16 @@
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.ShakeHand;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // FEmployer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -434,9 +437,9 @@
             this.Text = "Employer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.flowLayoutPanel_Left.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_Top.ResumeLayout(false);
             this.panel_Top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
