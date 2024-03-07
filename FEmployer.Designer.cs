@@ -76,11 +76,11 @@
             this.button_Home.OverrideDefault.Border.Rounding = 20;
             this.button_Home.OverrideDefault.Border.Width = 1;
             this.button_Home.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_Home.Size = new System.Drawing.Size(290, 91);
+            this.button_Home.Size = new System.Drawing.Size(290, 66);
             this.button_Home.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Home.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_Home.StateCommon.Back.ColorAngle = 45F;
-            this.button_Home.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_home_64;
+            this.button_Home.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_home_50;
             this.button_Home.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.button_Home.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft;
             this.button_Home.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -124,7 +124,7 @@
             // 
             // button_Information
             // 
-            this.button_Information.Location = new System.Drawing.Point(3, 250);
+            this.button_Information.Location = new System.Drawing.Point(3, 225);
             this.button_Information.Name = "button_Information";
             this.button_Information.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Information.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -143,6 +143,9 @@
             this.button_Information.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Information.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_Information.StateCommon.Back.ColorAngle = 45F;
+            this.button_Information.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_information_50;
+            this.button_Information.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.button_Information.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft;
             this.button_Information.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Information.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_Information.StateCommon.Border.ColorAngle = 45F;
@@ -184,7 +187,7 @@
             // 
             // button_PostJob
             // 
-            this.button_PostJob.Location = new System.Drawing.Point(3, 322);
+            this.button_PostJob.Location = new System.Drawing.Point(3, 297);
             this.button_PostJob.Name = "button_PostJob";
             this.button_PostJob.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_PostJob.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -244,7 +247,7 @@
             // 
             // button_FindCandidate
             // 
-            this.button_FindCandidate.Location = new System.Drawing.Point(3, 394);
+            this.button_FindCandidate.Location = new System.Drawing.Point(3, 369);
             this.button_FindCandidate.Name = "button_FindCandidate";
             this.button_FindCandidate.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_FindCandidate.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -304,7 +307,7 @@
             // 
             // button_SignOut
             // 
-            this.button_SignOut.Location = new System.Drawing.Point(3, 466);
+            this.button_SignOut.Location = new System.Drawing.Point(3, 441);
             this.button_SignOut.Name = "button_SignOut";
             this.button_SignOut.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_SignOut.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
