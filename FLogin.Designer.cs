@@ -39,6 +39,7 @@
             this.textBox_Password = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btn_Login = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_SignUp = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.button_Exit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
             // label1
@@ -47,7 +48,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DeepPink;
+            this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(77, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(284, 47);
@@ -59,7 +60,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DeepPink;
+            this.label2.ForeColor = System.Drawing.Color.Navy;
             this.label2.Location = new System.Drawing.Point(86, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(272, 28);
@@ -72,7 +73,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Consolas", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DeepPink;
+            this.label4.ForeColor = System.Drawing.Color.Navy;
             this.label4.Location = new System.Drawing.Point(85, 296);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 33);
@@ -85,7 +86,7 @@
             this.radioButton_Candidate.AutoSize = true;
             this.radioButton_Candidate.BackColor = System.Drawing.Color.Transparent;
             this.radioButton_Candidate.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Candidate.ForeColor = System.Drawing.Color.DeepPink;
+            this.radioButton_Candidate.ForeColor = System.Drawing.Color.Navy;
             this.radioButton_Candidate.Location = new System.Drawing.Point(251, 293);
             this.radioButton_Candidate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton_Candidate.Name = "radioButton_Candidate";
@@ -100,7 +101,7 @@
             this.radioButton_Employer.AutoSize = true;
             this.radioButton_Employer.BackColor = System.Drawing.Color.Transparent;
             this.radioButton_Employer.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Employer.ForeColor = System.Drawing.Color.DeepPink;
+            this.radioButton_Employer.ForeColor = System.Drawing.Color.Navy;
             this.radioButton_Employer.Location = new System.Drawing.Point(251, 336);
             this.radioButton_Employer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton_Employer.Name = "radioButton_Employer";
@@ -300,6 +301,22 @@
             this.btn_SignUp.Values.Text = "Sign Up";
             this.btn_SignUp.Click += new System.EventHandler(this.btn_SignUp_Click);
             // 
+            // button_Exit
+            // 
+            this.button_Exit.Location = new System.Drawing.Point(482, 12);
+            this.button_Exit.Name = "button_Exit";
+            this.button_Exit.Size = new System.Drawing.Size(47, 45);
+            this.button_Exit.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_close_window_48;
+            this.button_Exit.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            this.button_Exit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.button_Exit.StateCommon.Border.Rounding = 10;
+            this.button_Exit.StateCommon.Border.Width = 1;
+            this.button_Exit.TabIndex = 16;
+            this.button_Exit.Values.Text = "";
+            this.button_Exit.Click += new System.EventHandler(this.button_Exit_Click);
+            // 
             // FLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -308,6 +325,7 @@
             this.BackgroundImage = global::Job_Application_Management.Properties.Resources.login_Pic;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(541, 597);
+            this.Controls.Add(this.button_Exit);
             this.Controls.Add(this.btn_SignUp);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.textBox_Password);
@@ -342,6 +360,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Password;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_Login;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_SignUp;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton button_Exit;
     }
 }
 
