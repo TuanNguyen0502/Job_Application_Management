@@ -56,5 +56,9 @@ namespace Job_Application_Management
             }
         }
 
+        private void FCandidate_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace Job_Application_Management
 {
-    public partial class FCandidate_AppliedJobs : Form
+    public partial class FCandidate_AppliedJobs : KryptonForm
     {
         public FCandidate_AppliedJobs()
         {

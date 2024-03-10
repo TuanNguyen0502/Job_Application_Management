@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace Job_Application_Management
 {
-    public partial class FCandidate_SavedJobs : Form
+    public partial class FCandidate_SavedJobs : KryptonForm
     {
         public FCandidate_SavedJobs()
         {
@@ -19,7 +20,7 @@ namespace Job_Application_Management
 
         private void FCandidate_SavedJobs_Load(object sender, EventArgs e)
         {
-            // uC_JobsSavedList.LblTitleM.Text = "Saved Jobs List";
+
         }
     }
 }
