@@ -171,7 +171,6 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::Job_Application_Management.Properties.Resources.Start_Menu_Search_icon;
             this.pictureBox6.Location = new System.Drawing.Point(716, 6);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(28, 26);
@@ -319,7 +318,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_person_48;
             this.pictureBox1.Location = new System.Drawing.Point(52, 46);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
