@@ -82,12 +82,6 @@
     <Compile Include="FCandidate_SavedJobs.Designer.cs">
       <DependentUpon>FCandidate_SavedJobs.cs</DependentUpon>
     </Compile>
-    <Compile Include="FCandidate_SelectedJobDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FCandidate_SelectedJobDetail.Designer.cs">
-      <DependentUpon>FCandidate_SelectedJobDetail.cs</DependentUpon>
-    </Compile>
     <Compile Include="FCandidate_SubmitApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +142,12 @@
     <Compile Include="FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FCandidate_SelectedJobDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCandidate_SelectedJobDetail.Designer.cs">
+      <DependentUpon>FCandidate_SelectedJobDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +163,12 @@
     <Compile Include="MainFormManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_Candidate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Candidate.Designer.cs">
+      <DependentUpon>UC_Candidate.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FCandidate.resx">
       <DependentUpon>FCandidate.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,9 +177,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FCandidate_SavedJobs.resx">
       <DependentUpon>FCandidate_SavedJobs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FCandidate_SelectedJobDetail.resx">
-      <DependentUpon>FCandidate_SelectedJobDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCandidate_SubmitApplication.resx">
       <DependentUpon>FCandidate_SubmitApplication.cs</DependentUpon>
@@ -205,6 +208,9 @@
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FCandidate_SelectedJobDetail.resx">
+      <DependentUpon>FCandidate_SelectedJobDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRegister.resx">
       <DependentUpon>FRegister.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +227,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC_Candidate.resx">
+      <DependentUpon>UC_Candidate.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -311,6 +320,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrow_desktop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-location-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-company-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-heart-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-can-16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,21 +10,17 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class FCandidate_SelectedJobDetail : Form
+    public partial class UC_Candidate : UserControl
     {
-        public FCandidate_SelectedJobDetail()
+        public UC_Candidate()
         {
             InitializeComponent();
         }
 
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        private void uc_JobDetail(object sender, EventArgs e)
         {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            FCandidate_SelectedJobDetail detail = new FCandidate_SelectedJobDetail();
+            detail.ShowDialog();
         }
     }
 }

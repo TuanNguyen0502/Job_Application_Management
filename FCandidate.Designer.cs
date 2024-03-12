@@ -33,28 +33,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.kryptonComboBox4 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.cbbSetting = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.kryptonComboBox5 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.cbbFunctions = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.FindByAddress = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -64,32 +57,41 @@
             this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.uC_Candidate1 = new Job_Application_Management.UC_Candidate();
+            this.uC_Candidate2 = new Job_Application_Management.UC_Candidate();
+            this.uC_Candidate3 = new Job_Application_Management.UC_Candidate();
+            this.uC_Candidate4 = new Job_Application_Management.UC_Candidate();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox4)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSetting)).BeginInit();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox5)).BeginInit();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbFunctions)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -126,17 +128,6 @@
             this.panel6.Size = new System.Drawing.Size(55, 67);
             this.panel6.TabIndex = 22;
             this.panel6.UseWaitCursor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Job_Application_Management.Properties.Resources.cv_icon1;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 45);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.UseWaitCursor = true;
             // 
             // kryptonComboBox4
             // 
@@ -190,17 +181,6 @@
             this.panel12.TabIndex = 22;
             this.panel12.UseWaitCursor = true;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Job_Application_Management.Properties.Resources.Settings_5_icon1;
-            this.pictureBox5.Location = new System.Drawing.Point(6, 11);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(43, 45);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 20;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.UseWaitCursor = true;
-            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
@@ -235,17 +215,6 @@
             this.panel10.TabIndex = 22;
             this.panel10.UseWaitCursor = true;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Job_Application_Management.Properties.Resources._52757_direct_hit_icon1;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 11);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(43, 45);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 19;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.UseWaitCursor = true;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
@@ -267,17 +236,6 @@
             this.panel8.TabIndex = 22;
             this.panel8.UseWaitCursor = true;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Job_Application_Management.Properties.Resources.Function_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 45);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.UseWaitCursor = true;
-            // 
             // cbbFunctions
             // 
             this.cbbFunctions.DropDownWidth = 194;
@@ -294,17 +252,6 @@
             this.cbbFunctions.Text = "Việc làm";
             this.cbbFunctions.UseWaitCursor = true;
             this.cbbFunctions.SelectedIndexChanged += new System.EventHandler(this.cbbFunctions_SelectedIndexChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.Search_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
             // 
             // panel2
             // 
@@ -329,7 +276,10 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.uC_Candidate4);
+            this.panel3.Controls.Add(this.uC_Candidate3);
+            this.panel3.Controls.Add(this.uC_Candidate2);
+            this.panel3.Controls.Add(this.uC_Candidate1);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(213, 57);
@@ -337,21 +287,6 @@
             this.panel3.Size = new System.Drawing.Size(1109, 697);
             this.panel3.TabIndex = 2;
             this.panel3.UseWaitCursor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1109, 633);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.UseWaitCursor = true;
             // 
             // panel4
             // 
@@ -396,17 +331,6 @@
             this.kryptonButton1.TabIndex = 11;
             this.kryptonButton1.UseWaitCursor = true;
             this.kryptonButton1.Values.Text = "Tìm kiếm";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Job_Application_Management.Properties.Resources.Start_Menu_Search_icon;
-            this.pictureBox6.Location = new System.Drawing.Point(716, 6);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(28, 26);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.UseWaitCursor = true;
             // 
             // kryptonLabel3
             // 
@@ -536,6 +460,108 @@
             this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
             this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.Rounding = 16;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Job_Application_Management.Properties.Resources.Start_Menu_Search_icon;
+            this.pictureBox6.Location = new System.Drawing.Point(716, 6);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.UseWaitCursor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Job_Application_Management.Properties.Resources.cv_icon1;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.UseWaitCursor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Job_Application_Management.Properties.Resources.Settings_5_icon1;
+            this.pictureBox5.Location = new System.Drawing.Point(6, 11);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(43, 45);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 20;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.UseWaitCursor = true;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Job_Application_Management.Properties.Resources._52757_direct_hit_icon1;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 11);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(43, 45);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 19;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.UseWaitCursor = true;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Job_Application_Management.Properties.Resources.Function_icon;
+            this.pictureBox3.Location = new System.Drawing.Point(6, 11);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 45);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.UseWaitCursor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.Search_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.UseWaitCursor = true;
+            // 
+            // uC_Candidate1
+            // 
+            this.uC_Candidate1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(254)))));
+            this.uC_Candidate1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uC_Candidate1.Location = new System.Drawing.Point(3, 67);
+            this.uC_Candidate1.Name = "uC_Candidate1";
+            this.uC_Candidate1.Size = new System.Drawing.Size(548, 148);
+            this.uC_Candidate1.TabIndex = 1;
+            // 
+            // uC_Candidate2
+            // 
+            this.uC_Candidate2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(254)))));
+            this.uC_Candidate2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uC_Candidate2.Location = new System.Drawing.Point(557, 67);
+            this.uC_Candidate2.Name = "uC_Candidate2";
+            this.uC_Candidate2.Size = new System.Drawing.Size(548, 148);
+            this.uC_Candidate2.TabIndex = 2;
+            // 
+            // uC_Candidate3
+            // 
+            this.uC_Candidate3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(254)))));
+            this.uC_Candidate3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uC_Candidate3.Location = new System.Drawing.Point(3, 221);
+            this.uC_Candidate3.Name = "uC_Candidate3";
+            this.uC_Candidate3.Size = new System.Drawing.Size(548, 148);
+            this.uC_Candidate3.TabIndex = 3;
+            // 
+            // uC_Candidate4
+            // 
+            this.uC_Candidate4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(254)))));
+            this.uC_Candidate4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uC_Candidate4.Location = new System.Drawing.Point(557, 221);
+            this.uC_Candidate4.Name = "uC_Candidate4";
+            this.uC_Candidate4.Size = new System.Drawing.Size(548, 148);
+            this.uC_Candidate4.TabIndex = 4;
+            // 
             // FCandidate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -553,31 +579,30 @@
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox4)).EndInit();
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cbbSetting)).EndInit();
             this.panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox5)).EndInit();
             this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbFunctions)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -611,12 +636,15 @@
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbFunctions;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbSetting;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox4;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox5;
+        private UC_Candidate uC_Candidate1;
+        private UC_Candidate uC_Candidate4;
+        private UC_Candidate uC_Candidate3;
+        private UC_Candidate uC_Candidate2;
     }
 }

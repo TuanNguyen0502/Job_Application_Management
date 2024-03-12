@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
@@ -53,7 +49,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
@@ -84,13 +80,13 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -99,63 +95,28 @@
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.panel17);
+            this.panel1.Controls.Add(this.panel15);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel10);
+            this.panel1.Controls.Add(this.panel9);
+            this.panel1.Controls.Add(this.panel8);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(632, 51);
+            this.panel1.Size = new System.Drawing.Size(641, 918);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.company_building_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(67, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(185, 5);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(245, 40);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Company Name";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 51);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(632, 902);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel17);
-            this.panel4.Controls.Add(this.panel15);
-            this.panel4.Controls.Add(this.panel11);
-            this.panel4.Controls.Add(this.panel10);
-            this.panel4.Controls.Add(this.panel9);
-            this.panel4.Controls.Add(this.panel8);
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 36);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(632, 866);
-            this.panel4.TabIndex = 1;
             // 
             // panel17
             // 
@@ -171,10 +132,11 @@
             this.panel17.Controls.Add(this.label9);
             this.panel17.Controls.Add(this.label8);
             this.panel17.Controls.Add(this.label7);
-            this.panel17.Location = new System.Drawing.Point(3, 751);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel17.Location = new System.Drawing.Point(0, 795);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(623, 115);
-            this.panel17.TabIndex = 6;
+            this.panel17.Size = new System.Drawing.Size(641, 115);
+            this.panel17.TabIndex = 10;
             // 
             // textBox14
             // 
@@ -292,10 +254,11 @@
             this.panel15.Controls.Add(this.label5);
             this.panel15.Controls.Add(this.textBox1);
             this.panel15.Controls.Add(this.label4);
-            this.panel15.Location = new System.Drawing.Point(0, 337);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(0, 387);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(629, 408);
-            this.panel15.TabIndex = 5;
+            this.panel15.Size = new System.Drawing.Size(641, 408);
+            this.panel15.TabIndex = 9;
             // 
             // textBox3
             // 
@@ -354,15 +317,16 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "General Description";
             // 
-            // panel11
+            // panel4
             // 
-            this.panel11.Controls.Add(this.panel14);
-            this.panel11.Controls.Add(this.panel13);
-            this.panel11.Controls.Add(this.panel12);
-            this.panel11.Location = new System.Drawing.Point(0, 185);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(632, 146);
-            this.panel11.TabIndex = 2;
+            this.panel4.Controls.Add(this.panel14);
+            this.panel4.Controls.Add(this.panel13);
+            this.panel4.Controls.Add(this.panel12);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 242);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(641, 145);
+            this.panel4.TabIndex = 8;
             // 
             // panel14
             // 
@@ -372,8 +336,8 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel14.Location = new System.Drawing.Point(393, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(239, 146);
-            this.panel14.TabIndex = 2;
+            this.panel14.Size = new System.Drawing.Size(245, 145);
+            this.panel14.TabIndex = 3;
             // 
             // checkBox6
             // 
@@ -414,8 +378,8 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel13.Location = new System.Drawing.Point(183, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(210, 146);
-            this.panel13.TabIndex = 1;
+            this.panel13.Size = new System.Drawing.Size(210, 145);
+            this.panel13.TabIndex = 2;
             // 
             // checkBox4
             // 
@@ -472,8 +436,8 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(183, 146);
-            this.panel12.TabIndex = 0;
+            this.panel12.Size = new System.Drawing.Size(183, 145);
+            this.panel12.TabIndex = 1;
             // 
             // label1
             // 
@@ -486,10 +450,11 @@
             // 
             // panel10
             // 
-            this.panel10.Location = new System.Drawing.Point(0, 148);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 211);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(632, 31);
-            this.panel10.TabIndex = 2;
+            this.panel10.Size = new System.Drawing.Size(641, 31);
+            this.panel10.TabIndex = 7;
             // 
             // panel9
             // 
@@ -497,10 +462,11 @@
             this.panel9.Controls.Add(this.textBox11);
             this.panel9.Controls.Add(this.label17);
             this.panel9.Controls.Add(this.label16);
-            this.panel9.Location = new System.Drawing.Point(0, 111);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 180);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(632, 31);
-            this.panel9.TabIndex = 4;
+            this.panel9.Size = new System.Drawing.Size(641, 31);
+            this.panel9.TabIndex = 6;
             // 
             // textBox12
             // 
@@ -542,10 +508,11 @@
             // 
             this.panel8.Controls.Add(this.textBox10);
             this.panel8.Controls.Add(this.label15);
-            this.panel8.Location = new System.Drawing.Point(0, 74);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 149);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(632, 31);
-            this.panel8.TabIndex = 3;
+            this.panel8.Size = new System.Drawing.Size(641, 31);
+            this.panel8.TabIndex = 5;
             // 
             // textBox10
             // 
@@ -569,10 +536,11 @@
             // 
             this.panel7.Controls.Add(this.textBox9);
             this.panel7.Controls.Add(this.label14);
-            this.panel7.Location = new System.Drawing.Point(0, 37);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 118);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(632, 31);
-            this.panel7.TabIndex = 2;
+            this.panel7.Size = new System.Drawing.Size(641, 31);
+            this.panel7.TabIndex = 4;
             // 
             // textBox9
             // 
@@ -596,10 +564,11 @@
             // 
             this.panel6.Controls.Add(this.textBox8);
             this.panel6.Controls.Add(this.label13);
-            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 87);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(632, 31);
-            this.panel6.TabIndex = 1;
+            this.panel6.Size = new System.Drawing.Size(641, 31);
+            this.panel6.TabIndex = 3;
             // 
             // textBox8
             // 
@@ -624,10 +593,10 @@
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Location = new System.Drawing.Point(0, 51);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(632, 36);
-            this.panel3.TabIndex = 0;
+            this.panel3.Size = new System.Drawing.Size(641, 36);
+            this.panel3.TabIndex = 2;
             // 
             // label12
             // 
@@ -646,26 +615,52 @@
             this.panel5.Size = new System.Drawing.Size(632, 31);
             this.panel5.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(641, 51);
+            this.panel2.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.company_building_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(67, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(185, 5);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(245, 40);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Company Name";
+            // 
             // FCandidate_SelectedJobDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 953);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(641, 918);
             this.Controls.Add(this.panel1);
             this.Name = "FCandidate_SelectedJobDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FCandidate_SelectedJobDetail";
+            this.Text = "Selected Job Detail";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
-            this.panel11.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel13.ResumeLayout(false);
@@ -682,6 +677,9 @@
             this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -690,8 +688,51 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
@@ -700,49 +741,5 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
     }
 }

@@ -213,6 +213,26 @@ namespace Job_Application_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_company_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-company-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_heart_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-heart-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_home_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-home-50", resourceCulture);
@@ -236,6 +256,26 @@ namespace Job_Application_Management.Properties {
         internal static System.Drawing.Bitmap icons8_information_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-information-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_location_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-location-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_trash_can_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-trash-can-16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
