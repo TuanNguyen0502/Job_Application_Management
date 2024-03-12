@@ -11,9 +11,9 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace Job_Application_Management
 {
-    public partial class FCandidate : KryptonForm
+    public partial class frmCadidate_Main : KryptonForm
     {
-        public FCandidate()
+        public frmCadidate_Main()
         {
             InitializeComponent();
         }
