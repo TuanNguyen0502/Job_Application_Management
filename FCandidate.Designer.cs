@@ -137,7 +137,6 @@
             this.btnCompanies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompanies.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompanies.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnCompanies.Image = global::Job_Application_Management.Properties.Resources.icons8_company_30;
             this.btnCompanies.Location = new System.Drawing.Point(0, 270);
             this.btnCompanies.Name = "btnCompanies";
             this.btnCompanies.Size = new System.Drawing.Size(213, 45);
@@ -156,7 +155,6 @@
             this.btnJobApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJobApp.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnJobApp.Image = global::Job_Application_Management.Properties.Resources.icons8_job_application_32;
             this.btnJobApp.Location = new System.Drawing.Point(0, 225);
             this.btnJobApp.Name = "btnJobApp";
             this.btnJobApp.Size = new System.Drawing.Size(213, 45);
@@ -327,36 +325,6 @@
             this.kryptonButton1.UseWaitCursor = true;
             this.kryptonButton1.Values.Text = "Tìm kiếm";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(716, 6);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(28, 26);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.UseWaitCursor = true;
-            // 
-            // kryptonLabel3
-            // 
-            this.kryptonLabel3.AutoSize = false;
-            this.kryptonLabel3.Location = new System.Drawing.Point(476, 36);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(199, 25);
-            this.kryptonLabel3.TabIndex = 8;
-            this.kryptonLabel3.UseWaitCursor = true;
-            this.kryptonLabel3.Values.Text = "Tìm kiếm theo mức lương";
-            // 
-            // kryptonLabel2
-            // 
-            this.kryptonLabel2.AutoSize = false;
-            this.kryptonLabel2.Location = new System.Drawing.Point(241, 33);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(199, 25);
-            this.kryptonLabel2.TabIndex = 7;
-            this.kryptonLabel2.UseWaitCursor = true;
-            this.kryptonLabel2.Values.Text = "Tìm kiếm theo kinh nghiệm";
-            // 
             // FindByAddress
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
@@ -364,7 +332,6 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Job_Application_Management.Properties.Resources.icons8_find_16;
             this.button1.Location = new System.Drawing.Point(950, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 43);
@@ -465,7 +432,6 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Image = global::Job_Application_Management.Properties.Resources.icons8_location_16__2_;
             this.label4.Location = new System.Drawing.Point(8, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 34);
@@ -510,7 +476,6 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Image = global::Job_Application_Management.Properties.Resources.icons8_find_16__1_;
             this.label3.Location = new System.Drawing.Point(8, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 34);

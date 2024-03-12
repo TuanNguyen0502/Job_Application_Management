@@ -33,8 +33,6 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Post = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucJob1 = new Job_Application_Management.UC_Job();
-            this.ucJob2 = new Job_Application_Management.UC_Job();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -134,8 +132,6 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.ucJob1);
-            this.flowLayoutPanel2.Controls.Add(this.ucJob2);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -143,24 +139,6 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1328, 606);
             this.flowLayoutPanel2.TabIndex = 7;
             // 
-            // ucJob1
-            // 
-            this.ucJob1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ucJob1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucJob1.Location = new System.Drawing.Point(8, 8);
-            this.ucJob1.Name = "ucJob1";
-            this.ucJob1.Size = new System.Drawing.Size(532, 269);
-            this.ucJob1.TabIndex = 0;
-            this.ucJob1.Click += new System.EventHandler(this.ucJob_Click);
-            // 
-            // ucJob2
-            // 
-            this.ucJob2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ucJob2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucJob2.Location = new System.Drawing.Point(546, 8);
-            this.ucJob2.Name = "ucJob2";
-            this.ucJob2.Size = new System.Drawing.Size(532, 269);
-            this.ucJob2.TabIndex = 1;
             // 
             // FEmployer_Job
             // 
@@ -185,7 +163,5 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_Post;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private UC_Job ucJob1;
-        private UC_Job ucJob2;
     }
 }

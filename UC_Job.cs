@@ -11,9 +11,9 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace Job_Application_Management
 {
-    public partial class UCJob : UserControl
+    public partial class UC_Job : UserControl
     {
-        public UCJob()
+        public UC_Job()
         {
             InitializeComponent();
         }

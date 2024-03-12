@@ -1,6 +1,6 @@
 ﻿namespace Job_Application_Management
 {
-    partial class UCJob
+    partial class UC_Job
     {
         /// <summary> 
         /// Required designer variable.
