@@ -23,13 +23,13 @@ namespace Job_Application_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCadidate_Main());
 
-            /*mainFormManager = new MainFormManager();
+            mainFormManager = new MainFormManager();
 
+            // Chỉnh cái bên dưới để mở form đi Hiếu
+            // Chỉnh phía sau cái new là được rồi á
             mainFormManager.CurrentForm = new FLogin();
-            Application.Run(mainFormManager);*/
-            //Application.Run(new FLogin());
+            Application.Run(mainFormManager);
         }
     }
 }

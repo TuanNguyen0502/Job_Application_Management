@@ -302,7 +302,62 @@
             this.panel4.TabIndex = 0;
             this.panel4.UseWaitCursor = true;
             // 
-            // button1
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(935, 5);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonButton1.Size = new System.Drawing.Size(162, 53);
+            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton1.StateCommon.Back.ColorAngle = 45F;
+            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.kryptonButton1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.kryptonButton1.StateCommon.Border.ColorAngle = 45F;
+            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton1.StateCommon.Border.Rounding = 20;
+            this.kryptonButton1.StateCommon.Border.Width = 1;
+            this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.TabIndex = 11;
+            this.kryptonButton1.UseWaitCursor = true;
+            this.kryptonButton1.Values.Text = "Tìm kiếm";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(716, 6);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.UseWaitCursor = true;
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.AutoSize = false;
+            this.kryptonLabel3.Location = new System.Drawing.Point(476, 36);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(199, 25);
+            this.kryptonLabel3.TabIndex = 8;
+            this.kryptonLabel3.UseWaitCursor = true;
+            this.kryptonLabel3.Values.Text = "Tìm kiếm theo mức lương";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.AutoSize = false;
+            this.kryptonLabel2.Location = new System.Drawing.Point(241, 33);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(199, 25);
+            this.kryptonLabel2.TabIndex = 7;
+            this.kryptonLabel2.UseWaitCursor = true;
+            this.kryptonLabel2.Values.Text = "Tìm kiếm theo kinh nghiệm";
+            // 
+            // FindByAddress
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.button1.FlatAppearance.BorderSize = 0;
@@ -617,13 +672,12 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(1074, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(28, 28);
-            this.btnExit.TabIndex = 20;
-            this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.button2_Click);
+            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_person_48;
+            this.pictureBox1.Location = new System.Drawing.Point(52, 46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmCadidate_Main
             // 

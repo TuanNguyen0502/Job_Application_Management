@@ -169,11 +169,11 @@
     <Compile Include="MainFormManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UCJob.cs">
+    <Compile Include="UC_Job.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCJob.Designer.cs">
-      <DependentUpon>UCJob.cs</DependentUpon>
+    <Compile Include="UC_Job.Designer.cs">
+      <DependentUpon>UC_Job.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Candidate.cs">
       <SubType>UserControl</SubType>
@@ -242,8 +242,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UCJob.resx">
-      <DependentUpon>UCJob.cs</DependentUpon>
+    <EmbeddedResource Include="UC_Job.resx">
+      <DependentUpon>UC_Job.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Candidate.resx">
       <DependentUpon>UC_Candidate.cs</DependentUpon>
@@ -352,37 +352,31 @@
     <None Include="Resources\icons8-trash-can-16.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-person-48.png" />
+    <None Include="Resources\icons8-employer-641.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-home-30.png" />
+    <None Include="Resources\icons8-information-641.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-settings-48.png" />
+    <None Include="Resources\icons8-job-641.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-settings-30.png" />
+    <None Include="Resources\icons8-find-641.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-log-out-50.png" />
+    <None Include="Resources\icons8-sign-out-64.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-log-out-30.png" />
+    <None Include="Resources\icons8-save-641.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-company-30.png" />
+    <None Include="Resources\icons8-delete-641.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-job-application-32.png" />
+    <None Include="Resources\icons8-add-501.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-location-16 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-handbag-16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-find-16.png" />
+    <None Include="Resources\icons8-post-68.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-home-301.png" />

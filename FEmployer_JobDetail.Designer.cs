@@ -56,8 +56,8 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Post = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_Delete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.button_ApprovedCandidate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_SeeCandidate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.button_ApprovedCandidate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tableLayoutPanel_Information.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -534,6 +534,8 @@
             this.button_Post.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Post.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_Post.StateCommon.Back.ColorAngle = 45F;
+            this.button_Post.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.button_Post.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.button_Post.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Post.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_Post.StateCommon.Border.ColorAngle = 45F;
@@ -570,7 +572,7 @@
             this.button_Post.StateTracking.Border.Rounding = 20;
             this.button_Post.StateTracking.Border.Width = 1;
             this.button_Post.TabIndex = 16;
-            this.button_Post.Values.Text = "Post";
+            this.button_Post.Values.Text = "";
             // 
             // button_Delete
             // 
@@ -593,6 +595,7 @@
             this.button_Delete.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Delete.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_Delete.StateCommon.Back.ColorAngle = 45F;
+            this.button_Delete.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_delete_64;
             this.button_Delete.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.button_Delete.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.button_Delete.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -632,66 +635,6 @@
             this.button_Delete.StateTracking.Border.Width = 1;
             this.button_Delete.TabIndex = 18;
             this.button_Delete.Values.Text = "";
-            // 
-            // button_ApprovedCandidate
-            // 
-            this.button_ApprovedCandidate.Location = new System.Drawing.Point(524, 3);
-            this.button_ApprovedCandidate.Name = "button_ApprovedCandidate";
-            this.button_ApprovedCandidate.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_ApprovedCandidate.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.button_ApprovedCandidate.OverrideDefault.Back.ColorAngle = 45F;
-            this.button_ApprovedCandidate.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_ApprovedCandidate.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.button_ApprovedCandidate.OverrideDefault.Border.ColorAngle = 45F;
-            this.button_ApprovedCandidate.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.button_ApprovedCandidate.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.button_ApprovedCandidate.OverrideDefault.Border.Rounding = 20;
-            this.button_ApprovedCandidate.OverrideDefault.Border.Width = 1;
-            this.button_ApprovedCandidate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_ApprovedCandidate.Size = new System.Drawing.Size(321, 66);
-            this.button_ApprovedCandidate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_ApprovedCandidate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.button_ApprovedCandidate.StateCommon.Back.ColorAngle = 45F;
-            this.button_ApprovedCandidate.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_ApprovedCandidate.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.button_ApprovedCandidate.StateCommon.Border.ColorAngle = 45F;
-            this.button_ApprovedCandidate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.button_ApprovedCandidate.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.button_ApprovedCandidate.StateCommon.Border.Rounding = 20;
-            this.button_ApprovedCandidate.StateCommon.Border.Width = 1;
-            this.button_ApprovedCandidate.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.button_ApprovedCandidate.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.button_ApprovedCandidate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ApprovedCandidate.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.button_ApprovedCandidate.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.button_ApprovedCandidate.StatePressed.Back.ColorAngle = 135F;
-            this.button_ApprovedCandidate.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.button_ApprovedCandidate.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.button_ApprovedCandidate.StatePressed.Border.ColorAngle = 135F;
-            this.button_ApprovedCandidate.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.button_ApprovedCandidate.StatePressed.Border.Rounding = 20;
-            this.button_ApprovedCandidate.StatePressed.Border.Width = 1;
-            this.button_ApprovedCandidate.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(154)))));
-            this.button_ApprovedCandidate.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_ApprovedCandidate.StateTracking.Back.ColorAngle = 45F;
-            this.button_ApprovedCandidate.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_ApprovedCandidate.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(154)))));
-            this.button_ApprovedCandidate.StateTracking.Border.ColorAngle = 45F;
-            this.button_ApprovedCandidate.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.button_ApprovedCandidate.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.button_ApprovedCandidate.StateTracking.Border.Rounding = 20;
-            this.button_ApprovedCandidate.StateTracking.Border.Width = 1;
-            this.button_ApprovedCandidate.TabIndex = 19;
-            this.button_ApprovedCandidate.Values.Text = "Approved Candidate";
-            this.button_ApprovedCandidate.Click += new System.EventHandler(this.button_ApprovedCandidate_Click);
             // 
             // button_SeeCandidate
             // 
@@ -752,6 +695,66 @@
             this.button_SeeCandidate.TabIndex = 20;
             this.button_SeeCandidate.Values.Text = "See Candidate";
             this.button_SeeCandidate.Click += new System.EventHandler(this.button_SeeCandidate_Click);
+            // 
+            // button_ApprovedCandidate
+            // 
+            this.button_ApprovedCandidate.Location = new System.Drawing.Point(524, 3);
+            this.button_ApprovedCandidate.Name = "button_ApprovedCandidate";
+            this.button_ApprovedCandidate.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_ApprovedCandidate.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_ApprovedCandidate.OverrideDefault.Back.ColorAngle = 45F;
+            this.button_ApprovedCandidate.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_ApprovedCandidate.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_ApprovedCandidate.OverrideDefault.Border.ColorAngle = 45F;
+            this.button_ApprovedCandidate.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.button_ApprovedCandidate.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.button_ApprovedCandidate.OverrideDefault.Border.Rounding = 20;
+            this.button_ApprovedCandidate.OverrideDefault.Border.Width = 1;
+            this.button_ApprovedCandidate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.button_ApprovedCandidate.Size = new System.Drawing.Size(321, 66);
+            this.button_ApprovedCandidate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_ApprovedCandidate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_ApprovedCandidate.StateCommon.Back.ColorAngle = 45F;
+            this.button_ApprovedCandidate.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_ApprovedCandidate.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_ApprovedCandidate.StateCommon.Border.ColorAngle = 45F;
+            this.button_ApprovedCandidate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.button_ApprovedCandidate.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.button_ApprovedCandidate.StateCommon.Border.Rounding = 20;
+            this.button_ApprovedCandidate.StateCommon.Border.Width = 1;
+            this.button_ApprovedCandidate.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.button_ApprovedCandidate.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.button_ApprovedCandidate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ApprovedCandidate.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.button_ApprovedCandidate.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.button_ApprovedCandidate.StatePressed.Back.ColorAngle = 135F;
+            this.button_ApprovedCandidate.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.button_ApprovedCandidate.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.button_ApprovedCandidate.StatePressed.Border.ColorAngle = 135F;
+            this.button_ApprovedCandidate.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.button_ApprovedCandidate.StatePressed.Border.Rounding = 20;
+            this.button_ApprovedCandidate.StatePressed.Border.Width = 1;
+            this.button_ApprovedCandidate.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(154)))));
+            this.button_ApprovedCandidate.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_ApprovedCandidate.StateTracking.Back.ColorAngle = 45F;
+            this.button_ApprovedCandidate.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_ApprovedCandidate.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(154)))));
+            this.button_ApprovedCandidate.StateTracking.Border.ColorAngle = 45F;
+            this.button_ApprovedCandidate.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.button_ApprovedCandidate.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.button_ApprovedCandidate.StateTracking.Border.Rounding = 20;
+            this.button_ApprovedCandidate.StateTracking.Border.Width = 1;
+            this.button_ApprovedCandidate.TabIndex = 19;
+            this.button_ApprovedCandidate.Values.Text = "Approved Candidate";
+            this.button_ApprovedCandidate.Click += new System.EventHandler(this.button_ApprovedCandidate_Click);
             // 
             // FEmployer_JobDetail
             // 
