@@ -34,19 +34,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>..\..\..\..\Admin\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>..\..\..\..\Admin\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>..\..\..\..\Admin\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>..\..\..\..\Admin\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>..\..\..\..\Admin\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -118,11 +118,17 @@
     <Compile Include="FEmployer_Information.Designer.cs">
       <DependentUpon>FEmployer_Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="FEmployer_PostJob.cs">
+    <Compile Include="FEmployer_Job.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FEmployer_PostJob.Designer.cs">
-      <DependentUpon>FEmployer_PostJob.cs</DependentUpon>
+    <Compile Include="FEmployer_Job.Designer.cs">
+      <DependentUpon>FEmployer_Job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FEmployer_JobDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployer_JobDetail.Designer.cs">
+      <DependentUpon>FEmployer_JobDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="FEmployer_SeeCandidate.cs">
       <SubType>Form</SubType>
@@ -163,6 +169,12 @@
     <Compile Include="MainFormManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCJob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCJob.Designer.cs">
+      <DependentUpon>UCJob.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Candidate.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,8 +208,11 @@
     <EmbeddedResource Include="FEmployer_Information.resx">
       <DependentUpon>FEmployer_Information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FEmployer_PostJob.resx">
-      <DependentUpon>FEmployer_PostJob.cs</DependentUpon>
+    <EmbeddedResource Include="FEmployer_Job.resx">
+      <DependentUpon>FEmployer_Job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEmployer_JobDetail.resx">
+      <DependentUpon>FEmployer_JobDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_SeeCandidate.resx">
       <DependentUpon>FEmployer_SeeCandidate.cs</DependentUpon>
@@ -227,6 +242,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UCJob.resx">
+      <DependentUpon>UCJob.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Candidate.resx">
       <DependentUpon>UC_Candidate.cs</DependentUpon>
     </EmbeddedResource>

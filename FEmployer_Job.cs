@@ -11,11 +11,11 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace Job_Application_Management
 {
-    public partial class FEmployer_PostJob : KryptonForm
+    public partial class FEmployer_Job : KryptonForm
     {
         private Form currentFormChild;
 
-        public FEmployer_PostJob()
+        public FEmployer_Job()
         {
             InitializeComponent();
         }
@@ -28,19 +28,21 @@ namespace Job_Application_Management
             }
 
             currentFormChild = childForm;
-            childForm.FormBorderStyle = FormBorderStyle.Sizable;
+            childForm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            childForm.StartPosition = FormStartPosition.CenterScreen;
+            childForm.Size = new Size(1300, 550);
             childForm.BringToFront();
             childForm.Show();
         }
 
         private void button_Post_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button_Change_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button_Delete_Click(object sender, EventArgs e)
@@ -48,14 +50,9 @@ namespace Job_Application_Management
 
         }
 
-        private void button_ApprovedCandidate_Click(object sender, EventArgs e)
+        private void ucJob_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_ApprovedCandidate());
-        }
-
-        private void button_SeeCandidate_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FEmployer_SeeCandidate());
+            OpenChildForm(new FEmployer_JobDetail());
         }
     }
 }

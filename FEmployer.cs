@@ -43,7 +43,7 @@ namespace Job_Application_Management
 
         private void button_PostJob_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_PostJob());
+            OpenChildForm(new FEmployer_Job());
         }
 
         private void button_FindCandidate_Click(object sender, EventArgs e)
