@@ -351,5 +351,38 @@
   <ItemGroup>
     <None Include="Resources\icons8-trash-can-16.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-person-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-settings-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-settings-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-log-out-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-log-out-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-company-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-job-application-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-location-16 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-handbag-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-find-16.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,7 +23,7 @@ namespace Job_Application_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FCandidate());
+            Application.Run(new frmCadidate_Main());
 
             /*mainFormManager = new MainFormManager();
 

@@ -108,7 +108,7 @@ namespace Job_Application_Management
             {
                 if (radioButton_Candidate.Checked)
                 {
-                    Program.MainFormManager.CurrentForm = new FCandidate();
+                    Program.MainFormManager.CurrentForm = new frmCadidate_Main();
                 }
                 if (radioButton_Employer.Checked)
                 {
