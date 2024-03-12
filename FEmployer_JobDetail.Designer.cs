@@ -507,9 +507,9 @@
             this.flowLayoutPanel1.Controls.Add(this.button_SeeCandidate);
             this.flowLayoutPanel1.Controls.Add(this.button_ApprovedCandidate);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 640);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 639);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1587, 77);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1587, 106);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // button_Post
@@ -530,10 +530,11 @@
             this.button_Post.OverrideDefault.Border.Rounding = 20;
             this.button_Post.OverrideDefault.Border.Width = 1;
             this.button_Post.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_Post.Size = new System.Drawing.Size(135, 66);
+            this.button_Post.Size = new System.Drawing.Size(135, 100);
             this.button_Post.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Post.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_Post.StateCommon.Back.ColorAngle = 45F;
+            this.button_Post.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_post_68;
             this.button_Post.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.button_Post.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.button_Post.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -591,7 +592,7 @@
             this.button_Delete.OverrideDefault.Border.Rounding = 20;
             this.button_Delete.OverrideDefault.Border.Width = 1;
             this.button_Delete.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_Delete.Size = new System.Drawing.Size(111, 66);
+            this.button_Delete.Size = new System.Drawing.Size(111, 100);
             this.button_Delete.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Delete.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_Delete.StateCommon.Back.ColorAngle = 45F;
@@ -761,7 +762,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1587, 717);
+            this.ClientSize = new System.Drawing.Size(1587, 745);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel_Information);
             this.Name = "FEmployer_JobDetail";
