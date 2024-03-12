@@ -23,13 +23,11 @@ namespace Job_Application_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FCandidate());
 
-            /*mainFormManager = new MainFormManager();
+            mainFormManager = new MainFormManager();
 
             mainFormManager.CurrentForm = new FLogin();
-            Application.Run(mainFormManager);*/
-            //Application.Run(new FLogin());
+            Application.Run(mainFormManager);
         }
     }
 }
