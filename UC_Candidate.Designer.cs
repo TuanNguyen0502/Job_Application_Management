@@ -30,8 +30,8 @@
         {
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRusbish = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -60,41 +60,41 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Mức lương";
             // 
-            // button2
+            // btnAdd
             // 
-            this.button2.Image = global::Job_Application_Management.Properties.Resources.icons8_heart_16;
-            this.button2.Location = new System.Drawing.Point(479, 106);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(43, 29);
-            this.button2.TabIndex = 8;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAdd.Image = global::Job_Application_Management.Properties.Resources.icons8_heart_16;
+            this.btnAdd.Location = new System.Drawing.Point(479, 106);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(43, 29);
+            this.btnAdd.TabIndex = 8;
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnRusbish
             // 
-            this.button1.Image = global::Job_Application_Management.Properties.Resources.icons8_trash_can_16;
-            this.button1.Location = new System.Drawing.Point(430, 106);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 30);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRusbish.Image = global::Job_Application_Management.Properties.Resources.icons8_trash_can_16;
+            this.btnRusbish.Location = new System.Drawing.Point(430, 106);
+            this.btnRusbish.Name = "btnRusbish";
+            this.btnRusbish.Size = new System.Drawing.Size(43, 30);
+            this.btnRusbish.TabIndex = 7;
+            this.btnRusbish.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Image = global::Job_Application_Management.Properties.Resources.icons8_company_16;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(184, 67);
+            this.label2.Location = new System.Drawing.Point(184, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 4;
-            this.label2.Text = "       Địa điểm";
+            this.label2.Text = "        Công ty";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Image = global::Job_Application_Management.Properties.Resources.icons8_location_16;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(184, 113);
+            this.label1.Location = new System.Drawing.Point(180, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 16);
             this.label1.TabIndex = 3;
@@ -123,8 +123,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnRusbish);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -132,6 +132,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "UC_Candidate";
             this.Size = new System.Drawing.Size(548, 148);
+            this.Load += new System.EventHandler(this.UC_Candidate_Load);
             this.Click += new System.EventHandler(this.uc_JobDetail);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -145,8 +146,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRusbish;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
     }

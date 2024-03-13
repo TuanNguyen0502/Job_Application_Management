@@ -26,11 +26,26 @@ namespace Job_Application_Management
         public frmCadidate_Main()
         {
             InitializeComponent();
+            InitializeToolTip();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
         private void frmCandidateMain_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void InitializeToolTip()
+        {
+            ToolTip toolTipMain = new ToolTip();
+            // Set up the delays for the ToolTip.
+            toolTipMain.AutoPopDelay = 5000;
+            toolTipMain.InitialDelay = 1000;
+            toolTipMain.ReshowDelay = 500;
+
+            toolTipMain.ShowAlways = true;
+
+            toolTipMain.SetToolTip(this.btnExit, "Thoát");
+            toolTipMain.SetToolTip(this.btnSearchJob, "Tìm việc");
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
