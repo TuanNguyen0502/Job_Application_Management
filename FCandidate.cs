@@ -60,6 +60,8 @@ namespace Job_Application_Management
             pnlNav.Height = btnLogout.Height;
             pnlNav.Top = btnLogout.Top;
             btnLogout.BackColor = Color.FromArgb(224, 224, 224);
+            
+            Program.MainFormManager.CurrentForm = new FLogin();
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
