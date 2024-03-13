@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class UC_Candidate : UserControl
+    public partial class UC_JobsSaved : UserControl
     {
-        public UC_Candidate()
+        public UC_JobsSaved()
         {
             InitializeComponent();
             InitializeToolTip();
