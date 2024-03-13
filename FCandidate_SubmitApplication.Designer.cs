@@ -290,7 +290,6 @@
             // 
             // ptbTel
             // 
-            this.ptbTel.Image = global::Job_Application_Management.Properties.Resources.phone_icon;
             this.ptbTel.InitialImage = ((System.Drawing.Image)(resources.GetObject("ptbTel.InitialImage")));
             this.ptbTel.Location = new System.Drawing.Point(6, 55);
             this.ptbTel.Name = "ptbTel";

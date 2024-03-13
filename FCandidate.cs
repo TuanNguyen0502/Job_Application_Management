@@ -38,63 +38,62 @@ namespace Job_Application_Management
             pnlNav.Height = btnDashboard.Height;
             pnlNav.Top = btnDashboard.Top;
             pnlNav.Left = btnDashboard.Left;
-            btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
+            btnDashboard.BackColor = Color.FromArgb(224, 224, 224);
         }
 
         private void btnJobApp_Click(object sender, EventArgs e)
         {
             pnlNav.Height = btnJobApp.Height;
             pnlNav.Top = btnJobApp.Top;
-            btnJobApp.BackColor = Color.FromArgb(46, 51, 73);
+            btnJobApp.BackColor = Color.FromArgb(224, 224, 224);
         }
 
         private void btnCompanies_Click(object sender, EventArgs e)
         {
             pnlNav.Height = btnCompanies.Height;
             pnlNav.Top = btnCompanies.Top;
-            btnCompanies.BackColor = Color.FromArgb(46, 51, 73);
+            btnCompanies.BackColor = Color.FromArgb(224, 224, 224);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             pnlNav.Height = btnLogout.Height;
             pnlNav.Top = btnLogout.Top;
-            btnLogout.BackColor = Color.FromArgb(46, 51, 73);
+            btnLogout.BackColor = Color.FromArgb(224, 224, 224);
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
             pnlNav.Height = btnSetting.Height;
             pnlNav.Top = btnSetting.Top;
-            btnSetting.BackColor = Color.FromArgb(46, 51, 73);
+            btnSetting.BackColor = Color.FromArgb(224, 224, 224);
         }
 
         private void btnDashboard_Leave(object sender, EventArgs e)
         {
-            btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
+            btnDashboard.BackColor = Color.FromArgb(227, 229, 234);
         }
 
         private void btnJobApp_Leave(object sender, EventArgs e)
         {
-            btnJobApp.BackColor = Color.FromArgb(24, 30, 54);
+            btnJobApp.BackColor = Color.FromArgb(227, 229, 234);
         }
 
         private void btnCompanies_Leave(object sender, EventArgs e)
         {
-            btnCompanies.BackColor = Color.FromArgb(24, 30, 54);
+            btnCompanies.BackColor = Color.FromArgb(227, 229, 234);
         }
 
         private void btnLogout_Leave(object sender, EventArgs e)
         {
-            btnLogout.BackColor = Color.FromArgb(24, 30, 54);
+            btnLogout.BackColor = Color.FromArgb(227, 229, 234);
         }
 
         private void btnSetting_Leave(object sender, EventArgs e)
         {
-            btnSetting.BackColor = Color.FromArgb(24, 30, 54);
+            btnSetting.BackColor = Color.FromArgb(227, 229, 234);
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
