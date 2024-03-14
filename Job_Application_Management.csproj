@@ -136,12 +136,6 @@
     <Compile Include="FEmployer_SeeCandidate.Designer.cs">
       <DependentUpon>FEmployer_SeeCandidate.cs</DependentUpon>
     </Compile>
-    <Compile Include="FForgetPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FForgetPassword.Designer.cs">
-      <DependentUpon>FForgetPassword.cs</DependentUpon>
-    </Compile>
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,9 +210,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_SeeCandidate.resx">
       <DependentUpon>FEmployer_SeeCandidate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FForgetPassword.resx">
-      <DependentUpon>FForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
@@ -416,6 +407,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-location-16 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-post-682.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-643.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
