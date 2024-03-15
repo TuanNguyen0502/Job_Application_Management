@@ -136,12 +136,6 @@
     <Compile Include="FEmployer_SeeCandidate.Designer.cs">
       <DependentUpon>FEmployer_SeeCandidate.cs</DependentUpon>
     </Compile>
-    <Compile Include="FForgetPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FForgetPassword.Designer.cs">
-      <DependentUpon>FForgetPassword.cs</DependentUpon>
-    </Compile>
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +168,18 @@
     </Compile>
     <Compile Include="UC_CandidateMain.Designer.cs">
       <DependentUpon>UC_CandidateMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_EmployerJob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_EmployerJob.Designer.cs">
+      <DependentUpon>UC_EmployerJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_CandidateCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CandidateCV.Designer.cs">
+      <DependentUpon>UC_CandidateCV.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_JobsSaved.cs">
       <SubType>UserControl</SubType>
@@ -217,9 +223,6 @@
     <EmbeddedResource Include="FEmployer_SeeCandidate.resx">
       <DependentUpon>FEmployer_SeeCandidate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FForgetPassword.resx">
-      <DependentUpon>FForgetPassword.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +247,12 @@
     </Compile>
     <EmbeddedResource Include="UC_CandidateMain.resx">
       <DependentUpon>UC_CandidateMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_EmployerJob.resx">
+      <DependentUpon>UC_EmployerJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CandidateCV.resx">
+      <DependentUpon>UC_CandidateCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_JobsSaved.resx">
       <DependentUpon>UC_JobsSaved.cs</DependentUpon>
@@ -418,10 +427,19 @@
     <None Include="Resources\icons8-location-16 %281%292.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-heart-16 %281%29.png" />
+    <None Include="Resources\icons8-post-682.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-heart-16 %282%29.png" />
+    <None Include="Resources\icons8-delete-643.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-detail-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

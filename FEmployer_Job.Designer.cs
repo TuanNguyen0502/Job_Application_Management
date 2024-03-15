@@ -33,6 +33,8 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Post = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.uC_EmployerJob1 = new Job_Application_Management.UC_EmployerJob();
+            this.uC_EmployerJob2 = new Job_Application_Management.UC_EmployerJob();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -62,9 +64,9 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.button_Post);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 609);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 590);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1328, 89);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1328, 108);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // button_Post
@@ -85,10 +87,11 @@
             this.button_Post.OverrideDefault.Border.Rounding = 20;
             this.button_Post.OverrideDefault.Border.Width = 1;
             this.button_Post.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_Post.Size = new System.Drawing.Size(203, 80);
+            this.button_Post.Size = new System.Drawing.Size(203, 100);
             this.button_Post.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Post.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_Post.StateCommon.Back.ColorAngle = 45F;
+            this.button_Post.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_post_68;
             this.button_Post.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.button_Post.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.button_Post.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -132,13 +135,30 @@
             // 
             // flowLayoutPanel2
             // 
+            this.flowLayoutPanel2.Controls.Add(this.uC_EmployerJob1);
+            this.flowLayoutPanel2.Controls.Add(this.uC_EmployerJob2);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(5);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1328, 606);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1328, 587);
             this.flowLayoutPanel2.TabIndex = 7;
             // 
+            // uC_EmployerJob1
+            // 
+            this.uC_EmployerJob1.BackColor = System.Drawing.Color.LightCyan;
+            this.uC_EmployerJob1.Location = new System.Drawing.Point(8, 8);
+            this.uC_EmployerJob1.Name = "uC_EmployerJob1";
+            this.uC_EmployerJob1.Size = new System.Drawing.Size(500, 300);
+            this.uC_EmployerJob1.TabIndex = 0;
+            // 
+            // uC_EmployerJob2
+            // 
+            this.uC_EmployerJob2.BackColor = System.Drawing.Color.LightCyan;
+            this.uC_EmployerJob2.Location = new System.Drawing.Point(514, 8);
+            this.uC_EmployerJob2.Name = "uC_EmployerJob2";
+            this.uC_EmployerJob2.Size = new System.Drawing.Size(500, 300);
+            this.uC_EmployerJob2.TabIndex = 1;
             // 
             // FEmployer_Job
             // 
@@ -163,5 +183,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_Post;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private UC_EmployerJob uC_EmployerJob1;
+        private UC_EmployerJob uC_EmployerJob2;
     }
 }

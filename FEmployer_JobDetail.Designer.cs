@@ -534,6 +534,7 @@
             this.button_Post.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Post.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_Post.StateCommon.Back.ColorAngle = 45F;
+            this.button_Post.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_post_68;
             this.button_Post.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.button_Post.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Post.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -594,6 +595,7 @@
             this.button_Delete.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Delete.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_Delete.StateCommon.Back.ColorAngle = 45F;
+            this.button_Delete.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_delete_64;
             this.button_Delete.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.button_Delete.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.button_Delete.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -651,7 +653,7 @@
             this.button_SeeCandidate.OverrideDefault.Border.Rounding = 20;
             this.button_SeeCandidate.OverrideDefault.Border.Width = 1;
             this.button_SeeCandidate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_SeeCandidate.Size = new System.Drawing.Size(257, 66);
+            this.button_SeeCandidate.Size = new System.Drawing.Size(257, 100);
             this.button_SeeCandidate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_SeeCandidate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_SeeCandidate.StateCommon.Back.ColorAngle = 45F;
@@ -711,7 +713,7 @@
             this.button_ApprovedCandidate.OverrideDefault.Border.Rounding = 20;
             this.button_ApprovedCandidate.OverrideDefault.Border.Width = 1;
             this.button_ApprovedCandidate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_ApprovedCandidate.Size = new System.Drawing.Size(321, 66);
+            this.button_ApprovedCandidate.Size = new System.Drawing.Size(321, 100);
             this.button_ApprovedCandidate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_ApprovedCandidate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_ApprovedCandidate.StateCommon.Back.ColorAngle = 45F;
@@ -762,6 +764,7 @@
             this.ClientSize = new System.Drawing.Size(1587, 745);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel_Information);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FEmployer_JobDetail";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
