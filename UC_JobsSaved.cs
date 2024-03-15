@@ -44,5 +44,6 @@ namespace Job_Application_Management
             toolTipMain.SetToolTip(this.btnRusbish, "Bỏ qua");
             toolTipMain.SetToolTip(this.btnAdd, "Lưu");
         }
+
     }
 }
