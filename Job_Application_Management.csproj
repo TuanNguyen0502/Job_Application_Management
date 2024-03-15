@@ -169,6 +169,18 @@
     <Compile Include="UC_CandidateMain.Designer.cs">
       <DependentUpon>UC_CandidateMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_EmployerJob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_EmployerJob.Designer.cs">
+      <DependentUpon>UC_EmployerJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_CandidateCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CandidateCV.Designer.cs">
+      <DependentUpon>UC_CandidateCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_JobsSaved.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -235,6 +247,12 @@
     </Compile>
     <EmbeddedResource Include="UC_CandidateMain.resx">
       <DependentUpon>UC_CandidateMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_EmployerJob.resx">
+      <DependentUpon>UC_EmployerJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CandidateCV.resx">
+      <DependentUpon>UC_CandidateCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_JobsSaved.resx">
       <DependentUpon>UC_JobsSaved.cs</DependentUpon>
@@ -413,6 +431,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-delete-643.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-detail-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -18,6 +18,10 @@ namespace Job_Application_Management
         public FEmployer_SeeCandidate()
         {
             InitializeComponent();
+
+            uC_CandidateCV1.Click += button_Detail_Click;
+
+            uC_CandidateCV2.Click += button_Detail_Click;
         }
 
         private void OpenChildForm(Form childForm)
@@ -41,16 +45,6 @@ namespace Job_Application_Management
         private void button_Detail_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FEmployer_CandidateCVDetail());
-        }
-
-        private void button_Approve_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button_Refuse_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
