@@ -75,7 +75,6 @@
             // 
             // button1
             // 
-            this.button1.Image = global::Job_Application_Management.Properties.Resources.icons8_heart_16__2_;
             this.button1.Location = new System.Drawing.Point(328, 58);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 24);

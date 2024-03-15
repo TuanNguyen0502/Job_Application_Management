@@ -134,7 +134,7 @@
             this.label5.AutoSize = true;
             this.label5.Image = global::Job_Application_Management.Properties.Resources.icons8_location_16__1_;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(179, 172);
+            this.label5.Location = new System.Drawing.Point(174, 172);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 16);
             this.label5.TabIndex = 9;
@@ -144,7 +144,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(299, 172);
+            this.label6.Location = new System.Drawing.Point(264, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(117, 16);
             this.label6.TabIndex = 10;
