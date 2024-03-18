@@ -86,7 +86,6 @@
             this.button_detail.Location = new System.Drawing.Point(1061, 128);
             this.button_detail.Name = "button_detail";
             this.button_detail.Size = new System.Drawing.Size(100, 50);
-            this.button_detail.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_detail_24;
             this.button_detail.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.button_detail.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.button_detail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -102,7 +101,6 @@
             this.button_delete.Location = new System.Drawing.Point(1167, 128);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(100, 50);
-            this.button_delete.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_delete_24;
             this.button_delete.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.button_delete.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.button_delete.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 

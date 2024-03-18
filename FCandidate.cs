@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 
 namespace Job_Application_Management
 {
     public partial class frmCadidate_Main : KryptonForm
     {
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
             int nLeftRect,
@@ -23,6 +25,8 @@ namespace Job_Application_Management
             int nWidthEllipse,
             int nHeightEllipse
             );
+        private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
+        private string sqlQuery;
         public frmCadidate_Main()
         {
             InitializeComponent();
@@ -30,11 +34,60 @@ namespace Job_Application_Management
             InitializeDropdownMenu();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
-        private void frmCandidateMain_Load(object sender, EventArgs e)
+        public void frmCandidateMain_Load(object sender, EventArgs e)
         {
-
+            PoppulateItems();
         }
-
+        // Create my Items
+        public void PoppulateItems()
+        {
+            //Initialize populate at here
+            using(SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                sqlQuery = "SELECT JobName, CompanyName, Salary, WorkAddress FROM Jobs";
+                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        UC_CandidateMain item = new UC_CandidateMain();
+                        item = new UC_CandidateMain();
+                        item.JobName = reader.GetString(0);
+                        item.CompanyName1 = reader.GetString(1);
+                        item.Salary = reader.GetFloat(2);
+                        item.Address = reader.GetString(3);
+                        //lstItems[i].Icon = 
+                        if (flpScrollPane.Controls.Count < 0)
+                        {
+                            flpScrollPane.Controls.Clear();
+                        }
+                        else
+                            flpScrollPane.Controls.Add(item);
+                    }
+                }
+                else
+                    MessageBox.Show("No rows found");
+            }
+            /*UC_CandidateMain[] lstItems = new UC_CandidateMain[50];
+            int length = lstItems.Length;
+            for (int i = 0; i < length; i++)
+            {
+                lstItems[i] = new UC_CandidateMain();
+                lstItems[i].JobName = "Add job name at here";
+                lstItems[i].CompanyName1 = "Add company name at here";
+                lstItems[i].Salary = 500.9;
+                lstItems[i].Address = "Somewhere";
+                //lstItems[i].Icon = 
+                if (flpScrollPane.Controls.Count < 0)
+                {
+                    flpScrollPane.Controls.Clear();
+                }
+                else
+                    flpScrollPane.Controls.Add(lstItems[i]);
+            }*/
+        }
         private void InitializeToolTip()
         {
             ToolTip toolTipMain = new ToolTip();

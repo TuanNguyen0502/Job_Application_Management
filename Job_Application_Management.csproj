@@ -181,6 +181,12 @@
     <Compile Include="UC_CandidateCV.Designer.cs">
       <DependentUpon>UC_CandidateCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_JobApplied.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_JobApplied.Designer.cs">
+      <DependentUpon>UC_JobApplied.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_JobsSaved.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -440,6 +446,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-detail-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-heart-16 %281%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

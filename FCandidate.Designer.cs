@@ -41,7 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlScrollPane = new System.Windows.Forms.Panel();
             this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,20 +50,21 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.kcbbAddress = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearchFor = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.côngViệcĐãLưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.côngViệcĐãỨngTuyểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.flpScrollPane = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlNav.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kcbbAddress)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,9 +91,9 @@
             this.btnSetting.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnSetting.Image = global::Job_Application_Management.Properties.Resources.icons8_settings_30;
-            this.btnSetting.Location = new System.Drawing.Point(0, 709);
+            this.btnSetting.Location = new System.Drawing.Point(0, 670);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(213, 45);
+            this.btnSetting.Size = new System.Drawing.Size(213, 84);
             this.btnSetting.TabIndex = 5;
             this.btnSetting.Text = "Setting";
             this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -109,9 +109,9 @@
             this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnLogout.Image = global::Job_Application_Management.Properties.Resources.icons8_log_out_30;
-            this.btnLogout.Location = new System.Drawing.Point(0, 315);
+            this.btnLogout.Location = new System.Drawing.Point(0, 432);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(213, 45);
+            this.btnLogout.Size = new System.Drawing.Size(213, 84);
             this.btnLogout.TabIndex = 4;
             this.btnLogout.Text = "Log out    ";
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -127,9 +127,9 @@
             this.btnCompanies.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompanies.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCompanies.Image = global::Job_Application_Management.Properties.Resources.icons8_company_30;
-            this.btnCompanies.Location = new System.Drawing.Point(0, 270);
+            this.btnCompanies.Location = new System.Drawing.Point(0, 348);
             this.btnCompanies.Name = "btnCompanies";
-            this.btnCompanies.Size = new System.Drawing.Size(213, 45);
+            this.btnCompanies.Size = new System.Drawing.Size(213, 84);
             this.btnCompanies.TabIndex = 3;
             this.btnCompanies.Text = "Companies";
             this.btnCompanies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -145,9 +145,9 @@
             this.btnJobApp.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnJobApp.Image = global::Job_Application_Management.Properties.Resources.icons8_job_application_32;
-            this.btnJobApp.Location = new System.Drawing.Point(0, 225);
+            this.btnJobApp.Location = new System.Drawing.Point(0, 264);
             this.btnJobApp.Name = "btnJobApp";
-            this.btnJobApp.Size = new System.Drawing.Size(213, 45);
+            this.btnJobApp.Size = new System.Drawing.Size(213, 84);
             this.btnJobApp.TabIndex = 2;
             this.btnJobApp.Text = "Job App   ";
             this.btnJobApp.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -165,7 +165,7 @@
             this.btnDashboard.Image = global::Job_Application_Management.Properties.Resources.icons8_home_301;
             this.btnDashboard.Location = new System.Drawing.Point(0, 180);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(213, 45);
+            this.btnDashboard.Size = new System.Drawing.Size(213, 84);
             this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -228,29 +228,16 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pnlScrollPane
-            // 
-            this.pnlScrollPane.AutoScroll = true;
-            this.pnlScrollPane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.pnlScrollPane.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlScrollPane.Location = new System.Drawing.Point(213, 103);
-            this.pnlScrollPane.Name = "pnlScrollPane";
-            this.pnlScrollPane.Size = new System.Drawing.Size(1109, 651);
-            this.pnlScrollPane.TabIndex = 2;
-            // 
             // kryptonPalette2
             // 
-            this.kryptonPalette2.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.kryptonPalette2.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonPalette2.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
-            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.Rounding = 16;
             // 
             // panel1
@@ -271,6 +258,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(809, 36);
@@ -297,6 +285,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(1062, 8);
             this.btnExit.Name = "btnExit";
@@ -326,7 +315,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.kryptonComboBox1);
+            this.panel5.Controls.Add(this.kcbbAddress);
             this.panel5.Location = new System.Drawing.Point(297, 12);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(262, 85);
@@ -341,12 +330,12 @@
             this.label4.Size = new System.Drawing.Size(47, 34);
             this.label4.TabIndex = 1;
             // 
-            // kryptonComboBox1
+            // kcbbAddress
             // 
-            this.kryptonComboBox1.DisplayMember = "Hà Nội";
-            this.kryptonComboBox1.DropDownWidth = 163;
-            this.kryptonComboBox1.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.kryptonComboBox1.Items.AddRange(new object[] {
+            this.kcbbAddress.DisplayMember = "Hà Nội";
+            this.kcbbAddress.DropDownWidth = 163;
+            this.kcbbAddress.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
+            this.kcbbAddress.Items.AddRange(new object[] {
             "Hà Nội",
             "TP Hồ Chí Minh",
             "Bình Dương",
@@ -358,17 +347,17 @@
             "Hải Phòng",
             "An Giang",
             "Bà Rịa-Vũng Tàu"});
-            this.kryptonComboBox1.Location = new System.Drawing.Point(59, 25);
-            this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.Size = new System.Drawing.Size(200, 28);
-            this.kryptonComboBox1.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBox1.TabIndex = 3;
-            this.kryptonComboBox1.Text = "Hà Nội";
+            this.kcbbAddress.Location = new System.Drawing.Point(59, 25);
+            this.kcbbAddress.Name = "kcbbAddress";
+            this.kcbbAddress.Size = new System.Drawing.Size(200, 28);
+            this.kcbbAddress.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kcbbAddress.TabIndex = 3;
+            this.kcbbAddress.Text = "Hà Nội";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtSearchFor);
             this.panel3.Location = new System.Drawing.Point(0, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(291, 85);
@@ -383,13 +372,13 @@
             this.label3.Size = new System.Drawing.Size(47, 34);
             this.label3.TabIndex = 1;
             // 
-            // textBox1
+            // txtSearchFor
             // 
-            this.textBox1.Location = new System.Drawing.Point(61, 25);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 28);
-            this.textBox1.TabIndex = 0;
+            this.txtSearchFor.Location = new System.Drawing.Point(61, 25);
+            this.txtSearchFor.Multiline = true;
+            this.txtSearchFor.Name = "txtSearchFor";
+            this.txtSearchFor.Size = new System.Drawing.Size(227, 28);
+            this.txtSearchFor.TabIndex = 0;
             // 
             // contextMenuStrip1
             // 
@@ -413,22 +402,30 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
+            // flpScrollPane
+            // 
+            this.flpScrollPane.AutoScroll = true;
+            this.flpScrollPane.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpScrollPane.Location = new System.Drawing.Point(213, 102);
+            this.flpScrollPane.Name = "flpScrollPane";
+            this.flpScrollPane.Size = new System.Drawing.Size(1109, 652);
+            this.flpScrollPane.TabIndex = 4;
+            // 
             // frmCadidate_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1322, 754);
+            this.Controls.Add(this.flpScrollPane);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlScrollPane);
             this.Controls.Add(this.pnlNav);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadidate_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCandidate";
-            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCandidateMain_Load);
             this.pnlNav.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -436,7 +433,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kcbbAddress)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -447,7 +444,6 @@
 
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel pnlScrollPane;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnDashboard;
@@ -461,10 +457,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearchFor;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kcbbAddress;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnExit;
@@ -475,5 +471,6 @@
         private System.Windows.Forms.ToolStripMenuItem côngViệcĐãLưuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem côngViệcĐãỨngTuyểnToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.FlowLayoutPanel flpScrollPane;
     }
 }
