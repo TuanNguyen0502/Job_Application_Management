@@ -70,23 +70,6 @@ namespace Job_Application_Management
                 else
                     MessageBox.Show("No rows found");
             }
-            /*UC_CandidateMain[] lstItems = new UC_CandidateMain[50];
-            int length = lstItems.Length;
-            for (int i = 0; i < length; i++)
-            {
-                lstItems[i] = new UC_CandidateMain();
-                lstItems[i].JobName = "Add job name at here";
-                lstItems[i].CompanyName1 = "Add company name at here";
-                lstItems[i].Salary = 500.9;
-                lstItems[i].Address = "Somewhere";
-                //lstItems[i].Icon = 
-                if (flpScrollPane.Controls.Count < 0)
-                {
-                    flpScrollPane.Controls.Clear();
-                }
-                else
-                    flpScrollPane.Controls.Add(lstItems[i]);
-            }*/
         }
         private void InitializeToolTip()
         {

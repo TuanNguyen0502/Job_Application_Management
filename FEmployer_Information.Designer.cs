@@ -78,10 +78,10 @@
             this.tableLayoutPanel_Information.Controls.Add(this.textBox_Name, 3, 0);
             this.tableLayoutPanel_Information.Controls.Add(this.textBox_ID, 1, 0);
             this.tableLayoutPanel_Information.Controls.Add(this.label_ID, 0, 0);
-            this.tableLayoutPanel_Information.Controls.Add(this.label_Company, 2, 0);
+           /* this.tableLayoutPanel_Information.Controls.Add(this.label_Company, 2, 0);
             this.tableLayoutPanel_Information.Controls.Add(this.label_CompanyAddress, 0, 1);
             this.tableLayoutPanel_Information.Controls.Add(this.label_CompanyType, 2, 1);
-            this.tableLayoutPanel_Information.Controls.Add(this.label_Phone, 0, 3);
+            this.tableLayoutPanel_Information.Controls.Add(this.label_Phone, 0, 3);*/
             this.tableLayoutPanel_Information.Controls.Add(this.label_Name, 0, 2);
             this.tableLayoutPanel_Information.Controls.Add(this.label_Sex, 2, 2);
             this.tableLayoutPanel_Information.Controls.Add(this.panel_Sex, 3, 2);
@@ -101,7 +101,7 @@
             // 
             // textBox_Name
             // 
-            this.richTextBox_CompanyAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
+            /*this.richTextBox_CompanyAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox_CompanyAddress.Location = new System.Drawing.Point(270, 114);
             this.richTextBox_CompanyAddress.Name = "richTextBox_CompanyAddress";
             this.richTextBox_CompanyAddress.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
@@ -114,15 +114,15 @@
             this.richTextBox_CompanyAddress.StateCommon.Border.ColorAngle = 45F;
             this.richTextBox_CompanyAddress.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.richTextBox_CompanyAddress.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));*/
+            /*this.richTextBox_CompanyAddress.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.richTextBox_CompanyAddress.StateCommon.Border.Rounding = 20;
             this.richTextBox_CompanyAddress.StateCommon.Border.Width = 1;
             this.richTextBox_CompanyAddress.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.richTextBox_CompanyAddress.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_CompanyAddress.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
             this.richTextBox_CompanyAddress.TabIndex = 4;
-            this.richTextBox_CompanyAddress.Text = "";
+            this.richTextBox_CompanyAddress.Text = "";*/
             // 
             // textBox_Email
             // 
@@ -150,7 +150,7 @@
             // 
             // comboBox_CompanyType
             // 
-            this.comboBox_CompanyType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            /*this.comboBox_CompanyType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox_CompanyType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_CompanyType.Font = new System.Drawing.Font("Consolas", 14F);
             this.comboBox_CompanyType.FormattingEnabled = true;
@@ -237,7 +237,7 @@
             this.kryptonTextBox_Name.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.kryptonTextBox_Name.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox_Name.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.kryptonTextBox_Name.TabIndex = 15;
+            this.kryptonTextBox_Name.TabIndex = 15;*/
             // 
             // textBox_CompanyName
             // 
@@ -302,7 +302,7 @@
             // 
             // label_Company
             // 
-            this.label_Company.Anchor = System.Windows.Forms.AnchorStyles.None;
+            /*this.label_Company.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_Company.AutoSize = true;
             this.label_Company.Font = new System.Drawing.Font("Consolas", 12F);
             this.label_Company.Location = new System.Drawing.Point(794, 37);
@@ -310,7 +310,7 @@
             this.label_Company.Size = new System.Drawing.Size(168, 28);
             this.label_Company.TabIndex = 4;
             this.label_Company.Text = "Company Name";
-            this.label_Company.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Company.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;*/
             // 
             // label_CompanyAddress
             // 
@@ -325,7 +325,7 @@
             // 
             // label_CompanyType
             // 
-            this.label_CompanyType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            /*this.label_CompanyType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_CompanyType.AutoSize = true;
             this.label_CompanyType.Font = new System.Drawing.Font("Consolas", 12F);
             this.label_CompanyType.Location = new System.Drawing.Point(794, 139);
@@ -343,7 +343,7 @@
             this.label_Phone.Name = "label_Phone";
             this.label_Phone.Size = new System.Drawing.Size(77, 28);
             this.label_Phone.TabIndex = 4;
-            this.label_Phone.Text = "Phone";
+            this.label_Phone.Text = "Phone";*/
             // 
             // label_Name
             // 
@@ -522,13 +522,13 @@
             // 
             // label_CompanyAddress
             // 
-            this.panel_Bottom.Controls.Add(this.button_Save);
+            /*this.panel_Bottom.Controls.Add(this.button_Save);
             this.panel_Bottom.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel_Bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel_Bottom.Location = new System.Drawing.Point(0, 570);
             this.panel_Bottom.Name = "panel_Bottom";
             this.panel_Bottom.Size = new System.Drawing.Size(1587, 107);
-            this.panel_Bottom.TabIndex = 3;
+            this.panel_Bottom.TabIndex = 3;*/
             // 
             // textBox_CompanyAddress
             // 
@@ -681,7 +681,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1587, 677);
-            this.Controls.Add(this.panel_Bottom);
+            //this.Controls.Add(this.panel_Bottom);
             this.Controls.Add(this.tableLayoutPanel_Information);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FEmployer_Information";

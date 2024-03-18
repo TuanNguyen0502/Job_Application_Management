@@ -100,8 +100,6 @@
             // 
             // btnApply
             // 
-            this.btnApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(225)))), ((int)(((byte)(112)))));
-            this.btnApply.Image = global::Job_Application_Management.Properties.Resources.icons8_heart_16__1_1;
             this.btnApply.Location = new System.Drawing.Point(729, 104);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(60, 30);
