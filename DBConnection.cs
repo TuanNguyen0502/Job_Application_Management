@@ -63,7 +63,7 @@ namespace Job_Application_Management
                 conn.Close();
             }
 
-            LoadDataGridView();
+            //LoadDataGridView();
         }
     }
 }
