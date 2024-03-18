@@ -56,7 +56,7 @@ namespace Job_Application_Management
                         item = new UC_CandidateMain();
                         item.JobName = reader.GetString(0);
                         item.CompanyName1 = reader.GetString(1);
-                        item.Salary = reader.GetFloat(2);
+                        item.Salary = reader.GetInt32(2);
                         item.Address = reader.GetString(3);
                         //lstItems[i].Icon = 
                         if (flpScrollPane.Controls.Count < 0)

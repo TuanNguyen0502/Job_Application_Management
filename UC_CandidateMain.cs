@@ -34,7 +34,7 @@ namespace Job_Application_Management
         public double Salary
         {
             get { return salary; }
-            set {salary = value; lblSalary.Text = value.ToString()+"$"; }
+            set {salary = value; lblSalary.Text = value.ToString()+"VNĐ"; }
         }
         [Category("Custom Props")]
         public string Address
