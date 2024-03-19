@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace Job_Application_Management
     public partial class FEmployer : KryptonForm
     {
         private Form currentFormChild;
+        
         public FEmployer()
         {
             InitializeComponent();
@@ -60,6 +62,11 @@ namespace Job_Application_Management
         private void button_SignOut_Click(object sender, EventArgs e)
         {
             Program.MainFormManager.CurrentForm = new FLogin();
+        }
+
+        private void FEmployer_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

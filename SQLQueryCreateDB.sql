@@ -8,8 +8,8 @@
 	Sex nvarchar(3),
 	Education nvarchar(250)
 )
-CREATE TABLE Employeers(
-	EmpID varchar(10) CONSTRAINT PK_Epr PRIMARY KEY,
+CREATE TABLE Employers(
+	EmpID varchar(10) CONSTRAINT PK_Emp PRIMARY KEY,
 	EmpEmail varchar(100),
 	EmpName nvarchar(100),
 	Sex nvarchar(10),
@@ -30,7 +30,7 @@ CREATE TABLE Jobs(
 	ExpirationDate date,
 	Benefit text,
 	RequestCdd text,
-	EmpID varchar(10) CONSTRAINT FK_EmpID FOREIGN KEY REFERENCES Employeers(EmpID)
+	EmpID varchar(10) CONSTRAINT FK_EmpID FOREIGN KEY REFERENCES Employers(EmpID)
 )
 CREATE TABLE ApplicationDetails(
 	CddID varchar(10) CONSTRAINT FK_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
@@ -46,7 +46,7 @@ VALUES
 ('CDD002', N'Trần Thị B', '0987654321', 'tranthib@example.com', '456 XYZ Street', N'Hồ Chí Minh City', N'Nữ', 'Master of Business Administration'),
 ('CDD003', N'Phạm Văn C', '0123456789', 'phamvanc@example.com', '789 DEF Street', N'Đà Nẵng', N'Nam', 'Bachelor of Arts in English');
 -- Dữ liệu cho bảng Employeers
-INSERT INTO Employeers (EmpID, EmpEmail, EmpName, Sex, Phone, Workplace, Company, CompanyAddress)
+INSERT INTO Employers (EmpID, EmpEmail, EmpName, Sex, Phone, Workplace, Company, CompanyAddress)
 VALUES
 ('EMP001', 'hongtuan@gmail.com', N'Hồng Tuấn', N'Nam', '0123456789', N'Giám đốc', N'Công ty ABC', N'123 PQR Road, Ba Đình, Hà Nội')
 -- Dữ liệu cho bảng Jobs
@@ -67,5 +67,3 @@ SELECT * FROM Jobs
 SELECT * FROM Candidates
 SELECT * FROM Employeers
 SELECT * FROM ApplicationDetails
-
-SELECT JobName, WorkAddress, Salary, Experience, CompanyName FROM Jobs WHERE JobID = 'JOB001'

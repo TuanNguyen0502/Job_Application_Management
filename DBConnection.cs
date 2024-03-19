@@ -12,21 +12,18 @@ namespace Job_Application_Management
     public class DBConnection
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        private string tableName;
 
-        public DBConnection(string tableName)
+        public DBConnection()
         {
-            this.tableName = tableName;
         }
 
         /*
-        public DataTable LoadDataGridView()
+        public DataTable LoadEmployerInfor()
         {
             try
             {
                 conn.Open();
-                string sqlStr = string.Format($"SELECT id [ID], ten [Họ và tên], gioiTinh [Giới tính], diaChi [Địa chỉ], cccd [CCCD], " +
-                    $"ngayThangNamSinh [Ngày sinh], soDienThoai [Số điện thoại], email [Email] FROM {tableName}");
+                string sqlStr = string.Format($"SELECT ");
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
                 DataTable dtperson = new DataTable();
                 adapter.Fill(dtperson);
