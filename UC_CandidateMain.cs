@@ -18,6 +18,7 @@ namespace Job_Application_Management
         private double salary;
         private string address;
         private Image icon;
+        private string jobid;
         [Category("Custom Props")]
         public string JobName
         {
@@ -48,6 +49,12 @@ namespace Job_Application_Management
             get { return icon; }
             set { icon = value; ptbMain.Image = value; }
         }
+        [Category("Custom Props")]
+        public string JobID
+        {
+            get { return jobid; }
+            set { jobid = value; }
+        }
         #endregion
         public UC_CandidateMain()
         {
@@ -61,7 +68,7 @@ namespace Job_Application_Management
 
         private void UC_CandidateMain_Click(object sender, EventArgs e)
         {
-            FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails();
+            FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails(JobID);
             selected.ShowDialog();
         }
     }

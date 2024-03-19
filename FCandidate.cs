@@ -44,7 +44,7 @@ namespace Job_Application_Management
             using(SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                sqlQuery = "SELECT JobName, CompanyName, Salary, WorkAddress FROM Jobs";
+                sqlQuery = "SELECT JobName, CompanyName, Salary, WorkAddress, JobID FROM Jobs";
                 SqlCommand cmd = new SqlCommand(sqlQuery, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
@@ -57,6 +57,7 @@ namespace Job_Application_Management
                         item.CompanyName1 = reader.GetString(1);
                         item.Salary = reader.GetInt32(2);
                         item.Address = reader.GetString(3);
+                        item.JobID = reader.GetString(4);
                         //lstItems[i].Icon = 
                         if (flpScrollPane.Controls.Count < 0)
                         {

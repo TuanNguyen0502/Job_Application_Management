@@ -15,8 +15,15 @@ namespace Job_Application_Management
     {
         private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
         private string sqlQuery;
+        private string jobid;
         public FCandidate_SelectedJobDetails()
         {
+            InitializeComponent();
+            GetDataFromDB();
+        }
+        public FCandidate_SelectedJobDetails(string jobid)
+        {
+            this.jobid = jobid;
             InitializeComponent();
             GetDataFromDB();
         }
@@ -25,10 +32,9 @@ namespace Job_Application_Management
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                var JobID = "JOB001";
-                sqlQuery = "SELECT JobName, WorkAddress, Salary, Experience, CompanyName FROM Jobs WHERE JobID = 'JOB001'";
+                sqlQuery = "SELECT JobName, WorkAddress, Salary, Experience, CompanyName FROM Jobs WHERE JobID = @jobId";
                 SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                //cmd.Parameters.AddWithValue("@jobId", JobID);
+                cmd.Parameters.AddWithValue("@jobId", jobid);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
