@@ -62,6 +62,11 @@ namespace Job_Application_Management
 
         private void FEmployer_Job_Load(object sender, EventArgs e)
         {
+            LoadInfor();
+        }
+
+        private void LoadInfor()
+        {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
@@ -76,7 +81,6 @@ namespace Job_Application_Management
                         uC_EmployerJobs.Append(item);
                         item.JobID = reader.GetString(0);
                         item.Label_JobName.Text = reader.GetString(1);
-                        //lstItems[i].Icon = 
                         if (flowLayoutPanel_Jobs.Controls.Count < 0)
                         {
                             flowLayoutPanel_Jobs.Controls.Clear();
