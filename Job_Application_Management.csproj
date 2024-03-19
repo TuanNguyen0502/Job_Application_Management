@@ -83,6 +83,12 @@
     <Compile Include="FCandidate_SavedJobs.Designer.cs">
       <DependentUpon>FCandidate_SavedJobs.cs</DependentUpon>
     </Compile>
+    <Compile Include="FCandidate_SelectedJobDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCandidate_SelectedJobDetails.Designer.cs">
+      <DependentUpon>FCandidate_SelectedJobDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCandidate_SubmitApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,12 +149,6 @@
     <Compile Include="FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FCandidate_SelectedJobDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FCandidate_SelectedJobDetail.Designer.cs">
-      <DependentUpon>FCandidate_SelectedJobDetail.cs</DependentUpon>
-    </Compile>
     <Compile Include="FRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +203,9 @@
     <EmbeddedResource Include="FCandidate_SavedJobs.resx">
       <DependentUpon>FCandidate_SavedJobs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FCandidate_SelectedJobDetails.resx">
+      <DependentUpon>FCandidate_SelectedJobDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCandidate_SubmitApplication.resx">
       <DependentUpon>FCandidate_SubmitApplication.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,9 +235,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FCandidate_SelectedJobDetail.resx">
-      <DependentUpon>FCandidate_SelectedJobDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRegister.resx">
       <DependentUpon>FRegister.cs</DependentUpon>
@@ -459,6 +459,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-edit-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-crypto-trading-spot-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-crypto-trading-spot-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-place-marker-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hourglass-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-paper-plane-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-paper-plane-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-medal-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-group-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bag-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-person-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -136,6 +136,9 @@
   <data name="icons8-delete-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-delete-242.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-paper-plane-32 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-paper-plane-32 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-job-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-job-642.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,8 +154,14 @@
   <data name="icons8-close-window-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-close-window-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-crypto-trading-spot-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-crypto-trading-spot-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1144760" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1144760.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-crypto-trading-spot-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-crypto-trading-spot-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Natural-Link-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Natural-Link-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,8 +202,17 @@
   <data name="icons8-settings-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-settings-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-bag-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-bag-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Actions-home-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Actions-home-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-hourglass-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-hourglass-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-group-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-group-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-find-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-find-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +232,8 @@
   <data name="icons8-log-out-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-log-out-301.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="newspaper-plus-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newspaper-plus-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-place-marker-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-place-marker-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-edit-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-edit-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,23 +247,32 @@
   <data name="icons8-home-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-home-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-medal-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-medal-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="empty.pnj" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\empty.pnj.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="email-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\email-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Function-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Function-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-edit-241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-edit-241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="calendar-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendar-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-delete-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-delete-643.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-person-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-person-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-log-out-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-log-out-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-person-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-person-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-paper-plane-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-paper-plane-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-find-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-find-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,8 +292,8 @@
   <data name="cv-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cv-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-delete-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-delete-643.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="email-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\email-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="52757-direct-hit-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\52757-direct-hit-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,10 +301,13 @@
   <data name="icons8-company-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-company-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="newspaper-plus-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newspaper-plus-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-post-68" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-post-684.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-edit-241" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-edit-241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-person-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-person-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

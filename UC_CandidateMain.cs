@@ -56,7 +56,13 @@ namespace Job_Application_Management
 
         private void UC_CandidateMain_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void UC_CandidateMain_Click(object sender, EventArgs e)
+        {
+            FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails();
+            selected.ShowDialog();
         }
     }
 }

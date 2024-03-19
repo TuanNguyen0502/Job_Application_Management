@@ -131,6 +131,7 @@
             this.Name = "UC_CandidateMain";
             this.Size = new System.Drawing.Size(588, 138);
             this.Load += new System.EventHandler(this.UC_CandidateMain_Load);
+            this.Click += new System.EventHandler(this.UC_CandidateMain_Click);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbMain)).EndInit();
             this.ResumeLayout(false);

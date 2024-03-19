@@ -67,3 +67,5 @@ SELECT * FROM Jobs
 SELECT * FROM Candidates
 SELECT * FROM Employeers
 SELECT * FROM ApplicationDetails
+
+SELECT JobName, WorkAddress, Salary, Experience, CompanyName FROM Jobs WHERE JobID = 'JOB001'

@@ -20,7 +20,7 @@ namespace Job_Application_Management
 
         private void uc_JobDetail(object sender, EventArgs e)
         {
-            FCandidate_SelectedJobDetail detail = new FCandidate_SelectedJobDetail();
+            FCandidate_SelectedJobDetails detail = new FCandidate_SelectedJobDetails();
             detail.ShowDialog();
         }
 
