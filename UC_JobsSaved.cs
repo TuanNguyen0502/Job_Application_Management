@@ -12,18 +12,50 @@ namespace Job_Application_Management
 {
     public partial class UC_JobsSaved : UserControl
     {
+        #region Properties
+        private string descriptionJob;
+        private string comName;
+        private DateTime timeSaved;
+        private string address;
+        private string timeUpdate;
+        private int salary;
+        private Image icon;
+        public string DescriptionJob 
+        { 
+            get => descriptionJob;
+            set { descriptionJob = value; lblDescrption.Text = value; }
+        }
+        public string ComName 
+        { 
+            get => comName; 
+            set { comName = value; lblComName.Text = value; } 
+        }
+        public DateTime TimeSaved 
+        {   
+            get => timeSaved;
+            set { timeSaved = value; lblTimeSaved.Text = $"Đã lưu: {value}"; }
+        }
+        public string Address 
+        { 
+            get => address;
+            set { address = value; lblAddress.Text = value; }
+        }
+        public int Salary 
+        { 
+            get => salary;
+            set { salary = value; lblComName.Text = value.ToString(); }
+        }
+        public Image Icon 
+        { 
+            get => icon;
+            set { icon = value; pictureBox1.Image = value; }
+        }
+        #endregion
         public UC_JobsSaved()
         {
             InitializeComponent();
             InitializeToolTip();
         }
-
-        private void uc_JobDetail(object sender, EventArgs e)
-        {
-            FCandidate_SelectedJobDetails detail = new FCandidate_SelectedJobDetails();
-            detail.ShowDialog();
-        }
-
         private void UC_Candidate_Load(object sender, EventArgs e)
         {
 

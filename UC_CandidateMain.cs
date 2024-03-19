@@ -71,5 +71,10 @@ namespace Job_Application_Management
             FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails(JobID);
             selected.ShowDialog();
         }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

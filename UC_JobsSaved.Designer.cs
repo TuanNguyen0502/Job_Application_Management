@@ -28,39 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblDescrption = new System.Windows.Forms.Label();
+            this.lblSalary = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRusbish = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblComName = new System.Windows.Forms.Label();
+            this.lblTimeSaved = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblTimeUpdate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label3
+            // lblDescrption
             // 
-            this.label3.AutoSize = true;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(178, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Mô tả công việc";
+            this.lblDescrption.AutoSize = true;
+            this.lblDescrption.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDescrption.Location = new System.Drawing.Point(178, 22);
+            this.lblDescrption.Name = "lblDescrption";
+            this.lblDescrption.Size = new System.Drawing.Size(101, 16);
+            this.lblDescrption.TabIndex = 5;
+            this.lblDescrption.Text = "Mô tả công việc";
             // 
-            // label4
+            // lblSalary
             // 
-            this.label4.AutoSize = true;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(692, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Mức lương";
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSalary.Location = new System.Drawing.Point(651, 22);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(68, 16);
+            this.lblSalary.TabIndex = 6;
+            this.lblSalary.Text = "Mức lương";
             // 
             // btnAdd
             // 
@@ -91,26 +91,26 @@
             this.btnRusbish.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRusbish.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lblComName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Image = global::Job_Application_Management.Properties.Resources.icons8_company_16;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(178, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "        Công ty";
+            this.lblComName.AutoSize = true;
+            this.lblComName.Image = global::Job_Application_Management.Properties.Resources.icons8_company_16;
+            this.lblComName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblComName.Location = new System.Drawing.Point(178, 78);
+            this.lblComName.Name = "lblComName";
+            this.lblComName.Size = new System.Drawing.Size(76, 16);
+            this.lblComName.TabIndex = 4;
+            this.lblComName.Text = "        Công ty";
             // 
-            // label1
+            // lblTimeSaved
             // 
-            this.label1.AutoSize = true;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(174, 125);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Thời điểm lưu";
+            this.lblTimeSaved.AutoSize = true;
+            this.lblTimeSaved.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTimeSaved.Location = new System.Drawing.Point(174, 125);
+            this.lblTimeSaved.Name = "lblTimeSaved";
+            this.lblTimeSaved.Size = new System.Drawing.Size(87, 16);
+            this.lblTimeSaved.TabIndex = 3;
+            this.lblTimeSaved.Text = "Thời điểm lưu";
             // 
             // pictureBox1
             // 
@@ -129,26 +129,26 @@
             this.panel1.Size = new System.Drawing.Size(157, 205);
             this.panel1.TabIndex = 0;
             // 
-            // label5
+            // lblAddress
             // 
-            this.label5.AutoSize = true;
-            this.label5.Image = global::Job_Application_Management.Properties.Resources.icons8_location_16__1_;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(174, 172);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 16);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "       Địa điểm";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Image = global::Job_Application_Management.Properties.Resources.icons8_location_16__1_;
+            this.lblAddress.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAddress.Location = new System.Drawing.Point(174, 172);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(81, 16);
+            this.lblAddress.TabIndex = 9;
+            this.lblAddress.Text = "       Địa điểm";
             // 
-            // label6
+            // lblTimeUpdate
             // 
-            this.label6.AutoSize = true;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(264, 172);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 16);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Thời gian cập nhật";
+            this.lblTimeUpdate.AutoSize = true;
+            this.lblTimeUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTimeUpdate.Location = new System.Drawing.Point(264, 172);
+            this.lblTimeUpdate.Name = "lblTimeUpdate";
+            this.lblTimeUpdate.Size = new System.Drawing.Size(117, 16);
+            this.lblTimeUpdate.TabIndex = 10;
+            this.lblTimeUpdate.Text = "Thời gian cập nhật";
             // 
             // UC_JobsSaved
             // 
@@ -156,19 +156,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblTimeUpdate);
+            this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnRusbish);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSalary);
+            this.Controls.Add(this.lblDescrption);
+            this.Controls.Add(this.lblComName);
+            this.Controls.Add(this.lblTimeSaved);
             this.Controls.Add(this.panel1);
             this.Name = "UC_JobsSaved";
             this.Size = new System.Drawing.Size(780, 205);
             this.Load += new System.EventHandler(this.UC_Candidate_Load);
-            this.Click += new System.EventHandler(this.uc_JobDetail);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -177,15 +176,15 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTimeSaved;
+        private System.Windows.Forms.Label lblComName;
+        private System.Windows.Forms.Label lblDescrption;
+        private System.Windows.Forms.Label lblSalary;
         private System.Windows.Forms.Button btnRusbish;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblTimeUpdate;
     }
 }

@@ -120,6 +120,8 @@ namespace Job_Application_Management
             pnlNav.Height = btnJobApp.Height;
             pnlNav.Top = btnJobApp.Top;
             btnJobApp.BackColor = Color.FromArgb(224, 224, 224);
+            FCandidate_SavedJobs saved = new FCandidate_SavedJobs();
+            saved.ShowDialog();
         }
 
         private void btnCompanies_Click(object sender, EventArgs e)
