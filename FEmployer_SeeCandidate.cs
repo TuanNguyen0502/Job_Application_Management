@@ -53,12 +53,13 @@ namespace Job_Application_Management
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
+                /*
                 conn.Open();
                 sqlQuery = "SELECT JobID, JobName FROM Jobs";
                 SqlCommand cmd = new SqlCommand(sqlQuery, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
-                {
+                {   
                     while (reader.Read())
                     {
                         UC_EmployerJob item = new UC_EmployerJob();
@@ -75,6 +76,7 @@ namespace Job_Application_Management
                 }
                 else
                     MessageBox.Show("No rows found");
+                */
             }
         }
     }
