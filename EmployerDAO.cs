@@ -39,6 +39,16 @@ namespace Job_Application_Management
             Execute(sqlStr);
         }
 
+        public void UpdateJob(Job job)
+        {
+            string sqlStr = string.Format($"UPDATE Jobs SET JobName = '{job.Name}', Salary = '{job.Salary}', CompanyName = '{job.Company}', " +
+                $"WorkAddress = '{job.Address}', JobDecription = '{job.JobDescription}', WorkDuration = '{job.WorkDuration}', " +
+                $"Experience = '{job.Experience}', ExpirationDate = '{job.Deadline}', Benefit = '{job.Benefit}', RequestCdd = '{job.Request}'" +
+                $"WHERE JobID = '{job.Id}'");
+
+            Execute(sqlStr);
+        }
+
         public void DeleteJob(Job job)
         {
             string sqlStr = string.Format($"DELETE FROM Jobs WHERE JobID = '{job.Id}'");

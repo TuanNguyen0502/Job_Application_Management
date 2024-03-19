@@ -45,7 +45,7 @@ namespace Job_Application_Management
 
         private void button_SeeCandidate_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_SeeCandidate());
+            OpenChildForm(new FEmployer_SeeCandidate(JobID));
         }
 
         private void button_ApprovedCandidate_Click(object sender, EventArgs e)
@@ -91,26 +91,24 @@ namespace Job_Application_Management
 
         private void button_Post_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connStr))
+            if (JobID == null)
             {
-                if (JobID == null)
-                {
-                    employerDAO.AddJob(CreateJob());
-                    this.Close();
-                }
-                else
-                {
-                    conn.Open();
-                    sqlQuery = $"INSERT INTO Jobs (JobID, JobName, CompanyName, WorkAddress, JobDecription, WorkDuration, Experience, " +
-                        $"ExpirationDate, Salary, Benefit, RequestCdd, EmpID) VALUES ('{"JOB"}', '{textBox_JobName.Text}', " +
-                        $"'{"null"}', N'{"null"}', '{richTextBox_JobDescripton.Text}', '{Int64.Parse(textBox_WorkingTime.Text)}', " +
-                        $"'{textBox_Experience.Text}', '{dateTimePicker_Deadline.Value}', '{Int64.Parse(textBox_Salary.Text)}', " +
-                        $"'{richTextBox_JobBenefit.Text}', '{richTextBox_Requirement.Text}', 'EMP001')";
-                    SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                    if (cmd.ExecuteNonQuery() > 0)
-                        MessageBox.Show("Thanh cong");
-                }
+                employerDAO.AddJob(CreateJob());
+                this.Close();
             }
+            else
+            {
+                employerDAO.UpdateJob(GetCurrentJob());
+                this.Close();
+            }
+        }
+
+        private Job GetCurrentJob()
+        {
+            Job job = new Job(JobID, textBox_JobName.Text, Int32.Parse(textBox_Salary.Text), "null", "null", richTextBox_JobDescripton.Text,
+                    Int32.Parse(textBox_WorkingTime.Text), textBox_Experience.Text, dateTimePicker_Deadline.Value, richTextBox_JobBenefit.Text,
+                    richTextBox_Requirement.Text, "Emp001");
+            return job;
         }
 
         private Job CreateJob()
@@ -142,7 +140,11 @@ namespace Job_Application_Management
 
         private void button_Delete_Click(object sender, EventArgs e)
         {
-
+            if (JobID != null)
+            {
+                employerDAO.DeleteJob(GetCurrentJob());
+                this.Close();
+            }
         }
     }
 }
