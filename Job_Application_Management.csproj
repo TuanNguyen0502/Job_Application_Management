@@ -64,7 +64,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Candidate.cs" />
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Employer.cs" />
+    <Compile Include="EmployerDAO.cs" />
     <Compile Include="FCandidate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,7 +164,9 @@
     <Compile Include="FSignUp.Designer.cs">
       <DependentUpon>FSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Job.cs" />
     <Compile Include="MainFormManager.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UC_CandidateMain.cs">

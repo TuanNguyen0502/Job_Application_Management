@@ -13,16 +13,40 @@ namespace Job_Application_Management
 {
     public partial class UC_EmployerJob : UserControl
     {
+        private Form currentFormChild;
+        private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
+        private string sqlQuery;
+        private string jobID;
+
         public Label Label_PostedTime { get => label_PostedTime; set => label_PostedTime = value; }
         public Label Label_JobName { get => label_JobName; set => label_JobName = value; }
-        public Label Label1 { get => label1; set => label1 = value; }
-        public KryptonLabel Label_language { get => label_language; set => label_language = value; }
-        public KryptonLabel KryptonLabel2 { get => kryptonLabel2; set => kryptonLabel2 = value; }
-        public KryptonButton Button_Post { get => button_Post; set => button_Post = value; }
+        public KryptonButton Button_Edit { get => button_Edit; set => button_Edit = value; }
         public KryptonButton Button_delete { get => button_delete; set => button_delete = value; }
+        public string JobID { get => jobID; set => jobID = value; }
+
         public UC_EmployerJob()
         {
             InitializeComponent();
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
+
+            currentFormChild = childForm;
+            childForm.FormBorderStyle = FormBorderStyle.FixedSingle;
+            childForm.StartPosition = FormStartPosition.CenterScreen;
+            childForm.Size = new Size(1300, 600);
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void button_Edit_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FEmployer_JobDetail(JobID));
         }
     }
 }
