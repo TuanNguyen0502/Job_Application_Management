@@ -15,7 +15,6 @@ namespace Job_Application_Management
 {
     public partial class frmCadidate_Main : KryptonForm
     {
-
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
             int nLeftRect,
