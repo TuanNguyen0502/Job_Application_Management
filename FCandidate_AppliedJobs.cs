@@ -25,7 +25,7 @@ namespace Job_Application_Management
 
         private void btn_FindJob_Click(object sender, EventArgs e)
         {
-            frmCadidate_Main fCandidate = new frmCadidate_Main();
+            FCandidate fCandidate = new FCandidate();
             fCandidate.ShowDialog();
         }
     }

@@ -13,8 +13,9 @@ using System.Data.SqlClient;
 
 namespace Job_Application_Management
 {
-    public partial class frmCadidate_Main : KryptonForm
+    public partial class FCandidate : KryptonForm
     {
+        CandidateDAO canDAO = new CandidateDAO();
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
             int nLeftRect,
@@ -24,9 +25,7 @@ namespace Job_Application_Management
             int nWidthEllipse,
             int nHeightEllipse
             );
-        private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
-        private string sqlQuery;
-        public frmCadidate_Main()
+        public FCandidate()
         {
             InitializeComponent();
             InitializeToolTip();
@@ -35,42 +34,10 @@ namespace Job_Application_Management
         }
         public void frmCandidateMain_Load(object sender, EventArgs e)
         {
-            PoppulateItems();
+            canDAO.GetJobsFromDB(this);
         }
         // Create my Items
-        public void PoppulateItems()
-        {
-            //Initialize populate at here
-            using(SqlConnection conn = new SqlConnection(connStr))
-            {
-                conn.Open();
-                sqlQuery = "SELECT JobName, CompanyName, Salary, WorkAddress, JobID FROM Jobs";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        UC_CandidateMain item = new UC_CandidateMain();
-                        item = new UC_CandidateMain();
-                        item.JobName = reader.GetString(0);
-                        item.CompanyName1 = reader.GetString(1);
-                        item.Salary = reader.GetInt32(2);
-                        item.Address = reader.GetString(3);
-                        item.JobID = reader.GetString(4);
-                        //lstItems[i].Icon = 
-                        if (flpScrollPane.Controls.Count < 0)
-                        {
-                            flpScrollPane.Controls.Clear();
-                        }
-                        else
-                            flpScrollPane.Controls.Add(item);
-                    }
-                }
-                else
-                    MessageBox.Show("No rows found");
-            }
-        }
+        
         private void InitializeToolTip()
         {
             ToolTip toolTipMain = new ToolTip();
@@ -174,6 +141,16 @@ namespace Job_Application_Management
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lblEmployer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchJob_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

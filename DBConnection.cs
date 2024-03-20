@@ -13,10 +13,6 @@ namespace Job_Application_Management
     {
         //SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         readonly string conStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
-        string sqlQuery;
-        public DBConnection()
-        {
-        }
 
         public void ExecuteWriteData(string sqlStr, SqlParameter[] lstParam)
         {

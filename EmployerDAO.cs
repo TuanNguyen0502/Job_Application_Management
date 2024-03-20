@@ -18,7 +18,7 @@ namespace Job_Application_Management
 
         public void Execute(string sqlStr)
         {
-            dbConnection.Execute(sqlStr);
+            dbConnection.ExecuteWriteData(sqlStr);
         }
 
         public void SaveInfor(Employer employer)

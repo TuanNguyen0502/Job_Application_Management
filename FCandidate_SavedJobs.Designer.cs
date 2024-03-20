@@ -222,5 +222,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.FlowLayoutPanel FlpMain;
     }
 }

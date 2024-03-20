@@ -14,8 +14,6 @@ namespace Job_Application_Management
     public partial class UC_EmployerJob : UserControl
     {
         private Form currentFormChild;
-        private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
-        private string sqlQuery;
         private string jobID;
 
         public Label Label_PostedTime { get => label_PostedTime; set => label_PostedTime = value; }

@@ -35,18 +35,6 @@ namespace Job_Application_Management
             Benefit = benefit;
             Request = request;
             EmpID = empID;
-            Id = id;
-            Name = name;
-            Salary = salary;
-            Company = company;
-            Address = address;
-            JobDescription = jobDescription;
-            WorkDuration = workDuration;
-            Experience = experience;
-            Deadline = deadline;
-            Benefit = benefit;
-            Request = request;
-            EmpID = empID;
         }
 
         public string Id { get => id; set => id = value; }

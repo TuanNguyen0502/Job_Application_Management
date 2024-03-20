@@ -1,6 +1,6 @@
 ﻿namespace Job_Application_Management
 {
-    partial class frmCadidate_Main
+    partial class FCandidate
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadidate_Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCandidate));
             this.pnlNav = new System.Windows.Forms.Panel();
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblEmployer = new System.Windows.Forms.Label();
             this.btnSearchJob = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -243,7 +243,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.lblEmployer);
             this.panel1.Controls.Add(this.btnSearchJob);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.label6);
@@ -256,16 +256,17 @@
             this.panel1.Size = new System.Drawing.Size(1109, 102);
             this.panel1.TabIndex = 3;
             // 
-            // label8
+            // lblEmployer
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(809, 36);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(222, 37);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Nhà tuyển dụng";
+            this.lblEmployer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEmployer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployer.ForeColor = System.Drawing.Color.White;
+            this.lblEmployer.Location = new System.Drawing.Point(809, 36);
+            this.lblEmployer.Name = "lblEmployer";
+            this.lblEmployer.Size = new System.Drawing.Size(222, 37);
+            this.lblEmployer.TabIndex = 21;
+            this.lblEmployer.Text = "Nhà tuyển dụng";
+            this.lblEmployer.Click += new System.EventHandler(this.lblEmployer_Click);
             // 
             // btnSearchJob
             // 
@@ -282,6 +283,7 @@
             this.btnSearchJob.Text = "  Tìm kiếm";
             this.btnSearchJob.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearchJob.UseVisualStyleBackColor = false;
+            this.btnSearchJob.Click += new System.EventHandler(this.btnSearchJob_Click);
             // 
             // btnExit
             // 
@@ -465,12 +467,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblEmployer;
         private UC_JobsSaved uC_Candidate1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem côngViệcĐãLưuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem côngViệcĐãỨngTuyểnToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.FlowLayoutPanel flpScrollPane;
+        public System.Windows.Forms.FlowLayoutPanel FlpScrollPane;
     }
 }
