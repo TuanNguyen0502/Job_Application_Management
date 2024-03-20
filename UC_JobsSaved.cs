@@ -20,6 +20,7 @@ namespace Job_Application_Management
         private string timeUpdate;
         private int salary;
         private Image icon;
+        private string jobId;
         public string DescriptionJob 
         { 
             get => descriptionJob;
@@ -38,17 +39,22 @@ namespace Job_Application_Management
         public string Address 
         { 
             get => address;
-            set { address = value; lblAddress.Text = value; }
+            set { address = value; lblAddress.Text = $"{     value}"; }
         }
         public int Salary 
         { 
             get => salary;
-            set { salary = value; lblComName.Text = value.ToString(); }
+            set { salary = value; lblComName.Text = $"       { value.ToString()}"; }
         }
         public Image Icon 
         { 
             get => icon;
             set { icon = value; pictureBox1.Image = value; }
+        }
+        public string JobID
+        {
+            get { return jobId; }
+            set { jobId = value; }
         }
         #endregion
         public UC_JobsSaved()

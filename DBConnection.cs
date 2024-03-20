@@ -11,32 +11,70 @@ namespace Job_Application_Management
 {
     public class DBConnection
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-
+        //SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        readonly string conStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
+        string sqlQuery;
         public DBConnection()
         {
         }
 
-        public void Execute(string sqlStr)
+        public void ExecuteWriteData(string sqlStr, SqlParameter[] lstParam)
         {
-            try
+            using (SqlConnection conn = new SqlConnection(conStr))
             {
-                // Ket noi
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Thanh cong");
+                try
+                {
+                    // Ket noi
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddRange(lstParam);
+                    if (cmd.ExecuteNonQuery() > 0)
+                        MessageBox.Show("Successful !");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error !\n" + ex.Message);
+                }
             }
-            catch (Exception ex)
+        }
+        public void ExecuteWriteData(string sqlStr)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
             {
-                MessageBox.Show("That bai" + ex);
+                try
+                {
+                    // Ket noi
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    if (cmd.ExecuteNonQuery() > 0)
+                        MessageBox.Show("Successful !");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error !\n" + ex.Message);
+                }
             }
-            finally
+        }
+        public SqlDataReader ExecuteReaderData(string sqlStr)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
             {
-                conn.Close();
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        return reader;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Read error\n"+ex.Message);
+                }
             }
-
-            //LoadDataGridView();
+            return null;
         }
     }
 }

@@ -20,7 +20,6 @@ namespace Job_Application_Management
         {
             InitializeComponent();
         }
-
         private void FCandidate_SavedJobs_Load(object sender, EventArgs e)
         {
             PopulateItems();
@@ -30,7 +29,7 @@ namespace Job_Application_Management
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                sqlQuery = "SELECT JobDecription, CompanyName, WorkAddress, Salary FROM Jobs";
+                sqlQuery = "SELECT j.JobDecription, j.CompanyName, js.TimeSaved, j.WorkAddress, j.Salary FROM JobsSaved js JOIN Jobs j ON js.JobID = j.JobID";
                 SqlCommand cmd = new SqlCommand(sqlQuery, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
@@ -40,8 +39,9 @@ namespace Job_Application_Management
                         UC_JobsSaved item = new UC_JobsSaved();
                         item.DescriptionJob = reader.GetString(0);
                         item.ComName = reader.GetString(1);
-                        item.Address = reader.GetString(2);
-                        item.Salary = reader.GetInt32(3);
+                        item.TimeSaved = reader.GetDateTime(2);
+                        item.Address = reader.GetString(3);
+                        item.Salary = reader.GetInt32(4);
                         if (flpMain.Controls.Count < 0)
                         {
                             flpMain.Controls.Clear();

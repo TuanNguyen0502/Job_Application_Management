@@ -67,3 +67,13 @@ SELECT * FROM Jobs
 SELECT * FROM Candidates
 SELECT * FROM Employeers
 SELECT * FROM ApplicationDetails
+
+CREATE TABLE JobsSaved(
+	JobSavedID int IDENTITY,
+	TimeSaved date,
+	JobID varchar(10) CONSTRAINT FK_JS FOREIGN KEY REFERENCES Jobs(JobID)
+)
+
+SELECT j.JobDecription, j.CompanyName, js.TimeSaved, j.WorkAddress, j.Salary 
+FROM JobsSaved js
+JOIN Jobs j ON js.JobID = j.JobID; 

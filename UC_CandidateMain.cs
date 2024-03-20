@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Job_Application_Management
 {
     public partial class UC_CandidateMain : UserControl
     {
+        string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
+        string sqlQuery;
         #region Properties
         private string jobName;
         private string companyName;
@@ -74,7 +77,21 @@ namespace Job_Application_Management
 
         private void btnApply_Click(object sender, EventArgs e)
         {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                sqlQuery = "INSERT INTO JobsSaved(TimeSaved, JobID) " +
+                    "VALUES(@times,@jId)";
+                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                SqlParameter[] lstParam =
+                {
+                    new SqlParameter("@times", SqlDbType.Date) {Value = DateTime.Today},
+                    new SqlParameter("@jId", SqlDbType.VarChar) { Value = JobID },
+                };
+                cmd.Parameters.AddRange(lstParam);
+                cmd.ExecuteNonQuery();
 
+            }
         }
     }
 }
