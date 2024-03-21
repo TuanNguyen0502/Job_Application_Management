@@ -34,10 +34,12 @@ namespace Job_Application_Management
         }
         public void frmCandidateMain_Load(object sender, EventArgs e)
         {
-            canDAO.GetJobsFromDB(this);
+            List<UC_CandidateMain> jobItems = canDAO.GetJobsFromDB();
+            foreach (var jobItem in jobItems)
+            {
+                flpScrollPane.Controls.Add(jobItem);
+            }
         }
-        // Create my Items
-        
         private void InitializeToolTip()
         {
             ToolTip toolTipMain = new ToolTip();

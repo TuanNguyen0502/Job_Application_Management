@@ -51,8 +51,9 @@ namespace Job_Application_Management
                 }
             }
         }
-        public SqlDataReader ExecuteReaderData(string sqlStr)
+        public List<Dictionary<string, object>> ExecuteReaderData(string sqlStr)
         {
+            List<Dictionary<string, object>> resultList = new List<Dictionary<string, object>>();
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 try
@@ -62,7 +63,15 @@ namespace Job_Application_Management
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.HasRows)
                     {
-                        return reader;
+                        while (reader.Read())
+                        {
+                            Dictionary<string, object> rowData = new Dictionary<string, object>();
+                            for (int i = 0; i < reader.FieldCount; i++)
+                            {
+                                rowData.Add(reader.GetName(i), reader.GetValue(i));
+                            }
+                            resultList.Add(rowData);
+                        } 
                     }
                 }
                 catch (Exception ex)
@@ -70,7 +79,7 @@ namespace Job_Application_Management
                     MessageBox.Show("Read error\n"+ex.Message);
                 }
             }
-            return null;
+            return resultList;
         }
     }
 }

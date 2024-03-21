@@ -77,3 +77,5 @@ CREATE TABLE JobsSaved(
 SELECT j.JobDecription, j.CompanyName, js.TimeSaved, j.WorkAddress, j.Salary 
 FROM JobsSaved js
 JOIN Jobs j ON js.JobID = j.JobID; 
+
+SELECT JobName, CompanyName, Salary, WorkAddress, JobID FROM Jobs

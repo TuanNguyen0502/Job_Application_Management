@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 
 namespace Job_Application_Management
 {
@@ -15,55 +14,39 @@ namespace Job_Application_Management
         {
             dbConn = new DBConnection();
         }
-        public void GetJobsFromDB(FCandidate cdd)
+        public List<UC_CandidateMain> GetJobsFromDB()
         {
             sqlQuery = "SELECT JobName, CompanyName, Salary, WorkAddress, JobID FROM Jobs";
-            SqlDataReader reader = dbConn.ExecuteReaderData(sqlQuery);
-            if (reader != null)
+            List<Dictionary<string,object>> resultList = dbConn.ExecuteReaderData(sqlQuery);
+            List<UC_CandidateMain> items = new List<UC_CandidateMain>();
+            foreach(var row in resultList)
             {
-                while (reader.Read())
-                {
-                    UC_CandidateMain item = new UC_CandidateMain();
-                    item = new UC_CandidateMain();
-                    item.JobName = reader.GetString(0);
-                    item.CompanyName1 = reader.GetString(1);
-                    item.Salary = reader.GetInt32(2);
-                    item.Address = reader.GetString(3);
-                    item.JobID = reader.GetString(4);
-                    //lstItems[i].Icon = 
-                    if (cdd.FlpScrollPane.Controls.Count < 0)
-                    {
-                        cdd.FlpScrollPane.Controls.Clear();
-                    }
-                    else
-                        cdd.FlpScrollPane.Controls.Add(item);
-                }
+                UC_CandidateMain item = new UC_CandidateMain();
+                item.JobName = (string)row["JobName"];
+                item.CompanyName1 = (string)row["CompanyName"];
+                item.Salary = (int)row["Salary"];
+                item.Address = (string)row["WorkAddress"];
+                item.JobID = (string)row["JobID"];
+                items.Add(item);
             }
+            return items;
         }
-        public void GetSavedJobsFromDB(FCandidate_SavedJobs saved)
+        public List<UC_JobsSaved> GetSavedJobsFromDB()
         {
             sqlQuery = "SELECT j.JobDecription, j.CompanyName, js.TimeSaved, j.WorkAddress, j.Salary FROM JobsSaved js JOIN Jobs j ON js.JobID = j.JobID";
-            SqlDataReader reader = dbConn.ExecuteReaderData (sqlQuery);
-            if (reader != null)
+            List<Dictionary<string, object>> keyValueSavedJobs = dbConn.ExecuteReaderData(sqlQuery);
+            List<UC_JobsSaved> saveds = new List<UC_JobsSaved>();
+            foreach (var row in keyValueSavedJobs)
             {
-                while (reader.Read())
-                {
-                    UC_JobsSaved item = new UC_JobsSaved();
-                    item.DescriptionJob = reader.GetString(0);
-                    item.ComName = reader.GetString(1);
-                    item.TimeSaved = reader.GetDateTime(2);
-                    item.Address = reader.GetString(3);
-                    item.Salary = reader.GetInt32(4);
-                    if (saved.FlpMain.Controls.Count < 0)
-                    {
-                        saved.FlpMain.Controls.Clear();
-                    }
-                    else
-                    {
-                        saved.FlpMain.Controls.Add(item);
-                    }
-                }
+                UC_JobsSaved item = new UC_JobsSaved();
+                item.DescriptionJob = (string)row["JobDecription"];
+                item.ComName = (string)row["CompanyName"];
+                item.TimeSaved = (DateTime)row["TimeSaved"];
+                item.Address = (string)row["WorkAddress"];
+                item.Salary = (int)row["Salary"];
+                saveds.Add(item);
             }
+            return saveds;
         }
     }
 }
