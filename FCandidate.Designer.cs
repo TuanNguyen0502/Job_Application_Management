@@ -43,7 +43,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblEmployer = new System.Windows.Forms.Label();
             this.btnSearchJob = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.côngViệcĐãỨngTuyểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.flpScrollPane = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnRegisterCV = new System.Windows.Forms.Button();
             this.pnlNav.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -243,7 +243,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.panel1.Controls.Add(this.lblEmployer);
+            this.panel1.Controls.Add(this.btnRegisterCV);
             this.panel1.Controls.Add(this.btnSearchJob);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.label6);
@@ -254,18 +254,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1109, 102);
             this.panel1.TabIndex = 3;
-            // 
-            // lblEmployer
-            // 
-            this.lblEmployer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEmployer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployer.ForeColor = System.Drawing.Color.White;
-            this.lblEmployer.Location = new System.Drawing.Point(849, 36);
-            this.lblEmployer.Name = "lblEmployer";
-            this.lblEmployer.Size = new System.Drawing.Size(207, 37);
-            this.lblEmployer.TabIndex = 21;
-            this.lblEmployer.Text = "Nhà tuyển dụng";
-            this.lblEmployer.Click += new System.EventHandler(this.lblEmployer_Click);
             // 
             // btnSearchJob
             // 
@@ -410,6 +398,24 @@
             this.flpScrollPane.Size = new System.Drawing.Size(1109, 652);
             this.flpScrollPane.TabIndex = 4;
             // 
+            // btnRegisterCV
+            // 
+            this.btnRegisterCV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegisterCV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnRegisterCV.FlatAppearance.BorderSize = 0;
+            this.btnRegisterCV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterCV.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterCV.ForeColor = System.Drawing.Color.White;
+            this.btnRegisterCV.Image = global::Job_Application_Management.Properties.Resources.cv_icon1;
+            this.btnRegisterCV.Location = new System.Drawing.Point(848, 17);
+            this.btnRegisterCV.Name = "btnRegisterCV";
+            this.btnRegisterCV.Size = new System.Drawing.Size(208, 70);
+            this.btnRegisterCV.TabIndex = 21;
+            this.btnRegisterCV.Text = "Đăng ký CV";
+            this.btnRegisterCV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegisterCV.UseVisualStyleBackColor = false;
+            this.btnRegisterCV.Click += new System.EventHandler(this.btnRegisterCV_Click);
+            // 
             // FCandidate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -460,7 +466,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblEmployer;
         private UC_JobsSaved uC_Candidate1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem côngViệcĐãLưuToolStripMenuItem;
@@ -470,5 +475,6 @@
         public System.Windows.Forms.FlowLayoutPanel FlpScrollPane;
         private System.Windows.Forms.ComboBox cbbAddress;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnRegisterCV;
     }
 }

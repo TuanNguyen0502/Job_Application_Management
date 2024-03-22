@@ -155,11 +155,6 @@ namespace Job_Application_Management
             this.Close();
         }
 
-        private void lblEmployer_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSearchJob_Click(object sender, EventArgs e)
         {
             if (flpScrollPane.Controls.Count >= 0)
@@ -194,6 +189,12 @@ namespace Job_Application_Management
                 }
                 ListJobs();
             }
+        }
+
+        private void btnRegisterCV_Click(object sender, EventArgs e)
+        {
+            FCandidate_SubmitApplication submit = new FCandidate_SubmitApplication();
+            submit.ShowDialog();
         }
     }
 }
