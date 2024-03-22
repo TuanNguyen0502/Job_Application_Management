@@ -34,10 +34,20 @@ namespace Job_Application_Management
         }
         public void frmCandidateMain_Load(object sender, EventArgs e)
         {
+            cbbAddress.Text = "";
+            ListJobs();
+        }
+        public void ListJobs()
+        {
             List<UC_CandidateMain> jobItems = canDAO.GetJobsFromDB();
             foreach (var jobItem in jobItems)
             {
-                flpScrollPane.Controls.Add(jobItem);
+                if (flpScrollPane.Controls.Count < 0)
+                {
+                    flpScrollPane.Controls.Clear();
+                }
+                else
+                    flpScrollPane.Controls.Add(jobItem);
             }
         }
         private void InitializeToolTip()
@@ -152,7 +162,38 @@ namespace Job_Application_Management
 
         private void btnSearchJob_Click(object sender, EventArgs e)
         {
-
+            if (flpScrollPane.Controls.Count >= 0)
+            {
+                flpScrollPane.Controls.Clear();
+                List<UC_CandidateMain> jobItems = canDAO.GetJobsByKeywords(txtSearchFor.Text);
+                foreach (var jobItem in jobItems)
+                {
+                    flpScrollPane.Controls.Add(jobItem);
+                }
+            }
+        }
+        private void cbbAddress_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbAddress.SelectedItem.ToString() != "Tất cả tỉnh/TP")
+            {
+                if (flpScrollPane.Controls.Count > 0)
+                {
+                    flpScrollPane.Controls.Clear();
+                }
+                List<UC_CandidateMain> jobItems = canDAO.GetJobsByAddress(cbbAddress.SelectedItem.ToString());
+                foreach (var jobItem in jobItems)
+                {
+                    flpScrollPane.Controls.Add(jobItem);
+                }
+            }
+            else
+            {
+                if (flpScrollPane.Controls.Count >= 0)
+                {
+                    flpScrollPane.Controls.Clear();
+                }
+                ListJobs();
+            }
         }
     }
 }

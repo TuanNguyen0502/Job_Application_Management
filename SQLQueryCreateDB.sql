@@ -77,5 +77,12 @@ CREATE TABLE JobsSaved(
 SELECT j.JobDecription, j.CompanyName, js.TimeSaved, j.WorkAddress, j.Salary 
 FROM JobsSaved js
 JOIN Jobs j ON js.JobID = j.JobID; 
+SELECT * FROM Jobs
+SELECT JobName, CompanyName, Salary, WorkAddress, JobID FROM Jobs WHERE WorkAddress LIKE N'%Hà Nội%'
 
-SELECT JobName, CompanyName, Salary, WorkAddress, JobID FROM Jobs
+DECLARE @keyword nvarchar(250)
+SET @keyword = N'%Software%'
+SELECT JobName, CompanyName, Salary, WorkAddress, JobID FROM Jobs WHERE WorkAddress LIKE @keyword
+																	OR JobName LIKE @keyword
+																	OR CompanyName LIKE @keyword
+																	OR JobID LIKE @keyword

@@ -7,15 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Job_Application_Management
 {
     public partial class FCandidate_SelectedJobDetails : Form
     {
-        private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
-        private string sqlQuery;
         private string jobid;
+        CandidateDAO canDAO = new CandidateDAO();
         public FCandidate_SelectedJobDetails()
         {
             InitializeComponent();
@@ -29,28 +27,14 @@ namespace Job_Application_Management
         }
         public void GetDataFromDB()
         {
-            using (SqlConnection conn = new SqlConnection(connStr))
+            List<Dictionary<string, object>> keyValueJobDetails = canDAO.GetSelectedJobDetails(jobid);
+            foreach (var item in keyValueJobDetails)
             {
-                conn.Open();
-                sqlQuery = "SELECT JobName, WorkAddress, Salary, Experience, CompanyName FROM Jobs WHERE JobID = @jobId";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                cmd.Parameters.AddWithValue("@jobId", jobid);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        lblJobName_Address.Text = reader.GetString(0) + $" [{reader.GetString(1)}]";
-                        lblSalary.Text = reader.GetInt32(2).ToString();
-                        lblAddress.Text = reader.GetString(1);
-                        lblExp.Text = reader.GetString(3);
-                        lblComName.Text = reader.GetString(4);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Has not rows");
-                }
+                lblJobName_Address.Text = (string)item["JobName"] + $" [{(string)item["WorkAddress"]}]";
+                lblSalary.Text = item["Salary"].ToString();
+                lblAddress.Text = (string)item["WorkAddress"];
+                lblExp.Text = (string)item["Experience"];
+                lblComName.Text = (string)item["CompanyName"];
             }
         }
         private void button1_Click(object sender, EventArgs e)

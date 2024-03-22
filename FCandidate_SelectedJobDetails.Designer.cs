@@ -55,6 +55,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlOverview = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.pnlDetails = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.pnl.SuspendLayout();
             this.panel6.SuspendLayout();
             this.pnlCompany.SuspendLayout();
@@ -271,9 +271,9 @@
             this.pnlCompany.Controls.Add(this.lblComAddress);
             this.pnlCompany.Controls.Add(this.lblScale);
             this.pnlCompany.Controls.Add(this.pictureBox1);
-            this.pnlCompany.Location = new System.Drawing.Point(740, 0);
+            this.pnlCompany.Location = new System.Drawing.Point(733, 0);
             this.pnlCompany.Name = "pnlCompany";
-            this.pnlCompany.Size = new System.Drawing.Size(447, 198);
+            this.pnlCompany.Size = new System.Drawing.Size(454, 198);
             this.pnlCompany.TabIndex = 1;
             // 
             // label5
@@ -362,10 +362,20 @@
             this.pnlOverview.Controls.Add(this.label11);
             this.pnlOverview.Controls.Add(this.label10);
             this.pnlOverview.Controls.Add(this.label9);
-            this.pnlOverview.Location = new System.Drawing.Point(740, 229);
+            this.pnlOverview.Location = new System.Drawing.Point(733, 221);
             this.pnlOverview.Name = "pnlOverview";
-            this.pnlOverview.Size = new System.Drawing.Size(447, 418);
+            this.pnlOverview.Size = new System.Drawing.Size(454, 426);
             this.pnlOverview.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(190, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 20);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Mã công việc";
             // 
             // label24
             // 
@@ -517,9 +527,9 @@
             this.pnlDetails.BackColor = System.Drawing.Color.White;
             this.pnlDetails.Controls.Add(this.label8);
             this.pnlDetails.Controls.Add(this.label7);
-            this.pnlDetails.Location = new System.Drawing.Point(0, 229);
+            this.pnlDetails.Location = new System.Drawing.Point(0, 221);
             this.pnlDetails.Name = "pnlDetails";
-            this.pnlDetails.Size = new System.Drawing.Size(710, 421);
+            this.pnlDetails.Size = new System.Drawing.Size(710, 429);
             this.pnlDetails.TabIndex = 2;
             // 
             // label8
@@ -543,16 +553,6 @@
             this.label7.Size = new System.Drawing.Size(17, 25);
             this.label7.TabIndex = 3;
             this.label7.Text = "|";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(190, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 20);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Mã công việc";
             // 
             // FCandidate_SelectedJobDetails
             // 
