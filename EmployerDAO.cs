@@ -55,5 +55,21 @@ namespace Job_Application_Management
 
             Execute(sqlStr);
         }
+
+        public List<UC_EmployerJob> GetJobsFromDB()
+        {
+            string sqlQuery = "SELECT JobName, Salary, JobID FROM Jobs";
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_EmployerJob> items = new List<UC_EmployerJob>();
+            foreach (var row in resultList)
+            {
+                UC_EmployerJob item = new UC_EmployerJob();
+                item.Label_JobName.Text = (string)row["JobName"];
+                item.Label_Salary.Text += (string)row["Salary"].ToString();
+                item.JobID = (string)row["JobID"];
+                items.Add(item);
+            }
+            return items;
+        }
     }
 }

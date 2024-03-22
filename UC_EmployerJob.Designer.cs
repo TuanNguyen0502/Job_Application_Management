@@ -32,10 +32,12 @@
             this.label_PostedTime = new System.Windows.Forms.Label();
             this.label_JobName = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label_Salary = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Edit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_delete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +76,7 @@
             // 
             // flowLayoutPanel2
             // 
+            this.flowLayoutPanel2.Controls.Add(this.label_Salary);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 100);
@@ -81,6 +84,16 @@
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel2.Size = new System.Drawing.Size(500, 100);
             this.flowLayoutPanel2.TabIndex = 1;
+            // 
+            // label_Salary
+            // 
+            this.label_Salary.AutoSize = true;
+            this.label_Salary.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Salary.Location = new System.Drawing.Point(13, 10);
+            this.label_Salary.Name = "label_Salary";
+            this.label_Salary.Size = new System.Drawing.Size(135, 33);
+            this.label_Salary.TabIndex = 2;
+            this.label_Salary.Text = "Salary: ";
             // 
             // flowLayoutPanel3
             // 
@@ -232,6 +245,8 @@
             this.Size = new System.Drawing.Size(500, 300);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -246,5 +261,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_Edit;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_delete;
+        private System.Windows.Forms.Label label_Salary;
     }
 }
