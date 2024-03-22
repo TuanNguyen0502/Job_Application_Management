@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Job_Application_Management
 {
@@ -85,6 +87,16 @@ namespace Job_Application_Management
                 saveds.Add(item);
             }
             return saveds;
+        }
+        public List<Dictionary<string, object>> GetSelectedJobDetails(string jobid)
+        {
+            sqlQuery = "SELECT JobName, WorkAddress, Salary, Experience, CompanyName FROM Jobs WHERE JobID = @jobId";
+            SqlParameter[] lstParam =
+            {
+                new SqlParameter("@jobId", SqlDbType.VarChar) {Value = jobid},
+            };
+            List<Dictionary<string, object>> keyValueJobDetails = dbConn.ExecuteReaderData(sqlQuery, lstParam);
+            return keyValueJobDetails;
         }
     }
 }

@@ -171,7 +171,6 @@ namespace Job_Application_Management
                     flpScrollPane.Controls.Add(jobItem);
                 }
             }
-
         }
         private void cbbAddress_SelectedIndexChanged(object sender, EventArgs e)
         {
