@@ -48,10 +48,10 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.kcbbAddress = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbbAddress = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSearchFor = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -63,8 +63,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kcbbAddress)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,11 +173,13 @@
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(213, 180);
@@ -248,7 +248,6 @@
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(213, 0);
@@ -261,9 +260,9 @@
             this.lblEmployer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmployer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployer.ForeColor = System.Drawing.Color.White;
-            this.lblEmployer.Location = new System.Drawing.Point(809, 36);
+            this.lblEmployer.Location = new System.Drawing.Point(849, 36);
             this.lblEmployer.Name = "lblEmployer";
-            this.lblEmployer.Size = new System.Drawing.Size(222, 37);
+            this.lblEmployer.Size = new System.Drawing.Size(207, 37);
             this.lblEmployer.TabIndex = 21;
             this.lblEmployer.Text = "Nhà tuyển dụng";
             this.lblEmployer.Click += new System.EventHandler(this.lblEmployer_Click);
@@ -276,7 +275,7 @@
             this.btnSearchJob.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchJob.ForeColor = System.Drawing.Color.White;
             this.btnSearchJob.Image = global::Job_Application_Management.Properties.Resources.icons8_find_16;
-            this.btnSearchJob.Location = new System.Drawing.Point(604, 28);
+            this.btnSearchJob.Location = new System.Drawing.Point(644, 28);
             this.btnSearchJob.Name = "btnSearchJob";
             this.btnSearchJob.Size = new System.Drawing.Size(171, 43);
             this.btnSearchJob.TabIndex = 10;
@@ -299,7 +298,7 @@
             // label6
             // 
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(790, 18);
+            this.label6.Location = new System.Drawing.Point(830, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(12, 68);
             this.label6.TabIndex = 18;
@@ -308,75 +307,73 @@
             // label5
             // 
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(576, 18);
+            this.label5.Location = new System.Drawing.Point(620, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(12, 68);
             this.label5.TabIndex = 17;
             this.label5.Text = "\r\n|\r\n|";
             // 
-            // panel5
+            // panel3
             // 
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.kcbbAddress);
-            this.panel5.Location = new System.Drawing.Point(297, 12);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(262, 85);
-            this.panel5.TabIndex = 4;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.cbbAddress);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.txtSearchFor);
+            this.panel3.Location = new System.Drawing.Point(17, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(593, 85);
+            this.panel3.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.Location = new System.Drawing.Point(300, 26);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(24, 26);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "|";
+            // 
+            // cbbAddress
+            // 
+            this.cbbAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbAddress.FormattingEnabled = true;
+            this.cbbAddress.Items.AddRange(new object[] {
+            "Tất cả tỉnh/TP",
+            "Hà Nội",
+            "Hồ Chí Minh",
+            "Đà Nẵng"});
+            this.cbbAddress.Location = new System.Drawing.Point(361, 28);
+            this.cbbAddress.Name = "cbbAddress";
+            this.cbbAddress.Size = new System.Drawing.Size(207, 28);
+            this.cbbAddress.TabIndex = 2;
+            this.cbbAddress.SelectedIndexChanged += new System.EventHandler(this.cbbAddress_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Image = global::Job_Application_Management.Properties.Resources.icons8_location_16__1_;
-            this.label4.Location = new System.Drawing.Point(8, 25);
+            this.label4.Image = global::Job_Application_Management.Properties.Resources.icons8_location_16;
+            this.label4.Location = new System.Drawing.Point(317, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 34);
             this.label4.TabIndex = 1;
             // 
-            // kcbbAddress
-            // 
-            this.kcbbAddress.DisplayMember = "Hà Nội";
-            this.kcbbAddress.DropDownWidth = 163;
-            this.kcbbAddress.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.kcbbAddress.Items.AddRange(new object[] {
-            "Hà Nội",
-            "TP Hồ Chí Minh",
-            "Bình Dương",
-            "Bắc Ninh",
-            "Đồng Nai",
-            "Hưng Yên",
-            "Hải Dương",
-            "Đà Nẵng ",
-            "Hải Phòng",
-            "An Giang",
-            "Bà Rịa-Vũng Tàu"});
-            this.kcbbAddress.Location = new System.Drawing.Point(59, 25);
-            this.kcbbAddress.Name = "kcbbAddress";
-            this.kcbbAddress.Size = new System.Drawing.Size(200, 28);
-            this.kcbbAddress.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kcbbAddress.TabIndex = 3;
-            this.kcbbAddress.Text = "Hà Nội";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.txtSearchFor);
-            this.panel3.Location = new System.Drawing.Point(0, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(291, 85);
-            this.panel3.TabIndex = 1;
-            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Image = global::Job_Application_Management.Properties.Resources.icons8_find_16;
-            this.label3.Location = new System.Drawing.Point(8, 22);
+            this.label3.Image = global::Job_Application_Management.Properties.Resources.icons8_find_16__1_;
+            this.label3.Location = new System.Drawing.Point(5, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 34);
             this.label3.TabIndex = 1;
             // 
             // txtSearchFor
             // 
-            this.txtSearchFor.Location = new System.Drawing.Point(61, 25);
+            this.txtSearchFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchFor.Location = new System.Drawing.Point(58, 25);
             this.txtSearchFor.Multiline = true;
             this.txtSearchFor.Name = "txtSearchFor";
             this.txtSearchFor.Size = new System.Drawing.Size(227, 28);
@@ -413,7 +410,7 @@
             this.flpScrollPane.Size = new System.Drawing.Size(1109, 652);
             this.flpScrollPane.TabIndex = 4;
             // 
-            // frmCadidate_Main
+            // FCandidate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -424,7 +421,7 @@
             this.Controls.Add(this.pnlNav);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmCadidate_Main";
+            this.Name = "FCandidate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCandidate";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -434,8 +431,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kcbbAddress)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -460,9 +455,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSearchFor;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kcbbAddress;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnExit;
@@ -475,5 +468,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.FlowLayoutPanel flpScrollPane;
         public System.Windows.Forms.FlowLayoutPanel FlpScrollPane;
+        private System.Windows.Forms.ComboBox cbbAddress;
+        private System.Windows.Forms.Label label8;
     }
 }

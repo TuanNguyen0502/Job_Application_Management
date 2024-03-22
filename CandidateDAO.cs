@@ -31,6 +31,44 @@ namespace Job_Application_Management
             }
             return items;
         }
+        public List<UC_CandidateMain> GetJobsByAddress(string address)
+        {
+            sqlQuery = "SELECT JobName, CompanyName, Salary, WorkAddress, JobID FROM Jobs" +
+                " WHERE WorkAddress LIKE N'%"+ address +"%'";
+            List<Dictionary<string, object>> resultList = dbConn.ExecuteReaderData(sqlQuery);
+            List<UC_CandidateMain> items = new List<UC_CandidateMain>();
+            foreach (var row in resultList)
+            {
+                UC_CandidateMain item = new UC_CandidateMain();
+                item.JobName = (string)row["JobName"];
+                item.CompanyName1 = (string)row["CompanyName"];
+                item.Salary = (int)row["Salary"];
+                item.Address = (string)row["WorkAddress"];
+                item.JobID = (string)row["JobID"];
+                items.Add(item);
+            }
+            return items;
+        }
+        public List<UC_CandidateMain> GetJobsByKeywords(string keyword)
+        {
+            sqlQuery = "SELECT JobName, CompanyName, Salary, WorkAddress, JobID FROM Jobs " +
+                        "WHERE WorkAddress LIKE N'%"+ keyword +"%'"+ "OR JobName LIKE N'%"+ keyword +"%'" +
+                        "OR CompanyName LIKE N'%"+ keyword +"%'" +
+                        "OR JobID LIKE N'%"+ keyword +"%'";
+            List<Dictionary<string, object>> resultList = dbConn.ExecuteReaderData(sqlQuery);
+            List<UC_CandidateMain> items = new List<UC_CandidateMain>();
+            foreach (var row in resultList)
+            {
+                UC_CandidateMain item = new UC_CandidateMain();
+                item.JobName = (string)row["JobName"];
+                item.CompanyName1 = (string)row["CompanyName"];
+                item.Salary = (int)row["Salary"];
+                item.Address = (string)row["WorkAddress"];
+                item.JobID = (string)row["JobID"];
+                items.Add(item);
+            }
+            return items;
+        }
         public List<UC_JobsSaved> GetSavedJobsFromDB()
         {
             sqlQuery = "SELECT j.JobDecription, j.CompanyName, js.TimeSaved, j.WorkAddress, j.Salary FROM JobsSaved js JOIN Jobs j ON js.JobID = j.JobID";
