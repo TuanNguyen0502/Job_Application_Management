@@ -25,10 +25,7 @@ namespace Job_Application_Management
             Application.SetCompatibleTextRenderingDefault(false);
 
             mainFormManager = new MainFormManager();
-
-            // Chỉnh cái bên dưới để mở form đi Hiếu
-            // Chỉnh phía sau cái new là được rồi á
-            mainFormManager.CurrentForm = new FLogin();
+            mainFormManager.CurrentForm = new FResume();
             Application.Run(mainFormManager);
         }
     }

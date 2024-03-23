@@ -160,6 +160,12 @@
     <Compile Include="FRegister.Designer.cs">
       <DependentUpon>FRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="FResume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FResume.Designer.cs">
+      <DependentUpon>FResume.cs</DependentUpon>
+    </Compile>
     <Compile Include="FSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,12 @@
     </Compile>
     <Compile Include="UC_CandidateMain.Designer.cs">
       <DependentUpon>UC_CandidateMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Resume_Certificate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Resume_Certificate.Designer.cs">
+      <DependentUpon>UC_Resume_Certificate.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_EmployerJob.cs">
       <SubType>UserControl</SubType>
@@ -200,6 +212,24 @@
     </Compile>
     <Compile Include="UC_JobsSaved.Designer.cs">
       <DependentUpon>UC_JobsSaved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Resume.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Resume.Designer.cs">
+      <DependentUpon>UC_Resume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Resume_Education.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Resume_Education.Designer.cs">
+      <DependentUpon>UC_Resume_Education.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Resume_Experience.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Resume_Experience.Designer.cs">
+      <DependentUpon>UC_Resume_Experience.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FCandidate.resx">
       <DependentUpon>FCandidate.cs</DependentUpon>
@@ -246,6 +276,9 @@
     <EmbeddedResource Include="FRegister.resx">
       <DependentUpon>FRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FResume.resx">
+      <DependentUpon>FResume.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FSignUp.resx">
       <DependentUpon>FSignUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +295,9 @@
     <EmbeddedResource Include="UC_CandidateMain.resx">
       <DependentUpon>UC_CandidateMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Resume_Certificate.resx">
+      <DependentUpon>UC_Resume_Certificate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_EmployerJob.resx">
       <DependentUpon>UC_EmployerJob.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +306,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_JobsSaved.resx">
       <DependentUpon>UC_JobsSaved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Resume.resx">
+      <DependentUpon>UC_Resume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Resume_Education.resx">
+      <DependentUpon>UC_Resume_Education.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Resume_Experience.resx">
+      <DependentUpon>UC_Resume_Experience.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -502,6 +547,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-cv-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-phone-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-email-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-email-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-address-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
