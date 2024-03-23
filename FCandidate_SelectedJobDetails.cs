@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class FCandidate_SelectedJobDetails : Form
+    public partial class FEmployer_SeeCVDetailOfCandidate : Form
     {
         private string jobid;
         CandidateDAO canDAO = new CandidateDAO();
-        public FCandidate_SelectedJobDetails()
+        public FEmployer_SeeCVDetailOfCandidate()
         {
             InitializeComponent();
             GetDataFromDB();
         }
-        public FCandidate_SelectedJobDetails(string jobid)
+        public FEmployer_SeeCVDetailOfCandidate(string jobid)
         {
             this.jobid = jobid;
             InitializeComponent();

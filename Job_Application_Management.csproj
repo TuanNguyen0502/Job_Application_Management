@@ -90,14 +90,15 @@
     <Compile Include="FCandidate_SelectedJobDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FCandidate_SelectedJobDetails.Designer.cs">
+    <Compile Include=".Designer.cs">
       <DependentUpon>FCandidate_SelectedJobDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FCandidate_SubmitApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FCandidate_SubmitApplication.Designer.cs">
-      <DependentUpon>FCandidate_SubmitApplication.cs</DependentUpon>
+    <Compile Include="FEmployer_CandidateDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployer_CandidateDetail.Designer.cs">
+      <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="FEmployer.cs">
       <SubType>Form</SubType>
@@ -111,11 +112,11 @@
     <Compile Include="FEmployer_ApprovedCandidate.Designer.cs">
       <DependentUpon>FEmployer_ApprovedCandidate.cs</DependentUpon>
     </Compile>
-    <Compile Include="FEmployer_CandidateCVDetail.cs">
+    <Compile Include="FCandidate_CreateCV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FEmployer_CandidateCVDetail.Designer.cs">
-      <DependentUpon>FEmployer_CandidateCVDetail.cs</DependentUpon>
+    <Compile Include="FCandidate_CreateCV.Designer.cs">
+      <DependentUpon>FCandidate_CreateCV.cs</DependentUpon>
     </Compile>
     <Compile Include="FEmployer_FindCandidate.cs">
       <SubType>Form</SubType>
@@ -212,8 +213,8 @@
     <EmbeddedResource Include="FCandidate_SelectedJobDetails.resx">
       <DependentUpon>FCandidate_SelectedJobDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FCandidate_SubmitApplication.resx">
-      <DependentUpon>FCandidate_SubmitApplication.cs</DependentUpon>
+    <EmbeddedResource Include="FEmployer_CandidateDetail.resx">
+      <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer.resx">
       <DependentUpon>FEmployer.cs</DependentUpon>
@@ -221,8 +222,8 @@
     <EmbeddedResource Include="FEmployer_ApprovedCandidate.resx">
       <DependentUpon>FEmployer_ApprovedCandidate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FEmployer_CandidateCVDetail.resx">
-      <DependentUpon>FEmployer_CandidateCVDetail.cs</DependentUpon>
+    <EmbeddedResource Include="FCandidate_CreateCV.resx">
+      <DependentUpon>FCandidate_CreateCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_FindCandidate.resx">
       <DependentUpon>FEmployer_FindCandidate.cs</DependentUpon>
@@ -495,6 +496,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-person-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cv-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cv-40.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

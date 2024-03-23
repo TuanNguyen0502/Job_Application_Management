@@ -21,7 +21,7 @@ namespace Job_Application_Management
         }
         private void FCandidate_SavedJobs_Load(object sender, EventArgs e)
         {
-            List<UC_JobsSaved> saveds = new List<UC_JobsSaved>();
+            List<UC_JobsSaved> saveds = canDAO.GetSavedJobsFromDB();
             foreach (var saved in saveds)
             {
                 flpMain.Controls.Add(saved);

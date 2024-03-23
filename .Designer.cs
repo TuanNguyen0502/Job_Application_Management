@@ -1,6 +1,6 @@
 ﻿namespace Job_Application_Management
 {
-    partial class FCandidate_SelectedJobDetails
+    partial class FEmployer_SeeCVDetailOfCandidate
     {
         /// <summary>
         /// Required designer variable.

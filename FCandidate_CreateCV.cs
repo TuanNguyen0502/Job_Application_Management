@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class FEmployer_CandidateCVDetail : Form
+    public partial class FCandidate_CreateCV : Form
     {
-        public FEmployer_CandidateCVDetail()
+        public FCandidate_CreateCV()
         {
             InitializeComponent();
         }

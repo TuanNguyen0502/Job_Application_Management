@@ -193,7 +193,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FCandidate_SavedJobs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FCandidate_SavedJobs";
+            this.Text = "Những công việc đã lưu";
             this.Load += new System.EventHandler(this.FCandidate_SavedJobs_Load);
             this.panel1.ResumeLayout(false);
             this.flpMain.ResumeLayout(false);

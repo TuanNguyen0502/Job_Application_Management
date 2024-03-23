@@ -71,7 +71,7 @@ namespace Job_Application_Management
 
         private void UC_CandidateMain_Click(object sender, EventArgs e)
         {
-            FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails(JobID);
+            FEmployer_SeeCVDetailOfCandidate selected = new FEmployer_SeeCVDetailOfCandidate(JobID);
             selected.ShowDialog();
         }
 

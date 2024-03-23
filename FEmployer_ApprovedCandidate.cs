@@ -40,7 +40,7 @@ namespace Job_Application_Management
 
         private void button_Detail_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_CandidateCVDetail());
+            OpenChildForm(new FCandidate_CreateCV());
         }
 
         private void button_Refuse_Click(object sender, EventArgs e)
