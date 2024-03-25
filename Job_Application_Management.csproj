@@ -231,6 +231,18 @@
     <Compile Include="UC_Resume_Experience.Designer.cs">
       <DependentUpon>UC_Resume_Experience.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Resume_Interest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Resume_Interest.Designer.cs">
+      <DependentUpon>UC_Resume_Interest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Resume_Skill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Resume_Skill.Designer.cs">
+      <DependentUpon>UC_Resume_Skill.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FCandidate.resx">
       <DependentUpon>FCandidate.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +327,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Resume_Experience.resx">
       <DependentUpon>UC_Resume_Experience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Resume_Interest.resx">
+      <DependentUpon>UC_Resume_Interest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Resume_Skill.resx">
+      <DependentUpon>UC_Resume_Skill.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

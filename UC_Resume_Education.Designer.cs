@@ -33,7 +33,7 @@
             this.textBox_Start = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.textBox_End = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox_Process = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.richTextBox_EducationDetail = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.SuspendLayout();
             // 
             // textBox_School
@@ -102,25 +102,25 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "-";
             // 
-            // textBox_Process
+            // richTextBox_EducationDetail
             // 
-            this.textBox_Process.Location = new System.Drawing.Point(13, 153);
-            this.textBox_Process.Name = "textBox_Process";
-            this.textBox_Process.Size = new System.Drawing.Size(1262, 52);
-            this.textBox_Process.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.richTextBox_EducationDetail.Location = new System.Drawing.Point(13, 150);
+            this.richTextBox_EducationDetail.Name = "richTextBox_EducationDetail";
+            this.richTextBox_EducationDetail.Size = new System.Drawing.Size(1262, 137);
+            this.richTextBox_EducationDetail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_Process.StateCommon.Border.Rounding = 20;
-            this.textBox_Process.StateCommon.Border.Width = 1;
-            this.textBox_Process.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Process.TabIndex = 5;
-            this.textBox_Process.Text = "Qua trinh hoc tap hoac thanh tich";
+            this.richTextBox_EducationDetail.StateCommon.Border.Rounding = 20;
+            this.richTextBox_EducationDetail.StateCommon.Border.Width = 1;
+            this.richTextBox_EducationDetail.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_EducationDetail.TabIndex = 5;
+            this.richTextBox_EducationDetail.Text = "Mo ta qua trinh hoc tap hoac thanh tich";
             // 
             // UC_Resume_Education
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox_Process);
+            this.Controls.Add(this.richTextBox_EducationDetail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_End);
             this.Controls.Add(this.textBox_Start);
@@ -128,7 +128,7 @@
             this.Controls.Add(this.textBox_School);
             this.Name = "UC_Resume_Education";
             this.Padding = new System.Windows.Forms.Padding(10);
-            this.Size = new System.Drawing.Size(1288, 225);
+            this.Size = new System.Drawing.Size(1288, 300);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,6 +141,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Start;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_End;
         private System.Windows.Forms.Label label1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Process;
+        private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox richTextBox_EducationDetail;
     }
 }

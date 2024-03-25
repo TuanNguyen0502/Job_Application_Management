@@ -28,27 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_JobExperience = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_End = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.textBox_Start = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.textBox_Place = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.textBox_Compay = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.richTextBox_JobDetail = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.SuspendLayout();
-            // 
-            // textBox_JobExperience
-            // 
-            this.textBox_JobExperience.Location = new System.Drawing.Point(13, 134);
-            this.textBox_JobExperience.Name = "textBox_JobExperience";
-            this.textBox_JobExperience.Size = new System.Drawing.Size(1262, 52);
-            this.textBox_JobExperience.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_JobExperience.StateCommon.Border.Rounding = 20;
-            this.textBox_JobExperience.StateCommon.Border.Width = 1;
-            this.textBox_JobExperience.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_JobExperience.TabIndex = 11;
-            this.textBox_JobExperience.Text = "Mo ta kinh nghiem lam viec";
             // 
             // label1
             // 
@@ -116,11 +102,25 @@
             this.textBox_Compay.TabIndex = 6;
             this.textBox_Compay.Text = "Ten cong ty";
             // 
+            // richTextBox_JobDetail
+            // 
+            this.richTextBox_JobDetail.Location = new System.Drawing.Point(15, 140);
+            this.richTextBox_JobDetail.Name = "richTextBox_JobDetail";
+            this.richTextBox_JobDetail.Size = new System.Drawing.Size(1262, 137);
+            this.richTextBox_JobDetail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.richTextBox_JobDetail.StateCommon.Border.Rounding = 20;
+            this.richTextBox_JobDetail.StateCommon.Border.Width = 1;
+            this.richTextBox_JobDetail.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_JobDetail.TabIndex = 11;
+            this.richTextBox_JobDetail.Text = "Mo ta qua trinh lam viec hoac thanh tich";
+            // 
             // UC_Resume_Experience
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox_JobExperience);
+            this.Controls.Add(this.richTextBox_JobDetail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_End);
             this.Controls.Add(this.textBox_Start);
@@ -128,19 +128,18 @@
             this.Controls.Add(this.textBox_Compay);
             this.Name = "UC_Resume_Experience";
             this.Padding = new System.Windows.Forms.Padding(10);
-            this.Size = new System.Drawing.Size(1293, 199);
+            this.Size = new System.Drawing.Size(1293, 300);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_JobExperience;
         private System.Windows.Forms.Label label1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_End;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Start;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Place;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Compay;
+        private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox richTextBox_JobDetail;
     }
 }
