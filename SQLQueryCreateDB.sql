@@ -9,8 +9,7 @@
 	Education nvarchar(250)
 )
 CREATE TABLE Company (
-	ID varchar(10) PRIMARY KEY,
-	Name nvarchar(100),
+	Name nvarchar(100) PRIMARY KEY,
 	Address nvarchar(100),
 	Manager nvarchar(100),
 	TaxCode varchar(100),
@@ -23,7 +22,7 @@ CREATE TABLE Employers(
 	Sex nvarchar(10),
 	Phone varchar(12),
 	Workplace nvarchar(250),
-	CompanyID varchar(10) FOREIGN KEY REFERENCES Company(ID),
+	CompanyName nvarchar(100) FOREIGN KEY REFERENCES Company(ID),
 )
 CREATE TABLE Jobs(
 	ID varchar(10) CONSTRAINT PK_Job PRIMARY KEY,
@@ -83,11 +82,11 @@ VALUES
 
 --
 INSERT INTO Company (ID, Name, Address, Manager, TaxCode, BusinessLicense)
-VALUES ('C001', N'Công ty ABC', N'123 Đống Đa, Hà Nội', N'Miss.An', '123456789', 'BL-001');
+VALUES (N'Công ty ABC', N'123 Đống Đa, Hà Nội', N'Miss.An', '123456789', 'BL-001');
 
 -- Dữ liệu cho bảng Employeers
 INSERT INTO Employers (ID, Email, Name, Sex, Phone, Workplace, CompanyID)
-VALUES ('E001', '22110260@student.hcmute.edu.vn', N'Tuấn', N'Nam', '0705488458', N'Giám đốc', 'C001');
+VALUES ('E001', '22110260@student.hcmute.edu.vn', N'Tuấn', N'Nam', '0705488458', N'Giám đốc', N'Công ty ABC');
 
 -- Dữ liệu cho bảng Jobs
 -- Job 1
