@@ -14,17 +14,15 @@ namespace Job_Application_Management
 {
     public partial class FEmployer_Job : KryptonForm
     {
+        private string empID;
         private Form currentFormChild;
-        private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
-        private string sqlQuery;
-        private UC_EmployerJob[] uC_EmployerJobs;
         private EmployerDAO employerDAO;
 
-        public FEmployer_Job()
+        public FEmployer_Job(string empID)
         {
+            this.empID = empID;
             InitializeComponent();
             employerDAO = new EmployerDAO();
-            uC_EmployerJobs = new UC_EmployerJob[] { };
         }
 
         private void OpenChildForm(Form childForm)
@@ -44,23 +42,8 @@ namespace Job_Application_Management
 
         private void button_Post_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_JobDetail(null));
-        }
-
-        private void button_Change_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button_Delete_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button_Delete_Click(object sender, EventArgs e)
-        {
-            
-        }
+            OpenChildForm(new FEmployer_JobDetail(null, empID));
+        } 
 
         private void FEmployer_Job_Load(object sender, EventArgs e)
         {
@@ -69,7 +52,7 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
-            List<UC_EmployerJob> jobItems = employerDAO.GetJobsFromDB();
+            List<UC_EmployerJob> jobItems = employerDAO.GetJobsFromDB(empID);
             foreach (var jobItem in jobItems)
             {
                 flowLayoutPanel_Jobs.Controls.Add(jobItem);

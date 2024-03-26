@@ -18,13 +18,15 @@ namespace Job_Application_Management
         private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
         private string sqlQuery;
         private string jobID;
+        private string empID;
         private EmployerDAO employerDAO;
 
         public string JobID { get => jobID; set => jobID = value; }
 
-        public FEmployer_JobDetail(string ID)
+        public FEmployer_JobDetail(string ID, string empID)
         {
             this.JobID = ID;
+            this.empID = empID;
             employerDAO = new EmployerDAO();
             InitializeComponent();
         }
@@ -105,9 +107,9 @@ namespace Job_Application_Management
 
         private Job GetCurrentJob()
         {
-            Job job = new Job(JobID, textBox_JobName.Text, Int32.Parse(textBox_Salary.Text), "null", "null", richTextBox_JobDescripton.Text,
+            Job job = new Job(JobID, textBox_JobName.Text, Int32.Parse(textBox_Salary.Text), richTextBox_JobDescripton.Text,
                     Int32.Parse(textBox_WorkingTime.Text), textBox_Experience.Text, dateTimePicker_Deadline.Value, richTextBox_JobBenefit.Text,
-                    richTextBox_Requirement.Text, "Emp001");
+                    richTextBox_Requirement.Text, empID);
             return job;
         }
 
@@ -115,8 +117,8 @@ namespace Job_Application_Management
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                conn.Open();
                 // get job number
+                conn.Open();
                 int number = 0;
                 string query = "SELECT * FROM Jobs";
                 SqlCommand com = new SqlCommand(query, conn);
@@ -131,9 +133,9 @@ namespace Job_Application_Management
                 r.Close();
                 number++;
                 //
-                Job job = new Job("JOB" + number, textBox_JobName.Text, Int32.Parse(textBox_Salary.Text), "null", "null", richTextBox_JobDescripton.Text,
+                Job job = new Job("JOB" + number, textBox_JobName.Text, Int32.Parse(textBox_Salary.Text), richTextBox_JobDescripton.Text,
                     Int32.Parse(textBox_WorkingTime.Text), textBox_Experience.Text, dateTimePicker_Deadline.Value, richTextBox_JobBenefit.Text,
-                    richTextBox_Requirement.Text, "Emp001");
+                    richTextBox_Requirement.Text, empID);
                 return job;
             }
         }

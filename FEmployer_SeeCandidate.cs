@@ -18,11 +18,13 @@ namespace Job_Application_Management
         private string jobID;
         private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
         private UC_EmployerJob[] uC_EmployerJobs;
+        private EmployerDAO employerDAO;
 
         public FEmployer_SeeCandidate(string jobID)
         {
-            InitializeComponent();
             this.jobID = jobID;
+            employerDAO = new EmployerDAO();    
+            InitializeComponent();
         }
 
         private void OpenChildForm(Form childForm)
@@ -50,32 +52,10 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
-            using (SqlConnection conn = new SqlConnection(connStr))
+            List<UC_CandidateCV> resumeItems = employerDAO.GetCandidateResumeFromDB(jobID);
+            foreach (var resume in resumeItems)
             {
-                /*
-                conn.Open();
-                sqlQuery = "SELECT JobID, JobName FROM Jobs";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {   
-                    while (reader.Read())
-                    {
-                        UC_EmployerJob item = new UC_EmployerJob();
-                        uC_EmployerJobs.Append(item);
-                        item.JobID = reader.GetString(0);
-                        item.Label_JobName.Text = reader.GetString(1);
-                        if (flowLayoutPanel_Jobs.Controls.Count < 0)
-                        {
-                            flowLayoutPanel_Jobs.Controls.Clear();
-                        }
-                        else
-                            flowLayoutPanel_Jobs.Controls.Add(item);
-                    }
-                }
-                else
-                    MessageBox.Show("No rows found");
-                */
+                flowLayoutPanel1.Controls.Add(resume);
             }
         }
     }

@@ -13,6 +13,14 @@ namespace Job_Application_Management
 {
     public partial class FResume : KryptonForm
     {
+        private string jobID;
+        private string cddID;
+        public FResume(string jobID, string cddID)
+        {
+            this.jobID = jobID;
+            this.cddID = cddID;
+            InitializeComponent();
+        }
         public FResume()
         {
             InitializeComponent();

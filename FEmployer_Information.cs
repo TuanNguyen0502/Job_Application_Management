@@ -14,11 +14,14 @@ namespace Job_Application_Management
 {
     public partial class FEmployer_Information : KryptonForm
     {
+        private string empID;
+        private Employer employer;
         private EmployerDAO employerDAO;
-        private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
         private string sqlQuery;
-        public FEmployer_Information()
+
+        public FEmployer_Information(string empID)
         {
+            this.empID = empID;
             employerDAO = new EmployerDAO();
             InitializeComponent();
         }
@@ -30,44 +33,31 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
-            using (SqlConnection conn = new SqlConnection(connStr))
+            employer = employerDAO.GetEmployerFromDB(empID);
+
+            textBox_ID.Text = employer.Id;
+            textBox_Email.Text = employer.Email;
+            textBox_Name.Text = employer.Name;
+            if (employer.Sex == "Nam")
             {
-                conn.Open();
-                sqlQuery = "SELECT ID, Email, Name, Sex, Phone, Workplace FROM Employers WHERE ID = 'E001'";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        textBox_ID.Text = reader.GetString(0);
-                        textBox_Email.Text = reader.GetString(1);
-                        textBox_Name.Text = reader.GetString(2);
-                        // Add sex
-                        if (reader.GetString(3) == "Nam")
-                        {
-                            radioButton_Male.Checked = true;
-                        }
-                        else
-                        {
-                            radioButton_Female.Checked = true;
-                        }
-                        //
-                        textBox_PhoneNumber.Text = reader.GetString(4);
-                        comboBox_Workplace.Text = reader.GetString(5);
-                    }
-                }
-                else
-                    MessageBox.Show("No rows found");
+                radioButton_Male.Checked = true;
             }
+            else
+            {
+                radioButton_Female.Checked = true;
+            }
+            textBox_PhoneNumber.Text = employer.Phone;
+            comboBox_Workplace.Text = employer.Workplace;
         }
+
         private void button_Save_Click(object sender, EventArgs e)
         {
-            Employer employer = CreateEmployer();
+            UpdateEmployer();
             employerDAO.SaveInfor(employer);
             LoadInfor();
         }
-        private Employer CreateEmployer()
+
+        private void UpdateEmployer()
         {
             string sex;
             if (radioButton_Male.Checked)
@@ -78,8 +68,10 @@ namespace Job_Application_Management
             {
                 sex = "Nữ";
             }
-            Employer employer = new Employer("E001", textBox_Name.Text, textBox_Email.Text, textBox_PhoneNumber.Text, sex, comboBox_Workplace.SelectedText);
-            return employer;
+            employer.Name = textBox_Name.Text;
+            employer.Phone = textBox_PhoneNumber.Text;
+            employer.Sex = sex;
+            employer.Workplace = comboBox_Workplace.SelectedText;
         }
     }
 }

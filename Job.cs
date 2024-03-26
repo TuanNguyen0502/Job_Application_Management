@@ -11,37 +11,33 @@ namespace Job_Application_Management
         private string id;
         private string name;
         private int salary;
-        private string company;
-        private string address;
         private string jobDescription;
         private int workDuration;
         private string experience;
         private DateTime deadline;
         private string benefit;
         private string request;
+        private DateTime postTime;
         private string empID;
 
-        public Job (string id, string name, int salary, string company, string address, string jobDescription, int workDuration, string experience, DateTime deadline, string benefit, string request, string empID)
+        public Job (string id, string name, int salary, string jobDescription, int workDuration, string experience, DateTime deadline, string benefit, string request, string empID)
         {
             Id = id;
             Name = name;
             Salary = salary;
-            Company = company;
-            Address = address;
             JobDescription = jobDescription;
             WorkDuration = workDuration;
             Experience = experience;
             Deadline = deadline;
             Benefit = benefit;
             Request = request;
+            postTime = DateTime.Now;
             EmpID = empID;
         }
 
         public string Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public int Salary { get => salary; set => salary = value; }
-        public string Company { get => company; set => company = value; }
-        public string Address { get => address; set => address = value; }
         public string JobDescription { get => jobDescription; set => jobDescription = value; }
         public int WorkDuration { get => workDuration; set => workDuration = value; }
         public string Experience { get => experience; set => experience = value; }
@@ -49,5 +45,6 @@ namespace Job_Application_Management
         public string Benefit { get => benefit; set => benefit = value; }
         public string Request { get => request; set => request = value; }
         public string EmpID { get => empID; set => empID = value; }
+        public DateTime PostTime { get => postTime; set => postTime = value; }
     }
 }

@@ -23,6 +23,9 @@ namespace Job_Application_Management
             this.sex = sex;
         }
 
+        public Person()
+        { }
+
         public string Name { get => name; set => name = value; }
         public string Email { get => email; set => email = value; }
         public string Phone { get => phone; set => phone = value; }

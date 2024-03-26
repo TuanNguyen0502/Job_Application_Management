@@ -16,6 +16,8 @@ namespace Job_Application_Management
             this.Workplace = workplace;
             this.CompanyName = companyName;
         }
+        public Employer()
+        { }
 
         public string Workplace { get => workplace; set => workplace = value; }
         public string CompanyName { get => companyName; set => companyName = value; }
