@@ -30,9 +30,9 @@ namespace Job_Application_Management
             List<Dictionary<string, object>> keyValueJobDetails = canDAO.GetSelectedJobDetails(jobid);
             foreach (var item in keyValueJobDetails)
             {
-                lblJobName_Address.Text = (string)item["JobName"] + $" [{(string)item["WorkAddress"]}]";
+                lblJobName_Address.Text = (string)item["JobName"] + $" [{(string)item["Address"]}]";
                 lblSalary.Text = item["Salary"].ToString();
-                lblAddress.Text = (string)item["WorkAddress"];
+                lblAddress.Text = (string)item["Address"];
                 lblExp.Text = (string)item["Experience"];
                 lblComName.Text = (string)item["CompanyName"];
             }

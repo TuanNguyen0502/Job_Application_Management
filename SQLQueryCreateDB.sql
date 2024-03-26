@@ -73,6 +73,14 @@ CREATE TABLE Resume(
 	CertificationDate datetime,
 	CONSTRAINT PK_AD PRIMARY KEY (CddID, JobID)
 )
+-- Tạo bảng Saved Jobs
+CREATE TABLE SavedJobs(
+	ID int IDENTITY primary key,
+	TimeSaved date,
+	JobID varchar(10) FOREIGN KEY REFERENCES Jobs(ID) 
+)
+
+
 -- Dữ liệu cho bảng Candidates
 INSERT INTO Candidates (CddID, CddName, Phone, Email, CddAddress, Hometown, Sex, Education)
 VALUES 
@@ -85,8 +93,8 @@ INSERT INTO Company (Name, Address, Manager, TaxCode, BusinessLicense)
 VALUES (N'Công ty ABC', N'123 Đống Đa, Hà Nội', N'Miss.An', '123456789', 'BL-001');
 
 -- Dữ liệu cho bảng Employeers
-INSERT INTO Employers (ID, Email, Name, Sex, Phone, Workplace, CompanyName)
-VALUES ('E001', '22110260@student.hcmute.edu.vn', N'Tuấn', N'Nam', '0705488458', N'Giám đốc', N'Công ty ABC');
+INSERT INTO Employers (ID, Email, Name, Sex, Phone, Workplace, CompanyID)
+VALUES ('E001', '22110260@student.hcmute.edu.vn', 'Tuấn', 'Nam', '0705488458', 'Giám đốc', 'C001');
 
 -- Dữ liệu cho bảng Jobs
 -- Job 1
@@ -98,7 +106,6 @@ VALUES ('J002', 'Marketing Specialist', 60000, 'Plan and execute marketing campa
 -- Job 3
 INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
 VALUES ('J003', 'HR Manager', 70000, 'Oversee all aspects of human resources functions.', 40, '5+ years in HR management', '2024-04-30', 'Health insurance, Retirement plan', 'Bachelors degree in Human Resources or related field', '2024-03-26', 'E001');
-
 -- Dữ liệu cho bảng Resume
 INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate)
 VALUES 
@@ -108,4 +115,4 @@ VALUES
 ('CDD001', 'J002', N'Results-driven Marketing Specialist with a passion for creating impactful campaigns. Seeking to leverage my expertise in digital marketing at ABC Corporation.', N'Marketing Academy', N'Marketing Management', '3.8', '2017-08-01', '2021-05-01', N'Digital Marketing Agency', N'Cityville, USA', N'Led successful social media campaigns resulting in a 20% increase in user engagement.', '2021-06-15', '2023-03-31', N'HubSpot Content Marketing Certification', '2023-06-20');
 INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate)
 VALUES 
-('CDD001', 'J003', N'Experienced HR professional with a proven track record of managing diverse teams. Seeking a challenging role as an HR Manager at ABC Corporation.', N'University of HR Management', N'Human Resources', '3.9', '2015-09-01', '2019-06-01', N'HR Solutions Inc.', N'Hanoi, Vietnam', N'Managed recruitment processes and employee relations.', '2019-07-15', '2022-02-28', N'PHR Certification', '2023-05-10');
+('CDD001', 'J003', 'Experienced HR professional with a proven track record of managing diverse teams. Seeking a challenging role as an HR Manager at ABC Corporation.', 'University of HR Management', 'Human Resources', '3.9', '2015-09-01', '2019-06-01', 'HR Solutions Inc.', 'Hanoi, Vietnam', 'Managed recruitment processes and employee relations.', '2019-07-15', '2022-02-28', 'PHR Certification', '2023-05-10');

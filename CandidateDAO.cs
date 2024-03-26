@@ -18,7 +18,10 @@ namespace Job_Application_Management
         }
         public List<UC_CandidateMain> GetJobsFromDB()
         {
-            sqlQuery = "SELECT JobName, CompanyName, Salary, WorkAddress, JobID FROM Jobs";
+            sqlQuery = "SELECT j.ID JobID, j.Name JobName, c.Name CompanyName, j.Salary, c.Address"
+                        +" FROM Jobs j"
+                        +" JOIN Employers e ON j.EmpID = e.ID"
+                        +" JOIN Company c ON e.CompanyID = c.ID";
             List<Dictionary<string,object>> resultList = dbConn.ExecuteReaderData(sqlQuery);
             List<UC_CandidateMain> items = new List<UC_CandidateMain>();
             foreach(var row in resultList)
@@ -27,7 +30,7 @@ namespace Job_Application_Management
                 item.JobName = (string)row["JobName"];
                 item.CompanyName1 = (string)row["CompanyName"];
                 item.Salary = (int)row["Salary"];
-                item.Address = (string)row["WorkAddress"];
+                item.Address = (string)row["Address"];
                 item.JobID = (string)row["JobID"];
                 items.Add(item);
             }
@@ -35,8 +38,11 @@ namespace Job_Application_Management
         }
         public List<UC_CandidateMain> GetJobsByAddress(string address)
         {
-            sqlQuery = "SELECT JobName, CompanyName, Salary, WorkAddress, JobID FROM Jobs" +
-                " WHERE WorkAddress LIKE N'%"+ address +"%'";
+            sqlQuery = "SELECT j.ID JobID, j.Name JobName, c.Name CompanyName, j.Salary, c.Address"
+                        +" FROM Jobs j"
+                        +" JOIN Employers e ON j.EmpID = e.ID"
+                        +" JOIN Company c ON e.CompanyID = c.ID"
+                        +" WHERE c.Address LIKE N'%"+ address +"%'";
             List<Dictionary<string, object>> resultList = dbConn.ExecuteReaderData(sqlQuery);
             List<UC_CandidateMain> items = new List<UC_CandidateMain>();
             foreach (var row in resultList)
@@ -45,7 +51,7 @@ namespace Job_Application_Management
                 item.JobName = (string)row["JobName"];
                 item.CompanyName1 = (string)row["CompanyName"];
                 item.Salary = (int)row["Salary"];
-                item.Address = (string)row["WorkAddress"];
+                item.Address = (string)row["Address"];
                 item.JobID = (string)row["JobID"];
                 items.Add(item);
             }
@@ -53,10 +59,14 @@ namespace Job_Application_Management
         }
         public List<UC_CandidateMain> GetJobsByKeywords(string keyword)
         {
-            sqlQuery = "SELECT JobName, CompanyName, Salary, WorkAddress, JobID FROM Jobs " +
-                        "WHERE WorkAddress LIKE N'%"+ keyword +"%'"+ "OR JobName LIKE N'%"+ keyword +"%'" +
-                        "OR CompanyName LIKE N'%"+ keyword +"%'" +
-                        "OR JobID LIKE N'%"+ keyword +"%'";
+            sqlQuery = "SELECT j.ID JobID, j.Name JobName, c.Name CompanyName, j.Salary, c.Address"
+                        +" FROM Jobs j"
+                        +" JOIN Employers e ON j.EmpID = e.ID"
+                        +" JOIN Company c ON e.CompanyID = c.ID" 
+                        +" WHERE c.Address LIKE N'%"+ keyword +"%'"
+                        +" OR j.Name LIKE N'%"+ keyword +"%'" 
+                        +" OR c.Name LIKE N'%"+ keyword +"%'" 
+                        +" OR j.ID LIKE N'%"+ keyword +"%'";
             List<Dictionary<string, object>> resultList = dbConn.ExecuteReaderData(sqlQuery);
             List<UC_CandidateMain> items = new List<UC_CandidateMain>();
             foreach (var row in resultList)
@@ -65,7 +75,7 @@ namespace Job_Application_Management
                 item.JobName = (string)row["JobName"];
                 item.CompanyName1 = (string)row["CompanyName"];
                 item.Salary = (int)row["Salary"];
-                item.Address = (string)row["WorkAddress"];
+                item.Address = (string)row["Address"];
                 item.JobID = (string)row["JobID"];
                 items.Add(item);
             }
@@ -73,7 +83,11 @@ namespace Job_Application_Management
         }
         public List<UC_JobsSaved> GetSavedJobsFromDB()
         {
-            sqlQuery = "SELECT j.JobDecription, j.CompanyName, js.TimeSaved, j.WorkAddress, j.Salary FROM JobsSaved js JOIN Jobs j ON js.JobID = j.JobID";
+            sqlQuery = "SELECT j.JobDecription, c.Name as CompanyName, sj.TimeSaved, c.Address, j.Salary"
+                       +" FROM SavedJobs sj"
+                       +" JOIN Jobs j ON sj.JobID = j.ID"
+                       +" JOIN Employers e ON j.EmpID = e.ID"
+                       +" JOIN Company c ON c.ID = e.CompanyID";
             List<Dictionary<string, object>> keyValueSavedJobs = dbConn.ExecuteReaderData(sqlQuery);
             List<UC_JobsSaved> saveds = new List<UC_JobsSaved>();
             foreach (var row in keyValueSavedJobs)
@@ -82,7 +96,7 @@ namespace Job_Application_Management
                 item.DescriptionJob = (string)row["JobDecription"];
                 item.ComName = (string)row["CompanyName"];
                 item.TimeSaved = (DateTime)row["TimeSaved"];
-                item.Address = (string)row["WorkAddress"];
+                item.Address = (string)row["Address"];
                 item.Salary = (int)row["Salary"];
                 saveds.Add(item);
             }
@@ -90,7 +104,12 @@ namespace Job_Application_Management
         }
         public List<Dictionary<string, object>> GetSelectedJobDetails(string jobid)
         {
-            sqlQuery = "SELECT JobName, WorkAddress, Salary, Experience, CompanyName FROM Jobs WHERE JobID = @jobId";
+            sqlQuery = "SELECT j.Name JobName, c.Name CompanyName, j.Salary, c.Address, j.Experience"
+                        +" FROM Jobs j"
+                        +" JOIN Employers e ON j.EmpID = e.ID"
+                        +" JOIN Company c ON e.CompanyID = c.ID"
+                        +" WHERE j.ID = @jobId";
+            //sqlQuery = "SELECT JobName, WorkAddress, Salary, Experience, CompanyName FROM Jobs WHERE JobID = @jobId";
             SqlParameter[] lstParam =
             {
                 new SqlParameter("@jobId", SqlDbType.VarChar) {Value = jobid},
