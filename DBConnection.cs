@@ -14,6 +14,7 @@ namespace Job_Application_Management
         //SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         readonly string conStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
 
+        // Các phương thức để đọc và ghi dữ liệu từ cơ sở dữ liệu mysql server
         public void ExecuteWriteData(string sqlStr, SqlParameter[] lstParam)
         {
             using (SqlConnection conn = new SqlConnection(conStr))
