@@ -25,7 +25,7 @@ namespace Job_Application_Management
             Application.SetCompatibleTextRenderingDefault(false);
 
             mainFormManager = new MainFormManager();
-            mainFormManager.CurrentForm = new FResume();
+            mainFormManager.CurrentForm = new FLogin();
             Application.Run(mainFormManager);
         }
     }
