@@ -201,7 +201,8 @@ namespace Job_Application_Management
         private void button1_Click(object sender, EventArgs e)
         {
             FResume resume = new FResume();
-            resume.ShowDialog();
+            resume.ShowDialog(); 
+
         }
     }
 }
