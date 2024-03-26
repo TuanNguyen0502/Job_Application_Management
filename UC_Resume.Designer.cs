@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Resume));
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.flpInfos = new System.Windows.Forms.TableLayoutPanel();
             this.label_CandidateName = new System.Windows.Forms.Label();
             this.label_Nominee = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpInfo = new System.Windows.Forms.FlowLayoutPanel();
             this.label_Phone = new System.Windows.Forms.Label();
             this.textBox_Phone = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label_Email = new System.Windows.Forms.Label();
             this.textBox_Email = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label_Address = new System.Windows.Forms.Label();
             this.textBox_Address = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpGoal = new System.Windows.Forms.FlowLayoutPanel();
             this.label_CareerObjective = new System.Windows.Forms.Label();
             this.richTextBox_CareerObjective = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.flowLayoutPanel_Education = new System.Windows.Forms.FlowLayoutPanel();
@@ -68,7 +68,7 @@
             this.flowLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // flpInfos
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -92,7 +92,7 @@
             this.label_CandidateName.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold);
             this.label_CandidateName.Location = new System.Drawing.Point(688, 11);
             this.label_CandidateName.Name = "label_CandidateName";
-            this.label_CandidateName.Size = new System.Drawing.Size(298, 42);
+            this.label_CandidateName.Size = new System.Drawing.Size(239, 36);
             this.label_CandidateName.TabIndex = 0;
             this.label_CandidateName.Text = "Candidate Name";
             // 
@@ -103,11 +103,11 @@
             this.label_Nominee.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Nominee.Location = new System.Drawing.Point(727, 69);
             this.label_Nominee.Name = "label_Nominee";
-            this.label_Nominee.Size = new System.Drawing.Size(220, 28);
+            this.label_Nominee.Size = new System.Drawing.Size(186, 23);
             this.label_Nominee.TabIndex = 1;
             this.label_Nominee.Text = "Vi tri ung tuyen";
             // 
-            // flowLayoutPanel1
+            // flpInfo
             // 
             this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.flowLayoutPanel1.Controls.Add(this.label_Phone);
@@ -127,18 +127,19 @@
             this.label_Phone.AutoSize = true;
             this.label_Phone.Font = new System.Drawing.Font("Consolas", 16F);
             this.label_Phone.Image = global::Job_Application_Management.Properties.Resources.icons8_phone_30;
-            this.label_Phone.Location = new System.Drawing.Point(3, 10);
+            this.label_Phone.Location = new System.Drawing.Point(3, 9);
             this.label_Phone.Name = "label_Phone";
-            this.label_Phone.Size = new System.Drawing.Size(35, 37);
+            this.label_Phone.Size = new System.Drawing.Size(29, 32);
             this.label_Phone.TabIndex = 1;
             this.label_Phone.Text = " ";
             // 
             // textBox_Phone
             // 
             this.textBox_Phone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Phone.Location = new System.Drawing.Point(44, 3);
+            this.textBox_Phone.Location = new System.Drawing.Point(38, 2);
+            this.textBox_Phone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Phone.Name = "textBox_Phone";
-            this.textBox_Phone.Size = new System.Drawing.Size(264, 52);
+            this.textBox_Phone.Size = new System.Drawing.Size(235, 47);
             this.textBox_Phone.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -154,18 +155,19 @@
             this.label_Email.AutoSize = true;
             this.label_Email.Font = new System.Drawing.Font("Consolas", 16F);
             this.label_Email.Image = global::Job_Application_Management.Properties.Resources.icons8_email_301;
-            this.label_Email.Location = new System.Drawing.Point(314, 10);
+            this.label_Email.Location = new System.Drawing.Point(279, 9);
             this.label_Email.Name = "label_Email";
-            this.label_Email.Size = new System.Drawing.Size(35, 37);
+            this.label_Email.Size = new System.Drawing.Size(29, 32);
             this.label_Email.TabIndex = 2;
             this.label_Email.Text = " ";
             // 
             // textBox_Email
             // 
             this.textBox_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Email.Location = new System.Drawing.Point(355, 3);
+            this.textBox_Email.Location = new System.Drawing.Point(314, 2);
+            this.textBox_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(482, 52);
+            this.textBox_Email.Size = new System.Drawing.Size(428, 47);
             this.textBox_Email.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -181,18 +183,19 @@
             this.label_Address.AutoSize = true;
             this.label_Address.Font = new System.Drawing.Font("Consolas", 16F);
             this.label_Address.Image = global::Job_Application_Management.Properties.Resources.icons8_address_30;
-            this.label_Address.Location = new System.Drawing.Point(843, 10);
+            this.label_Address.Location = new System.Drawing.Point(748, 9);
             this.label_Address.Name = "label_Address";
-            this.label_Address.Size = new System.Drawing.Size(35, 37);
+            this.label_Address.Size = new System.Drawing.Size(29, 32);
             this.label_Address.TabIndex = 4;
             this.label_Address.Text = " ";
             // 
             // textBox_Address
             // 
             this.textBox_Address.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Address.Location = new System.Drawing.Point(884, 3);
+            this.textBox_Address.Location = new System.Drawing.Point(783, 2);
+            this.textBox_Address.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Address.Name = "textBox_Address";
-            this.textBox_Address.Size = new System.Drawing.Size(467, 52);
+            this.textBox_Address.Size = new System.Drawing.Size(415, 47);
             this.textBox_Address.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -202,7 +205,7 @@
             this.textBox_Address.TabIndex = 5;
             this.textBox_Address.Text = "Thuan An, Binh Duong";
             // 
-            // flowLayoutPanel2
+            // flpGoal
             // 
             this.flowLayoutPanel2.Controls.Add(this.label_CareerObjective);
             this.flowLayoutPanel2.Controls.Add(this.richTextBox_CareerObjective);
@@ -218,18 +221,19 @@
             // 
             this.label_CareerObjective.AutoSize = true;
             this.label_CareerObjective.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CareerObjective.Location = new System.Drawing.Point(13, 10);
+            this.label_CareerObjective.Location = new System.Drawing.Point(12, 8);
             this.label_CareerObjective.Name = "label_CareerObjective";
-            this.label_CareerObjective.Size = new System.Drawing.Size(377, 37);
+            this.label_CareerObjective.Size = new System.Drawing.Size(314, 32);
             this.label_CareerObjective.TabIndex = 0;
             this.label_CareerObjective.Text = "Muc tieu nghe nghiep";
             // 
             // richTextBox_CareerObjective
             // 
             this.richTextBox_CareerObjective.Dock = System.Windows.Forms.DockStyle.Left;
-            this.richTextBox_CareerObjective.Location = new System.Drawing.Point(13, 50);
+            this.richTextBox_CareerObjective.Location = new System.Drawing.Point(332, 10);
+            this.richTextBox_CareerObjective.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox_CareerObjective.Name = "richTextBox_CareerObjective";
-            this.richTextBox_CareerObjective.Size = new System.Drawing.Size(1340, 159);
+            this.richTextBox_CareerObjective.Size = new System.Drawing.Size(1191, 127);
             this.richTextBox_CareerObjective.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -257,7 +261,7 @@
             this.flowLayoutPanel4.Controls.Add(this.button_AddEducation);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(13, 13);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(570, 62);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(507, 50);
             this.flowLayoutPanel4.TabIndex = 1;
             // 
             // label_Education
@@ -265,9 +269,9 @@
             this.label_Education.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_Education.AutoSize = true;
             this.label_Education.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Education.Location = new System.Drawing.Point(3, 7);
+            this.label_Education.Location = new System.Drawing.Point(3, 4);
             this.label_Education.Name = "label_Education";
-            this.label_Education.Size = new System.Drawing.Size(143, 37);
+            this.label_Education.Size = new System.Drawing.Size(119, 32);
             this.label_Education.TabIndex = 0;
             this.label_Education.Text = "Hoc van";
             // 
@@ -336,7 +340,8 @@
             // 
             // uC_Resume_Education1
             // 
-            this.uC_Resume_Education1.Location = new System.Drawing.Point(13, 81);
+            this.uC_Resume_Education1.Location = new System.Drawing.Point(12, 64);
+            this.uC_Resume_Education1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_Resume_Education1.Name = "uC_Resume_Education1";
             this.uC_Resume_Education1.Padding = new System.Windows.Forms.Padding(10);
             this.uC_Resume_Education1.Size = new System.Drawing.Size(1288, 300);
@@ -360,7 +365,7 @@
             this.flowLayoutPanel6.Controls.Add(this.button_AddExperience);
             this.flowLayoutPanel6.Location = new System.Drawing.Point(13, 13);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(570, 62);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(507, 50);
             this.flowLayoutPanel6.TabIndex = 1;
             // 
             // label_JobExperience
@@ -368,9 +373,9 @@
             this.label_JobExperience.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_JobExperience.AutoSize = true;
             this.label_JobExperience.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_JobExperience.Location = new System.Drawing.Point(3, 7);
+            this.label_JobExperience.Location = new System.Drawing.Point(3, 4);
             this.label_JobExperience.Name = "label_JobExperience";
-            this.label_JobExperience.Size = new System.Drawing.Size(377, 37);
+            this.label_JobExperience.Size = new System.Drawing.Size(314, 32);
             this.label_JobExperience.TabIndex = 0;
             this.label_JobExperience.Text = "Kinh nghiem lam viec";
             // 
@@ -439,7 +444,8 @@
             // 
             // uC_Resume_Experience1
             // 
-            this.uC_Resume_Experience1.Location = new System.Drawing.Point(13, 81);
+            this.uC_Resume_Experience1.Location = new System.Drawing.Point(12, 64);
+            this.uC_Resume_Experience1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_Resume_Experience1.Name = "uC_Resume_Experience1";
             this.uC_Resume_Experience1.Padding = new System.Windows.Forms.Padding(10);
             this.uC_Resume_Experience1.Size = new System.Drawing.Size(1293, 284);
@@ -463,7 +469,7 @@
             this.flowLayoutPanel8.Controls.Add(this.button_AddCertification);
             this.flowLayoutPanel8.Location = new System.Drawing.Point(13, 13);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(570, 62);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(507, 50);
             this.flowLayoutPanel8.TabIndex = 1;
             // 
             // label_Certificate
@@ -471,9 +477,9 @@
             this.label_Certificate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_Certificate.AutoSize = true;
             this.label_Certificate.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Certificate.Location = new System.Drawing.Point(3, 7);
+            this.label_Certificate.Location = new System.Drawing.Point(3, 4);
             this.label_Certificate.Name = "label_Certificate";
-            this.label_Certificate.Size = new System.Drawing.Size(179, 37);
+            this.label_Certificate.Size = new System.Drawing.Size(149, 32);
             this.label_Certificate.TabIndex = 0;
             this.label_Certificate.Text = "Chung chi";
             // 
@@ -542,15 +548,16 @@
             // 
             // uC_Resume_Certificate1
             // 
-            this.uC_Resume_Certificate1.Location = new System.Drawing.Point(13, 81);
+            this.uC_Resume_Certificate1.Location = new System.Drawing.Point(12, 64);
+            this.uC_Resume_Certificate1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_Resume_Certificate1.Name = "uC_Resume_Certificate1";
-            this.uC_Resume_Certificate1.Padding = new System.Windows.Forms.Padding(10);
-            this.uC_Resume_Certificate1.Size = new System.Drawing.Size(1289, 88);
+            this.uC_Resume_Certificate1.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.uC_Resume_Certificate1.Size = new System.Drawing.Size(1146, 70);
             this.uC_Resume_Certificate1.TabIndex = 2;
             // 
             // UC_Resume
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.flowLayoutPanel_Certificate);
@@ -581,17 +588,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel flpInfos;
         private System.Windows.Forms.Label label_CandidateName;
         private System.Windows.Forms.Label label_Nominee;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpInfo;
         private System.Windows.Forms.Label label_Phone;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Phone;
         private System.Windows.Forms.Label label_Email;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Email;
         private System.Windows.Forms.Label label_Address;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Address;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flpGoal;
         private System.Windows.Forms.Label label_CareerObjective;
         private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox richTextBox_CareerObjective;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Education;
@@ -609,5 +616,34 @@
         private System.Windows.Forms.Label label_Certificate;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_AddCertification;
         private UC_Resume_Certificate uC_Resume_Certificate1;
+
+        /*private System.Windows.Forms.TableLayoutPanel FlpInfos;
+        private System.Windows.Forms.Label Label_CandidateName;
+        private System.Windows.Forms.Label Label_Nominee;
+        private System.Windows.Forms.FlowLayoutPanel FlpInfo;
+        private System.Windows.Forms.Label Label_Phone;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_Phone;
+        private System.Windows.Forms.Label Label_Email;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_Email;
+        private System.Windows.Forms.Label Label_Address;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_Address;
+        private System.Windows.Forms.FlowLayoutPanel FlpGoal;
+        private System.Windows.Forms.Label Label_CareerObjective;
+        private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox RichTextBox_CareerObjective;
+        private System.Windows.Forms.FlowLayoutPanel FlpEducation;
+        private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel4;
+        private System.Windows.Forms.Label Label_Education;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton Button_Save;
+        private UC_Resume_Education UC_Resume_Education1;
+        private System.Windows.Forms.FlowLayoutPanel FlpExperience;
+        private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel6;
+        private System.Windows.Forms.Label Label_JobExperience;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton KryptonButton1;
+        private UC_Resume_Experience UC_Resume_Experience1;
+        private System.Windows.Forms.FlowLayoutPanel FlpCC;
+        private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanel8;
+        private System.Windows.Forms.Label Label_Certificate;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton KryptonButton2;
+        private UC_Resume_Certificate UC_Resume_Certificate1;*/
     }
 }

@@ -194,14 +194,14 @@ namespace Job_Application_Management
         private void btnRegisterCV_Click(object sender, EventArgs e)
         {
             
-            FCandidate_CreateCV fEmployer = new FCandidate_CreateCV();
-            fEmployer.ShowDialog();
+            FCandidate_CreateCV createCV = new FCandidate_CreateCV();
+            createCV.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FEmployer_CandidateDetail submit = new FEmployer_CandidateDetail();
-            submit.ShowDialog();
+            FResume resume = new FResume();
+            resume.ShowDialog();
         }
     }
 }
