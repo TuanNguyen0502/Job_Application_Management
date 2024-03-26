@@ -24,7 +24,7 @@ namespace Job_Application_Management
         public void SaveInfor(Employer employer)
         {
             string sqlStr = string.Format($"UPDATE Employers SET EmpEmail = '{employer.Email}', EmpName = N'{employer.Name}', Sex = N'{employer.Sex}', " +
-                $"Phone = '{employer.Phone}', Workplace = N'{employer.Workplace}', Company = N'{employer.Company}', CompanyAddress = N'{employer.Address}' " +
+                $"Phone = '{employer.Phone}', Workplace = N'{employer.Workplace}'" +
                 $"WHERE EmpID = '{employer.Id}'");
             Execute(sqlStr);
         }
