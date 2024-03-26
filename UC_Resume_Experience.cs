@@ -16,5 +16,29 @@ namespace Job_Application_Management
         {
             InitializeComponent();
         }
+        public System.Windows.Forms.Label Label1
+        {
+            get { return label1; }
+        }
+        public ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_End
+        {
+            get { return textBox_End; }
+        }
+        public ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_Start
+        {
+            get { return textBox_Start; }
+        }
+        public ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_Place
+        {
+            get { return textBox_Place; }
+        }
+        public ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_Compay
+        {
+            get { return textBox_Compay; }
+        }
+        public ComponentFactory.Krypton.Toolkit.KryptonRichTextBox RichTextBox_JobDetail
+        {
+            get { return richTextBox_JobDetail; }
+        }
     }
 }

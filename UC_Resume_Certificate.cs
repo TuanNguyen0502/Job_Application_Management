@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace Job_Application_Management
 {
@@ -15,6 +16,14 @@ namespace Job_Application_Management
         public UC_Resume_Certificate()
         {
             InitializeComponent();
+        }
+        public KryptonTextBox TextBox_CertificateName
+        {
+            get { return textBox_CertificateName; }
+        }
+        public KryptonDateTimePicker KryptonDateTimePicker1
+        {
+            get { return kryptonDateTimePicker1; }
         }
     }
 }
