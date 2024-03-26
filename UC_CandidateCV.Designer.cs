@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.label_Name = new System.Windows.Forms.Label();
-            this.label_Exp = new System.Windows.Forms.Label();
+            this.label_University = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_detail = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_delete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label_Major = new System.Windows.Forms.Label();
+            this.label_GPA = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,15 +50,15 @@
             this.label_Name.TabIndex = 0;
             this.label_Name.Text = "Candidate Name";
             // 
-            // label_Exp
+            // label_University
             // 
-            this.label_Exp.AutoSize = true;
-            this.label_Exp.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Exp.Location = new System.Drawing.Point(194, 56);
-            this.label_Exp.Name = "label_Exp";
-            this.label_Exp.Size = new System.Drawing.Size(165, 33);
-            this.label_Exp.TabIndex = 1;
-            this.label_Exp.Text = "Experience";
+            this.label_University.AutoSize = true;
+            this.label_University.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_University.Location = new System.Drawing.Point(194, 60);
+            this.label_University.Name = "label_University";
+            this.label_University.Size = new System.Drawing.Size(165, 33);
+            this.label_University.TabIndex = 1;
+            this.label_University.Text = "University";
             // 
             // panel1
             // 
@@ -96,12 +98,14 @@
             this.button_detail.StateCommon.Border.Width = 1;
             this.button_detail.TabIndex = 3;
             this.button_detail.Values.Text = "";
+            this.button_detail.Click += new System.EventHandler(this.button_detail_Click);
             // 
             // button_delete
             // 
             this.button_delete.Location = new System.Drawing.Point(1167, 128);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(100, 50);
+            this.button_delete.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_delete_24;
             this.button_delete.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.button_delete.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.button_delete.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -111,16 +115,39 @@
             this.button_delete.StateCommon.Border.Width = 1;
             this.button_delete.TabIndex = 4;
             this.button_delete.Values.Text = "";
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
+            // 
+            // label_Major
+            // 
+            this.label_Major.AutoSize = true;
+            this.label_Major.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Major.Location = new System.Drawing.Point(194, 104);
+            this.label_Major.Name = "label_Major";
+            this.label_Major.Size = new System.Drawing.Size(90, 33);
+            this.label_Major.TabIndex = 5;
+            this.label_Major.Text = "Major";
+            // 
+            // label_GPA
+            // 
+            this.label_GPA.AutoSize = true;
+            this.label_GPA.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_GPA.Location = new System.Drawing.Point(194, 148);
+            this.label_GPA.Name = "label_GPA";
+            this.label_GPA.Size = new System.Drawing.Size(60, 33);
+            this.label_GPA.TabIndex = 6;
+            this.label_GPA.Text = "GPA";
             // 
             // UC_CandidateCV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
+            this.Controls.Add(this.label_GPA);
+            this.Controls.Add(this.label_Major);
             this.Controls.Add(this.button_delete);
             this.Controls.Add(this.button_detail);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label_Exp);
+            this.Controls.Add(this.label_University);
             this.Controls.Add(this.label_Name);
             this.Name = "UC_CandidateCV";
             this.Padding = new System.Windows.Forms.Padding(10);
@@ -135,10 +162,12 @@
         #endregion
 
         private System.Windows.Forms.Label label_Name;
-        private System.Windows.Forms.Label label_Exp;
+        private System.Windows.Forms.Label label_University;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_detail;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_delete;
+        private System.Windows.Forms.Label label_Major;
+        private System.Windows.Forms.Label label_GPA;
     }
 }

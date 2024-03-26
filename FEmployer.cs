@@ -14,10 +14,12 @@ namespace Job_Application_Management
 {
     public partial class FEmployer : KryptonForm
     {
+        private string empID;
         private Form currentFormChild;
         
-        public FEmployer()
+        public FEmployer(string empID)
         {
+            this.empID = empID;
             InitializeComponent();
         }
 
@@ -40,12 +42,12 @@ namespace Job_Application_Management
 
         private void button_Information_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_Information());
+            OpenChildForm(new FEmployer_Information(empID));
         }
 
         private void button_PostJob_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_Job());
+            OpenChildForm(new FEmployer_Job(empID));
         }
 
         private void button_FindCandidate_Click(object sender, EventArgs e)

@@ -35,10 +35,7 @@
             this.button_Detail = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_Refuse = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.uC_CandidateCV1 = new Job_Application_Management.UC_CandidateCV();
-            this.uC_CandidateCV2 = new Job_Application_Management.UC_CandidateCV();
             this.flowLayoutPanel_Top.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -258,32 +255,12 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.uC_CandidateCV1);
-            this.flowLayoutPanel1.Controls.Add(this.uC_CandidateCV2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1278, 748);
             this.flowLayoutPanel1.TabIndex = 4;
-            // 
-            // uC_CandidateCV1
-            // 
-            this.uC_CandidateCV1.BackColor = System.Drawing.Color.Wheat;
-            this.uC_CandidateCV1.Location = new System.Drawing.Point(13, 13);
-            this.uC_CandidateCV1.Name = "uC_CandidateCV1";
-            this.uC_CandidateCV1.Padding = new System.Windows.Forms.Padding(10);
-            this.uC_CandidateCV1.Size = new System.Drawing.Size(1280, 191);
-            this.uC_CandidateCV1.TabIndex = 0;
-            // 
-            // uC_CandidateCV2
-            // 
-            this.uC_CandidateCV2.BackColor = System.Drawing.Color.Wheat;
-            this.uC_CandidateCV2.Location = new System.Drawing.Point(13, 210);
-            this.uC_CandidateCV2.Name = "uC_CandidateCV2";
-            this.uC_CandidateCV2.Padding = new System.Windows.Forms.Padding(10);
-            this.uC_CandidateCV2.Size = new System.Drawing.Size(1280, 191);
-            this.uC_CandidateCV2.TabIndex = 1;
             // 
             // FEmployer_ApprovedCandidate
             // 
@@ -299,7 +276,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Approved Candidate";
             this.flowLayoutPanel_Top.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -311,7 +287,5 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_Detail;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_Refuse;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private UC_CandidateCV uC_CandidateCV1;
-        private UC_CandidateCV uC_CandidateCV2;
     }
 }
