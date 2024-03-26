@@ -36,7 +36,7 @@ CREATE TABLE Jobs(
 	Benefit text,
 	RequestCdd text,
 	PostTime datetime,
-	EmpID varchar(10) CONSTRAINT FK_EmpID FOREIGN KEY REFERENCES Employers(EmpID)
+	EmpID varchar(10) CONSTRAINT FK_EmpID FOREIGN KEY REFERENCES Employers(ID)
 )
 CREATE TABLE Education(
 	UniversityName nvarchar(100) PRIMARY KEY,
@@ -58,7 +58,7 @@ CREATE TABLE Certification(
 )
 CREATE TABLE Resume(
 	CddID varchar(10) CONSTRAINT FK_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
-	JobID varchar(10) CONSTRAINT FK_Job FOREIGN KEY REFERENCES Jobs(JobID),
+	JobID varchar(10) CONSTRAINT FK_Job FOREIGN KEY REFERENCES Jobs(ID),
 	Objective text,
 	UniversityName nvarchar(100),
 	Major nvarchar(100),
@@ -74,21 +74,25 @@ CREATE TABLE Resume(
 	CertificationDate datetime,
 	CONSTRAINT PK_AD PRIMARY KEY (CddID, JobID)
 )
+-- Tạo bảng Saved Jobs
+CREATE TABLE SavedJobs(
+	ID int IDENTITY primary key,
+	TimeSaved date,
+	JobID varchar(10) FOREIGN KEY REFERENCES Jobs(ID) 
+)
+
+
 -- Dữ liệu cho bảng Candidates
 INSERT INTO Candidates (CddID, CddName, Phone, Email, CddAddress, Hometown, Sex, Education)
 VALUES 
 ('CDD001', N'Nguyễn Văn A', '1234567890', 'nguyenvana@example.com', '123 ABC Street', N'Hà Nội', N'Nam', 'Bachelor of Science in Computer Science'),
 ('CDD002', N'Trần Thị B', '0987654321', 'tranthib@example.com', '456 XYZ Street', N'Hồ Chí Minh City', N'Nữ', 'Master of Business Administration'),
 ('CDD003', N'Phạm Văn C', '0123456789', 'phamvanc@example.com', '789 DEF Street', N'Đà Nẵng', N'Nam', 'Bachelor of Arts in English');
-
---
 INSERT INTO Company (ID, Name, Address, Manager, TaxCode, BusinessLicense)
-VALUES ('C001', 'Công ty ABC', '123 Đống Đa, Hà Nội', 'Miss.An', '123456789', 'BL-001');
-
+VALUES ('C001', N'Công ty ABC', N'123 Đống Đa, Hà Nội', N'Miss.An', '123456789', 'BL-001');
 -- Dữ liệu cho bảng Employeers
 INSERT INTO Employers (ID, Email, Name, Sex, Phone, Workplace, CompanyID)
-VALUES ('E001', '22110260@student.hcmute.edu.vn', 'Tuấn', 'Nam', '0705488458', 'Giám đốc', 'C001');
-
+VALUES ('E001', '22110260@student.hcmute.edu.vn', N'Tuấn', N'Nam', '0705488458', N'Giám đốc', 'C001');
 -- Dữ liệu cho bảng Jobs
 -- Job 1
 INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
@@ -99,14 +103,26 @@ VALUES ('J002', 'Marketing Specialist', 60000, 'Plan and execute marketing campa
 -- Job 3
 INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
 VALUES ('J003', 'HR Manager', 70000, 'Oversee all aspects of human resources functions.', 40, '5+ years in HR management', '2024-04-30', 'Health insurance, Retirement plan', 'Bachelors degree in Human Resources or related field', '2024-03-26', 'E001');
-
 -- Dữ liệu cho bảng Resume
 INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate)
 VALUES 
-('CDD001', 'J001', 'Seeking a Software Engineer position to apply my skills in software development and contribute to the success of innovative projects at ABC Corporation.', 'Tech University', 'Computer Science', '3.7', '2018-09-01', '2022-06-01', 'Software Solutions Inc.', 'Hanoi, Vietnam', 'Developed scalable web applications using Python and Django framework.', '2022-07-01', '2023-12-31', 'AWS Certified Developer - Associate', '2024-01-15');
+('CDD001', 'J001', N'Seeking a Software Engineer position to apply my skills in software development and contribute to the success of innovative projects at ABC Corporation.', N'Tech University', N'Computer Science', '3.7', '2018-09-01', '2022-06-01', N'Software Solutions Inc.', N'Hanoi, Vietnam', N'Developed scalable web applications using Python and Django framework.', '2022-07-01', '2023-12-31', N'AWS Certified Developer - Associate', '2024-01-15');
 INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate)
 VALUES 
-('CDD001', 'J002', 'Results-driven Marketing Specialist with a passion for creating impactful campaigns. Seeking to leverage my expertise in digital marketing at ABC Corporation.', 'Marketing Academy', 'Marketing Management', '3.8', '2017-08-01', '2021-05-01', 'Digital Marketing Agency', 'Cityville, USA', 'Led successful social media campaigns resulting in a 20% increase in user engagement.', '2021-06-15', '2023-03-31', 'HubSpot Content Marketing Certification', '2023-06-20');
+('CDD001', 'J002', N'Results-driven Marketing Specialist with a passion for creating impactful campaigns. Seeking to leverage my expertise in digital marketing at ABC Corporation.', N'Marketing Academy', N'Marketing Management', '3.8', '2017-08-01', '2021-05-01', N'Digital Marketing Agency', N'Cityville, USA', N'Led successful social media campaigns resulting in a 20% increase in user engagement.', '2021-06-15', '2023-03-31', N'HubSpot Content Marketing Certification', '2023-06-20');
 INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate)
 VALUES 
-('CDD001', 'J003', 'Experienced HR professional with a proven track record of managing diverse teams. Seeking a challenging role as an HR Manager at ABC Corporation.', 'University of HR Management', 'Human Resources', '3.9', '2015-09-01', '2019-06-01', 'HR Solutions Inc.', 'Hanoi, Vietnam', 'Managed recruitment processes and employee relations.', '2019-07-15', '2022-02-28', 'PHR Certification', '2023-05-10');
+('CDD001', 'J003', N'Experienced HR professional with a proven track record of managing diverse teams. Seeking a challenging role as an HR Manager at ABC Corporation.', N'University of HR Management', N'Human Resources', '3.9', '2015-09-01', '2019-06-01', N'HR Solutions Inc.', N'Hanoi, Vietnam', N'Managed recruitment processes and employee relations.', '2019-07-15', '2022-02-28', N'PHR Certification', '2023-05-10');
+
+SELECT j.ID, j.Name as JobName, c.Name as CompanyName, j.Salary, c.Address 
+FROM Jobs as j 
+JOIN Employers as e ON j.EmpID = e.ID
+JOIN Company as c ON e.CompanyID = c.ID
+
+SELECT * FROM SavedJobs
+
+SELECT j.JobDecription, c.Name, sj.TimeSaved, c.Address, j.Salary
+FROM SavedJobs sj
+JOIN Jobs j ON sj.JobID = j.ID
+JOIN Employers e ON j.EmpID = e.ID
+JOIN Company c ON c.ID = e.CompanyID

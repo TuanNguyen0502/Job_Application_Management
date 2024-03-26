@@ -80,8 +80,8 @@ namespace Job_Application_Management
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                sqlQuery = "INSERT INTO JobsSaved(TimeSaved, JobID) " +
-                    "VALUES(@times,@jId)";
+                sqlQuery = "INSERT INTO SavedJobs(TimeSaved, JobID)" +
+                            " VALUES(@times,@jId)";
                 SqlCommand cmd = new SqlCommand(sqlQuery, conn);
                 SqlParameter[] lstParam =
                 {
@@ -89,7 +89,8 @@ namespace Job_Application_Management
                     new SqlParameter("@jId", SqlDbType.VarChar) { Value = JobID },
                 };
                 cmd.Parameters.AddRange(lstParam);
-                cmd.ExecuteNonQuery();
+                if (cmd.ExecuteNonQuery() > 0)
+                    MessageBox.Show("Luu thanh cong");
 
             }
         }
