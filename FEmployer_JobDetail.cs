@@ -65,8 +65,8 @@ namespace Job_Application_Management
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
                     conn.Open();
-                    sqlQuery = $"SELECT JobID, JobName, Salary, JobDecription, Workduration, Experience, ExpirationDate, Benefit, RequestCdd " +
-                        $"FROM Jobs WHERE JobID = '{JobID}'";
+                    sqlQuery = $"SELECT ID, Name, Salary, JobDecription, Workduration, Experience, ExpirationDate, Benefit, RequestCdd, " +
+                        $"PostTime FROM Jobs WHERE ID = '{JobID}'";
                     SqlCommand cmd = new SqlCommand(sqlQuery, conn);
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.HasRows)

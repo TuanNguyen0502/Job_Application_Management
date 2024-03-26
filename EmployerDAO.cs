@@ -23,15 +23,14 @@ namespace Job_Application_Management
 
         public void SaveInfor(Employer employer)
         {
-            string sqlStr = string.Format($"UPDATE Employers SET EmpEmail = '{employer.Email}', EmpName = N'{employer.Name}', Sex = N'{employer.Sex}', " +
-                $"Phone = '{employer.Phone}', Workplace = N'{employer.Workplace}'" +
-                $"WHERE EmpID = '{employer.Id}'");
+            string sqlStr = string.Format($"UPDATE Employers SET Email = '{employer.Email}', Name = N'{employer.Name}', Sex = N'{employer.Sex}', " +
+                $"Phone = '{employer.Phone}', Workplace = N'{employer.Workplace}' WHERE ID = '{employer.Id}'");
             Execute(sqlStr);
         }
 
         public void AddJob(Job job)
         {
-            string sqlStr = string.Format($"INSERT INTO Jobs (JobID, JobName, Salary, CompanyName, WorkAddress, JobDecription, WorkDuration, " +
+            string sqlStr = string.Format($"INSERT INTO Jobs (ID, Name, Salary, CompanyName, WorkAddress, JobDecription, WorkDuration, " +
                 $"Experience, ExpirationDate, Benefit, RequestCdd, EmpID) VALUES ('{job.Id}', N'{job.Name}', '{job.Salary}', N'{job.Company}', " +
                 $"'{job.Address}', '{job.JobDescription}', '{job.WorkDuration}', '{job.Experience}', '{job.Deadline}', '{job.Benefit}', " +
                 $"'{job.Request}', '{job.EmpID}')");
@@ -58,15 +57,16 @@ namespace Job_Application_Management
 
         public List<UC_EmployerJob> GetJobsFromDB()
         {
-            string sqlQuery = "SELECT JobName, Salary, JobID FROM Jobs";
+            string sqlQuery = "SELECT Name, Salary, PostTime, ID FROM Jobs";
             List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
             List<UC_EmployerJob> items = new List<UC_EmployerJob>();
             foreach (var row in resultList)
             {
                 UC_EmployerJob item = new UC_EmployerJob();
-                item.Label_JobName.Text = (string)row["JobName"];
+                item.Label_JobName.Text = (string)row["Name"];
                 item.Label_Salary.Text += (string)row["Salary"].ToString();
-                item.JobID = (string)row["JobID"];
+                item.Label_PostedTime.Text = (string)row["PostTime"].ToString();
+                item.JobID = (string)row["ID"];
                 items.Add(item);
             }
             return items;
