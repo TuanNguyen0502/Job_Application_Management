@@ -91,10 +91,17 @@ VALUES
 --
 INSERT INTO Company (Name, Address, Manager, TaxCode, BusinessLicense)
 VALUES (N'Công ty ABC', N'123 Đống Đa, Hà Nội', N'Miss.An', '123456789', 'BL-001');
+INSERT INTO Company (Name, Address, Manager, TaxCode, BusinessLicense)
+VALUES (N'Công ty TNHH một mình tao', N'Gò Vấp, TP Hồ Chí Minh', N'Miss.An', '123456789', 'BL-002'),
+	   (N'Công ty Tâm Bình', N'Quận 9, TP Hồ Chí Minh', N'Miss.An', '123456789', 'BL-003'),
+	   (N'Công ty Nhân Tâm', N'Đà Nẵng', N'Miss.An', '123456789', 'BL-004');
 
 -- Dữ liệu cho bảng Employeers
-INSERT INTO Employers (ID, Email, Name, Sex, Phone, Workplace, CompanyID)
-VALUES ('E001', '22110260@student.hcmute.edu.vn', 'Tuấn', 'Nam', '0705488458', 'Giám đốc', 'C001');
+INSERT INTO Employers (ID, Email, Name, Sex, Phone, Workplace, CompanyName)
+VALUES ('E001', '22110260@student.hcmute.edu.vn', N'Tuấn', N'Nam', '0705488458', N'Giám đốc', N'Công ty ABC');
+INSERT INTO Employers (ID, Email, Name, Sex, Phone, Workplace, CompanyName)
+VALUES ('E002', '22110139@student.hcmute.edu.vn', N'Hiếu', N'Nam', '0705488458', N'Chủ tịch', N'Công ty TNHH một mình tao'),
+	   ('E003', '22110260@student.hcmute.edu.vn', N'Tuấn', N'Nam', '0705488458', N'Giám đốc', N'Công ty Nhân Tâm');
 
 -- Dữ liệu cho bảng Jobs
 -- Job 1
@@ -106,6 +113,11 @@ VALUES ('J002', 'Marketing Specialist', 60000, 'Plan and execute marketing campa
 -- Job 3
 INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
 VALUES ('J003', 'HR Manager', 70000, 'Oversee all aspects of human resources functions.', 40, '5+ years in HR management', '2024-04-30', 'Health insurance, Retirement plan', 'Bachelors degree in Human Resources or related field', '2024-03-26', 'E001');
+INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
+VALUES ('J004', 'Sale', 50000, 'Sale all products', 40, '1+ years in HR management', '2024-04-30', 'Health insurance, Retirement plan', 'Bachelors degree in Human Resources or related field', '2024-03-26', 'E002');
+INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
+VALUES ('J005', 'Digital Marketing', 100000, 'Do something.', 40, '3+ years in HR management', '2024-04-30', 'Health insurance, Retirement plan', 'Bachelors degree in Human Resources or related field', '2024-03-26', 'E003');
+
 -- Dữ liệu cho bảng Resume
 INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate)
 VALUES 

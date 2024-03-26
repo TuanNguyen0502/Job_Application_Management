@@ -63,7 +63,7 @@ namespace Job_Application_Management
         {
             string sqlStr = string.Format($"INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, " +
                 $"Benefit, RequestCdd, PostTime, EmpID) VALUES ('{job.Id}', N'{job.Name}', '{job.Salary}', " +
-                $"'{job.JobDescription}', '{job.WorkDuration}', '{job.Experience}', '{job.Deadline}', '{job.Benefit}', " +
+                $"'{job.JobDescription}', '{job.WorkDuration}', '{job.Experience}', '{job.Deadline.ToString("yyyy-MM-dd")}', '{job.Benefit}', " +
                 $"'{job.Request}', '{job.PostTime}', '{job.EmpID}')");
 
             Execute(sqlStr);
@@ -73,8 +73,8 @@ namespace Job_Application_Management
         {
             string sqlStr = string.Format($"UPDATE Jobs SET Name = '{job.Name}', Salary = '{job.Salary}', " +
                 $"JobDecription = '{job.JobDescription}', WorkDuration = '{job.WorkDuration}', " +
-                $"Experience = '{job.Experience}', ExpirationDate = '{job.Deadline}', Benefit = '{job.Benefit}', RequestCdd = '{job.Request}', " +
-                $"PostTime = '{job.PostTime}' WHERE ID = '{job.Id}'");
+                $"Experience = '{job.Experience}', ExpirationDate = '{job.Deadline.ToString("yyyy-MM-dd")}', Benefit = '{job.Benefit}', RequestCdd = '{job.Request}', " +
+                $"PostTime = '{job.PostTime.ToString("yyyy-MM-dd")}' WHERE ID = '{job.Id}'");
 
             Execute(sqlStr);
         }
@@ -95,8 +95,11 @@ namespace Job_Application_Management
             {
                 UC_EmployerJob item = new UC_EmployerJob(empID);
                 item.Label_JobName.Text = (string)row["Name"];
-                item.Label_Salary.Text += (string)row["Salary"].ToString();
-                item.Label_PostedTime.Text = (string)row["PostTime"].ToString();
+                item.Label_Salary.Text = row["Salary"].ToString();
+                //item.Label_PostedTime.Text = (string)row["PostTime"].ToString();
+                DateTime postTime = (DateTime)row["PostTime"];
+                string formattedPostTime = postTime.ToString("yyyy-MM-dd");
+                item.Label_PostedTime.Text = formattedPostTime;
                 item.JobID = (string)row["ID"];
                 items.Add(item);
             }

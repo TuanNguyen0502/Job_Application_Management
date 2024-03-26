@@ -21,7 +21,7 @@ namespace Job_Application_Management
             sqlQuery = "SELECT j.ID JobID, j.Name JobName, c.Name CompanyName, j.Salary, c.Address"
                         +" FROM Jobs j"
                         +" JOIN Employers e ON j.EmpID = e.ID"
-                        +" JOIN Company c ON e.CompanyID = c.ID";
+                        +" JOIN Company c ON e.CompanyName = c.Name";
             List<Dictionary<string,object>> resultList = dbConn.ExecuteReaderData(sqlQuery);
             List<UC_CandidateMain> items = new List<UC_CandidateMain>();
             foreach(var row in resultList)
@@ -41,7 +41,7 @@ namespace Job_Application_Management
             sqlQuery = "SELECT j.ID JobID, j.Name JobName, c.Name CompanyName, j.Salary, c.Address"
                         +" FROM Jobs j"
                         +" JOIN Employers e ON j.EmpID = e.ID"
-                        +" JOIN Company c ON e.CompanyID = c.ID"
+                        +" JOIN Company c ON e.CompanyName = c.Name"
                         +" WHERE c.Address LIKE N'%"+ address +"%'";
             List<Dictionary<string, object>> resultList = dbConn.ExecuteReaderData(sqlQuery);
             List<UC_CandidateMain> items = new List<UC_CandidateMain>();
@@ -62,7 +62,7 @@ namespace Job_Application_Management
             sqlQuery = "SELECT j.ID JobID, j.Name JobName, c.Name CompanyName, j.Salary, c.Address"
                         +" FROM Jobs j"
                         +" JOIN Employers e ON j.EmpID = e.ID"
-                        +" JOIN Company c ON e.CompanyID = c.ID" 
+                        +" JOIN Company c ON e.CompanyName = c.Name" 
                         +" WHERE c.Address LIKE N'%"+ keyword +"%'"
                         +" OR j.Name LIKE N'%"+ keyword +"%'" 
                         +" OR c.Name LIKE N'%"+ keyword +"%'" 
@@ -87,7 +87,7 @@ namespace Job_Application_Management
                        +" FROM SavedJobs sj"
                        +" JOIN Jobs j ON sj.JobID = j.ID"
                        +" JOIN Employers e ON j.EmpID = e.ID"
-                       +" JOIN Company c ON c.ID = e.CompanyID";
+                       +" JOIN Company c ON c.Name = e.CompanyName";
             List<Dictionary<string, object>> keyValueSavedJobs = dbConn.ExecuteReaderData(sqlQuery);
             List<UC_JobsSaved> saveds = new List<UC_JobsSaved>();
             foreach (var row in keyValueSavedJobs)
@@ -107,9 +107,8 @@ namespace Job_Application_Management
             sqlQuery = "SELECT j.Name JobName, c.Name CompanyName, j.Salary, c.Address, j.Experience"
                         +" FROM Jobs j"
                         +" JOIN Employers e ON j.EmpID = e.ID"
-                        +" JOIN Company c ON e.CompanyID = c.ID"
+                        +" JOIN Company c ON e.CompanyName = c.Name"
                         +" WHERE j.ID = @jobId";
-            //sqlQuery = "SELECT JobName, WorkAddress, Salary, Experience, CompanyName FROM Jobs WHERE JobID = @jobId";
             SqlParameter[] lstParam =
             {
                 new SqlParameter("@jobId", SqlDbType.VarChar) {Value = jobid},

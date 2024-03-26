@@ -60,7 +60,6 @@ namespace Job_Application_Management
 
             toolTipMain.ShowAlways = true;
 
-            toolTipMain.SetToolTip(this.btnExit, "Thoát");
             toolTipMain.SetToolTip(this.btnSearchJob, "Tìm việc");
             toolTipMain.SetToolTip(this.btnJobApp, "Chuột phải để chọn chức năng");
             toolTipMain.SetToolTip(this.btnCompanies, "Chuột phải để chọn chức năng");
