@@ -8,6 +8,8 @@ using System.Data.SqlClient;
 
 namespace Job_Application_Management
 {
+    // Các lớp đối tượng truy cập dữ liệu. cung cấp đối tượng tại nhiều lớp khác nhau cho phép gọi dữ liệu đã xây 
+    // dựng trước đó
     public class CandidateDAO
     {
         DBConnection dbConn;
