@@ -33,8 +33,7 @@ namespace Job_Application_Management
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                sqlQuery = "SELECT EmpID, EmpEmail, EmpName, Sex, Phone, Workplace, " +
-                    "Company, CompanyAddress FROM Employers WHERE EmpID = 'EMP001'";
+                sqlQuery = "SELECT ID, Email, Name, Sex, Phone, Workplace FROM Employers WHERE ID = 'E001'";
                 SqlCommand cmd = new SqlCommand(sqlQuery, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
@@ -56,8 +55,6 @@ namespace Job_Application_Management
                         //
                         textBox_PhoneNumber.Text = reader.GetString(4);
                         comboBox_Workplace.Text = reader.GetString(5);
-                        textBox_CompanyName.Text = reader.GetString(6);
-                        richTextBox_Address.Text = reader.GetString(7);
                     }
                 }
                 else
@@ -81,8 +78,7 @@ namespace Job_Application_Management
             {
                 sex = "Nữ";
             }
-            Employer employer = new Employer("EMP001", textBox_Name.Text, textBox_Email.Text, textBox_PhoneNumber.Text, sex, richTextBox_Address.Text,
-                comboBox_Workplace.SelectedText, textBox_CompanyName.Text);
+            Employer employer = new Employer("E001", textBox_Name.Text, textBox_Email.Text, textBox_PhoneNumber.Text, sex, comboBox_Workplace.SelectedText);
             return employer;
         }
     }

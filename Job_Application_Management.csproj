@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Candidate.cs" />
     <Compile Include="CandidateDAO.cs" />
+    <Compile Include="Company.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Employer.cs" />
     <Compile Include="EmployerDAO.cs" />

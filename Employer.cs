@@ -9,15 +9,15 @@ namespace Job_Application_Management
     public class Employer : Person
     {
         private string workplace;
-        private string company;
-        public Employer(string id, string name, string email, string phone, string sex, string address, string workplace, string company) 
-            : base(id, name, email, phone, sex, address)
+        private string companyName;
+        public Employer(string id, string name, string email, string phone, string sex, string workplace, string companyName) 
+            : base(id, name, email, phone, sex)
         {
             this.Workplace = workplace;
-            this.Company = company;
+            this.CompanyName = companyName;
         }
 
         public string Workplace { get => workplace; set => workplace = value; }
-        public string Company { get => company; set => company = value; }
+        public string CompanyName { get => companyName; set => companyName = value; }
     }
 }
