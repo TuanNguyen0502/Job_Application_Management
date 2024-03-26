@@ -36,7 +36,7 @@ CREATE TABLE Jobs(
 	Benefit text,
 	RequestCdd text,
 	PostTime datetime,
-	EmpID varchar(10) CONSTRAINT FK_EmpID FOREIGN KEY REFERENCES Employers(EmpID)
+	EmpID varchar(10) CONSTRAINT FK_EmpID FOREIGN KEY REFERENCES Employers(ID)
 )
 CREATE TABLE Education(
 	UniversityName nvarchar(100) PRIMARY KEY,
@@ -58,7 +58,7 @@ CREATE TABLE Certification(
 )
 CREATE TABLE Resume(
 	CddID varchar(10) CONSTRAINT FK_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
-	JobID varchar(10) CONSTRAINT FK_Job FOREIGN KEY REFERENCES Jobs(JobID),
+	JobID varchar(10) CONSTRAINT FK_Job FOREIGN KEY REFERENCES Jobs(ID),
 	Objective text,
 	UniversityName nvarchar(100),
 	Major nvarchar(100),
