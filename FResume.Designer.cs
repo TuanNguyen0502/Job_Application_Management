@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.uC_Resume1 = new Job_Application_Management.UC_Resume();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
@@ -42,7 +43,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1271, 840);
+            this.panel1.Size = new System.Drawing.Size(1430, 1050);
             this.panel1.TabIndex = 0;
             // 
             // uC_Resume1
@@ -52,7 +53,7 @@
             this.uC_Resume1.Location = new System.Drawing.Point(0, 0);
             this.uC_Resume1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_Resume1.Name = "uC_Resume1";
-            this.uC_Resume1.Size = new System.Drawing.Size(1271, 840);
+            this.uC_Resume1.Size = new System.Drawing.Size(1430, 1050);
             this.uC_Resume1.TabIndex = 0;
             // 
             // kryptonPalette1
@@ -78,10 +79,10 @@
             // 
             // FResume
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1271, 840);
+            this.ClientSize = new System.Drawing.Size(1430, 1050);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FResume";
@@ -90,6 +91,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resume";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -50,27 +50,5 @@ namespace Job_Application_Management
             UC_Resume_Certificate uC_Resume_Certificate = new UC_Resume_Certificate();
             flowLayoutPanel_Certificate.Controls.Add(uC_Resume_Certificate);
         }
-
-        private void button_AddSkill_Click(object sender, EventArgs e)
-        {
-            int ucHeight = 244;
-            int ucWidth = 1674;
-            // increase flow layout panel height
-            flowLayoutPanel_Skill.Size = new System.Drawing.Size(ucWidth, flowLayoutPanel_Skill.Height + ucHeight);
-            // add uc
-            UC_Resume_Skill uC_Resume_Skill = new UC_Resume_Skill();
-            flowLayoutPanel_Skill.Controls.Add(uC_Resume_Skill);
-        }
-
-        private void button_AddInterest_Click(object sender, EventArgs e)
-        {
-            int ucHeight = 244;
-            int ucWidth = 1674;
-            // increase flow layout panel height
-            flowLayoutPanel_Interest.Size = new System.Drawing.Size(ucWidth, flowLayoutPanel_Interest.Height + ucHeight);
-            // add uc
-            UC_Resume_Interest uC_Resume_Interest = new UC_Resume_Interest();
-            flowLayoutPanel_Interest.Controls.Add(uC_Resume_Interest);
-        }
     }
 }
