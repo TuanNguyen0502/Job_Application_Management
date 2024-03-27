@@ -64,7 +64,7 @@ namespace Job_Application_Management
             string sqlStr = string.Format($"INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, " +
                 $"Benefit, RequestCdd, PostTime, EmpID) VALUES ('{job.Id}', N'{job.Name}', '{job.Salary}', " +
                 $"'{job.JobDescription}', '{job.WorkDuration}', '{job.Experience}', '{job.Deadline.ToString("yyyy-MM-dd")}', '{job.Benefit}', " +
-                $"'{job.Request}', '{job.PostTime.ToString("yyyy-MM-dd")}', '{job.EmpID}')");
+                $"'{job.Request}', '{job.PostTime}', '{job.EmpID}')");
 
             Execute(sqlStr);
         }
