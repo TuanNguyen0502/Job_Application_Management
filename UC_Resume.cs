@@ -91,6 +91,10 @@ namespace Job_Application_Management
         {
             get { return uC_Resume_Experience1; }
         }
+        public string TextBox_JobID
+        {
+            get { return uC_Resume_Experience1.TextBox_JobID.Text; }
+        }
         public string TextBox_Compay
         {
             get { return uC_Resume_Experience1.TextBox_Compay.Text; }

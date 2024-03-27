@@ -51,12 +51,12 @@
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.label_JobExperience = new System.Windows.Forms.Label();
             this.button_AddExperience = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.uC_Resume_Experience1 = new Job_Application_Management.UC_Resume_Experience();
             this.flowLayoutPanel_Certificate = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.label_Certificate = new System.Windows.Forms.Label();
             this.button_AddCertification = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.uC_Resume_Certificate1 = new Job_Application_Management.UC_Resume_Certificate();
+            this.uC_Resume_Experience1 = new Job_Application_Management.UC_Resume_Experience();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -91,7 +91,7 @@
             this.label_CandidateName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_CandidateName.AutoSize = true;
             this.label_CandidateName.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold);
-            this.label_CandidateName.Location = new System.Drawing.Point(593, 8);
+            this.label_CandidateName.Location = new System.Drawing.Point(688, 11);
             this.label_CandidateName.Name = "label_CandidateName";
             this.label_CandidateName.Size = new System.Drawing.Size(239, 36);
             this.label_CandidateName.TabIndex = 0;
@@ -102,7 +102,7 @@
             this.label_Nominee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_Nominee.AutoSize = true;
             this.label_Nominee.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Nominee.Location = new System.Drawing.Point(619, 55);
+            this.label_Nominee.Location = new System.Drawing.Point(727, 69);
             this.label_Nominee.Name = "label_Nominee";
             this.label_Nominee.Size = new System.Drawing.Size(186, 23);
             this.label_Nominee.TabIndex = 1;
@@ -117,8 +117,7 @@
             this.flowLayoutPanel1.Controls.Add(this.textBox_Email);
             this.flowLayoutPanel1.Controls.Add(this.label_Address);
             this.flowLayoutPanel1.Controls.Add(this.textBox_Address);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(108, 90);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(157, 113);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1208, 58);
             this.flowLayoutPanel1.TabIndex = 2;
@@ -216,8 +215,8 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 158);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1425, 178);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(10);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1674, 223);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // label_CareerObjective
@@ -255,8 +254,8 @@
             this.flowLayoutPanel_Education.Location = new System.Drawing.Point(0, 336);
             this.flowLayoutPanel_Education.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel_Education.Name = "flowLayoutPanel_Education";
-            this.flowLayoutPanel_Education.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.flowLayoutPanel_Education.Size = new System.Drawing.Size(1425, 318);
+            this.flowLayoutPanel_Education.Padding = new System.Windows.Forms.Padding(10);
+            this.flowLayoutPanel_Education.Size = new System.Drawing.Size(1674, 396);
             this.flowLayoutPanel_Education.TabIndex = 3;
             // 
             // flowLayoutPanel4
@@ -359,11 +358,10 @@
             this.flowLayoutPanel_Experience.Controls.Add(this.uC_Resume_Experience1);
             this.flowLayoutPanel_Experience.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel_Experience.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel_Experience.Location = new System.Drawing.Point(0, 654);
-            this.flowLayoutPanel_Experience.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanel_Experience.Location = new System.Drawing.Point(0, 817);
             this.flowLayoutPanel_Experience.Name = "flowLayoutPanel_Experience";
-            this.flowLayoutPanel_Experience.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.flowLayoutPanel_Experience.Size = new System.Drawing.Size(1425, 393);
+            this.flowLayoutPanel_Experience.Padding = new System.Windows.Forms.Padding(10);
+            this.flowLayoutPanel_Experience.Size = new System.Drawing.Size(1674, 381);
             this.flowLayoutPanel_Experience.TabIndex = 4;
             // 
             // flowLayoutPanel6
@@ -453,11 +451,10 @@
             // 
             // uC_Resume_Experience1
             // 
-            this.uC_Resume_Experience1.Location = new System.Drawing.Point(12, 64);
-            this.uC_Resume_Experience1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_Resume_Experience1.Location = new System.Drawing.Point(13, 81);
             this.uC_Resume_Experience1.Name = "uC_Resume_Experience1";
-            this.uC_Resume_Experience1.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.uC_Resume_Experience1.Size = new System.Drawing.Size(1149, 307);
+            this.uC_Resume_Experience1.Padding = new System.Windows.Forms.Padding(10);
+            this.uC_Resume_Experience1.Size = new System.Drawing.Size(1293, 284);
             this.uC_Resume_Experience1.TabIndex = 2;
             // 
             // flowLayoutPanel_Certificate
@@ -466,11 +463,10 @@
             this.flowLayoutPanel_Certificate.Controls.Add(this.uC_Resume_Certificate1);
             this.flowLayoutPanel_Certificate.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel_Certificate.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel_Certificate.Location = new System.Drawing.Point(0, 1047);
-            this.flowLayoutPanel_Certificate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanel_Certificate.Location = new System.Drawing.Point(0, 1198);
             this.flowLayoutPanel_Certificate.Name = "flowLayoutPanel_Certificate";
-            this.flowLayoutPanel_Certificate.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.flowLayoutPanel_Certificate.Size = new System.Drawing.Size(1425, 158);
+            this.flowLayoutPanel_Certificate.Padding = new System.Windows.Forms.Padding(10);
+            this.flowLayoutPanel_Certificate.Size = new System.Drawing.Size(1674, 197);
             this.flowLayoutPanel_Certificate.TabIndex = 5;
             // 
             // flowLayoutPanel8
@@ -567,6 +563,15 @@
             this.uC_Resume_Certificate1.Size = new System.Drawing.Size(1146, 70);
             this.uC_Resume_Certificate1.TabIndex = 2;
             // 
+            // uC_Resume_Experience1
+            // 
+            this.uC_Resume_Experience1.Location = new System.Drawing.Point(12, 64);
+            this.uC_Resume_Experience1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_Resume_Experience1.Name = "uC_Resume_Experience1";
+            this.uC_Resume_Experience1.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.uC_Resume_Experience1.Size = new System.Drawing.Size(1149, 294);
+            this.uC_Resume_Experience1.TabIndex = 2;
+            // 
             // UC_Resume
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -579,7 +584,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_Resume";
-            this.Size = new System.Drawing.Size(1425, 1158);
+            this.Size = new System.Drawing.Size(1674, 1447);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -623,11 +628,11 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.Label label_JobExperience;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_AddExperience;
-        private UC_Resume_Experience uC_Resume_Experience1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Certificate;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
         private System.Windows.Forms.Label label_Certificate;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_AddCertification;
         private UC_Resume_Certificate uC_Resume_Certificate1;
+        private UC_Resume_Experience uC_Resume_Experience1;
     }
 }

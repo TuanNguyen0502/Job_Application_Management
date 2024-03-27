@@ -90,7 +90,7 @@
             this.textBox_Place.StateCommon.Border.Width = 1;
             this.textBox_Place.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Place.TabIndex = 7;
-            this.textBox_Place.Text = "Vi tri lam viec";
+            this.textBox_Place.Text = "Vị trí làm việc";
             // 
             // textBox_Compay
             // 
@@ -105,12 +105,11 @@
             this.textBox_Compay.StateCommon.Border.Width = 1;
             this.textBox_Compay.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Compay.TabIndex = 6;
-            this.textBox_Compay.Text = "Ten cong ty";
+            this.textBox_Compay.Text = "Tên công ty";
             // 
             // richTextBox_JobDetail
             // 
-            this.richTextBox_JobDetail.Location = new System.Drawing.Point(12, 163);
-            this.richTextBox_JobDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox_JobDetail.Location = new System.Drawing.Point(15, 140);
             this.richTextBox_JobDetail.Name = "richTextBox_JobDetail";
             this.richTextBox_JobDetail.Size = new System.Drawing.Size(1122, 110);
             this.richTextBox_JobDetail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -120,7 +119,22 @@
             this.richTextBox_JobDetail.StateCommon.Border.Width = 1;
             this.richTextBox_JobDetail.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_JobDetail.TabIndex = 11;
-            this.richTextBox_JobDetail.Text = "Mo ta qua trinh lam viec hoac thanh tich";
+            this.richTextBox_JobDetail.Text = "Mô tả quá trình làm việc hoặc thành tích";
+            // 
+            // textBox_JobID
+            // 
+            this.textBox_JobID.Location = new System.Drawing.Point(15, 10);
+            this.textBox_JobID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_JobID.Name = "textBox_JobID";
+            this.textBox_JobID.Size = new System.Drawing.Size(827, 47);
+            this.textBox_JobID.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.textBox_JobID.StateCommon.Border.Rounding = 20;
+            this.textBox_JobID.StateCommon.Border.Width = 1;
+            this.textBox_JobID.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_JobID.TabIndex = 12;
+            this.textBox_JobID.Text = "Mã công ty";
             // 
             // textBox_JobID
             // 
@@ -150,8 +164,8 @@
             this.Controls.Add(this.textBox_Compay);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_Resume_Experience";
-            this.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.Size = new System.Drawing.Size(1149, 283);
+            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Size = new System.Drawing.Size(1293, 300);
             this.ResumeLayout(false);
             this.PerformLayout();
 

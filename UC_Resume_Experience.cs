@@ -36,6 +36,10 @@ namespace Job_Application_Management
         {
             get { return textBox_Compay; }
         }
+        public ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_JobID
+        {
+            get { return textBox_JobID; }
+        }
         public ComponentFactory.Krypton.Toolkit.KryptonRichTextBox RichTextBox_JobDetail
         {
             get { return richTextBox_JobDetail; }

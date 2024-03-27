@@ -26,7 +26,7 @@ namespace Job_Application_Management
                     SqlCommand cmd = new SqlCommand(sqlStr, conn);
                     cmd.Parameters.AddRange(lstParam);
                     if (cmd.ExecuteNonQuery() > 0)
-                        MessageBox.Show("Successful !");
+                        MessageBox.Show("Write data successful !");
                 }
                 catch (Exception ex)
                 {

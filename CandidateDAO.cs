@@ -118,5 +118,27 @@ namespace Job_Application_Management
             List<Dictionary<string, object>> keyValueJobDetails = dbConn.ExecuteReaderData(sqlQuery, lstParam);
             return keyValueJobDetails;
         }
+        public void SaveCVToDatabase(CV cv)
+        {
+            sqlQuery = "INSERT INTO Resume                              (CddID,JobID,Objective,UniversityName,Major,UniversityStartDate," 
+                + "UniversityEndDate,CompanyName,WorkPlace,"
+                + "CertificationName,CertificationDate)"
+              +" VALUE(@cddId,@jobId,@obj,@un,@major,@usd,@ued,@company,@workplace,@cername,@cerdate)";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@cddId", SqlDbType.VarChar) {Value = cv.CddID},
+                new SqlParameter("@jobId", SqlDbType.VarChar) {Value = cv.JobID},
+                new SqlParameter("@obj", SqlDbType.Text) {Value = cv.CareerGoal},
+                new SqlParameter("@un", SqlDbType.NVarChar) {Value = cv.USchool},
+                new SqlParameter("@major", SqlDbType.NVarChar) {Value = cv.Major},
+                new SqlParameter("@usd", SqlDbType.DateTime) {Value = cv.StartDate},
+                new SqlParameter("@ued", SqlDbType.DateTime) {Value = cv.EndDate},
+                new SqlParameter("@company", SqlDbType.NVarChar) {Value = cv.WorkedCompanyName},
+                new SqlParameter("@workplace", SqlDbType.NVarChar) {Value = cv.WorkedWorkPlace},
+                new SqlParameter("@cername", SqlDbType.NVarChar) {Value = cv.Certificate},
+                new SqlParameter("@cerdate", SqlDbType.DateTime) {Value = cv.TimeCertificate},
+            };
+            dbConn.ExecuteWriteData(sqlQuery, lstParams);
+        }
     }
 }
