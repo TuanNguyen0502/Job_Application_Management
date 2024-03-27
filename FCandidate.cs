@@ -192,7 +192,7 @@ namespace Job_Application_Management
 
         private void btnRegisterCV_Click(object sender, EventArgs e)
         {
-            FCandidate_CreateCV createCV = new FCandidate_CreateCV();
+            FCandidate_CreateCV createCV = new FCandidate_CreateCV(lblCddID.Text);
             createCV.ShowDialog();
         }
 

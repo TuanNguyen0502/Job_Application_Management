@@ -37,7 +37,7 @@
             this.btnJobApp = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCddID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
@@ -173,7 +173,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblCddID);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -183,16 +183,16 @@
             this.panel2.Size = new System.Drawing.Size(213, 180);
             this.panel2.TabIndex = 0;
             // 
-            // label2
+            // lblCddID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label2.Location = new System.Drawing.Point(75, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "NV001";
+            this.lblCddID.AutoSize = true;
+            this.lblCddID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCddID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.lblCddID.Location = new System.Drawing.Point(68, 142);
+            this.lblCddID.Name = "lblCddID";
+            this.lblCddID.Size = new System.Drawing.Size(68, 15);
+            this.lblCddID.TabIndex = 2;
+            this.lblCddID.Text = "CDD0001";
             // 
             // label1
             // 
@@ -444,7 +444,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCddID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Button btnLogout;
