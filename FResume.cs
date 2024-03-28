@@ -20,6 +20,8 @@ namespace Job_Application_Management
             this.jobID = jobID;
             this.cddID = cddID;
             InitializeComponent();
+            uC_Resume1.JobID = jobID;
+            uC_Resume1.CddID = cddID;
         }
         public FResume()
         {

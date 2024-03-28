@@ -13,6 +13,9 @@ namespace Job_Application_Management
 {
     public partial class UC_Resume : UserControl
     {
+        private string jobID;
+        private string cddID;
+
         public UC_Resume()
         {
             InitializeComponent();
@@ -103,14 +106,6 @@ namespace Job_Application_Management
         {
             get { return uC_Resume_Experience1.TextBox_Place.Text; }
         }
-        public string TextBox_Start_Exp
-        {
-            get { return uC_Resume_Experience1.TextBox_Start.Text; }
-        }
-        public string TextBox_End_Exp
-        {
-            get { return uC_Resume_Experience1.TextBox_End.Text; }
-        }
         public UserControl UC_Resume_Certificate1
         {
             get { return uC_Resume_Certificate1; }
@@ -134,6 +129,19 @@ namespace Job_Application_Management
         public string TextBox_Address
         {
             get { return textBox_Address.Text; }
+        }
+
+        public string JobID { get => jobID; set => jobID = value; }
+        public string CddID { get => cddID; set => cddID = value; }
+
+        private void UC_Resume_Load(object sender, EventArgs e)
+        {
+            LoadInfor();
+        }
+
+        private void LoadInfor()
+        {
+
         }
     }
 }

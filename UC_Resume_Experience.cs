@@ -20,14 +20,6 @@ namespace Job_Application_Management
         {
             get { return label1; }
         }
-        public ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_End
-        {
-            get { return textBox_End; }
-        }
-        public ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_Start
-        {
-            get { return textBox_Start; }
-        }
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_Place
         {
             get { return textBox_Place; }

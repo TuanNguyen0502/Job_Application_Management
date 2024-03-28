@@ -36,7 +36,7 @@
             // 
             this.textBox_CertificateName.Location = new System.Drawing.Point(13, 13);
             this.textBox_CertificateName.Name = "textBox_CertificateName";
-            this.textBox_CertificateName.Size = new System.Drawing.Size(930, 52);
+            this.textBox_CertificateName.Size = new System.Drawing.Size(1187, 52);
             this.textBox_CertificateName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -49,7 +49,7 @@
             // kryptonDateTimePicker1
             // 
             this.kryptonDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(1037, 13);
+            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(1248, 15);
             this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
             this.kryptonDateTimePicker1.Size = new System.Drawing.Size(239, 50);
             this.kryptonDateTimePicker1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -68,7 +68,7 @@
             this.Controls.Add(this.textBox_CertificateName);
             this.Name = "UC_Resume_Certificate";
             this.Padding = new System.Windows.Forms.Padding(10);
-            this.Size = new System.Drawing.Size(1289, 88);
+            this.Size = new System.Drawing.Size(1500, 88);
             this.ResumeLayout(false);
             this.PerformLayout();
 

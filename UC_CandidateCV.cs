@@ -39,7 +39,7 @@ namespace Job_Application_Management
             }
 
             currentFormChild = childForm;
-            childForm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            childForm.FormBorderStyle = FormBorderStyle.FixedSingle;
             childForm.StartPosition = FormStartPosition.CenterScreen;
             childForm.BringToFront();
             childForm.Show();
