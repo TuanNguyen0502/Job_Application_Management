@@ -22,6 +22,7 @@ namespace Job_Application_Management
             TaxCode = taxCode;
             BusinessLicense = businessLicense;
         }
+        public Company() { }
 
         public string Name { get => name; set => name = value; }
         public string Address { get => address; set => address = value; }

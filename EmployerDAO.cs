@@ -24,6 +24,32 @@ namespace Job_Application_Management
             dbConnection.ExecuteWriteData(sqlStr);
         }
 
+        public Company GetCompanyFromDB(string companyName)
+        {
+            Company company = new Company();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sqlQuery = $"SELECT Name, Address, Manager, TaxCode, BusinessLicense FROM Company WHERE Name = '{companyName}'";
+                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        company.Name = reader.GetString(0);
+                        company.Address = reader.GetString(1);
+                        company.Manager = reader.GetString(2);
+                        company.TaxCode = reader.GetString(3);
+                        company.BusinessLicense = reader.GetString(4);
+                    }
+                }
+                else
+                    MessageBox.Show("No rows found");
+            }
+            return company;
+        }
+
         public Employer GetEmployerFromDB(string empID)
         {
             Employer employer = new Employer();
@@ -52,7 +78,15 @@ namespace Job_Application_Management
             return employer;
         }
 
-        public void SaveInfor(Employer employer)
+        public void SaveCompanyInfor(Company company)
+        {
+            string sqlStr = string.Format($"UPDATE Company SET Address = N'{company.Address}', " +
+                $"Manager = N'{company.Manager}', TaxCode = '{company.TaxCode}', BusinessLicense = '{company.BusinessLicense}' " +
+                $"WHERE Name = '{company.Name}'");
+            Execute(sqlStr);
+        }
+
+        public void SaveEmployerInfor(Employer employer)
         {
             string sqlStr = string.Format($"UPDATE Employers SET Email = '{employer.Email}', Name = N'{employer.Name}', Sex = N'{employer.Sex}', " +
                 $"Phone = '{employer.Phone}', Workplace = N'{employer.Workplace}' WHERE ID = '{employer.Id}'");
