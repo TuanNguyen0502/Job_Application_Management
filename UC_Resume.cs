@@ -15,9 +15,12 @@ namespace Job_Application_Management
     {
         private string jobID;
         private string cddID;
+        private CV resume;
+        private EmployerDAO employerDAO;
 
         public UC_Resume()
         {
+            employerDAO = new EmployerDAO();
             InitializeComponent();
         }
 
@@ -53,6 +56,7 @@ namespace Job_Application_Management
             UC_Resume_Certificate uC_Resume_Certificate = new UC_Resume_Certificate();
             flowLayoutPanel_Certificate.Controls.Add(uC_Resume_Certificate);
         }
+        
         public string RichTextBox_CareerObjective
         {
             get { return richTextBox_CareerObjective.Text; }
@@ -141,7 +145,46 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
+            resume = employerDAO.GetResumeFromDB(jobID, cddID);
 
+            label_CandidateName.Text = resume.CddName;
+            label_Nominee.Text = resume.JobName;
+            textBox_Phone.Text = resume.CddPhone;
+            textBox_Email.Text = resume.CddEmail;
+            textBox_Address.Text = resume.CddAddress;
+            richTextBox_CareerObjective.Text = resume.CareerGoal;
+            uC_Resume_Education1.TextBox_School.Text = resume.UniversityName;
+            uC_Resume_Education1.TextBox_Major.Text = resume.Major;
+            uC_Resume_Education1.RichTextBox_EducationDetail.Text = resume.Gpa;
+            uC_Resume_Education1.DateTimePicker_Start.Value = resume.UniversityStartDate;
+            uC_Resume_Education1.DateTimePicker_End.Value = resume.UniversityEndDate;
+            uC_Resume_Experience1.TextBox_Compay.Text = resume.WorkedCompanyName;
+            uC_Resume_Experience1.TextBox_Place.Text = resume.WorkedWorkPlace;
+            uC_Resume_Experience1.RichTextBox_JobDetail.Text = resume.WorkedDetail;
+            uC_Resume_Experience1.DateTimePicker_Start.Value = resume.CompanyStartDate;
+            uC_Resume_Experience1.DateTimePicker_End.Value = resume.CompanyEndDate;
+            uC_Resume_Certificate1.TextBox_CertificateName.Text = resume.Certificate;
+            uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
+        }
+
+        public void ReadOnlyControls()
+        {
+            textBox_Phone.ReadOnly = true;
+            textBox_Email.ReadOnly = true;
+            textBox_Address.ReadOnly = true;
+            richTextBox_CareerObjective.ReadOnly = true;
+            uC_Resume_Education1.TextBox_School.ReadOnly = true;
+            uC_Resume_Education1.TextBox_Major.ReadOnly = true;
+            uC_Resume_Education1.RichTextBox_EducationDetail.ReadOnly = true;
+            //uC_Resume_Education1.DateTimePicker_Start.
+            //uC_Resume_Education1.DateTimePicker_End.Value = resume.UniversityEndDate;
+            uC_Resume_Experience1.TextBox_Compay.ReadOnly = true;
+            uC_Resume_Experience1.TextBox_Place.ReadOnly = true;
+            uC_Resume_Experience1.RichTextBox_JobDetail.ReadOnly = true;
+            //uC_Resume_Experience1.DateTimePicker_Start.Value = resume.CompanyStartDate;
+            //uC_Resume_Experience1.DateTimePicker_End.Value = resume.CompanyEndDate;
+            uC_Resume_Certificate1.TextBox_CertificateName.ReadOnly = true;
+            //uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
         }
     }
 }

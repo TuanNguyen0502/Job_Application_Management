@@ -48,6 +48,7 @@ namespace Job_Application_Management
         private void button_detail_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FResume(jobID, CddID));
+            
         }
 
         private void button_delete_Click(object sender, EventArgs e)

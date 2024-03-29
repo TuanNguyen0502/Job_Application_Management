@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.textBox_CertificateName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonDateTimePicker1 = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.dateTimePicker = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.SuspendLayout();
             // 
             // textBox_CertificateName
@@ -46,25 +46,25 @@
             this.textBox_CertificateName.TabIndex = 1;
             this.textBox_CertificateName.Text = "Ten chung chi";
             // 
-            // kryptonDateTimePicker1
+            // dateTimePicker
             // 
-            this.kryptonDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(1248, 15);
-            this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
-            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(239, 50);
-            this.kryptonDateTimePicker1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker.Location = new System.Drawing.Point(1248, 15);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(239, 50);
+            this.dateTimePicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonDateTimePicker1.StateCommon.Border.Rounding = 20;
-            this.kryptonDateTimePicker1.StateCommon.Border.Width = 1;
-            this.kryptonDateTimePicker1.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonDateTimePicker1.TabIndex = 2;
+            this.dateTimePicker.StateCommon.Border.Rounding = 20;
+            this.dateTimePicker.StateCommon.Border.Width = 1;
+            this.dateTimePicker.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker.TabIndex = 2;
             // 
             // UC_Resume_Certificate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.kryptonDateTimePicker1);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.textBox_CertificateName);
             this.Name = "UC_Resume_Certificate";
             this.Padding = new System.Windows.Forms.Padding(10);
@@ -77,6 +77,6 @@
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_CertificateName;
-        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker kryptonDateTimePicker1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dateTimePicker;
     }
 }

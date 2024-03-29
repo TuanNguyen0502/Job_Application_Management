@@ -16,6 +16,17 @@ namespace Job_Application_Management
         {
             InitializeComponent();
         }
+
+        public ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker DateTimePicker_Start
+        {
+            get { return dateTimePicker_Start; }
+        }
+
+        public ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker DateTimePicker_End
+        {
+            get { return dateTimePicker_End; }
+        }
+
         public System.Windows.Forms.Label Label1
         {
             get { return label1; }
