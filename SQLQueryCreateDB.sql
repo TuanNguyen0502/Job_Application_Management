@@ -41,19 +41,19 @@ CREATE TABLE Education(
 	UniversityName nvarchar(100) PRIMARY KEY,
 	Major nvarchar(100),
 	GPA nvarchar(100),
-	StartDate datetime,
-	EndDate datetime
+	StartDate date,
+	EndDate date
 )
 CREATE TABLE WorkExperience(
 	 CompanyName nvarchar(100) PRIMARY KEY,
 	 WorkPlace nvarchar(100),
 	 Detail text,
-	 StartDate datetime,
-	 EndDate datetime
+	 StartDate date,
+	 EndDate date
 )
 CREATE TABLE Certification(
 	Name nvarchar(100) PRIMARY KEY,
-	CertificationDate datetime
+	CertificationDate date
 )
 CREATE TABLE Resume(
 	CddID varchar(10) CONSTRAINT FK_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
@@ -62,15 +62,15 @@ CREATE TABLE Resume(
 	UniversityName nvarchar(100),
 	Major nvarchar(100),
 	GPA nvarchar(100),
-	UniversityStartDate datetime,
-	UniversityEndDate datetime,
+	UniversityStartDate date,
+	UniversityEndDate date,
 	CompanyName nvarchar(100),
 	WorkPlace nvarchar(100),
 	Detail text,
-	CompanyStartDate datetime,
-	CompanyEndDate datetime,
+	CompanyStartDate date,
+	CompanyEndDate date,
 	CertificationName nvarchar(100),
-	CertificationDate datetime,
+	CertificationDate date,
 	CONSTRAINT PK_AD PRIMARY KEY (CddID, JobID)
 )
 -- Tạo bảng Saved Jobs
