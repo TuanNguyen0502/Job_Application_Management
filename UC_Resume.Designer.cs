@@ -46,7 +46,6 @@
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label_Education = new System.Windows.Forms.Label();
             this.button_AddEducation = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.uC_Resume_Education1 = new Job_Application_Management.UC_Resume_Education();
             this.flowLayoutPanel_Experience = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.label_JobExperience = new System.Windows.Forms.Label();
@@ -55,8 +54,10 @@
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.label_Certificate = new System.Windows.Forms.Label();
             this.button_AddCertification = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_CreateCV = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.uC_Resume_Certificate1 = new Job_Application_Management.UC_Resume_Certificate();
             this.uC_Resume_Experience1 = new Job_Application_Management.UC_Resume_Experience();
+            this.uC_Resume_Education1 = new Job_Application_Management.UC_Resume_Education();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -83,7 +84,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.6722F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.13278F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1425, 158);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1674, 158);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // label_CandidateName
@@ -91,7 +92,7 @@
             this.label_CandidateName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_CandidateName.AutoSize = true;
             this.label_CandidateName.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold);
-            this.label_CandidateName.Location = new System.Drawing.Point(688, 11);
+            this.label_CandidateName.Location = new System.Drawing.Point(717, 8);
             this.label_CandidateName.Name = "label_CandidateName";
             this.label_CandidateName.Size = new System.Drawing.Size(239, 36);
             this.label_CandidateName.TabIndex = 0;
@@ -102,7 +103,7 @@
             this.label_Nominee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_Nominee.AutoSize = true;
             this.label_Nominee.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Nominee.Location = new System.Drawing.Point(727, 69);
+            this.label_Nominee.Location = new System.Drawing.Point(744, 55);
             this.label_Nominee.Name = "label_Nominee";
             this.label_Nominee.Size = new System.Drawing.Size(186, 23);
             this.label_Nominee.TabIndex = 1;
@@ -117,7 +118,7 @@
             this.flowLayoutPanel1.Controls.Add(this.textBox_Email);
             this.flowLayoutPanel1.Controls.Add(this.label_Address);
             this.flowLayoutPanel1.Controls.Add(this.textBox_Address);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(157, 113);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(233, 90);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1208, 58);
             this.flowLayoutPanel1.TabIndex = 2;
@@ -223,7 +224,7 @@
             // 
             this.label_CareerObjective.AutoSize = true;
             this.label_CareerObjective.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CareerObjective.Location = new System.Drawing.Point(12, 8);
+            this.label_CareerObjective.Location = new System.Drawing.Point(13, 10);
             this.label_CareerObjective.Name = "label_CareerObjective";
             this.label_CareerObjective.Size = new System.Drawing.Size(314, 32);
             this.label_CareerObjective.TabIndex = 0;
@@ -232,7 +233,7 @@
             // richTextBox_CareerObjective
             // 
             this.richTextBox_CareerObjective.Dock = System.Windows.Forms.DockStyle.Left;
-            this.richTextBox_CareerObjective.Location = new System.Drawing.Point(332, 10);
+            this.richTextBox_CareerObjective.Location = new System.Drawing.Point(13, 44);
             this.richTextBox_CareerObjective.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox_CareerObjective.Name = "richTextBox_CareerObjective";
             this.richTextBox_CareerObjective.Size = new System.Drawing.Size(1191, 127);
@@ -251,7 +252,7 @@
             this.flowLayoutPanel_Education.Controls.Add(this.uC_Resume_Education1);
             this.flowLayoutPanel_Education.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel_Education.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel_Education.Location = new System.Drawing.Point(0, 336);
+            this.flowLayoutPanel_Education.Location = new System.Drawing.Point(0, 381);
             this.flowLayoutPanel_Education.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel_Education.Name = "flowLayoutPanel_Education";
             this.flowLayoutPanel_Education.Padding = new System.Windows.Forms.Padding(10);
@@ -262,7 +263,7 @@
             // 
             this.flowLayoutPanel4.Controls.Add(this.label_Education);
             this.flowLayoutPanel4.Controls.Add(this.button_AddEducation);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(12, 10);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(13, 12);
             this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(507, 50);
@@ -343,22 +344,13 @@
             this.button_AddEducation.Values.Text = "";
             this.button_AddEducation.Click += new System.EventHandler(this.button_AddEducation_Click);
             // 
-            // uC_Resume_Education1
-            // 
-            this.uC_Resume_Education1.Location = new System.Drawing.Point(12, 64);
-            this.uC_Resume_Education1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uC_Resume_Education1.Name = "uC_Resume_Education1";
-            this.uC_Resume_Education1.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.uC_Resume_Education1.Size = new System.Drawing.Size(1145, 240);
-            this.uC_Resume_Education1.TabIndex = 2;
-            // 
             // flowLayoutPanel_Experience
             // 
             this.flowLayoutPanel_Experience.Controls.Add(this.flowLayoutPanel6);
             this.flowLayoutPanel_Experience.Controls.Add(this.uC_Resume_Experience1);
             this.flowLayoutPanel_Experience.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel_Experience.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel_Experience.Location = new System.Drawing.Point(0, 817);
+            this.flowLayoutPanel_Experience.Location = new System.Drawing.Point(0, 777);
             this.flowLayoutPanel_Experience.Name = "flowLayoutPanel_Experience";
             this.flowLayoutPanel_Experience.Padding = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel_Experience.Size = new System.Drawing.Size(1674, 381);
@@ -368,7 +360,7 @@
             // 
             this.flowLayoutPanel6.Controls.Add(this.label_JobExperience);
             this.flowLayoutPanel6.Controls.Add(this.button_AddExperience);
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(12, 10);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(13, 12);
             this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(507, 50);
@@ -449,31 +441,23 @@
             this.button_AddExperience.Values.Text = "";
             this.button_AddExperience.Click += new System.EventHandler(this.button_AddExperience_Click);
             // 
-            // uC_Resume_Experience1
-            // 
-            this.uC_Resume_Experience1.Location = new System.Drawing.Point(13, 81);
-            this.uC_Resume_Experience1.Name = "uC_Resume_Experience1";
-            this.uC_Resume_Experience1.Padding = new System.Windows.Forms.Padding(10);
-            this.uC_Resume_Experience1.Size = new System.Drawing.Size(1293, 284);
-            this.uC_Resume_Experience1.TabIndex = 2;
-            // 
             // flowLayoutPanel_Certificate
             // 
             this.flowLayoutPanel_Certificate.Controls.Add(this.flowLayoutPanel8);
             this.flowLayoutPanel_Certificate.Controls.Add(this.uC_Resume_Certificate1);
             this.flowLayoutPanel_Certificate.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel_Certificate.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel_Certificate.Location = new System.Drawing.Point(0, 1198);
+            this.flowLayoutPanel_Certificate.Location = new System.Drawing.Point(0, 1158);
             this.flowLayoutPanel_Certificate.Name = "flowLayoutPanel_Certificate";
             this.flowLayoutPanel_Certificate.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel_Certificate.Size = new System.Drawing.Size(1674, 197);
+            this.flowLayoutPanel_Certificate.Size = new System.Drawing.Size(1674, 164);
             this.flowLayoutPanel_Certificate.TabIndex = 5;
             // 
             // flowLayoutPanel8
             // 
             this.flowLayoutPanel8.Controls.Add(this.label_Certificate);
             this.flowLayoutPanel8.Controls.Add(this.button_AddCertification);
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(12, 10);
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(13, 12);
             this.flowLayoutPanel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
             this.flowLayoutPanel8.Size = new System.Drawing.Size(507, 50);
@@ -554,9 +538,69 @@
             this.button_AddCertification.Values.Text = "";
             this.button_AddCertification.Click += new System.EventHandler(this.button_AddCertification_Click);
             // 
+            // btn_CreateCV
+            // 
+            this.btn_CreateCV.Location = new System.Drawing.Point(411, 1327);
+            this.btn_CreateCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_CreateCV.Name = "btn_CreateCV";
+            this.btn_CreateCV.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btn_CreateCV.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btn_CreateCV.OverrideDefault.Back.ColorAngle = 45F;
+            this.btn_CreateCV.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btn_CreateCV.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btn_CreateCV.OverrideDefault.Border.ColorAngle = 45F;
+            this.btn_CreateCV.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_CreateCV.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btn_CreateCV.OverrideDefault.Border.Rounding = 20;
+            this.btn_CreateCV.OverrideDefault.Border.Width = 1;
+            this.btn_CreateCV.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btn_CreateCV.Size = new System.Drawing.Size(262, 85);
+            this.btn_CreateCV.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btn_CreateCV.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btn_CreateCV.StateCommon.Back.ColorAngle = 45F;
+            this.btn_CreateCV.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btn_CreateCV.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btn_CreateCV.StateCommon.Border.ColorAngle = 45F;
+            this.btn_CreateCV.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_CreateCV.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btn_CreateCV.StateCommon.Border.Rounding = 20;
+            this.btn_CreateCV.StateCommon.Border.Width = 1;
+            this.btn_CreateCV.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_CreateCV.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_CreateCV.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CreateCV.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btn_CreateCV.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btn_CreateCV.StatePressed.Back.ColorAngle = 135F;
+            this.btn_CreateCV.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btn_CreateCV.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btn_CreateCV.StatePressed.Border.ColorAngle = 135F;
+            this.btn_CreateCV.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_CreateCV.StatePressed.Border.Rounding = 20;
+            this.btn_CreateCV.StatePressed.Border.Width = 1;
+            this.btn_CreateCV.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(154)))));
+            this.btn_CreateCV.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btn_CreateCV.StateTracking.Back.ColorAngle = 45F;
+            this.btn_CreateCV.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btn_CreateCV.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(154)))));
+            this.btn_CreateCV.StateTracking.Border.ColorAngle = 45F;
+            this.btn_CreateCV.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_CreateCV.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btn_CreateCV.StateTracking.Border.Rounding = 20;
+            this.btn_CreateCV.StateTracking.Border.Width = 1;
+            this.btn_CreateCV.TabIndex = 15;
+            this.btn_CreateCV.Values.Text = "Tạo CV";
+            // 
             // uC_Resume_Certificate1
             // 
-            this.uC_Resume_Certificate1.Location = new System.Drawing.Point(12, 64);
+            this.uC_Resume_Certificate1.Location = new System.Drawing.Point(13, 66);
             this.uC_Resume_Certificate1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_Resume_Certificate1.Name = "uC_Resume_Certificate1";
             this.uC_Resume_Certificate1.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
@@ -565,18 +609,28 @@
             // 
             // uC_Resume_Experience1
             // 
-            this.uC_Resume_Experience1.Location = new System.Drawing.Point(12, 64);
+            this.uC_Resume_Experience1.Location = new System.Drawing.Point(13, 66);
             this.uC_Resume_Experience1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_Resume_Experience1.Name = "uC_Resume_Experience1";
             this.uC_Resume_Experience1.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.uC_Resume_Experience1.Size = new System.Drawing.Size(1149, 294);
             this.uC_Resume_Experience1.TabIndex = 2;
             // 
+            // uC_Resume_Education1
+            // 
+            this.uC_Resume_Education1.Location = new System.Drawing.Point(13, 66);
+            this.uC_Resume_Education1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_Resume_Education1.Name = "uC_Resume_Education1";
+            this.uC_Resume_Education1.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.uC_Resume_Education1.Size = new System.Drawing.Size(1145, 240);
+            this.uC_Resume_Education1.TabIndex = 2;
+            // 
             // UC_Resume
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.Controls.Add(this.btn_CreateCV);
             this.Controls.Add(this.flowLayoutPanel_Certificate);
             this.Controls.Add(this.flowLayoutPanel_Experience);
             this.Controls.Add(this.flowLayoutPanel_Education);
@@ -634,5 +688,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_AddCertification;
         private UC_Resume_Certificate uC_Resume_Certificate1;
         private UC_Resume_Experience uC_Resume_Experience1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_CreateCV;
     }
 }
