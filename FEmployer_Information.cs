@@ -18,6 +18,7 @@ namespace Job_Application_Management
         private Employer employer;
         private EmployerDAO employerDAO;
         private string sqlQuery;
+        private Form currentFormChild;
 
         public FEmployer_Information(string empID)
         {
@@ -53,7 +54,7 @@ namespace Job_Application_Management
         private void button_Save_Click(object sender, EventArgs e)
         {
             UpdateEmployer();
-            employerDAO.SaveInfor(employer);
+            employerDAO.SaveEmployerInfor(employer);
             LoadInfor();
         }
 
@@ -72,6 +73,25 @@ namespace Job_Application_Management
             employer.Phone = textBox_PhoneNumber.Text;
             employer.Sex = sex;
             employer.Workplace = comboBox_Workplace.SelectedText;
+        }
+
+        private void button_Company_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FEmployer_Company(employer.CompanyName));
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
+
+            currentFormChild = childForm;
+            childForm.FormBorderStyle = FormBorderStyle.FixedSingle;
+            childForm.StartPosition = FormStartPosition.CenterScreen;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

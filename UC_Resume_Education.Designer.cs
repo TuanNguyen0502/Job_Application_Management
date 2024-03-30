@@ -30,10 +30,10 @@
         {
             this.textBox_School = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.textBox_Major = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.textBox_Start = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.textBox_End = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox_EducationDetail = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
+            this.dateTimePicker_End = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.dateTimePicker_Start = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.SuspendLayout();
             // 
             // textBox_School
@@ -64,39 +64,11 @@
             this.textBox_Major.TabIndex = 1;
             this.textBox_Major.Text = "Nganh hoc / Mon hoc";
             // 
-            // textBox_Start
-            // 
-            this.textBox_Start.Location = new System.Drawing.Point(949, 13);
-            this.textBox_Start.Name = "textBox_Start";
-            this.textBox_Start.Size = new System.Drawing.Size(135, 52);
-            this.textBox_Start.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_Start.StateCommon.Border.Rounding = 20;
-            this.textBox_Start.StateCommon.Border.Width = 1;
-            this.textBox_Start.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Start.TabIndex = 2;
-            this.textBox_Start.Text = "Bat dau";
-            // 
-            // textBox_End
-            // 
-            this.textBox_End.Location = new System.Drawing.Point(1126, 13);
-            this.textBox_End.Name = "textBox_End";
-            this.textBox_End.Size = new System.Drawing.Size(149, 52);
-            this.textBox_End.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_End.StateCommon.Border.Rounding = 20;
-            this.textBox_End.StateCommon.Border.Width = 1;
-            this.textBox_End.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_End.TabIndex = 3;
-            this.textBox_End.Text = "Ket thuc";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1090, 23);
+            this.label1.Location = new System.Drawing.Point(1245, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 33);
             this.label1.TabIndex = 4;
@@ -106,7 +78,7 @@
             // 
             this.richTextBox_EducationDetail.Location = new System.Drawing.Point(13, 150);
             this.richTextBox_EducationDetail.Name = "richTextBox_EducationDetail";
-            this.richTextBox_EducationDetail.Size = new System.Drawing.Size(1262, 137);
+            this.richTextBox_EducationDetail.Size = new System.Drawing.Size(1474, 137);
             this.richTextBox_EducationDetail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -116,19 +88,49 @@
             this.richTextBox_EducationDetail.TabIndex = 5;
             this.richTextBox_EducationDetail.Text = "Mo ta qua trinh hoc tap hoac thanh tich";
             // 
+            // dateTimePicker_End
+            // 
+            this.dateTimePicker_End.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_End.Location = new System.Drawing.Point(1288, 15);
+            this.dateTimePicker_End.Name = "dateTimePicker_End";
+            this.dateTimePicker_End.Size = new System.Drawing.Size(191, 50);
+            this.dateTimePicker_End.StateCommon.Border.ColorAngle = 45F;
+            this.dateTimePicker_End.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.dateTimePicker_End.StateCommon.Border.Rounding = 20;
+            this.dateTimePicker_End.StateCommon.Border.Width = 1;
+            this.dateTimePicker_End.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_End.TabIndex = 6;
+            // 
+            // dateTimePicker_Start
+            // 
+            this.dateTimePicker_Start.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_Start.Location = new System.Drawing.Point(1034, 15);
+            this.dateTimePicker_Start.Name = "dateTimePicker_Start";
+            this.dateTimePicker_Start.Size = new System.Drawing.Size(191, 50);
+            this.dateTimePicker_Start.StateCommon.Border.ColorAngle = 45F;
+            this.dateTimePicker_Start.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.dateTimePicker_Start.StateCommon.Border.Rounding = 20;
+            this.dateTimePicker_Start.StateCommon.Border.Width = 1;
+            this.dateTimePicker_Start.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_Start.TabIndex = 7;
+            // 
             // UC_Resume_Education
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dateTimePicker_Start);
+            this.Controls.Add(this.dateTimePicker_End);
             this.Controls.Add(this.richTextBox_EducationDetail);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox_End);
-            this.Controls.Add(this.textBox_Start);
             this.Controls.Add(this.textBox_Major);
             this.Controls.Add(this.textBox_School);
             this.Name = "UC_Resume_Education";
             this.Padding = new System.Windows.Forms.Padding(10);
-            this.Size = new System.Drawing.Size(1288, 300);
+            this.Size = new System.Drawing.Size(1500, 300);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,9 +140,9 @@
 
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_School;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Major;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Start;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_End;
         private System.Windows.Forms.Label label1;
         private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox richTextBox_EducationDetail;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dateTimePicker_End;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dateTimePicker_Start;
     }
 }

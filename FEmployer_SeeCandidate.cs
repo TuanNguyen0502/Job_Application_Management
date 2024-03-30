@@ -35,7 +35,9 @@ namespace Job_Application_Management
             }
 
             currentFormChild = childForm;
-            childForm.FormBorderStyle = FormBorderStyle.Sizable;
+            childForm.FormBorderStyle = FormBorderStyle.FixedSingle;
+            childForm.StartPosition = FormStartPosition.CenterScreen;
+            childForm.Size = new Size(1300, 600);
             childForm.BringToFront();
             childForm.Show();
         }

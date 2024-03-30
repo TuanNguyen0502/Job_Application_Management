@@ -16,13 +16,24 @@ namespace Job_Application_Management
         {
             InitializeComponent();
         }
+
+        public ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker DateTimePicker_Start
+        {
+            get { return dateTimePicker_Start; }
+        }
+
+        public ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker DateTimePicker_End
+        {
+            get { return dateTimePicker_End; }
+        }
+
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_School
         {
             get { return textBox_School; }
         }
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_Major
         {
-            get { return textBox_School; }
+            get { return textBox_Major; }
         }
         public ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_Start
         {

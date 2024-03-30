@@ -17,13 +17,18 @@ namespace Job_Application_Management
         {
             InitializeComponent();
         }
+        public ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker DateTimePicker_Start
+        {
+            get { return dateTimePicker; }
+        }
+
         public KryptonTextBox TextBox_CertificateName
         {
             get { return textBox_CertificateName; }
         }
         public KryptonDateTimePicker KryptonDateTimePicker1
         {
-            get { return kryptonDateTimePicker1; }
+            get { return dateTimePicker; }
         }
     }
 }

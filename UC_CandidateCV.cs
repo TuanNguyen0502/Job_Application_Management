@@ -39,7 +39,7 @@ namespace Job_Application_Management
             }
 
             currentFormChild = childForm;
-            childForm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            childForm.FormBorderStyle = FormBorderStyle.FixedSingle;
             childForm.StartPosition = FormStartPosition.CenterScreen;
             childForm.BringToFront();
             childForm.Show();
@@ -48,6 +48,7 @@ namespace Job_Application_Management
         private void button_detail_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FResume(jobID, CddID));
+            
         }
 
         private void button_delete_Click(object sender, EventArgs e)

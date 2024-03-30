@@ -24,6 +24,79 @@ namespace Job_Application_Management
             dbConnection.ExecuteWriteData(sqlStr);
         }
 
+        public CV GetResumeFromDB(string jobID, string cddID)
+        {
+            CV resume = new CV();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sqlQuery = $"SELECT R.CddID, R.JobID, R.Objective, R.UniversityName, R.Major, R.GPA, R.UniversityStartDate, R.UniversityEndDate, " +
+                    $"R.CompanyName, R.WorkPlace, R.Detail, R.CompanyStartDate, R.CompanyEndDate, R.CertificationName, R.CertificationDate, " +
+                    $"C.CddName, C.Phone, C.Email, C.CddAddress, " +
+                    $"J.Name " +
+                    $"FROM Resume R INNER JOIN Candidates C ON R.CddID = C.CddID " +
+                    $"INNER JOIN Jobs J ON R.JobID = J.ID " +
+                    $"WHERE R.CddID = '{cddID}' AND R.JobID = '{jobID}'";
+                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        resume.CddID = reader.GetString(0);
+                        resume.JobID = reader.GetString(1);
+                        resume.CareerGoal = reader.GetString(2);
+                        resume.UniversityName = reader.GetString(3);
+                        resume.Major = reader.GetString(4);
+                        resume.Gpa = reader.GetString(5);
+                        resume.UniversityStartDate = reader.GetDateTime(6);
+                        resume.UniversityEndDate = reader.GetDateTime(7);
+                        resume.WorkedCompanyName = reader.GetString(8);
+                        resume.WorkedWorkPlace = reader.GetString(9);
+                        resume.WorkedDetail = reader.GetString(10);
+                        resume.CompanyStartDate = reader.GetDateTime(11);
+                        resume.CompanyEndDate = reader.GetDateTime(12);
+                        resume.Certificate = reader.GetString(13);
+                        resume.TimeCertificate = reader.GetDateTime(14);
+                        resume.CddName = reader.GetString(15);
+                        resume.CddPhone = reader.GetString(16);
+                        resume.CddEmail = reader.GetString(17);
+                        resume.CddAddress = reader.GetString(18);
+                        resume.JobName = reader.GetString(19);
+                    }
+                }
+                else
+                    MessageBox.Show("No rows found");
+            }
+            return resume;
+        }
+
+        public Company GetCompanyFromDB(string companyName)
+        {
+            Company company = new Company();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sqlQuery = $"SELECT Name, Address, Manager, TaxCode, BusinessLicense FROM Company WHERE Name = '{companyName}'";
+                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        company.Name = reader.GetString(0);
+                        company.Address = reader.GetString(1);
+                        company.Manager = reader.GetString(2);
+                        company.TaxCode = reader.GetString(3);
+                        company.BusinessLicense = reader.GetString(4);
+                    }
+                }
+                else
+                    MessageBox.Show("No rows found");
+            }
+            return company;
+        }
+
         public Employer GetEmployerFromDB(string empID)
         {
             Employer employer = new Employer();
@@ -52,7 +125,15 @@ namespace Job_Application_Management
             return employer;
         }
 
-        public void SaveInfor(Employer employer)
+        public void SaveCompanyInfor(Company company)
+        {
+            string sqlStr = string.Format($"UPDATE Company SET Address = N'{company.Address}', " +
+                $"Manager = N'{company.Manager}', TaxCode = '{company.TaxCode}', BusinessLicense = '{company.BusinessLicense}' " +
+                $"WHERE Name = '{company.Name}'");
+            Execute(sqlStr);
+        }
+
+        public void SaveEmployerInfor(Employer employer)
         {
             string sqlStr = string.Format($"UPDATE Employers SET Email = '{employer.Email}', Name = N'{employer.Name}', Sex = N'{employer.Sex}', " +
                 $"Phone = '{employer.Phone}', Workplace = N'{employer.Workplace}' WHERE ID = '{employer.Id}'");
