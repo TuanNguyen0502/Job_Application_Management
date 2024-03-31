@@ -92,14 +92,17 @@
             // 
             // ptbMain
             // 
-            this.ptbMain.Location = new System.Drawing.Point(31, 32);
+            this.ptbMain.Image = global::Job_Application_Management.Properties.Resources.icons8_company_100;
+            this.ptbMain.Location = new System.Drawing.Point(26, 24);
             this.ptbMain.Name = "ptbMain";
-            this.ptbMain.Size = new System.Drawing.Size(70, 70);
+            this.ptbMain.Size = new System.Drawing.Size(80, 80);
+            this.ptbMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbMain.TabIndex = 0;
             this.ptbMain.TabStop = false;
             // 
             // btnApply
             // 
+            this.btnApply.Image = global::Job_Application_Management.Properties.Resources.icons8_heart_16;
             this.btnApply.Location = new System.Drawing.Point(502, 86);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(60, 30);

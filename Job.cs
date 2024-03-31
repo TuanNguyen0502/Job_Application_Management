@@ -19,8 +19,10 @@ namespace Job_Application_Management
         private string request;
         private DateTime postTime;
         private string empID;
-
-        public Job (string id, string name, int salary, string jobDescription, int workDuration, string experience, DateTime deadline, string benefit, string request, string empID)
+        private string companyName;
+        public string address;
+        public Job() { }
+        public Job(string id, string name, int salary, string jobDescription, int workDuration, string experience, DateTime deadline, string benefit, string request, string empID)
         {
             Id = id;
             Name = name;
@@ -35,6 +37,23 @@ namespace Job_Application_Management
             EmpID = empID;
         }
 
+        public Job (string id, string name, int salary, string jobDescription, int workDuration, string experience, DateTime deadline, string benefit, string request, string empID, string companyName, string address)
+        {
+            Id = id;
+            Name = name;
+            Salary = salary;
+            JobDescription = jobDescription;
+            WorkDuration = workDuration;
+            Experience = experience;
+            Deadline = deadline;
+            Benefit = benefit;
+            Request = request;
+            postTime = DateTime.Now;
+            EmpID = empID;
+            CompanyName=companyName;
+            Address = address;
+        }
+
         public string Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public int Salary { get => salary; set => salary = value; }
@@ -46,5 +65,9 @@ namespace Job_Application_Management
         public string Request { get => request; set => request = value; }
         public string EmpID { get => empID; set => empID = value; }
         public DateTime PostTime { get => postTime; set => postTime = value; }
+        public string CompanyName { get => companyName; set => companyName = value; }
+        public string Address { get => address; set => address = value; }
+
+
     }
 }

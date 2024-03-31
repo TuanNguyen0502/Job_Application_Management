@@ -13,6 +13,7 @@ namespace Job_Application_Management
 {
     public partial class FCandidate_AppliedJobs : KryptonForm
     {
+        CandidateDAO canDAO = new CandidateDAO();
         public FCandidate_AppliedJobs()
         {
             InitializeComponent();
@@ -21,12 +22,12 @@ namespace Job_Application_Management
         private void FCandidate_AppliedJobs_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void btn_FindJob_Click(object sender, EventArgs e)
-        {
-            FCandidate fCandidate = new FCandidate();
-            fCandidate.ShowDialog();
+            List<UC_JobsSaved> saveds = canDAO.GetAppliedJobsFromDB();
+            foreach (var saved in saveds)
+            {
+                saved.BtnAdd.Visible = false;
+                flpMain.Controls.Add(saved);
+            }
         }
     }
 }

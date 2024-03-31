@@ -31,38 +31,38 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCandidate));
             this.pnlNav = new System.Windows.Forms.Panel();
-            this.btnSetting = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnCompanies = new System.Windows.Forms.Button();
-            this.btnJobApp = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblCddID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnRegisterCV = new System.Windows.Forms.Button();
-            this.btnSearchJob = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.cbbAddress = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtSearchFor = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.côngViệcĐãLưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.côngViệcĐãỨngTuyểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.flpScrollPane = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnRegisterCV = new System.Windows.Forms.Button();
+            this.btnSearchJob = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnSetting = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnCompanies = new System.Windows.Forms.Button();
+            this.btnJobApp = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlNav.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlNav
@@ -79,96 +79,6 @@
             this.pnlNav.Name = "pnlNav";
             this.pnlNav.Size = new System.Drawing.Size(213, 754);
             this.pnlNav.TabIndex = 0;
-            // 
-            // btnSetting
-            // 
-            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnSetting.Image = global::Job_Application_Management.Properties.Resources.icons8_settings_30;
-            this.btnSetting.Location = new System.Drawing.Point(0, 670);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(213, 84);
-            this.btnSetting.TabIndex = 5;
-            this.btnSetting.Text = "Setting";
-            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnSetting.UseVisualStyleBackColor = false;
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
-            this.btnSetting.Leave += new System.EventHandler(this.btnSetting_Leave);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnLogout.Image = global::Job_Application_Management.Properties.Resources.icons8_log_out_30;
-            this.btnLogout.Location = new System.Drawing.Point(0, 432);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(213, 84);
-            this.btnLogout.TabIndex = 4;
-            this.btnLogout.Text = "Log out    ";
-            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            this.btnLogout.Leave += new System.EventHandler(this.btnLogout_Leave);
-            // 
-            // btnCompanies
-            // 
-            this.btnCompanies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCompanies.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCompanies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompanies.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompanies.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnCompanies.Image = global::Job_Application_Management.Properties.Resources.icons8_company_30;
-            this.btnCompanies.Location = new System.Drawing.Point(0, 348);
-            this.btnCompanies.Name = "btnCompanies";
-            this.btnCompanies.Size = new System.Drawing.Size(213, 84);
-            this.btnCompanies.TabIndex = 3;
-            this.btnCompanies.Text = "Companies";
-            this.btnCompanies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnCompanies.UseVisualStyleBackColor = false;
-            this.btnCompanies.Click += new System.EventHandler(this.btnCompanies_Click);
-            this.btnCompanies.Leave += new System.EventHandler(this.btnCompanies_Leave);
-            // 
-            // btnJobApp
-            // 
-            this.btnJobApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnJobApp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnJobApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJobApp.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJobApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnJobApp.Image = global::Job_Application_Management.Properties.Resources.icons8_job_application_32;
-            this.btnJobApp.Location = new System.Drawing.Point(0, 264);
-            this.btnJobApp.Name = "btnJobApp";
-            this.btnJobApp.Size = new System.Drawing.Size(213, 84);
-            this.btnJobApp.TabIndex = 2;
-            this.btnJobApp.Text = "Job App   ";
-            this.btnJobApp.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnJobApp.UseVisualStyleBackColor = false;
-            this.btnJobApp.Click += new System.EventHandler(this.btnJobApp_Click);
-            this.btnJobApp.Leave += new System.EventHandler(this.btnJobApp_Leave);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnDashboard.Image = global::Job_Application_Management.Properties.Resources.icons8_home_301;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 180);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(213, 84);
-            this.btnDashboard.TabIndex = 1;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
             // 
             // panel2
             // 
@@ -205,16 +115,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "User Name";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_person_48;
-            this.pictureBox1.Location = new System.Drawing.Point(65, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // kryptonPalette2
             // 
             this.kryptonPalette2.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -241,59 +141,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1109, 102);
             this.panel1.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Job_Application_Management.Properties.Resources.cv_icon1;
-            this.button1.Location = new System.Drawing.Point(623, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 70);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Xem chi tiết CV";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnRegisterCV
-            // 
-            this.btnRegisterCV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegisterCV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnRegisterCV.FlatAppearance.BorderSize = 0;
-            this.btnRegisterCV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegisterCV.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterCV.ForeColor = System.Drawing.Color.White;
-            this.btnRegisterCV.Image = global::Job_Application_Management.Properties.Resources.icons8_cv_40;
-            this.btnRegisterCV.Location = new System.Drawing.Point(848, 17);
-            this.btnRegisterCV.Name = "btnRegisterCV";
-            this.btnRegisterCV.Size = new System.Drawing.Size(208, 70);
-            this.btnRegisterCV.TabIndex = 21;
-            this.btnRegisterCV.Text = "Đăng ký CV";
-            this.btnRegisterCV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegisterCV.UseVisualStyleBackColor = false;
-            this.btnRegisterCV.Click += new System.EventHandler(this.btnRegisterCV_Click);
-            // 
-            // btnSearchJob
-            // 
-            this.btnSearchJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnSearchJob.FlatAppearance.BorderSize = 0;
-            this.btnSearchJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchJob.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchJob.ForeColor = System.Drawing.Color.White;
-            this.btnSearchJob.Image = global::Job_Application_Management.Properties.Resources.icons8_find_16;
-            this.btnSearchJob.Location = new System.Drawing.Point(644, 28);
-            this.btnSearchJob.Name = "btnSearchJob";
-            this.btnSearchJob.Size = new System.Drawing.Size(171, 43);
-            this.btnSearchJob.TabIndex = 10;
-            this.btnSearchJob.Text = "  Tìm kiếm";
-            this.btnSearchJob.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearchJob.UseVisualStyleBackColor = false;
-            this.btnSearchJob.Click += new System.EventHandler(this.btnSearchJob_Click);
             // 
             // label6
             // 
@@ -352,24 +199,6 @@
             this.cbbAddress.TabIndex = 2;
             this.cbbAddress.SelectedIndexChanged += new System.EventHandler(this.cbbAddress_SelectedIndexChanged);
             // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Image = global::Job_Application_Management.Properties.Resources.icons8_location_16;
-            this.label4.Location = new System.Drawing.Point(317, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 34);
-            this.label4.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Image = global::Job_Application_Management.Properties.Resources.icons8_find_16__1_;
-            this.label3.Location = new System.Drawing.Point(5, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 34);
-            this.label3.TabIndex = 1;
-            // 
             // txtSearchFor
             // 
             this.txtSearchFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -410,6 +239,177 @@
             this.flpScrollPane.Size = new System.Drawing.Size(1109, 652);
             this.flpScrollPane.TabIndex = 4;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Job_Application_Management.Properties.Resources.cv_icon1;
+            this.button1.Location = new System.Drawing.Point(623, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(208, 70);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Xem chi tiết CV";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRegisterCV
+            // 
+            this.btnRegisterCV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegisterCV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnRegisterCV.FlatAppearance.BorderSize = 0;
+            this.btnRegisterCV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterCV.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterCV.ForeColor = System.Drawing.Color.White;
+            this.btnRegisterCV.Image = global::Job_Application_Management.Properties.Resources.icons8_cv_40;
+            this.btnRegisterCV.Location = new System.Drawing.Point(848, 17);
+            this.btnRegisterCV.Name = "btnRegisterCV";
+            this.btnRegisterCV.Size = new System.Drawing.Size(208, 70);
+            this.btnRegisterCV.TabIndex = 21;
+            this.btnRegisterCV.Text = "Đăng ký CV";
+            this.btnRegisterCV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegisterCV.UseVisualStyleBackColor = false;
+            this.btnRegisterCV.Click += new System.EventHandler(this.btnRegisterCV_Click);
+            // 
+            // btnSearchJob
+            // 
+            this.btnSearchJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnSearchJob.FlatAppearance.BorderSize = 0;
+            this.btnSearchJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchJob.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchJob.ForeColor = System.Drawing.Color.White;
+            this.btnSearchJob.Image = global::Job_Application_Management.Properties.Resources.icons8_find_16;
+            this.btnSearchJob.Location = new System.Drawing.Point(644, 28);
+            this.btnSearchJob.Name = "btnSearchJob";
+            this.btnSearchJob.Size = new System.Drawing.Size(171, 43);
+            this.btnSearchJob.TabIndex = 10;
+            this.btnSearchJob.Text = "  Tìm kiếm";
+            this.btnSearchJob.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearchJob.UseVisualStyleBackColor = false;
+            this.btnSearchJob.Click += new System.EventHandler(this.btnSearchJob_Click);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Image = global::Job_Application_Management.Properties.Resources.icons8_location_16;
+            this.label4.Location = new System.Drawing.Point(317, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 34);
+            this.label4.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Image = global::Job_Application_Management.Properties.Resources.icons8_find_16__1_;
+            this.label3.Location = new System.Drawing.Point(5, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 34);
+            this.label3.TabIndex = 1;
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetting.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnSetting.Image = global::Job_Application_Management.Properties.Resources.icons8_settings_30;
+            this.btnSetting.Location = new System.Drawing.Point(0, 670);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(213, 84);
+            this.btnSetting.TabIndex = 5;
+            this.btnSetting.Text = "Setting";
+            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSetting.UseVisualStyleBackColor = false;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            this.btnSetting.Leave += new System.EventHandler(this.btnSetting_Leave);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnLogout.Image = global::Job_Application_Management.Properties.Resources.icons8_log_out_30;
+            this.btnLogout.Location = new System.Drawing.Point(0, 432);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(213, 84);
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.Text = "Log out    ";
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnLogout.Leave += new System.EventHandler(this.btnLogout_Leave);
+            // 
+            // btnCompanies
+            // 
+            this.btnCompanies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCompanies.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCompanies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompanies.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompanies.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnCompanies.Image = global::Job_Application_Management.Properties.Resources.icons8_job_application_32;
+            this.btnCompanies.Location = new System.Drawing.Point(0, 348);
+            this.btnCompanies.Name = "btnCompanies";
+            this.btnCompanies.Size = new System.Drawing.Size(213, 84);
+            this.btnCompanies.TabIndex = 3;
+            this.btnCompanies.Text = "Job Applied";
+            this.btnCompanies.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCompanies.UseVisualStyleBackColor = false;
+            this.btnCompanies.Click += new System.EventHandler(this.btnCompanies_Click);
+            this.btnCompanies.Leave += new System.EventHandler(this.btnCompanies_Leave);
+            // 
+            // btnJobApp
+            // 
+            this.btnJobApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnJobApp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnJobApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJobApp.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJobApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnJobApp.Image = global::Job_Application_Management.Properties.Resources.icons8_application_48;
+            this.btnJobApp.Location = new System.Drawing.Point(0, 264);
+            this.btnJobApp.Name = "btnJobApp";
+            this.btnJobApp.Size = new System.Drawing.Size(213, 84);
+            this.btnJobApp.TabIndex = 2;
+            this.btnJobApp.Text = "Job Saved ";
+            this.btnJobApp.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnJobApp.UseVisualStyleBackColor = false;
+            this.btnJobApp.Click += new System.EventHandler(this.btnJobApp_Click);
+            this.btnJobApp.Leave += new System.EventHandler(this.btnJobApp_Leave);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnDashboard.Image = global::Job_Application_Management.Properties.Resources.icons8_home_301;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 180);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(213, 84);
+            this.btnDashboard.TabIndex = 1;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_person_48;
+            this.pictureBox1.Location = new System.Drawing.Point(65, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FCandidate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -429,10 +429,10 @@
             this.pnlNav.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

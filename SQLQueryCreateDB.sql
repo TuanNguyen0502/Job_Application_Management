@@ -79,6 +79,13 @@ CREATE TABLE SavedJobs(
 	TimeSaved date,
 	JobID varchar(10) FOREIGN KEY REFERENCES Jobs(ID) 
 )
+-- Tạo bảng Applied Jobs
+CREATE TABLE AppliedJobs(
+	ID int IDENTITY primary key,
+	TimeApplied date,
+	JobID varchar(10) FOREIGN KEY REFERENCES Jobs(ID) 
+)
+SELECT * FROM AppliedJobs
 
 
 -- Dữ liệu cho bảng Candidates

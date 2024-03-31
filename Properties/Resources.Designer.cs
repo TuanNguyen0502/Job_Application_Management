@@ -223,6 +223,16 @@ namespace Job_Application_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_application_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-application-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bag_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-bag-32", resourceCulture);
@@ -656,6 +666,16 @@ namespace Job_Application_Management.Properties {
         internal static System.Drawing.Bitmap icons8_place_marker_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-place-marker-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_plus_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-plus-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

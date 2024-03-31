@@ -1,6 +1,6 @@
 ﻿namespace Job_Application_Management
 {
-    partial class FEmployer_SeeCVDetailOfCandidate
+    partial class FCandidate_SelectedJobDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -31,9 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.pnl = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnSaved = new System.Windows.Forms.Button();
+            this.btnApply = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.lblExp = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -42,47 +45,41 @@
             this.label25 = new System.Windows.Forms.Label();
             this.lblJobName_Address = new System.Windows.Forms.Label();
             this.pnlCompany = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblSeeCompany = new System.Windows.Forms.Label();
+            this.lblAdress2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblComName = new System.Windows.Forms.Label();
             this.lblComAddress = new System.Windows.Forms.Label();
             this.lblScale = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flpnRecruitment = new System.Windows.Forms.FlowLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlOverview = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblJobId = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pnlDetails = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.lblWorkingForm = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.lblNumberCan = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.lblExp2 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSaved = new System.Windows.Forms.Button();
-            this.btnApply = new System.Windows.Forms.Button();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.pnl.SuspendLayout();
             this.panel6.SuspendLayout();
             this.pnlCompany.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.pnlOverview.SuspendLayout();
-            this.pnlDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.flpnRecruitment.SuspendLayout();
+            this.pnlOverview.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -102,8 +99,6 @@
             this.pnl.BackColor = System.Drawing.Color.White;
             this.pnl.Controls.Add(this.btnSaved);
             this.pnl.Controls.Add(this.btnApply);
-            this.pnl.Controls.Add(this.label3);
-            this.pnl.Controls.Add(this.label2);
             this.pnl.Controls.Add(this.panel6);
             this.pnl.Controls.Add(this.lblJobName_Address);
             this.pnl.Location = new System.Drawing.Point(0, 0);
@@ -111,23 +106,35 @@
             this.pnl.Size = new System.Drawing.Size(710, 198);
             this.pnl.TabIndex = 0;
             // 
-            // label3
+            // btnSaved
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(385, 125);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Hạn nộp";
+            this.btnSaved.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaved.ForeColor = System.Drawing.Color.Green;
+            this.btnSaved.Image = global::Job_Application_Management.Properties.Resources.icons8_heart_16;
+            this.btnSaved.Location = new System.Drawing.Point(546, 141);
+            this.btnSaved.Name = "btnSaved";
+            this.btnSaved.Size = new System.Drawing.Size(152, 50);
+            this.btnSaved.TabIndex = 5;
+            this.btnSaved.Text = "Lưu tin";
+            this.btnSaved.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSaved.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSaved.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // btnApply
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tình trạng";
+            this.btnApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
+            this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApply.ForeColor = System.Drawing.Color.White;
+            this.btnApply.Image = global::Job_Application_Management.Properties.Resources.icons8_paper_plane_32__1_;
+            this.btnApply.Location = new System.Drawing.Point(16, 141);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(524, 50);
+            this.btnApply.TabIndex = 4;
+            this.btnApply.Text = "Ứng tuyển ngay";
+            this.btnApply.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnApply.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnApply.UseVisualStyleBackColor = false;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // panel6
             // 
@@ -140,10 +147,34 @@
             this.panel6.Controls.Add(this.label27);
             this.panel6.Controls.Add(this.lblSalary);
             this.panel6.Controls.Add(this.label25);
-            this.panel6.Location = new System.Drawing.Point(16, 53);
+            this.panel6.Location = new System.Drawing.Point(16, 48);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(682, 62);
+            this.panel6.Size = new System.Drawing.Size(682, 87);
             this.panel6.TabIndex = 1;
+            // 
+            // label33
+            // 
+            this.label33.Image = global::Job_Application_Management.Properties.Resources.icons8_hourglass_32;
+            this.label33.Location = new System.Drawing.Point(412, 7);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(51, 43);
+            this.label33.TabIndex = 11;
+            // 
+            // label32
+            // 
+            this.label32.Image = global::Job_Application_Management.Properties.Resources.icons8_place_marker_32;
+            this.label32.Location = new System.Drawing.Point(188, 7);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(59, 43);
+            this.label32.TabIndex = 10;
+            // 
+            // label31
+            // 
+            this.label31.Image = global::Job_Application_Management.Properties.Resources.icons8_crypto_trading_spot_32;
+            this.label31.Location = new System.Drawing.Point(17, 7);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(51, 46);
+            this.label31.TabIndex = 9;
             // 
             // lblExp
             // 
@@ -165,17 +196,16 @@
             // 
             // lblAddress
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(277, 34);
+            this.lblAddress.Location = new System.Drawing.Point(245, 34);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(51, 16);
+            this.lblAddress.Size = new System.Drawing.Size(170, 53);
             this.lblAddress.TabIndex = 6;
-            this.lblAddress.Text = "label28";
+            this.lblAddress.Text = "Thành phố Hồ Chí Minh Gò Vấp";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(277, 7);
+            this.label27.Location = new System.Drawing.Point(245, 7);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(60, 16);
             this.label27.TabIndex = 5;
@@ -212,8 +242,8 @@
             // pnlCompany
             // 
             this.pnlCompany.BackColor = System.Drawing.Color.White;
-            this.pnlCompany.Controls.Add(this.label1);
-            this.pnlCompany.Controls.Add(this.label5);
+            this.pnlCompany.Controls.Add(this.lblSeeCompany);
+            this.pnlCompany.Controls.Add(this.lblAdress2);
             this.pnlCompany.Controls.Add(this.label4);
             this.pnlCompany.Controls.Add(this.lblComName);
             this.pnlCompany.Controls.Add(this.lblComAddress);
@@ -224,14 +254,28 @@
             this.pnlCompany.Size = new System.Drawing.Size(454, 198);
             this.pnlCompany.TabIndex = 1;
             // 
-            // label5
+            // lblSeeCompany
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(156, 133);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Địa điểm của công ty";
+            this.lblSeeCompany.AutoSize = true;
+            this.lblSeeCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeeCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
+            this.lblSeeCompany.Image = global::Job_Application_Management.Properties.Resources.icons8_link_16;
+            this.lblSeeCompany.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblSeeCompany.Location = new System.Drawing.Point(119, 164);
+            this.lblSeeCompany.Name = "lblSeeCompany";
+            this.lblSeeCompany.Size = new System.Drawing.Size(216, 20);
+            this.lblSeeCompany.TabIndex = 9;
+            this.lblSeeCompany.Text = "Xem trang công ty         ";
+            this.lblSeeCompany.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblAdress2
+            // 
+            this.lblAdress2.AutoSize = true;
+            this.lblAdress2.Location = new System.Drawing.Point(156, 133);
+            this.lblAdress2.Name = "lblAdress2";
+            this.lblAdress2.Size = new System.Drawing.Size(131, 16);
+            this.lblAdress2.TabIndex = 8;
+            this.lblAdress2.Text = "Địa điểm của công ty";
             // 
             // label4
             // 
@@ -269,11 +313,21 @@
             this.lblScale.TabIndex = 4;
             this.lblScale.Text = "Quy mô";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_company_100;
+            this.pictureBox1.Location = new System.Drawing.Point(26, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.flpnRecruitment);
             this.panel1.Controls.Add(this.pnlOverview);
-            this.panel1.Controls.Add(this.pnlDetails);
             this.panel1.Controls.Add(this.pnlCompany);
             this.panel1.Controls.Add(this.pnl);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -282,24 +336,56 @@
             this.panel1.Size = new System.Drawing.Size(1187, 650);
             this.panel1.TabIndex = 0;
             // 
+            // flpnRecruitment
+            // 
+            this.flpnRecruitment.AutoScroll = true;
+            this.flpnRecruitment.BackColor = System.Drawing.Color.White;
+            this.flpnRecruitment.Controls.Add(this.label7);
+            this.flpnRecruitment.Controls.Add(this.label8);
+            this.flpnRecruitment.Location = new System.Drawing.Point(0, 222);
+            this.flpnRecruitment.Name = "flpnRecruitment";
+            this.flpnRecruitment.Size = new System.Drawing.Size(710, 428);
+            this.flpnRecruitment.TabIndex = 4;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(17, 25);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "|";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(26, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(171, 20);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Chi tiết tin tuyển dụng";
+            // 
             // pnlOverview
             // 
             this.pnlOverview.BackColor = System.Drawing.Color.White;
-            this.pnlOverview.Controls.Add(this.label6);
+            this.pnlOverview.Controls.Add(this.lblStatus);
+            this.pnlOverview.Controls.Add(this.lblJobId);
             this.pnlOverview.Controls.Add(this.label24);
             this.pnlOverview.Controls.Add(this.label23);
             this.pnlOverview.Controls.Add(this.label22);
-            this.pnlOverview.Controls.Add(this.label21);
+            this.pnlOverview.Controls.Add(this.lblWorkingForm);
             this.pnlOverview.Controls.Add(this.label20);
             this.pnlOverview.Controls.Add(this.label19);
-            this.pnlOverview.Controls.Add(this.label18);
+            this.pnlOverview.Controls.Add(this.lblNumberCan);
             this.pnlOverview.Controls.Add(this.label17);
             this.pnlOverview.Controls.Add(this.label16);
-            this.pnlOverview.Controls.Add(this.label15);
+            this.pnlOverview.Controls.Add(this.lblExp2);
             this.pnlOverview.Controls.Add(this.label14);
             this.pnlOverview.Controls.Add(this.label13);
-            this.pnlOverview.Controls.Add(this.label12);
-            this.pnlOverview.Controls.Add(this.label11);
             this.pnlOverview.Controls.Add(this.label10);
             this.pnlOverview.Controls.Add(this.label9);
             this.pnlOverview.Location = new System.Drawing.Point(733, 222);
@@ -307,15 +393,24 @@
             this.pnlOverview.Size = new System.Drawing.Size(454, 426);
             this.pnlOverview.TabIndex = 3;
             // 
-            // label6
+            // lblStatus
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(190, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 20);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Mã công việc";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(110, 59);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(66, 16);
+            this.lblStatus.TabIndex = 21;
+            this.lblStatus.Text = "Tình trạng";
+            // 
+            // lblJobId
+            // 
+            this.lblJobId.AutoSize = true;
+            this.lblJobId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJobId.Location = new System.Drawing.Point(190, 16);
+            this.lblJobId.Name = "lblJobId";
+            this.lblJobId.Size = new System.Drawing.Size(108, 20);
+            this.lblJobId.TabIndex = 20;
+            this.lblJobId.Text = "Mã công việc";
             // 
             // label24
             // 
@@ -335,14 +430,23 @@
             this.label23.TabIndex = 18;
             this.label23.Text = "Giới tính";
             // 
-            // label21
+            // label22
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(110, 312);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(73, 16);
-            this.label21.TabIndex = 16;
-            this.label21.Text = "Tại công ty";
+            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label22.Image = global::Job_Application_Management.Properties.Resources.icons8_person_32;
+            this.label22.Location = new System.Drawing.Point(23, 355);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(51, 44);
+            this.label22.TabIndex = 17;
+            // 
+            // lblWorkingForm
+            // 
+            this.lblWorkingForm.AutoSize = true;
+            this.lblWorkingForm.Location = new System.Drawing.Point(110, 312);
+            this.lblWorkingForm.Name = "lblWorkingForm";
+            this.lblWorkingForm.Size = new System.Drawing.Size(73, 16);
+            this.lblWorkingForm.TabIndex = 16;
+            this.lblWorkingForm.Text = "Tại công ty";
             // 
             // label20
             // 
@@ -353,14 +457,23 @@
             this.label20.TabIndex = 15;
             this.label20.Text = "Hình thức làm việc";
             // 
-            // label18
+            // label19
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(110, 235);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(81, 16);
-            this.label18.TabIndex = 13;
-            this.label18.Text = "20 nhân viên";
+            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label19.Image = global::Job_Application_Management.Properties.Resources.icons8_bag_32;
+            this.label19.Location = new System.Drawing.Point(23, 280);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(51, 44);
+            this.label19.TabIndex = 14;
+            // 
+            // lblNumberCan
+            // 
+            this.lblNumberCan.AutoSize = true;
+            this.lblNumberCan.Location = new System.Drawing.Point(110, 235);
+            this.lblNumberCan.Name = "lblNumberCan";
+            this.lblNumberCan.Size = new System.Drawing.Size(81, 16);
+            this.lblNumberCan.TabIndex = 13;
+            this.lblNumberCan.Text = "20 nhân viên";
             // 
             // label17
             // 
@@ -371,14 +484,23 @@
             this.label17.TabIndex = 12;
             this.label17.Text = "Số lượng tuyển";
             // 
-            // label15
+            // label16
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(110, 160);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(124, 16);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "+1 năm kinh nghiệm";
+            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label16.Image = global::Job_Application_Management.Properties.Resources.icons8_group_32;
+            this.label16.Location = new System.Drawing.Point(23, 207);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(51, 44);
+            this.label16.TabIndex = 11;
+            // 
+            // lblExp2
+            // 
+            this.lblExp2.AutoSize = true;
+            this.lblExp2.Location = new System.Drawing.Point(110, 160);
+            this.lblExp2.Name = "lblExp2";
+            this.lblExp2.Size = new System.Drawing.Size(124, 16);
+            this.lblExp2.TabIndex = 10;
+            this.lblExp2.Text = "+1 năm kinh nghiệm";
             // 
             // label14
             // 
@@ -388,94 +510,6 @@
             this.label14.Size = new System.Drawing.Size(79, 16);
             this.label14.TabIndex = 9;
             this.label14.Text = "Kinh nghiệm";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(110, 86);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 16);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Cấp bậc 1";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(110, 58);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 16);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Cấp bậc";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(19, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 20);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Thông tin chung";
-            // 
-            // pnlDetails
-            // 
-            this.pnlDetails.AutoScroll = true;
-            this.pnlDetails.BackColor = System.Drawing.Color.White;
-            this.pnlDetails.Controls.Add(this.label8);
-            this.pnlDetails.Controls.Add(this.label7);
-            this.pnlDetails.Location = new System.Drawing.Point(0, 221);
-            this.pnlDetails.Name = "pnlDetails";
-            this.pnlDetails.Size = new System.Drawing.Size(710, 429);
-            this.pnlDetails.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(36, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(171, 20);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Chi tiết tin tuyển dụng";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(13, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(17, 25);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "|";
-            // 
-            // label22
-            // 
-            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label22.Image = global::Job_Application_Management.Properties.Resources.icons8_person_32;
-            this.label22.Location = new System.Drawing.Point(23, 355);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(51, 44);
-            this.label22.TabIndex = 17;
-            // 
-            // label19
-            // 
-            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label19.Image = global::Job_Application_Management.Properties.Resources.icons8_bag_32;
-            this.label19.Location = new System.Drawing.Point(23, 280);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(51, 44);
-            this.label19.TabIndex = 14;
-            // 
-            // label16
-            // 
-            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label16.Image = global::Job_Application_Management.Properties.Resources.icons8_group_32;
-            this.label16.Location = new System.Drawing.Point(23, 207);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(51, 44);
-            this.label16.TabIndex = 11;
             // 
             // label13
             // 
@@ -495,85 +529,17 @@
             this.label10.Size = new System.Drawing.Size(51, 44);
             this.label10.TabIndex = 5;
             // 
-            // label1
+            // label9
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.label1.Image = global::Job_Application_Management.Properties.Resources.icons8_link_16;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(119, 164);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 20);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Xem trang công ty         ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(19, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(128, 20);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Thông tin chung";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_company_100;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnSaved
-            // 
-            this.btnSaved.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaved.ForeColor = System.Drawing.Color.Green;
-            this.btnSaved.Image = global::Job_Application_Management.Properties.Resources.icons8_heart_16;
-            this.btnSaved.Location = new System.Drawing.Point(546, 148);
-            this.btnSaved.Name = "btnSaved";
-            this.btnSaved.Size = new System.Drawing.Size(152, 43);
-            this.btnSaved.TabIndex = 5;
-            this.btnSaved.Text = "Lưu tin";
-            this.btnSaved.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaved.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSaved.UseVisualStyleBackColor = true;
-            // 
-            // btnApply
-            // 
-            this.btnApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApply.ForeColor = System.Drawing.Color.White;
-            this.btnApply.Image = global::Job_Application_Management.Properties.Resources.icons8_paper_plane_32__1_;
-            this.btnApply.Location = new System.Drawing.Point(16, 148);
-            this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(524, 43);
-            this.btnApply.TabIndex = 4;
-            this.btnApply.Text = "Ứng tuyển ngay";
-            this.btnApply.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnApply.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnApply.UseVisualStyleBackColor = false;
-            this.btnApply.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label33
-            // 
-            this.label33.Image = global::Job_Application_Management.Properties.Resources.icons8_hourglass_32;
-            this.label33.Location = new System.Drawing.Point(412, 7);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(51, 43);
-            this.label33.TabIndex = 11;
-            // 
-            // label32
-            // 
-            this.label32.Image = global::Job_Application_Management.Properties.Resources.icons8_place_marker_32;
-            this.label32.Location = new System.Drawing.Point(202, 7);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(59, 43);
-            this.label32.TabIndex = 10;
-            // 
-            // label31
-            // 
-            this.label31.Image = global::Job_Application_Management.Properties.Resources.icons8_crypto_trading_spot_32;
-            this.label31.Location = new System.Drawing.Point(17, 7);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(51, 46);
-            this.label31.TabIndex = 9;
-            // 
-            // FEmployer_SeeCVDetailOfCandidate
+            // FCandidate_SelectedJobDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -581,21 +547,22 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1187, 650);
             this.Controls.Add(this.panel1);
-            this.Name = "FEmployer_SeeCVDetailOfCandidate";
+            this.Name = "FCandidate_SelectedJobDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCandidate_SelectedJobDetails";
+            this.Load += new System.EventHandler(this.FEmployer_SeeCVDetailOfCandidate_Load);
             this.pnl.ResumeLayout(false);
             this.pnl.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.pnlCompany.ResumeLayout(false);
             this.pnlCompany.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.flpnRecruitment.ResumeLayout(false);
+            this.flpnRecruitment.PerformLayout();
             this.pnlOverview.ResumeLayout(false);
             this.pnlOverview.PerformLayout();
-            this.pnlDetails.ResumeLayout(false);
-            this.pnlDetails.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -607,8 +574,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSaved;
         private System.Windows.Forms.Button btnApply;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lblJobName_Address;
         private System.Windows.Forms.Label lblComName;
@@ -616,23 +581,18 @@
         private System.Windows.Forms.Label lblScale;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlOverview;
-        private System.Windows.Forms.Panel pnlDetails;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblWorkingForm;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblNumberCan;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblExp2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label33;
@@ -644,9 +604,13 @@
         private System.Windows.Forms.Label lblSalary;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblAdress2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblJobId;
+        private System.Windows.Forms.Label lblSeeCompany;
+        private System.Windows.Forms.FlowLayoutPanel flpnRecruitment;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblStatus;
     }
 }

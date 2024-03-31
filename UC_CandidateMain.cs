@@ -13,8 +13,8 @@ namespace Job_Application_Management
 {
     public partial class UC_CandidateMain : UserControl
     {
-        string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
-        string sqlQuery;
+        CandidateDAO canDAO = new CandidateDAO();
+        private Job myJob = new Job();
         #region Properties
         private string jobName;
         private string companyName;
@@ -71,28 +71,13 @@ namespace Job_Application_Management
 
         private void UC_CandidateMain_Click(object sender, EventArgs e)
         {
-            FEmployer_SeeCVDetailOfCandidate selected = new FEmployer_SeeCVDetailOfCandidate(JobID);
+            FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails(JobID);
             selected.ShowDialog();
         }
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connStr))
-            {
-                conn.Open();
-                sqlQuery = "INSERT INTO SavedJobs(TimeSaved, JobID)" +
-                            " VALUES(@times,@jId)";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                SqlParameter[] lstParam =
-                {
-                    new SqlParameter("@times", SqlDbType.Date) {Value = DateTime.Today},
-                    new SqlParameter("@jId", SqlDbType.VarChar) { Value = JobID },
-                };
-                cmd.Parameters.AddRange(lstParam);
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Luu thanh cong");
-
-            }
+            canDAO.SaveSavedJob(jobid);
         }
     }
 }

@@ -107,6 +107,8 @@ namespace Job_Application_Management
             pnlNav.Height = btnCompanies.Height;
             pnlNav.Top = btnCompanies.Top;
             btnCompanies.BackColor = Color.FromArgb(224, 224, 224);
+            FCandidate_AppliedJobs applied = new FCandidate_AppliedJobs();
+            applied.ShowDialog();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

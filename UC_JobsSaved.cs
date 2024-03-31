@@ -57,6 +57,10 @@ namespace Job_Application_Management
             set { jobId = value; }
         }
         #endregion
+        public Button BtnAdd
+        {
+            get { return btnAdd; }
+        }
         public UC_JobsSaved()
         {
             InitializeComponent();
