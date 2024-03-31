@@ -89,6 +89,12 @@
     <Compile Include="FCandidate_SavedJobs.Designer.cs">
       <DependentUpon>FCandidate_SavedJobs.cs</DependentUpon>
     </Compile>
+    <Compile Include="FCandidate_CompanyDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCandidate_CompanyDetails.Designer.cs">
+      <DependentUpon>FCandidate_CompanyDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCandidate_SelectedJobDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     <Compile Include="FSignUp.Designer.cs">
       <DependentUpon>FSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Job.cs" />
     <Compile Include="MainFormManager.cs" />
     <Compile Include="Person.cs" />
@@ -190,6 +199,12 @@
     </Compile>
     <Compile Include="UC_CandidateMain.Designer.cs">
       <DependentUpon>UC_CandidateMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_RecruitmentCompany.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_RecruitmentCompany.Designer.cs">
+      <DependentUpon>UC_RecruitmentCompany.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Resume_Certificate.cs">
       <SubType>UserControl</SubType>
@@ -260,6 +275,9 @@
     <EmbeddedResource Include="FCandidate_SavedJobs.resx">
       <DependentUpon>FCandidate_SavedJobs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FCandidate_CompanyDetails.resx">
+      <DependentUpon>FCandidate_CompanyDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCandidate_SelectedJobDetails.resx">
       <DependentUpon>FCandidate_SelectedJobDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +335,9 @@
     </Compile>
     <EmbeddedResource Include="UC_CandidateMain.resx">
       <DependentUpon>UC_CandidateMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_RecruitmentCompany.resx">
+      <DependentUpon>UC_RecruitmentCompany.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Resume_Certificate.resx">
       <DependentUpon>UC_Resume_Certificate.cs</DependentUpon>
@@ -594,6 +615,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-company-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-company-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-link-16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

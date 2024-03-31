@@ -42,5 +42,10 @@ namespace Job_Application_Management
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+            FCandidate_CompanyDetails com = new FCandidate_CompanyDetails();
+            com.ShowDialog();
+        }
     }
 }

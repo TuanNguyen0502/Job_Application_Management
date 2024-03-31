@@ -31,14 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.pnl = new System.Windows.Forms.Panel();
-            this.btnSaved = new System.Windows.Forms.Button();
-            this.btnApply = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.lblExp = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -52,36 +47,42 @@
             this.lblComName = new System.Windows.Forms.Label();
             this.lblComAddress = new System.Windows.Forms.Label();
             this.lblScale = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlOverview = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pnlDetails = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSaved = new System.Windows.Forms.Button();
+            this.btnApply = new System.Windows.Forms.Button();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.pnl.SuspendLayout();
             this.panel6.SuspendLayout();
             this.pnlCompany.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlOverview.SuspendLayout();
             this.pnlDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -109,36 +110,6 @@
             this.pnl.Name = "pnl";
             this.pnl.Size = new System.Drawing.Size(710, 198);
             this.pnl.TabIndex = 0;
-            // 
-            // btnSaved
-            // 
-            this.btnSaved.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaved.ForeColor = System.Drawing.Color.Green;
-            this.btnSaved.Image = global::Job_Application_Management.Properties.Resources.icons8_heart_16;
-            this.btnSaved.Location = new System.Drawing.Point(546, 148);
-            this.btnSaved.Name = "btnSaved";
-            this.btnSaved.Size = new System.Drawing.Size(152, 43);
-            this.btnSaved.TabIndex = 5;
-            this.btnSaved.Text = "Lưu tin";
-            this.btnSaved.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaved.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSaved.UseVisualStyleBackColor = true;
-            // 
-            // btnApply
-            // 
-            this.btnApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
-            this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApply.ForeColor = System.Drawing.Color.White;
-            this.btnApply.Image = global::Job_Application_Management.Properties.Resources.icons8_paper_plane_32__1_;
-            this.btnApply.Location = new System.Drawing.Point(16, 148);
-            this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(524, 43);
-            this.btnApply.TabIndex = 4;
-            this.btnApply.Text = "Ứng tuyển ngay";
-            this.btnApply.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnApply.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnApply.UseVisualStyleBackColor = false;
-            this.btnApply.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -173,30 +144,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(682, 62);
             this.panel6.TabIndex = 1;
-            // 
-            // label33
-            // 
-            this.label33.Image = global::Job_Application_Management.Properties.Resources.icons8_hourglass_32;
-            this.label33.Location = new System.Drawing.Point(412, 7);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(51, 43);
-            this.label33.TabIndex = 11;
-            // 
-            // label32
-            // 
-            this.label32.Image = global::Job_Application_Management.Properties.Resources.icons8_place_marker_32;
-            this.label32.Location = new System.Drawing.Point(202, 7);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(59, 43);
-            this.label32.TabIndex = 10;
-            // 
-            // label31
-            // 
-            this.label31.Image = global::Job_Application_Management.Properties.Resources.icons8_crypto_trading_spot_32;
-            this.label31.Location = new System.Drawing.Point(17, 7);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(51, 46);
-            this.label31.TabIndex = 9;
             // 
             // lblExp
             // 
@@ -265,13 +212,14 @@
             // pnlCompany
             // 
             this.pnlCompany.BackColor = System.Drawing.Color.White;
+            this.pnlCompany.Controls.Add(this.label1);
             this.pnlCompany.Controls.Add(this.label5);
             this.pnlCompany.Controls.Add(this.label4);
             this.pnlCompany.Controls.Add(this.lblComName);
             this.pnlCompany.Controls.Add(this.lblComAddress);
             this.pnlCompany.Controls.Add(this.lblScale);
             this.pnlCompany.Controls.Add(this.pictureBox1);
-            this.pnlCompany.Location = new System.Drawing.Point(733, 0);
+            this.pnlCompany.Location = new System.Drawing.Point(733, 2);
             this.pnlCompany.Name = "pnlCompany";
             this.pnlCompany.Size = new System.Drawing.Size(454, 198);
             this.pnlCompany.TabIndex = 1;
@@ -279,7 +227,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(167, 161);
+            this.label5.Location = new System.Drawing.Point(156, 133);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 16);
             this.label5.TabIndex = 8;
@@ -288,7 +236,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(167, 125);
+            this.label4.Location = new System.Drawing.Point(156, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 16);
             this.label4.TabIndex = 7;
@@ -297,7 +245,7 @@
             // lblComName
             // 
             this.lblComName.AutoSize = true;
-            this.lblComName.Location = new System.Drawing.Point(167, 20);
+            this.lblComName.Location = new System.Drawing.Point(156, 15);
             this.lblComName.Name = "lblComName";
             this.lblComName.Size = new System.Drawing.Size(77, 16);
             this.lblComName.TabIndex = 6;
@@ -306,7 +254,7 @@
             // lblComAddress
             // 
             this.lblComAddress.AutoSize = true;
-            this.lblComAddress.Location = new System.Drawing.Point(23, 161);
+            this.lblComAddress.Location = new System.Drawing.Point(23, 133);
             this.lblComAddress.Name = "lblComAddress";
             this.lblComAddress.Size = new System.Drawing.Size(60, 16);
             this.lblComAddress.TabIndex = 5;
@@ -315,19 +263,11 @@
             // lblScale
             // 
             this.lblScale.AutoSize = true;
-            this.lblScale.Location = new System.Drawing.Point(23, 125);
+            this.lblScale.Location = new System.Drawing.Point(23, 107);
             this.lblScale.Name = "lblScale";
             this.lblScale.Size = new System.Drawing.Size(53, 16);
             this.lblScale.TabIndex = 4;
             this.lblScale.Text = "Quy mô";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(26, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 80);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -362,7 +302,7 @@
             this.pnlOverview.Controls.Add(this.label11);
             this.pnlOverview.Controls.Add(this.label10);
             this.pnlOverview.Controls.Add(this.label9);
-            this.pnlOverview.Location = new System.Drawing.Point(733, 221);
+            this.pnlOverview.Location = new System.Drawing.Point(733, 222);
             this.pnlOverview.Name = "pnlOverview";
             this.pnlOverview.Size = new System.Drawing.Size(454, 426);
             this.pnlOverview.TabIndex = 3;
@@ -382,9 +322,9 @@
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(110, 385);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(51, 16);
+            this.label24.Size = new System.Drawing.Size(95, 16);
             this.label24.TabIndex = 19;
-            this.label24.Text = "label24";
+            this.label24.Text = "Không yêu cầu";
             // 
             // label23
             // 
@@ -395,23 +335,14 @@
             this.label23.TabIndex = 18;
             this.label23.Text = "Giới tính";
             // 
-            // label22
-            // 
-            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label22.Image = global::Job_Application_Management.Properties.Resources.icons8_person_32;
-            this.label22.Location = new System.Drawing.Point(23, 355);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(51, 44);
-            this.label22.TabIndex = 17;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(110, 312);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(51, 16);
+            this.label21.Size = new System.Drawing.Size(73, 16);
             this.label21.TabIndex = 16;
-            this.label21.Text = "label21";
+            this.label21.Text = "Tại công ty";
             // 
             // label20
             // 
@@ -422,23 +353,14 @@
             this.label20.TabIndex = 15;
             this.label20.Text = "Hình thức làm việc";
             // 
-            // label19
-            // 
-            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label19.Image = global::Job_Application_Management.Properties.Resources.icons8_bag_32;
-            this.label19.Location = new System.Drawing.Point(23, 280);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(51, 44);
-            this.label19.TabIndex = 14;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(110, 235);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(51, 16);
+            this.label18.Size = new System.Drawing.Size(81, 16);
             this.label18.TabIndex = 13;
-            this.label18.Text = "label18";
+            this.label18.Text = "20 nhân viên";
             // 
             // label17
             // 
@@ -449,23 +371,14 @@
             this.label17.TabIndex = 12;
             this.label17.Text = "Số lượng tuyển";
             // 
-            // label16
-            // 
-            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label16.Image = global::Job_Application_Management.Properties.Resources.icons8_group_32;
-            this.label16.Location = new System.Drawing.Point(23, 207);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(51, 44);
-            this.label16.TabIndex = 11;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(110, 160);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(51, 16);
+            this.label15.Size = new System.Drawing.Size(124, 16);
             this.label15.TabIndex = 10;
-            this.label15.Text = "label15";
+            this.label15.Text = "+1 năm kinh nghiệm";
             // 
             // label14
             // 
@@ -476,23 +389,14 @@
             this.label14.TabIndex = 9;
             this.label14.Text = "Kinh nghiệm";
             // 
-            // label13
-            // 
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label13.Image = global::Job_Application_Management.Properties.Resources.icons8_hourglass_32;
-            this.label13.Location = new System.Drawing.Point(23, 132);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 44);
-            this.label13.TabIndex = 8;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(110, 86);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(51, 16);
+            this.label12.Size = new System.Drawing.Size(68, 16);
             this.label12.TabIndex = 7;
-            this.label12.Text = "label12";
+            this.label12.Text = "Cấp bậc 1";
             // 
             // label11
             // 
@@ -502,15 +406,6 @@
             this.label11.Size = new System.Drawing.Size(58, 16);
             this.label11.TabIndex = 6;
             this.label11.Text = "Cấp bậc";
-            // 
-            // label10
-            // 
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label10.Image = global::Job_Application_Management.Properties.Resources.icons8_medal_32;
-            this.label10.Location = new System.Drawing.Point(23, 58);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 44);
-            this.label10.TabIndex = 5;
             // 
             // label9
             // 
@@ -524,6 +419,7 @@
             // 
             // pnlDetails
             // 
+            this.pnlDetails.AutoScroll = true;
             this.pnlDetails.BackColor = System.Drawing.Color.White;
             this.pnlDetails.Controls.Add(this.label8);
             this.pnlDetails.Controls.Add(this.label7);
@@ -554,7 +450,130 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "|";
             // 
-            // FCandidate_SelectedJobDetails
+            // label22
+            // 
+            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label22.Image = global::Job_Application_Management.Properties.Resources.icons8_person_32;
+            this.label22.Location = new System.Drawing.Point(23, 355);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(51, 44);
+            this.label22.TabIndex = 17;
+            // 
+            // label19
+            // 
+            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label19.Image = global::Job_Application_Management.Properties.Resources.icons8_bag_32;
+            this.label19.Location = new System.Drawing.Point(23, 280);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(51, 44);
+            this.label19.TabIndex = 14;
+            // 
+            // label16
+            // 
+            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label16.Image = global::Job_Application_Management.Properties.Resources.icons8_group_32;
+            this.label16.Location = new System.Drawing.Point(23, 207);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(51, 44);
+            this.label16.TabIndex = 11;
+            // 
+            // label13
+            // 
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label13.Image = global::Job_Application_Management.Properties.Resources.icons8_hourglass_32;
+            this.label13.Location = new System.Drawing.Point(23, 132);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(51, 44);
+            this.label13.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label10.Image = global::Job_Application_Management.Properties.Resources.icons8_medal_32;
+            this.label10.Location = new System.Drawing.Point(23, 58);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 44);
+            this.label10.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
+            this.label1.Image = global::Job_Application_Management.Properties.Resources.icons8_link_16;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(119, 164);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(216, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Xem trang công ty         ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_company_100;
+            this.pictureBox1.Location = new System.Drawing.Point(26, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnSaved
+            // 
+            this.btnSaved.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaved.ForeColor = System.Drawing.Color.Green;
+            this.btnSaved.Image = global::Job_Application_Management.Properties.Resources.icons8_heart_16;
+            this.btnSaved.Location = new System.Drawing.Point(546, 148);
+            this.btnSaved.Name = "btnSaved";
+            this.btnSaved.Size = new System.Drawing.Size(152, 43);
+            this.btnSaved.TabIndex = 5;
+            this.btnSaved.Text = "Lưu tin";
+            this.btnSaved.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSaved.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSaved.UseVisualStyleBackColor = true;
+            // 
+            // btnApply
+            // 
+            this.btnApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
+            this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApply.ForeColor = System.Drawing.Color.White;
+            this.btnApply.Image = global::Job_Application_Management.Properties.Resources.icons8_paper_plane_32__1_;
+            this.btnApply.Location = new System.Drawing.Point(16, 148);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(524, 43);
+            this.btnApply.TabIndex = 4;
+            this.btnApply.Text = "Ứng tuyển ngay";
+            this.btnApply.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnApply.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnApply.UseVisualStyleBackColor = false;
+            this.btnApply.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label33
+            // 
+            this.label33.Image = global::Job_Application_Management.Properties.Resources.icons8_hourglass_32;
+            this.label33.Location = new System.Drawing.Point(412, 7);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(51, 43);
+            this.label33.TabIndex = 11;
+            // 
+            // label32
+            // 
+            this.label32.Image = global::Job_Application_Management.Properties.Resources.icons8_place_marker_32;
+            this.label32.Location = new System.Drawing.Point(202, 7);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(59, 43);
+            this.label32.TabIndex = 10;
+            // 
+            // label31
+            // 
+            this.label31.Image = global::Job_Application_Management.Properties.Resources.icons8_crypto_trading_spot_32;
+            this.label31.Location = new System.Drawing.Point(17, 7);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(51, 46);
+            this.label31.TabIndex = 9;
+            // 
+            // FEmployer_SeeCVDetailOfCandidate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -562,7 +581,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1187, 650);
             this.Controls.Add(this.panel1);
-            this.Name = "FCandidate_SelectedJobDetails";
+            this.Name = "FEmployer_SeeCVDetailOfCandidate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCandidate_SelectedJobDetails";
             this.pnl.ResumeLayout(false);
@@ -571,12 +590,12 @@
             this.panel6.PerformLayout();
             this.pnlCompany.ResumeLayout(false);
             this.pnlCompany.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.pnlOverview.ResumeLayout(false);
             this.pnlOverview.PerformLayout();
             this.pnlDetails.ResumeLayout(false);
             this.pnlDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -628,5 +647,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
     }
 }
