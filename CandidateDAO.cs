@@ -161,6 +161,17 @@ namespace Job_Application_Management
                 };
             dbConn.ExecuteWriteData(sqlQuery, lstParam);
         }
+        public List<Dictionary<string,object>> GetCompanyFromDB(string companyName)
+        {
+            sqlQuery = $"SELECT *" 
+                        +" FROM Company"
+                        +" WHERE Name = @CompanyName";
+            SqlParameter[] lstParam =
+            {
+                new SqlParameter("@CompanyName", SqlDbType.NVarChar) { Value = companyName },
+            };
+            return dbConn.ExecuteReaderData(sqlQuery, lstParam);
+        }
         public void SaveCVToDatabase(CV cv)
         {
             sqlQuery = "INSERT INTO Resume                              (CddID,JobID,Objective,UniversityName,Major,UniversityStartDate," 

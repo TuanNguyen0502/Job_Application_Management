@@ -28,153 +28,120 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gradientPanel1 = new Job_Application_Management.GradientPanel();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gradientPanel2 = new Job_Application_Management.GradientPanel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblIntroduction = new System.Windows.Forms.Label();
+            this.lblBL = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblManager = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.gradientPanel3 = new Job_Application_Management.GradientPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.uC_RecruitmentCompany1 = new Job_Application_Management.UC_RecruitmentCompany();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.gradientPanel4 = new Job_Application_Management.GradientPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.gradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gradientPanel2 = new Job_Application_Management.GradientPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.gradientPanel1 = new Job_Application_Management.GradientPanel();
+            this.kbtnFollower = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.lblNumberFollower = new System.Windows.Forms.Label();
+            this.lblNumberEmp = new System.Windows.Forms.Label();
+            this.lblCompanyName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.gradientPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.gradientPanel3.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.gradientPanel4.SuspendLayout();
+            this.gradientPanel2.SuspendLayout();
+            this.gradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gradientPanel1
-            // 
-            this.gradientPanel1.Angle = 0F;
-            this.gradientPanel1.BackColor = System.Drawing.Color.LightGreen;
-            this.gradientPanel1.BottomColor = System.Drawing.Color.Green;
-            this.gradientPanel1.Controls.Add(this.kryptonButton1);
-            this.gradientPanel1.Controls.Add(this.label3);
-            this.gradientPanel1.Controls.Add(this.label2);
-            this.gradientPanel1.Controls.Add(this.label1);
-            this.gradientPanel1.Controls.Add(this.pictureBox1);
-            this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(965, 151);
-            this.gradientPanel1.TabIndex = 0;
-            this.gradientPanel1.TopColor = System.Drawing.Color.LightGreen;
-            // 
-            // kryptonButton1
-            // 
-            this.kryptonButton1.Location = new System.Drawing.Point(711, 50);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(202, 53);
-            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateCommon.Border.Rounding = 12;
-            this.kryptonButton1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-1, -1, 10, -1);
-            this.kryptonButton1.TabIndex = 4;
-            this.kryptonButton1.Values.Text = "Theo dõi công ty";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LightGreen;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(366, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 18);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Số lượng người theo dõi";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightGreen;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(163, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Số lượng nhân viên";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightGreen;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(163, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "TÊN CÔNG TY";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightGreen;
-            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_company_100;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.lblIntroduction);
+            this.panel1.Controls.Add(this.lblBL);
             this.panel1.Controls.Add(this.gradientPanel2);
             this.panel1.Location = new System.Drawing.Point(0, 172);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(546, 194);
+            this.panel1.Size = new System.Drawing.Size(546, 360);
             this.panel1.TabIndex = 1;
             // 
-            // gradientPanel2
+            // lblIntroduction
             // 
-            this.gradientPanel2.Angle = 0F;
-            this.gradientPanel2.BackColor = System.Drawing.Color.LightGreen;
-            this.gradientPanel2.BottomColor = System.Drawing.Color.Empty;
-            this.gradientPanel2.Controls.Add(this.label4);
-            this.gradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gradientPanel2.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel2.Name = "gradientPanel2";
-            this.gradientPanel2.Size = new System.Drawing.Size(546, 39);
-            this.gradientPanel2.TabIndex = 0;
-            this.gradientPanel2.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
+            this.lblIntroduction.AutoSize = true;
+            this.lblIntroduction.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIntroduction.Location = new System.Drawing.Point(26, 120);
+            this.lblIntroduction.Name = "lblIntroduction";
+            this.lblIntroduction.Size = new System.Drawing.Size(184, 17);
+            this.lblIntroduction.TabIndex = 4;
+            this.lblIntroduction.Text = "Giới thiệu cơ bản về công ty";
             // 
-            // label4
+            // lblBL
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(24, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Giới thiệu công ty";
+            this.lblBL.AutoSize = true;
+            this.lblBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBL.Location = new System.Drawing.Point(26, 61);
+            this.lblBL.Name = "lblBL";
+            this.lblBL.Size = new System.Drawing.Size(147, 17);
+            this.lblBL.TabIndex = 3;
+            this.lblBL.Text = "Giấy phép kinh doanh";
             // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.lblManager);
+            this.panel2.Controls.Add(this.lblAddress);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.gradientPanel3);
             this.panel2.Location = new System.Drawing.Point(568, 172);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(397, 194);
+            this.panel2.Size = new System.Drawing.Size(397, 360);
             this.panel2.TabIndex = 2;
+            // 
+            // lblManager
+            // 
+            this.lblManager.AutoSize = true;
+            this.lblManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManager.Location = new System.Drawing.Point(14, 95);
+            this.lblManager.Name = "lblManager";
+            this.lblManager.Size = new System.Drawing.Size(46, 17);
+            this.lblManager.TabIndex = 5;
+            this.lblManager.Text = "label1";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(14, 174);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(46, 17);
+            this.lblAddress.TabIndex = 4;
+            this.lblAddress.Text = "label8";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Image = global::Job_Application_Management.Properties.Resources.icons8_address_16;
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label7.Location = new System.Drawing.Point(14, 139);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(129, 17);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "       Địa chỉ công ty";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Image = global::Job_Application_Management.Properties.Resources.icons8_manager_16;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label6.Location = new System.Drawing.Point(14, 61);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(142, 17);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "     Tên người quản lý";
             // 
             // gradientPanel3
             // 
@@ -202,73 +169,134 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Thông tin liên hệ";
             // 
-            // uC_RecruitmentCompany1
+            // gradientPanel2
             // 
-            this.uC_RecruitmentCompany1.AutoScroll = true;
-            this.uC_RecruitmentCompany1.Location = new System.Drawing.Point(0, 372);
-            this.uC_RecruitmentCompany1.Name = "uC_RecruitmentCompany1";
-            this.uC_RecruitmentCompany1.Size = new System.Drawing.Size(713, 400);
-            this.uC_RecruitmentCompany1.TabIndex = 3;
+            this.gradientPanel2.Angle = 0F;
+            this.gradientPanel2.BackColor = System.Drawing.Color.LightGreen;
+            this.gradientPanel2.BottomColor = System.Drawing.Color.Empty;
+            this.gradientPanel2.Controls.Add(this.label4);
+            this.gradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gradientPanel2.Location = new System.Drawing.Point(0, 0);
+            this.gradientPanel2.Name = "gradientPanel2";
+            this.gradientPanel2.Size = new System.Drawing.Size(546, 39);
+            this.gradientPanel2.TabIndex = 0;
+            this.gradientPanel2.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
             // 
-            // panel3
+            // label4
             // 
-            this.panel3.AutoScroll = true;
-            this.panel3.Controls.Add(this.gradientPanel4);
-            this.panel3.Location = new System.Drawing.Point(719, 372);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(246, 395);
-            this.panel3.TabIndex = 4;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(24, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(161, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Giới thiệu công ty";
             // 
-            // gradientPanel4
+            // gradientPanel1
             // 
-            this.gradientPanel4.Angle = 0F;
-            this.gradientPanel4.BackColor = System.Drawing.Color.LightGreen;
-            this.gradientPanel4.BottomColor = System.Drawing.Color.Empty;
-            this.gradientPanel4.Controls.Add(this.label6);
-            this.gradientPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gradientPanel4.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel4.Name = "gradientPanel4";
-            this.gradientPanel4.Size = new System.Drawing.Size(246, 39);
-            this.gradientPanel4.TabIndex = 2;
-            this.gradientPanel4.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
+            this.gradientPanel1.Angle = 0F;
+            this.gradientPanel1.BackColor = System.Drawing.Color.LightGreen;
+            this.gradientPanel1.BottomColor = System.Drawing.Color.Green;
+            this.gradientPanel1.Controls.Add(this.kbtnFollower);
+            this.gradientPanel1.Controls.Add(this.lblNumberFollower);
+            this.gradientPanel1.Controls.Add(this.lblNumberEmp);
+            this.gradientPanel1.Controls.Add(this.lblCompanyName);
+            this.gradientPanel1.Controls.Add(this.pictureBox1);
+            this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gradientPanel1.Name = "gradientPanel1";
+            this.gradientPanel1.Size = new System.Drawing.Size(965, 151);
+            this.gradientPanel1.TabIndex = 0;
+            this.gradientPanel1.TopColor = System.Drawing.Color.LightGreen;
             // 
-            // label6
+            // kbtnFollower
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(52)))), ((int)(((byte)(64)))));
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(33, 7);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 25);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Những phúc lợi";
+            this.kbtnFollower.Location = new System.Drawing.Point(711, 50);
+            this.kbtnFollower.Name = "kbtnFollower";
+            this.kbtnFollower.Size = new System.Drawing.Size(202, 53);
+            this.kbtnFollower.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kbtnFollower.StateCommon.Border.Rounding = 12;
+            this.kbtnFollower.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-1, -1, 10, -1);
+            this.kbtnFollower.TabIndex = 4;
+            this.kbtnFollower.Values.Text = "Theo dõi công ty";
+            // 
+            // lblNumberFollower
+            // 
+            this.lblNumberFollower.AutoSize = true;
+            this.lblNumberFollower.BackColor = System.Drawing.Color.Silver;
+            this.lblNumberFollower.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNumberFollower.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberFollower.ForeColor = System.Drawing.Color.White;
+            this.lblNumberFollower.Location = new System.Drawing.Point(358, 98);
+            this.lblNumberFollower.Name = "lblNumberFollower";
+            this.lblNumberFollower.Size = new System.Drawing.Size(166, 20);
+            this.lblNumberFollower.TabIndex = 3;
+            this.lblNumberFollower.Text = "Số lượng người theo dõi";
+            // 
+            // lblNumberEmp
+            // 
+            this.lblNumberEmp.AutoSize = true;
+            this.lblNumberEmp.BackColor = System.Drawing.Color.Silver;
+            this.lblNumberEmp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNumberEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberEmp.ForeColor = System.Drawing.Color.White;
+            this.lblNumberEmp.Location = new System.Drawing.Point(163, 98);
+            this.lblNumberEmp.Name = "lblNumberEmp";
+            this.lblNumberEmp.Size = new System.Drawing.Size(135, 20);
+            this.lblNumberEmp.TabIndex = 2;
+            this.lblNumberEmp.Text = "Số lượng nhân viên";
+            // 
+            // lblCompanyName
+            // 
+            this.lblCompanyName.AutoSize = true;
+            this.lblCompanyName.BackColor = System.Drawing.Color.Silver;
+            this.lblCompanyName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompanyName.ForeColor = System.Drawing.Color.White;
+            this.lblCompanyName.Location = new System.Drawing.Point(163, 43);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(150, 27);
+            this.lblCompanyName.TabIndex = 1;
+            this.lblCompanyName.Text = "TÊN CÔNG TY";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.LightGreen;
+            this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_company_100;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FCandidate_CompanyDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(965, 779);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.uC_RecruitmentCompany1);
+            this.ClientSize = new System.Drawing.Size(965, 534);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gradientPanel1);
             this.Name = "FCandidate_CompanyDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCandidate_SeeCompany";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.gradientPanel3.ResumeLayout(false);
+            this.gradientPanel3.PerformLayout();
+            this.gradientPanel2.ResumeLayout(false);
+            this.gradientPanel2.PerformLayout();
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.gradientPanel2.ResumeLayout(false);
-            this.gradientPanel2.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.gradientPanel3.ResumeLayout(false);
-            this.gradientPanel3.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.gradientPanel4.ResumeLayout(false);
-            this.gradientPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -277,19 +305,21 @@
 
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kbtnFollower;
+        private System.Windows.Forms.Label lblNumberFollower;
+        private System.Windows.Forms.Label lblNumberEmp;
+        private System.Windows.Forms.Label lblCompanyName;
         private System.Windows.Forms.Panel panel1;
         private GradientPanel gradientPanel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         private GradientPanel gradientPanel3;
         private System.Windows.Forms.Label label5;
-        private UC_RecruitmentCompany uC_RecruitmentCompany1;
-        private System.Windows.Forms.Panel panel3;
-        private GradientPanel gradientPanel4;
+        private System.Windows.Forms.Label lblIntroduction;
+        private System.Windows.Forms.Label lblBL;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblManager;
     }
 }

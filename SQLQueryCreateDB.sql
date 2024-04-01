@@ -13,7 +13,10 @@ CREATE TABLE Company (
 	Address nvarchar(100),
 	Manager nvarchar(100),
 	TaxCode varchar(100),
-	BusinessLicense varchar(100)
+	BusinessLicense varchar(100),
+	NumberOfEmployee int,
+	NumberOfFollower int,
+	Introduction text
 )
 CREATE TABLE Employers(
 	ID varchar(10) CONSTRAINT PK_Emp PRIMARY KEY,
@@ -96,12 +99,12 @@ VALUES
 ('CDD003', N'Phạm Văn C', '0123456789', 'phamvanc@example.com', '789 DEF Street', N'Đà Nẵng', N'Nam', 'Bachelor of Arts in English');
 
 --
-INSERT INTO Company (Name, Address, Manager, TaxCode, BusinessLicense)
-VALUES (N'Công ty ABC', N'123 Đống Đa, Hà Nội', N'Miss.An', '123456789', 'BL-001');
-INSERT INTO Company (Name, Address, Manager, TaxCode, BusinessLicense)
-VALUES (N'Công ty TNHH một mình tao', N'Gò Vấp, TP Hồ Chí Minh', N'Miss.An', '123456789', 'BL-002'),
-	   (N'Công ty Tâm Bình', N'Quận 9, TP Hồ Chí Minh', N'Miss.An', '123456789', 'BL-003'),
-	   (N'Công ty Nhân Tâm', N'Đà Nẵng', N'Miss.An', '123456789', 'BL-004');
+INSERT INTO Company (Name, Address, Manager, TaxCode, BusinessLicense, NumberOfEmployee, NumberOfFollower, Introduction)
+VALUES (N'Công ty ABC', N'123 Đống Đa, Hà Nội', N'Miss.An', '123456789', 'BL-001', 100, 500, N'Công ty TNHH Grande Media chuyên cung cấp dịch vụ quảng cáo trực tuyến hàng đầu Việt Nam');
+INSERT INTO Company (Name, Address, Manager, TaxCode, BusinessLicense, NumberOfEmployee, NumberOfFollower, Introduction)
+VALUES (N'Công ty TNHH một mình tao', N'Gò Vấp, TP Hồ Chí Minh', N'Miss.An', '123456789', 'BL-002', 100, 500, N'Công ty TNHH Grande Media chuyên cung cấp dịch vụ quảng cáo trực tuyến hàng đầu Việt Nam'),
+	   (N'Công ty Tâm Bình', N'Quận 9, TP Hồ Chí Minh', N'Miss.An', '123456789', 'BL-003', 90, 100, N'Công ty TNHH Grande Media chuyên cung cấp dịch vụ IT trực tuyến hàng đầu Việt Nam'),
+	   (N'Công ty Nhân Tâm', N'Đà Nẵng', N'Miss.An', '123456789', 'BL-004', 250, 1200, N'Công ty TNHH Grande Media chuyên cung cấp dịch vụ Marketing trực tuyến hàng đầu Việt Nam');
 
 -- Dữ liệu cho bảng Employeers
 INSERT INTO Employers (ID, Email, Name, Sex, Phone, Workplace, CompanyName)
@@ -136,6 +139,13 @@ INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, Univers
 VALUES 
 ('CDD001', 'J003', 'Experienced HR professional with a proven track record of managing diverse teams. Seeking a challenging role as an HR Manager at ABC Corporation.', 'University of HR Management', 'Human Resources', '3.9', '2015-09-01', '2019-06-01', 'HR Solutions Inc.', 'Hanoi, Vietnam', 'Managed recruitment processes and employee relations.', '2019-07-15', '2022-02-28', 'PHR Certification', '2023-05-10');
 
-INSERT INTO Resume(CddID,JobID,Objective,UniversityName,Major,GPA,UniversityStartDate,UniversityEndDate,CompanyName,
-				   WorkPlace,Detail,CompanyStartDate,CompanyEndDate,CertificationName,CertificationDate)
-VALUE()
+--INSERT INTO Resume(CddID,JobID,Objective,UniversityName,Major,GPA,UniversityStartDate,UniversityEndDate,CompanyName,
+	--			   WorkPlace,Detail,CompanyStartDate,CompanyEndDate,CertificationName,CertificationDate)
+--VALUE()
+
+SELECT * FROM Company
+DECLARE @CompanyName nvarchar(100)
+SET @CompanyName = N'Công ty ABC'
+SELECT * 
+FROM Company 
+WHERE Name = @CompanyName

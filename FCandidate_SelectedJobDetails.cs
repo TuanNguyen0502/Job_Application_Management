@@ -13,6 +13,7 @@ namespace Job_Application_Management
     public partial class FCandidate_SelectedJobDetails : Form
     {
         private string jobid;
+        private string companyName;
         CandidateDAO canDAO = new CandidateDAO();
         public FCandidate_SelectedJobDetails()
         {
@@ -45,12 +46,14 @@ namespace Job_Application_Management
                     lblStatus.Text = "Đã hết hạn. Ứng tuyển lại?";
                 }
                 else lblStatus.Text = "Đang ứng tuyển";
+
+                companyName = (string)item["CompanyName"];
             }
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            FCandidate_CompanyDetails com = new FCandidate_CompanyDetails();
+            FCandidate_CompanyDetails com = new FCandidate_CompanyDetails(companyName);
             com.ShowDialog();
         }
         private void FEmployer_SeeCVDetailOfCandidate_Load(object sender, EventArgs e)
