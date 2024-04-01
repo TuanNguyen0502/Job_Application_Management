@@ -9,94 +9,60 @@ namespace Job_Application_Management
 {
     public class CV
     {
+
         private string cddID;
         private string jobID;
-        private string careerGoal;
-        private string workPlace;
-        private string phone;
-        private string email;
-        private string address;
-        private string uSchool;
-        private string startDateEducation;
-        private string endDateEducaiton;
-        private string major;
-        //public string academicAchivement;
-        public string workedCompanyName;
-        public string workedWorkPlace;
-        //public string workedAchivement;
-        public string certificate;
-        public DateTime timeCertificate;
-
-        private string cddName;
-        private string cddPhone;
-        private string cddEmail;
-        private string cddAddress;
+        private string objective;
         private string universityName;
+        private string major;
         private string gpa;
         private DateTime universityStartDate;
         private DateTime universityEndDate;
+        private string companyName;
+        private string workPlace;
         private string workedDetail;
         private DateTime companyStartDate;
         private DateTime companyEndDate;
-
+        private string certification;
+        private DateTime certificationDate;
+        // Thuộc tính từ bảng khác
         private string jobName;
+        private string cddName;
+        private string cddAddress;
+        private string cddEmail;
+        private string cddPhone;
+        
 
-        public CV(string CddID, string JobID, string workPlace, string phone, string email, string address, string careerGoal, string uSchool, string startDate, string endDate, string major, string workedCompanyName, string workedWorkPlace, string certificate, DateTime timeCertificate)
+        public CV(string cddID, string jobID, string objective, string universityName, string major, string gpa, DateTime universityStartDate, DateTime universityEndDate, string companyName, string workPlace, string workedDetail, DateTime companyStartDate, DateTime companyEndDate, string certificationName, DateTime certificationDate, string jobName, string cddName, string cddAddress, string cddEmail, string cddPhone)
         {
-            this.cddID = CddID;
-            this.jobID = JobID;
+            CddID=cddID;
+            JobID=jobID;
+            this.objective=objective;
+            UniversityName=universityName;
+            Major=major;
+            Gpa=gpa;
+            UniversityStartDate=universityStartDate;
+            UniversityEndDate=universityEndDate;
+            this.companyName=companyName;
             this.workPlace=workPlace;
-            this.phone=phone;
-            this.email=email;
-            this.address=address;
-            this.careerGoal=careerGoal;
-            this.uSchool=uSchool;
-            this.startDateEducation=startDate;
-            this.endDateEducaiton=endDate;
-            this.major=major;
-            this.workedCompanyName=workedCompanyName;
-            this.workedWorkPlace=workedWorkPlace;
-            this.certificate=certificate;
-            this.timeCertificate = timeCertificate;
-        }
-
-        public CV(string CddID, string JobID, string careerGoal, string universityName, string major, string gpa, DateTime universityStartDate, 
-            DateTime universityEndDate, string companyName, string workPlace, string workedDetail, DateTime companyStartDate, DateTime companyEndDate, 
-            string certificate, DateTime timeCertificate)
-        {
-            this.cddID = CddID;
-            this.jobID = JobID;
-            this.careerGoal = careerGoal;
-            this.universityName = universityName;
-            this.major = major;
-            this.gpa = gpa;
-            this.universityStartDate = universityStartDate;
-            this.universityEndDate = universityEndDate;
-            this.WorkedCompanyName = companyName;
-            this.workPlace = workPlace;
-            this.workedDetail = workedDetail;
-            this.companyStartDate = companyStartDate;
-            this.companyEndDate = companyEndDate;
-            this.certificate = certificate;
-            this.timeCertificate = timeCertificate;
+            WorkedDetail=workedDetail;
+            CompanyStartDate=companyStartDate;
+            CompanyEndDate=companyEndDate;
+            this.certification=certificationName;
+            this.certificationDate=certificationDate;
+            JobName=jobName;
+            CddName=cddName;
+            CddAddress=cddAddress;
+            CddEmail=cddEmail;
+            CddPhone=cddPhone;
         }
 
         public CV() { }
 
         public string CddID { get => cddID; set => cddID = value; }
-        public string JobID { get; set; }
-        public string WorkPlace { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
-        public string Address { get; set; }
-        public string CareerGoal { get; set; }
-        public string USchool { get => uSchool; }
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
-        public string Major { get; set; }
-        public string WorkedCompanyName { get; set; }
-        public string WorkedWorkPlace { get; set; }
-        public string Certificate { get; set; }
+        public string JobID { get => jobID; set => jobID = value; }
+        public string Objective { get => objective; set => objective = value; }
+        public string Major { get => major; set => major = value; }
         public DateTime TimeCertificate { get; set; }
         public string UniversityName { get => universityName; set => universityName = value; }
         public string Gpa { get => gpa; set => gpa = value; }
@@ -110,5 +76,9 @@ namespace Job_Application_Management
         public string CddAddress { get => cddAddress; set => cddAddress = value; }
         public string CddName { get => cddName; set => cddName = value; }
         public string JobName { get => jobName; set => jobName = value; }
+        public string CompanyName { get => companyName; set => companyName = value; }
+        public string WorkPlace { get => workPlace; set => workPlace = value; }
+        public string Certification { get => certification; set => certification = value; }
+        public DateTime CertificationDate { get => certificationDate; set => certificationDate = value; }
     }
 }

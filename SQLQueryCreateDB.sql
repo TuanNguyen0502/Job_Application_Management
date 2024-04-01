@@ -143,9 +143,3 @@ VALUES
 	--			   WorkPlace,Detail,CompanyStartDate,CompanyEndDate,CertificationName,CertificationDate)
 --VALUE()
 
-SELECT * FROM Company
-DECLARE @CompanyName nvarchar(100)
-SET @CompanyName = N'Công ty ABC'
-SELECT * 
-FROM Company 
-WHERE Name = @CompanyName

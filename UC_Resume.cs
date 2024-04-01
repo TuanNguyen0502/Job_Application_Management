@@ -17,7 +17,7 @@ namespace Job_Application_Management
         private string cddID;
         private CV resume;
         private EmployerDAO employerDAO;
-
+        private CandidateDAO candidateDAO;
         public UC_Resume()
         {
             employerDAO = new EmployerDAO();
@@ -57,82 +57,26 @@ namespace Job_Application_Management
             flowLayoutPanel_Certificate.Controls.Add(uC_Resume_Certificate);
         }
         
-        public string RichTextBox_CareerObjective
+        public CV GetInfoResumeAtForm()
         {
-            get { return richTextBox_CareerObjective.Text; }
-        }
-        public TableLayoutPanel TableLayoutPanel1
-        {
-            get { return tableLayoutPanel1; }
-        }
-        public FlowLayoutPanel FlowLayoutPanel1
-        {
-            get { return flowLayoutPanel1; }
-        }
-        public UserControl UC_Resume_Education1
-        {
-            get { return uC_Resume_Education1; }
-        }
-        public string TextBox_School
-        {
-            get { return uC_Resume_Education1.TextBox_School.Text; }
-        }
-        public string TextBox_Start
-        {
-            get { return uC_Resume_Education1.TextBox_Start.Text; }
-        }
-        public string TextBox_End
-        {
-            get { return uC_Resume_Education1.TextBox_End.Text; }
-        }
-        public string TextBox_Major
-        {
-            get { return uC_Resume_Education1.TextBox_Major.Text; }
-        }
-        public string RichTextBox_EducationDetail
-        {
-            get { return uC_Resume_Education1.RichTextBox_EducationDetail.Text; }
-        }
-        //
-        public UserControl UC_Resume_Experience1
-        {
-            get { return uC_Resume_Experience1; }
-        }
-        public string TextBox_JobID
-        {
-            get { return uC_Resume_Experience1.TextBox_JobID.Text; }
-        }
-        public string TextBox_Compay
-        {
-            get { return uC_Resume_Experience1.TextBox_Compay.Text; }
-        }
-        public string TextBox_Place
-        {
-            get { return uC_Resume_Experience1.TextBox_Place.Text; }
-        }
-        public UserControl UC_Resume_Certificate1
-        {
-            get { return uC_Resume_Certificate1; }
-        }
-        public string TextBox_CertificateName
-        {
-            get { return uC_Resume_Certificate1.TextBox_CertificateName.Text; }
-        }
-        public DateTime KryptonDateTimePicker1
-        {
-            get { return uC_Resume_Certificate1.KryptonDateTimePicker1.Value; }
-        }
-        public string TextBox_Phone
-        {
-            get { return textBox_Phone.Text; }
-        }
-        public string TextBox_Email
-        {
-            get { return textBox_Email.Text; }
-        }
-        public string TextBox_Address
-        {
-            get { return textBox_Address.Text; }
+            CV myCV = new CV();
+
+            myCV.CddName = label_CandidateName.Text;
+            myCV.WorkPlace = label_Nominee.Text;
+            myCV.CddPhone = textBox_Phone.Text;
+            myCV.CddAddress = textBox_Address.Text;
+            myCV.CddEmail = textBox_Email.Text;
+            myCV.Objective = richTextBox_CareerObjective.Text;
+            myCV.Major = uC_Resume_Education1.TextBox_Major.Text;
+            myCV.UniversityName = uC_Resume_Education1.TextBox_School.Text;
+            myCV.WorkedDetail = uC_Resume_Education1.RichTextBox_EducationDetail.Text;
+            myCV.JobID = uC_Resume_Experience1.TextBox_JobID.Text;
+            myCV.CompanyName = uC_Resume_Experience1.TextBox_Compay.Text;
+            myCV.WorkPlace = uC_Resume_Experience1.TextBox_Place.Text;
+            myCV.Certification = uC_Resume_Certificate1.TextBox_CertificateName.Text;
+            myCV.TimeCertificate = uC_Resume_Certificate1.DateTimePicker_Start.Value;
+
+            return myCV;
         }
 
         public string JobID { get => jobID; set => jobID = value; }
@@ -152,18 +96,18 @@ namespace Job_Application_Management
             textBox_Phone.Text = resume.CddPhone;
             textBox_Email.Text = resume.CddEmail;
             textBox_Address.Text = resume.CddAddress;
-            richTextBox_CareerObjective.Text = resume.CareerGoal;
+            richTextBox_CareerObjective.Text = resume.Objective;
             uC_Resume_Education1.TextBox_School.Text = resume.UniversityName;
             uC_Resume_Education1.TextBox_Major.Text = resume.Major;
             uC_Resume_Education1.RichTextBox_EducationDetail.Text = resume.Gpa;
             uC_Resume_Education1.DateTimePicker_Start.Value = resume.UniversityStartDate;
             uC_Resume_Education1.DateTimePicker_End.Value = resume.UniversityEndDate;
-            uC_Resume_Experience1.TextBox_Compay.Text = resume.WorkedCompanyName;
-            uC_Resume_Experience1.TextBox_Place.Text = resume.WorkedWorkPlace;
+            uC_Resume_Experience1.TextBox_Compay.Text = resume.CompanyName;
+            uC_Resume_Experience1.TextBox_Place.Text = resume.WorkPlace;
             uC_Resume_Experience1.RichTextBox_JobDetail.Text = resume.WorkedDetail;
             uC_Resume_Experience1.DateTimePicker_Start.Value = resume.CompanyStartDate;
             uC_Resume_Experience1.DateTimePicker_End.Value = resume.CompanyEndDate;
-            uC_Resume_Certificate1.TextBox_CertificateName.Text = resume.Certificate;
+            uC_Resume_Certificate1.TextBox_CertificateName.Text = resume.Certification;
             uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
         }
 
@@ -185,6 +129,12 @@ namespace Job_Application_Management
             //uC_Resume_Experience1.DateTimePicker_End.Value = resume.CompanyEndDate;
             uC_Resume_Certificate1.TextBox_CertificateName.ReadOnly = true;
             //uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
+        }
+
+        private void btn_CreateCV_Click(object sender, EventArgs e)
+        {
+            candidateDAO = new CandidateDAO();
+            candidateDAO.SaveCVToDatabase(jobID);
         }
     }
 }

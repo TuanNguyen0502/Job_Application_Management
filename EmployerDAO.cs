@@ -45,18 +45,18 @@ namespace Job_Application_Management
                     {
                         resume.CddID = reader.GetString(0);
                         resume.JobID = reader.GetString(1);
-                        resume.CareerGoal = reader.GetString(2);
+                        resume.Objective = reader.GetString(2);
                         resume.UniversityName = reader.GetString(3);
                         resume.Major = reader.GetString(4);
                         resume.Gpa = reader.GetString(5);
                         resume.UniversityStartDate = reader.GetDateTime(6);
                         resume.UniversityEndDate = reader.GetDateTime(7);
-                        resume.WorkedCompanyName = reader.GetString(8);
-                        resume.WorkedWorkPlace = reader.GetString(9);
+                        resume.CompanyName = reader.GetString(8);
+                        resume.WorkPlace = reader.GetString(9);
                         resume.WorkedDetail = reader.GetString(10);
                         resume.CompanyStartDate = reader.GetDateTime(11);
                         resume.CompanyEndDate = reader.GetDateTime(12);
-                        resume.Certificate = reader.GetString(13);
+                        resume.Certification = reader.GetString(13);
                         resume.TimeCertificate = reader.GetDateTime(14);
                         resume.CddName = reader.GetString(15);
                         resume.CddPhone = reader.GetString(16);
