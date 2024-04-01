@@ -14,6 +14,7 @@ namespace Job_Application_Management
     {
         DBConnection dbConn;
         UC_Resume resume =  new UC_Resume();
+       
         string sqlQuery;
         public CandidateDAO()
         {
@@ -173,9 +174,21 @@ namespace Job_Application_Management
             };
             return dbConn.ExecuteReaderData(sqlQuery, lstParam);
         }
-        public void SaveCVToDatabase(string cddId)
+       
+        public void SaveCVToDatabase()
         {
             CV cv = resume.GetInfoResumeAtForm();
+            string cddId;
+            string jodId;
+            string sqlQueryReadCddId = "SELECT CddID"
+                      +" FROM Candidates"
+                      +" WHERE Education = @UniversityName";
+            SqlParameter[] lstParam1 =
+            {
+                new SqlParameter("@UniversityName", SqlDbType.NVarChar) { Value = cv.UniversityName },
+            };
+            cddId = (string)dbConn.ExecuteScalar(sqlQueryReadCddId, lstParam1);
+           
             sqlQuery = "INSERT INTO Resume(CddID,JobID,Objective,UniversityName,Major,UniversityStartDate,"
                 + "UniversityEndDate,CompanyName,WorkPlace,"
                 + "CertificationName,CertificationDate)"

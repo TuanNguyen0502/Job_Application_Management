@@ -70,7 +70,6 @@ namespace Job_Application_Management
             myCV.Major = uC_Resume_Education1.TextBox_Major.Text;
             myCV.UniversityName = uC_Resume_Education1.TextBox_School.Text;
             myCV.WorkedDetail = uC_Resume_Education1.RichTextBox_EducationDetail.Text;
-            myCV.JobID = uC_Resume_Experience1.TextBox_JobID.Text;
             myCV.CompanyName = uC_Resume_Experience1.TextBox_Compay.Text;
             myCV.WorkPlace = uC_Resume_Experience1.TextBox_Place.Text;
             myCV.Certification = uC_Resume_Certificate1.TextBox_CertificateName.Text;

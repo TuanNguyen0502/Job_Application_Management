@@ -113,5 +113,24 @@ namespace Job_Application_Management
             }
             return resultList;
         }
+        public object ExecuteScalar(string sqlStr, SqlParameter[] lstParam)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddRange(lstParam);
+                    object obj = cmd.ExecuteScalar();
+                    return obj;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Read error\n"+ex.Message);
+                    return null;
+                }
+            }
+        }
     }
 }

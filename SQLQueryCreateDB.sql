@@ -143,3 +143,9 @@ VALUES
 	--			   WorkPlace,Detail,CompanyStartDate,CompanyEndDate,CertificationName,CertificationDate)
 --VALUE()
 
+DECLARE @UniversityName nvarchar(100)
+SET @UniversityName = 'Bachelor of Arts in English'
+
+SELECT CddID
+FROM Candidates
+WHERE Education = @UniversityName
