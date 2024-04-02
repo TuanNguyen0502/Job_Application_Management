@@ -18,7 +18,6 @@ namespace Job_Application_Management
         private string jobID;
         private string cddID;
         public KryptonButton Button_detail { get => button_detail; set => button_detail = value; }
-        public KryptonButton Button_delete { get => button_delete; set => button_delete = value; }
         public Label Label_Name { get => label_Name; set => label_Name = value; }
         public Label Label_University { get => label_University; set => label_University = value; }
         public Label Label_Major { get => label_Major; set => label_Major = value; }
@@ -47,13 +46,7 @@ namespace Job_Application_Management
 
         private void button_detail_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FResume(jobID, CddID));
-            
-        }
-
-        private void button_delete_Click(object sender, EventArgs e)
-        {
-
+            OpenChildForm(new FResume(jobID, CddID, "Employer"));
         }
     }
 }

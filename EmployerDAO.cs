@@ -23,6 +23,35 @@ namespace Job_Application_Management
         {
             dbConnection.ExecuteWriteData(sqlStr);
         }
+        public List<UC_CandidateProfile> GetCandidateProfileFromDB()
+        {
+            string sqlQuery = $"SELECT P.CddID, C.CddName, P.Objective, P.UniversityName, P.Major, P.GPA, P.CompanyName, P.Workplace, " +
+                $"P.CertificationName " +
+                $"FROM CandidateProfile P INNER JOIN Candidates C ON P.CddID = C.CddID";
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_CandidateProfile> items = new List<UC_CandidateProfile>();
+            foreach (var row in resultList)
+            {
+                UC_CandidateProfile item = new UC_CandidateProfile();
+                item.CddID = (string)row["CddID"];
+                item.Label_Name.Text = (string)row["CddName"];
+                item.Label_University.Text = (string)row["UniversityName"];
+                item.Label_Major.Text += row["Major"].ToString();
+                item.Label_GPA.Text = row["GPA"].ToString();
+                item.Label_Company.Text = (string)row["CompanyName"];
+                item.Label_Workplace.Text = (string)row["Workplace"];
+                item.Label_Certification.Text = (string)row["CertificationName"];
+                items.Add(item);
+            }
+            return items;
+        }
+
+        public void UpdateResume(CV resume)
+        {
+            string sqlStr = string.Format($"UPDATE Resume SET Status = '{resume.Status}' WHERE CddID = '{resume.CddID}' " +
+                $"AND JobID = '{resume.JobID}'");
+            Execute(sqlStr);
+        }
 
         public CV GetResumeFromDB(string jobID, string cddID)
         {
@@ -32,6 +61,7 @@ namespace Job_Application_Management
                 conn.Open();
                 string sqlQuery = $"SELECT R.CddID, R.JobID, R.Objective, R.UniversityName, R.Major, R.GPA, R.UniversityStartDate, R.UniversityEndDate, " +
                     $"R.CompanyName, R.WorkPlace, R.Detail, R.CompanyStartDate, R.CompanyEndDate, R.CertificationName, R.CertificationDate, " +
+                    $"R.Status, " +
                     $"C.CddName, C.Phone, C.Email, C.CddAddress, " +
                     $"J.Name " +
                     $"FROM Resume R INNER JOIN Candidates C ON R.CddID = C.CddID " +
@@ -58,11 +88,12 @@ namespace Job_Application_Management
                         resume.CompanyEndDate = reader.GetDateTime(12);
                         resume.Certification = reader.GetString(13);
                         resume.TimeCertificate = reader.GetDateTime(14);
-                        resume.CddName = reader.GetString(15);
-                        resume.CddPhone = reader.GetString(16);
-                        resume.CddEmail = reader.GetString(17);
-                        resume.CddAddress = reader.GetString(18);
-                        resume.JobName = reader.GetString(19);
+                        resume.Status = reader.GetString(15);
+                        resume.CddName = reader.GetString(16);
+                        resume.CddPhone = reader.GetString(17);
+                        resume.CddEmail = reader.GetString(18);
+                        resume.CddAddress = reader.GetString(19);
+                        resume.JobName = reader.GetString(20);
                     }
                 }
                 else
@@ -125,7 +156,7 @@ namespace Job_Application_Management
             return employer;
         }
 
-        public void SaveCompanyInfor(Company company)
+        public void UpdateCompanyInfor(Company company)
         {
             string sqlStr = string.Format($"UPDATE Company SET Address = N'{company.Address}', " +
                 $"Manager = N'{company.Manager}', TaxCode = '{company.TaxCode}', BusinessLicense = '{company.BusinessLicense}' " +
@@ -133,7 +164,7 @@ namespace Job_Application_Management
             Execute(sqlStr);
         }
 
-        public void SaveEmployerInfor(Employer employer)
+        public void UpdateEmployerInfor(Employer employer)
         {
             string sqlStr = string.Format($"UPDATE Employers SET Email = '{employer.Email}', Name = N'{employer.Name}', Sex = N'{employer.Sex}', " +
                 $"Phone = '{employer.Phone}', Workplace = N'{employer.Workplace}' WHERE ID = '{employer.Id}'");
@@ -187,10 +218,11 @@ namespace Job_Application_Management
             return items;
         }
 
-        public List<UC_CandidateCV> GetCandidateResumeFromDB(string jobID)
+        public List<UC_CandidateCV> GetCandidateResumeFromDB(string jobID, string status)
         {
-            string sqlQuery = $"SELECT R.CddID, C.CddName, R.UniversityName, R.Major, R.GPA FROM Resume R " +
-                $"INNER JOIN Candidates C ON R.CddID = C.CddID WHERE JobID = '{jobID}'";
+            string sqlQuery = $"SELECT R.CddID, C.CddName, R.UniversityName, R.Major, R.GPA " +
+                $"FROM Resume R INNER JOIN Candidates C ON R.CddID = C.CddID " +
+                $"WHERE JobID = '{jobID}' AND Status = '{status}'";
             List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
             List<UC_CandidateCV> items = new List<UC_CandidateCV>();
             foreach (var row in resultList)

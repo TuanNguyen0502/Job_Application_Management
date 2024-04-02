@@ -25,6 +25,7 @@ namespace Job_Application_Management
         private DateTime companyEndDate;
         private string certification;
         private DateTime certificationDate;
+        private string status;
         // Thuộc tính từ bảng khác
         private string jobName;
         private string cddName;
@@ -80,5 +81,6 @@ namespace Job_Application_Management
         public string WorkPlace { get => workPlace; set => workPlace = value; }
         public string Certification { get => certification; set => certification = value; }
         public DateTime CertificationDate { get => certificationDate; set => certificationDate = value; }
+        public string Status { get => status; set => status = value; }
     }
 }

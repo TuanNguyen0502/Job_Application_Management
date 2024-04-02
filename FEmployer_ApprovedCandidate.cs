@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,9 +15,13 @@ namespace Job_Application_Management
     public partial class FEmployer_ApprovedCandidate : KryptonForm
     {
         private Form currentFormChild;
+        private string jobID;
+        private EmployerDAO employerDAO;
 
-        public FEmployer_ApprovedCandidate()
+        public FEmployer_ApprovedCandidate(string jobID)
         {
+            employerDAO = new EmployerDAO();
+            this.jobID = jobID;
             InitializeComponent();
         }
 
@@ -46,6 +51,21 @@ namespace Job_Application_Management
         private void button_Refuse_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FEmployer_ApprovedCandidate_Load(object sender, EventArgs e)
+        {
+            LoadInfor();
+        }
+
+        private void LoadInfor()
+        {
+            string status = "Đã xác nhận";
+            List<UC_CandidateCV> resumeItems = employerDAO.GetCandidateResumeFromDB(jobID, status);
+            foreach (var resume in resumeItems)
+            {
+                flowLayoutPanel1.Controls.Add(resume);
+            }
         }
     }
 }

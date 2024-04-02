@@ -13,11 +13,13 @@ namespace Job_Application_Management
 {
     public partial class UC_Resume : UserControl
     {
+        private string role;
         private string jobID;
         private string cddID;
         private CV resume;
         private EmployerDAO employerDAO;
         private CandidateDAO candidateDAO;
+
         public UC_Resume()
         {
             employerDAO = new EmployerDAO();
@@ -78,12 +80,13 @@ namespace Job_Application_Management
             return myCV;
         }
 
-        public string JobID { get => jobID; set => jobID = value; }
-        public string CddID { get => cddID; set => cddID = value; }
-
         private void UC_Resume_Load(object sender, EventArgs e)
         {
-            LoadInfor();
+            if (Role == "Employer")
+            {
+                LoadInfor();
+                ReadOnlyControls();
+            }
         }
 
         private void LoadInfor()
@@ -128,12 +131,29 @@ namespace Job_Application_Management
             //uC_Resume_Experience1.DateTimePicker_End.Value = resume.CompanyEndDate;
             uC_Resume_Certificate1.TextBox_CertificateName.ReadOnly = true;
             //uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
+            btn_CreateCV.Visible = false;
         }
 
         private void btn_CreateCV_Click(object sender, EventArgs e)
         {
             candidateDAO = new CandidateDAO();
-            candidateDAO.SaveCVToDatabase(jobID);
+            //candidateDAO.SaveCVToDatabase(jobID);
+        }
+
+        private void btn_Approve_Click(object sender, EventArgs e)
+        {
+            resume.Status = "Đã xác nhận";
+            employerDAO.UpdateResume(resume);
+        }
+
+        public string JobID { get => jobID; set => jobID = value; }
+        public string CddID { get => cddID; set => cddID = value; }
+        public string Role { get => role; set => role = value; }
+
+        private void button_Refuse_Click(object sender, EventArgs e)
+        {
+            resume.Status = "Đang ứng tuyển";
+            employerDAO.UpdateResume(resume);
         }
     }
 }
