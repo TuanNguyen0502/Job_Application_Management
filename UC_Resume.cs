@@ -58,6 +58,8 @@ namespace Job_Application_Management
             UC_Resume_Certificate uC_Resume_Certificate = new UC_Resume_Certificate();
             flowLayoutPanel_Certificate.Controls.Add(uC_Resume_Certificate);
         }
+
+        public KryptonButton Btn_CreateCV { get { return btn_CreateCV; } }
         
         public CV GetInfoResumeAtForm()
         {
@@ -133,13 +135,6 @@ namespace Job_Application_Management
             //uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
             btn_CreateCV.Visible = false;
         }
-
-        private void btn_CreateCV_Click(object sender, EventArgs e)
-        {
-            candidateDAO = new CandidateDAO();
-            //candidateDAO.SaveCVToDatabase(jobID);
-        }
-
         private void btn_Approve_Click(object sender, EventArgs e)
         {
             resume.Status = "Đã xác nhận";

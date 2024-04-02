@@ -13,7 +13,7 @@ namespace Job_Application_Management
     public class CandidateDAO
     {
         DBConnection dbConn;
-        UC_Resume resume =  new UC_Resume();
+        FCandidate_CreateCV createCV = new FCandidate_CreateCV();
        
         string sqlQuery;
         public CandidateDAO()
@@ -175,41 +175,33 @@ namespace Job_Application_Management
             return dbConn.ExecuteReaderData(sqlQuery, lstParam);
         }
        
-        public void SaveCVToDatabase()
+        public void SaveResumeToDatabase(string JobID)
         {
-            CV cv = resume.GetInfoResumeAtForm();
-            string cddId;
-            string jodId;
-            string sqlQueryReadCddId = "SELECT CddID"
-                      +" FROM Candidates"
-                      +" WHERE Education = @UniversityName";
-            SqlParameter[] lstParam1 =
+            CV cv = createCV.GetCVByCandidateID();
+            sqlQuery = $"INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate,                                                  UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate" 
+                       +"CertificationName, CertificationDate,  Status)"
+                       +" VALUES(@CddID, @JobID, @Objective, @UniversityName, @Major, @GPA, @UniversityStartDate, @UniversityEndDate," +
+                       "@CompanyName, @WorkPlace, @Detail, @CompanyStartDate, @CompanyEndDate, @CertificationName, @CertificationDate)";
+            SqlParameter[] lstParams =
             {
-                new SqlParameter("@UniversityName", SqlDbType.NVarChar) { Value = cv.UniversityName },
+                new SqlParameter("CddID", SqlDbType.VarChar) {Value = cv.CddID},
+                new SqlParameter("@JobID", SqlDbType.VarChar) {Value = JobID},
+                new SqlParameter("@Objective", SqlDbType.Text) {Value = cv.Objective},
+                new SqlParameter("@UniversityName", SqlDbType.NVarChar) {Value = cv.UniversityName},
+                new SqlParameter("@Major", SqlDbType.NVarChar) {Value = cv.Major},
+                new SqlParameter("@GPA", SqlDbType.NVarChar) {Value = cv.Gpa},
+                new SqlParameter("@UniversityStartDate", SqlDbType.Date) {Value = cv.UniversityStartDate},
+                new SqlParameter("@UniversityEndDate", SqlDbType.Date) {Value = cv.UniversityEndDate},
+                new SqlParameter("@CompanyName", SqlDbType.NVarChar) {Value = cv.CompanyName},
+                new SqlParameter("@WorkPlace", SqlDbType.NVarChar) {Value = cv.WorkPlace},
+                new SqlParameter("@Detail", SqlDbType.Text) {Value = cv.WorkedDetail},
+                new SqlParameter("@CompanyStartDate", SqlDbType.Date) {Value = cv.CompanyStartDate},
+                new SqlParameter("@CompanyEndDate", SqlDbType.Date) {Value = cv.CompanyEndDate},
+                new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = cv.Certification},
+                new SqlParameter("@CertificationDate", SqlDbType.Date) {Value = cv.CertificationDate},
             };
-            cddId = (string)dbConn.ExecuteScalar(sqlQueryReadCddId, lstParam1);
-           
-            sqlQuery = "INSERT INTO Resume(CddID,JobID,Objective,UniversityName,Major,UniversityStartDate,"
-                + "UniversityEndDate,CompanyName,WorkPlace,"
-                + "CertificationName,CertificationDate)"
-                +$" VALUES('{cddId}','{cv.JobID}',N'{cv.Objective}',N'{cv.UniversityName}',N'{cv.Major}','{cv.UniversityStartDate}','{cv.UniversityEndDate}',N'{cv.CompanyName}',N'{cv.WorkPlace}',N'{cv.Certification}','{cv.CertificationDate}')";
-            //+" VALUES(@cddId,@jobId,@obj,@un,@major,@usd,@ued,@company,@workplace,@cername,@cerdate)";
-            /*SqlParameter[] lstParams =
-            {
-                new SqlParameter("@cddId", SqlDbType.VarChar) {Value = cddId},
-                new SqlParameter("@jobId", SqlDbType.VarChar) {Value = cv.JobID},
-                new SqlParameter("@obj", SqlDbType.Text) {Value = cv.Objective},
-                new SqlParameter("@un", SqlDbType.NVarChar) {Value = cv.UniversityName},
-                new SqlParameter("@major", SqlDbType.NVarChar) {Value = cv.Major},
-                new SqlParameter("@usd", SqlDbType.Date) {Value = cv.UniversityStartDate},
-                new SqlParameter("@ued", SqlDbType.Date) {Value = cv.UniversityEndDate},
-                new SqlParameter("@company", SqlDbType.NVarChar) {Value = cv.CompanyName},
-                new SqlParameter("@workplace", SqlDbType.NVarChar) {Value = cv.WorkPlace},
-                new SqlParameter("@cername", SqlDbType.NVarChar) {Value = cv.Certification},
-                new SqlParameter("@cerdate", SqlDbType.Date) {Value = cv.TimeCertificate},
-            };
-            dbConn.ExecuteWriteData(sqlQuery, lstParams);*/
-            dbConn.ExecuteWriteData(sqlQuery);
+
+            dbConn.ExecuteWriteData(sqlQuery, lstParams);
         }
     }
 }

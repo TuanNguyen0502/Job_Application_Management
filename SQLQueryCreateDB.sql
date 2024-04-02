@@ -161,3 +161,4 @@ SET @UniversityName = 'Bachelor of Arts in English'
 SELECT CddID
 FROM Candidates
 WHERE Education = @UniversityName
+SELECT * FROM Resume

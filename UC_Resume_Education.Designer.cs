@@ -79,8 +79,8 @@
             this.richTextBox_EducationDetail.Location = new System.Drawing.Point(13, 150);
             this.richTextBox_EducationDetail.Name = "richTextBox_EducationDetail";
             this.richTextBox_EducationDetail.Size = new System.Drawing.Size(1474, 137);
-            this.richTextBox_EducationDetail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.richTextBox_EducationDetail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.richTextBox_EducationDetail.StateCommon.Border.Rounding = 20;
             this.richTextBox_EducationDetail.StateCommon.Border.Width = 1;

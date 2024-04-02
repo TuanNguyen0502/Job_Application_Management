@@ -631,7 +631,6 @@
             this.btn_CreateCV.StateTracking.Border.Width = 1;
             this.btn_CreateCV.TabIndex = 15;
             this.btn_CreateCV.Values.Text = "Tạo CV";
-            this.btn_CreateCV.Click += new System.EventHandler(this.btn_CreateCV_Click);
             // 
             // flowLayoutPanel3
             // 

@@ -28,8 +28,6 @@ namespace Job_Application_Management
         public FCandidate()
         {
             InitializeComponent();
-            InitializeToolTip();
-            InitializeDropdownMenu();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
         public void frmCandidateMain_Load(object sender, EventArgs e)
@@ -50,41 +48,6 @@ namespace Job_Application_Management
                     flpScrollPane.Controls.Add(jobItem);
             }
         }
-        private void InitializeToolTip()
-        {
-            ToolTip toolTipMain = new ToolTip();
-            // Set up the delays for the ToolTip.
-            toolTipMain.AutoPopDelay = 5000;
-            toolTipMain.InitialDelay = 1000;
-            toolTipMain.ReshowDelay = 500;
-
-            toolTipMain.ShowAlways = true;
-
-            toolTipMain.SetToolTip(this.btnSearchJob, "Tìm việc");
-            toolTipMain.SetToolTip(this.btnJobApp, "Chuột phải để chọn chức năng");
-            toolTipMain.SetToolTip(this.btnCompanies, "Chuột phải để chọn chức năng");
-        }
-        private void InitializeDropdownMenu()
-        {
-            // Dropdown menu cho Button JobApp
-            ContextMenuStrip cmsButtonJobApp = new ContextMenuStrip();
-            // Thêm các mục menu
-            ToolStripMenuItem menuItemApplied = new ToolStripMenuItem("Những công việc đã ứng tuyển");
-            ToolStripMenuItem menuItemSaved = new ToolStripMenuItem("Những công việc đã lưu");
-            // Thêm các mục menu vào ContextMenuStrip
-            cmsButtonJobApp.Items.Add(menuItemApplied);
-            cmsButtonJobApp.Items.Add(menuItemSaved);
-            btnJobApp.ContextMenuStrip = cmsButtonJobApp;
-
-            // Dropdown menu cho Button Companies
-            ContextMenuStrip cmsButtonCompanies = new ContextMenuStrip();
-            ToolStripMenuItem menuItemListCompanies = new ToolStripMenuItem("Danh sách các công ty");
-            ToolStripMenuItem menuItemTopCompanies = new ToolStripMenuItem("Top công ty");
-            cmsButtonCompanies.Items.Add(menuItemListCompanies);
-            cmsButtonCompanies.Items.Add(menuItemTopCompanies);
-            btnCompanies.ContextMenuStrip = cmsButtonCompanies;
-        }
-
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             pnlNav.Height = btnDashboard.Height;
