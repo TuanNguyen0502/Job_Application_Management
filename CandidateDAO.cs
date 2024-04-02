@@ -129,7 +129,7 @@ namespace Job_Application_Management
         }
         public List<Dictionary<string, object>> GetSelectedJobDetails(string jobid)
         {
-            sqlQuery = "SELECT j.Name JobName, c.Name CompanyName, j.Salary, c.Address, j.Experience, j.PostTime"
+            sqlQuery = "SELECT j.Name JobName, c.Name CompanyName, j.Salary, c.Address, j.Experience, j.PostTime, j.JobDecription, j.WorkDuration, j.RequestCdd, j.Benefit"
                         +" FROM Jobs j"
                         +" JOIN Employers e ON j.EmpID = e.ID"
                         +" JOIN Company c ON e.CompanyName = c.Name"

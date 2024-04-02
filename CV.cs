@@ -80,5 +80,7 @@ namespace Job_Application_Management
         public string WorkPlace { get => workPlace; set => workPlace = value; }
         public string Certification { get => certification; set => certification = value; }
         public DateTime CertificationDate { get => certificationDate; set => certificationDate = value; }
+
+        
     }
 }

@@ -133,7 +133,7 @@ namespace Job_Application_Management
         private void btn_CreateCV_Click(object sender, EventArgs e)
         {
             candidateDAO = new CandidateDAO();
-            candidateDAO.SaveCVToDatabase(jobID);
+            //candidateDAO.SaveCVToDatabase(jobID);
         }
     }
 }
