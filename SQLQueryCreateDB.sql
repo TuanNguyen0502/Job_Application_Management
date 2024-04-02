@@ -74,8 +74,21 @@ CREATE TABLE Resume(
 	CompanyEndDate date,
 	CertificationName nvarchar(100),
 	CertificationDate date,
+	Status nvarchar(100) default N'Đang ứng tuyển',
 	CONSTRAINT PK_AD PRIMARY KEY (CddID, JobID)
 )
+CREATE TABLE CandidateProfile(
+	CddID varchar(10) CONSTRAINT FK_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
+	Objective text,
+	UniversityName nvarchar(100),
+	Major nvarchar(100),
+	GPA nvarchar(100),
+	CompanyName nvarchar(100),
+	WorkPlace nvarchar(100),
+	CertificationName nvarchar(100),
+	CONSTRAINT PK_Profile PRIMARY KEY (CddID)
+)
+	 
 -- Tạo bảng Saved Jobs
 CREATE TABLE SavedJobs(
 	ID int IDENTITY primary key,
@@ -129,16 +142,15 @@ INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, Exp
 VALUES ('J005', 'Digital Marketing', 100000, 'Do something.', 40, '3+ years in HR management', '2024-04-30', 'Health insurance, Retirement plan', 'Bachelors degree in Human Resources or related field', '2024-03-26', 'E003');
 
 -- Dữ liệu cho bảng Resume
-INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate)
+INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate, Status)
 VALUES 
-('CDD001', 'J001', N'Seeking a Software Engineer position to apply my skills in software development and contribute to the success of innovative projects at ABC Corporation.', N'Tech University', N'Computer Science', '3.7', '2018-09-01', '2022-06-01', N'Software Solutions Inc.', N'Hanoi, Vietnam', N'Developed scalable web applications using Python and Django framework.', '2022-07-01', '2023-12-31', N'AWS Certified Developer - Associate', '2024-01-15');
-INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate)
+('CDD001', 'J001', N'Seeking a Software Engineer position to apply my skills in software development and contribute to the success of innovative projects at ABC Corporation.', N'Tech University', N'Computer Science', '3.7', '2018-09-01', '2022-06-01', N'Software Solutions Inc.', N'Hanoi, Vietnam', N'Developed scalable web applications using Python and Django framework.', '2022-07-01', '2023-12-31', N'AWS Certified Developer - Associate', '2024-01-15', 'Đang ứng tuyển');
+INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate, Status)
 VALUES 
-('CDD001', 'J002', N'Results-driven Marketing Specialist with a passion for creating impactful campaigns. Seeking to leverage my expertise in digital marketing at ABC Corporation.', N'Marketing Academy', N'Marketing Management', '3.8', '2017-08-01', '2021-05-01', N'Digital Marketing Agency', N'Cityville, USA', N'Led successful social media campaigns resulting in a 20% increase in user engagement.', '2021-06-15', '2023-03-31', N'HubSpot Content Marketing Certification', '2023-06-20');
-INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate)
+('CDD001', 'J002', N'Results-driven Marketing Specialist with a passion for creating impactful campaigns. Seeking to leverage my expertise in digital marketing at ABC Corporation.', N'Marketing Academy', N'Marketing Management', '3.8', '2017-08-01', '2021-05-01', N'Digital Marketing Agency', N'Cityville, USA', N'Led successful social media campaigns resulting in a 20% increase in user engagement.', '2021-06-15', '2023-03-31', N'HubSpot Content Marketing Certification', '2023-06-20', 'Đang ứng tuyển');
+INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate, Status)
 VALUES 
-('CDD001', 'J003', 'Experienced HR professional with a proven track record of managing diverse teams. Seeking a challenging role as an HR Manager at ABC Corporation.', 'University of HR Management', 'Human Resources', '3.9', '2015-09-01', '2019-06-01', 'HR Solutions Inc.', 'Hanoi, Vietnam', 'Managed recruitment processes and employee relations.', '2019-07-15', '2022-02-28', 'PHR Certification', '2023-05-10');
-
+('CDD001', 'J003', 'Experienced HR professional with a proven track record of managing diverse teams. Seeking a challenging role as an HR Manager at ABC Corporation.', 'University of HR Management', 'Human Resources', '3.9', '2015-09-01', '2019-06-01', 'HR Solutions Inc.', 'Hanoi, Vietnam', 'Managed recruitment processes and employee relations.', '2019-07-15', '2022-02-28', 'PHR Certification', '2023-05-10', 'Đang ứng tuyển');
 --INSERT INTO Resume(CddID,JobID,Objective,UniversityName,Major,GPA,UniversityStartDate,UniversityEndDate,CompanyName,
 	--			   WorkPlace,Detail,CompanyStartDate,CompanyEndDate,CertificationName,CertificationDate)
 --VALUE()
