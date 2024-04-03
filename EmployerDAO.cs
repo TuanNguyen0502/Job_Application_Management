@@ -52,7 +52,6 @@ namespace Job_Application_Management
                 $"AND JobID = '{resume.JobID}'");
             Execute(sqlStr);
         }
-
         public CV GetResumeFromDB(string jobID, string cddID)
         {
             CV resume = new CV();

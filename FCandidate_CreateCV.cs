@@ -22,15 +22,16 @@ namespace Job_Application_Management
             InitializeComponent();
             this.cddID = cddID;
             canDAO = new CandidateDAO();
-            uC_Resume1.Btn_CreateCV.Click += btnCreateCV_Click;
         }
         public FCandidate_CreateCV()
         {
             InitializeComponent();
             canDAO = new CandidateDAO();
         }
-        public void btnCreateCV_Click(object sender, EventArgs arg)
+        public void SaveCVToListCV()
         {
+
+
             CV cv = resume.GetInfoResumeAtForm();
             Dictionary<string, object> dict = new Dictionary<string, object>();
             dict["CddID"] = cddID;
@@ -46,32 +47,21 @@ namespace Job_Application_Management
             dict["CompanyEndDate"] = cv.CompanyEndDate;
             dict["CertificationName"] = cv.Certification;
             dict["CertificationDate"] = cv.CertificationDate;
-            MessageBox.Show(cv.Objective);
-        }
-        public CV GetCVByCandidateID()
-        {
-            CV cv = new CV();
-            foreach(var item in listCVs)
+            MessageBox.Show(cv.CddID);
+            /*foreach (var item in dict)
             {
-                if (item["CddID"].Equals(cddID))
-                {
-                    cv.Objective = (string)item["Objective"];
-                    cv.UniversityName = (string)item["UniversityName"];
-                    cv.Major = (string)item["Major"];
-                    cv.Gpa = (string)item["GPA"];
-                    cv.UniversityStartDate = (DateTime)item["UniversityStartDate"];
-                    cv.UniversityEndDate = (DateTime)item["UniversityEndDate"];
-                    cv.WorkPlace = (string)item["WorkPlace"];
-                    cv.WorkedDetail = (string)item["Detail"];
-                    cv.CompanyName = (string)item["CompanyName"];
-                    cv.CompanyStartDate = (DateTime)item["CompanyStartDate"];
-                    cv.CompanyEndDate = (DateTime)item["Objective"];
-                    cv.Certification = (string)item["CertificationName"];
-                    cv.CertificationDate = (DateTime)item["CertificationDate"];
-                    return cv;
-                }
-            }
-            return null;
+                MessageBox.Show(item.Value.ToString());
+            }*/
+            listCVs.Add(dict);
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void uc_AtFormCreateCV_Load(object sender, EventArgs e)
+        {
+            SaveCVToListCV();
         }
     }
 }
