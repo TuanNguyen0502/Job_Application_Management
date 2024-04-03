@@ -32,22 +32,22 @@
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.flowLayoutPanel_Bottom = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Save = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.button_Company = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.textBox_Email = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label_ID = new System.Windows.Forms.Label();
-            this.label_Sex = new System.Windows.Forms.Label();
-            this.label_Workplace = new System.Windows.Forms.Label();
-            this.label_Email = new System.Windows.Forms.Label();
-            this.label_Phone = new System.Windows.Forms.Label();
-            this.label_Name = new System.Windows.Forms.Label();
             this.textBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.textBox_PhoneNumber = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.flowLayoutPanel_Sex = new System.Windows.Forms.FlowLayoutPanel();
             this.radioButton_Male = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.radioButton_Female = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.comboBox_Workplace = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.button_Company = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label_ID = new System.Windows.Forms.Label();
+            this.label_Sex = new System.Windows.Forms.Label();
+            this.label_Workplace = new System.Windows.Forms.Label();
+            this.label_Email = new System.Windows.Forms.Label();
+            this.label_Phone = new System.Windows.Forms.Label();
+            this.label_Name = new System.Windows.Forms.Label();
             this.flowLayoutPanel_Bottom.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel_Sex.SuspendLayout();
@@ -84,7 +84,7 @@
             this.flowLayoutPanel_Bottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel_Bottom.Name = "flowLayoutPanel_Bottom";
             this.flowLayoutPanel_Bottom.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.flowLayoutPanel_Bottom.Size = new System.Drawing.Size(1460, 108);
+            this.flowLayoutPanel_Bottom.Size = new System.Drawing.Size(1629, 108);
             this.flowLayoutPanel_Bottom.TabIndex = 0;
             // 
             // button_Save
@@ -151,230 +151,6 @@
             this.button_Save.Values.Text = "";
             this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.59678F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.84932F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.16438F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.35616F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox_Name, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox_Email, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label_ID, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label_Sex, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label_Workplace, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label_Email, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label_Phone, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label_Name, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox_ID, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox_PhoneNumber, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel_Sex, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox_Workplace, 3, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1460, 471);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // textBox_Name
-            // 
-            this.textBox_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Name.Location = new System.Drawing.Point(217, 207);
-            this.textBox_Name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_Name.Name = "textBox_Name";
-            this.textBox_Name.Size = new System.Drawing.Size(500, 57);
-            this.textBox_Name.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_Name.StateCommon.Border.Rounding = 20;
-            this.textBox_Name.StateCommon.Border.Width = 1;
-            this.textBox_Name.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Name.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
-            this.textBox_Name.TabIndex = 10;
-            // 
-            // textBox_Email
-            // 
-            this.textBox_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Email.Location = new System.Drawing.Point(929, 50);
-            this.textBox_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.ReadOnly = true;
-            this.textBox_Email.Size = new System.Drawing.Size(500, 57);
-            this.textBox_Email.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_Email.StateCommon.Border.Rounding = 20;
-            this.textBox_Email.StateCommon.Border.Width = 1;
-            this.textBox_Email.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Email.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
-            this.textBox_Email.TabIndex = 9;
-            // 
-            // label_ID
-            // 
-            this.label_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_ID.AutoSize = true;
-            this.label_ID.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ID.Location = new System.Drawing.Point(76, 62);
-            this.label_ID.Name = "label_ID";
-            this.label_ID.Size = new System.Drawing.Size(45, 33);
-            this.label_ID.TabIndex = 0;
-            this.label_ID.Text = "ID";
-            // 
-            // label_Sex
-            // 
-            this.label_Sex.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Sex.AutoSize = true;
-            this.label_Sex.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Sex.Location = new System.Drawing.Point(787, 219);
-            this.label_Sex.Name = "label_Sex";
-            this.label_Sex.Size = new System.Drawing.Size(60, 33);
-            this.label_Sex.TabIndex = 3;
-            this.label_Sex.Text = "Sex";
-            // 
-            // label_Workplace
-            // 
-            this.label_Workplace.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Workplace.AutoSize = true;
-            this.label_Workplace.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Workplace.Location = new System.Drawing.Point(742, 376);
-            this.label_Workplace.Name = "label_Workplace";
-            this.label_Workplace.Size = new System.Drawing.Size(150, 33);
-            this.label_Workplace.TabIndex = 5;
-            this.label_Workplace.Text = "Workplace";
-            // 
-            // label_Email
-            // 
-            this.label_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Email.AutoSize = true;
-            this.label_Email.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Email.Location = new System.Drawing.Point(772, 62);
-            this.label_Email.Name = "label_Email";
-            this.label_Email.Size = new System.Drawing.Size(90, 33);
-            this.label_Email.TabIndex = 4;
-            this.label_Email.Text = "Email";
-            // 
-            // label_Phone
-            // 
-            this.label_Phone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Phone.AutoSize = true;
-            this.label_Phone.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Phone.Location = new System.Drawing.Point(46, 359);
-            this.label_Phone.Name = "label_Phone";
-            this.label_Phone.Size = new System.Drawing.Size(105, 66);
-            this.label_Phone.TabIndex = 2;
-            this.label_Phone.Text = "Phone Number";
-            // 
-            // label_Name
-            // 
-            this.label_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Name.AutoSize = true;
-            this.label_Name.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Name.Location = new System.Drawing.Point(24, 219);
-            this.label_Name.Name = "label_Name";
-            this.label_Name.Size = new System.Drawing.Size(150, 33);
-            this.label_Name.TabIndex = 1;
-            this.label_Name.Text = "Full Name";
-            // 
-            // textBox_ID
-            // 
-            this.textBox_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_ID.Location = new System.Drawing.Point(217, 50);
-            this.textBox_ID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_ID.Name = "textBox_ID";
-            this.textBox_ID.ReadOnly = true;
-            this.textBox_ID.Size = new System.Drawing.Size(500, 57);
-            this.textBox_ID.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_ID.StateCommon.Border.Rounding = 20;
-            this.textBox_ID.StateCommon.Border.Width = 1;
-            this.textBox_ID.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_ID.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
-            this.textBox_ID.TabIndex = 8;
-            // 
-            // textBox_PhoneNumber
-            // 
-            this.textBox_PhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_PhoneNumber.Location = new System.Drawing.Point(217, 364);
-            this.textBox_PhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_PhoneNumber.Name = "textBox_PhoneNumber";
-            this.textBox_PhoneNumber.Size = new System.Drawing.Size(500, 57);
-            this.textBox_PhoneNumber.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_PhoneNumber.StateCommon.Border.Rounding = 20;
-            this.textBox_PhoneNumber.StateCommon.Border.Width = 1;
-            this.textBox_PhoneNumber.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_PhoneNumber.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
-            this.textBox_PhoneNumber.TabIndex = 11;
-            // 
-            // flowLayoutPanel_Sex
-            // 
-            this.flowLayoutPanel_Sex.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.flowLayoutPanel_Sex.Controls.Add(this.radioButton_Male);
-            this.flowLayoutPanel_Sex.Controls.Add(this.radioButton_Female);
-            this.flowLayoutPanel_Sex.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel_Sex.Location = new System.Drawing.Point(929, 185);
-            this.flowLayoutPanel_Sex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flowLayoutPanel_Sex.Name = "flowLayoutPanel_Sex";
-            this.flowLayoutPanel_Sex.Padding = new System.Windows.Forms.Padding(100, 10, 250, 10);
-            this.flowLayoutPanel_Sex.Size = new System.Drawing.Size(500, 100);
-            this.flowLayoutPanel_Sex.TabIndex = 13;
-            // 
-            // radioButton_Male
-            // 
-            this.radioButton_Male.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton_Male.Location = new System.Drawing.Point(103, 12);
-            this.radioButton_Male.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton_Male.Name = "radioButton_Male";
-            this.radioButton_Male.Size = new System.Drawing.Size(91, 39);
-            this.radioButton_Male.StateCommon.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Male.TabIndex = 0;
-            this.radioButton_Male.Values.Text = "Male";
-            // 
-            // radioButton_Female
-            // 
-            this.radioButton_Female.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton_Female.Location = new System.Drawing.Point(103, 55);
-            this.radioButton_Female.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton_Female.Name = "radioButton_Female";
-            this.radioButton_Female.Size = new System.Drawing.Size(123, 39);
-            this.radioButton_Female.StateCommon.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Female.TabIndex = 1;
-            this.radioButton_Female.Values.Text = "Female";
-            // 
-            // comboBox_Workplace
-            // 
-            this.comboBox_Workplace.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox_Workplace.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox_Workplace.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_Workplace.DropDownWidth = 493;
-            this.comboBox_Workplace.Items.AddRange(new object[] {
-            "Nhân viên",
-            "Phó phòng",
-            "Trưởng phòng",
-            "Phó giám đốc",
-            "Giám đốc",
-            "Tổng giám đốc"});
-            this.comboBox_Workplace.Location = new System.Drawing.Point(929, 367);
-            this.comboBox_Workplace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox_Workplace.Name = "comboBox_Workplace";
-            this.comboBox_Workplace.Size = new System.Drawing.Size(500, 50);
-            this.comboBox_Workplace.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.comboBox_Workplace.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.comboBox_Workplace.StateCommon.ComboBox.Border.Rounding = 20;
-            this.comboBox_Workplace.StateCommon.ComboBox.Border.Width = 1;
-            this.comboBox_Workplace.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
-            this.comboBox_Workplace.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_Workplace.TabIndex = 14;
-            // 
             // button_Company
             // 
             this.button_Company.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -439,11 +215,247 @@
             this.button_Company.Values.Text = "";
             this.button_Company.Click += new System.EventHandler(this.button_Company_Click);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.17066F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.10559F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.37262F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.47391F));
+            this.tableLayoutPanel1.Controls.Add(this.textBox_Name, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBox_Email, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label_ID, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label_Sex, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label_Workplace, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label_Email, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label_Phone, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label_Name, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBox_ID, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textBox_PhoneNumber, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel_Sex, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox_Workplace, 3, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1629, 471);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // textBox_Name
+            // 
+            this.textBox_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_Name.Location = new System.Drawing.Point(306, 207);
+            this.textBox_Name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Name.Name = "textBox_Name";
+            this.textBox_Name.Size = new System.Drawing.Size(500, 57);
+            this.textBox_Name.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.textBox_Name.StateCommon.Border.Rounding = 20;
+            this.textBox_Name.StateCommon.Border.Width = 1;
+            this.textBox_Name.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Name.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
+            this.textBox_Name.TabIndex = 10;
+            // 
+            // textBox_Email
+            // 
+            this.textBox_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_Email.Location = new System.Drawing.Point(1114, 50);
+            this.textBox_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Email.Name = "textBox_Email";
+            this.textBox_Email.ReadOnly = true;
+            this.textBox_Email.Size = new System.Drawing.Size(500, 57);
+            this.textBox_Email.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.textBox_Email.StateCommon.Border.Rounding = 20;
+            this.textBox_Email.StateCommon.Border.Width = 1;
+            this.textBox_Email.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Email.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
+            this.textBox_Email.TabIndex = 9;
+            // 
+            // textBox_ID
+            // 
+            this.textBox_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_ID.Location = new System.Drawing.Point(306, 50);
+            this.textBox_ID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_ID.Name = "textBox_ID";
+            this.textBox_ID.ReadOnly = true;
+            this.textBox_ID.Size = new System.Drawing.Size(500, 57);
+            this.textBox_ID.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.textBox_ID.StateCommon.Border.Rounding = 20;
+            this.textBox_ID.StateCommon.Border.Width = 1;
+            this.textBox_ID.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_ID.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
+            this.textBox_ID.TabIndex = 8;
+            // 
+            // textBox_PhoneNumber
+            // 
+            this.textBox_PhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_PhoneNumber.Location = new System.Drawing.Point(306, 364);
+            this.textBox_PhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_PhoneNumber.Name = "textBox_PhoneNumber";
+            this.textBox_PhoneNumber.Size = new System.Drawing.Size(500, 57);
+            this.textBox_PhoneNumber.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.textBox_PhoneNumber.StateCommon.Border.Rounding = 20;
+            this.textBox_PhoneNumber.StateCommon.Border.Width = 1;
+            this.textBox_PhoneNumber.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_PhoneNumber.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
+            this.textBox_PhoneNumber.TabIndex = 11;
+            // 
+            // flowLayoutPanel_Sex
+            // 
+            this.flowLayoutPanel_Sex.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.flowLayoutPanel_Sex.Controls.Add(this.radioButton_Male);
+            this.flowLayoutPanel_Sex.Controls.Add(this.radioButton_Female);
+            this.flowLayoutPanel_Sex.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel_Sex.Location = new System.Drawing.Point(1114, 185);
+            this.flowLayoutPanel_Sex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanel_Sex.Name = "flowLayoutPanel_Sex";
+            this.flowLayoutPanel_Sex.Padding = new System.Windows.Forms.Padding(100, 10, 250, 10);
+            this.flowLayoutPanel_Sex.Size = new System.Drawing.Size(500, 100);
+            this.flowLayoutPanel_Sex.TabIndex = 13;
+            // 
+            // radioButton_Male
+            // 
+            this.radioButton_Male.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radioButton_Male.Location = new System.Drawing.Point(103, 12);
+            this.radioButton_Male.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton_Male.Name = "radioButton_Male";
+            this.radioButton_Male.Size = new System.Drawing.Size(91, 39);
+            this.radioButton_Male.StateCommon.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_Male.TabIndex = 0;
+            this.radioButton_Male.Values.Text = "Male";
+            // 
+            // radioButton_Female
+            // 
+            this.radioButton_Female.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radioButton_Female.Location = new System.Drawing.Point(103, 55);
+            this.radioButton_Female.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton_Female.Name = "radioButton_Female";
+            this.radioButton_Female.Size = new System.Drawing.Size(123, 39);
+            this.radioButton_Female.StateCommon.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_Female.TabIndex = 1;
+            this.radioButton_Female.Values.Text = "Female";
+            // 
+            // comboBox_Workplace
+            // 
+            this.comboBox_Workplace.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox_Workplace.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox_Workplace.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_Workplace.DropDownWidth = 493;
+            this.comboBox_Workplace.Items.AddRange(new object[] {
+            "Nhân viên",
+            "Phó phòng",
+            "Trưởng phòng",
+            "Phó giám đốc",
+            "Giám đốc",
+            "Tổng giám đốc"});
+            this.comboBox_Workplace.Location = new System.Drawing.Point(1114, 367);
+            this.comboBox_Workplace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox_Workplace.Name = "comboBox_Workplace";
+            this.comboBox_Workplace.Size = new System.Drawing.Size(500, 50);
+            this.comboBox_Workplace.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.comboBox_Workplace.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.comboBox_Workplace.StateCommon.ComboBox.Border.Rounding = 20;
+            this.comboBox_Workplace.StateCommon.ComboBox.Border.Width = 1;
+            this.comboBox_Workplace.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
+            this.comboBox_Workplace.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Workplace.TabIndex = 14;
+            // 
+            // label_ID
+            // 
+            this.label_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_ID.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ID.Image = global::Job_Application_Management.Properties.Resources.icons8_id_30;
+            this.label_ID.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_ID.Location = new System.Drawing.Point(3, 48);
+            this.label_ID.Name = "label_ID";
+            this.label_ID.Size = new System.Drawing.Size(289, 60);
+            this.label_ID.TabIndex = 0;
+            this.label_ID.Text = "ID    ";
+            this.label_ID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Sex
+            // 
+            this.label_Sex.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Sex.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Sex.Image = global::Job_Application_Management.Properties.Resources.icons8_gender_30;
+            this.label_Sex.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Sex.Location = new System.Drawing.Point(820, 205);
+            this.label_Sex.Name = "label_Sex";
+            this.label_Sex.Size = new System.Drawing.Size(276, 60);
+            this.label_Sex.TabIndex = 3;
+            this.label_Sex.Text = "Gender    ";
+            this.label_Sex.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Workplace
+            // 
+            this.label_Workplace.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Workplace.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Workplace.Image = global::Job_Application_Management.Properties.Resources.icons8_workplace_30;
+            this.label_Workplace.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Workplace.Location = new System.Drawing.Point(820, 362);
+            this.label_Workplace.Name = "label_Workplace";
+            this.label_Workplace.Size = new System.Drawing.Size(276, 60);
+            this.label_Workplace.TabIndex = 5;
+            this.label_Workplace.Text = "Workplace    ";
+            this.label_Workplace.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Email
+            // 
+            this.label_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Email.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Email.Image = global::Job_Application_Management.Properties.Resources.icons8_email_302;
+            this.label_Email.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Email.Location = new System.Drawing.Point(820, 48);
+            this.label_Email.Name = "label_Email";
+            this.label_Email.Size = new System.Drawing.Size(276, 60);
+            this.label_Email.TabIndex = 4;
+            this.label_Email.Text = "Email    ";
+            this.label_Email.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Phone
+            // 
+            this.label_Phone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Phone.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Phone.Image = global::Job_Application_Management.Properties.Resources.icons8_phone_30__1_;
+            this.label_Phone.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Phone.Location = new System.Drawing.Point(3, 362);
+            this.label_Phone.Name = "label_Phone";
+            this.label_Phone.Size = new System.Drawing.Size(289, 60);
+            this.label_Phone.TabIndex = 2;
+            this.label_Phone.Text = "Phone Number    ";
+            this.label_Phone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Name
+            // 
+            this.label_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Name.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Name.Image = global::Job_Application_Management.Properties.Resources.icons8_name_30;
+            this.label_Name.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Name.Location = new System.Drawing.Point(3, 205);
+            this.label_Name.Name = "label_Name";
+            this.label_Name.Size = new System.Drawing.Size(289, 60);
+            this.label_Name.TabIndex = 1;
+            this.label_Name.Text = "Full Name    ";
+            this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FEmployer_Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1460, 584);
+            this.ClientSize = new System.Drawing.Size(1629, 584);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel_Bottom);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
