@@ -54,11 +54,12 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
-           /* List<UC_CandidateCV> resumeItems = employerDAO.GetCandidateResumeFromDB(jobID);
+            string status = "Đang ứng tuyển";
+            List<UC_CandidateCV> resumeItems = employerDAO.GetCandidateResumeFromDB(jobID, status);
             foreach (var resume in resumeItems)
             {
                 flowLayoutPanel1.Controls.Add(resume);
-            }*/
+            }
         }
     }
 }

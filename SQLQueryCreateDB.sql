@@ -78,7 +78,7 @@ CREATE TABLE Resume(
 	CONSTRAINT PK_AD PRIMARY KEY (CddID, JobID)
 )
 CREATE TABLE CandidateProfile(
-	CddID varchar(10) CONSTRAINT FK_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
+	CddID varchar(10) CONSTRAINT FK_Cdd_CP FOREIGN KEY REFERENCES Candidates(CddID),
 	Objective text,
 	UniversityName nvarchar(100),
 	Major nvarchar(100),
@@ -101,6 +101,7 @@ CREATE TABLE AppliedJobs(
 	TimeApplied date,
 	JobID varchar(10) FOREIGN KEY REFERENCES Jobs(ID) 
 )
+
 SELECT * FROM AppliedJobs
 
 

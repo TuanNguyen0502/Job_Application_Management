@@ -29,11 +29,11 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
-            List<UC_CandidateProfile> resumeItems = employerDAO.GetCandidateProfileFromDB();
+            /*List<UC_CandidateProfile> resumeItems = employerDAO.GetCandidateProfileFromDB();
             foreach (var resume in resumeItems)
             {
-                //flowLayoutPanel1.Controls.Add(resume);
-            }
+                flowLayoutPanel1.Controls.Add(resume);
+            }*/
         }
     }
 }
