@@ -22,6 +22,7 @@ namespace Job_Application_Management
             InitializeComponent();
             this.cddID = cddID;
             canDAO = new CandidateDAO();
+            uC_Resume1.Btn_CreateCV.Click += btnCreateCV_Click;
         }
         public FCandidate_CreateCV()
         {
@@ -30,8 +31,6 @@ namespace Job_Application_Management
         }
         public void SaveCVToListCV()
         {
-
-
             CV cv = resume.GetInfoResumeAtForm();
             Dictionary<string, object> dict = new Dictionary<string, object>();
             dict["CddID"] = cddID;
@@ -47,18 +46,13 @@ namespace Job_Application_Management
             dict["CompanyEndDate"] = cv.CompanyEndDate;
             dict["CertificationName"] = cv.Certification;
             dict["CertificationDate"] = cv.CertificationDate;
-            MessageBox.Show(cv.CddID);
-            /*foreach (var item in dict)
-            {
-                MessageBox.Show(item.Value.ToString());
-            }*/
             listCVs.Add(dict);
         }
 
-        private void kryptonButton1_Click(object sender, EventArgs e)
+        private void btnCreateCV_Click(object sender, EventArgs e)
         {
-        }
 
+        }
         private void uc_AtFormCreateCV_Load(object sender, EventArgs e)
         {
             SaveCVToListCV();

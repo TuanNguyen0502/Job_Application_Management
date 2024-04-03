@@ -48,7 +48,6 @@
             this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.kryptonButton1.TabIndex = 1;
             this.kryptonButton1.Values.Text = "Lưu hồ sơ";
-            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // uC_Resume1
             // 

@@ -56,6 +56,8 @@ namespace Job_Application_Management
             UC_Resume_Certificate uC_Resume_Certificate = new UC_Resume_Certificate();
             flowLayoutPanel_Certificate.Controls.Add(uC_Resume_Certificate);
         }
+
+        public KryptonButton Btn_CreateCV { get { return btn_CreateCV; } }
         
         public CV GetInfoResumeAtForm()
         {
