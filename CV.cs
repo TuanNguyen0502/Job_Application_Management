@@ -82,5 +82,6 @@ namespace Job_Application_Management
         public string Certification { get => certification; set => certification = value; }
         public DateTime CertificationDate { get => certificationDate; set => certificationDate = value; }
         public string Status { get => status; set => status = value; }
+
     }
 }

@@ -54,7 +54,7 @@ namespace Job_Application_Management
         private void button_Save_Click(object sender, EventArgs e)
         {
             UpdateEmployer();
-            employerDAO.UpdateEmployerInfor(employer);
+            //employerDAO.SaveEmployerInfor(employer);
             LoadInfor();
         }
 

@@ -14,6 +14,9 @@ namespace Job_Application_Management
     {
         CandidateDAO canDAO;
         private string cddID;
+        UC_Resume resume = new UC_Resume();
+        // Danh sách các CV được tạo ban đầu từ các ứng viên
+        public List<Dictionary<string, object>> listCVs = new List<Dictionary<string, object>>();
         public FCandidate_CreateCV(string cddID)
         {
             InitializeComponent();
@@ -25,20 +28,40 @@ namespace Job_Application_Management
             InitializeComponent();
             canDAO = new CandidateDAO();
         }
-        public void SaveCVToDatabase()
+        public void SaveCVToListCV()
         {
-            
 
+
+            CV cv = resume.GetInfoResumeAtForm();
+            Dictionary<string, object> dict = new Dictionary<string, object>();
+            dict["CddID"] = cddID;
+            dict["Objective"] = cv.Objective;
+            dict["UniversityName"] = cv.UniversityName;
+            dict["Major"] = cv.Major;
+            dict["GPA"] = cv.Gpa;
+            dict["UniversityStartDate"] = cv.UniversityStartDate;
+            dict["UniversityEndDate"] = cv.UniversityEndDate;
+            dict["WorkPlace"] = cv.WorkPlace;
+            dict["Detail"] = cv.WorkedDetail;
+            dict["CompanyStartDate"] = cv.CompanyStartDate;
+            dict["CompanyEndDate"] = cv.CompanyEndDate;
+            dict["CertificationName"] = cv.Certification;
+            dict["CertificationDate"] = cv.CertificationDate;
+            MessageBox.Show(cv.CddID);
+            /*foreach (var item in dict)
+            {
+                MessageBox.Show(item.Value.ToString());
+            }*/
+            listCVs.Add(dict);
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            SaveCVToDatabase();
         }
 
         private void uc_AtFormCreateCV_Load(object sender, EventArgs e)
         {
-
+            SaveCVToListCV();
         }
     }
 }

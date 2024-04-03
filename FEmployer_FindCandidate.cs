@@ -32,7 +32,7 @@ namespace Job_Application_Management
             List<UC_CandidateProfile> resumeItems = employerDAO.GetCandidateProfileFromDB();
             foreach (var resume in resumeItems)
             {
-                flowLayoutPanel1.Controls.Add(resume);
+                //flowLayoutPanel1.Controls.Add(resume);
             }
         }
     }

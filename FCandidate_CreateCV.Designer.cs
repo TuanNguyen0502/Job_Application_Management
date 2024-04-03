@@ -29,20 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCandidate_CreateCV));
-            this.uc_AtFormCreateCV = new Job_Application_Management.UC_Resume();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.uC_Resume1 = new Job_Application_Management.UC_Resume();
             this.SuspendLayout();
-            // 
-            // uc_AtFormCreateCV
-            // 
-            this.uc_AtFormCreateCV.AutoScroll = true;
-            this.uc_AtFormCreateCV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uc_AtFormCreateCV.Location = new System.Drawing.Point(0, 0);
-            this.uc_AtFormCreateCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uc_AtFormCreateCV.Name = "uc_AtFormCreateCV";
-            this.uc_AtFormCreateCV.Size = new System.Drawing.Size(1282, 1055);
-            this.uc_AtFormCreateCV.TabIndex = 0;
-            this.uc_AtFormCreateCV.Load += new System.EventHandler(this.uc_AtFormCreateCV_Load);
             // 
             // kryptonButton1
             // 
@@ -61,24 +50,36 @@
             this.kryptonButton1.Values.Text = "Lưu hồ sơ";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
+            // uC_Resume1
+            // 
+            this.uC_Resume1.AutoScroll = true;
+            this.uC_Resume1.CddID = null;
+            this.uC_Resume1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Resume1.JobID = null;
+            this.uC_Resume1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Resume1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_Resume1.Name = "uC_Resume1";
+            this.uC_Resume1.Size = new System.Drawing.Size(1282, 1055);
+            this.uC_Resume1.TabIndex = 0;
+            // 
             // FCandidate_CreateCV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1282, 1055);
-            this.Controls.Add(this.uc_AtFormCreateCV);
+            this.Controls.Add(this.uC_Resume1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FCandidate_CreateCV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tạo CV";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private UC_Resume uc_AtFormCreateCV;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private UC_Resume uC_Resume1;
     }
 }

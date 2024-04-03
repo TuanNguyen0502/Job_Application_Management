@@ -42,6 +42,11 @@ namespace Job_Application_Management
             childForm.Show();
         }
 
+        private void button_Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void FEmployer_SeeCandidate_Load(object sender, EventArgs e)
         {
             LoadInfor();
@@ -49,12 +54,11 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
-            string status = "Đang ứng tuyển";
-            List<UC_CandidateCV> resumeItems = employerDAO.GetCandidateResumeFromDB(jobID, status);
+           /* List<UC_CandidateCV> resumeItems = employerDAO.GetCandidateResumeFromDB(jobID);
             foreach (var resume in resumeItems)
             {
                 flowLayoutPanel1.Controls.Add(resume);
-            }
+            }*/
         }
     }
 }

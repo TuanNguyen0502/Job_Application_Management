@@ -4,11 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using System.Security.Cryptography;
 
 namespace Job_Application_Management
 {
@@ -17,7 +17,6 @@ namespace Job_Application_Management
         private Form currentFormChild;
         private string jobID;
         private EmployerDAO employerDAO;
-
         public FEmployer_ApprovedCandidate(string jobID)
         {
             employerDAO = new EmployerDAO();
