@@ -52,7 +52,7 @@ namespace Job_Application_Management
 
         private void button_ApprovedCandidate_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_ApprovedCandidate());
+            OpenChildForm(new FEmployer_ApprovedCandidate(JobID));
         }
 
         private void FEmployer_JobDetail_Load(object sender, EventArgs e)

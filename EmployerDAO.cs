@@ -48,10 +48,31 @@ namespace Job_Application_Management
 
         public void UpdateResume(CV resume)
         {
-            string sqlStr = string.Format($"UPDATE Resume SET Status = '{resume.Status}' WHERE CddID = '{resume.CddID}' " +
+            string sqlStr = string.Format($"UPDATE Resume SET Status = N'{resume.Status}' WHERE CddID = '{resume.CddID}' " +
                 $"AND JobID = '{resume.JobID}'");
             Execute(sqlStr);
         }
+
+        public List<UC_CandidateCV> GetCandidateResumeFromDB(string jobID, string status)
+        {
+            string sqlQuery = $"SELECT R.CddID, C.CddName, R.UniversityName, R.Major, R.GPA " +
+                $"FROM Resume R INNER JOIN Candidates C ON R.CddID = C.CddID " +
+                $"WHERE JobID = '{jobID}' AND Status = N'{status}'";
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_CandidateCV> items = new List<UC_CandidateCV>();
+            foreach (var row in resultList)
+            {
+                UC_CandidateCV item = new UC_CandidateCV(jobID);
+                item.CddID = (string)row["CddID"];
+                item.Label_Name.Text = (string)row["CddName"];
+                item.Label_University.Text = (string)row["UniversityName"];
+                item.Label_Major.Text += (string)row["Major"].ToString();
+                item.Label_GPA.Text = (string)row["GPA"].ToString();
+                items.Add(item);
+            }
+            return items;
+        }
+
         public CV GetResumeFromDB(string jobID, string cddID)
         {
             CV resume = new CV();
@@ -217,24 +238,5 @@ namespace Job_Application_Management
             return items;
         }
 
-        public List<UC_CandidateCV> GetCandidateResumeFromDB(string jobID, string status)
-        {
-            string sqlQuery = $"SELECT R.CddID, C.CddName, R.UniversityName, R.Major, R.GPA " +
-                $"FROM Resume R INNER JOIN Candidates C ON R.CddID = C.CddID " +
-                $"WHERE JobID = '{jobID}' AND Status = '{status}'";
-            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
-            List<UC_CandidateCV> items = new List<UC_CandidateCV>();
-            foreach (var row in resultList)
-            {
-                UC_CandidateCV item = new UC_CandidateCV(jobID);
-                item.CddID = (string)row["CddID"];
-                item.Label_Name.Text = (string)row["CddName"];
-                item.Label_University.Text = (string)row["UniversityName"];
-                item.Label_Major.Text += (string)row["Major"].ToString();
-                item.Label_GPA.Text = (string)row["GPA"].ToString();
-                items.Add(item);
-            }
-            return items;
-        }
     }
 }

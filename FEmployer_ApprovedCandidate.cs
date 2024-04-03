@@ -14,7 +14,6 @@ namespace Job_Application_Management
 {
     public partial class FEmployer_ApprovedCandidate : KryptonForm
     {
-        private Form currentFormChild;
         private string jobID;
         private EmployerDAO employerDAO;
         public FEmployer_ApprovedCandidate(string jobID)
@@ -24,34 +23,6 @@ namespace Job_Application_Management
             InitializeComponent();
         }
 
-        private void OpenChildForm(Form childForm)
-        {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
-
-            currentFormChild = childForm;
-            childForm.FormBorderStyle = FormBorderStyle.Sizable;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
-        private void button_Back_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button_Detail_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FCandidate_CreateCV());
-        }
-
-        private void button_Refuse_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FEmployer_ApprovedCandidate_Load(object sender, EventArgs e)
         {
             LoadInfor();
@@ -59,7 +30,7 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
-            string status = "Đã xác nhận";
+            string status = "Approved";
             List<UC_CandidateCV> resumeItems = employerDAO.GetCandidateResumeFromDB(jobID, status);
             foreach (var resume in resumeItems)
             {
