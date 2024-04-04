@@ -12,14 +12,15 @@ namespace Job_Application_Management
 {
     public partial class FCandidate_CreateCV : Form
     {
-        CandidateDAO canDAO;
+        CandidateDAO canDAO = new CandidateDAO();
         UC_Resume resume = new UC_Resume();
+        private string cddid;
         // Danh sách các CV được tạo ban đầu từ các ứng viên
         
         public FCandidate_CreateCV(string cddID)
         {
             InitializeComponent();
-            canDAO = new CandidateDAO();
+            this.cddid = cddID;
             uC_Resume1.Btn_CreateCV.Click += btnCreateCV_Click;
         }
         public FCandidate_CreateCV()
@@ -29,7 +30,7 @@ namespace Job_Application_Management
         }
         private void btnCreateCV_Click(object sender, EventArgs e)
         {
-            canDAO.SaveAvailableCV();
+            canDAO.SaveAvailableCV(cddid);
         }
         
         private void uc_AtFormCreateCV_Load(object sender, EventArgs e)

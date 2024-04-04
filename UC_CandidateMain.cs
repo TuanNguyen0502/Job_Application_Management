@@ -22,6 +22,7 @@ namespace Job_Application_Management
         private string address;
         private Image icon;
         private string jobid;
+        private string cddid;
         [Category("Custom Props")]
         public string JobName
         {
@@ -58,6 +59,11 @@ namespace Job_Application_Management
             get { return jobid; }
             set { jobid = value; }
         }
+        public string CddID
+        {
+            get { return cddid; }
+            set { cddid = value; }
+        }
         #endregion
         public UC_CandidateMain()
         {
@@ -71,7 +77,7 @@ namespace Job_Application_Management
 
         private void UC_CandidateMain_Click(object sender, EventArgs e)
         {
-            FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails(JobID);
+            FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails(JobID, CddID);
             selected.ShowDialog();
         }
 

@@ -13,6 +13,7 @@ namespace Job_Application_Management
     public partial class FCandidate_SelectedJobDetails : Form
     {
         private string jobid;
+        private string cddid;
         private string companyName;
 
         Label lblDescriptionTitle;
@@ -33,11 +34,13 @@ namespace Job_Application_Management
             InitializeComponent();
             GetDataFromDB();
         }
-        public FCandidate_SelectedJobDetails(string jobid)
+        public FCandidate_SelectedJobDetails(string jobid, string cddid)
         {
             this.jobid = jobid;
+            this.cddid = cddid;
             InitializeComponent();
             GetDataFromDB();
+            
         }
         public void GetDataFromDB()
         {
@@ -150,10 +153,11 @@ namespace Job_Application_Management
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            // Lưu công việc xuống CSDL
             canDAO.SaveAppliedJob(jobid);
-            // Tạo ra một resume cụ thể cho ứng viên, đẩy xuống CSDL cho nhà tuyển dụng xem
-            canDAO.SaveResumeToDatabase(jobid);
+            //
+            MessageBox.Show(cddid);
+            CV cv = canDAO.GetAvailableCVByCandidateID(cddid);
+            canDAO.SaveResumeToDatabase(cv, cddid, jobid);
         }
     }
 }
