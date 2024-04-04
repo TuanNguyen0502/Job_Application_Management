@@ -57,12 +57,11 @@
             // 
             // panel1
             // 
-            this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.flpMain);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(812, 653);
+            this.panel1.Size = new System.Drawing.Size(853, 653);
             this.panel1.TabIndex = 0;
             // 
             // flpMain
@@ -75,7 +74,7 @@
             this.flpMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpMain.Location = new System.Drawing.Point(0, 0);
             this.flpMain.Name = "flpMain";
-            this.flpMain.Size = new System.Drawing.Size(812, 653);
+            this.flpMain.Size = new System.Drawing.Size(850, 653);
             this.flpMain.TabIndex = 5;
             // 
             // kryptonPanel1
@@ -84,7 +83,7 @@
             this.kryptonPanel1.Controls.Add(this.label3);
             this.kryptonPanel1.Location = new System.Drawing.Point(3, 3);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(808, 103);
+            this.kryptonPanel1.Size = new System.Drawing.Size(829, 103);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
             this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
             this.kryptonPanel1.StateCommon.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
@@ -125,7 +124,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(3, 112);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(808, 49);
+            this.panel3.Size = new System.Drawing.Size(829, 49);
             this.panel3.TabIndex = 4;
             // 
             // label1
@@ -147,7 +146,7 @@
             this.panel5.Controls.Add(this.label2);
             this.panel5.Location = new System.Drawing.Point(3, 167);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(808, 47);
+            this.panel5.Size = new System.Drawing.Size(829, 47);
             this.panel5.TabIndex = 2;
             // 
             // radioButton3
@@ -198,14 +197,14 @@
             this.flpStoreUC.AutoScroll = true;
             this.flpStoreUC.Location = new System.Drawing.Point(3, 220);
             this.flpStoreUC.Name = "flpStoreUC";
-            this.flpStoreUC.Size = new System.Drawing.Size(784, 410);
+            this.flpStoreUC.Size = new System.Drawing.Size(829, 410);
             this.flpStoreUC.TabIndex = 5;
             // 
             // FCandidate_SavedJobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 653);
+            this.ClientSize = new System.Drawing.Size(853, 653);
             this.Controls.Add(this.panel1);
             this.Name = "FCandidate_SavedJobs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

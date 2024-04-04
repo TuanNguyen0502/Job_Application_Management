@@ -83,7 +83,7 @@ namespace Job_Application_Management
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            canDAO.SaveSavedJob(jobid);
+            canDAO.AddSavedJobs(JobID);
         }
     }
 }

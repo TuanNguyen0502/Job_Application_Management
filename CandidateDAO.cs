@@ -168,7 +168,7 @@ namespace Job_Application_Management
             List<Dictionary<string, object>> keyValueJobDetails = dbConn.ExecuteReaderData(sqlQuery, lstParam);
             return keyValueJobDetails;
         }
-        public void SaveSavedJob(string jobid)
+        public void AddSavedJobs(string jobid)
         {
             sqlQuery = "INSERT INTO SavedJobs(TimeSaved, JobID)" +
                             " VALUES(@times,@jId)";
@@ -176,7 +176,7 @@ namespace Job_Application_Management
             {
                     new SqlParameter("@times", SqlDbType.Date) {Value = DateTime.Today},
                     new SqlParameter("@jId", SqlDbType.VarChar) { Value = jobid },
-                };
+            };
             dbConn.ExecuteWriteData(sqlQuery, lstParam);
         }
         public void SaveAppliedJob(string jobid)
