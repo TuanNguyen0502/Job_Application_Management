@@ -44,7 +44,7 @@ namespace Job_Application_Management
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(sqlStr, conn);
                     if (cmd.ExecuteNonQuery() > 0)
-                        MessageBox.Show("Successful !");
+                        MessageBox.Show("Write data Successful !");
                 }
                 catch (Exception ex)
                 {

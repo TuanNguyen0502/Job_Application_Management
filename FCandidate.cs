@@ -15,7 +15,7 @@ namespace Job_Application_Management
 {
     public partial class FCandidate : KryptonForm
     {
-        CandidateDAO canDAO = new CandidateDAO();
+        CandidateDAO canDAO;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
             int nLeftRect,
@@ -28,9 +28,9 @@ namespace Job_Application_Management
         public FCandidate()
         {
             InitializeComponent();
-            InitializeToolTip();
-            InitializeDropdownMenu();
+            //MessageBox.Show(lblCddID.Text);
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            canDAO = new CandidateDAO(lblCddID.Text);
         }
         public void frmCandidateMain_Load(object sender, EventArgs e)
         {

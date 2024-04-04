@@ -61,6 +61,10 @@ namespace Job_Application_Management
         {
             get { return btnAdd; }
         }
+        public Button BtnRusbish
+        {
+            get { return btnRusbish; }
+        }
         public UC_JobsSaved()
         {
             InitializeComponent();
