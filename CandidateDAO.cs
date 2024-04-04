@@ -121,26 +121,38 @@ namespace Job_Application_Management
             };
             dbConn.ExecuteDeleteData(sqlQuery, lstParams);
         }
-        public List<UC_JobsSaved> GetAppliedJobsFromDB()
+        public List<UC_AppliedJobs> GetAppliedJobsFromDB()
         {
-            sqlQuery = "SELECT j.Name, j.JobDecription, c.Name as CompanyName, aj.TimeApplied, c.Address, j.Salary"
+            sqlQuery = "SELECT aj.ID, j.Name, j.JobDecription, c.Name as CompanyName, aj.TimeApplied, c.Address, j.Salary"
                        +" FROM AppliedJobs aj"
                        +" JOIN Jobs j ON aj.JobID = j.ID"
                        +" JOIN Employers e ON j.EmpID = e.ID"
                        +" JOIN Company c ON c.Name = e.CompanyName";
             List<Dictionary<string, object>> keyValueSavedJobs = dbConn.ExecuteReaderData(sqlQuery);
-            List<UC_JobsSaved> saveds = new List<UC_JobsSaved>();
+            List<UC_AppliedJobs> applieds = new List<UC_AppliedJobs>();
             foreach (var row in keyValueSavedJobs)
             {
-                UC_JobsSaved item = new UC_JobsSaved();
+                UC_AppliedJobs item = new UC_AppliedJobs();
                 item.DescriptionJob = (string)row["Name"] + " [" + (string)row["JobDecription"] + "]";
                 item.ComName = (string)row["CompanyName"];
                 item.TimeSaved = (DateTime)row["TimeApplied"];
                 item.Address = (string)row["Address"];
                 item.Salary = (int)row["Salary"];
-                saveds.Add(item);
+                int id = (int)row["ID"];
+                item.ID = id.ToString();
+                applieds.Add(item);
             }
-            return saveds;
+            return applieds;
+        }
+        public void RemoveAppliedJobsFromDB(string ID)
+        {
+            sqlQuery = "DELETE AppliedJobs"
+                      +" WHERE ID = @ID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@ID", SqlDbType.Int) {Value = ID}
+            };
+            dbConn.ExecuteDeleteData(sqlQuery, lstParams);
         }
         public List<Dictionary<string, object>> GetSelectedJobDetails(string jobid)
         {

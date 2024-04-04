@@ -157,3 +157,7 @@ SELECT * FROM Resume
 SELECT * FROM SavedJobs
 DELETE SavedJobs 
 WHERE ID = 1
+
+SELECT * FROM AppliedJobs
+DELETE AppliedJobs 
+WHERE ID = 1

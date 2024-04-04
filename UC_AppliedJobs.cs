@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class UC_JobsSaved : UserControl
+    public partial class UC_AppliedJobs : UserControl
     {
         #region Properties
         private string descriptionJob;
@@ -22,33 +22,33 @@ namespace Job_Application_Management
         private Image icon;
         private string jobId;
         private string id;
-        public string DescriptionJob 
-        { 
+        public string DescriptionJob
+        {
             get => descriptionJob;
             set { descriptionJob = value; lblDescrption.Text = value; }
         }
-        public string ComName 
-        { 
-            get => comName; 
-            set { comName = value; lblComName.Text = value; } 
+        public string ComName
+        {
+            get => comName;
+            set { comName = value; lblComName.Text = value; }
         }
-        public DateTime TimeSaved 
-        {   
+        public DateTime TimeSaved
+        {
             get => timeSaved;
             set { timeSaved = value; lblTimeSaved.Text = $"Đã lưu: {value}"; }
         }
-        public string Address 
-        { 
+        public string Address
+        {
             get => address;
-            set { address = value; lblAddress.Text = $"{        value}"; }
+            set { address = value; lblAddress.Text = $"{value}"; }
         }
-        public int Salary 
-        { 
+        public int Salary
+        {
             get => salary;
-            set { salary = value; lblComName.Text = $"       { value.ToString()}"; }
+            set { salary = value; lblComName.Text = $"       {value.ToString()}"; }
         }
-        public Image Icon 
-        { 
+        public Image Icon
+        {
             get => icon;
             set { icon = value; pictureBox1.Image = value; }
         }
@@ -63,37 +63,13 @@ namespace Job_Application_Management
             set { id = value; }
         }
         #endregion
-        public Button BtnAdd
-        {
-            get { return btnAdd; }
-        }
         public Button BtnRusbish
         {
             get { return btnRusbish; }
         }
-        public UC_JobsSaved()
+        public UC_AppliedJobs()
         {
             InitializeComponent();
-            InitializeToolTip();
-        }
-        private void UC_Candidate_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void InitializeToolTip()
-        {
-            ToolTip toolTipMain = new ToolTip();
-            // Set up the delays for the ToolTip.
-            toolTipMain.AutoPopDelay = 5000;
-            toolTipMain.InitialDelay = 1000;
-            toolTipMain.ReshowDelay = 500;
-
-            // Force the ToolTip text to be displayed whether or not the form is active.
-            toolTipMain.ShowAlways = true;
-
-            // Set up the ToolTip text for the Button and TextBox.
-            toolTipMain.SetToolTip(this.btnRusbish, "Bỏ qua");
-            toolTipMain.SetToolTip(this.btnAdd, "Lưu");
         }
 
         public event EventHandler ButtonAddClick;

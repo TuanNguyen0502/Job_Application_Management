@@ -19,16 +19,27 @@ namespace Job_Application_Management
         {
             InitializeComponent();
         }
-
+        private void LoadAppliedJobs()
+        {
+            List<UC_AppliedJobs> applieds = canDAO.GetAppliedJobsFromDB();
+            if (flpMain.Controls.Count > 0)
+            {
+                flpStoreUC.Controls.Clear();
+            }
+            foreach (var applied in applieds)
+            {
+                flpStoreUC.Controls.Add(applied);
+                applied.ButtonRusbishClick += appliedJobsButtonRusbish_Click;
+            }
+        }
         private void FCandidate_AppliedJobs_Load(object sender, EventArgs e)
         {
-
-            List<UC_JobsSaved> saveds = canDAO.GetAppliedJobsFromDB();
-            foreach (var saved in saveds)
-            {
-                saved.BtnAdd.Visible = false;
-                flpMain.Controls.Add(saved);
-            }
+            LoadAppliedJobs();
+        }
+        private void appliedJobsButtonRusbish_Click(object sender, ButtonClickEventArgs e)
+        {
+            canDAO.RemoveAppliedJobsFromDB(e.ID);
+            LoadAppliedJobs();
         }
     }
 }
