@@ -36,10 +36,13 @@
             this.button_PostJob = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_FindCandidate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_SignOut = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel_Top = new System.Windows.Forms.Panel();
             this.panel_Center = new System.Windows.Forms.Panel();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.flowLayoutPanel_Left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel_Top.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel_Left
@@ -384,12 +387,31 @@
             this.button_SignOut.Values.Text = "";
             this.button_SignOut.Click += new System.EventHandler(this.button_SignOut_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1032, 47);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Welcome Employer to Job Application Management";
+            // 
+            // panel_Top
+            // 
+            this.panel_Top.Controls.Add(this.label1);
+            this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Top.Location = new System.Drawing.Point(230, 0);
+            this.panel_Top.Name = "panel_Top";
+            this.panel_Top.Size = new System.Drawing.Size(1248, 100);
+            this.panel_Top.TabIndex = 3;
+            // 
             // panel_Center
             // 
             this.panel_Center.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Center.Location = new System.Drawing.Point(230, 0);
+            this.panel_Center.Location = new System.Drawing.Point(230, 100);
             this.panel_Center.Name = "panel_Center";
-            this.panel_Center.Size = new System.Drawing.Size(1248, 844);
+            this.panel_Center.Size = new System.Drawing.Size(1248, 744);
             this.panel_Center.TabIndex = 4;
             // 
             // kryptonPalette1
@@ -420,6 +442,7 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1478, 844);
             this.Controls.Add(this.panel_Center);
+            this.Controls.Add(this.panel_Top);
             this.Controls.Add(this.flowLayoutPanel_Left);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FEmployer";
@@ -427,11 +450,12 @@
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.StateCommon.OverlayHeaders = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FEmployer_Load);
             this.flowLayoutPanel_Left.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel_Top.ResumeLayout(false);
+            this.panel_Top.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -439,6 +463,8 @@
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Left;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel_Top;
         private System.Windows.Forms.Panel panel_Center;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_Home;

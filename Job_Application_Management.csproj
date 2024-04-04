@@ -634,23 +634,5 @@
   <ItemGroup>
     <None Include="Resources\icons8-manager-16.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-id-30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-email-302.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-name-30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-phone-30 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-gender-30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-workplace-30.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
