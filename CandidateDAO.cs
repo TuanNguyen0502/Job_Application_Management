@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.
 
 namespace Job_Application_Management
 {
@@ -175,41 +176,66 @@ namespace Job_Application_Management
             return dbConn.ExecuteReaderData(sqlQuery, lstParam);
         }
        
-        public void SaveCVToDatabase()
+        public CV GetAvailableCVByCandidateID()
         {
-            CV cv = resume.GetInfoResumeAtForm();
-            string cddId;
-            string jodId;
-            string sqlQueryReadCddId = "SELECT CddID"
-                      +" FROM Candidates"
-                      +" WHERE Education = @UniversityName";
-            SqlParameter[] lstParam1 =
+            foreach (Dictionary<string,object> item in listCVs)
             {
-                new SqlParameter("@UniversityName", SqlDbType.NVarChar) { Value = cv.UniversityName },
-            };
-            cddId = (string)dbConn.ExecuteScalar(sqlQueryReadCddId, lstParam1);
-           
-            sqlQuery = "INSERT INTO Resume(CddID,JobID,Objective,UniversityName,Major,UniversityStartDate,"
-                + "UniversityEndDate,CompanyName,WorkPlace,"
-                + "CertificationName,CertificationDate)"
-                +$" VALUES('{cddId}','{cv.JobID}',N'{cv.Objective}',N'{cv.UniversityName}',N'{cv.Major}','{cv.UniversityStartDate}','{cv.UniversityEndDate}',N'{cv.CompanyName}',N'{cv.WorkPlace}',N'{cv.Certification}','{cv.CertificationDate}')";
-            //+" VALUES(@cddId,@jobId,@obj,@un,@major,@usd,@ued,@company,@workplace,@cername,@cerdate)";
-            /*SqlParameter[] lstParams =
+                if ((string)item["CddID"] == "CDD001")
+                {
+                    CV cv = new CV();
+                    cv.CddID = "CDD001";
+                    cv.Objective = (string)item["Objective"];
+                    cv.UniversityName = (string)item["UniversityName"];
+                    cv.Major = (string)item["Major"];
+                    cv.Gpa = (string)item["GPA"];
+                    cv.UniversityStartDate = (DateTime)item["UniversityStartDate"];
+                    cv.UniversityEndDate = (DateTime)item["UniversityEndDate"];
+                    cv.CompanyName = (string)item["CompanyName"];
+                    cv.CompanyStartDate = (DateTime)item["CompanyStartDate"];
+                    cv.CompanyEndDate = (DateTime)item["CompanyEndDate"];
+                    cv.WorkPlace = (string)item["WorkPlace"];
+                    cv.WorkedDetail = (string)item["Detail"];
+                    cv.Certification = (string)item["CertificationName"];
+                    cv.CertificationDate = (DateTime)item["CertificationDate"];
+                    cv.Status = (string)item["Status"];
+                    return cv;
+                }
+
+            }
+            return null;
+        }
+        public void SaveResumeToDatabase(string JobID)
+        {
+            CV cv = GetAvailableCVByCandidateID();
+            if (cv != null)
             {
-                new SqlParameter("@cddId", SqlDbType.VarChar) {Value = cddId},
-                new SqlParameter("@jobId", SqlDbType.VarChar) {Value = cv.JobID},
-                new SqlParameter("@obj", SqlDbType.Text) {Value = cv.Objective},
-                new SqlParameter("@un", SqlDbType.NVarChar) {Value = cv.UniversityName},
-                new SqlParameter("@major", SqlDbType.NVarChar) {Value = cv.Major},
-                new SqlParameter("@usd", SqlDbType.Date) {Value = cv.UniversityStartDate},
-                new SqlParameter("@ued", SqlDbType.Date) {Value = cv.UniversityEndDate},
-                new SqlParameter("@company", SqlDbType.NVarChar) {Value = cv.CompanyName},
-                new SqlParameter("@workplace", SqlDbType.NVarChar) {Value = cv.WorkPlace},
-                new SqlParameter("@cername", SqlDbType.NVarChar) {Value = cv.Certification},
-                new SqlParameter("@cerdate", SqlDbType.Date) {Value = cv.TimeCertificate},
-            };
-            dbConn.ExecuteWriteData(sqlQuery, lstParams);*/
-            dbConn.ExecuteWriteData(sqlQuery);
+                sqlQuery = "INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate,              CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, " +
+                       "CertificationName, CertificationDate)" +
+                       " VALUES(@CddID, @JobID, @Objective, @UniversityName, @Major, @GPA, @UniversityStartDate, @UniversityEndDate, @CompanyName, @WorkPlace, @Detail, @CompanyStartDate, @CompanyEndDate, @CertificationName, @CertificationDate)";
+                SqlParameter[] lstParams =
+                {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cv.CddID},
+                new SqlParameter("@JobID", SqlDbType.VarChar) {Value = JobID},
+                new SqlParameter("@Objective", SqlDbType.Text) {Value = cv.Objective},
+                new SqlParameter("@UniversityName", SqlDbType.NVarChar) {Value = cv.UniversityName},
+                new SqlParameter("@Major", SqlDbType.NVarChar) {Value = cv.Major},
+                new SqlParameter("@GPA", SqlDbType.NVarChar) {Value = cv.Gpa},
+                new SqlParameter("@UniversityStartDate", SqlDbType.Date) {Value = cv.UniversityStartDate},
+                new SqlParameter("@UniversityEndDate", SqlDbType.Date) {Value = cv.UniversityEndDate},
+                new SqlParameter("@CompanyName", SqlDbType.NVarChar) {Value = cv.CompanyName},
+                new SqlParameter("@WorkPlace", SqlDbType.NVarChar) {Value = cv.WorkPlace},
+                new SqlParameter("@Detail", SqlDbType.Text) {Value = cv.WorkedDetail},
+                new SqlParameter("@CompanyStartDate", SqlDbType.Date) {Value = cv.CompanyStartDate},
+                new SqlParameter("@CompanyEndDate", SqlDbType.Date) {Value = cv.CompanyEndDate},
+                new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = cv.Certification},
+                new SqlParameter("@CertificationDate", SqlDbType.Date) {Value = cv.CertificationDate},
+                };
+                dbConn.ExecuteWriteData(sqlQuery, lstParams);
+            }
+            else
+            {
+                MessageBox.Show("CV be null. Check CV");
+            }
         }
     }
 }
