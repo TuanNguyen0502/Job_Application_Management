@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ButtonClickEventArgs.cs" />
     <Compile Include="Candidate.cs" />
     <Compile Include="CandidateDAO.cs" />
     <Compile Include="Company.cs" />

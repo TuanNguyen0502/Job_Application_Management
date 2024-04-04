@@ -75,6 +75,7 @@
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Ứng tuyển";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnRusbish
             // 
@@ -90,6 +91,7 @@
             this.btnRusbish.Text = "   Bỏ lưu";
             this.btnRusbish.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRusbish.UseVisualStyleBackColor = false;
+            this.btnRusbish.Click += new System.EventHandler(this.btnRusbish_Click);
             // 
             // lblComName
             // 

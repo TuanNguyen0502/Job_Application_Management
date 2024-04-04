@@ -21,6 +21,7 @@ namespace Job_Application_Management
         private int salary;
         private Image icon;
         private string jobId;
+        private string id;
         public string DescriptionJob 
         { 
             get => descriptionJob;
@@ -55,6 +56,11 @@ namespace Job_Application_Management
         {
             get { return jobId; }
             set { jobId = value; }
+        }
+        public string ID
+        {
+            get { return id; }
+            set { id = value; }
         }
         #endregion
         public Button BtnAdd
@@ -91,5 +97,15 @@ namespace Job_Application_Management
             toolTipMain.SetToolTip(this.btnAdd, "Lưu");
         }
 
+        public event EventHandler ButtonAddClick;
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            ButtonAddClick?.Invoke(this, EventArgs.Empty);
+        }
+        public event EventHandler<ButtonClickEventArgs> ButtonRusbishClick;
+        private void btnRusbish_Click(object sender, EventArgs e)
+        {
+            ButtonRusbishClick?.Invoke(this, new ButtonClickEventArgs(ID));
+        }
     }
 }

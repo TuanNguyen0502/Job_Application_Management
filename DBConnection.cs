@@ -15,6 +15,43 @@ namespace Job_Application_Management
         readonly string conStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
 
         // Các phương thức để đọc và ghi dữ liệu từ cơ sở dữ liệu mysql server
+        public void ExecuteDeleteData(string sqlStr, SqlParameter[] lstParam)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                try
+                {
+                    // Ket noi
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddRange(lstParam);
+                    if (cmd.ExecuteNonQuery() > 0)
+                        MessageBox.Show("Delete data successful !");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error !\n" + ex.Message);
+                }
+            }
+        }
+        public void ExecuteDeleteData(string sqlStr)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                try
+                {
+                    // Ket noi
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    if (cmd.ExecuteNonQuery() > 0)
+                        MessageBox.Show("Delete data Successful !");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error !\n" + ex.Message);
+                }
+            }
+        }
         public void ExecuteWriteData(string sqlStr, SqlParameter[] lstParam)
         {
             using (SqlConnection conn = new SqlConnection(conStr))

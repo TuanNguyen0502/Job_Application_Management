@@ -90,7 +90,7 @@ namespace Job_Application_Management
         }
         public List<UC_JobsSaved> GetSavedJobsFromDB()
         {
-            sqlQuery = "SELECT j.Name, j.JobDecription, c.Name as CompanyName, sj.TimeSaved, c.Address, j.Salary"
+            sqlQuery = "SELECT sj.ID SJID, j.Name, j.JobDecription, c.Name as CompanyName, sj.TimeSaved, c.Address, j.Salary"
                        +" FROM SavedJobs sj"
                        +" JOIN Jobs j ON sj.JobID = j.ID"
                        +" JOIN Employers e ON j.EmpID = e.ID"
@@ -105,9 +105,21 @@ namespace Job_Application_Management
                 item.TimeSaved = (DateTime)row["TimeSaved"];
                 item.Address = (string)row["Address"];
                 item.Salary = (int)row["Salary"];
+                int id = (int)row["SJID"];
+                item.ID = id.ToString();
                 saveds.Add(item);
             }
             return saveds;
+        }
+        public void RemoveSavedJobsFromDB(string ID)
+        {
+            sqlQuery = "DELETE SavedJobs"
+                      +" WHERE ID = @ID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@ID", SqlDbType.Int) {Value = ID}
+            };
+            dbConn.ExecuteDeleteData(sqlQuery, lstParams);
         }
         public List<UC_JobsSaved> GetAppliedJobsFromDB()
         {

@@ -153,3 +153,7 @@ VALUES
 ('CDD001', 'J003', 'Experienced HR professional with a proven track record of managing diverse teams. Seeking a challenging role as an HR Manager at ABC Corporation.', 'University of HR Management', 'Human Resources', '3.9', '2015-09-01', '2019-06-01', 'HR Solutions Inc.', 'Hanoi, Vietnam', 'Managed recruitment processes and employee relations.', '2019-07-15', '2022-02-28', 'PHR Certification', '2023-05-10', 'Đang ứng tuyển');
 
 SELECT * FROM Resume
+
+SELECT * FROM SavedJobs
+DELETE SavedJobs 
+WHERE ID = 1
