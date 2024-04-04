@@ -61,15 +61,16 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.button_Post);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 590);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 819);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1328, 108);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1328, 121);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // button_Post
             // 
             this.button_Post.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_Post.Location = new System.Drawing.Point(3, 3);
+            this.button_Post.Location = new System.Drawing.Point(13, 13);
             this.button_Post.Name = "button_Post";
             this.button_Post.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_Post.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -132,18 +133,19 @@
             // 
             // flowLayoutPanel_Jobs
             // 
+            this.flowLayoutPanel_Jobs.AutoScroll = true;
             this.flowLayoutPanel_Jobs.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel_Jobs.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel_Jobs.Name = "flowLayoutPanel_Jobs";
             this.flowLayoutPanel_Jobs.Padding = new System.Windows.Forms.Padding(5);
-            this.flowLayoutPanel_Jobs.Size = new System.Drawing.Size(1328, 587);
+            this.flowLayoutPanel_Jobs.Size = new System.Drawing.Size(1328, 813);
             this.flowLayoutPanel_Jobs.TabIndex = 7;
             // 
             // FEmployer_Job
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1328, 698);
+            this.ClientSize = new System.Drawing.Size(1328, 940);
             this.Controls.Add(this.flowLayoutPanel_Jobs);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "FEmployer_Job";

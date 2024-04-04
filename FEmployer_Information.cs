@@ -17,7 +17,6 @@ namespace Job_Application_Management
         private string empID;
         private Employer employer;
         private EmployerDAO employerDAO;
-        private string sqlQuery;
         private Form currentFormChild;
 
         public FEmployer_Information(string empID)
@@ -90,6 +89,7 @@ namespace Job_Application_Management
             currentFormChild = childForm;
             childForm.FormBorderStyle = FormBorderStyle.FixedSingle;
             childForm.StartPosition = FormStartPosition.CenterScreen;
+            childForm.Size = new Size(1650, 500);
             childForm.BringToFront();
             childForm.Show();
         }

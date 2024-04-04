@@ -31,11 +31,11 @@
             this.label_Name = new System.Windows.Forms.Label();
             this.label_University = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_detail = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_delete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label_Major = new System.Windows.Forms.Label();
             this.label_GPA = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +44,7 @@
             // 
             this.label_Name.AutoSize = true;
             this.label_Name.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Name.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label_Name.Location = new System.Drawing.Point(193, 10);
             this.label_Name.Name = "label_Name";
             this.label_Name.Size = new System.Drawing.Size(269, 37);
@@ -70,18 +71,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(177, 171);
             this.panel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 132);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // button_detail
             // 
@@ -123,9 +112,9 @@
             this.label_Major.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Major.Location = new System.Drawing.Point(194, 104);
             this.label_Major.Name = "label_Major";
-            this.label_Major.Size = new System.Drawing.Size(90, 33);
+            this.label_Major.Size = new System.Drawing.Size(120, 33);
             this.label_Major.TabIndex = 5;
-            this.label_Major.Text = "Major";
+            this.label_Major.Text = "Major: ";
             // 
             // label_GPA
             // 
@@ -133,9 +122,23 @@
             this.label_GPA.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_GPA.Location = new System.Drawing.Point(194, 148);
             this.label_GPA.Name = "label_GPA";
-            this.label_GPA.Size = new System.Drawing.Size(60, 33);
+            this.label_GPA.Size = new System.Drawing.Size(90, 33);
             this.label_GPA.TabIndex = 6;
-            this.label_GPA.Text = "GPA";
+            this.label_GPA.Text = "GPA: ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImage = global::Job_Application_Management.Properties.Resources.icons8_profile_64;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(141, 132);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // UC_CandidateCV
             // 

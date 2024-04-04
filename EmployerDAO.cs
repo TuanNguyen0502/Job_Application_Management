@@ -67,7 +67,7 @@ namespace Job_Application_Management
                 item.Label_Name.Text = (string)row["CddName"];
                 item.Label_University.Text = (string)row["UniversityName"];
                 item.Label_Major.Text += (string)row["Major"].ToString();
-                item.Label_GPA.Text = (string)row["GPA"].ToString();
+                item.Label_GPA.Text += (string)row["GPA"].ToString();
                 items.Add(item);
             }
             return items;
@@ -220,18 +220,20 @@ namespace Job_Application_Management
 
         public List<UC_EmployerJob> GetJobsFromDB(string empID)
         {
-            string sqlQuery = $"SELECT Name, Salary, PostTime, ID FROM Jobs WHERE EmpID = '{empID}'";
+            string sqlQuery = $"SELECT Name, Salary, PostTime, ExpirationDate, ID FROM Jobs WHERE EmpID = '{empID}'";
             List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
             List<UC_EmployerJob> items = new List<UC_EmployerJob>();
             foreach (var row in resultList)
             {
                 UC_EmployerJob item = new UC_EmployerJob(empID);
                 item.Label_JobName.Text = (string)row["Name"];
-                item.Label_Salary.Text = row["Salary"].ToString();
-                //item.Label_PostedTime.Text = (string)row["PostTime"].ToString();
+                item.Label_Salary.Text += row["Salary"].ToString();
                 DateTime postTime = (DateTime)row["PostTime"];
                 string formattedPostTime = postTime.ToString("yyyy-MM-dd");
                 item.Label_PostedTime.Text = formattedPostTime;
+                DateTime deadline = (DateTime)row["ExpirationDate"];
+                string formattedDeadline = postTime.ToString("yyyy-MM-dd");
+                item.Label_Deadline.Text += formattedDeadline;
                 item.JobID = (string)row["ID"];
                 items.Add(item);
             }

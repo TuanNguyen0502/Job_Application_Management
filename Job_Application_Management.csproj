@@ -261,18 +261,6 @@
     <Compile Include="UC_Resume_Experience.Designer.cs">
       <DependentUpon>UC_Resume_Experience.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Resume_Interest.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_Resume_Interest.Designer.cs">
-      <DependentUpon>UC_Resume_Interest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_Resume_Skill.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_Resume_Skill.Designer.cs">
-      <DependentUpon>UC_Resume_Skill.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FCandidate.resx">
       <DependentUpon>FCandidate.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,12 +357,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Resume_Experience.resx">
       <DependentUpon>UC_Resume_Experience.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Resume_Interest.resx">
-      <DependentUpon>UC_Resume_Interest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Resume_Skill.resx">
-      <DependentUpon>UC_Resume_Skill.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -643,6 +625,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-manager-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-id-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-name-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-phone-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-email-302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gender-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-workplace-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-address-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-manager-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-software-license-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tax-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-salary-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-salary-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-deadline-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-job-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-working-time-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-benefit-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-description-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-experience-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-request-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-profile-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
