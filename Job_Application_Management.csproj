@@ -195,6 +195,12 @@
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_AppliedJobs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AppliedJobs.Designer.cs">
+      <DependentUpon>UC_AppliedJobs.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_CandidateMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -322,6 +328,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC_AppliedJobs.resx">
+      <DependentUpon>UC_AppliedJobs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_CandidateMain.resx">
       <DependentUpon>UC_CandidateMain.cs</DependentUpon>
     </EmbeddedResource>

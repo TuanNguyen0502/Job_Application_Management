@@ -62,7 +62,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(812, 627);
+            this.panel1.Size = new System.Drawing.Size(812, 653);
             this.panel1.TabIndex = 0;
             // 
             // flpMain
@@ -75,7 +75,7 @@
             this.flpMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpMain.Location = new System.Drawing.Point(0, 0);
             this.flpMain.Name = "flpMain";
-            this.flpMain.Size = new System.Drawing.Size(812, 627);
+            this.flpMain.Size = new System.Drawing.Size(812, 653);
             this.flpMain.TabIndex = 5;
             // 
             // kryptonPanel1
@@ -198,14 +198,14 @@
             this.flpStoreUC.AutoScroll = true;
             this.flpStoreUC.Location = new System.Drawing.Point(3, 220);
             this.flpStoreUC.Name = "flpStoreUC";
-            this.flpStoreUC.Size = new System.Drawing.Size(797, 385);
+            this.flpStoreUC.Size = new System.Drawing.Size(784, 410);
             this.flpStoreUC.TabIndex = 5;
             // 
             // FCandidate_SavedJobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 627);
+            this.ClientSize = new System.Drawing.Size(812, 653);
             this.Controls.Add(this.panel1);
             this.Name = "FCandidate_SavedJobs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
