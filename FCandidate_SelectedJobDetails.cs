@@ -150,7 +150,10 @@ namespace Job_Application_Management
 
         private void btnApply_Click(object sender, EventArgs e)
         {
+            // Lưu công việc xuống CSDL
             canDAO.SaveAppliedJob(jobid);
+            // Tạo ra một resume cụ thể cho ứng viên, đẩy xuống CSDL cho nhà tuyển dụng xem
+            canDAO.SaveResumeToDatabase(jobid);
         }
     }
 }

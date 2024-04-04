@@ -31,38 +31,38 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCandidate));
             this.pnlNav = new System.Windows.Forms.Panel();
+            this.btnSetting = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnCompanies = new System.Windows.Forms.Button();
+            this.btnJobApp = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblCddID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnRegisterCV = new System.Windows.Forms.Button();
+            this.btnSearchJob = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.cbbAddress = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtSearchFor = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.côngViệcĐãLưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.côngViệcĐãỨngTuyểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.flpScrollPane = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnRegisterCV = new System.Windows.Forms.Button();
-            this.btnSearchJob = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnSetting = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnCompanies = new System.Windows.Forms.Button();
-            this.btnJobApp = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlNav.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlNav
@@ -79,236 +79,6 @@
             this.pnlNav.Name = "pnlNav";
             this.pnlNav.Size = new System.Drawing.Size(213, 754);
             this.pnlNav.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lblCddID);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(213, 180);
-            this.panel2.TabIndex = 0;
-            // 
-            // lblCddID
-            // 
-            this.lblCddID.AutoSize = true;
-            this.lblCddID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCddID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.lblCddID.Location = new System.Drawing.Point(68, 142);
-            this.lblCddID.Name = "lblCddID";
-            this.lblCddID.Size = new System.Drawing.Size(68, 15);
-            this.lblCddID.TabIndex = 2;
-            this.lblCddID.Text = "CDD0001";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(222)))), ((int)(((byte)(206)))));
-            this.label1.Location = new System.Drawing.Point(51, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "User Name";
-            // 
-            // kryptonPalette2
-            // 
-            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
-            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.Rounding = 16;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnRegisterCV);
-            this.panel1.Controls.Add(this.btnSearchJob);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(213, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1109, 102);
-            this.panel1.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(830, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(12, 68);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "\r\n|\r\n|";
-            // 
-            // label5
-            // 
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(620, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(12, 68);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "\r\n|\r\n|";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.cbbAddress);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.txtSearchFor);
-            this.panel3.Location = new System.Drawing.Point(17, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(593, 85);
-            this.panel3.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Silver;
-            this.label8.Location = new System.Drawing.Point(300, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(24, 26);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "|";
-            // 
-            // cbbAddress
-            // 
-            this.cbbAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbAddress.FormattingEnabled = true;
-            this.cbbAddress.Items.AddRange(new object[] {
-            "Tất cả tỉnh/TP",
-            "Hà Nội",
-            "Hồ Chí Minh",
-            "Đà Nẵng"});
-            this.cbbAddress.Location = new System.Drawing.Point(361, 28);
-            this.cbbAddress.Name = "cbbAddress";
-            this.cbbAddress.Size = new System.Drawing.Size(207, 28);
-            this.cbbAddress.TabIndex = 2;
-            this.cbbAddress.SelectedIndexChanged += new System.EventHandler(this.cbbAddress_SelectedIndexChanged);
-            // 
-            // txtSearchFor
-            // 
-            this.txtSearchFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchFor.Location = new System.Drawing.Point(58, 25);
-            this.txtSearchFor.Multiline = true;
-            this.txtSearchFor.Name = "txtSearchFor";
-            this.txtSearchFor.Size = new System.Drawing.Size(227, 28);
-            this.txtSearchFor.TabIndex = 0;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // côngViệcĐãLưuToolStripMenuItem
-            // 
-            this.côngViệcĐãLưuToolStripMenuItem.Name = "côngViệcĐãLưuToolStripMenuItem";
-            this.côngViệcĐãLưuToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
-            // 
-            // côngViệcĐãỨngTuyểnToolStripMenuItem
-            // 
-            this.côngViệcĐãỨngTuyểnToolStripMenuItem.Name = "côngViệcĐãỨngTuyểnToolStripMenuItem";
-            this.côngViệcĐãỨngTuyểnToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
-            // flpScrollPane
-            // 
-            this.flpScrollPane.AutoScroll = true;
-            this.flpScrollPane.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpScrollPane.Location = new System.Drawing.Point(213, 102);
-            this.flpScrollPane.Name = "flpScrollPane";
-            this.flpScrollPane.Size = new System.Drawing.Size(1109, 652);
-            this.flpScrollPane.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Job_Application_Management.Properties.Resources.cv_icon1;
-            this.button1.Location = new System.Drawing.Point(623, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 70);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Xem chi tiết CV";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnRegisterCV
-            // 
-            this.btnRegisterCV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegisterCV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnRegisterCV.FlatAppearance.BorderSize = 0;
-            this.btnRegisterCV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegisterCV.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterCV.ForeColor = System.Drawing.Color.White;
-            this.btnRegisterCV.Image = global::Job_Application_Management.Properties.Resources.icons8_cv_40;
-            this.btnRegisterCV.Location = new System.Drawing.Point(848, 17);
-            this.btnRegisterCV.Name = "btnRegisterCV";
-            this.btnRegisterCV.Size = new System.Drawing.Size(208, 70);
-            this.btnRegisterCV.TabIndex = 21;
-            this.btnRegisterCV.Text = "Đăng ký CV";
-            this.btnRegisterCV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegisterCV.UseVisualStyleBackColor = false;
-            this.btnRegisterCV.Click += new System.EventHandler(this.btnRegisterCV_Click);
-            // 
-            // btnSearchJob
-            // 
-            this.btnSearchJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnSearchJob.FlatAppearance.BorderSize = 0;
-            this.btnSearchJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchJob.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchJob.ForeColor = System.Drawing.Color.White;
-            this.btnSearchJob.Image = global::Job_Application_Management.Properties.Resources.icons8_find_16;
-            this.btnSearchJob.Location = new System.Drawing.Point(644, 28);
-            this.btnSearchJob.Name = "btnSearchJob";
-            this.btnSearchJob.Size = new System.Drawing.Size(171, 43);
-            this.btnSearchJob.TabIndex = 10;
-            this.btnSearchJob.Text = "  Tìm kiếm";
-            this.btnSearchJob.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearchJob.UseVisualStyleBackColor = false;
-            this.btnSearchJob.Click += new System.EventHandler(this.btnSearchJob_Click);
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Image = global::Job_Application_Management.Properties.Resources.icons8_location_16;
-            this.label4.Location = new System.Drawing.Point(317, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 34);
-            this.label4.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Image = global::Job_Application_Management.Properties.Resources.icons8_find_16__1_;
-            this.label3.Location = new System.Drawing.Point(5, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 34);
-            this.label3.TabIndex = 1;
             // 
             // btnSetting
             // 
@@ -400,6 +170,41 @@
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
             // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblCddID);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(213, 180);
+            this.panel2.TabIndex = 0;
+            // 
+            // lblCddID
+            // 
+            this.lblCddID.AutoSize = true;
+            this.lblCddID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCddID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.lblCddID.Location = new System.Drawing.Point(68, 142);
+            this.lblCddID.Name = "lblCddID";
+            this.lblCddID.Size = new System.Drawing.Size(60, 15);
+            this.lblCddID.TabIndex = 2;
+            this.lblCddID.Text = "CDD001";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(222)))), ((int)(((byte)(206)))));
+            this.label1.Location = new System.Drawing.Point(51, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "User Name";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_person_48;
@@ -409,6 +214,201 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // kryptonPalette2
+            // 
+            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.kryptonPalette2.FormStyles.FormMain.StateCommon.Border.Rounding = 16;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnRegisterCV);
+            this.panel1.Controls.Add(this.btnSearchJob);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(213, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1109, 102);
+            this.panel1.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Job_Application_Management.Properties.Resources.cv_icon1;
+            this.button1.Location = new System.Drawing.Point(623, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(208, 70);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Xem chi tiết CV";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRegisterCV
+            // 
+            this.btnRegisterCV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegisterCV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnRegisterCV.FlatAppearance.BorderSize = 0;
+            this.btnRegisterCV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterCV.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterCV.ForeColor = System.Drawing.Color.White;
+            this.btnRegisterCV.Image = global::Job_Application_Management.Properties.Resources.icons8_cv_40;
+            this.btnRegisterCV.Location = new System.Drawing.Point(848, 17);
+            this.btnRegisterCV.Name = "btnRegisterCV";
+            this.btnRegisterCV.Size = new System.Drawing.Size(208, 70);
+            this.btnRegisterCV.TabIndex = 21;
+            this.btnRegisterCV.Text = "Đăng ký CV";
+            this.btnRegisterCV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegisterCV.UseVisualStyleBackColor = false;
+            this.btnRegisterCV.Click += new System.EventHandler(this.btnRegisterCV_Click);
+            // 
+            // btnSearchJob
+            // 
+            this.btnSearchJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnSearchJob.FlatAppearance.BorderSize = 0;
+            this.btnSearchJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchJob.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchJob.ForeColor = System.Drawing.Color.White;
+            this.btnSearchJob.Image = global::Job_Application_Management.Properties.Resources.icons8_find_16;
+            this.btnSearchJob.Location = new System.Drawing.Point(644, 28);
+            this.btnSearchJob.Name = "btnSearchJob";
+            this.btnSearchJob.Size = new System.Drawing.Size(171, 43);
+            this.btnSearchJob.TabIndex = 10;
+            this.btnSearchJob.Text = "  Tìm kiếm";
+            this.btnSearchJob.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearchJob.UseVisualStyleBackColor = false;
+            this.btnSearchJob.Click += new System.EventHandler(this.btnSearchJob_Click);
+            // 
+            // label6
+            // 
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(830, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(12, 68);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "\r\n|\r\n|";
+            // 
+            // label5
+            // 
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(620, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(12, 68);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "\r\n|\r\n|";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.cbbAddress);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.txtSearchFor);
+            this.panel3.Location = new System.Drawing.Point(17, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(593, 85);
+            this.panel3.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.Location = new System.Drawing.Point(300, 26);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(24, 26);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "|";
+            // 
+            // cbbAddress
+            // 
+            this.cbbAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbAddress.FormattingEnabled = true;
+            this.cbbAddress.Items.AddRange(new object[] {
+            "Tất cả tỉnh/TP",
+            "Hà Nội",
+            "Hồ Chí Minh",
+            "Đà Nẵng"});
+            this.cbbAddress.Location = new System.Drawing.Point(361, 28);
+            this.cbbAddress.Name = "cbbAddress";
+            this.cbbAddress.Size = new System.Drawing.Size(207, 28);
+            this.cbbAddress.TabIndex = 2;
+            this.cbbAddress.SelectedIndexChanged += new System.EventHandler(this.cbbAddress_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Image = global::Job_Application_Management.Properties.Resources.icons8_location_16;
+            this.label4.Location = new System.Drawing.Point(317, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 34);
+            this.label4.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Image = global::Job_Application_Management.Properties.Resources.icons8_find_16__1_;
+            this.label3.Location = new System.Drawing.Point(5, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 34);
+            this.label3.TabIndex = 1;
+            // 
+            // txtSearchFor
+            // 
+            this.txtSearchFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchFor.Location = new System.Drawing.Point(58, 25);
+            this.txtSearchFor.Multiline = true;
+            this.txtSearchFor.Name = "txtSearchFor";
+            this.txtSearchFor.Size = new System.Drawing.Size(227, 28);
+            this.txtSearchFor.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // côngViệcĐãLưuToolStripMenuItem
+            // 
+            this.côngViệcĐãLưuToolStripMenuItem.Name = "côngViệcĐãLưuToolStripMenuItem";
+            this.côngViệcĐãLưuToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // côngViệcĐãỨngTuyểnToolStripMenuItem
+            // 
+            this.côngViệcĐãỨngTuyểnToolStripMenuItem.Name = "côngViệcĐãỨngTuyểnToolStripMenuItem";
+            this.côngViệcĐãỨngTuyểnToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // flpScrollPane
+            // 
+            this.flpScrollPane.AutoScroll = true;
+            this.flpScrollPane.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpScrollPane.Location = new System.Drawing.Point(213, 102);
+            this.flpScrollPane.Name = "flpScrollPane";
+            this.flpScrollPane.Size = new System.Drawing.Size(1109, 652);
+            this.flpScrollPane.TabIndex = 4;
             // 
             // FCandidate
             // 
@@ -429,10 +429,10 @@
             this.pnlNav.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -78,12 +78,17 @@ namespace Job_Application_Management
             myCV.Objective = richTextBox_CareerObjective.Text;
             myCV.Major = uC_Resume_Education1.TextBox_Major.Text;
             myCV.UniversityName = uC_Resume_Education1.TextBox_School.Text;
+            myCV.UniversityStartDate = uC_Resume_Education1.DateTimePicker_Start.Value;
+            myCV.UniversityEndDate = uC_Resume_Education1.DateTimePicker_End.Value;
             myCV.WorkedDetail = uC_Resume_Education1.RichTextBox_EducationDetail.Text;
             myCV.CompanyName = uC_Resume_Experience1.TextBox_Compay.Text;
+            myCV.CompanyStartDate = uC_Resume_Experience1.DateTimePicker_Start.Value;
+            myCV.CompanyEndDate = uC_Resume_Experience1.DateTimePicker_End.Value;
             myCV.WorkPlace = uC_Resume_Experience1.TextBox_Place.Text;
             myCV.Certification = uC_Resume_Certificate1.TextBox_CertificateName.Text;
             myCV.TimeCertificate = uC_Resume_Certificate1.DateTimePicker_Start.Value;
-
+            myCV.Status = kryptonTextBox_Status.Text;
+            MessageBox.Show("Get info resume successful");
             return myCV;
         }
 
