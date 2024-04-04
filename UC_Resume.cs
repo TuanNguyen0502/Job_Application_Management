@@ -124,6 +124,7 @@ namespace Job_Application_Management
             uC_Resume_Experience1.DateTimePicker_End.Value = resume.CompanyEndDate;
             uC_Resume_Certificate1.TextBox_CertificateName.Text = resume.Certification;
             uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
+            kryptonTextBox_Status.Text = resume.Status;
         }
 
         public void ReadOnlyControls()
@@ -156,12 +157,14 @@ namespace Job_Application_Management
         private void btn_Approve_Click(object sender, EventArgs e)
         {
             resume.Status = "Approved";
+            kryptonTextBox_Status.Text = resume.Status;
             employerDAO.UpdateResume(resume);
         }
 
         private void button_Refuse_Click(object sender, EventArgs e)
         {
             resume.Status = "Applying";
+            kryptonTextBox_Status.Text = resume.Status;
             employerDAO.UpdateResume(resume);
         }
     }

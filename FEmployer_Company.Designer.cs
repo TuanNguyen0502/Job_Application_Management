@@ -32,18 +32,18 @@
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.textBox_Manager = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.textBox_Address = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.textBox_CompanyName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.textBox_BusinessLicense = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox_TaxCode = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.button_Save = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.flowLayoutPanel_Bottom = new System.Windows.Forms.FlowLayoutPanel();
+            this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.label_CompanyName = new System.Windows.Forms.Label();
             this.label_TaxCode = new System.Windows.Forms.Label();
             this.label_Address = new System.Windows.Forms.Label();
             this.label_BusinessLicense = new System.Windows.Forms.Label();
             this.label_Manager = new System.Windows.Forms.Label();
-            this.textBox_CompanyName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.textBox_BusinessLicense = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_Save = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.flowLayoutPanel_Bottom = new System.Windows.Forms.FlowLayoutPanel();
-            this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.textBox_TaxCode = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel_Bottom.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +72,7 @@
             // textBox_Manager
             // 
             this.textBox_Manager.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Manager.Location = new System.Drawing.Point(193, 207);
+            this.textBox_Manager.Location = new System.Drawing.Point(343, 207);
             this.textBox_Manager.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Manager.Name = "textBox_Manager";
             this.textBox_Manager.Size = new System.Drawing.Size(500, 57);
@@ -88,7 +88,7 @@
             // textBox_Address
             // 
             this.textBox_Address.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Address.Location = new System.Drawing.Point(868, 50);
+            this.textBox_Address.Location = new System.Drawing.Point(1161, 50);
             this.textBox_Address.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Address.Name = "textBox_Address";
             this.textBox_Address.Size = new System.Drawing.Size(500, 57);
@@ -101,65 +101,10 @@
             this.textBox_Address.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
             this.textBox_Address.TabIndex = 9;
             // 
-            // label_CompanyName
-            // 
-            this.label_CompanyName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_CompanyName.AutoSize = true;
-            this.label_CompanyName.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CompanyName.Location = new System.Drawing.Point(26, 45);
-            this.label_CompanyName.Name = "label_CompanyName";
-            this.label_CompanyName.Size = new System.Drawing.Size(135, 66);
-            this.label_CompanyName.TabIndex = 0;
-            this.label_CompanyName.Text = "Company Name";
-            // 
-            // label_TaxCode
-            // 
-            this.label_TaxCode.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_TaxCode.AutoSize = true;
-            this.label_TaxCode.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TaxCode.Location = new System.Drawing.Point(707, 219);
-            this.label_TaxCode.Name = "label_TaxCode";
-            this.label_TaxCode.Size = new System.Drawing.Size(135, 33);
-            this.label_TaxCode.TabIndex = 3;
-            this.label_TaxCode.Text = "Tax code";
-            // 
-            // label_Address
-            // 
-            this.label_Address.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Address.AutoSize = true;
-            this.label_Address.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Address.Location = new System.Drawing.Point(715, 62);
-            this.label_Address.Name = "label_Address";
-            this.label_Address.Size = new System.Drawing.Size(120, 33);
-            this.label_Address.TabIndex = 4;
-            this.label_Address.Text = "Address";
-            // 
-            // label_BusinessLicense
-            // 
-            this.label_BusinessLicense.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_BusinessLicense.AutoSize = true;
-            this.label_BusinessLicense.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_BusinessLicense.Location = new System.Drawing.Point(19, 359);
-            this.label_BusinessLicense.Name = "label_BusinessLicense";
-            this.label_BusinessLicense.Size = new System.Drawing.Size(150, 66);
-            this.label_BusinessLicense.TabIndex = 2;
-            this.label_BusinessLicense.Text = "Business License";
-            // 
-            // label_Manager
-            // 
-            this.label_Manager.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Manager.AutoSize = true;
-            this.label_Manager.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Manager.Location = new System.Drawing.Point(34, 219);
-            this.label_Manager.Name = "label_Manager";
-            this.label_Manager.Size = new System.Drawing.Size(120, 33);
-            this.label_Manager.TabIndex = 1;
-            this.label_Manager.Text = "Manager";
-            // 
             // textBox_CompanyName
             // 
             this.textBox_CompanyName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_CompanyName.Location = new System.Drawing.Point(193, 50);
+            this.textBox_CompanyName.Location = new System.Drawing.Point(343, 50);
             this.textBox_CompanyName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_CompanyName.Name = "textBox_CompanyName";
             this.textBox_CompanyName.ReadOnly = true;
@@ -176,7 +121,7 @@
             // textBox_BusinessLicense
             // 
             this.textBox_BusinessLicense.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_BusinessLicense.Location = new System.Drawing.Point(193, 364);
+            this.textBox_BusinessLicense.Location = new System.Drawing.Point(343, 364);
             this.textBox_BusinessLicense.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_BusinessLicense.Name = "textBox_BusinessLicense";
             this.textBox_BusinessLicense.Size = new System.Drawing.Size(500, 57);
@@ -192,10 +137,10 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.59678F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.84932F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.16438F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.35616F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.31885F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.06283F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.38461F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.2337F));
             this.tableLayoutPanel1.Controls.Add(this.textBox_Manager, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox_Address, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label_CompanyName, 0, 0);
@@ -214,8 +159,24 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1384, 471);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1703, 471);
             this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // textBox_TaxCode
+            // 
+            this.textBox_TaxCode.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_TaxCode.Location = new System.Drawing.Point(1161, 207);
+            this.textBox_TaxCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_TaxCode.Name = "textBox_TaxCode";
+            this.textBox_TaxCode.Size = new System.Drawing.Size(500, 57);
+            this.textBox_TaxCode.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.textBox_TaxCode.StateCommon.Border.Rounding = 20;
+            this.textBox_TaxCode.StateCommon.Border.Width = 1;
+            this.textBox_TaxCode.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_TaxCode.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
+            this.textBox_TaxCode.TabIndex = 12;
             // 
             // button_Save
             // 
@@ -289,7 +250,7 @@
             this.flowLayoutPanel_Bottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel_Bottom.Name = "flowLayoutPanel_Bottom";
             this.flowLayoutPanel_Bottom.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.flowLayoutPanel_Bottom.Size = new System.Drawing.Size(1384, 108);
+            this.flowLayoutPanel_Bottom.Size = new System.Drawing.Size(1703, 108);
             this.flowLayoutPanel_Bottom.TabIndex = 2;
             // 
             // kryptonPalette2
@@ -313,27 +274,76 @@
             this.kryptonPalette2.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
             this.kryptonPalette2.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
-            // textBox_TaxCode
+            // label_CompanyName
             // 
-            this.textBox_TaxCode.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_TaxCode.Location = new System.Drawing.Point(868, 207);
-            this.textBox_TaxCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_TaxCode.Name = "textBox_TaxCode";
-            this.textBox_TaxCode.Size = new System.Drawing.Size(500, 57);
-            this.textBox_TaxCode.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_TaxCode.StateCommon.Border.Rounding = 20;
-            this.textBox_TaxCode.StateCommon.Border.Width = 1;
-            this.textBox_TaxCode.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_TaxCode.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
-            this.textBox_TaxCode.TabIndex = 12;
+            this.label_CompanyName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_CompanyName.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_CompanyName.Image = global::Job_Application_Management.Properties.Resources.icons8_company_30;
+            this.label_CompanyName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_CompanyName.Location = new System.Drawing.Point(3, 45);
+            this.label_CompanyName.Name = "label_CompanyName";
+            this.label_CompanyName.Size = new System.Drawing.Size(323, 66);
+            this.label_CompanyName.TabIndex = 0;
+            this.label_CompanyName.Text = "Company Name    ";
+            this.label_CompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_TaxCode
+            // 
+            this.label_TaxCode.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_TaxCode.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TaxCode.Image = global::Job_Application_Management.Properties.Resources.icons8_tax_30;
+            this.label_TaxCode.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_TaxCode.Location = new System.Drawing.Point(861, 219);
+            this.label_TaxCode.Name = "label_TaxCode";
+            this.label_TaxCode.Size = new System.Drawing.Size(256, 33);
+            this.label_TaxCode.TabIndex = 3;
+            this.label_TaxCode.Text = "Tax code    ";
+            this.label_TaxCode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Address
+            // 
+            this.label_Address.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Address.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Address.Image = global::Job_Application_Management.Properties.Resources.icons8_address_30__1_;
+            this.label_Address.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Address.Location = new System.Drawing.Point(861, 48);
+            this.label_Address.Name = "label_Address";
+            this.label_Address.Size = new System.Drawing.Size(256, 60);
+            this.label_Address.TabIndex = 4;
+            this.label_Address.Text = "Address    ";
+            this.label_Address.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_BusinessLicense
+            // 
+            this.label_BusinessLicense.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_BusinessLicense.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_BusinessLicense.Image = global::Job_Application_Management.Properties.Resources.icons8_software_license_30;
+            this.label_BusinessLicense.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_BusinessLicense.Location = new System.Drawing.Point(3, 376);
+            this.label_BusinessLicense.Name = "label_BusinessLicense";
+            this.label_BusinessLicense.Size = new System.Drawing.Size(323, 33);
+            this.label_BusinessLicense.TabIndex = 2;
+            this.label_BusinessLicense.Text = "Business License    ";
+            this.label_BusinessLicense.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Manager
+            // 
+            this.label_Manager.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Manager.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Manager.Image = global::Job_Application_Management.Properties.Resources.icons8_manager_30;
+            this.label_Manager.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Manager.Location = new System.Drawing.Point(3, 205);
+            this.label_Manager.Name = "label_Manager";
+            this.label_Manager.Size = new System.Drawing.Size(323, 60);
+            this.label_Manager.TabIndex = 1;
+            this.label_Manager.Text = "Manager    ";
+            this.label_Manager.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FEmployer_Company
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 595);
+            this.ClientSize = new System.Drawing.Size(1703, 595);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel_Bottom);
             this.Name = "FEmployer_Company";

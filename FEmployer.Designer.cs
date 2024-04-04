@@ -47,6 +47,7 @@
             // 
             // flowLayoutPanel_Left
             // 
+            this.flowLayoutPanel_Left.BackColor = System.Drawing.Color.Pink;
             this.flowLayoutPanel_Left.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel_Left.Controls.Add(this.button_Home);
             this.flowLayoutPanel_Left.Controls.Add(this.button_Information);
@@ -67,6 +68,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(13, 13);
             this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(10);
             this.pictureBox1.Size = new System.Drawing.Size(144, 144);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
@@ -391,7 +393,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.ForeColor = System.Drawing.Color.Turquoise;
+            this.label1.Location = new System.Drawing.Point(136, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1032, 47);
             this.label1.TabIndex = 0;
@@ -403,15 +406,16 @@
             this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Top.Location = new System.Drawing.Point(230, 0);
             this.panel_Top.Name = "panel_Top";
-            this.panel_Top.Size = new System.Drawing.Size(1248, 100);
+            this.panel_Top.Padding = new System.Windows.Forms.Padding(10);
+            this.panel_Top.Size = new System.Drawing.Size(1248, 67);
             this.panel_Top.TabIndex = 3;
             // 
             // panel_Center
             // 
             this.panel_Center.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Center.Location = new System.Drawing.Point(230, 100);
+            this.panel_Center.Location = new System.Drawing.Point(230, 67);
             this.panel_Center.Name = "panel_Center";
-            this.panel_Center.Size = new System.Drawing.Size(1248, 744);
+            this.panel_Center.Size = new System.Drawing.Size(1248, 777);
             this.panel_Center.TabIndex = 4;
             // 
             // kryptonPalette1

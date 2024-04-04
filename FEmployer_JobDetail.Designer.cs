@@ -31,27 +31,27 @@
             this.components = new System.ComponentModel.Container();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.tableLayoutPanel_Information = new System.Windows.Forms.TableLayoutPanel();
-            this.label_ID = new System.Windows.Forms.Label();
-            this.label_Deadline = new System.Windows.Forms.Label();
-            this.label_Time = new System.Windows.Forms.Label();
-            this.label_Description = new System.Windows.Forms.Label();
-            this.label_CompanyType = new System.Windows.Forms.Label();
-            this.label__Benefit = new System.Windows.Forms.Label();
-            this.label_Experience = new System.Windows.Forms.Label();
-            this.label_Salary = new System.Windows.Forms.Label();
             this.textBox_JobName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.textBox_Salary = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.textBox_WorkingTime = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.textBox_Experience = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.richTextBox_Requirement = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
-            this.richTextBox_JobDescripton = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
-            this.richTextBox_JobBenefit = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.dateTimePicker_Deadline = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.textBox_Salary = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.richTextBox_JobDescripton = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
+            this.textBox_WorkingTime = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.richTextBox_JobBenefit = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
+            this.richTextBox_Requirement = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Post = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_Delete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_SeeCandidate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_ApprovedCandidate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label_ID = new System.Windows.Forms.Label();
+            this.label_Deadline = new System.Windows.Forms.Label();
+            this.label_Experience = new System.Windows.Forms.Label();
+            this.label_Salary = new System.Windows.Forms.Label();
+            this.label_Description = new System.Windows.Forms.Label();
+            this.label_Time = new System.Windows.Forms.Label();
+            this.label__Benefit = new System.Windows.Forms.Label();
+            this.label_CompanyType = new System.Windows.Forms.Label();
             this.tableLayoutPanel_Information.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,10 +80,10 @@
             // tableLayoutPanel_Information
             // 
             this.tableLayoutPanel_Information.ColumnCount = 4;
-            this.tableLayoutPanel_Information.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.85733F));
-            this.tableLayoutPanel_Information.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.43762F));
-            this.tableLayoutPanel_Information.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.09917F));
-            this.tableLayoutPanel_Information.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.73384F));
+            this.tableLayoutPanel_Information.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.59437F));
+            this.tableLayoutPanel_Information.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.69359F));
+            this.tableLayoutPanel_Information.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.7883F));
+            this.tableLayoutPanel_Information.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.91365F));
             this.tableLayoutPanel_Information.Controls.Add(this.label_ID, 0, 0);
             this.tableLayoutPanel_Information.Controls.Add(this.label_Deadline, 2, 0);
             this.tableLayoutPanel_Information.Controls.Add(this.label_Experience, 2, 2);
@@ -108,102 +108,13 @@
             this.tableLayoutPanel_Information.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel_Information.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel_Information.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel_Information.Size = new System.Drawing.Size(1563, 611);
+            this.tableLayoutPanel_Information.Size = new System.Drawing.Size(1795, 611);
             this.tableLayoutPanel_Information.TabIndex = 6;
-            // 
-            // label_ID
-            // 
-            this.label_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_ID.AutoSize = true;
-            this.label_ID.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label_ID.Location = new System.Drawing.Point(104, 62);
-            this.label_ID.Name = "label_ID";
-            this.label_ID.Size = new System.Drawing.Size(116, 28);
-            this.label_ID.TabIndex = 1;
-            this.label_ID.Text = "Job Name";
-            // 
-            // label_Deadline
-            // 
-            this.label_Deadline.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Deadline.AutoSize = true;
-            this.label_Deadline.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label_Deadline.Location = new System.Drawing.Point(858, 48);
-            this.label_Deadline.Name = "label_Deadline";
-            this.label_Deadline.Size = new System.Drawing.Size(181, 56);
-            this.label_Deadline.TabIndex = 5;
-            this.label_Deadline.Text = "Deadline For Submission";
-            // 
-            // label_Time
-            // 
-            this.label_Time.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Time.AutoSize = true;
-            this.label_Time.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label_Time.Location = new System.Drawing.Point(78, 366);
-            this.label_Time.Name = "label_Time";
-            this.label_Time.Size = new System.Drawing.Size(168, 28);
-            this.label_Time.TabIndex = 6;
-            this.label_Time.Text = "Working Time";
-            // 
-            // label_Description
-            // 
-            this.label_Description.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Description.AutoSize = true;
-            this.label_Description.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label_Description.Location = new System.Drawing.Point(845, 214);
-            this.label_Description.Name = "label_Description";
-            this.label_Description.Size = new System.Drawing.Size(207, 28);
-            this.label_Description.TabIndex = 4;
-            this.label_Description.Text = "Job Description";
-            // 
-            // label_CompanyType
-            // 
-            this.label_CompanyType.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_CompanyType.AutoSize = true;
-            this.label_CompanyType.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label_CompanyType.Location = new System.Drawing.Point(864, 505);
-            this.label_CompanyType.Name = "label_CompanyType";
-            this.label_CompanyType.Size = new System.Drawing.Size(168, 56);
-            this.label_CompanyType.TabIndex = 5;
-            this.label_CompanyType.Text = "Candidate Requirements";
-            // 
-            // label__Benefit
-            // 
-            this.label__Benefit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label__Benefit.AutoSize = true;
-            this.label__Benefit.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label__Benefit.Location = new System.Drawing.Point(78, 519);
-            this.label__Benefit.Name = "label__Benefit";
-            this.label__Benefit.Size = new System.Drawing.Size(168, 28);
-            this.label__Benefit.TabIndex = 4;
-            this.label__Benefit.Text = "Job Benefits";
-            // 
-            // label_Experience
-            // 
-            this.label_Experience.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Experience.AutoSize = true;
-            this.label_Experience.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label_Experience.Location = new System.Drawing.Point(877, 366);
-            this.label_Experience.Name = "label_Experience";
-            this.label_Experience.Size = new System.Drawing.Size(142, 28);
-            this.label_Experience.TabIndex = 8;
-            this.label_Experience.Text = "Experience";
-            // 
-            // label_Salary
-            // 
-            this.label_Salary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Salary.AutoSize = true;
-            this.label_Salary.Font = new System.Drawing.Font("Consolas", 12F);
-            this.label_Salary.Location = new System.Drawing.Point(117, 214);
-            this.label_Salary.Name = "label_Salary";
-            this.label_Salary.Size = new System.Drawing.Size(90, 28);
-            this.label_Salary.TabIndex = 4;
-            this.label_Salary.Text = "Salary";
-            this.label_Salary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox_JobName
             // 
             this.textBox_JobName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_JobName.Location = new System.Drawing.Point(328, 52);
+            this.textBox_JobName.Location = new System.Drawing.Point(331, 52);
             this.textBox_JobName.Name = "textBox_JobName";
             this.textBox_JobName.Size = new System.Drawing.Size(500, 47);
             this.textBox_JobName.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -224,58 +135,10 @@
             this.textBox_JobName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.textBox_JobName.TabIndex = 15;
             // 
-            // textBox_Salary
-            // 
-            this.textBox_Salary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Salary.Location = new System.Drawing.Point(328, 204);
-            this.textBox_Salary.Name = "textBox_Salary";
-            this.textBox_Salary.Size = new System.Drawing.Size(500, 47);
-            this.textBox_Salary.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_Salary.StateActive.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.textBox_Salary.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.textBox_Salary.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox_Salary.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox_Salary.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_Salary.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.textBox_Salary.StateCommon.Border.Rounding = 20;
-            this.textBox_Salary.StateCommon.Border.Width = 1;
-            this.textBox_Salary.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.textBox_Salary.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Salary.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.textBox_Salary.TabIndex = 17;
-            // 
-            // textBox_WorkingTime
-            // 
-            this.textBox_WorkingTime.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_WorkingTime.Location = new System.Drawing.Point(328, 356);
-            this.textBox_WorkingTime.Name = "textBox_WorkingTime";
-            this.textBox_WorkingTime.Size = new System.Drawing.Size(500, 47);
-            this.textBox_WorkingTime.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_WorkingTime.StateActive.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.textBox_WorkingTime.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.textBox_WorkingTime.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox_WorkingTime.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox_WorkingTime.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_WorkingTime.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.textBox_WorkingTime.StateCommon.Border.Rounding = 20;
-            this.textBox_WorkingTime.StateCommon.Border.Width = 1;
-            this.textBox_WorkingTime.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.textBox_WorkingTime.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_WorkingTime.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.textBox_WorkingTime.TabIndex = 18;
-            // 
             // textBox_Experience
             // 
             this.textBox_Experience.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Experience.Location = new System.Drawing.Point(1069, 356);
+            this.textBox_Experience.Location = new System.Drawing.Point(1289, 356);
             this.textBox_Experience.Name = "textBox_Experience";
             this.textBox_Experience.Size = new System.Drawing.Size(491, 47);
             this.textBox_Experience.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -296,38 +159,56 @@
             this.textBox_Experience.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.textBox_Experience.TabIndex = 19;
             // 
-            // richTextBox_Requirement
+            // dateTimePicker_Deadline
             // 
-            this.richTextBox_Requirement.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox_Requirement.Location = new System.Drawing.Point(1069, 494);
-            this.richTextBox_Requirement.Name = "richTextBox_Requirement";
-            this.richTextBox_Requirement.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.richTextBox_Requirement.Size = new System.Drawing.Size(490, 78);
-            this.richTextBox_Requirement.StateActive.Content.Color1 = System.Drawing.Color.Black;
-            this.richTextBox_Requirement.StateActive.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_Requirement.StateActive.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.richTextBox_Requirement.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox_Requirement.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox_Requirement.StateCommon.Border.ColorAngle = 45F;
-            this.richTextBox_Requirement.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.dateTimePicker_Deadline.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePicker_Deadline.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_Deadline.Location = new System.Drawing.Point(1289, 53);
+            this.dateTimePicker_Deadline.Name = "dateTimePicker_Deadline";
+            this.dateTimePicker_Deadline.Palette = this.kryptonPalette1;
+            this.dateTimePicker_Deadline.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.dateTimePicker_Deadline.Size = new System.Drawing.Size(491, 46);
+            this.dateTimePicker_Deadline.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.richTextBox_Requirement.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.richTextBox_Requirement.StateCommon.Border.Rounding = 20;
-            this.richTextBox_Requirement.StateCommon.Border.Width = 1;
-            this.richTextBox_Requirement.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.richTextBox_Requirement.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_Requirement.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.richTextBox_Requirement.TabIndex = 20;
-            this.richTextBox_Requirement.Text = "";
+            this.dateTimePicker_Deadline.StateCommon.Border.Rounding = 20;
+            this.dateTimePicker_Deadline.StateCommon.Border.Width = 1;
+            this.dateTimePicker_Deadline.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.dateTimePicker_Deadline.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_Deadline.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.dateTimePicker_Deadline.TabIndex = 24;
+            // 
+            // textBox_Salary
+            // 
+            this.textBox_Salary.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_Salary.Location = new System.Drawing.Point(331, 204);
+            this.textBox_Salary.Name = "textBox_Salary";
+            this.textBox_Salary.Size = new System.Drawing.Size(500, 47);
+            this.textBox_Salary.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.textBox_Salary.StateActive.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.textBox_Salary.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.textBox_Salary.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox_Salary.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox_Salary.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.textBox_Salary.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.textBox_Salary.StateCommon.Border.Rounding = 20;
+            this.textBox_Salary.StateCommon.Border.Width = 1;
+            this.textBox_Salary.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.textBox_Salary.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Salary.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.textBox_Salary.TabIndex = 17;
             // 
             // richTextBox_JobDescripton
             // 
             this.richTextBox_JobDescripton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox_JobDescripton.Location = new System.Drawing.Point(1069, 189);
+            this.richTextBox_JobDescripton.Location = new System.Drawing.Point(1290, 155);
             this.richTextBox_JobDescripton.Name = "richTextBox_JobDescripton";
             this.richTextBox_JobDescripton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.richTextBox_JobDescripton.Size = new System.Drawing.Size(490, 78);
+            this.richTextBox_JobDescripton.Size = new System.Drawing.Size(490, 146);
             this.richTextBox_JobDescripton.StateActive.Content.Color1 = System.Drawing.Color.Black;
             this.richTextBox_JobDescripton.StateActive.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_JobDescripton.StateActive.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -346,13 +227,37 @@
             this.richTextBox_JobDescripton.TabIndex = 21;
             this.richTextBox_JobDescripton.Text = "";
             // 
+            // textBox_WorkingTime
+            // 
+            this.textBox_WorkingTime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_WorkingTime.Location = new System.Drawing.Point(331, 356);
+            this.textBox_WorkingTime.Name = "textBox_WorkingTime";
+            this.textBox_WorkingTime.Size = new System.Drawing.Size(500, 47);
+            this.textBox_WorkingTime.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.textBox_WorkingTime.StateActive.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.textBox_WorkingTime.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.textBox_WorkingTime.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox_WorkingTime.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox_WorkingTime.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.textBox_WorkingTime.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.textBox_WorkingTime.StateCommon.Border.Rounding = 20;
+            this.textBox_WorkingTime.StateCommon.Border.Width = 1;
+            this.textBox_WorkingTime.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.textBox_WorkingTime.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_WorkingTime.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.textBox_WorkingTime.TabIndex = 18;
+            // 
             // richTextBox_JobBenefit
             // 
             this.richTextBox_JobBenefit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox_JobBenefit.Location = new System.Drawing.Point(333, 494);
+            this.richTextBox_JobBenefit.Location = new System.Drawing.Point(336, 459);
             this.richTextBox_JobBenefit.Name = "richTextBox_JobBenefit";
             this.richTextBox_JobBenefit.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.richTextBox_JobBenefit.Size = new System.Drawing.Size(490, 78);
+            this.richTextBox_JobBenefit.Size = new System.Drawing.Size(490, 149);
             this.richTextBox_JobBenefit.StateActive.Content.Color1 = System.Drawing.Color.Black;
             this.richTextBox_JobBenefit.StateActive.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_JobBenefit.StateActive.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -371,24 +276,30 @@
             this.richTextBox_JobBenefit.TabIndex = 22;
             this.richTextBox_JobBenefit.Text = "";
             // 
-            // dateTimePicker_Deadline
+            // richTextBox_Requirement
             // 
-            this.dateTimePicker_Deadline.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker_Deadline.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_Deadline.Location = new System.Drawing.Point(1069, 53);
-            this.dateTimePicker_Deadline.Name = "dateTimePicker_Deadline";
-            this.dateTimePicker_Deadline.Palette = this.kryptonPalette1;
-            this.dateTimePicker_Deadline.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.dateTimePicker_Deadline.Size = new System.Drawing.Size(491, 46);
-            this.dateTimePicker_Deadline.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.richTextBox_Requirement.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.richTextBox_Requirement.Location = new System.Drawing.Point(1290, 459);
+            this.richTextBox_Requirement.Name = "richTextBox_Requirement";
+            this.richTextBox_Requirement.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.richTextBox_Requirement.Size = new System.Drawing.Size(490, 149);
+            this.richTextBox_Requirement.StateActive.Content.Color1 = System.Drawing.Color.Black;
+            this.richTextBox_Requirement.StateActive.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_Requirement.StateActive.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.richTextBox_Requirement.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.richTextBox_Requirement.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.richTextBox_Requirement.StateCommon.Border.ColorAngle = 45F;
+            this.richTextBox_Requirement.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dateTimePicker_Deadline.StateCommon.Border.Rounding = 20;
-            this.dateTimePicker_Deadline.StateCommon.Border.Width = 1;
-            this.dateTimePicker_Deadline.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.dateTimePicker_Deadline.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_Deadline.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.dateTimePicker_Deadline.TabIndex = 24;
+            this.richTextBox_Requirement.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.richTextBox_Requirement.StateCommon.Border.Rounding = 20;
+            this.richTextBox_Requirement.StateCommon.Border.Width = 1;
+            this.richTextBox_Requirement.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.richTextBox_Requirement.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_Requirement.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
+            this.richTextBox_Requirement.TabIndex = 20;
+            this.richTextBox_Requirement.Text = "";
             // 
             // flowLayoutPanel1
             // 
@@ -399,7 +310,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 639);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1587, 106);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1807, 106);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // button_Post
@@ -545,7 +456,7 @@
             this.button_SeeCandidate.OverrideDefault.Border.Rounding = 20;
             this.button_SeeCandidate.OverrideDefault.Border.Width = 1;
             this.button_SeeCandidate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_SeeCandidate.Size = new System.Drawing.Size(257, 100);
+            this.button_SeeCandidate.Size = new System.Drawing.Size(313, 100);
             this.button_SeeCandidate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_SeeCandidate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_SeeCandidate.StateCommon.Back.ColorAngle = 45F;
@@ -585,12 +496,12 @@
             this.button_SeeCandidate.StateTracking.Border.Rounding = 20;
             this.button_SeeCandidate.StateTracking.Border.Width = 1;
             this.button_SeeCandidate.TabIndex = 20;
-            this.button_SeeCandidate.Values.Text = "See Candidate";
+            this.button_SeeCandidate.Values.Text = "Applied Candidate";
             this.button_SeeCandidate.Click += new System.EventHandler(this.button_SeeCandidate_Click);
             // 
             // button_ApprovedCandidate
             // 
-            this.button_ApprovedCandidate.Location = new System.Drawing.Point(524, 3);
+            this.button_ApprovedCandidate.Location = new System.Drawing.Point(580, 3);
             this.button_ApprovedCandidate.Name = "button_ApprovedCandidate";
             this.button_ApprovedCandidate.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_ApprovedCandidate.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -648,12 +559,116 @@
             this.button_ApprovedCandidate.Values.Text = "Approved Candidate";
             this.button_ApprovedCandidate.Click += new System.EventHandler(this.button_ApprovedCandidate_Click);
             // 
+            // label_ID
+            // 
+            this.label_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_ID.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_ID.Image = global::Job_Application_Management.Properties.Resources.icons8_job_32;
+            this.label_ID.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_ID.Location = new System.Drawing.Point(10, 46);
+            this.label_ID.Name = "label_ID";
+            this.label_ID.Size = new System.Drawing.Size(294, 60);
+            this.label_ID.TabIndex = 1;
+            this.label_ID.Text = "Job Name    ";
+            this.label_ID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Deadline
+            // 
+            this.label_Deadline.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Deadline.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_Deadline.Image = global::Job_Application_Management.Properties.Resources.icons8_deadline_32;
+            this.label_Deadline.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Deadline.Location = new System.Drawing.Point(881, 48);
+            this.label_Deadline.Name = "label_Deadline";
+            this.label_Deadline.Size = new System.Drawing.Size(361, 56);
+            this.label_Deadline.TabIndex = 5;
+            this.label_Deadline.Text = "Deadline    ";
+            this.label_Deadline.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Experience
+            // 
+            this.label_Experience.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Experience.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_Experience.Image = global::Job_Application_Management.Properties.Resources.icons8_experience_32;
+            this.label_Experience.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Experience.Location = new System.Drawing.Point(881, 350);
+            this.label_Experience.Name = "label_Experience";
+            this.label_Experience.Size = new System.Drawing.Size(361, 60);
+            this.label_Experience.TabIndex = 8;
+            this.label_Experience.Text = "Experience    ";
+            this.label_Experience.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Salary
+            // 
+            this.label_Salary.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Salary.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_Salary.Image = global::Job_Application_Management.Properties.Resources.icons8_salary_32;
+            this.label_Salary.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Salary.Location = new System.Drawing.Point(10, 198);
+            this.label_Salary.Name = "label_Salary";
+            this.label_Salary.Size = new System.Drawing.Size(294, 60);
+            this.label_Salary.TabIndex = 4;
+            this.label_Salary.Text = "Salary    ";
+            this.label_Salary.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Description
+            // 
+            this.label_Description.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Description.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_Description.Image = global::Job_Application_Management.Properties.Resources.icons8_description_32;
+            this.label_Description.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Description.Location = new System.Drawing.Point(881, 198);
+            this.label_Description.Name = "label_Description";
+            this.label_Description.Size = new System.Drawing.Size(361, 60);
+            this.label_Description.TabIndex = 4;
+            this.label_Description.Text = "Job Description    ";
+            this.label_Description.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Time
+            // 
+            this.label_Time.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Time.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_Time.Image = global::Job_Application_Management.Properties.Resources.icons8_working_time_32;
+            this.label_Time.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Time.Location = new System.Drawing.Point(10, 350);
+            this.label_Time.Name = "label_Time";
+            this.label_Time.Size = new System.Drawing.Size(294, 60);
+            this.label_Time.TabIndex = 6;
+            this.label_Time.Text = "Working Time    ";
+            this.label_Time.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label__Benefit
+            // 
+            this.label__Benefit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label__Benefit.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label__Benefit.Image = global::Job_Application_Management.Properties.Resources.icons8_benefit_32;
+            this.label__Benefit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label__Benefit.Location = new System.Drawing.Point(10, 503);
+            this.label__Benefit.Name = "label__Benefit";
+            this.label__Benefit.Size = new System.Drawing.Size(294, 60);
+            this.label__Benefit.TabIndex = 4;
+            this.label__Benefit.Text = "Job Benefits    ";
+            this.label__Benefit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_CompanyType
+            // 
+            this.label_CompanyType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_CompanyType.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_CompanyType.Image = global::Job_Application_Management.Properties.Resources.icons8_request_32;
+            this.label_CompanyType.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_CompanyType.Location = new System.Drawing.Point(881, 503);
+            this.label_CompanyType.Name = "label_CompanyType";
+            this.label_CompanyType.Size = new System.Drawing.Size(361, 60);
+            this.label_CompanyType.TabIndex = 5;
+            this.label_CompanyType.Text = "Candidate Requirements    ";
+            this.label_CompanyType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FEmployer_JobDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1587, 745);
+            this.ClientSize = new System.Drawing.Size(1807, 745);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel_Information);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
