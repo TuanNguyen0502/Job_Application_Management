@@ -36,18 +36,18 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.textBox_Email = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.textBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.textBox_PhoneNumber = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.flowLayoutPanel_Sex = new System.Windows.Forms.FlowLayoutPanel();
-            this.radioButton_Male = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.radioButton_Female = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.comboBox_Workplace = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.label_ID = new System.Windows.Forms.Label();
             this.label_Sex = new System.Windows.Forms.Label();
             this.label_Workplace = new System.Windows.Forms.Label();
             this.label_Email = new System.Windows.Forms.Label();
             this.label_Phone = new System.Windows.Forms.Label();
             this.label_Name = new System.Windows.Forms.Label();
+            this.textBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.textBox_PhoneNumber = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.flowLayoutPanel_Sex = new System.Windows.Forms.FlowLayoutPanel();
+            this.radioButton_Male = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.radioButton_Female = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.comboBox_Workplace = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.flowLayoutPanel_Bottom.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel_Sex.SuspendLayout();
@@ -264,7 +264,7 @@
             // textBox_Email
             // 
             this.textBox_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Email.Location = new System.Drawing.Point(1221, 50);
+            this.textBox_Email.Location = new System.Drawing.Point(1220, 50);
             this.textBox_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Email.Name = "textBox_Email";
             this.textBox_Email.ReadOnly = true;
@@ -277,6 +277,84 @@
             this.textBox_Email.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Email.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
             this.textBox_Email.TabIndex = 9;
+            // 
+            // label_ID
+            // 
+            this.label_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_ID.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ID.Image = global::Job_Application_Management.Properties.Resources.icons8_id_30;
+            this.label_ID.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_ID.Location = new System.Drawing.Point(3, 48);
+            this.label_ID.Name = "label_ID";
+            this.label_ID.Size = new System.Drawing.Size(267, 60);
+            this.label_ID.TabIndex = 0;
+            this.label_ID.Text = "ID    ";
+            this.label_ID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Sex
+            // 
+            this.label_Sex.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Sex.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Sex.Image = global::Job_Application_Management.Properties.Resources.icons8_gender_30;
+            this.label_Sex.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Sex.Location = new System.Drawing.Point(887, 219);
+            this.label_Sex.Name = "label_Sex";
+            this.label_Sex.Size = new System.Drawing.Size(298, 33);
+            this.label_Sex.TabIndex = 3;
+            this.label_Sex.Text = "Gender    ";
+            this.label_Sex.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Workplace
+            // 
+            this.label_Workplace.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Workplace.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Workplace.Image = global::Job_Application_Management.Properties.Resources.icons8_workplace_30;
+            this.label_Workplace.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Workplace.Location = new System.Drawing.Point(887, 376);
+            this.label_Workplace.Name = "label_Workplace";
+            this.label_Workplace.Size = new System.Drawing.Size(298, 33);
+            this.label_Workplace.TabIndex = 5;
+            this.label_Workplace.Text = "Workplace    ";
+            this.label_Workplace.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Email
+            // 
+            this.label_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Email.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Email.Image = global::Job_Application_Management.Properties.Resources.icons8_email_302;
+            this.label_Email.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Email.Location = new System.Drawing.Point(887, 48);
+            this.label_Email.Name = "label_Email";
+            this.label_Email.Size = new System.Drawing.Size(298, 60);
+            this.label_Email.TabIndex = 4;
+            this.label_Email.Text = "Email    ";
+            this.label_Email.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Phone
+            // 
+            this.label_Phone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Phone.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Phone.Image = global::Job_Application_Management.Properties.Resources.icons8_phone_30__1_;
+            this.label_Phone.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Phone.Location = new System.Drawing.Point(3, 362);
+            this.label_Phone.Name = "label_Phone";
+            this.label_Phone.Size = new System.Drawing.Size(267, 60);
+            this.label_Phone.TabIndex = 2;
+            this.label_Phone.Text = "Phone Number    ";
+            this.label_Phone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Name
+            // 
+            this.label_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_Name.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Name.Image = global::Job_Application_Management.Properties.Resources.icons8_name_30;
+            this.label_Name.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_Name.Location = new System.Drawing.Point(3, 205);
+            this.label_Name.Name = "label_Name";
+            this.label_Name.Size = new System.Drawing.Size(267, 60);
+            this.label_Name.TabIndex = 1;
+            this.label_Name.Text = "Full Name    ";
+            this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox_ID
             // 
@@ -317,7 +395,7 @@
             this.flowLayoutPanel_Sex.Controls.Add(this.radioButton_Male);
             this.flowLayoutPanel_Sex.Controls.Add(this.radioButton_Female);
             this.flowLayoutPanel_Sex.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel_Sex.Location = new System.Drawing.Point(1221, 185);
+            this.flowLayoutPanel_Sex.Location = new System.Drawing.Point(1220, 185);
             this.flowLayoutPanel_Sex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel_Sex.Name = "flowLayoutPanel_Sex";
             this.flowLayoutPanel_Sex.Padding = new System.Windows.Forms.Padding(100, 10, 250, 10);
@@ -359,7 +437,7 @@
             "Phó giám đốc",
             "Giám đốc",
             "Tổng giám đốc"});
-            this.comboBox_Workplace.Location = new System.Drawing.Point(1221, 367);
+            this.comboBox_Workplace.Location = new System.Drawing.Point(1220, 367);
             this.comboBox_Workplace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox_Workplace.Name = "comboBox_Workplace";
             this.comboBox_Workplace.Size = new System.Drawing.Size(500, 50);
@@ -372,84 +450,6 @@
             this.comboBox_Workplace.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
             this.comboBox_Workplace.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Workplace.TabIndex = 14;
-            // 
-            // label_ID
-            // 
-            this.label_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_ID.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ID.Image = global::Job_Application_Management.Properties.Resources.icons8_id_30;
-            this.label_ID.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_ID.Location = new System.Drawing.Point(3, 48);
-            this.label_ID.Name = "label_ID";
-            this.label_ID.Size = new System.Drawing.Size(267, 60);
-            this.label_ID.TabIndex = 0;
-            this.label_ID.Text = "ID    ";
-            this.label_ID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_Sex
-            // 
-            this.label_Sex.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Sex.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Sex.Image = global::Job_Application_Management.Properties.Resources.icons8_gender_30;
-            this.label_Sex.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Sex.Location = new System.Drawing.Point(887, 219);
-            this.label_Sex.Name = "label_Sex";
-            this.label_Sex.Size = new System.Drawing.Size(299, 33);
-            this.label_Sex.TabIndex = 3;
-            this.label_Sex.Text = "Gender    ";
-            this.label_Sex.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_Workplace
-            // 
-            this.label_Workplace.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Workplace.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Workplace.Image = global::Job_Application_Management.Properties.Resources.icons8_workplace_30;
-            this.label_Workplace.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Workplace.Location = new System.Drawing.Point(887, 376);
-            this.label_Workplace.Name = "label_Workplace";
-            this.label_Workplace.Size = new System.Drawing.Size(299, 33);
-            this.label_Workplace.TabIndex = 5;
-            this.label_Workplace.Text = "Workplace    ";
-            this.label_Workplace.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_Email
-            // 
-            this.label_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Email.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Email.Image = global::Job_Application_Management.Properties.Resources.icons8_email_302;
-            this.label_Email.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Email.Location = new System.Drawing.Point(887, 48);
-            this.label_Email.Name = "label_Email";
-            this.label_Email.Size = new System.Drawing.Size(299, 60);
-            this.label_Email.TabIndex = 4;
-            this.label_Email.Text = "Email    ";
-            this.label_Email.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_Phone
-            // 
-            this.label_Phone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Phone.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Phone.Image = global::Job_Application_Management.Properties.Resources.icons8_phone_30__1_;
-            this.label_Phone.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Phone.Location = new System.Drawing.Point(3, 362);
-            this.label_Phone.Name = "label_Phone";
-            this.label_Phone.Size = new System.Drawing.Size(267, 60);
-            this.label_Phone.TabIndex = 2;
-            this.label_Phone.Text = "Phone Number    ";
-            this.label_Phone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_Name
-            // 
-            this.label_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Name.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Name.Image = global::Job_Application_Management.Properties.Resources.icons8_name_30;
-            this.label_Name.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Name.Location = new System.Drawing.Point(3, 205);
-            this.label_Name.Name = "label_Name";
-            this.label_Name.Size = new System.Drawing.Size(267, 60);
-            this.label_Name.TabIndex = 1;
-            this.label_Name.Text = "Full Name    ";
-            this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FEmployer_Information
             // 

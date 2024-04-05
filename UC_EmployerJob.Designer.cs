@@ -33,10 +33,10 @@
             this.label_JobName = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label_Salary = new System.Windows.Forms.Label();
+            this.label_Deadline = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Edit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_delete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label_Deadline = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -100,6 +100,18 @@
             this.label_Salary.TabIndex = 2;
             this.label_Salary.Text = "    Salary: ";
             this.label_Salary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label_Deadline
+            // 
+            this.label_Deadline.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Deadline.Image = global::Job_Application_Management.Properties.Resources.icons8_deadline_32;
+            this.label_Deadline.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_Deadline.Location = new System.Drawing.Point(13, 70);
+            this.label_Deadline.Name = "label_Deadline";
+            this.label_Deadline.Size = new System.Drawing.Size(484, 60);
+            this.label_Deadline.TabIndex = 3;
+            this.label_Deadline.Text = "    Deadline: ";
+            this.label_Deadline.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // flowLayoutPanel3
             // 
@@ -238,18 +250,7 @@
             this.button_delete.StateTracking.Border.Width = 1;
             this.button_delete.TabIndex = 18;
             this.button_delete.Values.Text = "";
-            // 
-            // label_Deadline
-            // 
-            this.label_Deadline.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Deadline.Image = global::Job_Application_Management.Properties.Resources.icons8_deadline_32;
-            this.label_Deadline.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label_Deadline.Location = new System.Drawing.Point(13, 70);
-            this.label_Deadline.Name = "label_Deadline";
-            this.label_Deadline.Size = new System.Drawing.Size(484, 60);
-            this.label_Deadline.TabIndex = 3;
-            this.label_Deadline.Text = "    Deadline: ";
-            this.label_Deadline.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
             // UC_EmployerJob
             // 

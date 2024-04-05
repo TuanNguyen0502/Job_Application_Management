@@ -211,9 +211,9 @@ namespace Job_Application_Management
             Execute(sqlStr);
         }
 
-        public void DeleteJob(Job job)
+        public void DeleteJob(string jobID)
         {
-            string sqlStr = string.Format($"DELETE FROM Jobs WHERE ID = '{job.Id}'");
+            string sqlStr = string.Format($"DELETE FROM Jobs WHERE ID = '{jobID}'");
 
             Execute(sqlStr);
         }

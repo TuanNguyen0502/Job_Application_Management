@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.flowLayoutPanel_Left = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_Home = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_Information = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_PostJob = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -38,11 +37,12 @@
             this.button_SignOut = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_Top = new System.Windows.Forms.Panel();
-            this.panel_Center = new System.Windows.Forms.Panel();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.panel_Center = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel_Left.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_Top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel_Left
@@ -60,19 +60,6 @@
             this.flowLayoutPanel_Left.Padding = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel_Left.Size = new System.Drawing.Size(230, 844);
             this.flowLayoutPanel_Left.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackgroundImage = global::Job_Application_Management.Properties.Resources.icons8_employer_64;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(10);
-            this.pictureBox1.Size = new System.Drawing.Size(144, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // button_Home
             // 
@@ -410,14 +397,6 @@
             this.panel_Top.Size = new System.Drawing.Size(1248, 67);
             this.panel_Top.TabIndex = 3;
             // 
-            // panel_Center
-            // 
-            this.panel_Center.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Center.Location = new System.Drawing.Point(230, 67);
-            this.panel_Center.Name = "panel_Center";
-            this.panel_Center.Size = new System.Drawing.Size(1248, 777);
-            this.panel_Center.TabIndex = 4;
-            // 
             // kryptonPalette1
             // 
             this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -439,6 +418,29 @@
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
+            // panel_Center
+            // 
+            this.panel_Center.BackgroundImage = global::Job_Application_Management.Properties.Resources.recruiters_company_are_looking_employees_background;
+            this.panel_Center.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_Center.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Center.Location = new System.Drawing.Point(230, 67);
+            this.panel_Center.Name = "panel_Center";
+            this.panel_Center.Size = new System.Drawing.Size(1248, 777);
+            this.panel_Center.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImage = global::Job_Application_Management.Properties.Resources.icons8_employer_64;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(10);
+            this.pictureBox1.Size = new System.Drawing.Size(144, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // FEmployer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -457,9 +459,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FEmployer_Load);
             this.flowLayoutPanel_Left.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_Top.ResumeLayout(false);
             this.panel_Top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
