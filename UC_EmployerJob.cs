@@ -24,6 +24,7 @@ namespace Job_Application_Management
         public string JobID { get => jobID; set => jobID = value; }
         public Label Label_Salary { get => label_Salary; set => label_Salary = value; }
         public Label Label_Deadline { get => label_Deadline; set => label_Deadline = value; }
+        public event EventHandler<ButtonClickEventArgs> Button_Delete_Click;
 
         public UC_EmployerJob(string empID)
         {
@@ -49,6 +50,11 @@ namespace Job_Application_Management
         private void button_Edit_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FEmployer_JobDetail(JobID, empID));
+        }
+
+        private void button_delete_Click(object sender, EventArgs e)
+        {
+            Button_Delete_Click?.Invoke(this, new ButtonClickEventArgs(jobID));
         }
     }
 }

@@ -144,7 +144,7 @@ namespace Job_Application_Management
         {
             if (JobID != null)
             {
-                employerDAO.DeleteJob(GetCurrentJob());
+                employerDAO.DeleteJob(GetCurrentJob().Id);
                 this.Close();
             }
         }

@@ -686,5 +686,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-profile-64.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recruiters-company-are-looking-employees-background.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

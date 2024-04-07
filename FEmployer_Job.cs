@@ -5,8 +5,10 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 
@@ -16,13 +18,12 @@ namespace Job_Application_Management
     {
         private string empID;
         private Form currentFormChild;
-        private EmployerDAO employerDAO;
+        private EmployerDAO employerDAO = new EmployerDAO();
 
         public FEmployer_Job(string empID)
         {
             this.empID = empID;
             InitializeComponent();
-            employerDAO = new EmployerDAO();
         }
 
         private void OpenChildForm(Form childForm)
@@ -40,6 +41,12 @@ namespace Job_Application_Management
             childForm.Show();
         }
 
+        private void button_Delete_Click(object sender, ButtonClickEventArgs e)
+        {
+            employerDAO.DeleteJob(e.ID);
+            flowLayoutPanel_Jobs.Controls.Remove(sender as UC_EmployerJob);
+        }
+
         private void button_Post_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FEmployer_JobDetail(null, empID));
@@ -55,6 +62,7 @@ namespace Job_Application_Management
             List<UC_EmployerJob> jobItems = employerDAO.GetJobsFromDB(empID);
             foreach (var jobItem in jobItems)
             {
+                jobItem.Button_Delete_Click += button_Delete_Click;
                 flowLayoutPanel_Jobs.Controls.Add(jobItem);
             }
         }

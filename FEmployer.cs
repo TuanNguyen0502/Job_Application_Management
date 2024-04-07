@@ -28,8 +28,11 @@ namespace Job_Application_Management
             if (currentFormChild != null)
             {
                 currentFormChild.Close();
+                //var t = Task.Delay(500); //1 second/1000 ms
+                //t.Wait();
             }
 
+            panel_Center.BackgroundImage = null;
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -59,6 +62,7 @@ namespace Job_Application_Management
         {
             if (currentFormChild != null)
                 currentFormChild.Close();
+            panel_Center.BackgroundImage = Properties.Resources.recruiters_company_are_looking_employees_background;
         }
 
         private void button_SignOut_Click(object sender, EventArgs e)
