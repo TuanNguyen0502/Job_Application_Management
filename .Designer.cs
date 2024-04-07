@@ -119,6 +119,7 @@
             this.btnSaved.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSaved.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSaved.UseVisualStyleBackColor = true;
+            this.btnSaved.Click += new System.EventHandler(this.btnSaved_Click);
             // 
             // btnApply
             // 

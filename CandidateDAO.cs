@@ -15,7 +15,7 @@ namespace Job_Application_Management
     {
         DBConnection dbConn;
         UC_Resume resume = new UC_Resume();
-        public List<Dictionary<string, object>> listCVs = new List<Dictionary<string, object>>();
+        private List<Dictionary<string, object>> listCVs = new List<Dictionary<string, object>>();
         string sqlQuery;
         public CandidateDAO()
         {
@@ -168,7 +168,7 @@ namespace Job_Application_Management
             List<Dictionary<string, object>> keyValueJobDetails = dbConn.ExecuteReaderData(sqlQuery, lstParam);
             return keyValueJobDetails;
         }
-        public void AddSavedJobs(string jobid)
+        public void AddSavedJob(string jobid)
         {
             sqlQuery = "INSERT INTO SavedJobs(TimeSaved, JobID)" +
                             " VALUES(@times,@jId)";
@@ -219,14 +219,17 @@ namespace Job_Application_Management
             dict["CertificationName"] = cv.Certification;
             dict["CertificationDate"] = cv.CertificationDate;
             dict["Status"] = cv.Status;
-            foreach (var kvp in dict)
-                MessageBox.Show($"Key: {kvp.Key} Value: {kvp.Value}");
+            /*foreach (var kvp in dict)
+                MessageBox.Show($"Key: {kvp.Key} Value: {kvp.Value}");*/
             listCVs.Add(dict);
+            MessageBox.Show(listCVs.Capacity.ToString());
         }
 
         public CV GetAvailableCVByCandidateID(string cddid)
         {
-            foreach (Dictionary<string, object> item in listCVs)
+            foreach (Dictionary<string, object> item in this.listCVs)
+            {
+                MessageBox.Show("This is GetAvailableCVByCandidateID function: "+(string)item["CddID"] + "/" + cddid);
                 if ((string)item["CddID"] == cddid)
                 {
                     CV cv = new CV();
@@ -251,10 +254,39 @@ namespace Job_Application_Management
                     }
                     return cv;
                 }
+            }
             return null;
         }
-        public void SaveResumeToDatabase(CV cv, string CddID, string JobID)
+        public void SaveResumeToDatabase(string CddID, string JobID)
         {
+            CV cv = new CV();
+            MessageBox.Show(listCVs.Count.ToString());
+            foreach (Dictionary<string, object> item in this.listCVs)
+            {
+                MessageBox.Show("This is GetAvailableCVByCandidateID function: "+(string)item["CddID"] + "/" + CddID);
+                if ((string)item["CddID"] == CddID)
+                {
+                    cv.CddID = CddID;
+                    cv.Objective = (string)item["Objective"];
+                    cv.UniversityName = (string)item["UniversityName"];
+                    cv.Major = (string)item["Major"];
+                    cv.Gpa = (string)item["GPA"];
+                    cv.UniversityStartDate = (DateTime)item["UniversityStartDate"];
+                    cv.UniversityEndDate = (DateTime)item["UniversityEndDate"];
+                    cv.CompanyName = (string)item["CompanyName"];
+                    cv.CompanyStartDate = (DateTime)item["CompanyStartDate"];
+                    cv.CompanyEndDate = (DateTime)item["CompanyEndDate"];
+                    cv.WorkPlace = (string)item["WorkPlace"];
+                    cv.WorkedDetail = (string)item["Detail"];
+                    cv.Certification = (string)item["CertificationName"];
+                    cv.CertificationDate = (DateTime)item["CertificationDate"];
+                    cv.Status = (string)item["Status"];
+                    foreach (var kvp in item)
+                    {
+                        MessageBox.Show($"Key: {kvp.Key} Value: {kvp.Value}");
+                    }
+                }
+            }
             if (cv != null)
             {
                 sqlQuery = "INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, " +

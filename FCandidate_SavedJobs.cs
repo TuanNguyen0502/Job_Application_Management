@@ -15,7 +15,6 @@ namespace Job_Application_Management
     public partial class FCandidate_SavedJobs : KryptonForm
     {
         CandidateDAO canDAO = new CandidateDAO();
-        string jobid;
         public FCandidate_SavedJobs()
         {
             InitializeComponent();

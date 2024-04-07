@@ -14,7 +14,6 @@ namespace Job_Application_Management
     public partial class UC_CandidateMain : UserControl
     {
         CandidateDAO canDAO = new CandidateDAO();
-        private Job myJob = new Job();
         #region Properties
         private string jobName;
         private string companyName;
@@ -83,7 +82,7 @@ namespace Job_Application_Management
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            canDAO.AddSavedJobs(JobID);
+            canDAO.AddSavedJob(jobid);
         }
     }
 }
