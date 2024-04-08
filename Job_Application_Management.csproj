@@ -201,6 +201,9 @@
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoudingPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UC_AppliedJobs.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -218,6 +221,12 @@
     </Compile>
     <Compile Include="UC_CandidateProfile.Designer.cs">
       <DependentUpon>UC_CandidateProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_CoverLetter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CoverLetter.Designer.cs">
+      <DependentUpon>UC_CoverLetter.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_RecruitmentCompany.cs">
       <SubType>UserControl</SubType>
@@ -345,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_CandidateProfile.resx">
       <DependentUpon>UC_CandidateProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CoverLetter.resx">
+      <DependentUpon>UC_CoverLetter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_RecruitmentCompany.resx">
       <DependentUpon>UC_RecruitmentCompany.cs</DependentUpon>
@@ -703,6 +715,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-job-seeker-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-candidate-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-goal-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-university-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-resume-and-cv-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gpa-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-certification-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

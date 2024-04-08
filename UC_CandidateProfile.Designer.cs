@@ -293,6 +293,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.Controls.Add(this.kryptonTextBox8);
