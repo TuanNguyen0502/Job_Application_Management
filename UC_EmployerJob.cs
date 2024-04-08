@@ -14,14 +14,14 @@ namespace Job_Application_Management
     public partial class UC_EmployerJob : UserControl
     {
         private Form currentFormChild;
-        private string jobID;
+        private int jobID;
         private string empID;
 
         public Label Label_PostedTime { get => label_PostedTime; set => label_PostedTime = value; }
         public Label Label_JobName { get => label_JobName; set => label_JobName = value; }
         public KryptonButton Button_Edit { get => button_Edit; set => button_Edit = value; }
         public KryptonButton Button_delete { get => button_delete; set => button_delete = value; }
-        public string JobID { get => jobID; set => jobID = value; }
+        public int JobID { get => jobID; set => jobID = value; }
         public Label Label_Salary { get => label_Salary; set => label_Salary = value; }
         public Label Label_Deadline { get => label_Deadline; set => label_Deadline = value; }
         public event EventHandler<ButtonClickEventArgs> Button_Delete_Click;
@@ -54,7 +54,7 @@ namespace Job_Application_Management
 
         private void button_delete_Click(object sender, EventArgs e)
         {
-            Button_Delete_Click?.Invoke(this, new ButtonClickEventArgs(jobID));
+            Button_Delete_Click?.Invoke(this, new ButtonClickEventArgs(jobID.ToString()));
         }
     }
 }

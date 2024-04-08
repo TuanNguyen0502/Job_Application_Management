@@ -20,7 +20,7 @@ namespace Job_Application_Management
         private double salary;
         private string address;
         private Image icon;
-        private string jobid;
+        private int jobid;
         private string cddid;
         [Category("Custom Props")]
         public string JobName
@@ -53,7 +53,7 @@ namespace Job_Application_Management
             set { icon = value; ptbMain.Image = value; }
         }
         [Category("Custom Props")]
-        public string JobID
+        public int JobID
         {
             get { return jobid; }
             set { jobid = value; }

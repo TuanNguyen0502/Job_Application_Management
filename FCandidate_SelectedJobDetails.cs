@@ -12,7 +12,7 @@ namespace Job_Application_Management
 {
     public partial class FCandidate_SelectedJobDetails : Form
     {
-        private string jobid;
+        private int jobid;
         private string cddid;
         private string companyName;
 
@@ -34,7 +34,7 @@ namespace Job_Application_Management
             InitializeComponent();
             GetDataFromDB();
         }
-        public FCandidate_SelectedJobDetails(string jobid, string cddid)
+        public FCandidate_SelectedJobDetails(int jobid, string cddid)
         {
             this.jobid = jobid;
             this.cddid = cddid;
@@ -47,7 +47,7 @@ namespace Job_Application_Management
             List<Dictionary<string, object>> keyValueJobDetails = canDAO.GetSelectedJobDetails(jobid);
             foreach (var item in keyValueJobDetails)
             {
-                lblJobId.Text = jobid;
+                lblJobId.Text = jobid.ToString();
                 lblJobName_Address.Text = (string)item["JobName"] + $" [{(string)item["Address"]}]";
                 lblSalary.Text = item["Salary"].ToString();
                 lblAddress.Text = (string)item["Address"];

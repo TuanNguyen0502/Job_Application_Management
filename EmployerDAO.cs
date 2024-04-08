@@ -53,7 +53,7 @@ namespace Job_Application_Management
             Execute(sqlStr);
         }
 
-        public List<UC_CandidateCV> GetCandidateResumeFromDB(string jobID, string status)
+        public List<UC_CandidateCV> GetCandidateResumeFromDB(int jobID, string status)
         {
             string sqlQuery = $"SELECT R.CddID, C.CddName, R.UniversityName, R.Major, R.GPA " +
                 $"FROM Resume R INNER JOIN Candidates C ON R.CddID = C.CddID " +
@@ -66,14 +66,14 @@ namespace Job_Application_Management
                 item.CddID = (string)row["CddID"];
                 item.Label_Name.Text = (string)row["CddName"];
                 item.Label_University.Text = (string)row["UniversityName"];
-                item.Label_Major.Text += (string)row["Major"].ToString();
-                item.Label_GPA.Text += (string)row["GPA"].ToString();
+                item.Label_Major.Text += (string)row["Major"];
+                item.Label_GPA.Text += (string)row["GPA"];
                 items.Add(item);
             }
             return items;
         }
 
-        public CV GetResumeFromDB(string jobID, string cddID)
+        public CV GetResumeFromDB(int jobID, string cddID)
         {
             CV resume = new CV();
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -94,7 +94,7 @@ namespace Job_Application_Management
                     while (reader.Read())
                     {
                         resume.CddID = reader.GetString(0);
-                        resume.JobID = reader.GetString(1);
+                        resume.JobID = reader.GetInt32(1);
                         resume.Objective = reader.GetString(2);
                         resume.UniversityName = reader.GetString(3);
                         resume.Major = reader.GetString(4);
@@ -193,8 +193,8 @@ namespace Job_Application_Management
 
         public void AddJob(Job job)
         {
-            string sqlStr = string.Format($"INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, " +
-                $"Benefit, RequestCdd, PostTime, EmpID) VALUES ('{job.Id}', N'{job.Name}', '{job.Salary}', " +
+            string sqlStr = string.Format($"INSERT INTO Jobs (Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, " +
+                $"Benefit, RequestCdd, PostTime, EmpID) VALUES (N'{job.Name}', '{job.Salary}', " +
                 $"'{job.JobDescription}', '{job.WorkDuration}', '{job.Experience}', '{job.Deadline.ToString("yyyy-MM-dd")}', '{job.Benefit}', " +
                 $"'{job.Request}', '{job.PostTime.ToString("yyyy-MM-dd")}', '{job.EmpID}')");
 
@@ -234,7 +234,7 @@ namespace Job_Application_Management
                 DateTime deadline = (DateTime)row["ExpirationDate"];
                 string formattedDeadline = postTime.ToString("yyyy-MM-dd");
                 item.Label_Deadline.Text += formattedDeadline;
-                item.JobID = (string)row["ID"];
+                item.JobID = (int)row["ID"];
                 items.Add(item);
             }
             return items;

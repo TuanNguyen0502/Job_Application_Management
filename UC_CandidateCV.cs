@@ -15,7 +15,7 @@ namespace Job_Application_Management
     public partial class UC_CandidateCV : UserControl
     {
         private Form currentFormChild;
-        private string jobID;
+        private int jobID;
         private string cddID;
         public KryptonButton Button_detail { get => button_detail; set => button_detail = value; }
         public KryptonButton Button_delete { get => button_delete; set => button_delete = value; }
@@ -25,7 +25,7 @@ namespace Job_Application_Management
         public Label Label_GPA { get => label_GPA; set => label_GPA = value; }
         public string CddID { get => cddID; set => cddID = value; }
 
-        public UC_CandidateCV(string jobID)
+        public UC_CandidateCV(int jobID)
         {
             this.jobID = jobID;
             InitializeComponent();

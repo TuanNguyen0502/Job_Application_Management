@@ -8,7 +8,7 @@ namespace Job_Application_Management
 {
     public class Job
     {
-        private string id;
+        private int id;
         private string name;
         private int salary;
         private string jobDescription;
@@ -22,7 +22,20 @@ namespace Job_Application_Management
         private string companyName;
         public string address;
         public Job() { }
-        public Job(string id, string name, int salary, string jobDescription, int workDuration, string experience, DateTime deadline, string benefit, string request, string empID)
+        public Job(string name, int salary, string jobDescription, int workDuration, string experience, DateTime deadline, string benefit, string request, string empID)
+        {
+            Name = name;
+            Salary = salary;
+            JobDescription = jobDescription;
+            WorkDuration = workDuration;
+            Experience = experience;
+            Deadline = deadline;
+            Benefit = benefit;
+            Request = request;
+            postTime = DateTime.Now;
+            EmpID = empID;
+        }
+        public Job(int id, string name, int salary, string jobDescription, int workDuration, string experience, DateTime deadline, string benefit, string request, string empID)
         {
             Id = id;
             Name = name;
@@ -37,7 +50,7 @@ namespace Job_Application_Management
             EmpID = empID;
         }
 
-        public Job (string id, string name, int salary, string jobDescription, int workDuration, string experience, DateTime deadline, string benefit, string request, string empID, string companyName, string address)
+        public Job (int id, string name, int salary, string jobDescription, int workDuration, string experience, DateTime deadline, string benefit, string request, string empID, string companyName, string address)
         {
             Id = id;
             Name = name;
@@ -54,7 +67,7 @@ namespace Job_Application_Management
             Address = address;
         }
 
-        public string Id { get => id; set => id = value; }
+        public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public int Salary { get => salary; set => salary = value; }
         public string JobDescription { get => jobDescription; set => jobDescription = value; }

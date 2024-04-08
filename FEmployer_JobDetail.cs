@@ -17,13 +17,13 @@ namespace Job_Application_Management
         private Form currentFormChild;
         private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
         private string sqlQuery;
-        private string jobID;
+        private int jobID;
         private string empID;
         private EmployerDAO employerDAO;
 
-        public string JobID { get => jobID; set => jobID = value; }
+        public int JobID { get => jobID; set => jobID = value; }
 
-        public FEmployer_JobDetail(string ID, string empID)
+        public FEmployer_JobDetail(int ID, string empID)
         {
             this.JobID = ID;
             this.empID = empID;
@@ -62,7 +62,7 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
-            if (JobID != null)
+            if (JobID != 0)
             {
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
@@ -93,7 +93,7 @@ namespace Job_Application_Management
 
         private void button_Post_Click(object sender, EventArgs e)
         {
-            if (JobID == null)
+            if (JobID == 0)
             {
                 employerDAO.AddJob(CreateJob());
                 this.Close();
@@ -117,23 +117,7 @@ namespace Job_Application_Management
         {
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                // get job number
-                conn.Open();
-                int number = 0;
-                string query = "SELECT * FROM Jobs";
-                SqlCommand com = new SqlCommand(query, conn);
-                SqlDataReader r = com.ExecuteReader();
-                if (r.HasRows)
-                {
-                    while (r.Read())
-                        number++;
-                }
-                else
-                    MessageBox.Show("No rows found");
-                r.Close();
-                number++;
-                //
-                Job job = new Job("JOB" + number, textBox_JobName.Text, Int32.Parse(textBox_Salary.Text), richTextBox_JobDescripton.Text,
+                Job job = new Job(textBox_JobName.Text, Int32.Parse(textBox_Salary.Text), richTextBox_JobDescripton.Text,
                     Int32.Parse(textBox_WorkingTime.Text), textBox_Experience.Text, dateTimePicker_Deadline.Value, richTextBox_JobBenefit.Text,
                     richTextBox_Requirement.Text, empID);
                 return job;
@@ -142,9 +126,9 @@ namespace Job_Application_Management
 
         private void button_Delete_Click(object sender, EventArgs e)
         {
-            if (JobID != null)
+            if (JobID != 0)
             {
-                employerDAO.DeleteJob(GetCurrentJob().Id);
+                employerDAO.DeleteJob(GetCurrentJob().Id.ToString());
                 this.Close();
             }
         }

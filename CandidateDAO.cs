@@ -38,7 +38,7 @@ namespace Job_Application_Management
                 item.CompanyName1 = (string)row["CompanyName"];
                 item.Salary = (int)row["Salary"];
                 item.Address = (string)row["Address"];
-                item.JobID = (string)row["JobID"];
+                item.JobID = (int)row["JobID"];
                 item.CddID = cddid;
                 items.Add(item);
             }
@@ -60,7 +60,7 @@ namespace Job_Application_Management
                 item.CompanyName1 = (string)row["CompanyName"];
                 item.Salary = (int)row["Salary"];
                 item.Address = (string)row["Address"];
-                item.JobID = (string)row["JobID"];
+                item.JobID = (int)row["JobID"];
                 items.Add(item);
             }
             return items;
@@ -84,7 +84,7 @@ namespace Job_Application_Management
                 item.CompanyName1 = (string)row["CompanyName"];
                 item.Salary = (int)row["Salary"];
                 item.Address = (string)row["Address"];
-                item.JobID = (string)row["JobID"];
+                item.JobID = (int)row["JobID"];
                 items.Add(item);
             }
             return items;
@@ -155,7 +155,7 @@ namespace Job_Application_Management
             };
             dbConn.ExecuteDeleteData(sqlQuery, lstParams);
         }
-        public List<Dictionary<string, object>> GetSelectedJobDetails(string jobid)
+        public List<Dictionary<string, object>> GetSelectedJobDetails(int jobid)
         {
             sqlQuery = "SELECT j.Name JobName, c.Name CompanyName, j.Salary, c.Address, j.Experience, j.PostTime, j.JobDecription,                       j.WorkDuration, j.RequestCdd, j.Benefit"
                         +" FROM Jobs j"
@@ -164,30 +164,30 @@ namespace Job_Application_Management
                         +" WHERE j.ID = @jobId";
             SqlParameter[] lstParam =
             {
-                new SqlParameter("@jobId", SqlDbType.VarChar) {Value = jobid},
+                new SqlParameter("@jobId", SqlDbType.Int) {Value = jobid},
             };
             List<Dictionary<string, object>> keyValueJobDetails = dbConn.ExecuteReaderData(sqlQuery, lstParam);
             return keyValueJobDetails;
         }
-        public void AddSavedJob(string jobid)
+        public void AddSavedJob(int jobid)
         {
             sqlQuery = "INSERT INTO SavedJobs(TimeSaved, JobID)" +
                             " VALUES(@times,@jId)";
             SqlParameter[] lstParam =
             {
                     new SqlParameter("@times", SqlDbType.Date) {Value = DateTime.Today},
-                    new SqlParameter("@jId", SqlDbType.VarChar) { Value = jobid },
+                    new SqlParameter("@jId", SqlDbType.Int) { Value = jobid },
             };
             dbConn.ExecuteWriteData(sqlQuery, lstParam);
         }
-        public void AddAppliedJob(string jobid)
+        public void AddAppliedJob(int jobid)
         {
             sqlQuery = "INSERT INTO AppliedJobs(TimeApplied, JobID)" +
                             " VALUES(@times,@jId)";
             SqlParameter[] lstParam =
             {
                     new SqlParameter("@times", SqlDbType.Date) {Value = DateTime.Today},
-                    new SqlParameter("@jId", SqlDbType.VarChar) { Value = jobid },
+                    new SqlParameter("@jId", SqlDbType.Int) { Value = jobid },
                 };
             dbConn.ExecuteWriteData(sqlQuery, lstParam);
         }
@@ -267,7 +267,7 @@ namespace Job_Application_Management
             }
             return null;
         }
-        public void SaveResumeToDatabase(CV cv, string JobID)
+        public void SaveResumeToDatabase(CV cv, int JobID)
         {
             if (cv != null)
             {
@@ -277,7 +277,7 @@ namespace Job_Application_Management
                 SqlParameter[] lstParams =
                 {
                 new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cv.CddID},
-                new SqlParameter("@JobID", SqlDbType.VarChar) {Value = JobID},
+                new SqlParameter("@JobID", SqlDbType.Int) {Value = JobID},
                 new SqlParameter("@Objective", SqlDbType.Text) {Value = cv.Objective},
                 new SqlParameter("@UniversityName", SqlDbType.NVarChar) {Value = cv.UniversityName},
                 new SqlParameter("@Major", SqlDbType.NVarChar) {Value = cv.Major},

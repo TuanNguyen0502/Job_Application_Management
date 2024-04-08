@@ -54,7 +54,7 @@
             this.uC_Resume1.AutoScroll = true;
             this.uC_Resume1.CddID = null;
             this.uC_Resume1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Resume1.JobID = null;
+            this.uC_Resume1.JobID = 0;
             this.uC_Resume1.Location = new System.Drawing.Point(0, 0);
             this.uC_Resume1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_Resume1.Name = "uC_Resume1";

@@ -15,13 +15,13 @@ namespace Job_Application_Management
     public partial class UC_Resume : UserControl
     {
         private string role;
-        private string jobID;
+        private int jobID;
         private string cddID;
         private CV resume;
         private EmployerDAO employerDAO;
         private CandidateDAO candidateDAO;
 
-        public string JobID { get => jobID; set => jobID = value; }
+        public int JobID { get => jobID; set => jobID = value; }
         public string CddID { get => cddID; set => cddID = value; }
         public string Role { get => role; set => role = value; }
 

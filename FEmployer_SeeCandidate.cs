@@ -14,11 +14,11 @@ namespace Job_Application_Management
 {
     public partial class FEmployer_SeeCandidate : KryptonForm
     {
-        private string jobID;
+        private int jobID;
         private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
         private EmployerDAO employerDAO;
 
-        public FEmployer_SeeCandidate(string jobID)
+        public FEmployer_SeeCandidate(int jobID)
         {
             this.jobID = jobID;
             employerDAO = new EmployerDAO();    

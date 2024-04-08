@@ -11,7 +11,7 @@ namespace Job_Application_Management
     {
 
         private string cddID;
-        private string jobID;
+        private int jobID;
         private string objective;
         private string universityName;
         private string major;
@@ -34,7 +34,7 @@ namespace Job_Application_Management
         private string cddPhone;
         
 
-        public CV(string cddID, string jobID, string objective, string universityName, string major, string gpa, DateTime universityStartDate, DateTime universityEndDate, string companyName, string workPlace, string workedDetail, DateTime companyStartDate, DateTime companyEndDate, string certificationName, DateTime certificationDate, string jobName, string cddName, string cddAddress, string cddEmail, string cddPhone)
+        public CV(string cddID, int jobID, string objective, string universityName, string major, string gpa, DateTime universityStartDate, DateTime universityEndDate, string companyName, string workPlace, string workedDetail, DateTime companyStartDate, DateTime companyEndDate, string certificationName, DateTime certificationDate, string jobName, string cddName, string cddAddress, string cddEmail, string cddPhone)
         {
             CddID=cddID;
             JobID=jobID;
@@ -72,7 +72,7 @@ namespace Job_Application_Management
         public CV() { }
 
         public string CddID { get => cddID; set => cddID = value; }
-        public string JobID { get => jobID; set => jobID = value; }
+        public int JobID { get => jobID; set => jobID = value; }
         public string Objective { get => objective; set => objective = value; }
         public string Major { get => major; set => major = value; }
         public DateTime TimeCertificate { get; set; }

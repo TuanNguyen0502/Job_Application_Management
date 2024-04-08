@@ -49,7 +49,7 @@ namespace Job_Application_Management
 
         private void button_Post_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_JobDetail(null, empID));
+            OpenChildForm(new FEmployer_JobDetail(0, empID));
         } 
 
         private void FEmployer_Job_Load(object sender, EventArgs e)

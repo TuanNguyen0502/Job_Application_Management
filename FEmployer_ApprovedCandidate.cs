@@ -14,9 +14,9 @@ namespace Job_Application_Management
 {
     public partial class FEmployer_ApprovedCandidate : KryptonForm
     {
-        private string jobID;
+        private int jobID;
         private EmployerDAO employerDAO;
-        public FEmployer_ApprovedCandidate(string jobID)
+        public FEmployer_ApprovedCandidate(int jobID)
         {
             employerDAO = new EmployerDAO();
             this.jobID = jobID;
