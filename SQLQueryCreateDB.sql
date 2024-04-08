@@ -28,7 +28,7 @@ CREATE TABLE Employers(
 	CompanyName nvarchar(100) FOREIGN KEY REFERENCES Company(Name),
 )
 CREATE TABLE Jobs(
-	ID varchar(10) CONSTRAINT PK_Job PRIMARY KEY,
+	ID int IDENTITY(1, 1) CONSTRAINT PK_Job PRIMARY KEY,
 	Name nvarchar(250),
 	Salary int,
 	JobDecription text,
@@ -77,7 +77,7 @@ CREATE TABLE CV(
 )
 CREATE TABLE Resume(
 	CddID varchar(10) CONSTRAINT FK_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
-	JobID varchar(10) CONSTRAINT FK_Job FOREIGN KEY REFERENCES Jobs(ID),
+	JobID int CONSTRAINT FK_Job FOREIGN KEY REFERENCES Jobs(ID),
 	Objective text,
 	UniversityName nvarchar(100),
 	Major nvarchar(100),
@@ -145,29 +145,29 @@ VALUES ('E002', '22110139@student.hcmute.edu.vn', N'Hiếu', N'Nam', '0705488458
 
 -- Dữ liệu cho bảng Jobs
 -- Job 1
-INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
-VALUES ('J001', 'Software Engineer', 80000, 'Develop and maintain software applications.', 40, '3+ years in software development', '2024-05-01', 'Health insurance, 401k', 'Bachelor degree in Computer Science', '2024-03-26', 'E001');
+INSERT INTO Jobs (Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
+VALUES ('Software Engineer', 80000, 'Develop and maintain software applications.', 40, '3+ years in software development', '2024-05-01', 'Health insurance, 401k', 'Bachelor degree in Computer Science', '2024-03-26', 'E001');
 -- Job 2
-INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
-VALUES ('J002', 'Marketing Specialist', 60000, 'Plan and execute marketing campaigns.', 40, '2+ years in marketing field', '2024-04-15', 'Paid time off, Flexible hours', 'Bachelors degree in Marketing or related field', '2024-03-26', 'E001');
+INSERT INTO Jobs (Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
+VALUES ('Marketing Specialist', 60000, 'Plan and execute marketing campaigns.', 40, '2+ years in marketing field', '2024-04-15', 'Paid time off, Flexible hours', 'Bachelors degree in Marketing or related field', '2024-03-26', 'E001');
 -- Job 3
-INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
-VALUES ('J003', 'HR Manager', 70000, 'Oversee all aspects of human resources functions.', 40, '5+ years in HR management', '2024-04-30', 'Health insurance, Retirement plan', 'Bachelors degree in Human Resources or related field', '2024-03-26', 'E001');
-INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
-VALUES ('J004', 'Sale', 50000, 'Sale all products', 40, '1+ years in HR management', '2024-04-30', 'Health insurance, Retirement plan', 'Bachelors degree in Human Resources or related field', '2024-03-26', 'E002');
-INSERT INTO Jobs (ID, Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
-VALUES ('J005', 'Digital Marketing', 100000, 'Do something.', 40, '3+ years in HR management', '2024-04-30', 'Health insurance, Retirement plan', 'Bachelors degree in Human Resources or related field', '2024-03-26', 'E003');
+INSERT INTO Jobs (Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
+VALUES ('HR Manager', 70000, 'Oversee all aspects of human resources functions.', 40, '5+ years in HR management', '2024-04-30', 'Health insurance, Retirement plan', 'Bachelors degree in Human Resources or related field', '2024-03-26', 'E001');
+INSERT INTO Jobs (Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
+VALUES ('Sale', 50000, 'Sale all products', 40, '1+ years in HR management', '2024-04-30', 'Health insurance, Retirement plan', 'Bachelors degree in Human Resources or related field', '2024-03-26', 'E002');
+INSERT INTO Jobs (Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID)
+VALUES ('Digital Marketing', 100000, 'Do something.', 40, '3+ years in HR management', '2024-04-30', 'Health insurance, Retirement plan', 'Bachelors degree in Human Resources or related field', '2024-03-26', 'E003');
 
 -- Dữ liệu cho bảng Resume
 INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate, Status)
 VALUES 
-('CDD001', 'J001', N'Seeking a Software Engineer position to apply my skills in software development and contribute to the success of innovative projects at ABC Corporation.', N'Tech University', N'Computer Science', '3.7', '2018-09-01', '2022-06-01', N'Software Solutions Inc.', N'Hanoi, Vietnam', N'Developed scalable web applications using Python and Django framework.', '2022-07-01', '2023-12-31', N'AWS Certified Developer - Associate', '2024-01-15', 'Đang ứng tuyển');
+('CDD001', '1', N'Seeking a Software Engineer position to apply my skills in software development and contribute to the success of innovative projects at ABC Corporation.', N'Tech University', N'Computer Science', '3.7', '2018-09-01', '2022-06-01', N'Software Solutions Inc.', N'Hanoi, Vietnam', N'Developed scalable web applications using Python and Django framework.', '2022-07-01', '2023-12-31', N'AWS Certified Developer - Associate', '2024-01-15', 'Đang ứng tuyển');
 INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate, Status)
 VALUES 
-('CDD001', 'J002', N'Results-driven Marketing Specialist with a passion for creating impactful campaigns. Seeking to leverage my expertise in digital marketing at ABC Corporation.', N'Marketing Academy', N'Marketing Management', '3.8', '2017-08-01', '2021-05-01', N'Digital Marketing Agency', N'Cityville, USA', N'Led successful social media campaigns resulting in a 20% increase in user engagement.', '2021-06-15', '2023-03-31', N'HubSpot Content Marketing Certification', '2023-06-20', 'Đang ứng tuyển');
+('CDD001', '2', N'Results-driven Marketing Specialist with a passion for creating impactful campaigns. Seeking to leverage my expertise in digital marketing at ABC Corporation.', N'Marketing Academy', N'Marketing Management', '3.8', '2017-08-01', '2021-05-01', N'Digital Marketing Agency', N'Cityville, USA', N'Led successful social media campaigns resulting in a 20% increase in user engagement.', '2021-06-15', '2023-03-31', N'HubSpot Content Marketing Certification', '2023-06-20', 'Đang ứng tuyển');
 INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName, CertificationDate, Status)
 VALUES 
-('CDD001', 'J003', 'Experienced HR professional with a proven track record of managing diverse teams. Seeking a challenging role as an HR Manager at ABC Corporation.', 'University of HR Management', 'Human Resources', '3.9', '2015-09-01', '2019-06-01', 'HR Solutions Inc.', 'Hanoi, Vietnam', 'Managed recruitment processes and employee relations.', '2019-07-15', '2022-02-28', 'PHR Certification', '2023-05-10', 'Đang ứng tuyển');
+('CDD001', '3', 'Experienced HR professional with a proven track record of managing diverse teams. Seeking a challenging role as an HR Manager at ABC Corporation.', 'University of HR Management', 'Human Resources', '3.9', '2015-09-01', '2019-06-01', 'HR Solutions Inc.', 'Hanoi, Vietnam', 'Managed recruitment processes and employee relations.', '2019-07-15', '2022-02-28', 'PHR Certification', '2023-05-10', 'Đang ứng tuyển');
 
 SELECT * 
 FROM CV
