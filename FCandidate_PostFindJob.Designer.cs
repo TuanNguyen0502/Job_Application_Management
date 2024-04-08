@@ -44,7 +44,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(849, 57);
+            this.panel1.Size = new System.Drawing.Size(863, 57);
             this.panel1.TabIndex = 1;
             // 
             // label2
@@ -72,7 +72,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 57);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(849, 968);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(863, 998);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // uC_CoverLetter1
@@ -80,14 +80,15 @@
             this.uC_CoverLetter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.uC_CoverLetter1.Location = new System.Drawing.Point(3, 3);
             this.uC_CoverLetter1.Name = "uC_CoverLetter1";
-            this.uC_CoverLetter1.Size = new System.Drawing.Size(820, 966);
+            this.uC_CoverLetter1.Size = new System.Drawing.Size(834, 1044);
             this.uC_CoverLetter1.TabIndex = 0;
+            this.uC_CoverLetter1.Load += new System.EventHandler(this.uC_CoverLetter1_Load);
             // 
             // FCandidate_PostFindJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 1025);
+            this.ClientSize = new System.Drawing.Size(863, 1055);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "FCandidate_PostFindJob";

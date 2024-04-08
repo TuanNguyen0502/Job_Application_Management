@@ -203,7 +203,7 @@ namespace Job_Application_Management
         }
         private void btnPost_FindJob_Click(object sender, EventArgs e)
         {
-            FCandidate_PostFindJob findJob = new FCandidate_PostFindJob();
+            FCandidate_PostFindJob findJob = new FCandidate_PostFindJob(lblCddID.Text);
             findJob.ShowDialog();
         }
     }

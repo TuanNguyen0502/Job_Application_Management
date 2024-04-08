@@ -12,9 +12,38 @@ namespace Job_Application_Management
 {
     public partial class FCandidate_PostFindJob : Form
     {
+        private string cddId;
+        CandidateDAO canDAO = new CandidateDAO();
+        public FCandidate_PostFindJob(string cddId)
+        {
+            InitializeComponent();
+            this.cddId = cddId;
+            uC_CoverLetter1.ButtonPostJob += btnAddPostJob_Click;
+            uC_CoverLetter1.ButtonEditPostJob += btnEditPostJob_Click;
+            uC_CoverLetter1.ButtonRemovePostJob += btnRemovePostJob_Click;
+        }
         public FCandidate_PostFindJob()
         {
             InitializeComponent();
+        }
+
+        private void uC_CoverLetter1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddPostJob_Click(object sender, EventArgs args)
+        {
+            CandidateProfile canProfile = uC_CoverLetter1.GetCandidateProfileToCoverLetter();
+            canDAO.AddPostJob(canProfile, cddId);
+        }
+        private void btnEditPostJob_Click(object sender, EventArgs args)
+        {
+
+        }
+        private void btnRemovePostJob_Click(object sender, EventArgs args)
+        {
+
         }
     }
 }

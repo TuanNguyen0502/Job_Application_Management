@@ -57,7 +57,18 @@ namespace Job_Application_Management
             CddEmail=cddEmail;
             CddPhone=cddPhone;
         }
+        public CV (string cddID, string objective, string universityName, string major, string gpa, string companyName, string workPlace, string certificationName)
+        {
+            CddID=cddID;
+            this.objective=objective;
+            UniversityName=universityName;
+            Major=major;
+            Gpa=gpa;
+            this.companyName=companyName;
+            this.workPlace=workPlace;
+            this.certification=certificationName;
 
+        }
         public CV() { }
 
         public string CddID { get => cddID; set => cddID = value; }

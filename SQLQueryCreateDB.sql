@@ -174,3 +174,5 @@ FROM CV
 WHERE CddID = 'CDD001'
 SELECT * FROM Resume
 SELECT * FROM Jobs
+
+SELECT * FROM CandidateProfile

@@ -299,5 +299,32 @@ namespace Job_Application_Management
                 MessageBox.Show("CV be null. Check CV");
             }
         }
+        // Đăng tuyển bài viết tìm việc
+        public void AddPostJob(CandidateProfile canProfile, string cddid)
+        {
+
+            if (canProfile != null)
+            {
+                sqlQuery = "INSERT INTO CandidateProfile(CddID, Objective, UniversityName, Major, GPA, " +
+                       "CompanyName, WorkPlace,CertificationName)"+
+                       " VALUES(@CddID, @Objective, @UniversityName, @Major, @GPA, @CompanyName, @WorkPlace,  @CertificationName)";
+                SqlParameter[] lstParams =
+                    {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid},
+                new SqlParameter("@Objective", SqlDbType.Text) {Value = canProfile.Objective},
+                new SqlParameter("@UniversityName", SqlDbType.NVarChar) {Value = canProfile.UniversityName},
+                new SqlParameter("@Major", SqlDbType.NVarChar) {Value = canProfile.Major},
+                new SqlParameter("@GPA", SqlDbType.NVarChar) {Value = canProfile.Gpa},
+                new SqlParameter("@CompanyName", SqlDbType.NVarChar) {Value = canProfile.CompanyName},
+                new SqlParameter("@WorkPlace", SqlDbType.NVarChar) {Value = canProfile.WorkPlace},
+                new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = canProfile.Certification},
+                };
+                dbConn.ExecuteWriteData(sqlQuery, lstParams);
+            }
+            else
+            {
+                MessageBox.Show("Candidate Profile be null");
+            }
+        }
     }
 }
