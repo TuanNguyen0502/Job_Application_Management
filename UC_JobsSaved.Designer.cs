@@ -137,12 +137,10 @@
             // 
             // lblAddress
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Image = global::Job_Application_Management.Properties.Resources.icons8_location_16__1_;
             this.lblAddress.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblAddress.Location = new System.Drawing.Point(174, 172);
+            this.lblAddress.Location = new System.Drawing.Point(163, 158);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(81, 16);
+            this.lblAddress.Size = new System.Drawing.Size(116, 48);
             this.lblAddress.TabIndex = 9;
             this.lblAddress.Text = "       Địa điểm";
             // 
@@ -150,7 +148,7 @@
             // 
             this.lblTimeUpdate.AutoSize = true;
             this.lblTimeUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTimeUpdate.Location = new System.Drawing.Point(264, 172);
+            this.lblTimeUpdate.Location = new System.Drawing.Point(285, 158);
             this.lblTimeUpdate.Name = "lblTimeUpdate";
             this.lblTimeUpdate.Size = new System.Drawing.Size(117, 16);
             this.lblTimeUpdate.TabIndex = 10;

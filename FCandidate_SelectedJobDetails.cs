@@ -153,7 +153,7 @@ namespace Job_Application_Management
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            canDAO.SaveAppliedJob(jobid);
+            canDAO.AddAppliedJob(jobid);
             //
             canDAO.SaveResumeToDatabase(cddid, jobid);
         }

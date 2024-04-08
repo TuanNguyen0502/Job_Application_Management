@@ -96,7 +96,7 @@
             // 
             this.lblTimeUpdate.AutoSize = true;
             this.lblTimeUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTimeUpdate.Location = new System.Drawing.Point(264, 172);
+            this.lblTimeUpdate.Location = new System.Drawing.Point(286, 159);
             this.lblTimeUpdate.Name = "lblTimeUpdate";
             this.lblTimeUpdate.Size = new System.Drawing.Size(117, 16);
             this.lblTimeUpdate.TabIndex = 10;
@@ -104,12 +104,10 @@
             // 
             // lblAddress
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Image = global::Job_Application_Management.Properties.Resources.icons8_location_16__1_;
             this.lblAddress.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblAddress.Location = new System.Drawing.Point(174, 172);
+            this.lblAddress.Location = new System.Drawing.Point(163, 159);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(81, 16);
+            this.lblAddress.Size = new System.Drawing.Size(117, 46);
             this.lblAddress.TabIndex = 9;
             this.lblAddress.Text = "       Địa điểm";
             // 
@@ -156,6 +154,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "UC_AppliedJobs";
             this.Size = new System.Drawing.Size(780, 205);
+            this.Load += new System.EventHandler(this.UC_AppliedJobs_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

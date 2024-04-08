@@ -43,6 +43,10 @@ namespace Job_Application_Management
         {
             get { return textBox_School; }
         }
+        public ComponentFactory.Krypton.Toolkit.KryptonTextBox TextBox_Gpa
+        {
+            get { return kryptonTextBox_Gpa; }
+        }
         public System.Windows.Forms.Label Label1
         {
             get { return label1; }

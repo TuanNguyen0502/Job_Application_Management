@@ -30,7 +30,7 @@ namespace Job_Application_Management
         public string ComName 
         { 
             get => comName; 
-            set { comName = value; lblComName.Text = value; } 
+            set { comName = value; lblComName.Text = $"        {value}"; } 
         }
         public DateTime TimeSaved 
         {   
@@ -45,7 +45,7 @@ namespace Job_Application_Management
         public int Salary 
         { 
             get => salary;
-            set { salary = value; lblComName.Text = $"       { value.ToString()}"; }
+            set { salary = value; lblSalary.Text = value.ToString(); }
         }
         public Image Icon 
         { 

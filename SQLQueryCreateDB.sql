@@ -58,6 +58,23 @@ CREATE TABLE Certification(
 	Name nvarchar(100) PRIMARY KEY,
 	CertificationDate date
 )
+CREATE TABLE CV(
+	ID int IDENTITY PRIMARY KEY,
+	CddID varchar(10) CONSTRAINT FK_CV_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
+	Objective text,
+	UniversityName nvarchar(100),
+	Major nvarchar(100),
+	GPA nvarchar(100),
+	UniversityStartDate date,
+	UniversityEndDate date,
+	CompanyName nvarchar(100),
+	WorkPlace nvarchar(100),
+	Detail text,
+	CompanyStartDate date,
+	CompanyEndDate date,
+	CertificationName nvarchar(100),
+	CertificationDate date,
+)
 CREATE TABLE Resume(
 	CddID varchar(10) CONSTRAINT FK_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
 	JobID varchar(10) CONSTRAINT FK_Job FOREIGN KEY REFERENCES Jobs(ID),
@@ -152,12 +169,4 @@ INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, Univers
 VALUES 
 ('CDD001', 'J003', 'Experienced HR professional with a proven track record of managing diverse teams. Seeking a challenging role as an HR Manager at ABC Corporation.', 'University of HR Management', 'Human Resources', '3.9', '2015-09-01', '2019-06-01', 'HR Solutions Inc.', 'Hanoi, Vietnam', 'Managed recruitment processes and employee relations.', '2019-07-15', '2022-02-28', 'PHR Certification', '2023-05-10', 'Đang ứng tuyển');
 
-SELECT * FROM Resume
-
-SELECT * FROM SavedJobs
-DELETE SavedJobs 
-WHERE ID = 1
-
-SELECT * FROM AppliedJobs
-DELETE AppliedJobs 
-WHERE ID = 1
+SELECT * FROM CV

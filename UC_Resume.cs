@@ -77,6 +77,7 @@ namespace Job_Application_Management
             myCV.CddEmail = textBox_Email.Text;
             myCV.Objective = richTextBox_CareerObjective.Text;
             myCV.Major = uC_Resume_Education1.TextBox_Major.Text;
+            myCV.Gpa = "8.0";
             myCV.UniversityName = uC_Resume_Education1.TextBox_School.Text;
             myCV.UniversityStartDate = uC_Resume_Education1.DateTimePicker_Start.Value;
             myCV.UniversityEndDate = uC_Resume_Education1.DateTimePicker_End.Value;
