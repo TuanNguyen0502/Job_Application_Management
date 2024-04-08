@@ -202,45 +202,32 @@ namespace Job_Application_Management
             };
             return dbConn.ExecuteReaderData(sqlQuery, lstParam);
         }
-        public void SaveAvailableCV(string cddid)
+        /*public void SaveAvailableCV(string cddid)
         {
             CV cv = resume.GetInfoResumeAtForm();
-            if (cv != null)
-            {
-                sqlQuery = "INSERT INTO CV(CddID, Objective, UniversityName, Major, GPA, UniversityStartDate"+
-                       ", UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName,"+ "CertificationDate)"+
-                       "VALUES(@CddID, @Objective, @UniversityName, @Major, @GPA, @UniversityStartDate, @UniversityEndDate, @CompanyName, @WorkPlace, @Detail, @CompanyStartDate, @CompanyEndDate, @CertificationName, @CertificationDate)";
-                SqlParameter[] lstParams =
-                    {
-                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid},
-                new SqlParameter("@Objective", SqlDbType.Text) {Value = cv.Objective},
-                new SqlParameter("@UniversityName", SqlDbType.NVarChar) {Value = cv.UniversityName},
-                new SqlParameter("@Major", SqlDbType.NVarChar) {Value = cv.Major},
-                new SqlParameter("@GPA", SqlDbType.NVarChar) {Value = cv.Gpa},
-                new SqlParameter("@UniversityStartDate", SqlDbType.Date) {Value = cv.UniversityStartDate},
-                new SqlParameter("@UniversityEndDate", SqlDbType.Date) {Value = cv.UniversityEndDate},
-                new SqlParameter("@CompanyName", SqlDbType.NVarChar) {Value = cv.CompanyName},
-                new SqlParameter("@WorkPlace", SqlDbType.NVarChar) {Value = cv.WorkPlace},
-                new SqlParameter("@Detail", SqlDbType.Text) {Value = cv.WorkedDetail},
-                new SqlParameter("@CompanyStartDate", SqlDbType.Date) {Value = cv.CompanyStartDate},
-                new SqlParameter("@CompanyEndDate", SqlDbType.Date) {Value = cv.CompanyEndDate},
-                new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = cv.Certification},
-                new SqlParameter("@CertificationDate", SqlDbType.Date) {Value = cv.CertificationDate},
-                };
-                MessageBox.Show(""+cddid+ cv.Objective+ cv.UniversityName+ cv.Major+ cv.Gpa+ cv.UniversityStartDate+ cv.UniversityEndDate+ cv.CompanyName+ cv.WorkPlace+ cv.WorkedDetail+ cv.CompanyStartDate+ cv.CompanyEndDate+ cv.Certification+ cv.CertificationDate);
-                dbConn.ExecuteWriteData(sqlQuery, lstParams);
-            }
-            else
-            {
-                MessageBox.Show("CV be bull");
-            }
+            Dictionary<string, object> dict = new Dictionary<string, object>();
+            dict["CddID"] = cddid;
+            dict["Objective"] = cv.Objective;
+            dict["UniversityName"] = cv.UniversityName;
+            dict["Major"] = cv.Major;
+            dict["GPA"] = cv.Gpa;
+            dict["UniversityStartDate"] = cv.UniversityStartDate;
+            dict["UniversityEndDate"] = cv.UniversityEndDate;
+            dict["WorkPlace"] = cv.WorkPlace;
+            dict["Detail"] = cv.WorkedDetail;
+            dict["CompanyStartDate"] = cv.CompanyStartDate;
+            dict["CompanyEndDate"] = cv.CompanyEndDate;
+            dict["CertificationName"] = cv.Certification;
+            dict["CertificationDate"] = cv.CertificationDate;
+            dict["Status"] = cv.Status;
+            foreach (var kvp in dict)
+                MessageBox.Show($"Key: {kvp.Key} Value: {kvp.Value}");
+            listCVs.Add(dict);
         }
 
-        public CV GetAvailableCVByCandidateID(string cddid)
+        /*public CV GetAvailableCVByCandidateID(string cddid)
         {
             foreach (Dictionary<string, object> item in listCVs)
-            {
-                MessageBox.Show("This is GetAvailableCVByCandidateID function: "+(string)item["CddID"] + "/" + cddid);
                 if ((string)item["CddID"] == cddid)
                 {
                     CV cv = new CV();
@@ -268,36 +255,8 @@ namespace Job_Application_Management
             }
             return null;
         }
-        public void SaveResumeToDatabase(string CddID, string JobID)
+        public void SaveResumeToDatabase(CV cv, string CddID, string JobID)
         {
-            CV cv = new CV();
-            MessageBox.Show(listCVs.Count.ToString());
-            foreach (Dictionary<string, object> item in listCVs)
-            {
-                MessageBox.Show("This is GetAvailableCVByCandidateID function: "+(string)item["CddID"] + "/" + CddID);
-                if ((string)item["CddID"] == CddID)
-                {
-                    cv.CddID = CddID;
-                    cv.Objective = (string)item["Objective"];
-                    cv.UniversityName = (string)item["UniversityName"];
-                    cv.Major = (string)item["Major"];
-                    cv.Gpa = (string)item["GPA"];
-                    cv.UniversityStartDate = (DateTime)item["UniversityStartDate"];
-                    cv.UniversityEndDate = (DateTime)item["UniversityEndDate"];
-                    cv.CompanyName = (string)item["CompanyName"];
-                    cv.CompanyStartDate = (DateTime)item["CompanyStartDate"];
-                    cv.CompanyEndDate = (DateTime)item["CompanyEndDate"];
-                    cv.WorkPlace = (string)item["WorkPlace"];
-                    cv.WorkedDetail = (string)item["Detail"];
-                    cv.Certification = (string)item["CertificationName"];
-                    cv.CertificationDate = (DateTime)item["CertificationDate"];
-                    cv.Status = (string)item["Status"];
-                    foreach (var kvp in item)
-                    {
-                        MessageBox.Show($"Key: {kvp.Key} Value: {kvp.Value}");
-                    }
-                }
-            }
             if (cv != null)
             {
                 sqlQuery = "INSERT INTO Resume (CddID, JobID, Objective, UniversityName, Major, GPA, UniversityStartDate, UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, " +
@@ -326,7 +285,7 @@ namespace Job_Application_Management
             else
             {
                 MessageBox.Show("CV be null. Check CV");
-            }
+            }*/
         }
     }
 }

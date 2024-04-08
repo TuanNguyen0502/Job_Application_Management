@@ -89,7 +89,7 @@ namespace Job_Application_Management
             myCV.Certification = uC_Resume_Certificate1.TextBox_CertificateName.Text;
             myCV.TimeCertificate = uC_Resume_Certificate1.DateTimePicker_Start.Value;
             myCV.Status = kryptonTextBox_Status.Text;
-            MessageBox.Show("Get info resume successful");
+            MessageBox.Show("Get info resume successful. "+myCV.Objective);
             return myCV;
         }
 
