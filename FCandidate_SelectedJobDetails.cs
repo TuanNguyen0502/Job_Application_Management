@@ -155,7 +155,8 @@ namespace Job_Application_Management
         {
             canDAO.AddAppliedJob(jobid);
             //
-            canDAO.SaveResumeToDatabase(cddid, jobid);
+            CV cv = canDAO.GetAvailableCVByCandidateID(cddid);
+            canDAO.SaveResumeToDatabase(cv, jobid);
         }
 
         private void btnSaved_Click(object sender, EventArgs e)
