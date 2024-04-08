@@ -84,6 +84,12 @@
     <Compile Include="FCandidate_AppliedJobs.Designer.cs">
       <DependentUpon>FCandidate_AppliedJobs.cs</DependentUpon>
     </Compile>
+    <Compile Include="FCandidate_PostFindJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCandidate_PostFindJob.Designer.cs">
+      <DependentUpon>FCandidate_PostFindJob.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCandidate_SavedJobs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     <EmbeddedResource Include="FCandidate_AppliedJobs.resx">
       <DependentUpon>FCandidate_AppliedJobs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FCandidate_PostFindJob.resx">
+      <DependentUpon>FCandidate_PostFindJob.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCandidate_SavedJobs.resx">
       <DependentUpon>FCandidate_SavedJobs.cs</DependentUpon>
     </EmbeddedResource>
@@ -333,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_CandidateMain.resx">
       <DependentUpon>UC_CandidateMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CandidateProfile.resx">
+      <DependentUpon>UC_CandidateProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_RecruitmentCompany.resx">
       <DependentUpon>UC_RecruitmentCompany.cs</DependentUpon>
@@ -688,6 +700,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\recruiters-company-are-looking-employees-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-job-seeker-40.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

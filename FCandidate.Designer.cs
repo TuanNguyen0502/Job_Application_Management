@@ -42,7 +42,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonPalette2 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPost_FindJob = new System.Windows.Forms.Button();
+            this.btnDetailsCV = new System.Windows.Forms.Button();
             this.btnRegisterCV = new System.Windows.Forms.Button();
             this.btnSearchJob = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -172,6 +173,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lblCddID);
             this.panel2.Controls.Add(this.label1);
@@ -230,7 +232,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(141)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnPost_FindJob);
+            this.panel1.Controls.Add(this.btnDetailsCV);
             this.panel1.Controls.Add(this.btnRegisterCV);
             this.panel1.Controls.Add(this.btnSearchJob);
             this.panel1.Controls.Add(this.label6);
@@ -239,26 +242,44 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(213, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1109, 102);
+            this.panel1.Size = new System.Drawing.Size(1301, 102);
             this.panel1.TabIndex = 3;
             // 
-            // button1
+            // btnPost_FindJob
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Job_Application_Management.Properties.Resources.cv_icon1;
-            this.button1.Location = new System.Drawing.Point(623, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 70);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Xem chi tiết CV";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPost_FindJob.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPost_FindJob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnPost_FindJob.FlatAppearance.BorderSize = 0;
+            this.btnPost_FindJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPost_FindJob.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPost_FindJob.ForeColor = System.Drawing.Color.White;
+            this.btnPost_FindJob.Image = global::Job_Application_Management.Properties.Resources.icons8_job_seeker_40;
+            this.btnPost_FindJob.Location = new System.Drawing.Point(632, 13);
+            this.btnPost_FindJob.Name = "btnPost_FindJob";
+            this.btnPost_FindJob.Size = new System.Drawing.Size(208, 70);
+            this.btnPost_FindJob.TabIndex = 23;
+            this.btnPost_FindJob.Text = "Tạo Post tìm việc";
+            this.btnPost_FindJob.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPost_FindJob.UseVisualStyleBackColor = false;
+            this.btnPost_FindJob.Click += new System.EventHandler(this.btnPost_FindJob_Click);
+            // 
+            // btnDetailsCV
+            // 
+            this.btnDetailsCV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDetailsCV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnDetailsCV.FlatAppearance.BorderSize = 0;
+            this.btnDetailsCV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetailsCV.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetailsCV.ForeColor = System.Drawing.Color.White;
+            this.btnDetailsCV.Image = global::Job_Application_Management.Properties.Resources.cv_icon1;
+            this.btnDetailsCV.Location = new System.Drawing.Point(856, 14);
+            this.btnDetailsCV.Name = "btnDetailsCV";
+            this.btnDetailsCV.Size = new System.Drawing.Size(208, 70);
+            this.btnDetailsCV.TabIndex = 22;
+            this.btnDetailsCV.Text = "Xem chi tiết CV";
+            this.btnDetailsCV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDetailsCV.UseVisualStyleBackColor = false;
+            this.btnDetailsCV.Click += new System.EventHandler(this.btnDetailsCV_Click);
             // 
             // btnRegisterCV
             // 
@@ -269,7 +290,7 @@
             this.btnRegisterCV.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisterCV.ForeColor = System.Drawing.Color.White;
             this.btnRegisterCV.Image = global::Job_Application_Management.Properties.Resources.icons8_cv_40;
-            this.btnRegisterCV.Location = new System.Drawing.Point(848, 17);
+            this.btnRegisterCV.Location = new System.Drawing.Point(1081, 15);
             this.btnRegisterCV.Name = "btnRegisterCV";
             this.btnRegisterCV.Size = new System.Drawing.Size(208, 70);
             this.btnRegisterCV.TabIndex = 21;
@@ -407,7 +428,7 @@
             this.flpScrollPane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpScrollPane.Location = new System.Drawing.Point(213, 102);
             this.flpScrollPane.Name = "flpScrollPane";
-            this.flpScrollPane.Size = new System.Drawing.Size(1109, 652);
+            this.flpScrollPane.Size = new System.Drawing.Size(1301, 652);
             this.flpScrollPane.TabIndex = 4;
             // 
             // FCandidate
@@ -415,7 +436,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(1322, 754);
+            this.ClientSize = new System.Drawing.Size(1514, 754);
             this.Controls.Add(this.flpScrollPane);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlNav);
@@ -468,6 +489,7 @@
         private System.Windows.Forms.ComboBox cbbAddress;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnRegisterCV;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDetailsCV;
+        private System.Windows.Forms.Button btnPost_FindJob;
     }
 }

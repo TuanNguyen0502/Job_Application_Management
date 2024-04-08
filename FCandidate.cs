@@ -196,12 +196,15 @@ namespace Job_Application_Management
             FCandidate_CreateCV createCV = new FCandidate_CreateCV(lblCddID.Text);
             createCV.ShowDialog();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDetailsCV_Click(object sender, EventArgs e)
         {
             FResume resume = new FResume();
-            resume.ShowDialog(); 
-
+            resume.ShowDialog();
+        }
+        private void btnPost_FindJob_Click(object sender, EventArgs e)
+        {
+            FCandidate_PostFindJob findJob = new FCandidate_PostFindJob();
+            findJob.ShowDialog();
         }
     }
 }
