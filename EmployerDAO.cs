@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -216,6 +217,39 @@ namespace Job_Application_Management
             string sqlStr = string.Format($"DELETE FROM Jobs WHERE ID = '{jobID}'");
 
             Execute(sqlStr);
+        }
+
+        public Job GetJobFromDB(int jobID)
+        {
+            Job job = new Job();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sqlQuery = $"SELECT ID, Name, Salary, JobDecription, Workduration, Experience, ExpirationDate, Benefit, RequestCdd, " +
+                    $"PostTime FROM Jobs WHERE ID = '{jobID}'";
+                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        job.Id = Convert.ToInt32(reader["ID"]);
+                        job.Name = reader.GetString(1);
+                        job.Salary = reader.GetString(2);
+                        job.JobDescription = reader.GetString(3);
+                        job.WorkDuration = reader.GetString(4);
+                        job.Experience = reader.GetString(5);
+                        job.Deadline = reader.GetDateTime(6);
+                        job.Benefit = reader.GetString(7);
+                        job.Request = reader.GetString(8);
+                        job.PostTime = reader.GetDateTime(9);
+                    }
+                }
+                else
+                    MessageBox.Show("No rows found");
+
+                return job;
+            }
         }
 
         public List<UC_EmployerJob> GetJobsFromDB(string empID)
