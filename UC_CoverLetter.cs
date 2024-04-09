@@ -29,6 +29,45 @@ namespace Job_Application_Management
         {
             InitializeComponent();
         }
+        public bool CheckNullAtCoverLetter()
+        {
+            if (string.IsNullOrEmpty(ktxt_CarrerGoal.Text))
+            {
+                MessageBox.Show("Mục tiêu nghề nghiệp bị rỗng. Cần nhập");
+                return false;
+            }
+            if (string.IsNullOrEmpty(ktxt_UName.Text))
+            {
+                MessageBox.Show("Trường đại học bị rỗng. Cần nhập");
+                return false;
+            }
+            if (string.IsNullOrEmpty(ktxt_Major.Text))
+            {
+                MessageBox.Show("Chuyên ngành bị rỗng. Cần nhập");
+                return false;
+            }
+            if (string.IsNullOrEmpty(ktxt_Gpa.Text))
+            {
+                MessageBox.Show("GPA bị rỗng. Cần nhập");
+                return false;
+            }
+            if (string.IsNullOrEmpty(ktxt_ComName.Text))
+            {
+                MessageBox.Show("Công ty bị rỗng. Cần nhập");
+                return false;
+            }
+            if (string.IsNullOrEmpty(ktxt_Nominee.Text))
+            {
+                MessageBox.Show("Vị trí ứng tuyển bị rỗng. Cần nhập");
+                return false;
+            }
+            if (string.IsNullOrEmpty(ktxt_Certification.Text))
+            {
+                MessageBox.Show("Chứng chỉ bị rỗng. Cần nhập");
+                return false;
+            }
+            return true;
+        }
         public CandidateProfile GetCandidateProfileToCoverLetter()
         {
             CandidateProfile canProfile = new CandidateProfile();

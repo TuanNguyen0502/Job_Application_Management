@@ -9,9 +9,12 @@ namespace Job_Application_Management
     public class ButtonClickEventArgs : EventArgs
     {
         public string ID { get; }
-        public ButtonClickEventArgs(string text)
+        public int JobID { get; }
+        public ButtonClickEventArgs(string text, int jobid)
         {
             ID = text;
+            JobID = jobid;
         }
+        
     }
 }
