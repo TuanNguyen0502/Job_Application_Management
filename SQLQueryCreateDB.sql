@@ -91,19 +91,20 @@ CREATE TABLE Resume(
 	CompanyEndDate date,
 	CertificationName nvarchar(100),
 	CertificationDate date,
-	Status nvarchar(100) default N'Đang ứng tuyển',
+	Status nvarchar(100) default N'Applying',
 	CONSTRAINT PK_AD PRIMARY KEY (CddID, JobID)
 )
 CREATE TABLE CandidateProfile(
-	CddID varchar(10) CONSTRAINT FK_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
+	CddID varchar(10) CONSTRAINT FK_Profile_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
+	WorkPlace nvarchar(100),
 	Objective text,
 	UniversityName nvarchar(100),
 	Major nvarchar(100),
 	GPA nvarchar(100),
 	CompanyName nvarchar(100),
-	WorkPlace nvarchar(100),
 	CertificationName nvarchar(100),
-	CONSTRAINT PK_Profile PRIMARY KEY (CddID)
+	PostTime date,
+	CONSTRAINT PK_Profile PRIMARY KEY (CddID, WorkPlace)
 )
 	 
 -- Tạo bảng Saved Jobs
@@ -176,3 +177,4 @@ SELECT * FROM Resume
 SELECT * FROM Jobs
 
 SELECT * FROM CandidateProfile
+SELECT * FROM Jobs

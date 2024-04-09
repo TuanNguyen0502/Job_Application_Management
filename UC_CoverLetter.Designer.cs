@@ -266,10 +266,10 @@
             // 
             // ktxt_JobApp
             // 
-            this.ktxt_JobApp.Location = new System.Drawing.Point(215, 83);
+            this.ktxt_JobApp.Location = new System.Drawing.Point(173, 83);
             this.ktxt_JobApp.Multiline = true;
             this.ktxt_JobApp.Name = "ktxt_JobApp";
-            this.ktxt_JobApp.Size = new System.Drawing.Size(466, 44);
+            this.ktxt_JobApp.Size = new System.Drawing.Size(553, 44);
             this.ktxt_JobApp.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -280,10 +280,10 @@
             // 
             // ktxt_FullName
             // 
-            this.ktxt_FullName.Location = new System.Drawing.Point(215, 18);
+            this.ktxt_FullName.Location = new System.Drawing.Point(173, 18);
             this.ktxt_FullName.Multiline = true;
             this.ktxt_FullName.Name = "ktxt_FullName";
-            this.ktxt_FullName.Size = new System.Drawing.Size(200, 49);
+            this.ktxt_FullName.Size = new System.Drawing.Size(342, 49);
             this.ktxt_FullName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
