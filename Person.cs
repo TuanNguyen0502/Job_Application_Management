@@ -28,25 +28,26 @@ namespace Job_Application_Management
         public Person()
         { }
 
-        public bool CheckSex()
+        public bool CheckGender()
         {
-            if (sex == null)
+            if (sex == null || sex == "")
             {
                 MessageBox.Show("Gender cannot be null !");
                 return false;
             }
-            sex = sex.ToLower();
-            if (sex != "nam" || sex != "nữ" || sex != "male" || sex != "female")
-            {
-                MessageBox.Show("Gender is not correct !");
-                return false;
-            }
+
+            //if (sex != "Nam" || sex != "Nữ" || sex != "Male" || sex != "Female")
+            //{
+            //    MessageBox.Show("Gender is not correct !");
+            //    MessageBox.Show(sex);
+            //    return false;
+            //}
             return true;
         }
 
         public bool CheckPhone()
         {
-            if (phone == null)
+            if (phone == null || phone == "")
             {
                 MessageBox.Show("Phone number cannot be null !");
                 return false;
@@ -61,13 +62,13 @@ namespace Job_Application_Management
                 if (phone.Length == 12)
                     return true;
             }
-            MessageBox.Show("Phone number is not in correct form !");
+            MessageBox.Show("Phone number is not in correct format !");
             return false;
         }
 
         public bool CheckEmail()
         {
-            if (this.email == null)
+            if (this.email == null || email == "")
             {
                 MessageBox.Show("Email cannot be null !");
                 return false;
@@ -96,7 +97,7 @@ namespace Job_Application_Management
 
         public bool CheckName()
         {
-            if (this.name == null)
+            if (this.name == null || name == "")
             {
                 MessageBox.Show("Name cannot be null !");
                 return false;

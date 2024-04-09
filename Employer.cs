@@ -21,9 +21,20 @@ namespace Job_Application_Management
         public Employer()
         { }
 
+        public bool CheckAllCondition()
+        {
+            if (CheckName() && CheckEmail() && CheckPhone() && CheckGender() && CheckWorkplace() && CheckWorkplace() && CheckCompanyName())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public bool CheckCompanyName()
         {
-            if (this.companyName == null)
+            if (this.companyName == null || companyName == "")
             {
                 MessageBox.Show("Company cannot be null !");
                 return false;
@@ -33,7 +44,7 @@ namespace Job_Application_Management
 
         public bool CheckWorkplace()
         {
-            if (this.Workplace == null)
+            if (this.Workplace == null || Workplace == "")
             {
                 MessageBox.Show("Workplace cannot be null !");
                 return false;
