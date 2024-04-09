@@ -22,7 +22,7 @@ namespace Job_Application_Management
             canProfile.Objective = ktxt_CarrerGoal.Text;
             canProfile.UniversityName = ktxt_UName.Text;
             canProfile.Major = ktxt_Major.Text;
-            canProfile.Gpa = ktxt_Major.Text;
+            canProfile.Gpa = ktxt_Gpa.Text;
             canProfile.CompanyName = ktxt_ComName.Text;
             canProfile.WorkPlace = ktxt_Nominee.Text;
             canProfile.Certification = ktxt_Certification.Text;

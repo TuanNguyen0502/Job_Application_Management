@@ -35,15 +35,17 @@ namespace Job_Application_Management
         private void btnAddPostJob_Click(object sender, EventArgs args)
         {
             CandidateProfile canProfile = uC_CoverLetter1.GetCandidateProfileToCoverLetter();
-            canDAO.AddPostJob(canProfile, cddId);
+            canDAO.AddJobPosting(canProfile, cddId);
         }
         private void btnEditPostJob_Click(object sender, EventArgs args)
         {
-
+            CandidateProfile canProfile = uC_CoverLetter1.GetCandidateProfileToCoverLetter();
+            canDAO.EditJobPosting(canProfile, cddId);
         }
         private void btnRemovePostJob_Click(object sender, EventArgs args)
         {
-
+            CandidateProfile canProfile = uC_CoverLetter1.GetCandidateProfileToCoverLetter();
+            canDAO.RemoveJobPosting(canProfile.WorkPlace, cddId);
         }
     }
 }

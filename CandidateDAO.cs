@@ -300,14 +300,14 @@ namespace Job_Application_Management
             }
         }
         // Đăng tuyển bài viết tìm việc
-        public void AddPostJob(CandidateProfile canProfile, string cddid)
+        public void AddJobPosting(CandidateProfile canProfile, string cddid)
         {
 
             if (canProfile != null)
             {
-                sqlQuery = "INSERT INTO CandidateProfile(CddID, Objective, UniversityName, Major, GPA, " +
-                       "CompanyName, WorkPlace,CertificationName)"+
-                       " VALUES(@CddID, @Objective, @UniversityName, @Major, @GPA, @CompanyName, @WorkPlace,  @CertificationName)";
+                sqlQuery = "INSERT INTO CandidateProfile(CddID, WorkPlace, Objective, UniversityName, Major, GPA, " +
+                       "CompanyName,CertificationName)"+
+                       " VALUES(@CddID, @WorkPlace, @Objective, @UniversityName, @Major, @GPA, @CompanyName,  @CertificationName)";
                 SqlParameter[] lstParams =
                     {
                 new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid},
@@ -325,6 +325,37 @@ namespace Job_Application_Management
             {
                 MessageBox.Show("Candidate Profile be null");
             }
+        }
+        // Sửa bài viết tìm việc
+        public void EditJobPosting(CandidateProfile canProfile, string cddid)
+        {
+            sqlQuery = "UPDATE CandidateProfile"
+                      +" SET Objective = @Objective, UniversityName = @UniversityName, Major = @Major, GPA = @GPA, CompanyName = @CompanyName, CertificationName = @CertificationName, PostTime = @PostTime"
+                      +" WHERE CddID = @CddID AND WorkPlace = @WorkPlace";
+            SqlParameter[] lstParams =
+                    {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid},
+                new SqlParameter("@Objective", SqlDbType.Text) {Value = canProfile.Objective},
+                new SqlParameter("@UniversityName", SqlDbType.NVarChar) {Value = canProfile.UniversityName},
+                new SqlParameter("@Major", SqlDbType.NVarChar) {Value = canProfile.Major},
+                new SqlParameter("@GPA", SqlDbType.NVarChar) {Value = canProfile.Gpa},
+                new SqlParameter("@CompanyName", SqlDbType.NVarChar) {Value = canProfile.CompanyName},
+                new SqlParameter("@WorkPlace", SqlDbType.NVarChar) {Value = canProfile.WorkPlace},
+                new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = canProfile.Certification},
+                new SqlParameter("PostTime", SqlDbType.Date) {Value = DateTime.Now},
+                };
+            dbConn.ExecuteWriteData(sqlQuery, lstParams);
+        }
+        // Xóa bài viết tìm việc
+        public void RemoveJobPosting(string WorkPlace, string CddID)
+        {
+            sqlQuery = "DELETE CandidatePrpfile WHERE CddID = @CddID AND WorkPlace = @WorkPlace";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = CddID},
+                new SqlParameter("@WorkPlace", SqlDbType.NVarChar) {Value = WorkPlace},
+            };
+            dbConn.ExecuteDeleteData(sqlQuery, lstParams);
         }
     }
 }
