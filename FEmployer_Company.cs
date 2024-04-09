@@ -43,7 +43,10 @@ namespace Job_Application_Management
         private void button_Save_Click(object sender, EventArgs e)
         {
             UpdateCompany();
-            employerDAO.UpdateCompanyInfor(company);
+            if (company.CheckAllCondition())
+            {
+                employerDAO.UpdateCompanyInfor(company);
+            }
             LoadInfor();
         }
 
