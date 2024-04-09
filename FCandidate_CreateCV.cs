@@ -30,7 +30,7 @@ namespace Job_Application_Management
         }
         private void btnCreateCV_Click(object sender, EventArgs e)
         {
-            //canDAO.SaveAvailableCV(cddid);
+            canDAO.SaveAvailableCV(cddid);
         }
         
         private void uc_AtFormCreateCV_Load(object sender, EventArgs e)

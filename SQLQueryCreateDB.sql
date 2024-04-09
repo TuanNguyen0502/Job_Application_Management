@@ -91,7 +91,7 @@ CREATE TABLE Resume(
 	CompanyEndDate date,
 	CertificationName nvarchar(100),
 	CertificationDate date,
-	Status nvarchar(100) default N'Đang ứng tuyển',
+	Status nvarchar(100) default N'Applying',
 	CONSTRAINT PK_AD PRIMARY KEY (CddID, JobID)
 )
 CREATE TABLE CandidateProfile(
@@ -178,6 +178,3 @@ SELECT * FROM Jobs
 
 SELECT * FROM CandidateProfile
 SELECT * FROM Jobs
-
-SELECT * FROM SavedJobs
-SELECT * FROM AppliedJobs

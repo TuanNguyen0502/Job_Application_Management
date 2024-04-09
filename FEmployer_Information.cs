@@ -71,7 +71,7 @@ namespace Job_Application_Management
             employer.Name = textBox_Name.Text;
             employer.Phone = textBox_PhoneNumber.Text;
             employer.Sex = sex;
-            employer.Workplace = comboBox_Workplace.SelectedText;
+            employer.Workplace = comboBox_Workplace.SelectedItem.ToString();
         }
 
         private void button_Company_Click(object sender, EventArgs e)

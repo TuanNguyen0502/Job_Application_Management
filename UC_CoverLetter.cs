@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,18 @@ namespace Job_Application_Management
 {
     public partial class UC_CoverLetter : UserControl
     {
+        private string cddID;
+        public KryptonTextBox textBox_Name { get => ktxt_FullName; set => ktxt_FullName = value; }
+        public KryptonTextBox textBox_Job { get => ktxt_JobApp; set => ktxt_JobApp = value; }
+        public KryptonTextBox textBox_Objective { get => ktxt_CarrerGoal; set => ktxt_CarrerGoal = value; }
+        public KryptonTextBox textBox_University { get => ktxt_UName; set => ktxt_UName = value; }
+        public KryptonTextBox textBox_Major { get => ktxt_Major; set => ktxt_Major = value; }
+        public KryptonTextBox textBox_GPA { get => ktxt_Gpa; set => ktxt_Gpa = value; }
+        public KryptonTextBox textBox_Company { get => ktxt_ComName; set => ktxt_ComName = value; }
+        public KryptonTextBox textBox_Workplace { get => ktxt_Nominee; set => ktxt_Nominee = value; }
+        public KryptonTextBox textBox_Certification { get => ktxt_Certification; set => ktxt_Certification = value; }
+        public string CddID { get => cddID; set => cddID = value; }
+
         public UC_CoverLetter()
         {
             InitializeComponent();

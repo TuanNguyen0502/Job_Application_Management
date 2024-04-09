@@ -33,6 +33,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -47,6 +48,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "FEmployer_FindCandidate";
             this.Text = "FEmployer_FindCandidate";
+            this.Load += new System.EventHandler(this.FEmployer_FindCandidate_Load);
             this.ResumeLayout(false);
 
         }
