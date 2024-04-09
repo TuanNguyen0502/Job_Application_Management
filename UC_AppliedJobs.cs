@@ -80,7 +80,7 @@ namespace Job_Application_Management
         public event EventHandler<ButtonClickEventArgs> ButtonRusbishClick;
         private void btnRusbish_Click(object sender, EventArgs e)
         {
-            ButtonRusbishClick?.Invoke(this, new ButtonClickEventArgs(ID));
+            ButtonRusbishClick?.Invoke(this, new ButtonClickEventArgs(ID,0));
         }
 
         private void UC_AppliedJobs_Load(object sender, EventArgs e)

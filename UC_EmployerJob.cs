@@ -54,7 +54,7 @@ namespace Job_Application_Management
 
         private void button_delete_Click(object sender, EventArgs e)
         {
-            Button_Delete_Click?.Invoke(this, new ButtonClickEventArgs(jobID.ToString()));
+            Button_Delete_Click?.Invoke(this, new ButtonClickEventArgs(jobID.ToString(),0));
         }
     }
 }

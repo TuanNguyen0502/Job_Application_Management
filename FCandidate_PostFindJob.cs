@@ -35,7 +35,8 @@ namespace Job_Application_Management
         private void btnAddPostJob_Click(object sender, EventArgs args)
         {
             CandidateProfile canProfile = uC_CoverLetter1.GetCandidateProfileToCoverLetter();
-            canDAO.AddJobPosting(canProfile, cddId);
+            if(uC_CoverLetter1.CheckNullAtCoverLetter())
+                canDAO.AddJobPosting(canProfile, cddId);
         }
         private void btnEditPostJob_Click(object sender, EventArgs args)
         {

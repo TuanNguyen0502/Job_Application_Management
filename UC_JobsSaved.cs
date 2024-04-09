@@ -20,47 +20,127 @@ namespace Job_Application_Management
         private string timeUpdate;
         private int salary;
         private Image icon;
-        private string jobId;
+        private int jobId;
         private string id;
         public string DescriptionJob 
         { 
             get => descriptionJob;
-            set { descriptionJob = value; lblDescrption.Text = value; }
+            set
+            {
+                if (value != null)
+                {
+                    descriptionJob = value; lblDescrption.Text = value;
+                }
+                else
+                {
+                    MessageBox.Show("Mô tả công việc đã thêm bị null");
+                }
+            }
         }
         public string ComName 
         { 
-            get => comName; 
-            set { comName = value; lblComName.Text = $"        {value}"; } 
+            get => comName;
+            set
+            {
+                if (value != null)
+                {
+                    comName = value; lblComName.Text = $"        {value}";
+                }
+                else
+                {
+                    MessageBox.Show("Tên công ty đã thêm bị null");
+                }
+            }
         }
         public DateTime TimeSaved 
         {   
             get => timeSaved;
-            set { timeSaved = value; lblTimeSaved.Text = $"Đã lưu: {value}"; }
+            set
+            {
+                if (value != null)
+                {
+                    timeSaved = value; lblTimeSaved.Text = $"Đã lưu: {value}";
+                }
+                else
+                {
+                    MessageBox.Show("Thời gian lưu công việc bị null");
+                }
+            }
         }
         public string Address 
         { 
             get => address;
-            set { address = value; lblAddress.Text = $"{        value}"; }
+            set
+            {
+                if (value != null)
+                {
+                    address = value; lblAddress.Text = $"{value}";
+                }
+                else
+                {
+                    MessageBox.Show("Địa chỉ đã thêm null");
+                }
+            }
         }
         public int Salary 
         { 
             get => salary;
-            set { salary = value; lblSalary.Text = value.ToString(); }
+            set
+            {
+                if (value > 0)
+                {
+                    salary = value; lblSalary.Text = value.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Lương không được nhỏ hơn hoặc bằng 0");
+                }
+            }
         }
         public Image Icon 
         { 
             get => icon;
-            set { icon = value; pictureBox1.Image = value; }
+            set
+            {
+                if (value != null)
+                {
+                    icon = value; pictureBox1.Image = value;
+                }
+                else
+                {
+                    MessageBox.Show("Mô tả công việc đã thêm null");
+                }
+            }
         }
-        public string JobID
+        public int JobID
         {
             get { return jobId; }
-            set { jobId = value; }
+            set
+            {
+                if (value != 0)
+                {
+                    jobId = value;
+                }
+                else
+                {
+                    MessageBox.Show("Mã công việc phải khác 0");
+                }
+            }
         }
         public string ID
         {
             get { return id; }
-            set { id = value; }
+            set
+            {
+                if (value != null)
+                {
+                    id = value;
+                }
+                else
+                {
+                    MessageBox.Show("ID đã thêm null");
+                }
+            }
         }
         #endregion
         public Button BtnAdd
@@ -96,15 +176,15 @@ namespace Job_Application_Management
             toolTipMain.SetToolTip(this.btnAdd, "Lưu");
         }
 
-        public event EventHandler ButtonAddClick;
+        public event EventHandler<ButtonClickEventArgs> ButtonAddClick;
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            ButtonAddClick?.Invoke(this, EventArgs.Empty);
+            ButtonAddClick?.Invoke(this, new ButtonClickEventArgs(null,JobID));
         }
         public event EventHandler<ButtonClickEventArgs> ButtonRusbishClick;
         private void btnRusbish_Click(object sender, EventArgs e)
         {
-            ButtonRusbishClick?.Invoke(this, new ButtonClickEventArgs(ID));
+            ButtonRusbishClick?.Invoke(this, new ButtonClickEventArgs(ID,0));
         }
     }
 }

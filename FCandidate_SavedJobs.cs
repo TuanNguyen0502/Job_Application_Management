@@ -37,9 +37,9 @@ namespace Job_Application_Management
         {
             LoadSavedJobs();
         }
-        private void savedJobsButtonApply_Click(object sender, EventArgs eventArgs)
+        private void savedJobsButtonApply_Click(object sender, ButtonClickEventArgs e)
         {
-
+            
         }
         private void savedJobsButtonRusbish_Click(object sender, ButtonClickEventArgs e)
         {
