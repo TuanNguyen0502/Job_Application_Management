@@ -51,7 +51,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(500, 100);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(381, 100);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // label_PostedTime
@@ -86,7 +86,7 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 100);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(500, 171);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(381, 171);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // label_Salary
@@ -121,7 +121,7 @@
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 277);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(500, 100);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(381, 100);
             this.flowLayoutPanel3.TabIndex = 2;
             // 
             // button_Edit
@@ -261,7 +261,7 @@
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "UC_EmployerJob";
-            this.Size = new System.Drawing.Size(500, 377);
+            this.Size = new System.Drawing.Size(381, 377);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
