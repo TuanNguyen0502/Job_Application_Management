@@ -48,6 +48,13 @@
     <Reference Include="ComponentFactory.Krypton.Workspace">
       <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\Visual Studio Code\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -78,6 +85,12 @@
     </Compile>
     <Compile Include="FCandidate.Designer.cs">
       <DependentUpon>FCandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCandidateMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCandidateMain.Designer.cs">
+      <DependentUpon>FCandidateMain.cs</DependentUpon>
     </Compile>
     <Compile Include="FCandidate_AppliedJobs.cs">
       <SubType>Form</SubType>
@@ -223,6 +236,12 @@
     <Compile Include="UC_CandidateProfile.Designer.cs">
       <DependentUpon>UC_CandidateProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Cdd_JobsListPosting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Cdd_JobsListPosting.Designer.cs">
+      <DependentUpon>UC_Cdd_JobsListPosting.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_CoverLetter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -279,6 +298,9 @@
     </Compile>
     <EmbeddedResource Include="FCandidate.resx">
       <DependentUpon>FCandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCandidateMain.resx">
+      <DependentUpon>FCandidateMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCandidate_AppliedJobs.resx">
       <DependentUpon>FCandidate_AppliedJobs.cs</DependentUpon>
@@ -356,6 +378,9 @@
     <EmbeddedResource Include="UC_CandidateProfile.resx">
       <DependentUpon>UC_CandidateProfile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Cdd_JobsListPosting.resx">
+      <DependentUpon>UC_Cdd_JobsListPosting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_CoverLetter.resx">
       <DependentUpon>UC_CoverLetter.cs</DependentUpon>
     </EmbeddedResource>
@@ -383,6 +408,7 @@
     <EmbeddedResource Include="UC_Resume_Experience.resx">
       <DependentUpon>UC_Resume_Experience.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -734,6 +760,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-certification-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-employee-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Project %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-check-file-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-job-application-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-job-application-322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-job-application-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-job-application-323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-register-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-job-seeker-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-facebook-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-instagram-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-check-file-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-register-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-job-seeker-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-302.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -50,7 +50,7 @@ namespace Job_Application_Management
         public Image Icon
         {
             get { return icon; }
-            set { icon = value; ptbMain.Image = value; }
+            set { icon = value; cptb_company.Image = value; }
         }
         [Category("Custom Props")]
         public int JobID
@@ -69,11 +69,6 @@ namespace Job_Application_Management
             InitializeComponent();
         }
 
-        private void UC_CandidateMain_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void UC_CandidateMain_Click(object sender, EventArgs e)
         {
             FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails(JobID, CddID);
@@ -84,5 +79,7 @@ namespace Job_Application_Management
         {
             canDAO.AddSavedJob(jobid);
         }
+
+       
     }
 }

@@ -121,6 +121,9 @@
   <data name="cv-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cv-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-register-32 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-register-32 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-sign-out-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-sign-out-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,8 +139,8 @@
   <data name="icons8-gender-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-gender-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calendar-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calendar-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-job-application-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-job-application-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-resume-and-cv-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-resume-and-cv-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,6 +169,9 @@
   <data name="icons8-find-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-find-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-check-file-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-check-file-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Settings-5-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings-5-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -190,8 +196,8 @@
   <data name="icons8-trash-can-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-trash-can-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-heart-16 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-heart-16 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-gpa-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-gpa-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-email-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-email-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,6 +223,9 @@
   <data name="icons8-settings-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-settings-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-job-seeker-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-job-seeker-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-group-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-group-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -232,17 +241,35 @@
   <data name="icons8-plus-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-plus-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-job-seeker-32 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-job-seeker-32 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-home-301" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-home-301.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="calendar-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendar-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-close-window-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-close-window-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-company-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-company-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-search-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-search-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-manager-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-manager-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Settings-5-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings-5-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-instagram-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-instagram-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-job-application-321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-job-application-321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-job-application-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-job-application-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,17 +286,20 @@
   <data name="icons8-address-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-address-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-gpa-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-gpa-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-crypto-trading-spot-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-crypto-trading-spot-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-register-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-register-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="personIcon.pnj" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\personIcon.pnj.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-deadline-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-deadline-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-job-application-322" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-job-application-322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-profile-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-profile-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -292,11 +322,17 @@
   <data name="icons8-job-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-job-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-heart-16 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-heart-16 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-heart-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-heart-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-employer-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-employer-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-employee-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-employee-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="recruiters-company-are-looking-employees-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\recruiters-company-are-looking-employees-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -304,11 +340,14 @@
   <data name="icons8-software-license-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-software-license-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-save-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-save-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="company-building-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\company-building-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-save-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-save-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="New Project (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\New Project (3).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-salary-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-salary-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -355,6 +394,9 @@
   <data name="Function-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Function-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-check-file-321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-check-file-321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-phone-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-phone-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -382,8 +424,8 @@
   <data name="icons8-find-16 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-find-16 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-company-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-company-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-job-application-323" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-job-application-323.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-person-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-person-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -406,6 +448,9 @@
   <data name="icons8-log-out-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-log-out-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-certification-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-certification-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="home-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -421,6 +466,9 @@
   <data name="icons8-cv-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-cv-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-facebook-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-facebook-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-add-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-add-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -433,7 +481,7 @@
   <data name="icons8-name-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-name-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-certification-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-certification-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-home-302" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-home-302.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
