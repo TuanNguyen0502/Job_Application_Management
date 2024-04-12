@@ -95,33 +95,38 @@ namespace Job_Application_Management
         {
             if (JobID == 0)
             {
-                employerDAO.AddJob(CreateJob());
-                this.Close();
+                Job job = CreateJob();
+                if (job.CheckAllCondition())
+                {
+                    employerDAO.AddJob(CreateJob());
+                    this.Close();
+                }
             }
             else
             {
-                employerDAO.UpdateJob(GetCurrentJob());
-                this.Close();
+                Job job = GetCurrentJob();
+                if (job.CheckAllCondition())
+                {
+                    employerDAO.UpdateJob(GetCurrentJob());
+                    this.Close();
+                }
             }
         }
 
         private Job GetCurrentJob()
         {
-            Job job = new Job(JobID, textBox_JobName.Text, Int32.Parse(textBox_Salary.Text), richTextBox_JobDescripton.Text,
-                    Int32.Parse(textBox_WorkingTime.Text), textBox_Experience.Text, dateTimePicker_Deadline.Value, richTextBox_JobBenefit.Text,
+            Job job = new Job(JobID, textBox_JobName.Text, textBox_Salary.Text, richTextBox_JobDescripton.Text,
+                   textBox_WorkingTime.Text, textBox_Experience.Text, dateTimePicker_Deadline.Value, richTextBox_JobBenefit.Text,
                     richTextBox_Requirement.Text, empID);
             return job;
         }
 
         private Job CreateJob()
         {
-            using (SqlConnection conn = new SqlConnection(connStr))
-            {
-                Job job = new Job(textBox_JobName.Text, Int32.Parse(textBox_Salary.Text), richTextBox_JobDescripton.Text,
-                    Int32.Parse(textBox_WorkingTime.Text), textBox_Experience.Text, dateTimePicker_Deadline.Value, richTextBox_JobBenefit.Text,
-                    richTextBox_Requirement.Text, empID);
-                return job;
-            }
+            Job job = new Job(textBox_JobName.Text, textBox_Salary.Text, richTextBox_JobDescripton.Text,
+                textBox_WorkingTime.Text, textBox_Experience.Text, dateTimePicker_Deadline.Value, richTextBox_JobBenefit.Text,
+                richTextBox_Requirement.Text, empID);
+            return job;
         }
 
         private void button_Delete_Click(object sender, EventArgs e)
