@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Guna.UI2.Designer;
 
 namespace Job_Application_Management
 {
@@ -64,22 +65,35 @@ namespace Job_Application_Management
             set { cddid = value; }
         }
         #endregion
+        public Guna.UI.WinForms.GunaLinePanel GunaLinePanel_Selected { get { return gunaLinePanel_Selected; } }
         public UC_CandidateMain()
         {
             InitializeComponent();
         }
-
+        public event EventHandler<ButtonClickEventArgs> ClickToJob;
         private void UC_CandidateMain_Click(object sender, EventArgs e)
         {
-            FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails(JobID, CddID);
-            selected.ShowDialog();
+            ClickToJob?.Invoke(this, new ButtonClickEventArgs(CddID,JobID));
+            if (gunaLinePanel_Selected.Visible == false)
+            {
+                gunaLinePanel_Selected.Visible = true;
+            }
+            else
+            {
+                gunaLinePanel_Selected.Visible = false;
+            }
         }
 
         private void btnApply_Click(object sender, EventArgs e)
         {
             canDAO.AddSavedJob(jobid);
         }
-
-       
+        public void gunaLinePanel_Selected_Click(object sender, EventArgs e)
+        {
+            if (gunaLinePanel_Selected.Visible == true)
+            {
+                gunaLinePanel_Selected.Visible = false;
+            }
+        }
     }
 }

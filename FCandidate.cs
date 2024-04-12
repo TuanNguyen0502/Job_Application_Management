@@ -46,7 +46,9 @@ namespace Job_Application_Management
                     flpScrollPane.Controls.Clear();
                 }
                 else
+                {
                     flpScrollPane.Controls.Add(jobItem);
+                }    
             }
         }
         private void InitializeToolTip()

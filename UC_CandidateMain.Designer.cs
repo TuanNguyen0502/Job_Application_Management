@@ -38,13 +38,14 @@
             this.cptb_company = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaLinePanel_Selected = new Guna.UI.WinForms.GunaLinePanel();
             ((System.ComponentModel.ISupportInitialize)(this.cptb_company)).BeginInit();
+            this.gunaLinePanel_Selected.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblJobName
             // 
             this.lblJobName.AutoSize = true;
             this.lblJobName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJobName.Location = new System.Drawing.Point(167, 19);
+            this.lblJobName.Location = new System.Drawing.Point(158, 19);
             this.lblJobName.Name = "lblJobName";
             this.lblJobName.Size = new System.Drawing.Size(99, 20);
             this.lblJobName.TabIndex = 1;
@@ -54,7 +55,7 @@
             // 
             this.lblCompanyName.AutoSize = true;
             this.lblCompanyName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompanyName.Location = new System.Drawing.Point(167, 57);
+            this.lblCompanyName.Location = new System.Drawing.Point(158, 57);
             this.lblCompanyName.Name = "lblCompanyName";
             this.lblCompanyName.Size = new System.Drawing.Size(85, 20);
             this.lblCompanyName.TabIndex = 2;
@@ -65,7 +66,7 @@
             this.lblSalary.AutoSize = true;
             this.lblSalary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblSalary.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalary.Location = new System.Drawing.Point(166, 97);
+            this.lblSalary.Location = new System.Drawing.Point(157, 97);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(81, 20);
             this.lblSalary.TabIndex = 3;
@@ -76,7 +77,7 @@
             this.lblAdress.AutoSize = true;
             this.lblAdress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblAdress.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdress.Location = new System.Drawing.Point(322, 99);
+            this.lblAdress.Location = new System.Drawing.Point(301, 99);
             this.lblAdress.Name = "lblAdress";
             this.lblAdress.Size = new System.Drawing.Size(70, 20);
             this.lblAdress.TabIndex = 4;
@@ -85,7 +86,7 @@
             // btnApply
             // 
             this.btnApply.Image = global::Job_Application_Management.Properties.Resources.icons8_heart_16;
-            this.btnApply.Location = new System.Drawing.Point(492, 93);
+            this.btnApply.Location = new System.Drawing.Point(368, 15);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(60, 30);
             this.btnApply.TabIndex = 5;
@@ -112,6 +113,7 @@
             // gunaLinePanel_Selected
             // 
             this.gunaLinePanel_Selected.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLinePanel_Selected.Controls.Add(this.btnApply);
             this.gunaLinePanel_Selected.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaLinePanel_Selected.ForeColor = System.Drawing.Color.PaleGreen;
             this.gunaLinePanel_Selected.LineBottom = 4;
@@ -123,24 +125,26 @@
             this.gunaLinePanel_Selected.Location = new System.Drawing.Point(0, 0);
             this.gunaLinePanel_Selected.Name = "gunaLinePanel_Selected";
             this.gunaLinePanel_Selected.Padding = new System.Windows.Forms.Padding(3);
-            this.gunaLinePanel_Selected.Size = new System.Drawing.Size(572, 142);
+            this.gunaLinePanel_Selected.Size = new System.Drawing.Size(450, 142);
             this.gunaLinePanel_Selected.TabIndex = 9;
+            this.gunaLinePanel_Selected.Visible = false;
+            this.gunaLinePanel_Selected.Click += new System.EventHandler(this.gunaLinePanel_Selected_Click);
             // 
             // UC_CandidateMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.cptb_company);
-            this.Controls.Add(this.btnApply);
             this.Controls.Add(this.lblAdress);
             this.Controls.Add(this.lblSalary);
             this.Controls.Add(this.lblCompanyName);
             this.Controls.Add(this.lblJobName);
             this.Controls.Add(this.gunaLinePanel_Selected);
             this.Name = "UC_CandidateMain";
-            this.Size = new System.Drawing.Size(572, 142);
+            this.Size = new System.Drawing.Size(450, 142);
             this.Click += new System.EventHandler(this.UC_CandidateMain_Click);
             ((System.ComponentModel.ISupportInitialize)(this.cptb_company)).EndInit();
+            this.gunaLinePanel_Selected.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

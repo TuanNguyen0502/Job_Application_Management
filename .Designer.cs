@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.pnl = new System.Windows.Forms.Panel();
             this.btnSaved = new System.Windows.Forms.Button();
             this.btnApply = new System.Windows.Forms.Button();
@@ -52,7 +51,6 @@
             this.lblComAddress = new System.Windows.Forms.Label();
             this.lblScale = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.flpnRecruitment = new System.Windows.Forms.FlowLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -72,27 +70,14 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnl.SuspendLayout();
             this.panel6.SuspendLayout();
             this.pnlCompany.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.flpnRecruitment.SuspendLayout();
             this.pnlOverview.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // kryptonPalette1
-            // 
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Rounding = 25;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Width = 1;
             // 
             // pnl
             // 
@@ -101,9 +86,9 @@
             this.pnl.Controls.Add(this.btnApply);
             this.pnl.Controls.Add(this.panel6);
             this.pnl.Controls.Add(this.lblJobName_Address);
-            this.pnl.Location = new System.Drawing.Point(0, 0);
+            this.pnl.Location = new System.Drawing.Point(7, 6);
             this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(710, 198);
+            this.pnl.Size = new System.Drawing.Size(516, 198);
             this.pnl.TabIndex = 0;
             // 
             // btnSaved
@@ -111,9 +96,9 @@
             this.btnSaved.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaved.ForeColor = System.Drawing.Color.Green;
             this.btnSaved.Image = global::Job_Application_Management.Properties.Resources.icons8_heart_16;
-            this.btnSaved.Location = new System.Drawing.Point(546, 141);
+            this.btnSaved.Location = new System.Drawing.Point(363, 139);
             this.btnSaved.Name = "btnSaved";
-            this.btnSaved.Size = new System.Drawing.Size(152, 50);
+            this.btnSaved.Size = new System.Drawing.Size(100, 47);
             this.btnSaved.TabIndex = 5;
             this.btnSaved.Text = "Lưu tin";
             this.btnSaved.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -127,9 +112,9 @@
             this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApply.ForeColor = System.Drawing.Color.White;
             this.btnApply.Image = global::Job_Application_Management.Properties.Resources.icons8_paper_plane_32__1_;
-            this.btnApply.Location = new System.Drawing.Point(16, 141);
+            this.btnApply.Location = new System.Drawing.Point(0, 138);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(524, 50);
+            this.btnApply.Size = new System.Drawing.Size(357, 50);
             this.btnApply.TabIndex = 4;
             this.btnApply.Text = "Ứng tuyển ngay";
             this.btnApply.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -148,15 +133,15 @@
             this.panel6.Controls.Add(this.label27);
             this.panel6.Controls.Add(this.lblSalary);
             this.panel6.Controls.Add(this.label25);
-            this.panel6.Location = new System.Drawing.Point(16, 48);
+            this.panel6.Location = new System.Drawing.Point(0, 48);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(682, 87);
+            this.panel6.Size = new System.Drawing.Size(511, 87);
             this.panel6.TabIndex = 1;
             // 
             // label33
             // 
             this.label33.Image = global::Job_Application_Management.Properties.Resources.icons8_hourglass_32;
-            this.label33.Location = new System.Drawing.Point(412, 7);
+            this.label33.Location = new System.Drawing.Point(350, 7);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(51, 43);
             this.label33.TabIndex = 11;
@@ -164,7 +149,7 @@
             // label32
             // 
             this.label32.Image = global::Job_Application_Management.Properties.Resources.icons8_place_marker_32;
-            this.label32.Location = new System.Drawing.Point(188, 7);
+            this.label32.Location = new System.Drawing.Point(128, 7);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(59, 43);
             this.label32.TabIndex = 10;
@@ -172,7 +157,7 @@
             // label31
             // 
             this.label31.Image = global::Job_Application_Management.Properties.Resources.icons8_crypto_trading_spot_32;
-            this.label31.Location = new System.Drawing.Point(17, 7);
+            this.label31.Location = new System.Drawing.Point(3, 7);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(51, 46);
             this.label31.TabIndex = 9;
@@ -180,7 +165,7 @@
             // lblExp
             // 
             this.lblExp.AutoSize = true;
-            this.lblExp.Location = new System.Drawing.Point(478, 37);
+            this.lblExp.Location = new System.Drawing.Point(403, 37);
             this.lblExp.Name = "lblExp";
             this.lblExp.Size = new System.Drawing.Size(51, 16);
             this.lblExp.TabIndex = 8;
@@ -189,7 +174,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(478, 7);
+            this.label29.Location = new System.Drawing.Point(403, 7);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(79, 16);
             this.label29.TabIndex = 7;
@@ -197,7 +182,7 @@
             // 
             // lblAddress
             // 
-            this.lblAddress.Location = new System.Drawing.Point(245, 34);
+            this.lblAddress.Location = new System.Drawing.Point(184, 34);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(170, 53);
             this.lblAddress.TabIndex = 6;
@@ -206,7 +191,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(245, 7);
+            this.label27.Location = new System.Drawing.Point(184, 7);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(60, 16);
             this.label27.TabIndex = 5;
@@ -215,7 +200,7 @@
             // lblSalary
             // 
             this.lblSalary.AutoSize = true;
-            this.lblSalary.Location = new System.Drawing.Point(91, 37);
+            this.lblSalary.Location = new System.Drawing.Point(52, 37);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(51, 16);
             this.lblSalary.TabIndex = 4;
@@ -224,7 +209,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(91, 7);
+            this.label25.Location = new System.Drawing.Point(50, 7);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(68, 16);
             this.label25.TabIndex = 3;
@@ -250,9 +235,9 @@
             this.pnlCompany.Controls.Add(this.lblComAddress);
             this.pnlCompany.Controls.Add(this.lblScale);
             this.pnlCompany.Controls.Add(this.pictureBox1);
-            this.pnlCompany.Location = new System.Drawing.Point(733, 2);
+            this.pnlCompany.Location = new System.Drawing.Point(534, 6);
             this.pnlCompany.Name = "pnlCompany";
-            this.pnlCompany.Size = new System.Drawing.Size(454, 198);
+            this.pnlCompany.Size = new System.Drawing.Size(304, 198);
             this.pnlCompany.TabIndex = 1;
             // 
             // lblSeeCompany
@@ -262,7 +247,7 @@
             this.lblSeeCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
             this.lblSeeCompany.Image = global::Job_Application_Management.Properties.Resources.icons8_link_16;
             this.lblSeeCompany.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblSeeCompany.Location = new System.Drawing.Point(119, 164);
+            this.lblSeeCompany.Location = new System.Drawing.Point(32, 168);
             this.lblSeeCompany.Name = "lblSeeCompany";
             this.lblSeeCompany.Size = new System.Drawing.Size(216, 20);
             this.lblSeeCompany.TabIndex = 9;
@@ -272,7 +257,7 @@
             // lblAdress2
             // 
             this.lblAdress2.AutoSize = true;
-            this.lblAdress2.Location = new System.Drawing.Point(156, 133);
+            this.lblAdress2.Location = new System.Drawing.Point(100, 133);
             this.lblAdress2.Name = "lblAdress2";
             this.lblAdress2.Size = new System.Drawing.Size(131, 16);
             this.lblAdress2.TabIndex = 8;
@@ -281,7 +266,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(156, 107);
+            this.label4.Location = new System.Drawing.Point(100, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 16);
             this.label4.TabIndex = 7;
@@ -290,7 +275,7 @@
             // lblComName
             // 
             this.lblComName.AutoSize = true;
-            this.lblComName.Location = new System.Drawing.Point(156, 15);
+            this.lblComName.Location = new System.Drawing.Point(143, 15);
             this.lblComName.Name = "lblComName";
             this.lblComName.Size = new System.Drawing.Size(77, 16);
             this.lblComName.TabIndex = 6;
@@ -324,28 +309,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Controls.Add(this.flpnRecruitment);
-            this.panel1.Controls.Add(this.pnlOverview);
-            this.panel1.Controls.Add(this.pnlCompany);
-            this.panel1.Controls.Add(this.pnl);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1187, 650);
-            this.panel1.TabIndex = 0;
-            // 
             // flpnRecruitment
             // 
             this.flpnRecruitment.AutoScroll = true;
             this.flpnRecruitment.BackColor = System.Drawing.Color.White;
             this.flpnRecruitment.Controls.Add(this.label7);
             this.flpnRecruitment.Controls.Add(this.label8);
-            this.flpnRecruitment.Location = new System.Drawing.Point(0, 222);
+            this.flpnRecruitment.Location = new System.Drawing.Point(7, 213);
             this.flpnRecruitment.Name = "flpnRecruitment";
-            this.flpnRecruitment.Size = new System.Drawing.Size(710, 428);
+            this.flpnRecruitment.Size = new System.Drawing.Size(516, 405);
             this.flpnRecruitment.TabIndex = 4;
             // 
             // label7
@@ -372,6 +344,7 @@
             // 
             // pnlOverview
             // 
+            this.pnlOverview.AutoScroll = true;
             this.pnlOverview.BackColor = System.Drawing.Color.White;
             this.pnlOverview.Controls.Add(this.lblStatus);
             this.pnlOverview.Controls.Add(this.lblJobId);
@@ -388,16 +361,15 @@
             this.pnlOverview.Controls.Add(this.label14);
             this.pnlOverview.Controls.Add(this.label13);
             this.pnlOverview.Controls.Add(this.label10);
-            this.pnlOverview.Controls.Add(this.label9);
-            this.pnlOverview.Location = new System.Drawing.Point(733, 222);
+            this.pnlOverview.Location = new System.Drawing.Point(534, 213);
             this.pnlOverview.Name = "pnlOverview";
-            this.pnlOverview.Size = new System.Drawing.Size(454, 426);
+            this.pnlOverview.Size = new System.Drawing.Size(304, 405);
             this.pnlOverview.TabIndex = 3;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(110, 59);
+            this.lblStatus.Location = new System.Drawing.Point(110, 47);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(66, 16);
             this.lblStatus.TabIndex = 21;
@@ -407,7 +379,7 @@
             // 
             this.lblJobId.AutoSize = true;
             this.lblJobId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJobId.Location = new System.Drawing.Point(190, 16);
+            this.lblJobId.Location = new System.Drawing.Point(19, 12);
             this.lblJobId.Name = "lblJobId";
             this.lblJobId.Size = new System.Drawing.Size(108, 20);
             this.lblJobId.TabIndex = 20;
@@ -416,7 +388,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(110, 385);
+            this.label24.Location = new System.Drawing.Point(110, 373);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(95, 16);
             this.label24.TabIndex = 19;
@@ -425,7 +397,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(110, 355);
+            this.label23.Location = new System.Drawing.Point(110, 343);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(54, 16);
             this.label23.TabIndex = 18;
@@ -435,7 +407,7 @@
             // 
             this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label22.Image = global::Job_Application_Management.Properties.Resources.icons8_person_32;
-            this.label22.Location = new System.Drawing.Point(23, 355);
+            this.label22.Location = new System.Drawing.Point(23, 343);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(51, 44);
             this.label22.TabIndex = 17;
@@ -443,7 +415,7 @@
             // lblWorkingForm
             // 
             this.lblWorkingForm.AutoSize = true;
-            this.lblWorkingForm.Location = new System.Drawing.Point(110, 312);
+            this.lblWorkingForm.Location = new System.Drawing.Point(110, 300);
             this.lblWorkingForm.Name = "lblWorkingForm";
             this.lblWorkingForm.Size = new System.Drawing.Size(73, 16);
             this.lblWorkingForm.TabIndex = 16;
@@ -452,7 +424,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(110, 280);
+            this.label20.Location = new System.Drawing.Point(110, 268);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(114, 16);
             this.label20.TabIndex = 15;
@@ -462,7 +434,7 @@
             // 
             this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label19.Image = global::Job_Application_Management.Properties.Resources.icons8_bag_32;
-            this.label19.Location = new System.Drawing.Point(23, 280);
+            this.label19.Location = new System.Drawing.Point(23, 268);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(51, 44);
             this.label19.TabIndex = 14;
@@ -470,7 +442,7 @@
             // lblNumberCan
             // 
             this.lblNumberCan.AutoSize = true;
-            this.lblNumberCan.Location = new System.Drawing.Point(110, 235);
+            this.lblNumberCan.Location = new System.Drawing.Point(110, 223);
             this.lblNumberCan.Name = "lblNumberCan";
             this.lblNumberCan.Size = new System.Drawing.Size(81, 16);
             this.lblNumberCan.TabIndex = 13;
@@ -479,7 +451,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(110, 207);
+            this.label17.Location = new System.Drawing.Point(110, 195);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(95, 16);
             this.label17.TabIndex = 12;
@@ -489,7 +461,7 @@
             // 
             this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label16.Image = global::Job_Application_Management.Properties.Resources.icons8_group_32;
-            this.label16.Location = new System.Drawing.Point(23, 207);
+            this.label16.Location = new System.Drawing.Point(23, 195);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(51, 44);
             this.label16.TabIndex = 11;
@@ -497,7 +469,7 @@
             // lblExp2
             // 
             this.lblExp2.AutoSize = true;
-            this.lblExp2.Location = new System.Drawing.Point(110, 160);
+            this.lblExp2.Location = new System.Drawing.Point(110, 148);
             this.lblExp2.Name = "lblExp2";
             this.lblExp2.Size = new System.Drawing.Size(124, 16);
             this.lblExp2.TabIndex = 10;
@@ -506,7 +478,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(110, 132);
+            this.label14.Location = new System.Drawing.Point(110, 120);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(79, 16);
             this.label14.TabIndex = 9;
@@ -516,7 +488,7 @@
             // 
             this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label13.Image = global::Job_Application_Management.Properties.Resources.icons8_hourglass_32;
-            this.label13.Location = new System.Drawing.Point(23, 132);
+            this.label13.Location = new System.Drawing.Point(23, 120);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(51, 44);
             this.label13.TabIndex = 8;
@@ -525,29 +497,28 @@
             // 
             this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label10.Image = global::Job_Application_Management.Properties.Resources.icons8_medal_32;
-            this.label10.Location = new System.Drawing.Point(23, 58);
+            this.label10.Location = new System.Drawing.Point(23, 46);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 44);
             this.label10.TabIndex = 5;
             // 
-            // label9
+            // guna2Elipse1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(19, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 20);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Thông tin chung";
+            this.guna2Elipse1.BorderRadius = 20;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // FCandidate_SelectedJobDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1187, 650);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(842, 626);
+            this.Controls.Add(this.flpnRecruitment);
+            this.Controls.Add(this.pnl);
+            this.Controls.Add(this.pnlCompany);
+            this.Controls.Add(this.pnlOverview);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FCandidate_SelectedJobDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCandidate_SelectedJobDetails";
@@ -559,7 +530,6 @@
             this.pnlCompany.ResumeLayout(false);
             this.pnlCompany.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.flpnRecruitment.ResumeLayout(false);
             this.flpnRecruitment.PerformLayout();
             this.pnlOverview.ResumeLayout(false);
@@ -569,10 +539,8 @@
         }
 
         #endregion
-        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private System.Windows.Forms.Panel pnl;
         private System.Windows.Forms.Panel pnlCompany;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSaved;
         private System.Windows.Forms.Button btnApply;
         private System.Windows.Forms.Panel panel6;
@@ -595,7 +563,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
@@ -613,5 +580,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblStatus;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
