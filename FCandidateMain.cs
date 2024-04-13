@@ -62,22 +62,26 @@ namespace Job_Application_Management
             List<UC_CandidateMain> jobItems = canDAO.GetJobsFromDB(lblCddID.Text);
             foreach (var jobItem in jobItems)
             {
-                if (flp_ContainsJobs.Controls.Count < 0)
+                List<UC_JobsSaved> jobSaveds = canDAO.GetSavedJobsFromDB();
+                foreach (var jobSaved in jobSaveds)
                 {
-                    flp_ContainsJobs.Controls.Clear();
+                    if (jobItem.JobID == jobSaved.JobID)
+                    {
+                        jobItem.BtnApply.Enabled = false;
+                        jobItem.BtnApply.BackColor = Color.LightGreen;
+                        break;
+                    }
                 }
-                else
-                {
-                    flp_ContainsJobs.Controls.Add(jobItem);
-                    jobItem.ClickToJob += clickToShowJobDetails_Click;
-                }    
-
+                flp_ContainsJobs.Controls.Add(jobItem);
+                jobItem.ClickToJob += clickToShowJobDetails_Click;
             }
         }
         private void clickToShowJobDetails_Click(object sender, ButtonClickEventArgs e)
         {
+            
             FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails(e.JobID, e.ID);
             OpenChildForm(selected);
+            
         }
 
         private void btnSearchFor_Click(object sender, EventArgs e)
@@ -118,15 +122,18 @@ namespace Job_Application_Management
         }
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
+            pnl_ContainDetailsJob.Controls.Clear();
             ListJobs();
         }
         private void btn_JobsSaved_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FCandidate_SavedJobs());
+            flp_ContainsJobs.Controls.Clear();
+            OpenChildForm(new FCandidate_SavedJobs(lblCddID.Text));
         }
 
         private void btn_JobsApplied_Click(object sender, EventArgs e)
         {
+            flp_ContainsJobs.Controls.Clear();
             OpenChildForm(new FCandidate_AppliedJobs());
         }
 

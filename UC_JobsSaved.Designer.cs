@@ -39,6 +39,7 @@
             this.pictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnRusbish = new System.Windows.Forms.Button();
             this.lblComName = new System.Windows.Forms.Label();
+            this.lbl_JobID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,7 +122,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_company_1001;
             this.pictureBox1.ImageRotate = 0F;
@@ -161,11 +162,23 @@
             this.lblComName.TabIndex = 4;
             this.lblComName.Text = "        Công ty";
             // 
+            // lbl_JobID
+            // 
+            this.lbl_JobID.AutoSize = true;
+            this.lbl_JobID.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_JobID.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_JobID.Location = new System.Drawing.Point(415, 21);
+            this.lbl_JobID.Name = "lbl_JobID";
+            this.lbl_JobID.Size = new System.Drawing.Size(86, 17);
+            this.lbl_JobID.TabIndex = 12;
+            this.lbl_JobID.Text = "Mã công việc";
+            // 
             // UC_JobsSaved
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LavenderBlush;
+            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.Controls.Add(this.lbl_JobID);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTimeUpdate);
             this.Controls.Add(this.lblAddress);
@@ -195,5 +208,6 @@
         private System.Windows.Forms.Label lblTimeUpdate;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox1;
+        private System.Windows.Forms.Label lbl_JobID;
     }
 }

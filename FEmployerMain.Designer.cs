@@ -95,7 +95,6 @@
             this.button_Logout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.button_Logout.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.button_Logout.ForeColor = System.Drawing.Color.White;
-            this.button_Logout.Image = global::Job_Application_Management.Properties.Resources.icons8_logout_30;
             this.button_Logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.button_Logout.ImageOffset = new System.Drawing.Point(10, 0);
             this.button_Logout.Location = new System.Drawing.Point(10, 550);
@@ -121,7 +120,6 @@
             this.button_FindCandidate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.button_FindCandidate.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.button_FindCandidate.ForeColor = System.Drawing.Color.White;
-            this.button_FindCandidate.Image = global::Job_Application_Management.Properties.Resources.icons8_find_30;
             this.button_FindCandidate.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.button_FindCandidate.ImageOffset = new System.Drawing.Point(10, 0);
             this.button_FindCandidate.Location = new System.Drawing.Point(10, 442);

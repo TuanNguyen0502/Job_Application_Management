@@ -77,14 +77,8 @@ namespace Job_Application_Management
             get { return jobId; }
             set
             {
-                if (value != 0)
-                {
-                    jobId = value;
-                }
-                else
-                {
-                    MessageBox.Show("Mã công việc phải khác 0");
-                }
+                jobId = value;
+                lbl_JobID.Text = value.ToString();
             }
         }
         public string ID

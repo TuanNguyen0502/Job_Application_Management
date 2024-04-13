@@ -40,10 +40,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imgSlide = new System.Windows.Forms.PictureBox();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.pnl_Main = new System.Windows.Forms.Panel();
-            this.pnl_ContainDetailsJob = new System.Windows.Forms.Panel();
-            this.flp_ContainsJobs = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -53,14 +49,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txt_SearchFor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.flp_ContainsJobs = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnl_ContainDetailsJob = new System.Windows.Forms.Panel();
+            this.pnl_Main = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSlide)).BeginInit();
-            this.pnl_Main.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnl_Main.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,7 +77,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(235, 759);
+            this.panel1.Size = new System.Drawing.Size(235, 790);
             this.panel1.TabIndex = 0;
             // 
             // btn_Posting
@@ -228,7 +228,7 @@
             this.lblCddID.AutoSize = true;
             this.lblCddID.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCddID.ForeColor = System.Drawing.Color.Transparent;
-            this.lblCddID.Location = new System.Drawing.Point(82, 48);
+            this.lblCddID.Location = new System.Drawing.Point(88, 56);
             this.lblCddID.Name = "lblCddID";
             this.lblCddID.Size = new System.Drawing.Size(76, 19);
             this.lblCddID.TabIndex = 2;
@@ -237,18 +237,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(82, 12);
+            this.label1.Location = new System.Drawing.Point(88, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 19);
+            this.label1.Size = new System.Drawing.Size(112, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên ứng viên";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_employee_80;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -271,44 +271,6 @@
             this.gunaElipse1.Radius = 0;
             this.gunaElipse1.TargetControl = this;
             // 
-            // pnl_Main
-            // 
-            this.pnl_Main.BackColor = System.Drawing.Color.White;
-            this.pnl_Main.Controls.Add(this.pnl_ContainDetailsJob);
-            this.pnl_Main.Controls.Add(this.flp_ContainsJobs);
-            this.pnl_Main.Controls.Add(this.panel3);
-            this.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Main.Location = new System.Drawing.Point(235, 0);
-            this.pnl_Main.Name = "pnl_Main";
-            this.pnl_Main.Size = new System.Drawing.Size(1296, 759);
-            this.pnl_Main.TabIndex = 2;
-            // 
-            // pnl_ContainDetailsJob
-            // 
-            this.pnl_ContainDetailsJob.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_ContainDetailsJob.Location = new System.Drawing.Point(464, 120);
-            this.pnl_ContainDetailsJob.Name = "pnl_ContainDetailsJob";
-            this.pnl_ContainDetailsJob.Size = new System.Drawing.Size(832, 639);
-            this.pnl_ContainDetailsJob.TabIndex = 3;
-            // 
-            // flp_ContainsJobs
-            // 
-            this.flp_ContainsJobs.AutoScroll = true;
-            this.flp_ContainsJobs.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flp_ContainsJobs.Location = new System.Drawing.Point(0, 120);
-            this.flp_ContainsJobs.Name = "flp_ContainsJobs";
-            this.flp_ContainsJobs.Size = new System.Drawing.Size(464, 639);
-            this.flp_ContainsJobs.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.guna2ShadowPanel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1296, 120);
-            this.panel3.TabIndex = 1;
-            // 
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
@@ -321,17 +283,17 @@
             this.guna2ShadowPanel1.Controls.Add(this.guna2ComboBox2);
             this.guna2ShadowPanel1.Controls.Add(this.txt_SearchFor);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(3, 2);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 2);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1290, 118);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1313, 118);
             this.guna2ShadowPanel1.TabIndex = 11;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.LightGray;
             this.pictureBox2.Image = global::Job_Application_Management.Properties.Resources.icons8_instagram_24;
-            this.pictureBox2.Location = new System.Drawing.Point(1016, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(1059, 20);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -346,7 +308,7 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
             this.guna2ControlBox1.ForeColor = System.Drawing.Color.Silver;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Silver;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1236, 10);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1259, 10);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.PressedColor = System.Drawing.Color.Red;
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
@@ -356,7 +318,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.LightGray;
             this.pictureBox3.Image = global::Job_Application_Management.Properties.Resources.icons8_facebook_16;
-            this.pictureBox3.Location = new System.Drawing.Point(1050, 23);
+            this.pictureBox3.Location = new System.Drawing.Point(1093, 20);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(28, 29);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -476,12 +438,50 @@
             this.txt_SearchFor.Size = new System.Drawing.Size(367, 45);
             this.txt_SearchFor.TabIndex = 3;
             // 
+            // flp_ContainsJobs
+            // 
+            this.flp_ContainsJobs.AutoScroll = true;
+            this.flp_ContainsJobs.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flp_ContainsJobs.Location = new System.Drawing.Point(0, 120);
+            this.flp_ContainsJobs.Name = "flp_ContainsJobs";
+            this.flp_ContainsJobs.Size = new System.Drawing.Size(464, 670);
+            this.flp_ContainsJobs.TabIndex = 2;
+            // 
+            // pnl_ContainDetailsJob
+            // 
+            this.pnl_ContainDetailsJob.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_ContainDetailsJob.Location = new System.Drawing.Point(464, 120);
+            this.pnl_ContainDetailsJob.Name = "pnl_ContainDetailsJob";
+            this.pnl_ContainDetailsJob.Size = new System.Drawing.Size(853, 670);
+            this.pnl_ContainDetailsJob.TabIndex = 3;
+            // 
+            // pnl_Main
+            // 
+            this.pnl_Main.BackColor = System.Drawing.Color.White;
+            this.pnl_Main.Controls.Add(this.pnl_ContainDetailsJob);
+            this.pnl_Main.Controls.Add(this.flp_ContainsJobs);
+            this.pnl_Main.Controls.Add(this.panel3);
+            this.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Main.Location = new System.Drawing.Point(235, 0);
+            this.pnl_Main.Name = "pnl_Main";
+            this.pnl_Main.Size = new System.Drawing.Size(1317, 790);
+            this.pnl_Main.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.guna2ShadowPanel1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1317, 120);
+            this.panel3.TabIndex = 1;
+            // 
             // FCandidateMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1531, 759);
+            this.ClientSize = new System.Drawing.Size(1552, 790);
             this.Controls.Add(this.pnl_Main);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -495,12 +495,12 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSlide)).EndInit();
-            this.pnl_Main.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnl_Main.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -518,17 +518,17 @@
         private Guna.UI2.WinForms.Guna2Button btn_JobsApplied;
         private Guna.UI2.WinForms.Guna2Button btn_JobsSaved;
         private System.Windows.Forms.Panel pnl_Main;
-        private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2Button btnSearchFor;
-        private Guna.UI2.WinForms.Guna2TextBox txt_SearchFor;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.FlowLayoutPanel flp_ContainsJobs;
         private System.Windows.Forms.Panel pnl_ContainDetailsJob;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private System.Windows.Forms.FlowLayoutPanel flp_ContainsJobs;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2ComboBox cbb_Address;
+        private Guna.UI2.WinForms.Guna2Button btnSearchFor;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txt_SearchFor;
+        private System.Windows.Forms.Panel panel3;
     }
 }

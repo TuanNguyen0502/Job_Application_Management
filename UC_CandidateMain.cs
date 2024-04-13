@@ -65,7 +65,8 @@ namespace Job_Application_Management
             set { cddid = value; }
         }
         #endregion
-        public Guna.UI.WinForms.GunaLinePanel GunaLinePanel_Selected { get { return gunaLinePanel_Selected; } }
+        public Button BtnApply { get { return btnApply; } }
+       
         public UC_CandidateMain()
         {
             InitializeComponent();
@@ -73,26 +74,19 @@ namespace Job_Application_Management
         public event EventHandler<ButtonClickEventArgs> ClickToJob;
         private void UC_CandidateMain_Click(object sender, EventArgs e)
         {
-            ClickToJob?.Invoke(this, new ButtonClickEventArgs(CddID,JobID));
-            if (gunaLinePanel_Selected.Visible == false)
-            {
-                gunaLinePanel_Selected.Visible = true;
-                btnApply.Visible = true;
-            }
             
         }
 
         private void btnApply_Click(object sender, EventArgs e)
         {
+            Button b = (Button)sender;
+            b.Enabled = false;
+            b.BackColor = Color.LightGreen;
             canDAO.AddSavedJob(jobid);
         }
-        public void gunaLinePanel_Selected_Click(object sender, EventArgs e)
+        private void gunaLinePanel1_Click(object sender, EventArgs e)
         {
-            if (gunaLinePanel_Selected.Visible == true)
-            {
-                gunaLinePanel_Selected.Visible = false;
-                btnApply.Visible = false;
-            }
+            ClickToJob?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
         }
     }
 }

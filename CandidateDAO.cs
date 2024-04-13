@@ -91,7 +91,7 @@ namespace Job_Application_Management
         }
         public List<UC_JobsSaved> GetSavedJobsFromDB()
         {
-            sqlQuery = "SELECT sj.ID SJID, j.Name, j.JobDecription, c.Name as CompanyName, sj.TimeSaved, c.Address, j.Salary"
+            sqlQuery = "SELECT sj.ID SJID, j.Name, j.JobDecription, c.Name as CompanyName, sj.TimeSaved, c.Address, j.Salary, sj.JobID"
                        +" FROM SavedJobs sj"
                        +" JOIN Jobs j ON sj.JobID = j.ID"
                        +" JOIN Employers e ON j.EmpID = e.ID"
@@ -108,6 +108,7 @@ namespace Job_Application_Management
                 item.Salary = (int)row["Salary"];
                 int id = (int)row["SJID"];
                 item.ID = id.ToString();
+                item.JobID = (int)row["JobID"];
                 saveds.Add(item);
             }
             return saveds;

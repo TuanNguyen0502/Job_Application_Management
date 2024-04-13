@@ -15,11 +15,17 @@ namespace Job_Application_Management
     public partial class FCandidate_SavedJobs : KryptonForm
     {
         CandidateDAO canDAO = new CandidateDAO();
+        private string cddID;
+        public FCandidate_SavedJobs(string cddID)
+        {
+            InitializeComponent();
+            this.cddID=cddID;
+        }
         public FCandidate_SavedJobs()
         {
             InitializeComponent();
         }
-        private void LoadSavedJobs()
+        public void LoadSavedJobs()
         {
             List<UC_JobsSaved> saveds = canDAO.GetSavedJobsFromDB();
             if (flpStoreUC.Controls.Count > 0)
@@ -44,6 +50,17 @@ namespace Job_Application_Management
         private void savedJobsButtonRusbish_Click(object sender, ButtonClickEventArgs e)
         {
             canDAO.RemoveSavedJobsFromDB(e.ID);
+            List<UC_CandidateMain> jobItems = canDAO.GetJobsFromDB(cddID);
+            foreach (var jobItem in jobItems)
+            {
+                    List<UC_JobsSaved> jobSaveds = canDAO.GetSavedJobsFromDB();
+                    foreach (var jobSaved in jobSaveds)
+                    {
+                        if (jobItem.JobID != jobSaved.JobID)
+                            continue;
+                    }
+                jobItem.Enabled = true;
+            }
             LoadSavedJobs();
         }
 
