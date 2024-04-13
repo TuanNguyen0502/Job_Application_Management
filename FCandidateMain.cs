@@ -116,7 +116,10 @@ namespace Job_Application_Management
                 ListJobs();
             }
         }
-
+        private void btn_Dashboard_Click(object sender, EventArgs e)
+        {
+            ListJobs();
+        }
         private void btn_JobsSaved_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FCandidate_SavedJobs());
@@ -129,13 +132,13 @@ namespace Job_Application_Management
 
         private void btn_Register_Click(object sender, EventArgs e)
         {
-
+            FCandidate_CreateCV createCV = new FCandidate_CreateCV();
+            createCV.ShowDialog();
         }
 
         private void btn_Posting_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new FCandidate_PostFindJob());
         }
-        
     }
 }

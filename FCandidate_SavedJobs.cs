@@ -22,7 +22,7 @@ namespace Job_Application_Management
         private void LoadSavedJobs()
         {
             List<UC_JobsSaved> saveds = canDAO.GetSavedJobsFromDB();
-            if (flpMain.Controls.Count > 0)
+            if (flpStoreUC.Controls.Count > 0)
             {
                 flpStoreUC.Controls.Clear();
             }
@@ -46,5 +46,6 @@ namespace Job_Application_Management
             canDAO.RemoveSavedJobsFromDB(e.ID);
             LoadSavedJobs();
         }
+
     }
 }

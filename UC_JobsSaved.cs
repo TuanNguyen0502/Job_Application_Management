@@ -27,14 +27,7 @@ namespace Job_Application_Management
             get => descriptionJob;
             set
             {
-                if (value != null)
-                {
-                    descriptionJob = value; lblDescrption.Text = value;
-                }
-                else
-                {
-                    MessageBox.Show("Mô tả công việc đã thêm bị null");
-                }
+                descriptionJob = value; lblDescrption.Text = value;
             }
         }
         public string ComName 
@@ -42,14 +35,7 @@ namespace Job_Application_Management
             get => comName;
             set
             {
-                if (value != null)
-                {
-                    comName = value; lblComName.Text = $"        {value}";
-                }
-                else
-                {
-                    MessageBox.Show("Tên công ty đã thêm bị null");
-                }
+                comName = value; lblComName.Text = $"        {value}";
             }
         }
         public DateTime TimeSaved 
@@ -57,14 +43,8 @@ namespace Job_Application_Management
             get => timeSaved;
             set
             {
-                if (value != null)
-                {
-                    timeSaved = value; lblTimeSaved.Text = $"Đã lưu: {value}";
-                }
-                else
-                {
-                    MessageBox.Show("Thời gian lưu công việc bị null");
-                }
+                timeSaved = value; lblTimeSaved.Text = $"Đã lưu: {value}";
+                
             }
         }
         public string Address 
@@ -72,14 +52,7 @@ namespace Job_Application_Management
             get => address;
             set
             {
-                if (value != null)
-                {
-                    address = value; lblAddress.Text = $"{value}";
-                }
-                else
-                {
-                    MessageBox.Show("Địa chỉ đã thêm null");
-                }
+                 address = value; lblAddress.Text = $"      {value}";
             }
         }
         public int Salary 
@@ -87,14 +60,7 @@ namespace Job_Application_Management
             get => salary;
             set
             {
-                if (value > 0)
-                {
-                    salary = value; lblSalary.Text = value.ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Lương không được nhỏ hơn hoặc bằng 0");
-                }
+                  salary = value; lblSalary.Text = value.ToString();
             }
         }
         public Image Icon 
@@ -102,14 +68,8 @@ namespace Job_Application_Management
             get => icon;
             set
             {
-                if (value != null)
-                {
-                    icon = value; pictureBox1.Image = value;
-                }
-                else
-                {
-                    MessageBox.Show("Mô tả công việc đã thêm null");
-                }
+                icon = value; pictureBox1.Image = value;
+                
             }
         }
         public int JobID

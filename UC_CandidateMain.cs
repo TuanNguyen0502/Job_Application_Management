@@ -77,11 +77,9 @@ namespace Job_Application_Management
             if (gunaLinePanel_Selected.Visible == false)
             {
                 gunaLinePanel_Selected.Visible = true;
+                btnApply.Visible = true;
             }
-            else
-            {
-                gunaLinePanel_Selected.Visible = false;
-            }
+            
         }
 
         private void btnApply_Click(object sender, EventArgs e)
@@ -93,6 +91,7 @@ namespace Job_Application_Management
             if (gunaLinePanel_Selected.Visible == true)
             {
                 gunaLinePanel_Selected.Visible = false;
+                btnApply.Visible = false;
             }
         }
     }

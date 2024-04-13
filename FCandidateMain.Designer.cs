@@ -44,19 +44,21 @@
             this.pnl_ContainDetailsJob = new System.Windows.Forms.Panel();
             this.flp_ContainsJobs = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnSearchFor = new Guna.UI2.WinForms.Guna2Button();
             this.cbb_Address = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txt_SearchFor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSearchFor = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txt_SearchFor = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSlide)).BeginInit();
             this.pnl_Main.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -219,6 +221,7 @@
             this.btn_Dashboard.TextOffset = new System.Drawing.Point(12, 0);
             this.btn_Dashboard.UseTransparentBackground = true;
             this.btn_Dashboard.CheckedChanged += new System.EventHandler(this.guna2Button1_CheckedChanged);
+            this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // lblCddID
             // 
@@ -299,19 +302,41 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.guna2ControlBox1);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.guna2ComboBox2);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.btnSearchFor);
-            this.panel3.Controls.Add(this.cbb_Address);
-            this.panel3.Controls.Add(this.txt_SearchFor);
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.guna2ShadowPanel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1296, 120);
             this.panel3.TabIndex = 1;
+            // 
+            // guna2ShadowPanel1
+            // 
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.pictureBox2);
+            this.guna2ShadowPanel1.Controls.Add(this.guna2ControlBox1);
+            this.guna2ShadowPanel1.Controls.Add(this.pictureBox3);
+            this.guna2ShadowPanel1.Controls.Add(this.cbb_Address);
+            this.guna2ShadowPanel1.Controls.Add(this.btnSearchFor);
+            this.guna2ShadowPanel1.Controls.Add(this.label3);
+            this.guna2ShadowPanel1.Controls.Add(this.guna2ComboBox2);
+            this.guna2ShadowPanel1.Controls.Add(this.txt_SearchFor);
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(3, 2);
+            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1290, 118);
+            this.guna2ShadowPanel1.TabIndex = 11;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBox2.Image = global::Job_Application_Management.Properties.Resources.icons8_instagram_24;
+            this.pictureBox2.Location = new System.Drawing.Point(1016, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(28, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // guna2ControlBox1
             // 
@@ -321,67 +346,22 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
             this.guna2ControlBox1.ForeColor = System.Drawing.Color.Silver;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Silver;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1248, 4);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1236, 10);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.PressedColor = System.Drawing.Color.Red;
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 10;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox2.Image = global::Job_Application_Management.Properties.Resources.icons8_instagram_24;
-            this.pictureBox2.Location = new System.Drawing.Point(1042, 21);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // guna2ComboBox2
-            // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 4;
-            this.guna2ComboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(709, 21);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(246, 36);
-            this.guna2ComboBox2.TabIndex = 8;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.LightGray;
             this.pictureBox3.Image = global::Job_Application_Management.Properties.Resources.icons8_facebook_16;
-            this.pictureBox3.Location = new System.Drawing.Point(1076, 21);
+            this.pictureBox3.Location = new System.Drawing.Point(1050, 23);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(28, 29);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
-            // 
-            // btnSearchFor
-            // 
-            this.btnSearchFor.BorderRadius = 20;
-            this.btnSearchFor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchFor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearchFor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearchFor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearchFor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearchFor.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSearchFor.ForeColor = System.Drawing.Color.White;
-            this.btnSearchFor.Location = new System.Drawing.Point(240, 72);
-            this.btnSearchFor.Name = "btnSearchFor";
-            this.btnSearchFor.Size = new System.Drawing.Size(180, 42);
-            this.btnSearchFor.TabIndex = 6;
-            this.btnSearchFor.Text = "Tìm kiếm";
-            this.btnSearchFor.Click += new System.EventHandler(this.btnSearchFor_Click);
             // 
             // cbb_Address
             // 
@@ -399,12 +379,77 @@
             "Tất cả tỉnh/thành phố",
             "Hồ Chí Minh",
             "Hà Nội",
-            "Hà Nẵng"});
-            this.cbb_Address.Location = new System.Drawing.Point(446, 21);
+            "Đà Nẵng",
+            "Bình Dương",
+            "Bắc Ninh",
+            "Đồng Nai",
+            "Hưng Yên",
+            "Hải Dương",
+            "Hải Phòng",
+            "An Giang",
+            "Bà Rịa-Vũng Tàu",
+            "Bắc Giang",
+            "Bắc Kạn",
+            "Bạc Liêu",
+            "Bến Tre",
+            "Bình Định",
+            "Bình Thuận",
+            "Bình Phước",
+            "Cà Mau ",
+            "Cần Thơ",
+            "Quảng Bình",
+            "Nước Ngoài"});
+            this.cbb_Address.Location = new System.Drawing.Point(405, 20);
             this.cbb_Address.Name = "cbb_Address";
             this.cbb_Address.Size = new System.Drawing.Size(246, 36);
-            this.cbb_Address.TabIndex = 4;
+            this.cbb_Address.TabIndex = 7;
             this.cbb_Address.SelectedIndexChanged += new System.EventHandler(this.cbb_Address_SelectedIndexChanged);
+            // 
+            // btnSearchFor
+            // 
+            this.btnSearchFor.BorderRadius = 20;
+            this.btnSearchFor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearchFor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchFor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchFor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearchFor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearchFor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearchFor.ForeColor = System.Drawing.Color.White;
+            this.btnSearchFor.Location = new System.Drawing.Point(237, 65);
+            this.btnSearchFor.Name = "btnSearchFor";
+            this.btnSearchFor.Size = new System.Drawing.Size(180, 42);
+            this.btnSearchFor.TabIndex = 6;
+            this.btnSearchFor.Text = "Tìm kiếm";
+            this.btnSearchFor.Click += new System.EventHandler(this.btnSearchFor_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(10, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(217, 23);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Tìm kiếm việc làm tại đây";
+            // 
+            // guna2ComboBox2
+            // 
+            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox2.BorderRadius = 4;
+            this.guna2ComboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox2.ItemHeight = 30;
+            this.guna2ComboBox2.Location = new System.Drawing.Point(673, 20);
+            this.guna2ComboBox2.Name = "guna2ComboBox2";
+            this.guna2ComboBox2.Size = new System.Drawing.Size(246, 36);
+            this.guna2ComboBox2.TabIndex = 8;
             // 
             // txt_SearchFor
             // 
@@ -421,7 +466,7 @@
             this.txt_SearchFor.IconLeft = global::Job_Application_Management.Properties.Resources.icons8_search_50;
             this.txt_SearchFor.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txt_SearchFor.IconLeftSize = new System.Drawing.Size(22, 22);
-            this.txt_SearchFor.Location = new System.Drawing.Point(53, 20);
+            this.txt_SearchFor.Location = new System.Drawing.Point(14, 14);
             this.txt_SearchFor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_SearchFor.Name = "txt_SearchFor";
             this.txt_SearchFor.PasswordChar = '\0';
@@ -430,18 +475,6 @@
             this.txt_SearchFor.SelectedText = "";
             this.txt_SearchFor.Size = new System.Drawing.Size(367, 45);
             this.txt_SearchFor.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(13, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(217, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tìm kiếm việc làm tại đây";
             // 
             // FCandidateMain
             // 
@@ -464,7 +497,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgSlide)).EndInit();
             this.pnl_Main.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.guna2ShadowPanel1.ResumeLayout(false);
+            this.guna2ShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
@@ -485,15 +519,16 @@
         private Guna.UI2.WinForms.Guna2Button btn_JobsSaved;
         private System.Windows.Forms.Panel pnl_Main;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Button btnSearchFor;
-        private Guna.UI2.WinForms.Guna2ComboBox cbb_Address;
         private Guna.UI2.WinForms.Guna2TextBox txt_SearchFor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.FlowLayoutPanel flp_ContainsJobs;
         private System.Windows.Forms.Panel pnl_ContainDetailsJob;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private Guna.UI2.WinForms.Guna2ComboBox cbb_Address;
     }
 }

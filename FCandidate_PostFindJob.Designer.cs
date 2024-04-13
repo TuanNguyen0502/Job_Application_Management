@@ -28,32 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.uC_CoverLetter1 = new Job_Application_Management.UC_CoverLetter();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(863, 57);
+            this.panel1.Size = new System.Drawing.Size(874, 47);
             this.panel1.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 13);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(10, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(545, 29);
+            this.label2.Size = new System.Drawing.Size(452, 35);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nền tảng đăng tải nhu cầu tìm việc làm";
             // 
@@ -70,27 +74,33 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.uC_CoverLetter1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 57);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 47);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(863, 998);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(874, 1008);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // uC_CoverLetter1
             // 
             this.uC_CoverLetter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.uC_CoverLetter1.CddID = null;
             this.uC_CoverLetter1.Location = new System.Drawing.Point(3, 3);
             this.uC_CoverLetter1.Name = "uC_CoverLetter1";
-            this.uC_CoverLetter1.Size = new System.Drawing.Size(834, 1044);
+            this.uC_CoverLetter1.Size = new System.Drawing.Size(846, 1040);
             this.uC_CoverLetter1.TabIndex = 0;
             this.uC_CoverLetter1.Load += new System.EventHandler(this.uC_CoverLetter1_Load);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
             // 
             // FCandidate_PostFindJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 1055);
+            this.ClientSize = new System.Drawing.Size(874, 1055);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FCandidate_PostFindJob";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCandidate_PostFindJob";
@@ -107,5 +117,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private UC_CoverLetter uC_CoverLetter1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

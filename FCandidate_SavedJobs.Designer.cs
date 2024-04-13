@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.flpMain = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnl_Main = new System.Windows.Forms.Panel();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,39 +41,25 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.flpStoreUC = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1.SuspendLayout();
-            this.flpMain.SuspendLayout();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pnl_Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // kryptonPalette1
+            // pnl_Main
             // 
-            this.kryptonPalette1.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.flpMain);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(853, 653);
-            this.panel1.TabIndex = 0;
-            // 
-            // flpMain
-            // 
-            this.flpMain.AutoScroll = true;
-            this.flpMain.Controls.Add(this.kryptonPanel1);
-            this.flpMain.Controls.Add(this.panel3);
-            this.flpMain.Controls.Add(this.panel5);
-            this.flpMain.Controls.Add(this.flpStoreUC);
-            this.flpMain.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flpMain.Location = new System.Drawing.Point(0, 0);
-            this.flpMain.Name = "flpMain";
-            this.flpMain.Size = new System.Drawing.Size(850, 653);
-            this.flpMain.TabIndex = 5;
+            this.pnl_Main.Controls.Add(this.kryptonPanel1);
+            this.pnl_Main.Controls.Add(this.panel3);
+            this.pnl_Main.Controls.Add(this.panel5);
+            this.pnl_Main.Controls.Add(this.flpStoreUC);
+            this.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Main.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Main.Name = "pnl_Main";
+            this.pnl_Main.Size = new System.Drawing.Size(779, 635);
+            this.pnl_Main.TabIndex = 0;
             // 
             // kryptonPanel1
             // 
@@ -83,14 +67,12 @@
             this.kryptonPanel1.Controls.Add(this.label3);
             this.kryptonPanel1.Location = new System.Drawing.Point(3, 3);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(829, 103);
+            this.kryptonPanel1.Size = new System.Drawing.Size(772, 103);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
             this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
-            this.kryptonPanel1.StateCommon.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(157)))), ((int)(((byte)(76)))));
             this.kryptonPanel1.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(157)))), ((int)(((byte)(76)))));
-            this.kryptonPanel1.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonPanel1.TabIndex = 3;
+            this.kryptonPanel1.TabIndex = 7;
             // 
             // label4
             // 
@@ -100,7 +82,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(23, 47);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(738, 48);
+            this.label4.Size = new System.Drawing.Size(714, 48);
             this.label4.TabIndex = 4;
             this.label4.Text = "Xem lại danh sách những việc làm mà bạn đã lưu trước đó. Ứng tuyển ngay để không " +
     "bỏ lỡ cơ hội nghề nghiệp dành cho bạn.";
@@ -124,8 +106,8 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(3, 112);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(829, 49);
-            this.panel3.TabIndex = 4;
+            this.panel3.Size = new System.Drawing.Size(772, 49);
+            this.panel3.TabIndex = 8;
             // 
             // label1
             // 
@@ -146,8 +128,8 @@
             this.panel5.Controls.Add(this.label2);
             this.panel5.Location = new System.Drawing.Point(3, 167);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(829, 47);
-            this.panel5.TabIndex = 2;
+            this.panel5.Size = new System.Drawing.Size(772, 47);
+            this.panel5.TabIndex = 6;
             // 
             // radioButton3
             // 
@@ -197,21 +179,26 @@
             this.flpStoreUC.AutoScroll = true;
             this.flpStoreUC.Location = new System.Drawing.Point(3, 220);
             this.flpStoreUC.Name = "flpStoreUC";
-            this.flpStoreUC.Size = new System.Drawing.Size(829, 410);
-            this.flpStoreUC.TabIndex = 5;
+            this.flpStoreUC.Size = new System.Drawing.Size(772, 405);
+            this.flpStoreUC.TabIndex = 9;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // FCandidate_SavedJobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 653);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(779, 635);
+            this.Controls.Add(this.pnl_Main);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FCandidate_SavedJobs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Những công việc đã lưu";
             this.Load += new System.EventHandler(this.FCandidate_SavedJobs_Load);
-            this.panel1.ResumeLayout(false);
-            this.flpMain.ResumeLayout(false);
+            this.pnl_Main.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
@@ -224,9 +211,9 @@
         }
 
         #endregion
-        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flpMain;
+        private System.Windows.Forms.Panel pnl_Main;
+        public System.Windows.Forms.FlowLayoutPanel FlpMain;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -237,7 +224,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.FlowLayoutPanel FlpMain;
         private System.Windows.Forms.FlowLayoutPanel flpStoreUC;
     }
 }

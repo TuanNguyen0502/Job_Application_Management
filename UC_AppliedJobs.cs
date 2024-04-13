@@ -40,7 +40,7 @@ namespace Job_Application_Management
         public string Address
         {
             get => address;
-            set { address = value; lblAddress.Text = $"{value}"; }
+            set { address = value; lblAddress.Text = $"{       value}"; }
         }
         public int Salary
         {

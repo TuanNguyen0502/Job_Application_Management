@@ -72,14 +72,14 @@
             this.roudingPanel2.Controls.Add(this.label3);
             this.roudingPanel2.Controls.Add(this.label2);
             this.roudingPanel2.Controls.Add(this.label1);
-            this.roudingPanel2.Location = new System.Drawing.Point(28, 300);
+            this.roudingPanel2.Location = new System.Drawing.Point(18, 256);
             this.roudingPanel2.Name = "roudingPanel2";
-            this.roudingPanel2.Size = new System.Drawing.Size(778, 642);
+            this.roudingPanel2.Size = new System.Drawing.Size(788, 642);
             this.roudingPanel2.TabIndex = 6;
             // 
             // ktxt_Certification
             // 
-            this.ktxt_Certification.Location = new System.Drawing.Point(236, 558);
+            this.ktxt_Certification.Location = new System.Drawing.Point(249, 556);
             this.ktxt_Certification.Multiline = true;
             this.ktxt_Certification.Name = "ktxt_Certification";
             this.ktxt_Certification.Size = new System.Drawing.Size(526, 49);
@@ -93,7 +93,7 @@
             // 
             // ktxt_Nominee
             // 
-            this.ktxt_Nominee.Location = new System.Drawing.Point(236, 484);
+            this.ktxt_Nominee.Location = new System.Drawing.Point(249, 482);
             this.ktxt_Nominee.Multiline = true;
             this.ktxt_Nominee.Name = "ktxt_Nominee";
             this.ktxt_Nominee.Size = new System.Drawing.Size(526, 49);
@@ -107,7 +107,7 @@
             // 
             // ktxt_ComName
             // 
-            this.ktxt_ComName.Location = new System.Drawing.Point(236, 410);
+            this.ktxt_ComName.Location = new System.Drawing.Point(249, 408);
             this.ktxt_ComName.Multiline = true;
             this.ktxt_ComName.Name = "ktxt_ComName";
             this.ktxt_ComName.Size = new System.Drawing.Size(526, 49);
@@ -121,7 +121,7 @@
             // 
             // ktxt_Gpa
             // 
-            this.ktxt_Gpa.Location = new System.Drawing.Point(236, 349);
+            this.ktxt_Gpa.Location = new System.Drawing.Point(249, 347);
             this.ktxt_Gpa.Multiline = true;
             this.ktxt_Gpa.Name = "ktxt_Gpa";
             this.ktxt_Gpa.Size = new System.Drawing.Size(526, 41);
@@ -135,7 +135,7 @@
             // 
             // ktxt_Major
             // 
-            this.ktxt_Major.Location = new System.Drawing.Point(236, 281);
+            this.ktxt_Major.Location = new System.Drawing.Point(249, 279);
             this.ktxt_Major.Multiline = true;
             this.ktxt_Major.Name = "ktxt_Major";
             this.ktxt_Major.Size = new System.Drawing.Size(526, 49);
@@ -149,7 +149,7 @@
             // 
             // ktxt_UName
             // 
-            this.ktxt_UName.Location = new System.Drawing.Point(236, 215);
+            this.ktxt_UName.Location = new System.Drawing.Point(249, 213);
             this.ktxt_UName.Multiline = true;
             this.ktxt_UName.Name = "ktxt_UName";
             this.ktxt_UName.Size = new System.Drawing.Size(526, 49);
@@ -163,7 +163,7 @@
             // 
             // ktxt_CarrerGoal
             // 
-            this.ktxt_CarrerGoal.Location = new System.Drawing.Point(236, 48);
+            this.ktxt_CarrerGoal.Location = new System.Drawing.Point(249, 46);
             this.ktxt_CarrerGoal.Multiline = true;
             this.ktxt_CarrerGoal.Name = "ktxt_CarrerGoal";
             this.ktxt_CarrerGoal.Size = new System.Drawing.Size(526, 145);
@@ -259,7 +259,7 @@
             this.roudingPanel1.Controls.Add(this.ktxt_JobApp);
             this.roudingPanel1.Controls.Add(this.ktxt_FullName);
             this.roudingPanel1.Controls.Add(this.pictureBox1);
-            this.roudingPanel1.Location = new System.Drawing.Point(28, 33);
+            this.roudingPanel1.Location = new System.Drawing.Point(18, 16);
             this.roudingPanel1.Name = "roudingPanel1";
             this.roudingPanel1.Size = new System.Drawing.Size(778, 221);
             this.roudingPanel1.TabIndex = 5;
@@ -305,7 +305,7 @@
             // 
             // btn_Post
             // 
-            this.btn_Post.Location = new System.Drawing.Point(614, 959);
+            this.btn_Post.Location = new System.Drawing.Point(620, 918);
             this.btn_Post.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Post.Name = "btn_Post";
             this.btn_Post.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -366,7 +366,7 @@
             // 
             // btn_Edit
             // 
-            this.btn_Edit.Location = new System.Drawing.Point(420, 959);
+            this.btn_Edit.Location = new System.Drawing.Point(426, 918);
             this.btn_Edit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -428,7 +428,7 @@
             // 
             // btn_Remove
             // 
-            this.btn_Remove.Location = new System.Drawing.Point(225, 959);
+            this.btn_Remove.Location = new System.Drawing.Point(231, 918);
             this.btn_Remove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Remove.Name = "btn_Remove";
             this.btn_Remove.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -498,7 +498,7 @@
             this.Controls.Add(this.roudingPanel2);
             this.Controls.Add(this.roudingPanel1);
             this.Name = "UC_CoverLetter";
-            this.Size = new System.Drawing.Size(834, 1044);
+            this.Size = new System.Drawing.Size(822, 992);
             this.roudingPanel2.ResumeLayout(false);
             this.roudingPanel2.PerformLayout();
             this.roudingPanel1.ResumeLayout(false);

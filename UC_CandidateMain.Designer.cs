@@ -91,6 +91,7 @@
             this.btnApply.Size = new System.Drawing.Size(60, 30);
             this.btnApply.TabIndex = 5;
             this.btnApply.UseVisualStyleBackColor = false;
+            this.btnApply.Visible = false;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // guna2Elipse1
