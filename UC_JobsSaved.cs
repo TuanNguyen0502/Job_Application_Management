@@ -78,7 +78,6 @@ namespace Job_Application_Management
             set
             {
                 jobId = value;
-                lbl_JobID.Text = value.ToString();
             }
         }
         public string ID
@@ -86,14 +85,8 @@ namespace Job_Application_Management
             get { return id; }
             set
             {
-                if (value != null)
-                {
-                    id = value;
-                }
-                else
-                {
-                    MessageBox.Show("ID đã thêm null");
-                }
+                id = value;
+               
             }
         }
         #endregion

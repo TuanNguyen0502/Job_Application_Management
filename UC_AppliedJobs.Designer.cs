@@ -77,7 +77,7 @@
             this.lblTimeUpdate.AutoSize = true;
             this.lblTimeUpdate.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimeUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTimeUpdate.Location = new System.Drawing.Point(334, 81);
+            this.lblTimeUpdate.Location = new System.Drawing.Point(343, 111);
             this.lblTimeUpdate.Name = "lblTimeUpdate";
             this.lblTimeUpdate.Size = new System.Drawing.Size(116, 17);
             this.lblTimeUpdate.TabIndex = 10;
@@ -108,6 +108,7 @@
             this.lblAddress.Size = new System.Drawing.Size(88, 17);
             this.lblAddress.TabIndex = 9;
             this.lblAddress.Text = "       Địa điểm";
+            this.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnRusbish
             // 
@@ -116,9 +117,9 @@
             this.btnRusbish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRusbish.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRusbish.Image = global::Job_Application_Management.Properties.Resources.icons8_trash_can_16;
-            this.btnRusbish.Location = new System.Drawing.Point(587, 100);
+            this.btnRusbish.Location = new System.Drawing.Point(572, 93);
             this.btnRusbish.Name = "btnRusbish";
-            this.btnRusbish.Size = new System.Drawing.Size(106, 29);
+            this.btnRusbish.Size = new System.Drawing.Size(121, 36);
             this.btnRusbish.TabIndex = 7;
             this.btnRusbish.Text = "   Bỏ lưu";
             this.btnRusbish.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -152,7 +153,7 @@
             this.Controls.Add(this.lblComName);
             this.Controls.Add(this.lblTimeSaved);
             this.Name = "UC_AppliedJobs";
-            this.Size = new System.Drawing.Size(723, 147);
+            this.Size = new System.Drawing.Size(772, 147);
             this.Load += new System.EventHandler(this.UC_AppliedJobs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

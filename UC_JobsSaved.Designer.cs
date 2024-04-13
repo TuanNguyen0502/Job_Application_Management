@@ -39,7 +39,6 @@
             this.pictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnRusbish = new System.Windows.Forms.Button();
             this.lblComName = new System.Windows.Forms.Label();
-            this.lbl_JobID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +58,7 @@
             this.lblSalary.AutoSize = true;
             this.lblSalary.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblSalary.Location = new System.Drawing.Point(591, 22);
+            this.lblSalary.Location = new System.Drawing.Point(647, 30);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(108, 28);
             this.lblSalary.TabIndex = 6;
@@ -72,7 +71,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(481, 125);
+            this.btnAdd.Location = new System.Drawing.Point(540, 125);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(106, 29);
             this.btnAdd.TabIndex = 8;
@@ -109,7 +108,7 @@
             this.lblTimeUpdate.AutoSize = true;
             this.lblTimeUpdate.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimeUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTimeUpdate.Location = new System.Drawing.Point(357, 101);
+            this.lblTimeUpdate.Location = new System.Drawing.Point(344, 137);
             this.lblTimeUpdate.Name = "lblTimeUpdate";
             this.lblTimeUpdate.Size = new System.Drawing.Size(116, 17);
             this.lblTimeUpdate.TabIndex = 10;
@@ -141,7 +140,7 @@
             this.btnRusbish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRusbish.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRusbish.Image = global::Job_Application_Management.Properties.Resources.icons8_trash_can_16;
-            this.btnRusbish.Location = new System.Drawing.Point(593, 125);
+            this.btnRusbish.Location = new System.Drawing.Point(652, 125);
             this.btnRusbish.Name = "btnRusbish";
             this.btnRusbish.Size = new System.Drawing.Size(106, 29);
             this.btnRusbish.TabIndex = 7;
@@ -162,23 +161,11 @@
             this.lblComName.TabIndex = 4;
             this.lblComName.Text = "        Công ty";
             // 
-            // lbl_JobID
-            // 
-            this.lbl_JobID.AutoSize = true;
-            this.lbl_JobID.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_JobID.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_JobID.Location = new System.Drawing.Point(415, 21);
-            this.lbl_JobID.Name = "lbl_JobID";
-            this.lbl_JobID.Size = new System.Drawing.Size(86, 17);
-            this.lbl_JobID.TabIndex = 12;
-            this.lbl_JobID.Text = "Mã công việc";
-            // 
             // UC_JobsSaved
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.Controls.Add(this.lbl_JobID);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTimeUpdate);
             this.Controls.Add(this.lblAddress);
@@ -189,7 +176,7 @@
             this.Controls.Add(this.lblComName);
             this.Controls.Add(this.lblTimeSaved);
             this.Name = "UC_JobsSaved";
-            this.Size = new System.Drawing.Size(723, 174);
+            this.Size = new System.Drawing.Size(797, 174);
             this.Load += new System.EventHandler(this.UC_Candidate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -208,6 +195,5 @@
         private System.Windows.Forms.Label lblTimeUpdate;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox1;
-        private System.Windows.Forms.Label lbl_JobID;
     }
 }

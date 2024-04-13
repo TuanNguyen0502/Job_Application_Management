@@ -74,6 +74,11 @@ namespace Job_Application_Management
                 }
                 flp_ContainsJobs.Controls.Add(jobItem);
                 jobItem.ClickToJob += clickToShowJobDetails_Click;
+                jobItem.Lbl_Salary += clickToShowJobDetails_Click;
+                jobItem.Lbl_Address += clickToShowJobDetails_Click;
+                jobItem.Lbl_JobName += clickToShowJobDetails_Click;
+                jobItem.Lbl_CompanyName += clickToShowJobDetails_Click;
+                jobItem.Cptb_Company += clickToShowJobDetails_Click;
             }
         }
         private void clickToShowJobDetails_Click(object sender, ButtonClickEventArgs e)
@@ -122,18 +127,31 @@ namespace Job_Application_Management
         }
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
+            flp_ContainsJobs.Controls.Clear();
+            pnl_ContainDetailsJob.Controls.Clear();
+            ListJobs();
+        }
+        private void btn_ResponeFindJobs_Click(object sender, EventArgs e)
+        {
+            flp_ContainsJobs.Controls.Clear();
             pnl_ContainDetailsJob.Controls.Clear();
             ListJobs();
         }
         private void btn_JobsSaved_Click(object sender, EventArgs e)
         {
             flp_ContainsJobs.Controls.Clear();
+            UC_Introduction introduction = new UC_Introduction();
+            introduction.Btn_ResponeFindJobs += btn_ResponeFindJobs_Click;
+            flp_ContainsJobs.Controls.Add(introduction);
             OpenChildForm(new FCandidate_SavedJobs(lblCddID.Text));
         }
 
         private void btn_JobsApplied_Click(object sender, EventArgs e)
         {
             flp_ContainsJobs.Controls.Clear();
+            UC_Introduction introduction = new UC_Introduction();
+            introduction.Btn_ResponeFindJobs += btn_ResponeFindJobs_Click;
+            flp_ContainsJobs.Controls.Add(introduction);
             OpenChildForm(new FCandidate_AppliedJobs());
         }
 
@@ -145,6 +163,9 @@ namespace Job_Application_Management
 
         private void btn_Posting_Click(object sender, EventArgs e)
         {
+            UC_Introduction introduction = new UC_Introduction();
+            introduction.Btn_ResponeFindJobs += btn_ResponeFindJobs_Click;
+            flp_ContainsJobs.Controls.Add(introduction);
             OpenChildForm(new FCandidate_PostFindJob());
         }
     }

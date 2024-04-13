@@ -88,5 +88,30 @@ namespace Job_Application_Management
         {
             ClickToJob?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
         }
+        public event EventHandler<ButtonClickEventArgs> Lbl_Salary;
+        private void lblSalary_Click(object sender, EventArgs e)
+        {
+            Lbl_Salary?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
+        }
+        public event EventHandler<ButtonClickEventArgs> Lbl_Address;
+        private void lblAdress_Click(object sender, EventArgs e)
+        {
+            Lbl_Address?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
+        }
+        public event EventHandler<ButtonClickEventArgs> Lbl_CompanyName;
+        private void lblCompanyName_Click(object sender, EventArgs e)
+        {
+            Lbl_CompanyName?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
+        }
+        public event EventHandler<ButtonClickEventArgs> Lbl_JobName;
+        private void lblJobName_Click(object sender, EventArgs e)
+        {
+            Lbl_JobName?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
+        }
+        public event EventHandler<ButtonClickEventArgs> Cptb_Company;
+        private void cptb_company_Click(object sender, EventArgs e)
+        {
+            Cptb_Company?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
+        }
     }
 }

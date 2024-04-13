@@ -22,7 +22,7 @@ namespace Job_Application_Management
         private void LoadAppliedJobs()
         {
             List<UC_AppliedJobs> applieds = canDAO.GetAppliedJobsFromDB();
-            if (flpMain.Controls.Count > 0)
+            if (flpStoreUC.Controls.Count > 0)
             {
                 flpStoreUC.Controls.Clear();
             }

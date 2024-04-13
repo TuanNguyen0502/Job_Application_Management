@@ -50,6 +50,7 @@
             this.lblJobName.Size = new System.Drawing.Size(129, 28);
             this.lblJobName.TabIndex = 1;
             this.lblJobName.Text = "Tên công việc";
+            this.lblJobName.Click += new System.EventHandler(this.lblJobName_Click);
             // 
             // lblCompanyName
             // 
@@ -60,6 +61,7 @@
             this.lblCompanyName.Size = new System.Drawing.Size(85, 20);
             this.lblCompanyName.TabIndex = 2;
             this.lblCompanyName.Text = "Tên công ty";
+            this.lblCompanyName.Click += new System.EventHandler(this.lblCompanyName_Click);
             // 
             // lblSalary
             // 
@@ -71,6 +73,7 @@
             this.lblSalary.Size = new System.Drawing.Size(108, 28);
             this.lblSalary.TabIndex = 3;
             this.lblSalary.Text = "Mức lương";
+            this.lblSalary.Click += new System.EventHandler(this.lblSalary_Click);
             // 
             // lblAdress
             // 
@@ -82,6 +85,7 @@
             this.lblAdress.Size = new System.Drawing.Size(70, 20);
             this.lblAdress.TabIndex = 4;
             this.lblAdress.Text = "Địa điểm";
+            this.lblAdress.Click += new System.EventHandler(this.lblAdress_Click);
             // 
             // guna2Elipse1
             // 
@@ -99,6 +103,7 @@
             this.cptb_company.TabIndex = 8;
             this.cptb_company.TabStop = false;
             this.cptb_company.UseTransfarantBackground = false;
+            this.cptb_company.Click += new System.EventHandler(this.cptb_company_Click);
             // 
             // btnApply
             // 

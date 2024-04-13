@@ -42,11 +42,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.flpStoreUC = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_JobsSaved1 = new Job_Application_Management.UC_JobsSaved();
             this.pnl_Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.flpStoreUC.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Main
@@ -58,7 +60,7 @@
             this.pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Main.Location = new System.Drawing.Point(0, 0);
             this.pnl_Main.Name = "pnl_Main";
-            this.pnl_Main.Size = new System.Drawing.Size(779, 635);
+            this.pnl_Main.Size = new System.Drawing.Size(854, 635);
             this.pnl_Main.TabIndex = 0;
             // 
             // kryptonPanel1
@@ -67,7 +69,7 @@
             this.kryptonPanel1.Controls.Add(this.label3);
             this.kryptonPanel1.Location = new System.Drawing.Point(3, 3);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(772, 103);
+            this.kryptonPanel1.Size = new System.Drawing.Size(848, 103);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
             this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
             this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(157)))), ((int)(((byte)(76)))));
@@ -106,7 +108,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(3, 112);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(772, 49);
+            this.panel3.Size = new System.Drawing.Size(851, 49);
             this.panel3.TabIndex = 8;
             // 
             // label1
@@ -128,7 +130,7 @@
             this.panel5.Controls.Add(this.label2);
             this.panel5.Location = new System.Drawing.Point(3, 167);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(772, 47);
+            this.panel5.Size = new System.Drawing.Size(848, 47);
             this.panel5.TabIndex = 6;
             // 
             // radioButton3
@@ -177,9 +179,10 @@
             // flpStoreUC
             // 
             this.flpStoreUC.AutoScroll = true;
+            this.flpStoreUC.Controls.Add(this.uC_JobsSaved1);
             this.flpStoreUC.Location = new System.Drawing.Point(3, 220);
             this.flpStoreUC.Name = "flpStoreUC";
-            this.flpStoreUC.Size = new System.Drawing.Size(772, 405);
+            this.flpStoreUC.Size = new System.Drawing.Size(839, 405);
             this.flpStoreUC.TabIndex = 9;
             // 
             // guna2Elipse1
@@ -187,11 +190,27 @@
             this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // uC_JobsSaved1
+            // 
+            this.uC_JobsSaved1.Address = null;
+            this.uC_JobsSaved1.BackColor = System.Drawing.Color.GhostWhite;
+            this.uC_JobsSaved1.ComName = null;
+            this.uC_JobsSaved1.DescriptionJob = null;
+            this.uC_JobsSaved1.Icon = null;
+            this.uC_JobsSaved1.ID = null;
+            this.uC_JobsSaved1.JobID = 0;
+            this.uC_JobsSaved1.Location = new System.Drawing.Point(3, 3);
+            this.uC_JobsSaved1.Name = "uC_JobsSaved1";
+            this.uC_JobsSaved1.Salary = 0;
+            this.uC_JobsSaved1.Size = new System.Drawing.Size(797, 174);
+            this.uC_JobsSaved1.TabIndex = 0;
+            this.uC_JobsSaved1.TimeSaved = new System.DateTime(((long)(0)));
+            // 
             // FCandidate_SavedJobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 635);
+            this.ClientSize = new System.Drawing.Size(854, 635);
             this.Controls.Add(this.pnl_Main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FCandidate_SavedJobs";
@@ -206,6 +225,7 @@
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.flpStoreUC.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -225,5 +245,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flpStoreUC;
+        private UC_JobsSaved uC_JobsSaved1;
     }
 }
