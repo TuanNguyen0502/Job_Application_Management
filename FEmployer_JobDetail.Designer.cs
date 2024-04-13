@@ -114,40 +114,40 @@
             // label_ID
             // 
             this.label_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_ID.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_ID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_ID.Image = global::Job_Application_Management.Properties.Resources.icons8_job_32;
             this.label_ID.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_ID.Location = new System.Drawing.Point(10, 46);
             this.label_ID.Name = "label_ID";
             this.label_ID.Size = new System.Drawing.Size(294, 60);
             this.label_ID.TabIndex = 1;
-            this.label_ID.Text = "Job Name    ";
+            this.label_ID.Text = "Job Name           ";
             this.label_ID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label_Deadline
             // 
             this.label_Deadline.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Deadline.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_Deadline.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label_Deadline.Image = global::Job_Application_Management.Properties.Resources.icons8_deadline_32;
             this.label_Deadline.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_Deadline.Location = new System.Drawing.Point(881, 48);
             this.label_Deadline.Name = "label_Deadline";
             this.label_Deadline.Size = new System.Drawing.Size(361, 56);
             this.label_Deadline.TabIndex = 5;
-            this.label_Deadline.Text = "Deadline    ";
+            this.label_Deadline.Text = "Deadline        ";
             this.label_Deadline.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label_Experience
             // 
             this.label_Experience.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Experience.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_Experience.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label_Experience.Image = global::Job_Application_Management.Properties.Resources.icons8_experience_32;
             this.label_Experience.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_Experience.Location = new System.Drawing.Point(881, 350);
             this.label_Experience.Name = "label_Experience";
             this.label_Experience.Size = new System.Drawing.Size(361, 60);
             this.label_Experience.TabIndex = 8;
-            this.label_Experience.Text = "Experience    ";
+            this.label_Experience.Text = "Experience        ";
             this.label_Experience.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox_JobName
@@ -220,14 +220,14 @@
             // label_Salary
             // 
             this.label_Salary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Salary.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_Salary.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label_Salary.Image = global::Job_Application_Management.Properties.Resources.icons8_salary_32;
             this.label_Salary.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_Salary.Location = new System.Drawing.Point(10, 198);
             this.label_Salary.Name = "label_Salary";
             this.label_Salary.Size = new System.Drawing.Size(294, 60);
             this.label_Salary.TabIndex = 4;
-            this.label_Salary.Text = "Salary    ";
+            this.label_Salary.Text = "Salary        ";
             this.label_Salary.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox_Salary
@@ -257,14 +257,14 @@
             // label_Description
             // 
             this.label_Description.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Description.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_Description.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label_Description.Image = global::Job_Application_Management.Properties.Resources.icons8_description_32;
             this.label_Description.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_Description.Location = new System.Drawing.Point(881, 198);
             this.label_Description.Name = "label_Description";
             this.label_Description.Size = new System.Drawing.Size(361, 60);
             this.label_Description.TabIndex = 4;
-            this.label_Description.Text = "Job Description    ";
+            this.label_Description.Text = "Description         ";
             this.label_Description.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // richTextBox_JobDescripton
@@ -295,14 +295,14 @@
             // label_Time
             // 
             this.label_Time.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Time.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_Time.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label_Time.Image = global::Job_Application_Management.Properties.Resources.icons8_working_time_32;
             this.label_Time.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_Time.Location = new System.Drawing.Point(10, 350);
             this.label_Time.Name = "label_Time";
             this.label_Time.Size = new System.Drawing.Size(294, 60);
             this.label_Time.TabIndex = 6;
-            this.label_Time.Text = "Working Time    ";
+            this.label_Time.Text = "Working Time        ";
             this.label_Time.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox_WorkingTime
@@ -332,14 +332,14 @@
             // label__Benefit
             // 
             this.label__Benefit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label__Benefit.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label__Benefit.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label__Benefit.Image = global::Job_Application_Management.Properties.Resources.icons8_benefit_32;
             this.label__Benefit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label__Benefit.Location = new System.Drawing.Point(10, 503);
             this.label__Benefit.Name = "label__Benefit";
             this.label__Benefit.Size = new System.Drawing.Size(294, 60);
             this.label__Benefit.TabIndex = 4;
-            this.label__Benefit.Text = "Job Benefits    ";
+            this.label__Benefit.Text = "Benefits        ";
             this.label__Benefit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // richTextBox_JobBenefit
@@ -370,14 +370,14 @@
             // label_CompanyType
             // 
             this.label_CompanyType.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_CompanyType.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label_CompanyType.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label_CompanyType.Image = global::Job_Application_Management.Properties.Resources.icons8_request_32;
             this.label_CompanyType.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_CompanyType.Location = new System.Drawing.Point(881, 503);
             this.label_CompanyType.Name = "label_CompanyType";
             this.label_CompanyType.Size = new System.Drawing.Size(361, 60);
             this.label_CompanyType.TabIndex = 5;
-            this.label_CompanyType.Text = "Candidate Requirements    ";
+            this.label_CompanyType.Text = "Requirements        ";
             this.label_CompanyType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // richTextBox_Requirement
@@ -436,8 +436,8 @@
             this.button_Post.OverrideDefault.Border.Width = 1;
             this.button_Post.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.button_Post.Size = new System.Drawing.Size(135, 100);
-            this.button_Post.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_Post.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_Post.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.button_Post.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.button_Post.StateCommon.Back.ColorAngle = 45F;
             this.button_Post.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_post_68;
             this.button_Post.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
@@ -498,8 +498,8 @@
             this.button_Delete.OverrideDefault.Border.Width = 1;
             this.button_Delete.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.button_Delete.Size = new System.Drawing.Size(111, 100);
-            this.button_Delete.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_Delete.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_Delete.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.button_Delete.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.button_Delete.StateCommon.Back.ColorAngle = 45F;
             this.button_Delete.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_delete_64;
             this.button_Delete.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
@@ -560,7 +560,7 @@
             this.button_SeeCandidate.OverrideDefault.Border.Rounding = 20;
             this.button_SeeCandidate.OverrideDefault.Border.Width = 1;
             this.button_SeeCandidate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_SeeCandidate.Size = new System.Drawing.Size(313, 100);
+            this.button_SeeCandidate.Size = new System.Drawing.Size(163, 100);
             this.button_SeeCandidate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_SeeCandidate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_SeeCandidate.StateCommon.Back.ColorAngle = 45F;
@@ -600,12 +600,12 @@
             this.button_SeeCandidate.StateTracking.Border.Rounding = 20;
             this.button_SeeCandidate.StateTracking.Border.Width = 1;
             this.button_SeeCandidate.TabIndex = 20;
-            this.button_SeeCandidate.Values.Text = "Applied Candidate";
+            this.button_SeeCandidate.Values.Text = "Applied";
             this.button_SeeCandidate.Click += new System.EventHandler(this.button_SeeCandidate_Click);
             // 
             // button_ApprovedCandidate
             // 
-            this.button_ApprovedCandidate.Location = new System.Drawing.Point(580, 3);
+            this.button_ApprovedCandidate.Location = new System.Drawing.Point(430, 3);
             this.button_ApprovedCandidate.Name = "button_ApprovedCandidate";
             this.button_ApprovedCandidate.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_ApprovedCandidate.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -620,7 +620,7 @@
             this.button_ApprovedCandidate.OverrideDefault.Border.Rounding = 20;
             this.button_ApprovedCandidate.OverrideDefault.Border.Width = 1;
             this.button_ApprovedCandidate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_ApprovedCandidate.Size = new System.Drawing.Size(377, 100);
+            this.button_ApprovedCandidate.Size = new System.Drawing.Size(189, 100);
             this.button_ApprovedCandidate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_ApprovedCandidate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_ApprovedCandidate.StateCommon.Back.ColorAngle = 45F;
@@ -660,7 +660,7 @@
             this.button_ApprovedCandidate.StateTracking.Border.Rounding = 20;
             this.button_ApprovedCandidate.StateTracking.Border.Width = 1;
             this.button_ApprovedCandidate.TabIndex = 19;
-            this.button_ApprovedCandidate.Values.Text = "Approved Candidate";
+            this.button_ApprovedCandidate.Values.Text = "Approved";
             this.button_ApprovedCandidate.Click += new System.EventHandler(this.button_ApprovedCandidate_Click);
             // 
             // FEmployer_JobDetail

@@ -89,6 +89,33 @@ namespace Job_Application_Management
                 }
             }
         }
+
+        public string ExecuteReaderCount(string sqlStr)
+        {
+            string result = "0";
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            result = reader.GetInt32(0).ToString();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Read error\n" + ex.Message);
+                }
+            }
+            return result;
+        }
+
         public List<Dictionary<string, object>> ExecuteReaderData(string sqlStr)
         {
             List<Dictionary<string, object>> resultList = new List<Dictionary<string, object>>();
@@ -119,6 +146,7 @@ namespace Job_Application_Management
             }
             return resultList;
         }
+
         public List<Dictionary<string, object>> ExecuteReaderData(string sqlStr, SqlParameter[] lstParam)
         {
             List<Dictionary<string, object>> resultList = new List<Dictionary<string, object>>();

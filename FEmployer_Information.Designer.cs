@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.button_Save = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_Company = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox_Name = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.textBox_Email = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.flowLayoutPanel_Sex = new System.Windows.Forms.FlowLayoutPanel();
+            this.radioButton_Male = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.radioButton_Female = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label_ID = new System.Windows.Forms.Label();
             this.label_Sex = new System.Windows.Forms.Label();
             this.label_Workplace = new System.Windows.Forms.Label();
@@ -42,13 +44,10 @@
             this.label_Name = new System.Windows.Forms.Label();
             this.textBox_ID = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.textBox_PhoneNumber = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.flowLayoutPanel_Sex = new System.Windows.Forms.FlowLayoutPanel();
-            this.radioButton_Male = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.radioButton_Female = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.comboBox_Workplace = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel_Sex.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBox_Workplace)).BeginInit();
@@ -193,6 +192,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.17342F));
             this.tableLayoutPanel1.Controls.Add(this.textBox_Name, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox_Email, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel_Sex, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label_ID, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label_Sex, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.label_Workplace, 2, 2);
@@ -201,7 +201,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label_Name, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox_ID, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox_PhoneNumber, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel_Sex, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.comboBox_Workplace, 3, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -247,82 +246,139 @@
             this.textBox_Email.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
             this.textBox_Email.TabIndex = 9;
             // 
+            // flowLayoutPanel_Sex
+            // 
+            this.flowLayoutPanel_Sex.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.flowLayoutPanel_Sex.Controls.Add(this.radioButton_Male);
+            this.flowLayoutPanel_Sex.Controls.Add(this.radioButton_Female);
+            this.flowLayoutPanel_Sex.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel_Sex.Location = new System.Drawing.Point(1220, 185);
+            this.flowLayoutPanel_Sex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanel_Sex.Name = "flowLayoutPanel_Sex";
+            this.flowLayoutPanel_Sex.Padding = new System.Windows.Forms.Padding(100, 10, 250, 10);
+            this.flowLayoutPanel_Sex.Size = new System.Drawing.Size(500, 100);
+            this.flowLayoutPanel_Sex.TabIndex = 13;
+            // 
+            // radioButton_Male
+            // 
+            this.radioButton_Male.AutoSize = true;
+            this.radioButton_Male.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.radioButton_Male.CheckedState.BorderThickness = 0;
+            this.radioButton_Male.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.radioButton_Male.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.radioButton_Male.CheckedState.InnerOffset = -4;
+            this.radioButton_Male.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_Male.Image = global::Job_Application_Management.Properties.Resources.icons8_male_30;
+            this.radioButton_Male.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton_Male.Location = new System.Drawing.Point(103, 13);
+            this.radioButton_Male.Name = "radioButton_Male";
+            this.radioButton_Male.Size = new System.Drawing.Size(153, 37);
+            this.radioButton_Male.TabIndex = 2;
+            this.radioButton_Male.Text = "Male      ";
+            this.radioButton_Male.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton_Male.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.radioButton_Male.UncheckedState.BorderThickness = 2;
+            this.radioButton_Male.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.radioButton_Male.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // radioButton_Female
+            // 
+            this.radioButton_Female.AutoSize = true;
+            this.radioButton_Female.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.radioButton_Female.CheckedState.BorderThickness = 0;
+            this.radioButton_Female.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.radioButton_Female.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.radioButton_Female.CheckedState.InnerOffset = -4;
+            this.radioButton_Female.Font = new System.Drawing.Font("Century", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_Female.Image = global::Job_Application_Management.Properties.Resources.icons8_female_30;
+            this.radioButton_Female.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton_Female.Location = new System.Drawing.Point(103, 56);
+            this.radioButton_Female.Name = "radioButton_Female";
+            this.radioButton_Female.Size = new System.Drawing.Size(185, 37);
+            this.radioButton_Female.TabIndex = 3;
+            this.radioButton_Female.Text = "Female      ";
+            this.radioButton_Female.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton_Female.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.radioButton_Female.UncheckedState.BorderThickness = 2;
+            this.radioButton_Female.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.radioButton_Female.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
             // label_ID
             // 
             this.label_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_ID.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ID.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_ID.Image = global::Job_Application_Management.Properties.Resources.icons8_id_30;
             this.label_ID.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_ID.Location = new System.Drawing.Point(39, 48);
             this.label_ID.Name = "label_ID";
             this.label_ID.Size = new System.Drawing.Size(267, 60);
             this.label_ID.TabIndex = 0;
-            this.label_ID.Text = "ID    ";
+            this.label_ID.Text = "ID        ";
             this.label_ID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label_Sex
             // 
             this.label_Sex.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Sex.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Sex.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.label_Sex.Image = global::Job_Application_Management.Properties.Resources.icons8_gender_30;
             this.label_Sex.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_Sex.Location = new System.Drawing.Point(886, 219);
             this.label_Sex.Name = "label_Sex";
             this.label_Sex.Size = new System.Drawing.Size(298, 33);
             this.label_Sex.TabIndex = 3;
-            this.label_Sex.Text = "Gender    ";
+            this.label_Sex.Text = "Gender        ";
             this.label_Sex.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label_Workplace
             // 
             this.label_Workplace.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Workplace.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Workplace.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.label_Workplace.Image = global::Job_Application_Management.Properties.Resources.icons8_workplace_30;
             this.label_Workplace.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_Workplace.Location = new System.Drawing.Point(886, 376);
             this.label_Workplace.Name = "label_Workplace";
             this.label_Workplace.Size = new System.Drawing.Size(298, 33);
             this.label_Workplace.TabIndex = 5;
-            this.label_Workplace.Text = "Workplace    ";
+            this.label_Workplace.Text = "Workplace        ";
             this.label_Workplace.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label_Email
             // 
             this.label_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Email.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Email.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.label_Email.Image = global::Job_Application_Management.Properties.Resources.icons8_email_302;
             this.label_Email.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_Email.Location = new System.Drawing.Point(886, 48);
             this.label_Email.Name = "label_Email";
             this.label_Email.Size = new System.Drawing.Size(298, 60);
             this.label_Email.TabIndex = 4;
-            this.label_Email.Text = "Email    ";
+            this.label_Email.Text = "Email        ";
             this.label_Email.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label_Phone
             // 
             this.label_Phone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Phone.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Phone.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.label_Phone.Image = global::Job_Application_Management.Properties.Resources.icons8_phone_30__1_;
             this.label_Phone.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_Phone.Location = new System.Drawing.Point(39, 362);
             this.label_Phone.Name = "label_Phone";
             this.label_Phone.Size = new System.Drawing.Size(267, 60);
             this.label_Phone.TabIndex = 2;
-            this.label_Phone.Text = "Phone Number    ";
+            this.label_Phone.Text = "Phone Number        ";
             this.label_Phone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label_Name
             // 
             this.label_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Name.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Name.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.label_Name.Image = global::Job_Application_Management.Properties.Resources.icons8_name_30;
             this.label_Name.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label_Name.Location = new System.Drawing.Point(39, 205);
             this.label_Name.Name = "label_Name";
             this.label_Name.Size = new System.Drawing.Size(267, 60);
             this.label_Name.TabIndex = 1;
-            this.label_Name.Text = "Full Name    ";
+            this.label_Name.Text = "Full Name        ";
             this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox_ID
@@ -357,41 +413,6 @@
             this.textBox_PhoneNumber.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_PhoneNumber.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
             this.textBox_PhoneNumber.TabIndex = 11;
-            // 
-            // flowLayoutPanel_Sex
-            // 
-            this.flowLayoutPanel_Sex.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.flowLayoutPanel_Sex.Controls.Add(this.radioButton_Male);
-            this.flowLayoutPanel_Sex.Controls.Add(this.radioButton_Female);
-            this.flowLayoutPanel_Sex.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel_Sex.Location = new System.Drawing.Point(1220, 185);
-            this.flowLayoutPanel_Sex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flowLayoutPanel_Sex.Name = "flowLayoutPanel_Sex";
-            this.flowLayoutPanel_Sex.Padding = new System.Windows.Forms.Padding(100, 10, 250, 10);
-            this.flowLayoutPanel_Sex.Size = new System.Drawing.Size(500, 100);
-            this.flowLayoutPanel_Sex.TabIndex = 13;
-            // 
-            // radioButton_Male
-            // 
-            this.radioButton_Male.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton_Male.Location = new System.Drawing.Point(103, 12);
-            this.radioButton_Male.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton_Male.Name = "radioButton_Male";
-            this.radioButton_Male.Size = new System.Drawing.Size(91, 39);
-            this.radioButton_Male.StateCommon.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Male.TabIndex = 0;
-            this.radioButton_Male.Values.Text = "Male";
-            // 
-            // radioButton_Female
-            // 
-            this.radioButton_Female.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton_Female.Location = new System.Drawing.Point(103, 55);
-            this.radioButton_Female.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton_Female.Name = "radioButton_Female";
-            this.radioButton_Female.Size = new System.Drawing.Size(123, 39);
-            this.radioButton_Female.StateCommon.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Female.TabIndex = 1;
-            this.radioButton_Female.Values.Text = "Female";
             // 
             // comboBox_Workplace
             // 
@@ -432,17 +453,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1000, 141);
             this.guna2Panel1.TabIndex = 2;
             // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(119, 46);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(82, 34);
-            this.gunaLabel1.TabIndex = 19;
-            this.gunaLabel1.Text = "Save";
-            // 
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
@@ -454,6 +464,17 @@
             this.gunaLabel2.TabIndex = 19;
             this.gunaLabel2.Text = "Company";
             // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.gunaLabel1.Location = new System.Drawing.Point(119, 46);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(82, 34);
+            this.gunaLabel1.TabIndex = 19;
+            this.gunaLabel1.Text = "Save";
+            // 
             // FEmployer_Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -462,9 +483,9 @@
             this.ClientSize = new System.Drawing.Size(1753, 696);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FEmployer_Information";
-            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.Text = "FEmployer_Information";
             this.Load += new System.EventHandler(this.FEmployer_Information_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -492,12 +513,12 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Name;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_PhoneNumber;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Sex;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton radioButton_Male;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton radioButton_Female;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboBox_Workplace;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_Company;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI2.WinForms.Guna2RadioButton radioButton_Male;
+        private Guna.UI2.WinForms.Guna2RadioButton radioButton_Female;
     }
 }

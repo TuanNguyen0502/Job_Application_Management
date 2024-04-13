@@ -255,11 +255,20 @@ namespace Job_Application_Management
         public List<UC_EmployerJob> GetJobsFromDB(string empID)
         {
             string sqlQuery = $"SELECT Name, Salary, PostTime, ExpirationDate, ID FROM Jobs WHERE EmpID = '{empID}'";
+
             List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
             List<UC_EmployerJob> items = new List<UC_EmployerJob>();
+
             foreach (var row in resultList)
             {
+                string sqlQuery2 = $"SELECT Count(CddID) as SL " +
+                    $"FROM Resume " +
+                    $"WHERE JobID = '{(int)row["ID"]}' " +
+                    $"GROUP BY JobID";
+                string number = dbConnection.ExecuteReaderCount(sqlQuery2);
+
                 UC_EmployerJob item = new UC_EmployerJob(empID);
+                item.JobID = (int)row["ID"];
                 item.Label_JobName.Text = (string)row["Name"];
                 item.Label_Salary.Text += row["Salary"].ToString();
                 DateTime postTime = (DateTime)row["PostTime"];
@@ -268,7 +277,7 @@ namespace Job_Application_Management
                 DateTime deadline = (DateTime)row["ExpirationDate"];
                 string formattedDeadline = postTime.ToString("yyyy-MM-dd");
                 item.Label_Deadline.Text += formattedDeadline;
-                item.JobID = (int)row["ID"];
+                item.Label_NumberCandidates.Text += number;
                 items.Add(item);
             }
             return items;

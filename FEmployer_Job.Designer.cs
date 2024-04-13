@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Post = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel_Jobs = new System.Windows.Forms.FlowLayoutPanel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,6 +39,7 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Controls.Add(this.button_Post);
+            this.flowLayoutPanel1.Controls.Add(this.gunaLabel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -121,6 +122,18 @@
             this.flowLayoutPanel_Jobs.Size = new System.Drawing.Size(1266, 542);
             this.flowLayoutPanel_Jobs.TabIndex = 7;
             // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.gunaLabel1.Location = new System.Drawing.Point(150, 10);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Padding = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.gunaLabel1.Size = new System.Drawing.Size(195, 69);
+            this.gunaLabel1.TabIndex = 20;
+            this.gunaLabel1.Text = "Post new job";
+            // 
             // FEmployer_Job
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -129,11 +142,11 @@
             this.Controls.Add(this.flowLayoutPanel_Jobs);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "FEmployer_Job";
-            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
             this.Text = "Post Job";
             this.Load += new System.EventHandler(this.FEmployer_Job_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -142,5 +155,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_Post;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Jobs;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
     }
 }

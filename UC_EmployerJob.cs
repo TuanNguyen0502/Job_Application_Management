@@ -24,6 +24,7 @@ namespace Job_Application_Management
         public int JobID { get => jobID; set => jobID = value; }
         public Label Label_Salary { get => label_Salary; set => label_Salary = value; }
         public Label Label_Deadline { get => label_Deadline; set => label_Deadline = value; }
+        public Label Label_NumberCandidates { get => label_NumberCandidates; set => label_NumberCandidates = value; }
         public event EventHandler<ButtonClickEventArgs> Button_Delete_Click;
 
         public UC_EmployerJob(string empID)

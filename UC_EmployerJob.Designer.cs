@@ -34,6 +34,7 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label_Salary = new System.Windows.Forms.Label();
             this.label_Deadline = new System.Windows.Forms.Label();
+            this.label_NumberCandidates = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Edit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_delete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -57,23 +58,23 @@
             // label_PostedTime
             // 
             this.label_PostedTime.AutoSize = true;
-            this.label_PostedTime.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_PostedTime.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_PostedTime.ForeColor = System.Drawing.Color.Gray;
             this.label_PostedTime.Location = new System.Drawing.Point(13, 10);
             this.label_PostedTime.Name = "label_PostedTime";
-            this.label_PostedTime.Size = new System.Drawing.Size(164, 23);
+            this.label_PostedTime.Size = new System.Drawing.Size(77, 23);
             this.label_PostedTime.TabIndex = 0;
-            this.label_PostedTime.Text = "Posted ... ago";
+            this.label_PostedTime.Text = "Posted";
             // 
             // label_JobName
             // 
             this.label_JobName.AutoSize = true;
-            this.label_JobName.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_JobName.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_JobName.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label_JobName.Location = new System.Drawing.Point(13, 33);
+            this.label_JobName.Location = new System.Drawing.Point(96, 10);
             this.label_JobName.Name = "label_JobName";
             this.label_JobName.Padding = new System.Windows.Forms.Padding(10);
-            this.label_JobName.Size = new System.Drawing.Size(181, 57);
+            this.label_JobName.Size = new System.Drawing.Size(197, 58);
             this.label_JobName.TabIndex = 1;
             this.label_JobName.Text = "Job Name";
             // 
@@ -81,44 +82,57 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.label_Salary);
             this.flowLayoutPanel2.Controls.Add(this.label_Deadline);
+            this.flowLayoutPanel2.Controls.Add(this.label_NumberCandidates);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 100);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(381, 171);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(381, 208);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // label_Salary
             // 
-            this.label_Salary.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Salary.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Salary.Image = global::Job_Application_Management.Properties.Resources.icons8_salary_32;
             this.label_Salary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label_Salary.Location = new System.Drawing.Point(13, 10);
             this.label_Salary.Name = "label_Salary";
-            this.label_Salary.Size = new System.Drawing.Size(484, 60);
+            this.label_Salary.Size = new System.Drawing.Size(365, 60);
             this.label_Salary.TabIndex = 2;
-            this.label_Salary.Text = "    Salary: ";
+            this.label_Salary.Text = "      Salary: ";
             this.label_Salary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label_Deadline
             // 
-            this.label_Deadline.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Deadline.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.label_Deadline.Image = global::Job_Application_Management.Properties.Resources.icons8_deadline_32;
             this.label_Deadline.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label_Deadline.Location = new System.Drawing.Point(13, 70);
             this.label_Deadline.Name = "label_Deadline";
-            this.label_Deadline.Size = new System.Drawing.Size(484, 60);
+            this.label_Deadline.Size = new System.Drawing.Size(365, 60);
             this.label_Deadline.TabIndex = 3;
-            this.label_Deadline.Text = "    Deadline: ";
+            this.label_Deadline.Text = "      Deadline: ";
             this.label_Deadline.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label_NumberCandidates
+            // 
+            this.label_NumberCandidates.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.label_NumberCandidates.Image = global::Job_Application_Management.Properties.Resources.icons8_candidate_32;
+            this.label_NumberCandidates.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_NumberCandidates.Location = new System.Drawing.Point(13, 130);
+            this.label_NumberCandidates.Name = "label_NumberCandidates";
+            this.label_NumberCandidates.Size = new System.Drawing.Size(365, 60);
+            this.label_NumberCandidates.TabIndex = 3;
+            this.label_NumberCandidates.Text = "      Candidates: ";
+            this.label_NumberCandidates.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.button_Edit);
             this.flowLayoutPanel3.Controls.Add(this.button_delete);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 277);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 314);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel3.Size = new System.Drawing.Size(381, 100);
@@ -261,7 +275,7 @@
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "UC_EmployerJob";
-            this.Size = new System.Drawing.Size(381, 377);
+            this.Size = new System.Drawing.Size(381, 414);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -281,5 +295,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_delete;
         private System.Windows.Forms.Label label_Salary;
         private System.Windows.Forms.Label label_Deadline;
+        private System.Windows.Forms.Label label_NumberCandidates;
     }
 }

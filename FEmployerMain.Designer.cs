@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel_Left = new Guna.UI2.WinForms.Guna2Panel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.imgSlide = new System.Windows.Forms.PictureBox();
             this.button_Logout = new Guna.UI2.WinForms.Guna2Button();
             this.button_FindCandidate = new Guna.UI2.WinForms.Guna2Button();
             this.button_Job = new Guna.UI2.WinForms.Guna2Button();
             this.button_Information = new Guna.UI2.WinForms.Guna2Button();
             this.button_Home = new Guna.UI2.WinForms.Guna2Button();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel_Center = new Guna.UI2.WinForms.Guna2Panel();
             this.panel_Left.SuspendLayout();
@@ -58,17 +58,6 @@
             this.panel_Left.Name = "panel_Left";
             this.panel_Left.Size = new System.Drawing.Size(206, 660);
             this.panel_Left.TabIndex = 0;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(82, 12);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(122, 32);
-            this.gunaLabel1.TabIndex = 1;
-            this.gunaLabel1.Text = "Employer";
             // 
             // imgSlide
             // 
@@ -95,6 +84,7 @@
             this.button_Logout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.button_Logout.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.button_Logout.ForeColor = System.Drawing.Color.White;
+            this.button_Logout.Image = global::Job_Application_Management.Properties.Resources.icons8_logout_30;
             this.button_Logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.button_Logout.ImageOffset = new System.Drawing.Point(10, 0);
             this.button_Logout.Location = new System.Drawing.Point(10, 550);
@@ -120,6 +110,7 @@
             this.button_FindCandidate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.button_FindCandidate.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.button_FindCandidate.ForeColor = System.Drawing.Color.White;
+            this.button_FindCandidate.Image = global::Job_Application_Management.Properties.Resources.icons8_find_30;
             this.button_FindCandidate.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.button_FindCandidate.ImageOffset = new System.Drawing.Point(10, 0);
             this.button_FindCandidate.Location = new System.Drawing.Point(10, 442);
@@ -210,6 +201,17 @@
             this.button_Home.CheckedChanged += new System.EventHandler(this.button_Home_CheckedChanged);
             this.button_Home.Click += new System.EventHandler(this.button_Home_Click);
             // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel1.Location = new System.Drawing.Point(82, 12);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(122, 32);
+            this.gunaLabel1.TabIndex = 1;
+            this.gunaLabel1.Text = "Employer";
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_employer_64;
@@ -241,8 +243,9 @@
             this.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FEmployerMain";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EmployerMain";
+            this.Text = "Welcome Employer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel_Left.ResumeLayout(false);
             this.panel_Left.PerformLayout();
