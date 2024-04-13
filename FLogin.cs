@@ -112,7 +112,7 @@ namespace Job_Application_Management
                 }
                 if (radioButton_Employer.Checked)
                 {
-                    Program.MainFormManager.CurrentForm = new FEmployer("E001");
+                    Program.MainFormManager.CurrentForm = new FEmployerMain("E001");
                 }
             }
         }

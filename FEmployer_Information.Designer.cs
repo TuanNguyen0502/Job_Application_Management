@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.flowLayoutPanel_Bottom = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Save = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_Company = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -48,49 +46,19 @@
             this.radioButton_Male = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.radioButton_Female = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.comboBox_Workplace = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.flowLayoutPanel_Bottom.SuspendLayout();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel_Sex.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBox_Workplace)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // kryptonPalette1
-            // 
-            this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPalette1.ButtonStyles.ButtonForm.StateNormal.Border.Width = 0;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
-            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Rounding = 12;
-            this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
-            this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
-            // 
-            // flowLayoutPanel_Bottom
-            // 
-            this.flowLayoutPanel_Bottom.Controls.Add(this.button_Save);
-            this.flowLayoutPanel_Bottom.Controls.Add(this.button_Company);
-            this.flowLayoutPanel_Bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel_Bottom.Location = new System.Drawing.Point(0, 476);
-            this.flowLayoutPanel_Bottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flowLayoutPanel_Bottom.Name = "flowLayoutPanel_Bottom";
-            this.flowLayoutPanel_Bottom.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.flowLayoutPanel_Bottom.Size = new System.Drawing.Size(1753, 108);
-            this.flowLayoutPanel_Bottom.TabIndex = 0;
             // 
             // button_Save
             // 
             this.button_Save.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_Save.Location = new System.Drawing.Point(13, 2);
+            this.button_Save.Location = new System.Drawing.Point(13, 12);
             this.button_Save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Save.Name = "button_Save";
             this.button_Save.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -106,9 +74,9 @@
             this.button_Save.OverrideDefault.Border.Rounding = 20;
             this.button_Save.OverrideDefault.Border.Width = 1;
             this.button_Save.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_Save.Size = new System.Drawing.Size(135, 100);
-            this.button_Save.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_Save.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_Save.Size = new System.Drawing.Size(100, 100);
+            this.button_Save.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.button_Save.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.button_Save.StateCommon.Back.ColorAngle = 45F;
             this.button_Save.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_save_64;
             this.button_Save.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
@@ -154,7 +122,7 @@
             // button_Company
             // 
             this.button_Company.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_Company.Location = new System.Drawing.Point(154, 2);
+            this.button_Company.Location = new System.Drawing.Point(290, 12);
             this.button_Company.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Company.Name = "button_Company";
             this.button_Company.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -170,9 +138,9 @@
             this.button_Company.OverrideDefault.Border.Rounding = 20;
             this.button_Company.OverrideDefault.Border.Width = 1;
             this.button_Company.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_Company.Size = new System.Drawing.Size(135, 100);
-            this.button_Company.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_Company.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_Company.Size = new System.Drawing.Size(100, 100);
+            this.button_Company.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.button_Company.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.button_Company.StateCommon.Back.ColorAngle = 45F;
             this.button_Company.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_company_64;
             this.button_Company.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
@@ -217,9 +185,10 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.5733F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.85453F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.73759F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.6332F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.39874F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.17342F));
             this.tableLayoutPanel1.Controls.Add(this.textBox_Name, 1, 1);
@@ -248,7 +217,7 @@
             // textBox_Name
             // 
             this.textBox_Name.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Name.Location = new System.Drawing.Point(328, 207);
+            this.textBox_Name.Location = new System.Drawing.Point(364, 207);
             this.textBox_Name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.Size = new System.Drawing.Size(500, 57);
@@ -284,7 +253,7 @@
             this.label_ID.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_ID.Image = global::Job_Application_Management.Properties.Resources.icons8_id_30;
             this.label_ID.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_ID.Location = new System.Drawing.Point(3, 48);
+            this.label_ID.Location = new System.Drawing.Point(39, 48);
             this.label_ID.Name = "label_ID";
             this.label_ID.Size = new System.Drawing.Size(267, 60);
             this.label_ID.TabIndex = 0;
@@ -297,7 +266,7 @@
             this.label_Sex.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Sex.Image = global::Job_Application_Management.Properties.Resources.icons8_gender_30;
             this.label_Sex.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Sex.Location = new System.Drawing.Point(887, 219);
+            this.label_Sex.Location = new System.Drawing.Point(886, 219);
             this.label_Sex.Name = "label_Sex";
             this.label_Sex.Size = new System.Drawing.Size(298, 33);
             this.label_Sex.TabIndex = 3;
@@ -310,7 +279,7 @@
             this.label_Workplace.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Workplace.Image = global::Job_Application_Management.Properties.Resources.icons8_workplace_30;
             this.label_Workplace.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Workplace.Location = new System.Drawing.Point(887, 376);
+            this.label_Workplace.Location = new System.Drawing.Point(886, 376);
             this.label_Workplace.Name = "label_Workplace";
             this.label_Workplace.Size = new System.Drawing.Size(298, 33);
             this.label_Workplace.TabIndex = 5;
@@ -323,7 +292,7 @@
             this.label_Email.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Email.Image = global::Job_Application_Management.Properties.Resources.icons8_email_302;
             this.label_Email.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Email.Location = new System.Drawing.Point(887, 48);
+            this.label_Email.Location = new System.Drawing.Point(886, 48);
             this.label_Email.Name = "label_Email";
             this.label_Email.Size = new System.Drawing.Size(298, 60);
             this.label_Email.TabIndex = 4;
@@ -336,7 +305,7 @@
             this.label_Phone.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Phone.Image = global::Job_Application_Management.Properties.Resources.icons8_phone_30__1_;
             this.label_Phone.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Phone.Location = new System.Drawing.Point(3, 362);
+            this.label_Phone.Location = new System.Drawing.Point(39, 362);
             this.label_Phone.Name = "label_Phone";
             this.label_Phone.Size = new System.Drawing.Size(267, 60);
             this.label_Phone.TabIndex = 2;
@@ -349,7 +318,7 @@
             this.label_Name.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Name.Image = global::Job_Application_Management.Properties.Resources.icons8_name_30;
             this.label_Name.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Name.Location = new System.Drawing.Point(3, 205);
+            this.label_Name.Location = new System.Drawing.Point(39, 205);
             this.label_Name.Name = "label_Name";
             this.label_Name.Size = new System.Drawing.Size(267, 60);
             this.label_Name.TabIndex = 1;
@@ -359,7 +328,7 @@
             // textBox_ID
             // 
             this.textBox_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_ID.Location = new System.Drawing.Point(328, 50);
+            this.textBox_ID.Location = new System.Drawing.Point(364, 50);
             this.textBox_ID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_ID.Name = "textBox_ID";
             this.textBox_ID.ReadOnly = true;
@@ -376,7 +345,7 @@
             // textBox_PhoneNumber
             // 
             this.textBox_PhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_PhoneNumber.Location = new System.Drawing.Point(328, 364);
+            this.textBox_PhoneNumber.Location = new System.Drawing.Point(364, 364);
             this.textBox_PhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_PhoneNumber.Name = "textBox_PhoneNumber";
             this.textBox_PhoneNumber.Size = new System.Drawing.Size(500, 57);
@@ -451,33 +420,65 @@
             this.comboBox_Workplace.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_Workplace.TabIndex = 14;
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.gunaLabel2);
+            this.guna2Panel1.Controls.Add(this.gunaLabel1);
+            this.guna2Panel1.Controls.Add(this.button_Save);
+            this.guna2Panel1.Controls.Add(this.button_Company);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 496);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Padding = new System.Windows.Forms.Padding(10);
+            this.guna2Panel1.Size = new System.Drawing.Size(1000, 141);
+            this.guna2Panel1.TabIndex = 2;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.gunaLabel1.Location = new System.Drawing.Point(119, 46);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(82, 34);
+            this.gunaLabel1.TabIndex = 19;
+            this.gunaLabel1.Text = "Save";
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.gunaLabel2.Location = new System.Drawing.Point(396, 46);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(150, 34);
+            this.gunaLabel2.TabIndex = 19;
+            this.gunaLabel2.Text = "Company";
+            // 
             // FEmployer_Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1753, 584);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1753, 696);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.flowLayoutPanel_Bottom);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FEmployer_Information";
-            this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.Text = "FEmployer_Information";
             this.Load += new System.EventHandler(this.FEmployer_Information_Load);
-            this.flowLayoutPanel_Bottom.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel_Sex.ResumeLayout(false);
             this.flowLayoutPanel_Sex.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBox_Workplace)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Bottom;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_Save;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label_ID;
@@ -495,5 +496,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton radioButton_Female;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboBox_Workplace;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_Company;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
     }
 }

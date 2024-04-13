@@ -49,7 +49,7 @@
       <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\Visual Studio Code\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+      <HintPath>..\..\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
@@ -80,6 +80,12 @@
     <Compile Include="DBConnection.cs" />
     <Compile Include="Employer.cs" />
     <Compile Include="EmployerDAO.cs" />
+    <Compile Include="FEmployerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployerMain.Designer.cs">
+      <DependentUpon>FEmployerMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCandidate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +302,9 @@
     <Compile Include="UC_Resume_Experience.Designer.cs">
       <DependentUpon>UC_Resume_Experience.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FEmployerMain.resx">
+      <DependentUpon>FEmployerMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCandidate.resx">
       <DependentUpon>FCandidate.cs</DependentUpon>
     </EmbeddedResource>
@@ -810,10 +819,19 @@
     <None Include="Resources\icons8-home-302.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-company-1001.png" />
+    <None Include="Resources\icons8-home-303.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-company-96.png" />
+    <None Include="Resources\icons8-information-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-job-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-find-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
