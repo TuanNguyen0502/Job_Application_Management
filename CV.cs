@@ -57,7 +57,7 @@ namespace Job_Application_Management
             CddEmail=cddEmail;
             CddPhone=cddPhone;
         }
-        public CV (string cddID, string objective, string universityName, string major, string gpa, string companyName, string workPlace, string certificationName)
+        public CV (string cddID, string objective, string universityName, string major, string gpa, string companyName, string workPlace, string certificationName, string cddName)
         {
             CddID=cddID;
             this.objective=objective;
@@ -67,7 +67,7 @@ namespace Job_Application_Management
             this.companyName=companyName;
             this.workPlace=workPlace;
             this.certification=certificationName;
-
+            this.cddName=cddName;
         }
         public CV() { }
 

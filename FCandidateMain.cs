@@ -57,28 +57,32 @@ namespace Job_Application_Management
         {
             ListJobs();
         }
+        private void CheckJobsSavedAndPushIntoFLP(UC_CandidateMain candidateMain)
+        {
+            List<UC_JobsSaved> jobSaveds = canDAO.GetSavedJobsFromDB();
+            foreach (var jobSaved in jobSaveds)
+            {
+                if (candidateMain.JobID == jobSaved.JobID)
+                {
+                    candidateMain.BtnApply.Enabled = false;
+                    candidateMain.BtnApply.BackColor = Color.LightGreen;
+                    break;
+                }
+            }
+            flp_ContainsJobs.Controls.Add(candidateMain);
+            candidateMain.ClickToJob += clickToShowJobDetails_Click;
+            candidateMain.Lbl_Salary += clickToShowJobDetails_Click;
+            candidateMain.Lbl_Address += clickToShowJobDetails_Click;
+            candidateMain.Lbl_JobName += clickToShowJobDetails_Click;
+            candidateMain.Lbl_CompanyName += clickToShowJobDetails_Click;
+            candidateMain.Cptb_Company += clickToShowJobDetails_Click;
+        }
         public void ListJobs()
         {
             List<UC_CandidateMain> jobItems = canDAO.GetJobsFromDB(lblCddID.Text);
             foreach (var jobItem in jobItems)
             {
-                List<UC_JobsSaved> jobSaveds = canDAO.GetSavedJobsFromDB();
-                foreach (var jobSaved in jobSaveds)
-                {
-                    if (jobItem.JobID == jobSaved.JobID)
-                    {
-                        jobItem.BtnApply.Enabled = false;
-                        jobItem.BtnApply.BackColor = Color.LightGreen;
-                        break;
-                    }
-                }
-                flp_ContainsJobs.Controls.Add(jobItem);
-                jobItem.ClickToJob += clickToShowJobDetails_Click;
-                jobItem.Lbl_Salary += clickToShowJobDetails_Click;
-                jobItem.Lbl_Address += clickToShowJobDetails_Click;
-                jobItem.Lbl_JobName += clickToShowJobDetails_Click;
-                jobItem.Lbl_CompanyName += clickToShowJobDetails_Click;
-                jobItem.Cptb_Company += clickToShowJobDetails_Click;
+                CheckJobsSavedAndPushIntoFLP(jobItem);
             }
         }
         private void clickToShowJobDetails_Click(object sender, ButtonClickEventArgs e)
@@ -97,7 +101,7 @@ namespace Job_Application_Management
                 List<UC_CandidateMain> jobItems = canDAO.GetJobsByKeywords(txt_SearchFor.Text);
                 foreach (var jobItem in jobItems)
                 {
-                    flp_ContainsJobs.Controls.Add(jobItem);
+                    CheckJobsSavedAndPushIntoFLP(jobItem);
                 }
             }
         }
@@ -113,7 +117,7 @@ namespace Job_Application_Management
                 List<UC_CandidateMain> jobItems = canDAO.GetJobsByAddress(cbb_Address.SelectedItem.ToString());
                 foreach (var jobItem in jobItems)
                 {
-                    flp_ContainsJobs.Controls.Add(jobItem);
+                    CheckJobsSavedAndPushIntoFLP(jobItem);
                 }
             }
             else
@@ -163,10 +167,17 @@ namespace Job_Application_Management
 
         private void btn_Posting_Click(object sender, EventArgs e)
         {
+            flp_ContainsJobs.Controls.Clear();
             UC_Introduction introduction = new UC_Introduction();
             introduction.Btn_ResponeFindJobs += btn_ResponeFindJobs_Click;
             flp_ContainsJobs.Controls.Add(introduction);
             OpenChildForm(new FCandidate_PostFindJob());
+        }
+
+        private void btn_LogOut_Click_1(object sender, EventArgs e)
+        {
+            Program.MainFormManager.CurrentForm = new FLogin();
+
         }
     }
 }

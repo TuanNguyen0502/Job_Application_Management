@@ -18,35 +18,48 @@ namespace Job_Application_Management
         {
             InitializeComponent();
             this.cddId = cddId;
-            uC_CoverLetter1.ButtonPostJob += btnAddPostJob_Click;
-            uC_CoverLetter1.ButtonEditPostJob += btnEditPostJob_Click;
-            uC_CoverLetter1.ButtonRemovePostJob += btnRemovePostJob_Click;
         }
         public FCandidate_PostFindJob()
         {
             InitializeComponent();
+            flp_ContainsHistory.Controls.Clear();
+            List<UC_WorkHistory> historys = canDAO.GetWorkHistory();
+            foreach (var history in historys)
+            {
+                flp_ContainsHistory.Controls.Add(history);
+            }
+        }
+        public CandidateProfile GetCandidateProfileToCoverLetter()
+        {
+            CandidateProfile canProfile = new CandidateProfile();
+            canProfile.Objective = ktxt_CarrerGoal.Text;
+            canProfile.UniversityName = ktxt_UName.Text;
+            canProfile.Major = ktxt_Major.Text;
+            canProfile.Gpa = ktxt_Gpa.Text;
+            canProfile.CompanyName = ktxt_ComName.Text;
+            canProfile.WorkPlace = ktxt_Nominee.Text;
+            canProfile.Certification = ktxt_Certification.Text;
+            return canProfile;
         }
 
-        private void uC_CoverLetter1_Load(object sender, EventArgs e)
+        private void btn_Post_Click(object sender, EventArgs e)
         {
-
+            CandidateProfile canProfile = GetCandidateProfileToCoverLetter();
+            canDAO.AddJobPosting(canProfile, cddId);
         }
 
-        private void btnAddPostJob_Click(object sender, EventArgs args)
+        private void btn_Edit_Click(object sender, EventArgs e)
         {
-            CandidateProfile canProfile = uC_CoverLetter1.GetCandidateProfileToCoverLetter();
-            if(uC_CoverLetter1.CheckNullAtCoverLetter())
-                canDAO.AddJobPosting(canProfile, cddId);
-        }
-        private void btnEditPostJob_Click(object sender, EventArgs args)
-        {
-            CandidateProfile canProfile = uC_CoverLetter1.GetCandidateProfileToCoverLetter();
+            CandidateProfile canProfile = GetCandidateProfileToCoverLetter();
             canDAO.EditJobPosting(canProfile, cddId);
         }
-        private void btnRemovePostJob_Click(object sender, EventArgs args)
+
+        private void btn_Remove_Click(object sender, EventArgs e)
         {
-            CandidateProfile canProfile = uC_CoverLetter1.GetCandidateProfileToCoverLetter();
+            CandidateProfile canProfile = GetCandidateProfileToCoverLetter();
             canDAO.RemoveJobPosting(canProfile.WorkPlace, cddId);
         }
+
+
     }
 }

@@ -9,7 +9,7 @@ namespace Job_Application_Management
     public class CandidateProfile : CV
     {
         private DateTime postDate;
-        public CandidateProfile(string cddID, string objective, string universityName, string major, string gpa, string companyName, string workPlace, string certificationName, DateTime postDate) : base(cddID, objective, universityName, major, gpa, companyName, workPlace, certificationName)
+        public CandidateProfile(string cddID, string objective, string universityName, string major, string gpa, string companyName, string workPlace, string certificationName, DateTime postDate, string cddName) : base(cddID, objective, universityName, major, gpa, companyName, workPlace, certificationName, cddName)
         {
             this.postDate = postDate;
         }

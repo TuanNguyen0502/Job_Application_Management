@@ -358,5 +358,25 @@ namespace Job_Application_Management
             };
             dbConn.ExecuteDeleteData(sqlQuery, lstParams);
         }
+        public List<UC_WorkHistory> GetWorkHistory()
+        {
+            sqlQuery = "SELECT wh.CandidateID, cdd.CddName, wh.CompanyName, wh.StartDate, wh.EndDate"
+                      +" FROM WorkHistory wh"
+                      + " JOIN Candidates cdd ON wh.CandidateID = cdd.CddID";
+            List<UC_WorkHistory> lstWorkHistory = new List<UC_WorkHistory>();
+            List<Dictionary<string, object>> keyValuePairs = dbConn.ExecuteReaderData(sqlQuery);
+            foreach (var keyValuePair in keyValuePairs)
+            {
+                CandidateProfile candidateProfile = new CandidateProfile();
+                candidateProfile.CddID = (string)keyValuePair["CandidateID"];
+                candidateProfile.CompanyName = (string)keyValuePair["CompanyName"];
+                candidateProfile.CddName = (string)keyValuePair["CddName"];
+                candidateProfile.CompanyStartDate = (DateTime)keyValuePair["StartDate"];
+                candidateProfile.CompanyEndDate = (DateTime)keyValuePair["EndDate"];
+                UC_WorkHistory uC_WorkHistory = new UC_WorkHistory(candidateProfile);
+                lstWorkHistory.Add(uC_WorkHistory);
+            }
+            return lstWorkHistory;
+        }
     }
 }
