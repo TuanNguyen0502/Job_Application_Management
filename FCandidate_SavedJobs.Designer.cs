@@ -36,19 +36,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdb_Tallest = new System.Windows.Forms.RadioButton();
+            this.rdb_Lately = new System.Windows.Forms.RadioButton();
+            this.rdb_Nearly = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.flpStoreUC = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.uC_JobsSaved1 = new Job_Application_Management.UC_JobsSaved();
             this.pnl_Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.flpStoreUC.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Main
@@ -124,47 +122,50 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.radioButton3);
-            this.panel5.Controls.Add(this.radioButton2);
-            this.panel5.Controls.Add(this.radioButton1);
+            this.panel5.Controls.Add(this.rdb_Tallest);
+            this.panel5.Controls.Add(this.rdb_Lately);
+            this.panel5.Controls.Add(this.rdb_Nearly);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Location = new System.Drawing.Point(3, 167);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(848, 47);
             this.panel5.TabIndex = 6;
             // 
-            // radioButton3
+            // rdb_Tallest
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(519, 13);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(119, 20);
-            this.radioButton3.TabIndex = 4;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Lương cao nhất";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdb_Tallest.AutoSize = true;
+            this.rdb_Tallest.Location = new System.Drawing.Point(519, 13);
+            this.rdb_Tallest.Name = "rdb_Tallest";
+            this.rdb_Tallest.Size = new System.Drawing.Size(119, 20);
+            this.rdb_Tallest.TabIndex = 4;
+            this.rdb_Tallest.TabStop = true;
+            this.rdb_Tallest.Text = "Lương cao nhất";
+            this.rdb_Tallest.UseVisualStyleBackColor = true;
+            this.rdb_Tallest.CheckedChanged += new System.EventHandler(this.rdb_Tallest_CheckedChanged);
             // 
-            // radioButton2
+            // rdb_Lately
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(353, 14);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(114, 20);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Cần tuyển gấp";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdb_Lately.AutoSize = true;
+            this.rdb_Lately.Location = new System.Drawing.Point(353, 14);
+            this.rdb_Lately.Name = "rdb_Lately";
+            this.rdb_Lately.Size = new System.Drawing.Size(114, 20);
+            this.rdb_Lately.TabIndex = 3;
+            this.rdb_Lately.TabStop = true;
+            this.rdb_Lately.Text = "Cần tuyển gấp";
+            this.rdb_Lately.UseVisualStyleBackColor = true;
+            this.rdb_Lately.CheckedChanged += new System.EventHandler(this.rdb_Lately_CheckedChanged);
             // 
-            // radioButton1
+            // rdb_Nearly
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(185, 14);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(135, 20);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Cập nhật gần nhất";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdb_Nearly.AutoSize = true;
+            this.rdb_Nearly.Location = new System.Drawing.Point(185, 14);
+            this.rdb_Nearly.Name = "rdb_Nearly";
+            this.rdb_Nearly.Size = new System.Drawing.Size(135, 20);
+            this.rdb_Nearly.TabIndex = 2;
+            this.rdb_Nearly.TabStop = true;
+            this.rdb_Nearly.Text = "Cập nhật gần nhất";
+            this.rdb_Nearly.UseVisualStyleBackColor = true;
+            this.rdb_Nearly.CheckedChanged += new System.EventHandler(this.rdb_Nearly_CheckedChanged);
             // 
             // label2
             // 
@@ -179,7 +180,6 @@
             // flpStoreUC
             // 
             this.flpStoreUC.AutoScroll = true;
-            this.flpStoreUC.Controls.Add(this.uC_JobsSaved1);
             this.flpStoreUC.Location = new System.Drawing.Point(3, 220);
             this.flpStoreUC.Name = "flpStoreUC";
             this.flpStoreUC.Size = new System.Drawing.Size(839, 405);
@@ -189,22 +189,6 @@
             // 
             this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // uC_JobsSaved1
-            // 
-            this.uC_JobsSaved1.Address = null;
-            this.uC_JobsSaved1.BackColor = System.Drawing.Color.GhostWhite;
-            this.uC_JobsSaved1.ComName = null;
-            this.uC_JobsSaved1.DescriptionJob = null;
-            this.uC_JobsSaved1.Icon = null;
-            this.uC_JobsSaved1.ID = null;
-            this.uC_JobsSaved1.JobID = 0;
-            this.uC_JobsSaved1.Location = new System.Drawing.Point(3, 3);
-            this.uC_JobsSaved1.Name = "uC_JobsSaved1";
-            this.uC_JobsSaved1.Salary = 0;
-            this.uC_JobsSaved1.Size = new System.Drawing.Size(797, 174);
-            this.uC_JobsSaved1.TabIndex = 0;
-            this.uC_JobsSaved1.TimeSaved = new System.DateTime(((long)(0)));
             // 
             // FCandidate_SavedJobs
             // 
@@ -225,7 +209,6 @@
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.flpStoreUC.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -240,11 +223,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdb_Tallest;
+        private System.Windows.Forms.RadioButton rdb_Lately;
+        private System.Windows.Forms.RadioButton rdb_Nearly;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flpStoreUC;
-        private UC_JobsSaved uC_JobsSaved1;
     }
 }

@@ -40,7 +40,20 @@ namespace Job_Application_Management
             this.cddid = cddid;
             InitializeComponent();
             GetDataFromDB();
-            
+            CheckAppliedJobsAfterPushIntoPanle();
+        }
+        public void CheckAppliedJobsAfterPushIntoPanle()
+        {
+            List<UC_AppliedJobs> appliedJobs = canDAO.GetAppliedJobsFromDB();
+            foreach (var applied in appliedJobs)
+            {
+                if (jobid == applied.JobID)
+                {
+                    btnApply.Enabled = false;
+                    btnApply.BackColor = Color.Gray;
+                    break;
+                }
+            }
         }
         public void GetDataFromDB()
         {

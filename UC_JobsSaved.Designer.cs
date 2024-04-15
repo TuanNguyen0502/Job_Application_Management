@@ -34,7 +34,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblTimeSaved = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.lblTimeUpdate = new System.Windows.Forms.Label();
+            this.lbl_TimePost = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnRusbish = new System.Windows.Forms.Button();
@@ -82,11 +82,11 @@
             // lblTimeSaved
             // 
             this.lblTimeSaved.AutoSize = true;
-            this.lblTimeSaved.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeSaved.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimeSaved.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblTimeSaved.Location = new System.Drawing.Point(147, 99);
             this.lblTimeSaved.Name = "lblTimeSaved";
-            this.lblTimeSaved.Size = new System.Drawing.Size(101, 20);
+            this.lblTimeSaved.Size = new System.Drawing.Size(92, 19);
             this.lblTimeSaved.TabIndex = 3;
             this.lblTimeSaved.Text = "Thời điểm lưu";
             // 
@@ -103,16 +103,16 @@
             this.lblAddress.Text = "       Địa điểm";
             this.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblTimeUpdate
+            // lbl_TimePost
             // 
-            this.lblTimeUpdate.AutoSize = true;
-            this.lblTimeUpdate.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTimeUpdate.Location = new System.Drawing.Point(344, 137);
-            this.lblTimeUpdate.Name = "lblTimeUpdate";
-            this.lblTimeUpdate.Size = new System.Drawing.Size(116, 17);
-            this.lblTimeUpdate.TabIndex = 10;
-            this.lblTimeUpdate.Text = "Thời gian cập nhật";
+            this.lbl_TimePost.AutoSize = true;
+            this.lbl_TimePost.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TimePost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_TimePost.Location = new System.Drawing.Point(312, 95);
+            this.lbl_TimePost.Name = "lbl_TimePost";
+            this.lbl_TimePost.Size = new System.Drawing.Size(202, 23);
+            this.lbl_TimePost.TabIndex = 10;
+            this.lbl_TimePost.Text = "Thời gian công việc đăng";
             // 
             // guna2Elipse1
             // 
@@ -167,7 +167,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblTimeUpdate);
+            this.Controls.Add(this.lbl_TimePost);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnRusbish);
@@ -192,7 +192,7 @@
         private System.Windows.Forms.Button btnRusbish;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label lblTimeUpdate;
+        private System.Windows.Forms.Label lbl_TimePost;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox1;
     }

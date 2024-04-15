@@ -36,9 +36,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbd_TallestSalary = new System.Windows.Forms.RadioButton();
+            this.rdb_Lately = new System.Windows.Forms.RadioButton();
+            this.rdb_Nearly = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.flpStoreUC = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -56,9 +56,10 @@
             // 
             this.kryptonPanel1.Controls.Add(this.label4);
             this.kryptonPanel1.Controls.Add(this.label3);
-            this.kryptonPanel1.Location = new System.Drawing.Point(8, 8);
+            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(835, 103);
+            this.kryptonPanel1.Size = new System.Drawing.Size(846, 103);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
             this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
             this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(157)))), ((int)(((byte)(76)))));
@@ -95,9 +96,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(8, 117);
+            this.panel3.Location = new System.Drawing.Point(0, 108);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(835, 49);
+            this.panel3.Size = new System.Drawing.Size(843, 49);
             this.panel3.TabIndex = 8;
             // 
             // label1
@@ -113,47 +114,50 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.radioButton3);
-            this.panel5.Controls.Add(this.radioButton2);
-            this.panel5.Controls.Add(this.radioButton1);
+            this.panel5.Controls.Add(this.rbd_TallestSalary);
+            this.panel5.Controls.Add(this.rdb_Lately);
+            this.panel5.Controls.Add(this.rdb_Nearly);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(8, 172);
+            this.panel5.Location = new System.Drawing.Point(0, 163);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(835, 47);
+            this.panel5.Size = new System.Drawing.Size(846, 47);
             this.panel5.TabIndex = 6;
             // 
-            // radioButton3
+            // rbd_TallestSalary
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(519, 13);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(119, 20);
-            this.radioButton3.TabIndex = 4;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Lương cao nhất";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbd_TallestSalary.AutoSize = true;
+            this.rbd_TallestSalary.Location = new System.Drawing.Point(519, 13);
+            this.rbd_TallestSalary.Name = "rbd_TallestSalary";
+            this.rbd_TallestSalary.Size = new System.Drawing.Size(119, 20);
+            this.rbd_TallestSalary.TabIndex = 4;
+            this.rbd_TallestSalary.TabStop = true;
+            this.rbd_TallestSalary.Text = "Lương cao nhất";
+            this.rbd_TallestSalary.UseVisualStyleBackColor = true;
+            this.rbd_TallestSalary.CheckedChanged += new System.EventHandler(this.rbd_TallestSalary_CheckedChanged);
             // 
-            // radioButton2
+            // rdb_Lately
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(353, 14);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(114, 20);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Cần tuyển gấp";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdb_Lately.AutoSize = true;
+            this.rdb_Lately.Location = new System.Drawing.Point(353, 14);
+            this.rdb_Lately.Name = "rdb_Lately";
+            this.rdb_Lately.Size = new System.Drawing.Size(114, 20);
+            this.rdb_Lately.TabIndex = 3;
+            this.rdb_Lately.TabStop = true;
+            this.rdb_Lately.Text = "Cần tuyển gấp";
+            this.rdb_Lately.UseVisualStyleBackColor = true;
+            this.rdb_Lately.CheckedChanged += new System.EventHandler(this.rdb_Lately_CheckedChanged);
             // 
-            // radioButton1
+            // rdb_Nearly
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(185, 14);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(135, 20);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Cập nhật gần nhất";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdb_Nearly.AutoSize = true;
+            this.rdb_Nearly.Location = new System.Drawing.Point(185, 14);
+            this.rdb_Nearly.Name = "rdb_Nearly";
+            this.rdb_Nearly.Size = new System.Drawing.Size(135, 20);
+            this.rdb_Nearly.TabIndex = 2;
+            this.rdb_Nearly.TabStop = true;
+            this.rdb_Nearly.Text = "Cập nhật gần nhất";
+            this.rdb_Nearly.UseVisualStyleBackColor = true;
+            this.rdb_Nearly.CheckedChanged += new System.EventHandler(this.rdb_Nearly_CheckedChanged);
             // 
             // label2
             // 
@@ -168,20 +172,20 @@
             // flpStoreUC
             // 
             this.flpStoreUC.AutoScroll = true;
-            this.flpStoreUC.Location = new System.Drawing.Point(8, 225);
+            this.flpStoreUC.Location = new System.Drawing.Point(8, 216);
             this.flpStoreUC.Name = "flpStoreUC";
-            this.flpStoreUC.Size = new System.Drawing.Size(811, 467);
+            this.flpStoreUC.Size = new System.Drawing.Size(811, 480);
             this.flpStoreUC.TabIndex = 9;
             // 
             // FCandidate_AppliedJobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 708);
+            this.ClientSize = new System.Drawing.Size(846, 708);
             this.Controls.Add(this.kryptonPanel1);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.flpStoreUC);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FCandidate_AppliedJobs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -206,9 +210,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbd_TallestSalary;
+        private System.Windows.Forms.RadioButton rdb_Lately;
+        private System.Windows.Forms.RadioButton rdb_Nearly;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flpStoreUC;
     }

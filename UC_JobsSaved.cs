@@ -17,7 +17,7 @@ namespace Job_Application_Management
         private string comName;
         private DateTime timeSaved;
         private string address;
-        private string timeUpdate;
+        private DateTime timePost;
         private int salary;
         private Image icon;
         private int jobId;
@@ -46,6 +46,11 @@ namespace Job_Application_Management
                 timeSaved = value; lblTimeSaved.Text = $"Đã lưu: {value}";
                 
             }
+        }
+        public DateTime TimePost
+        {
+            get => timePost;
+            set { timePost = value; lbl_TimePost.Text = $"Đã đăng: {value}"; }
         }
         public string Address 
         { 

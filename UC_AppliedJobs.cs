@@ -15,12 +15,12 @@ namespace Job_Application_Management
         #region Properties
         private string descriptionJob;
         private string comName;
-        private DateTime timeSaved;
+        private DateTime timeApply;
         private string address;
-        private string timeUpdate;
+        private DateTime timePost;
         private int salary;
         private Image icon;
-        private string jobId;
+        private int jobId;
         private string id;
         public string DescriptionJob
         {
@@ -32,10 +32,15 @@ namespace Job_Application_Management
             get => comName;
             set { comName = value; lblComName.Text = $"      {value}"; }
         }
-        public DateTime TimeSaved
+        public DateTime TimeApply
         {
-            get => timeSaved;
-            set { timeSaved = value; lblTimeSaved.Text = $"Đã lưu: {value}"; }
+            get => timeApply;
+            set { timeApply = value; lblTimeSaved.Text = $"Đã lưu: {DateTime.Now}"; }
+        }
+        public DateTime TimePost
+        {
+            get => timePost;
+            set { timePost = value;  lbl_PostTime.Text = $"Đã đăng: {value}"; }
         }
         public string Address
         {
@@ -52,7 +57,7 @@ namespace Job_Application_Management
             get => icon;
             set { icon = value; pictureBox1.Image = value; }
         }
-        public string JobID
+        public int JobID
         {
             get { return jobId; }
             set { jobId = value; }

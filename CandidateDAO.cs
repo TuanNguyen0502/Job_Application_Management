@@ -91,7 +91,7 @@ namespace Job_Application_Management
         }
         public List<UC_JobsSaved> GetSavedJobsFromDB()
         {
-            sqlQuery = "SELECT sj.ID SJID, j.Name, j.JobDecription, c.Name as CompanyName, sj.TimeSaved, c.Address, j.Salary, sj.JobID"
+            sqlQuery = "SELECT sj.ID SJID, j.Name, j.JobDecription, c.Name as CompanyName, sj.TimeSaved, c.Address, j.Salary, sj.JobID, j.PostTime"
                        +" FROM SavedJobs sj"
                        +" JOIN Jobs j ON sj.JobID = j.ID"
                        +" JOIN Employers e ON j.EmpID = e.ID"
@@ -103,6 +103,7 @@ namespace Job_Application_Management
                 UC_JobsSaved item = new UC_JobsSaved();
                 item.DescriptionJob = (string)row["Name"] + " [" + (string)row["JobDecription"] + "]";
                 item.ComName = (string)row["CompanyName"];
+                item.TimePost = (DateTime)row["PostTime"];
                 item.TimeSaved = (DateTime)row["TimeSaved"];
                 item.Address = (string)row["Address"];
                 item.Salary = (int)row["Salary"];
@@ -125,7 +126,7 @@ namespace Job_Application_Management
         }
         public List<UC_AppliedJobs> GetAppliedJobsFromDB()
         {
-            sqlQuery = "SELECT aj.ID, j.Name, j.JobDecription, c.Name as CompanyName, aj.TimeApplied, c.Address, j.Salary"
+            sqlQuery = "SELECT aj.ID, j.Name, j.JobDecription, c.Name as CompanyName, aj.TimeApplied, c.Address, j.Salary, aj.JobID, j.PostTime"
                        +" FROM AppliedJobs aj"
                        +" JOIN Jobs j ON aj.JobID = j.ID"
                        +" JOIN Employers e ON j.EmpID = e.ID"
@@ -135,9 +136,11 @@ namespace Job_Application_Management
             foreach (var row in keyValueSavedJobs)
             {
                 UC_AppliedJobs item = new UC_AppliedJobs();
+                item.JobID = (int)row["JobID"];
                 item.DescriptionJob = (string)row["Name"] + " [" + (string)row["JobDecription"] + "]";
                 item.ComName = (string)row["CompanyName"];
-                item.TimeSaved = (DateTime)row["TimeApplied"];
+                item.TimePost = (DateTime)row["PostTime"];
+                item.TimeApply = (DateTime)row["TimeApplied"];
                 item.Address = (string)row["Address"];
                 item.Salary = (int)row["Salary"];
                 int id = (int)row["ID"];
@@ -176,7 +179,7 @@ namespace Job_Application_Management
                             " VALUES(@times,@jId)";
             SqlParameter[] lstParam =
             {
-                    new SqlParameter("@times", SqlDbType.Date) {Value = DateTime.Today},
+                    new SqlParameter("@times", SqlDbType.Date) {Value = DateTime.Now},
                     new SqlParameter("@jId", SqlDbType.Int) { Value = jobid },
             };
             dbConn.ExecuteWriteData(sqlQuery, lstParam);
@@ -187,7 +190,7 @@ namespace Job_Application_Management
                             " VALUES(@times,@jId)";
             SqlParameter[] lstParam =
             {
-                    new SqlParameter("@times", SqlDbType.Date) {Value = DateTime.Today},
+                    new SqlParameter("@times", SqlDbType.Date) {Value = DateTime.Now},
                     new SqlParameter("@jId", SqlDbType.Int) { Value = jobid },
                 };
             dbConn.ExecuteWriteData(sqlQuery, lstParam);

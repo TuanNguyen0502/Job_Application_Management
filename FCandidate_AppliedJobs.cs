@@ -41,5 +41,50 @@ namespace Job_Application_Management
             canDAO.RemoveAppliedJobsFromDB(e.ID);
             LoadAppliedJobs();
         }
+
+        private void rdb_Nearly_CheckedChanged(object sender, EventArgs e)
+        {
+            List<UC_JobsSaved> uC_JobsSaveds = canDAO.GetSavedJobsFromDB();
+            uC_JobsSaveds.Sort((uc1, uc2) => uc2.TimeSaved.CompareTo(uc1.TimeSaved));
+            if (flpStoreUC.Controls.Count > 0)
+            {
+                flpStoreUC.Controls.Clear();
+            }
+            foreach (var saved in uC_JobsSaveds)
+            {
+                flpStoreUC.Controls.Add(saved);
+                saved.ButtonRusbishClick += appliedJobsButtonRusbish_Click;
+            }
+        }
+
+        private void rdb_Lately_CheckedChanged(object sender, EventArgs e)
+        {
+            List<UC_JobsSaved> uC_JobsSaveds = canDAO.GetSavedJobsFromDB();
+            uC_JobsSaveds.Sort((uc1, uc2) => uc1.TimePost.CompareTo(uc2.TimePost));
+            if (flpStoreUC.Controls.Count > 0)
+            {
+                flpStoreUC.Controls.Clear();
+            }
+            foreach (var saved in uC_JobsSaveds)
+            {
+                flpStoreUC.Controls.Add(saved);
+                saved.ButtonRusbishClick += appliedJobsButtonRusbish_Click;
+            }
+        }
+
+        private void rbd_TallestSalary_CheckedChanged(object sender, EventArgs e)
+        {
+            List<UC_JobsSaved> uC_JobsSaveds = canDAO.GetSavedJobsFromDB();
+            uC_JobsSaveds.Sort((uc1, uc2) => uc2.Salary.CompareTo(uc1.Salary));
+            if (flpStoreUC.Controls.Count > 0)
+            {
+                flpStoreUC.Controls.Clear();
+            }
+            foreach (var saved in uC_JobsSaveds)
+            {
+                flpStoreUC.Controls.Add(saved);
+                saved.ButtonRusbishClick += appliedJobsButtonRusbish_Click;
+            }
+        }
     }
 }

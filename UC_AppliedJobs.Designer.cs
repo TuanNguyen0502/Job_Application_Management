@@ -31,7 +31,7 @@
             this.lblDescrption = new System.Windows.Forms.Label();
             this.lblSalary = new System.Windows.Forms.Label();
             this.lblTimeSaved = new System.Windows.Forms.Label();
-            this.lblTimeUpdate = new System.Windows.Forms.Label();
+            this.lbl_PostTime = new System.Windows.Forms.Label();
             this.pictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblAddress = new System.Windows.Forms.Label();
             this.btnRusbish = new System.Windows.Forms.Button();
@@ -72,16 +72,16 @@
             this.lblTimeSaved.TabIndex = 3;
             this.lblTimeSaved.Text = "Thời điểm lưu";
             // 
-            // lblTimeUpdate
+            // lbl_PostTime
             // 
-            this.lblTimeUpdate.AutoSize = true;
-            this.lblTimeUpdate.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTimeUpdate.Location = new System.Drawing.Point(343, 111);
-            this.lblTimeUpdate.Name = "lblTimeUpdate";
-            this.lblTimeUpdate.Size = new System.Drawing.Size(116, 17);
-            this.lblTimeUpdate.TabIndex = 10;
-            this.lblTimeUpdate.Text = "Thời gian cập nhật";
+            this.lbl_PostTime.AutoSize = true;
+            this.lbl_PostTime.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PostTime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_PostTime.Location = new System.Drawing.Point(343, 111);
+            this.lbl_PostTime.Name = "lbl_PostTime";
+            this.lbl_PostTime.Size = new System.Drawing.Size(96, 17);
+            this.lbl_PostTime.TabIndex = 10;
+            this.lbl_PostTime.Text = "Thời gian đăng";
             // 
             // pictureBox1
             // 
@@ -145,7 +145,7 @@
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblTimeUpdate);
+            this.Controls.Add(this.lbl_PostTime);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.btnRusbish);
             this.Controls.Add(this.lblSalary);
@@ -168,7 +168,7 @@
         private System.Windows.Forms.Label lblSalary;
         private System.Windows.Forms.Button btnRusbish;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label lblTimeUpdate;
+        private System.Windows.Forms.Label lbl_PostTime;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox1;
     }
 }
