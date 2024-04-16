@@ -12,89 +12,6 @@ namespace Job_Application_Management
 {
     public partial class UC_JobsSaved : UserControl
     {
-        #region Properties
-        private string descriptionJob;
-        private string comName;
-        private DateTime timeSaved;
-        private string address;
-        private DateTime timePost;
-        private int salary;
-        private Image icon;
-        private int jobId;
-        private string id;
-        public string DescriptionJob 
-        { 
-            get => descriptionJob;
-            set
-            {
-                descriptionJob = value; lblDescrption.Text = value;
-            }
-        }
-        public string ComName 
-        { 
-            get => comName;
-            set
-            {
-                comName = value; lblComName.Text = $"        {value}";
-            }
-        }
-        public DateTime TimeSaved 
-        {   
-            get => timeSaved;
-            set
-            {
-                timeSaved = value; lblTimeSaved.Text = $"Đã lưu: {value}";
-                
-            }
-        }
-        public DateTime TimePost
-        {
-            get => timePost;
-            set { timePost = value; lbl_TimePost.Text = $"Đã đăng: {value}"; }
-        }
-        public string Address 
-        { 
-            get => address;
-            set
-            {
-                 address = value; lblAddress.Text = $"      {value}";
-            }
-        }
-        public int Salary 
-        { 
-            get => salary;
-            set
-            {
-                  salary = value; lblSalary.Text = value.ToString();
-            }
-        }
-        public Image Icon 
-        { 
-            get => icon;
-            set
-            {
-                icon = value; pictureBox1.Image = value;
-                
-            }
-        }
-        public int JobID
-        {
-            get { return jobId; }
-            set
-            {
-                jobId = value;
-            }
-        }
-        public string ID
-        {
-            get { return id; }
-            set
-            {
-                id = value;
-               
-            }
-        }
-        #endregion
         public Button BtnAdd
         {
             get { return btnAdd; }
@@ -103,13 +20,26 @@ namespace Job_Application_Management
         {
             get { return btnRusbish; }
         }
-        public UC_JobsSaved()
+        private SavedJobs savedJob;
+        public SavedJobs SavedJob
+        {
+            get { return savedJob; }
+            set { savedJob = value; }
+        }
+        public UC_JobsSaved(SavedJobs savedJob)
         {
             InitializeComponent();
             InitializeToolTip();
+            this.savedJob = savedJob;
         }
         private void UC_Candidate_Load(object sender, EventArgs e)
         {
+            lblDescrption.Text = savedJob.JobDescription;
+            lblComName.Text = savedJob.CompanyName;
+            lblTimeSaved.Text = $"Đã đăng: {savedJob.TimeSaved.ToShortDateString()}";
+            lbl_TimePost.Text = $"Đã đăng: {savedJob.PostTime}";
+            lblAddress.Text = $"      {savedJob.Address}";
+            lblSalary.Text = savedJob.Salary.ToString();
         }
 
         private void InitializeToolTip()
@@ -131,12 +61,12 @@ namespace Job_Application_Management
         public event EventHandler<ButtonClickEventArgs> ButtonAddClick;
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            ButtonAddClick?.Invoke(this, new ButtonClickEventArgs(null,JobID));
+            ButtonAddClick?.Invoke(this, new ButtonClickEventArgs(null,savedJob.Id));
         }
         public event EventHandler<ButtonClickEventArgs> ButtonRusbishClick;
         private void btnRusbish_Click(object sender, EventArgs e)
         {
-            ButtonRusbishClick?.Invoke(this, new ButtonClickEventArgs(ID,0));
+            ButtonRusbishClick?.Invoke(this, new ButtonClickEventArgs(savedJob.SavedJobID.ToString(),0));
         }
     }
 }

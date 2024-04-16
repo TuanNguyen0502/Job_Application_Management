@@ -56,7 +56,7 @@ namespace Job_Application_Management
                     List<UC_JobsSaved> jobSaveds = canDAO.GetSavedJobsFromDB();
                     foreach (var jobSaved in jobSaveds)
                     {
-                        if (jobItem.JobID != jobSaved.JobID)
+                        if (jobItem.JobID != jobSaved.SavedJob.Id)
                             continue;
                     }
                 jobItem.Enabled = true;
@@ -67,7 +67,7 @@ namespace Job_Application_Management
         private void rdb_Nearly_CheckedChanged(object sender, EventArgs e)
         {
             List<UC_JobsSaved> uC_JobsSaveds = canDAO.GetSavedJobsFromDB();
-            uC_JobsSaveds.Sort((uc1,uc2)=> uc2.TimeSaved.CompareTo(uc1.TimeSaved));
+            uC_JobsSaveds.Sort((uc1,uc2)=> uc2.SavedJob.TimeSaved.CompareTo(uc1.SavedJob.TimeSaved));
             if (flpStoreUC.Controls.Count > 0)
             {
                 flpStoreUC.Controls.Clear();
@@ -83,7 +83,7 @@ namespace Job_Application_Management
         private void rdb_Lately_CheckedChanged(object sender, EventArgs e)
         {
             List<UC_JobsSaved> uC_JobsSaveds = canDAO.GetSavedJobsFromDB();
-            uC_JobsSaveds.Sort((uc1, uc2) => uc1.TimePost.CompareTo(uc2.TimePost));
+            uC_JobsSaveds.Sort((uc1, uc2) => uc1.SavedJob.PostTime.CompareTo(uc2.SavedJob.PostTime));
             if (flpStoreUC.Controls.Count > 0)
             {
                 flpStoreUC.Controls.Clear();
@@ -99,7 +99,7 @@ namespace Job_Application_Management
         private void rdb_Tallest_CheckedChanged(object sender, EventArgs e)
         {
             List<UC_JobsSaved> uC_JobsSaveds = canDAO.GetSavedJobsFromDB();
-            uC_JobsSaveds.Sort((uc1, uc2) => uc2.Salary.CompareTo(uc1.Salary));
+            uC_JobsSaveds.Sort((uc1, uc2) => uc2.SavedJob.Salary.CompareTo(uc1.SavedJob.Salary));
             if (flpStoreUC.Controls.Count > 0)
             {
                 flpStoreUC.Controls.Clear();

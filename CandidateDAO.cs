@@ -100,16 +100,16 @@ namespace Job_Application_Management
             List<UC_JobsSaved> saveds = new List<UC_JobsSaved>();
             foreach (var row in keyValueSavedJobs)
             {
-                UC_JobsSaved item = new UC_JobsSaved();
-                item.DescriptionJob = (string)row["Name"] + " [" + (string)row["JobDecription"] + "]";
-                item.ComName = (string)row["CompanyName"];
-                item.TimePost = (DateTime)row["PostTime"];
-                item.TimeSaved = (DateTime)row["TimeSaved"];
-                item.Address = (string)row["Address"];
-                item.Salary = (int)row["Salary"];
-                int id = (int)row["SJID"];
-                item.ID = id.ToString();
-                item.JobID = (int)row["JobID"];
+                SavedJobs savedJob = new SavedJobs();
+                savedJob.JobDescription = (string)row["Name"] + " [" + (string)row["JobDecription"] + "]";
+                savedJob.CompanyName = (string)row["CompanyName"];
+                savedJob.PostTime = (DateTime)row["PostTime"];
+                savedJob.TimeSaved = (DateTime)row["TimeSaved"];
+                savedJob.Address = (string)row["Address"];
+                savedJob.Salary = (int)row["Salary"];
+                savedJob.SavedJobID = (int)row["SJID"];
+                savedJob.Id= (int)row["JobID"];
+                UC_JobsSaved item = new UC_JobsSaved(savedJob);
                 saveds.Add(item);
             }
             return saveds;
@@ -135,16 +135,16 @@ namespace Job_Application_Management
             List<UC_AppliedJobs> applieds = new List<UC_AppliedJobs>();
             foreach (var row in keyValueSavedJobs)
             {
-                UC_AppliedJobs item = new UC_AppliedJobs();
-                item.JobID = (int)row["JobID"];
-                item.DescriptionJob = (string)row["Name"] + " [" + (string)row["JobDecription"] + "]";
-                item.ComName = (string)row["CompanyName"];
-                item.TimePost = (DateTime)row["PostTime"];
-                item.TimeApply = (DateTime)row["TimeApplied"];
-                item.Address = (string)row["Address"];
-                item.Salary = (int)row["Salary"];
-                int id = (int)row["ID"];
-                item.ID = id.ToString();
+                AppliedJobs applied = new AppliedJobs();
+                applied.JobDescription = (string)row["Name"] + " [" + (string)row["JobDecription"] + "]";
+                applied.CompanyName = (string)row["CompanyName"];
+                applied.PostTime = (DateTime)row["PostTime"];
+                applied.TimeApplied = (DateTime)row["TimeApplied"];
+                applied.Address = (string)row["Address"];
+                applied.Salary = (int)row["Salary"];
+                applied.AppliedJobID = (int)row["ID"];
+                applied.Id= (int)row["JobID"];
+                UC_AppliedJobs item = new UC_AppliedJobs(applied);
                 applieds.Add(item);
             }
             return applieds;

@@ -115,7 +115,7 @@ namespace Job_Application_Management
 
         private Job GetCurrentJob()
         {
-            Job job = new Job(JobID, textBox_JobName.Text, textBox_Salary.Text, richTextBox_JobDescripton.Text,
+            Job job = new Job(JobID, textBox_JobName.Text, Convert.ToInt32(textBox_Salary.Text), richTextBox_JobDescripton.Text,
                    textBox_WorkingTime.Text, textBox_Experience.Text, dateTimePicker_Deadline.Value, richTextBox_JobBenefit.Text,
                     richTextBox_Requirement.Text, empID);
             return job;
@@ -123,7 +123,7 @@ namespace Job_Application_Management
 
         private Job CreateJob()
         {
-            Job job = new Job(textBox_JobName.Text, textBox_Salary.Text, richTextBox_JobDescripton.Text,
+            Job job = new Job(textBox_JobName.Text, Convert.ToInt32(textBox_Salary.Text), richTextBox_JobDescripton.Text,
                 textBox_WorkingTime.Text, textBox_Experience.Text, dateTimePicker_Deadline.Value, richTextBox_JobBenefit.Text,
                 richTextBox_Requirement.Text, empID);
             return job;

@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppliedJobs.cs" />
     <Compile Include="ButtonClickEventArgs.cs" />
     <Compile Include="Candidate.cs" />
     <Compile Include="CandidateDAO.cs" />
@@ -224,6 +225,7 @@
     <Compile Include="RoudingPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="SavedJobs.cs" />
     <Compile Include="UC_AppliedJobs.cs">
       <SubType>UserControl</SubType>
     </Compile>

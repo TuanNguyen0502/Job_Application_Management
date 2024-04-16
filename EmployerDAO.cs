@@ -235,7 +235,7 @@ namespace Job_Application_Management
                     {
                         job.Id = Convert.ToInt32(reader["ID"]);
                         job.Name = reader.GetString(1);
-                        job.Salary = reader.GetString(2);
+                        job.Salary = reader.GetInt32(2);
                         job.JobDescription = reader.GetString(3);
                         job.WorkDuration = reader.GetString(4);
                         job.Experience = reader.GetString(5);

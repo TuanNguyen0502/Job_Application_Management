@@ -62,7 +62,7 @@ namespace Job_Application_Management
             List<UC_JobsSaved> jobSaveds = canDAO.GetSavedJobsFromDB();
             foreach (var jobSaved in jobSaveds)
             {
-                if (candidateMain.JobID == jobSaved.JobID)
+                if (candidateMain.JobID == jobSaved.SavedJob.Id)
                 {
                     candidateMain.BtnApply.Enabled = false;
                     candidateMain.BtnApply.BackColor = Color.LightGreen;

@@ -47,7 +47,7 @@ namespace Job_Application_Management
             List<UC_AppliedJobs> appliedJobs = canDAO.GetAppliedJobsFromDB();
             foreach (var applied in appliedJobs)
             {
-                if (jobid == applied.JobID)
+                if (jobid == applied.AppliedJobs.AppliedJobID)
                 {
                     btnApply.Enabled = false;
                     btnApply.BackColor = Color.Gray;

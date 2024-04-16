@@ -11,7 +11,7 @@ namespace Job_Application_Management
     {
         private int id;
         private string name;
-        private string salary;
+        private int salary;
         private string jobDescription;
         private string workDuration;
         private string experience;
@@ -23,7 +23,7 @@ namespace Job_Application_Management
         private string companyName;
         public string address;
         public Job() { }
-        public Job(string name, string salary, string jobDescription, string workDuration, string experience, DateTime deadline, string benefit, string request, string empID)
+        public Job(string name, int salary, string jobDescription, string workDuration, string experience, DateTime deadline, string benefit, string request, string empID)
         {
             Name = name;
             Salary = salary;
@@ -36,7 +36,7 @@ namespace Job_Application_Management
             postTime = DateTime.Now;
             EmpID = empID;
         }
-        public Job(int id, string name, string salary, string jobDescription, string workDuration, string experience, DateTime deadline, string benefit, string request, string empID)
+        public Job(int id, string name, int salary, string jobDescription, string workDuration, string experience, DateTime deadline, string benefit, string request, string empID)
         {
             Id = id;
             Name = name;
@@ -51,7 +51,7 @@ namespace Job_Application_Management
             EmpID = empID;
         }
 
-        public Job (int id, string name, string salary, string jobDescription, string workDuration, string experience, DateTime deadline, string benefit, string request, string empID, string companyName, string address)
+        public Job (int id, string name, int salary, string jobDescription, string workDuration, string experience, DateTime deadline, string benefit, string request, string empID, string companyName, string address)
         {
             Id = id;
             Name = name;
@@ -144,7 +144,7 @@ namespace Job_Application_Management
 
         public bool CheckSalary()
         {
-            if (Salary == null || Salary == "")
+            if (Salary <= 0)
             {
                 MessageBox.Show("Salary cannot be number 0 !");
                 return false;
@@ -164,7 +164,7 @@ namespace Job_Application_Management
 
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
-        public string Salary { get => salary; set => salary = value; }
+        public int Salary { get => salary; set => salary = value; }
         public string JobDescription { get => jobDescription; set => jobDescription = value; }
         public string WorkDuration { get => workDuration; set => workDuration = value; }
         public string Experience { get => experience; set => experience = value; }
@@ -175,7 +175,5 @@ namespace Job_Application_Management
         public DateTime PostTime { get => postTime; set => postTime = value; }
         public string CompanyName { get => companyName; set => companyName = value; }
         public string Address { get => address; set => address = value; }
-
-
     }
 }
