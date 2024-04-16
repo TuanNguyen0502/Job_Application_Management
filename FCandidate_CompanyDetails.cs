@@ -60,5 +60,10 @@ namespace Job_Application_Management
             this.Close();
         }
 
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            canDAO.IncrementFlower();
+            guna2Button1.Enabled = false;
+        }
     }
 }

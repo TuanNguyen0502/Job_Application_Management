@@ -15,61 +15,27 @@ namespace Job_Application_Management
     public partial class UC_CandidateMain : UserControl
     {
         CandidateDAO canDAO = new CandidateDAO();
-        #region Properties
-        private string jobName;
-        private string companyName;
-        private double salary;
-        private string address;
-        private Image icon;
-        private int jobid;
-        private string cddid;
-        [Category("Custom Props")]
-        public string JobName
-        {
-            get { return jobName; }
-            set { jobName = value; lblJobName.Text = value; }
-        }
-        [Category("Custom Props")]
-        public string CompanyName1
-        {
-            get { return companyName; }
-            set { companyName = value; lblCompanyName.Text = value; }
-        }
-        [Category("Custom Props")]
-        public double Salary
-        {
-            get { return salary; }
-            set {salary = value; lblSalary.Text = value.ToString()+"VNĐ"; }
-        }
-        [Category("Custom Props")]
-        public string Address
-        {
-            get { return address; }
-            set { address = value; lblAdress.Text = value; }
-        }
-        [Category("Custom Props")]
-        public Image Icon
-        {
-            get { return icon; }
-            set { icon = value; cptb_company.Image = value; }
-        }
-        [Category("Custom Props")]
-        public int JobID
-        {
-            get { return jobid; }
-            set { jobid = value; }
-        }
-        public string CddID
-        {
-            get { return cddid; }
-            set { cddid = value; }
-        }
-        #endregion
+        private Candidate candidate1;
+        private Job job;
+        private Company company;
+        public Candidate _Candidate { get { return candidate1; } set { candidate1 = value; } }
+        public Job _Job { get { return job; } set { job = value; } }
+        public Company _Company { get { return company; } set { company = value; } }
         public Button BtnApply { get { return btnApply; } }
-       
-        public UC_CandidateMain()
+        public UC_CandidateMain(Candidate candidate, Job job, Company company)
         {
             InitializeComponent();
+            this.candidate1 = candidate;
+            this.job = job;
+            this.company = company;
+        }
+        private void UC_CandidateMain_Load(object sender, EventArgs e)
+        {
+            lblJobName.Text = job.Name;
+            lblCompanyName.Text = company.Name;
+            lblSalary.Text = job.Salary.ToString();
+            lblAdress.Text = company.Address;
+
         }
         public event EventHandler<ButtonClickEventArgs> ClickToJob;
         private void UC_CandidateMain_Click(object sender, EventArgs e)
@@ -82,36 +48,36 @@ namespace Job_Application_Management
             Button b = (Button)sender;
             b.Enabled = false;
             b.BackColor = Color.LightGreen;
-            canDAO.AddSavedJob(jobid);
+            canDAO.AddSavedJob(job.Id);
         }
         private void gunaLinePanel1_Click(object sender, EventArgs e)
         {
-            ClickToJob?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
+            ClickToJob?.Invoke(this, new ButtonClickEventArgs(candidate1.Id, job.Id));
         }
         public event EventHandler<ButtonClickEventArgs> Lbl_Salary;
         private void lblSalary_Click(object sender, EventArgs e)
         {
-            Lbl_Salary?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
+            Lbl_Salary?.Invoke(this, new ButtonClickEventArgs(candidate1.Id, job.Id));
         }
         public event EventHandler<ButtonClickEventArgs> Lbl_Address;
         private void lblAdress_Click(object sender, EventArgs e)
         {
-            Lbl_Address?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
+            Lbl_Address?.Invoke(this, new ButtonClickEventArgs(candidate1.Id, job.Id));
         }
         public event EventHandler<ButtonClickEventArgs> Lbl_CompanyName;
         private void lblCompanyName_Click(object sender, EventArgs e)
         {
-            Lbl_CompanyName?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
+            Lbl_CompanyName?.Invoke(this, new ButtonClickEventArgs(candidate1.Id, job.Id));
         }
         public event EventHandler<ButtonClickEventArgs> Lbl_JobName;
         private void lblJobName_Click(object sender, EventArgs e)
         {
-            Lbl_JobName?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
+            Lbl_JobName?.Invoke(this, new ButtonClickEventArgs(candidate1.Id, job.Id));
         }
         public event EventHandler<ButtonClickEventArgs> Cptb_Company;
         private void cptb_company_Click(object sender, EventArgs e)
         {
-            Cptb_Company?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
+            Cptb_Company?.Invoke(this, new ButtonClickEventArgs(candidate1.Id, job.Id));
         }
     }
 }

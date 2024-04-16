@@ -143,6 +143,7 @@
             this.Controls.Add(this.gunaLinePanel1);
             this.Name = "UC_CandidateMain";
             this.Size = new System.Drawing.Size(454, 142);
+            this.Load += new System.EventHandler(this.UC_CandidateMain_Load);
             this.Click += new System.EventHandler(this.UC_CandidateMain_Click);
             ((System.ComponentModel.ISupportInitialize)(this.cptb_company)).EndInit();
             this.gunaLinePanel1.ResumeLayout(false);

@@ -33,13 +33,23 @@ namespace Job_Application_Management
             List<UC_CandidateMain> items = new List<UC_CandidateMain>();
             foreach (var row in resultList)
             {
-                UC_CandidateMain item = new UC_CandidateMain();
-                item.JobName = (string)row["JobName"];
+                Candidate candidate = new Candidate();
+                Job job = new Job();
+                Company company = new Company();
+                candidate.Id = cddid;
+                job.Id = (int)row["JobID"];
+                job.Name = (string)row["JobName"];
+                job.Salary = (int)row["Salary"];
+                company.Name = (string)row["Address"];
+                company.Address = (string)row["Address"];
+
+                UC_CandidateMain item = new UC_CandidateMain(candidate,job,company);
+                /*item.JobName = (string)row["JobName"];
                 item.CompanyName1 = (string)row["CompanyName"];
                 item.Salary = (int)row["Salary"];
                 item.Address = (string)row["Address"];
                 item.JobID = (int)row["JobID"];
-                item.CddID = cddid;
+                item.CddID = cddid;*/
                 items.Add(item);
             }
             return items;
@@ -55,12 +65,16 @@ namespace Job_Application_Management
             List<UC_CandidateMain> items = new List<UC_CandidateMain>();
             foreach (var row in resultList)
             {
-                UC_CandidateMain item = new UC_CandidateMain();
-                item.JobName = (string)row["JobName"];
-                item.CompanyName1 = (string)row["CompanyName"];
-                item.Salary = (int)row["Salary"];
-                item.Address = (string)row["Address"];
-                item.JobID = (int)row["JobID"];
+                Candidate candidate = new Candidate();
+                Job job = new Job();
+                Company company = new Company();
+                job.Id = (int)row["JobID"];
+                job.Name = (string)row["JobName"];
+                job.Salary = (int)row["Salary"];
+                company.Name = (string)row["Address"];
+                company.Address = (string)row["Address"];
+
+                UC_CandidateMain item = new UC_CandidateMain(candidate, job, company);
                 items.Add(item);
             }
             return items;
@@ -79,12 +93,16 @@ namespace Job_Application_Management
             List<UC_CandidateMain> items = new List<UC_CandidateMain>();
             foreach (var row in resultList)
             {
-                UC_CandidateMain item = new UC_CandidateMain();
-                item.JobName = (string)row["JobName"];
-                item.CompanyName1 = (string)row["CompanyName"];
-                item.Salary = (int)row["Salary"];
-                item.Address = (string)row["Address"];
-                item.JobID = (int)row["JobID"];
+                Candidate candidate = new Candidate();
+                Job job = new Job();
+                Company company = new Company();
+                job.Id = (int)row["JobID"];
+                job.Name = (string)row["JobName"];
+                job.Salary = (int)row["Salary"];
+                company.Name = (string)row["Address"];
+                company.Address = (string)row["Address"];
+
+                UC_CandidateMain item = new UC_CandidateMain(candidate, job, company);
                 items.Add(item);
             }
             return items;
@@ -380,6 +398,12 @@ namespace Job_Application_Management
                 lstWorkHistory.Add(uC_WorkHistory);
             }
             return lstWorkHistory;
+        }
+        // Tăng số lượng người theo dõi
+        public void IncrementFlower()
+        {
+            sqlQuery = "UPDATE Company SET NumberOfFollower = NumberOfFollower + 1";
+            dbConn.ExecuteWriteData(sqlQuery);
         }
     }
 }

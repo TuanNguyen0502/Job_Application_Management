@@ -71,6 +71,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnl.SuspendLayout();
             this.panel6.SuspendLayout();
             this.pnlCompany.SuspendLayout();
@@ -237,7 +241,7 @@
             this.pnlCompany.Controls.Add(this.pictureBox1);
             this.pnlCompany.Location = new System.Drawing.Point(534, 6);
             this.pnlCompany.Name = "pnlCompany";
-            this.pnlCompany.Size = new System.Drawing.Size(304, 198);
+            this.pnlCompany.Size = new System.Drawing.Size(293, 198);
             this.pnlCompany.TabIndex = 1;
             // 
             // lblSeeCompany
@@ -247,7 +251,7 @@
             this.lblSeeCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(79)))));
             this.lblSeeCompany.Image = global::Job_Application_Management.Properties.Resources.icons8_link_16;
             this.lblSeeCompany.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblSeeCompany.Location = new System.Drawing.Point(32, 168);
+            this.lblSeeCompany.Location = new System.Drawing.Point(27, 168);
             this.lblSeeCompany.Name = "lblSeeCompany";
             this.lblSeeCompany.Size = new System.Drawing.Size(216, 20);
             this.lblSeeCompany.TabIndex = 9;
@@ -257,7 +261,7 @@
             // lblAdress2
             // 
             this.lblAdress2.AutoSize = true;
-            this.lblAdress2.Location = new System.Drawing.Point(100, 133);
+            this.lblAdress2.Location = new System.Drawing.Point(89, 133);
             this.lblAdress2.Name = "lblAdress2";
             this.lblAdress2.Size = new System.Drawing.Size(131, 16);
             this.lblAdress2.TabIndex = 8;
@@ -266,7 +270,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(100, 107);
+            this.label4.Location = new System.Drawing.Point(85, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 16);
             this.label4.TabIndex = 7;
@@ -275,7 +279,7 @@
             // lblComName
             // 
             this.lblComName.AutoSize = true;
-            this.lblComName.Location = new System.Drawing.Point(143, 15);
+            this.lblComName.Location = new System.Drawing.Point(110, 16);
             this.lblComName.Name = "lblComName";
             this.lblComName.Size = new System.Drawing.Size(77, 16);
             this.lblComName.TabIndex = 6;
@@ -304,7 +308,7 @@
             this.pictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_company_100;
             this.pictureBox1.Location = new System.Drawing.Point(26, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(74, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -363,13 +367,13 @@
             this.pnlOverview.Controls.Add(this.label10);
             this.pnlOverview.Location = new System.Drawing.Point(534, 213);
             this.pnlOverview.Name = "pnlOverview";
-            this.pnlOverview.Size = new System.Drawing.Size(304, 405);
+            this.pnlOverview.Size = new System.Drawing.Size(293, 405);
             this.pnlOverview.TabIndex = 3;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(110, 47);
+            this.lblStatus.Location = new System.Drawing.Point(96, 47);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(66, 16);
             this.lblStatus.TabIndex = 21;
@@ -388,7 +392,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(110, 373);
+            this.label24.Location = new System.Drawing.Point(96, 373);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(95, 16);
             this.label24.TabIndex = 19;
@@ -397,7 +401,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(110, 343);
+            this.label23.Location = new System.Drawing.Point(96, 343);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(54, 16);
             this.label23.TabIndex = 18;
@@ -415,7 +419,7 @@
             // lblWorkingForm
             // 
             this.lblWorkingForm.AutoSize = true;
-            this.lblWorkingForm.Location = new System.Drawing.Point(110, 300);
+            this.lblWorkingForm.Location = new System.Drawing.Point(96, 300);
             this.lblWorkingForm.Name = "lblWorkingForm";
             this.lblWorkingForm.Size = new System.Drawing.Size(73, 16);
             this.lblWorkingForm.TabIndex = 16;
@@ -424,7 +428,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(110, 268);
+            this.label20.Location = new System.Drawing.Point(96, 268);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(114, 16);
             this.label20.TabIndex = 15;
@@ -442,7 +446,7 @@
             // lblNumberCan
             // 
             this.lblNumberCan.AutoSize = true;
-            this.lblNumberCan.Location = new System.Drawing.Point(110, 223);
+            this.lblNumberCan.Location = new System.Drawing.Point(96, 223);
             this.lblNumberCan.Name = "lblNumberCan";
             this.lblNumberCan.Size = new System.Drawing.Size(81, 16);
             this.lblNumberCan.TabIndex = 13;
@@ -451,7 +455,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(110, 195);
+            this.label17.Location = new System.Drawing.Point(96, 195);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(95, 16);
             this.label17.TabIndex = 12;
@@ -468,17 +472,16 @@
             // 
             // lblExp2
             // 
-            this.lblExp2.AutoSize = true;
-            this.lblExp2.Location = new System.Drawing.Point(110, 148);
+            this.lblExp2.Location = new System.Drawing.Point(89, 136);
             this.lblExp2.Name = "lblExp2";
-            this.lblExp2.Size = new System.Drawing.Size(124, 16);
+            this.lblExp2.Size = new System.Drawing.Size(188, 59);
             this.lblExp2.TabIndex = 10;
             this.lblExp2.Text = "+1 năm kinh nghiệm";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(110, 120);
+            this.label14.Location = new System.Drawing.Point(96, 120);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(79, 16);
             this.label14.TabIndex = 9;
@@ -507,13 +510,33 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 18;
+            this.guna2Elipse2.TargetControl = this.pnl;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 18;
+            this.guna2Elipse3.TargetControl = this.pnlCompany;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 18;
+            this.guna2Elipse4.TargetControl = this.pnlCompany;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 18;
+            this.guna2Elipse5.TargetControl = this.flpnRecruitment;
+            // 
             // FCandidate_SelectedJobDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(842, 626);
+            this.ClientSize = new System.Drawing.Size(836, 626);
             this.Controls.Add(this.flpnRecruitment);
             this.Controls.Add(this.pnl);
             this.Controls.Add(this.pnlCompany);
@@ -581,5 +604,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblStatus;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
     }
 }
