@@ -56,7 +56,7 @@ namespace Job_Application_Management
                     List<UC_JobsSaved> jobSaveds = canDAO.GetSavedJobsFromDB();
                     foreach (var jobSaved in jobSaveds)
                     {
-                        if (jobItem.JobID != jobSaved.SavedJob.Id)
+                        if (jobItem._Job.Id != jobSaved.SavedJob.Id)
                             continue;
                     }
                 jobItem.Enabled = true;

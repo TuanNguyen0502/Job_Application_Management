@@ -228,6 +228,7 @@
             this.guna2Button1.TabIndex = 8;
             this.guna2Button1.Text = "Theo dõi công ty";
             this.guna2Button1.TextOffset = new System.Drawing.Point(10, 0);
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // lblNumberFollower
             // 
