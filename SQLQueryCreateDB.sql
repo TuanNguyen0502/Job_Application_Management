@@ -100,6 +100,7 @@ CREATE TABLE Resume(
 	CertificationName nvarchar(100),
 	CertificationDate date,
 	Status nvarchar(100) default N'Applying',
+	Interview datetime default null,
 	CONSTRAINT PK_AD PRIMARY KEY (CddID, JobID)
 )
 CREATE TABLE CandidateProfile(
