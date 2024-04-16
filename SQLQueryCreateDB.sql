@@ -1,4 +1,15 @@
-﻿CREATE TABLE Candidates(
+CREATE TABLE USERS(
+	Username varchar(100) primary key,
+	Password varchar(100),
+	CddID varchar(10) foreign key references Candidates(CddID), 
+	EmpID varchar(10) foreign key references Employers(ID)
+	)
+insert into USERS (Username, Password, CddID)
+values ('hieu', 'hieu123456', 'CDD001')
+insert into USERS (Username, Password, EmpID)
+values ('tuan', 'tuan123456', 'E001')
+	
+CREATE TABLE Candidates(
 	CddID varchar(10) CONSTRAINT PK_Cdd PRIMARY KEY,
 	CddName nvarchar(100),
 	Phone varchar(12),
