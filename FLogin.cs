@@ -13,6 +13,8 @@ namespace Job_Application_Management
 {
     public partial class FLogin : KryptonForm
     {
+        DBConnection dBConnection = new DBConnection();
+
         public FLogin()
         {
             InitializeComponent();
@@ -28,12 +30,12 @@ namespace Job_Application_Management
 
         private bool CheckEmpty()
         {
-            if (textBox_UserName.Text.Length == 0) 
+            if (textBox_UserName.Text == "Enter user name") 
             {
                 MessageBox.Show("Please enter your user name");
                 return false; 
             }
-            if (textBox_Password.Text.Length == 0) 
+            if (textBox_Password.Text == "Enter password") 
             {
                 MessageBox.Show("Please enter your password");
                 return false; 
@@ -106,13 +108,47 @@ namespace Job_Application_Management
         {
             if (CheckEmpty())
             {
+                string sql = $"Select Username, Password, CddID, EmpID " +
+                    $"FROM USERS " +
+                    $"WHERE Username = '{textBox_UserName.Text}'";
+                List<Dictionary<string, object>> user = dBConnection.GetUserFromDB(sql);
+
+                // Check exist
+                if (user is null)
+                {
+                    MessageBox.Show("User name does not exist !");
+                    return;
+                }
+                // Check pass
+                if (user[0]["Password"].ToString() != textBox_Password.Text)
+                {
+                    MessageBox.Show("Wrong password !");
+                    return;
+                }
+                
                 if (radioButton_Candidate.Checked)
                 {
+                    string cddID = user[0]["CddID"].ToString();
+                    // Check role
+                    if (cddID == "")
+                    {
+                        MessageBox.Show("You are not Candidate !");
+                        return;
+                    }
+
                     Program.MainFormManager.CurrentForm = new FCandidateMain();
                 }
                 if (radioButton_Employer.Checked)
                 {
-                    Program.MainFormManager.CurrentForm = new FEmployerMain("E001");
+                    string empID = user[0]["EmpID"].ToString();
+                    // Check role
+                    if (empID == "")
+                    {
+                        MessageBox.Show("You are not Employer !");
+                        return;
+                    }
+
+                    Program.MainFormManager.CurrentForm = new FEmployerMain(empID);
                 }
             }
         }

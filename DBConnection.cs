@@ -14,6 +14,42 @@ namespace Job_Application_Management
         //SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         readonly string conStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
 
+        // 
+        public List<Dictionary<string, object>> GetUserFromDB(string sqlStr)
+        {
+            List<Dictionary<string, object>> resultList = new List<Dictionary<string, object>>();
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Dictionary<string, object> rowData = new Dictionary<string, object>();
+                            for (int i = 0; i < reader.FieldCount; i++)
+                            {
+                                rowData.Add(reader.GetName(i), reader.GetValue(i).ToString());
+                            }
+                            resultList.Add(rowData);
+                        }
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Read error\n" + ex.Message);
+                }
+            }
+            return resultList;
+        }
+
         // Các phương thức để đọc và ghi dữ liệu từ cơ sở dữ liệu mysql server
         public void ExecuteDeleteData(string sqlStr, SqlParameter[] lstParam)
         {

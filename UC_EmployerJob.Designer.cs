@@ -124,7 +124,7 @@
             this.label_NumberCandidates.Name = "label_NumberCandidates";
             this.label_NumberCandidates.Size = new System.Drawing.Size(365, 60);
             this.label_NumberCandidates.TabIndex = 3;
-            this.label_NumberCandidates.Text = "      Candidates: ";
+            this.label_NumberCandidates.Text = "      Aplied: ";
             this.label_NumberCandidates.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // flowLayoutPanel3
