@@ -273,6 +273,16 @@ namespace Job_Application_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancel_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancel-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_candidate_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-candidate-32", resourceCulture);
@@ -1113,6 +1123,16 @@ namespace Job_Application_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_plus_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-plus-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_post_68 {
             get {
                 object obj = ResourceManager.GetObject("icons8-post-68", resourceCulture);
@@ -1256,6 +1276,16 @@ namespace Job_Application_Management.Properties {
         internal static System.Drawing.Bitmap icons8_tax_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-tax-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_tick_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-tick-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

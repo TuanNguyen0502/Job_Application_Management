@@ -218,3 +218,8 @@ JOIN Company cpn ON wh.CompanyName = cpn.Name
 SELECT * 
 FROM WorkHistory wh
 JOIN Company c ON wh.CompanyName = c.Name
+
+SELECT * FROM SavedJobs
+SELECT * FROM AppliedJobs
+
+SELECT * FROM Jobs

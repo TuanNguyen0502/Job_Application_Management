@@ -30,5 +30,21 @@ namespace Job_Application_Management
             this.candidateProfile = cp;
             AddValueForControls();
         }
+        public event EventHandler AddHistory;
+        private void ptb_AddHistory_Click(object sender, EventArgs e)
+        {
+            
+            AddHistory?.Invoke(this, new EventArgs());
+        }
+        public event EventHandler<ClickAddHistory> DoneAddHistory;
+        private void ptb_Done_Click(object sender, EventArgs e)
+        {
+            DoneAddHistory?.Invoke(this, new ClickAddHistory(txt_CddName.Text, txt_CompanyName.Text, dtp_Start.Value, dtp_End.Value));
+        }
+        public event EventHandler<ClickAddHistory> RemoveHistory;
+        private void ptb_Cancel_Click(object sender, EventArgs e)
+        {
+            RemoveHistory?.Invoke(this, new ClickAddHistory(txt_CddName.Text, txt_CompanyName.Text, dtp_Start.Value, dtp_End.Value));
+        }
     }
 }

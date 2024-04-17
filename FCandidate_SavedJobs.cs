@@ -50,7 +50,7 @@ namespace Job_Application_Management
         }
         private void savedJobsButtonRusbish_Click(object sender, ButtonClickEventArgs e)
         {
-            canDAO.RemoveSavedJobsFromDB(e.ID);
+            canDAO.RemoveSavedJobsFromDB(e.CddID);
             List<UC_CandidateMain> jobItems = canDAO.GetJobsFromDB(cddID);
             foreach (var jobItem in jobItems)
             {

@@ -43,7 +43,7 @@ namespace Job_Application_Management
 
         private void button_Delete_Click(object sender, ButtonClickEventArgs e)
         {
-            employerDAO.DeleteJob(e.ID);
+            employerDAO.DeleteJob(e.CddID);
             flowLayoutPanel_Jobs.Controls.Remove(sender as UC_EmployerJob);
         }
 

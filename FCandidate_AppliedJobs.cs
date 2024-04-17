@@ -39,7 +39,7 @@ namespace Job_Application_Management
         }
         private void appliedJobsButtonRusbish_Click(object sender, ButtonClickEventArgs e)
         {
-            canDAO.RemoveAppliedJobsFromDB(e.ID);
+            canDAO.RemoveAppliedJobsFromDB(e.CddID);
             LoadAppliedJobs();
         }
 

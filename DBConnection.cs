@@ -125,6 +125,84 @@ namespace Job_Application_Management
                 }
             }
         }
+        public bool ExecuteDeleteDataCheck(string sqlStr, SqlParameter[] lstParam)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                try
+                {
+                    // Ket noi
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddRange(lstParam);
+                    if (cmd.ExecuteNonQuery() > 0)
+                        return true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error !\n" + ex.Message);
+                }
+                return false;
+            }
+        }
+        public bool ExecuteDeleteDataCheck(string sqlStr)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                try
+                {
+                    // Ket noi
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    if (cmd.ExecuteNonQuery() > 0)
+                        return true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error !\n" + ex.Message);
+                }
+                return false;
+            }
+        }
+        public bool ExecuteWriteDataCheck(string sqlStr, SqlParameter[] lstParam)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                try
+                {
+                    // Ket noi
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddRange(lstParam);
+                    if (cmd.ExecuteNonQuery() > 0)
+                        return true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error !\n" + ex.Message);
+                }
+                return false;
+            }
+        }
+        public bool ExecuteWriteDataCheck(string sqlStr)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                try
+                {
+                    // Ket noi
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    if (cmd.ExecuteNonQuery() > 0)
+                        return true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error !\n" + ex.Message);
+                }
+                return false;
+            }
+        }
 
         public string ExecuteReaderCount(string sqlStr)
         {

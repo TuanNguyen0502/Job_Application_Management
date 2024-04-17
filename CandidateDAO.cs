@@ -149,7 +149,14 @@ namespace Job_Application_Management
             {
                 new SqlParameter("@ID", SqlDbType.Int) {Value = ID}
             };
-            dbConn.ExecuteDeleteData(sqlQuery, lstParams);
+            if (dbConn.ExecuteDeleteDataCheck(sqlQuery, lstParams))
+            {
+                MessageBox.Show("Xóa công việc đã lưu thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xóa công việc đã lưu thất bại");
+            }
         }
         public List<UC_AppliedJobs> GetAppliedJobsFromDB()
         {
@@ -184,7 +191,14 @@ namespace Job_Application_Management
             {
                 new SqlParameter("@ID", SqlDbType.Int) {Value = ID}
             };
-            dbConn.ExecuteDeleteData(sqlQuery, lstParams);
+            if (dbConn.ExecuteDeleteDataCheck(sqlQuery, lstParams))
+            {
+                MessageBox.Show("Xóa công việc đã ứng tuyển thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xóa công việc đã ứng tuyển thất bại");
+            }
         }
         public List<Dictionary<string, object>> GetSelectedJobDetails(int jobid)
         {
@@ -209,7 +223,14 @@ namespace Job_Application_Management
                     new SqlParameter("@times", SqlDbType.Date) {Value = DateTime.Now},
                     new SqlParameter("@jId", SqlDbType.Int) { Value = jobid },
             };
-            dbConn.ExecuteWriteData(sqlQuery, lstParam);
+            if (dbConn.ExecuteWriteDataCheck(sqlQuery, lstParam))
+            {
+                MessageBox.Show("Lưu công việc thành công");
+            }
+            else
+            {
+                MessageBox.Show("Lưu công việc thất bại");
+            }
         }
         public void AddAppliedJob(int jobid)
         {
@@ -220,7 +241,14 @@ namespace Job_Application_Management
                     new SqlParameter("@times", SqlDbType.Date) {Value = DateTime.Now},
                     new SqlParameter("@jId", SqlDbType.Int) { Value = jobid },
                 };
-            dbConn.ExecuteWriteData(sqlQuery, lstParam);
+            if (dbConn.ExecuteWriteDataCheck(sqlQuery, lstParam))
+            {
+                MessageBox.Show("Ứng tuyển công việc thành công");
+            }
+            else
+            {
+                MessageBox.Show("Ứng tuyển công việc thất bại");
+            }
         }
         public List<Dictionary<string, object>> GetCompanyFromDB(string companyName)
         {
@@ -258,7 +286,14 @@ namespace Job_Application_Management
                 new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = cv.Certification},
                 new SqlParameter("@CertificationDate", SqlDbType.Date) {Value = cv.CertificationDate},
                 };
-                dbConn.ExecuteWriteData(sqlQuery, lstParams);
+                if(dbConn.ExecuteWriteDataCheck(sqlQuery, lstParams))
+                {
+                    MessageBox.Show("Lưu hồ sơ có hiệu lực thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Lưu hồ sơ có hiệu lực thất bại");
+                }
             }
             else
             {
@@ -323,7 +358,14 @@ namespace Job_Application_Management
                 new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = cv.Certification},
                 new SqlParameter("@CertificationDate", SqlDbType.Date) {Value = cv.CertificationDate},
                 };
-                dbConn.ExecuteWriteData(sqlQuery, lstParams);
+                if (dbConn.ExecuteWriteDataCheck(sqlQuery, lstParams))
+                {
+                    MessageBox.Show("Lưu hồ sơ ứng tuyển của ứng viên thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Lưu hồ sơ ứng viên thất bại");
+                }
             }
             else
             {
@@ -350,7 +392,14 @@ namespace Job_Application_Management
                 new SqlParameter("@WorkPlace", SqlDbType.NVarChar) {Value = canProfile.WorkPlace},
                 new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = canProfile.Certification},
                 };
-                dbConn.ExecuteWriteData(sqlQuery, lstParams);
+                if (dbConn.ExecuteWriteDataCheck(sqlQuery, lstParams))
+                {
+                    MessageBox.Show("Thêm bài đăng tìm việc thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm bài đăng tìm việc thất bại");
+                }
             }
             else
             {
@@ -375,7 +424,14 @@ namespace Job_Application_Management
                 new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = canProfile.Certification},
                 new SqlParameter("PostTime", SqlDbType.Date) {Value = DateTime.Now},
                 };
-            dbConn.ExecuteWriteData(sqlQuery, lstParams);
+            if (dbConn.ExecuteWriteDataCheck(sqlQuery, lstParams))
+            {
+                MessageBox.Show("Sửa bài đăng tìm việc thành công");
+            }
+            else
+            {
+                MessageBox.Show("Sửa bài đăng tìm việc thất bại");
+            }
         }
         // Xóa bài viết tìm việc
         public void RemoveJobPosting(string WorkPlace, string CddID)
@@ -386,7 +442,14 @@ namespace Job_Application_Management
                 new SqlParameter("@CddID", SqlDbType.VarChar) {Value = CddID},
                 new SqlParameter("@WorkPlace", SqlDbType.NVarChar) {Value = WorkPlace},
             };
-            dbConn.ExecuteDeleteData(sqlQuery, lstParams);
+            if (dbConn.ExecuteDeleteDataCheck(sqlQuery, lstParams))
+            {
+                MessageBox.Show("Xóa bài đăng tìm việc thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xóa bài đăng tìm việc thất bại");
+            }
         }
         public List<UC_WorkHistory> GetWorkHistory()
         {
@@ -408,11 +471,55 @@ namespace Job_Application_Management
             }
             return lstWorkHistory;
         }
+        public void AddWorkHistory(string cddid, string comname, DateTime sdate, DateTime ddate)
+        {
+            sqlQuery = "INSERT INTO WorkHistory(CandidateID, CompanyName, StartDate, EndDate)"
+                      +" VALUES (@CandidateID, @CompanyName, @StartDate, @EndDate)";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CandidateID", SqlDbType.VarChar) {Value = cddid},
+                new SqlParameter("@CompanyName", SqlDbType.NVarChar) {Value = comname},
+                new SqlParameter("@StartDate", SqlDbType.Date) {Value = sdate},
+                new SqlParameter("@EndDate", SqlDbType.Date) {Value = ddate},
+            };
+            if (dbConn.ExecuteWriteDataCheck(sqlQuery, lstParams))
+            {
+                MessageBox.Show("Thêm lịch sử làm việc thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thêm chưa thành công");
+            }
+        }
+        public void RemoveWorkHistory(string CddID, string CompanyName)
+        {
+            sqlQuery = "DELETE WorkHistory WHERE CandidateID = @CandidateID AND CompanyName = @CompanyName";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CandidateID", SqlDbType.VarChar) {Value = CddID},
+                new SqlParameter("@CompanyName", SqlDbType.NVarChar) {Value = CompanyName},
+            };
+            if (dbConn.ExecuteDeleteDataCheck(sqlQuery, lstParams))
+            {
+                MessageBox.Show("Xóa lịch sử thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xóa lịch sử thành công");
+            }
+        }
         // Tăng số lượng người theo dõi
         public void IncrementFlower()
         {
             sqlQuery = "UPDATE Company SET NumberOfFollower = NumberOfFollower + 1";
-            dbConn.ExecuteWriteData(sqlQuery);
+            if (dbConn.ExecuteWriteDataCheck(sqlQuery))
+            {
+                MessageBox.Show("Tăng follower thành công");
+            }
+            else
+            {
+                MessageBox.Show("Tăng follower thất bại");
+            }
         }
     }
 }

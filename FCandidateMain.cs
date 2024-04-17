@@ -90,7 +90,7 @@ namespace Job_Application_Management
         private void clickToShowJobDetails_Click(object sender, ButtonClickEventArgs e)
         {
             
-            FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails(e.JobID, e.ID);
+            FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails(e.JobID, e.CddID);
             OpenChildForm(selected);
             
         }

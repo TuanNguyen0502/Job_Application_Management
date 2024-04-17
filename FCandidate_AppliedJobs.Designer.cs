@@ -174,7 +174,7 @@
             this.flpStoreUC.AutoScroll = true;
             this.flpStoreUC.Location = new System.Drawing.Point(8, 216);
             this.flpStoreUC.Name = "flpStoreUC";
-            this.flpStoreUC.Size = new System.Drawing.Size(811, 480);
+            this.flpStoreUC.Size = new System.Drawing.Size(811, 505);
             this.flpStoreUC.TabIndex = 9;
             // 
             // FCandidate_AppliedJobs

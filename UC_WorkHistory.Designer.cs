@@ -35,8 +35,14 @@
             this.dtp_End = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.ptb_Cancel = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.ptb_Done = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.ptb_AddHistory = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Cancel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Done)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_AddHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +64,7 @@
             this.txt_CddName.PasswordChar = '\0';
             this.txt_CddName.PlaceholderText = "Tên ứng viên";
             this.txt_CddName.SelectedText = "";
-            this.txt_CddName.Size = new System.Drawing.Size(267, 48);
+            this.txt_CddName.Size = new System.Drawing.Size(246, 48);
             this.txt_CddName.TabIndex = 1;
             // 
             // txt_CompanyName
@@ -73,13 +79,13 @@
             this.txt_CompanyName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_CompanyName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_CompanyName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_CompanyName.Location = new System.Drawing.Point(406, 13);
+            this.txt_CompanyName.Location = new System.Drawing.Point(381, 13);
             this.txt_CompanyName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_CompanyName.Name = "txt_CompanyName";
             this.txt_CompanyName.PasswordChar = '\0';
             this.txt_CompanyName.PlaceholderText = "Tên công ty đã làm";
             this.txt_CompanyName.SelectedText = "";
-            this.txt_CompanyName.Size = new System.Drawing.Size(333, 48);
+            this.txt_CompanyName.Size = new System.Drawing.Size(289, 48);
             this.txt_CompanyName.TabIndex = 2;
             // 
             // dtp_Start
@@ -88,11 +94,11 @@
             this.dtp_Start.FillColor = System.Drawing.Color.White;
             this.dtp_Start.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtp_Start.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp_Start.Location = new System.Drawing.Point(196, 68);
+            this.dtp_Start.Location = new System.Drawing.Point(175, 68);
             this.dtp_Start.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_Start.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp_Start.Name = "dtp_Start";
-            this.dtp_Start.Size = new System.Drawing.Size(200, 36);
+            this.dtp_Start.Size = new System.Drawing.Size(184, 36);
             this.dtp_Start.TabIndex = 3;
             this.dtp_Start.Value = new System.DateTime(2024, 4, 14, 9, 10, 17, 324);
             // 
@@ -102,33 +108,80 @@
             this.dtp_End.FillColor = System.Drawing.Color.White;
             this.dtp_End.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtp_End.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp_End.Location = new System.Drawing.Point(539, 68);
+            this.dtp_End.Location = new System.Drawing.Point(488, 68);
             this.dtp_End.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_End.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtp_End.Name = "dtp_End";
-            this.dtp_End.Size = new System.Drawing.Size(200, 36);
+            this.dtp_End.Size = new System.Drawing.Size(182, 36);
             this.dtp_End.TabIndex = 4;
             this.dtp_End.Value = new System.DateTime(2024, 4, 14, 9, 10, 17, 324);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(76, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 23);
+            this.label1.Size = new System.Drawing.Size(99, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Ngày bắt đầu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(416, 75);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(365, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 23);
+            this.label2.Size = new System.Drawing.Size(100, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Ngày kết thúc";
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // ptb_Cancel
+            // 
+            this.ptb_Cancel.BackColor = System.Drawing.Color.White;
+            this.ptb_Cancel.Image = global::Job_Application_Management.Properties.Resources.icons8_cancel_32;
+            this.ptb_Cancel.ImageRotate = 0F;
+            this.ptb_Cancel.Location = new System.Drawing.Point(676, 81);
+            this.ptb_Cancel.Name = "ptb_Cancel";
+            this.ptb_Cancel.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.ptb_Cancel.Size = new System.Drawing.Size(48, 39);
+            this.ptb_Cancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_Cancel.TabIndex = 9;
+            this.ptb_Cancel.TabStop = false;
+            this.ptb_Cancel.Click += new System.EventHandler(this.ptb_Cancel_Click);
+            // 
+            // ptb_Done
+            // 
+            this.ptb_Done.BackColor = System.Drawing.Color.White;
+            this.ptb_Done.Image = global::Job_Application_Management.Properties.Resources.icons8_tick_48;
+            this.ptb_Done.ImageRotate = 0F;
+            this.ptb_Done.Location = new System.Drawing.Point(676, 42);
+            this.ptb_Done.Name = "ptb_Done";
+            this.ptb_Done.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.ptb_Done.Size = new System.Drawing.Size(48, 39);
+            this.ptb_Done.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_Done.TabIndex = 8;
+            this.ptb_Done.TabStop = false;
+            this.ptb_Done.Click += new System.EventHandler(this.ptb_Done_Click);
+            // 
+            // ptb_AddHistory
+            // 
+            this.ptb_AddHistory.BackColor = System.Drawing.Color.White;
+            this.ptb_AddHistory.Image = global::Job_Application_Management.Properties.Resources.icons8_plus_32;
+            this.ptb_AddHistory.ImageRotate = 0F;
+            this.ptb_AddHistory.Location = new System.Drawing.Point(676, 3);
+            this.ptb_AddHistory.Name = "ptb_AddHistory";
+            this.ptb_AddHistory.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.ptb_AddHistory.Size = new System.Drawing.Size(48, 35);
+            this.ptb_AddHistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_AddHistory.TabIndex = 7;
+            this.ptb_AddHistory.TabStop = false;
+            this.ptb_AddHistory.Click += new System.EventHandler(this.ptb_AddHistory_Click);
             // 
             // guna2CirclePictureBox1
             // 
@@ -143,16 +196,14 @@
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 15;
-            this.guna2Elipse1.TargetControl = this;
-            // 
             // UC_WorkHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.ptb_Cancel);
+            this.Controls.Add(this.ptb_Done);
+            this.Controls.Add(this.ptb_AddHistory);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtp_End);
@@ -161,7 +212,10 @@
             this.Controls.Add(this.txt_CddName);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Name = "UC_WorkHistory";
-            this.Size = new System.Drawing.Size(750, 120);
+            this.Size = new System.Drawing.Size(781, 125);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Cancel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Done)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_AddHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,5 +232,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox ptb_AddHistory;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox ptb_Done;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox ptb_Cancel;
     }
 }

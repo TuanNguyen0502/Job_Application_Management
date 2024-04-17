@@ -8,11 +8,11 @@ namespace Job_Application_Management
 {
     public class ButtonClickEventArgs : EventArgs
     {
-        public string ID { get; }
+        public string CddID { get; }
         public int JobID { get; }
-        public ButtonClickEventArgs(string text, int jobid)
+        public ButtonClickEventArgs(string cddId, int jobid)
         {
-            ID = text;
+            CddID = cddId;
             JobID = jobid;
         }
         

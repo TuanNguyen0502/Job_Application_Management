@@ -76,6 +76,7 @@
     <Compile Include="Candidate.cs" />
     <Compile Include="CandidateDAO.cs" />
     <Compile Include="CandidateProfile.cs" />
+    <Compile Include="ClickAddHistory.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="CV.cs" />
     <Compile Include="DBConnection.cs" />
@@ -882,6 +883,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-work-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tick-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

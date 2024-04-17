@@ -12,7 +12,7 @@ namespace Job_Application_Management
 {
     public partial class FCandidate_PostFindJob : Form
     {
-        private string cddId = null;
+        private string cddId;
         CandidateDAO canDAO = new CandidateDAO();
         public FCandidate_PostFindJob(string cddId)
         {
@@ -25,13 +25,41 @@ namespace Job_Application_Management
             flp_ContainsHistory.Controls.Clear();
             
         }
-        private void FCandidate_PostFindJob_Load(object sender, EventArgs e)
+        public void btnAddHistory_Click(object sender, EventArgs e)
+        {
+            UC_WorkHistory history = new UC_WorkHistory();
+            history.AddHistory += btnAddHistory_Click;
+            history.DoneAddHistory += btnDoneAddHistory_Click;
+            history.RemoveHistory += btnRemoveHistory_Click;
+            flp_ContainsHistory.Controls.Add(history);
+            
+        }
+        public void btnDoneAddHistory_Click(object sender, ClickAddHistory e)
+        {
+            canDAO.AddWorkHistory(cddId, e.CompanyName, e.StartDate, e.EndDate);
+            flp_ContainsHistory.Controls.Clear();
+            LoadHistory();
+        }
+        public void btnRemoveHistory_Click(object sender, ClickAddHistory e)
+        {
+            canDAO.RemoveWorkHistory(cddId, e.CompanyName);
+            flp_ContainsHistory.Controls.Clear();
+            LoadHistory();
+        }
+        public void LoadHistory()
         {
             List<UC_WorkHistory> historys = canDAO.GetWorkHistory();
             foreach (var history in historys)
             {
+                history.AddHistory += btnAddHistory_Click;
+                history.DoneAddHistory += btnDoneAddHistory_Click;
+                history.RemoveHistory += btnRemoveHistory_Click;
                 flp_ContainsHistory.Controls.Add(history);
             }
+        }
+        private void FCandidate_PostFindJob_Load(object sender, EventArgs e)
+        {
+            LoadHistory();
         }
         public CandidateProfile GetCandidateProfileToCoverLetter()
         {

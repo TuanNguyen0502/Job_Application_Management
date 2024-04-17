@@ -47,7 +47,7 @@ namespace Job_Application_Management
             List<UC_AppliedJobs> appliedJobs = canDAO.GetAppliedJobsFromDB();
             foreach (var applied in appliedJobs)
             {
-                if (jobid == applied.AppliedJobs.AppliedJobID)
+                if (jobid == applied.AppliedJobs.Id)
                 {
                     btnApply.Enabled = false;
                     btnApply.BackColor = Color.Gray;
@@ -167,9 +167,11 @@ namespace Job_Application_Management
         private void btnApply_Click(object sender, EventArgs e)
         {
             canDAO.AddAppliedJob(jobid);
+            btnApply.Enabled = false;
+            btnApply.BackColor = Color.Gray;
             //
-            CV cv = canDAO.GetAvailableCVByCandidateID(cddid);
-            canDAO.SaveResumeToDatabase(cv, jobid);
+            //CV cv = canDAO.GetAvailableCVByCandidateID(cddid);
+            //canDAO.SaveResumeToDatabase(cv, jobid);
         }
 
         private void btnSaved_Click(object sender, EventArgs e)

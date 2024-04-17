@@ -523,7 +523,7 @@
             // guna2Elipse4
             // 
             this.guna2Elipse4.BorderRadius = 18;
-            this.guna2Elipse4.TargetControl = this.pnlCompany;
+            this.guna2Elipse4.TargetControl = this.pnlOverview;
             // 
             // guna2Elipse5
             // 
