@@ -15,9 +15,11 @@ namespace Job_Application_Management
     {
         CandidateDAO canDAO = new CandidateDAO();
         Form currentFormChild;
-        public FCandidateMain()
+        public FCandidateMain(string cddID)
         {
             InitializeComponent();
+            lblCddID.Text = cddID;
+            lbl_CddName.Text = canDAO.GetNameByCddID(cddID);
         }
         private void OpenChildForm(Form childForm)
         {
@@ -171,7 +173,7 @@ namespace Job_Application_Management
             UC_Introduction introduction = new UC_Introduction();
             introduction.Btn_ResponeFindJobs += btn_ResponeFindJobs_Click;
             flp_ContainsJobs.Controls.Add(introduction);
-            OpenChildForm(new FCandidate_PostFindJob());
+            OpenChildForm(new FCandidate_PostFindJob(lblCddID.Text));
         }
 
         private void btn_LogOut_Click_1(object sender, EventArgs e)

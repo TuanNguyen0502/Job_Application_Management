@@ -22,7 +22,16 @@ namespace Job_Application_Management
         {
             dbConn = new DBConnection();
         }
-        
+        public string GetNameByCddID(string cddId)
+        {
+            sqlQuery = "SELECT CddName FROM Candidates WHERE CddID = @CddID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddId}
+            };
+            string res = dbConn.ExecuteScalar(sqlQuery, lstParams);
+            return res;
+        }
         public List<UC_CandidateMain> GetJobsFromDB(string cddid)
         {
             sqlQuery = "SELECT j.ID JobID, j.Name JobName, c.Name CompanyName, j.Salary, c.Address"
@@ -325,7 +334,7 @@ namespace Job_Application_Management
         public void AddJobPosting(CandidateProfile canProfile, string cddid)
         {
 
-            if (canProfile != null)
+            if (canProfile != null && cddid != null)
             {
                 sqlQuery = "INSERT INTO CandidateProfile(CddID, WorkPlace, Objective, UniversityName, Major, GPA, " +
                        "CompanyName,CertificationName)"+

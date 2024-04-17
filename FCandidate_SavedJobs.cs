@@ -42,6 +42,7 @@ namespace Job_Application_Management
         private void FCandidate_SavedJobs_Load(object sender, EventArgs e)
         {
             LoadSavedJobs();
+            rdb_Nearly.Checked = true;
         }
         private void savedJobsButtonApply_Click(object sender, ButtonClickEventArgs e)
         {

@@ -136,7 +136,7 @@ namespace Job_Application_Management
                         return;
                     }
 
-                    Program.MainFormManager.CurrentForm = new FCandidateMain();
+                    Program.MainFormManager.CurrentForm = new FCandidateMain(cddID);
                 }
                 if (radioButton_Employer.Checked)
                 {

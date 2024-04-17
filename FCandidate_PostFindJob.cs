@@ -12,7 +12,7 @@ namespace Job_Application_Management
 {
     public partial class FCandidate_PostFindJob : Form
     {
-        private string cddId;
+        private string cddId = null;
         CandidateDAO canDAO = new CandidateDAO();
         public FCandidate_PostFindJob(string cddId)
         {
@@ -23,6 +23,10 @@ namespace Job_Application_Management
         {
             InitializeComponent();
             flp_ContainsHistory.Controls.Clear();
+            
+        }
+        private void FCandidate_PostFindJob_Load(object sender, EventArgs e)
+        {
             List<UC_WorkHistory> historys = canDAO.GetWorkHistory();
             foreach (var history in historys)
             {
@@ -42,24 +46,24 @@ namespace Job_Application_Management
             return canProfile;
         }
 
-        private void btn_Post_Click(object sender, EventArgs e)
+        private void btn_Post_Click_1(object sender, EventArgs e)
         {
             CandidateProfile canProfile = GetCandidateProfileToCoverLetter();
             canDAO.AddJobPosting(canProfile, cddId);
         }
 
-        private void btn_Edit_Click(object sender, EventArgs e)
+        private void btn_Edit_Click_1(object sender, EventArgs e)
         {
             CandidateProfile canProfile = GetCandidateProfileToCoverLetter();
             canDAO.EditJobPosting(canProfile, cddId);
         }
 
-        private void btn_Remove_Click(object sender, EventArgs e)
+        private void btn_Remove_Click_1(object sender, EventArgs e)
         {
             CandidateProfile canProfile = GetCandidateProfileToCoverLetter();
             canDAO.RemoveJobPosting(canProfile.WorkPlace, cddId);
         }
 
-
+        
     }
 }
