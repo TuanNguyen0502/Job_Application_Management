@@ -214,7 +214,7 @@ namespace Job_Application_Management
             }
             return resultList;
         }
-        public object ExecuteScalar(string sqlStr, SqlParameter[] lstParam)
+        public string ExecuteScalar(string sqlStr, SqlParameter[] lstParam)
         {
             using (SqlConnection conn = new SqlConnection(conStr))
             {
@@ -223,8 +223,17 @@ namespace Job_Application_Management
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(sqlStr, conn);
                     cmd.Parameters.AddRange(lstParam);
-                    object obj = cmd.ExecuteScalar();
-                    return obj;
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    string res = "";
+                    if (reader.Read())
+                    {
+                        res = reader.GetString(0);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No rows found");
+                    }
+                    return res;
                 }
                 catch (Exception ex)
                 {
