@@ -137,12 +137,6 @@
     <Compile Include="FEmployer_CandidateDetail.Designer.cs">
       <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="FEmployer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FEmployer.Designer.cs">
-      <DependentUpon>FEmployer.cs</DependentUpon>
-    </Compile>
     <Compile Include="FEmployer_ApprovedCandidate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +245,12 @@
     <Compile Include="UC_CoverLetter.Designer.cs">
       <DependentUpon>UC_CoverLetter.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_CV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CV.Designer.cs">
+      <DependentUpon>UC_CV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Introduction.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -338,9 +338,6 @@
     <EmbeddedResource Include="FEmployer_CandidateDetail.resx">
       <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FEmployer.resx">
-      <DependentUpon>FEmployer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_ApprovedCandidate.resx">
       <DependentUpon>FEmployer_ApprovedCandidate.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_CoverLetter.resx">
       <DependentUpon>UC_CoverLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CV.resx">
+      <DependentUpon>UC_CV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Introduction.resx">
       <DependentUpon>UC_Introduction.cs</DependentUpon>

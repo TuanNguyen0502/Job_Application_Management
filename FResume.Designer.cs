@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.uC_Resume1 = new Job_Application_Management.UC_Resume();
+            this.uC_CV1 = new Job_Application_Management.UC_CV();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -38,23 +38,24 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.uC_Resume1);
+            this.panel1.Controls.Add(this.uC_CV1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1430, 1050);
+            this.panel1.Size = new System.Drawing.Size(1478, 1050);
             this.panel1.TabIndex = 0;
             // 
-            // uC_Resume1
+            // uC_CV1
             // 
-            this.uC_Resume1.AutoScroll = true;
-            this.uC_Resume1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Resume1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Resume1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uC_Resume1.Name = "uC_Resume1";
-            this.uC_Resume1.Size = new System.Drawing.Size(1430, 1050);
-            this.uC_Resume1.TabIndex = 0;
+            this.uC_CV1.AutoScroll = true;
+            this.uC_CV1.BackColor = System.Drawing.Color.White;
+            this.uC_CV1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_CV1.Location = new System.Drawing.Point(0, 0);
+            this.uC_CV1.Name = "uC_CV1";
+            this.uC_CV1.Padding = new System.Windows.Forms.Padding(20);
+            this.uC_CV1.Size = new System.Drawing.Size(1478, 1050);
+            this.uC_CV1.TabIndex = 0;
             // 
             // kryptonPalette1
             // 
@@ -82,7 +83,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1430, 1050);
+            this.ClientSize = new System.Drawing.Size(1478, 1050);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FResume";
@@ -100,7 +101,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private UC_Resume uC_Resume1;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private UC_CV uC_CV1;
     }
 }
