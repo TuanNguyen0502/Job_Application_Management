@@ -117,7 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="kryptonPalette1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>58, 25</value>
-  </metadata>
+  <data name="richTextBox_CareerGoal.Text" xml:space="preserve">
+    <value>02 năm kinh nghiệm đào tạo kỹ năng bán hàng và kỹ năng mềm tại trường đại học và doanh nghiệp. Kinh nghiệm đứng lớp 50 - 500 học viên. Có thế mạnh về thiết kế chương trình, đào tạo trực tuyến và xây dựng chuẩn đầu ra. Đang tìm kiếm cơ hội làm việc tại vị trí [X] để đóng góp gia tăng chất lượng chương trình đào tạo cho công ty [Y]</value>
+  </data>
+  <data name="richTextBox_Detail.Text" xml:space="preserve">
+    <value>Quản lý chương trình phát triển kỹ năng của 300 nhân viên, phổ biến các hoạt động và chính sách công ty. 
+Phân tích nhu cầu, lập kế hoạch, ngân sách 100 triệu mỗi quý, chuẩn bị và tiến hành thực hiện các khóa đào tạo.
+Đề xuất các chủ đề đào tạo mới, chịu trách nhiệm phối hợp với các phòng ban liên quan để khảo sát nhu cầu đào tạo phát triển về chuyên môn và kỹ năng phát triển nghề nghiệp cho nhân viên.
+Đã hợp tác cùng 100 đơn vị đào tạo và 30 giảng viên phù hợp với các tiêu chí, ngân sách được phê duyệt.
+Thực hiện đào tạo hội nhập cho khoảng 50 CBNV mới mỗi tháng.</value>
+  </data>
 </root>

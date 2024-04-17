@@ -16,16 +16,18 @@ namespace Job_Application_Management
         private string role;
         private int jobID;
         private string cddID;
+
         public FResume(int jobID, string cddID, string role)
         {
             this.jobID = jobID;
             this.cddID = cddID;
             this.role = role;
             InitializeComponent();
-            uC_Resume1.JobID = jobID;
-            uC_Resume1.CddID = cddID;
-            uC_Resume1.Role = role;
+            uC_CV1.Role = role;
+            uC_CV1.JobID = jobID;
+            uC_CV1.CddID = cddID;
         }
+
         public FResume()
         {
             InitializeComponent();
