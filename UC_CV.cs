@@ -39,7 +39,7 @@ namespace Job_Application_Management
             myCV.CddEmail = textBox_Email.Text;
             myCV.Objective = richTextBox_CareerGoal.Text;
             myCV.Major = textBox_Major.Text;
-            myCV.Gpa = "8.0";
+            myCV.Gpa = textBox_GPA.Text;
             myCV.UniversityName = textBox_University.Text;
             myCV.UniversityStartDate = dateTimePicker_UniversityStartDate.Value;
             myCV.UniversityEndDate = dateTimePicker_UniversityEndDate.Value;
@@ -86,7 +86,6 @@ namespace Job_Application_Management
             dateTimePicker_CompanyEndDate.Value = resume.CompanyEndDate;
             textBox_Certification.Text = resume.Certification;
             dateTimePicker_Certification.Value = resume.TimeCertificate;
-            label_Status.Text = resume.Status;
         }
 
         public void ReadOnlyControls()
@@ -109,12 +108,14 @@ namespace Job_Application_Management
             //uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
             btn_CreateCV.Visible = false;
         }
-
+        public event EventHandler CreateCV;
         private void btn_CreateCV_Click(object sender, EventArgs e)
         {
-            //candidateDAO.SaveCVToDatabase(jobID);
+            CreateCV?.Invoke(this, new EventArgs());
+            /*CV cv = new CV();
+            cv.
+            candidateDAO.SaveCVToDatabase(jobID);*/
         }
-
         private void button_Approve_Click(object sender, EventArgs e)
         {
             resume.Status = "Approved";
@@ -128,5 +129,6 @@ namespace Job_Application_Management
             label_Status.Text = resume.Status;
             employerDAO.UpdateResume(resume);
         }
+        
     }
 }

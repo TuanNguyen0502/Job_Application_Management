@@ -166,12 +166,18 @@ namespace Job_Application_Management
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            canDAO.AddAppliedJob(jobid);
-            btnApply.Enabled = false;
-            btnApply.BackColor = Color.Gray;
-            //
-            //CV cv = canDAO.GetAvailableCVByCandidateID(cddid);
-            //canDAO.SaveResumeToDatabase(cv, jobid);
+            CV cv = canDAO.GetAvailableCVByCandidateID(cddid);
+            if (cv != null)
+            {
+                canDAO.SaveResumeToDatabase(cv, jobid);
+                canDAO.AddAppliedJob(jobid);
+                btnApply.Enabled = false;
+                btnApply.BackColor = Color.Gray;
+            }
+            else
+            {
+                MessageBox.Show("CV chưa được tạo sẵn. Hãy tạo sẵn (đăng ký) CV trước khi ứng tuyển");
+            }
         }
 
         private void btnSaved_Click(object sender, EventArgs e)

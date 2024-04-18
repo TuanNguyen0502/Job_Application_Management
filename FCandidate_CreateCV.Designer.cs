@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCandidate_CreateCV));
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.uC_Resume1 = new Job_Application_Management.UC_Resume();
+            this.uC_CV1 = new Job_Application_Management.UC_CV();
             this.SuspendLayout();
             // 
             // kryptonButton1
@@ -49,17 +49,19 @@
             this.kryptonButton1.TabIndex = 1;
             this.kryptonButton1.Values.Text = "Lưu hồ sơ";
             // 
-            // uC_Resume1
+            // uC_CV1
             // 
-            this.uC_Resume1.AutoScroll = true;
-            this.uC_Resume1.CddID = null;
-            this.uC_Resume1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Resume1.JobID = 0;
-            this.uC_Resume1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Resume1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uC_Resume1.Name = "uC_Resume1";
-            this.uC_Resume1.Size = new System.Drawing.Size(1282, 1055);
-            this.uC_Resume1.TabIndex = 0;
+            this.uC_CV1.BackColor = System.Drawing.Color.White;
+            this.uC_CV1.CddID = null;
+            this.uC_CV1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_CV1.JobID = 0;
+            this.uC_CV1.Location = new System.Drawing.Point(0, 0);
+            this.uC_CV1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_CV1.Name = "uC_CV1";
+            this.uC_CV1.Padding = new System.Windows.Forms.Padding(18, 16, 18, 16);
+            this.uC_CV1.Role = null;
+            this.uC_CV1.Size = new System.Drawing.Size(1282, 1055);
+            this.uC_CV1.TabIndex = 0;
             // 
             // FCandidate_CreateCV
             // 
@@ -67,7 +69,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1282, 1055);
-            this.Controls.Add(this.uC_Resume1);
+            this.Controls.Add(this.uC_CV1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FCandidate_CreateCV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -79,6 +81,6 @@
 
         #endregion
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private UC_Resume uC_Resume1;
+        private UC_CV uC_CV1;
     }
 }

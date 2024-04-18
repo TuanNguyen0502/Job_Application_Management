@@ -181,5 +181,10 @@ namespace Job_Application_Management
             Program.MainFormManager.CurrentForm = new FLogin();
 
         }
+
+        private void btn_CreateCVAvailable_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

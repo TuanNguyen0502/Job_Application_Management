@@ -42,7 +42,7 @@
             this.imgSlide = new System.Windows.Forms.PictureBox();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_CreateCV = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -305,7 +305,7 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.guna2Button1);
+            this.guna2ShadowPanel1.Controls.Add(this.btn_CreateCV);
             this.guna2ShadowPanel1.Controls.Add(this.pictureBox4);
             this.guna2ShadowPanel1.Controls.Add(this.pictureBox2);
             this.guna2ShadowPanel1.Controls.Add(this.guna2ControlBox1);
@@ -321,23 +321,24 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1313, 118);
             this.guna2ShadowPanel1.TabIndex = 11;
             // 
-            // guna2Button1
+            // btn_CreateCV
             // 
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.SeaShell;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button1.Image = global::Job_Application_Management.Properties.Resources.icons8_person_48;
-            this.guna2Button1.Location = new System.Drawing.Point(1019, 14);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(213, 67);
-            this.guna2Button1.TabIndex = 13;
-            this.guna2Button1.Text = "Tùy chỉnh cá nhân";
-            this.guna2Button1.TextOffset = new System.Drawing.Point(2, 0);
+            this.btn_CreateCV.BorderRadius = 20;
+            this.btn_CreateCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_CreateCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_CreateCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_CreateCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_CreateCV.FillColor = System.Drawing.Color.SeaShell;
+            this.btn_CreateCV.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btn_CreateCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btn_CreateCV.Image = global::Job_Application_Management.Properties.Resources.icons8_person_48;
+            this.btn_CreateCV.Location = new System.Drawing.Point(1019, 14);
+            this.btn_CreateCV.Name = "btn_CreateCV";
+            this.btn_CreateCV.Size = new System.Drawing.Size(213, 67);
+            this.btn_CreateCV.TabIndex = 13;
+            this.btn_CreateCV.Text = "Tạo CV sẵn";
+            this.btn_CreateCV.TextOffset = new System.Drawing.Point(2, 0);
+            this.btn_CreateCV.Click += new System.EventHandler(this.btn_CreateCVAvailable_Click);
             // 
             // pictureBox4
             // 
@@ -577,6 +578,6 @@
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2Button btn_LogOut;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_CreateCV;
     }
 }

@@ -266,12 +266,12 @@ namespace Job_Application_Management
             CV cv = resume.GetInfoResumeAtForm();
             if (cv != null)
             {
-                sqlQuery = "INSERT INTO CV(CddID, Objective, UniversityName, Major, GPA, UniversityStartDate"+
-                       ", UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName,"+ "CertificationDate)"+
-                       "VALUES(@CddID, @Objective, @UniversityName, @Major, @GPA, @UniversityStartDate, @UniversityEndDate, @CompanyName, @WorkPlace, @Detail, @CompanyStartDate, @CompanyEndDate, @CertificationName, @CertificationDate)";
+                sqlQuery = "INSERT INTO CV(Objective, UniversityName, Major, GPA, UniversityStartDate"+
+                       ", UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName,"+ "CertificationDate,CVOwner)"+
+                       "VALUES(@Objective, @UniversityName, @Major, @GPA, @UniversityStartDate, @UniversityEndDate, @CompanyName, @WorkPlace, @Detail, @CompanyStartDate, @CompanyEndDate, @CertificationName, @CertificationDate, @CVOwner)";
                 SqlParameter[] lstParams =
                     {
-                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid},
+                new SqlParameter("@CVOwner", SqlDbType.VarChar) {Value = cddid},
                 new SqlParameter("@Objective", SqlDbType.Text) {Value = cv.Objective},
                 new SqlParameter("@UniversityName", SqlDbType.NVarChar) {Value = cv.UniversityName},
                 new SqlParameter("@Major", SqlDbType.NVarChar) {Value = cv.Major},
@@ -306,7 +306,7 @@ namespace Job_Application_Management
             CV cv = new CV();
             sqlQuery = "SELECT *"+
                        " FROM CV"+
-                       " WHERE CddID = @CddID";
+                       " WHERE CVOwner = @CddID";
             SqlParameter[] lstParam =
             {
                 new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid},

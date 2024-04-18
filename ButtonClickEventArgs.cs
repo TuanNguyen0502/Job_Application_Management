@@ -10,10 +10,15 @@ namespace Job_Application_Management
     {
         public string CddID { get; }
         public int JobID { get; }
+        public CV Cv { get; }
         public ButtonClickEventArgs(string cddId, int jobid)
         {
             CddID = cddId;
             JobID = jobid;
+        }
+        public ButtonClickEventArgs(CV cv)
+        {
+            Cv = cv;
         }
         
     }

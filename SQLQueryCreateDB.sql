@@ -78,8 +78,7 @@ CREATE TABLE Certification(
 	CertificationDate date
 )
 CREATE TABLE CV(
-	ID int IDENTITY PRIMARY KEY,
-	CddID varchar(10) CONSTRAINT FK_CV_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
+	ID int IDENTITY,
 	Objective text,
 	UniversityName nvarchar(100),
 	Major nvarchar(100),
@@ -93,6 +92,7 @@ CREATE TABLE CV(
 	CompanyEndDate date,
 	CertificationName nvarchar(100),
 	CertificationDate date,
+	CVOwner varchar(10) CONSTRAINT FK_CV_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
 )
 CREATE TABLE Resume(
 	CddID varchar(10) CONSTRAINT FK_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
@@ -223,3 +223,4 @@ SELECT * FROM SavedJobs
 SELECT * FROM AppliedJobs
 
 SELECT * FROM Jobs
+SELECT * FROM CV
