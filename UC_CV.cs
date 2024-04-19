@@ -110,6 +110,7 @@ namespace Job_Application_Management
             btn_CreateCV.Visible = false;
         }
         public Guna2Button Btn_CreateCV { get { return btn_CreateCV; } }
+        public Guna2Button Btn_RemoveCVValid { get { return btn_RemoveCVValid; } }
         public event EventHandler<ButtonClickEventArgs> CreateCV_Click;
         private void btn_CreateCV_Click(object sender, EventArgs e)
         {
@@ -131,6 +132,10 @@ namespace Job_Application_Management
             label_Status.Text = resume.Status;
             employerDAO.UpdateResume(resume);
         }
-        
+        public event EventHandler<ButtonClickEventArgs> RemoveCVValid_Click;
+        private void btn_RemoveCVValid_Click(object sender, EventArgs e)
+        {
+            RemoveCVValid_Click?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
+        }
     }
 }
