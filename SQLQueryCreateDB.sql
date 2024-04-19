@@ -78,7 +78,7 @@ CREATE TABLE Certification(
 	CertificationDate date
 )
 CREATE TABLE CV(
-	ID int IDENTITY,
+	ID int IDENTITY PRIMARY KEY,
 	Objective text,
 	UniversityName nvarchar(100),
 	Major nvarchar(100),
@@ -222,5 +222,6 @@ JOIN Company c ON wh.CompanyName = c.Name
 SELECT * FROM SavedJobs
 SELECT * FROM AppliedJobs
 
-SELECT * FROM Jobs
+SELECT * FROM Resume
 SELECT * FROM CV
+SELECT * FROM WorkHistory

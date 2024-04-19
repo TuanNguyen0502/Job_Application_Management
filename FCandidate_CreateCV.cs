@@ -13,7 +13,6 @@ namespace Job_Application_Management
     public partial class FCandidate_CreateCV : Form
     {
         CandidateDAO canDAO = new CandidateDAO();
-        UC_CV resume = new UC_CV();
         private string cddid;
         // Danh sách các CV được tạo ban đầu từ các ứng viên
         
@@ -21,30 +20,20 @@ namespace Job_Application_Management
         {
             InitializeComponent();
             this.cddid = cddID;
-            resume.CreateCV += createCV_Cick;
+            uC_CV1.CreateCV_Click += createCV_Cick;
         }
-        public void createCV_Cick(object sender, EventArgs e)
+        public void createCV_Cick(object sender, ButtonClickEventArgs e)
         {
-            MessageBox.Show(cddid);
-            canDAO.SaveAvailableCV(cddid);
-        }
-        /*public void createResume_Cick(object sender, ButtonClickEventArgs e)
-        {
-            CV cv = canDAO.GetAvailableCVByCandidateID(cddid);
-            if (cv != null)
-            {
-                canDAO.SaveResumeToDatabase(cv,cddid);
-            }
-            else
-            {
-                MessageBox.Show("Chưa tồn tại CV có sẵn. Vui lòng tạo CV có sẵn rồi mới úng tuyển.");
-            }
-        }*/
-        public FCandidate_CreateCV()
-        {
-            InitializeComponent();
-            canDAO = new CandidateDAO();
+            canDAO.SaveAvailableCV(e.Cv, cddid);
         }
 
+        private void FCandidate_CreateCV_Load(object sender, EventArgs e)
+        {
+            if (canDAO.CheckCandidateExistsInResume(cddid))
+            {
+                MessageBox.Show("Bạn đã có sẵn CV rồi. Ứng tuyển công việc ngay thôi !");
+                uC_CV1.Btn_CreateCV.Enabled = false;
+            }
+        }
     }
 }

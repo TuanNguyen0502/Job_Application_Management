@@ -336,7 +336,7 @@
             this.btn_CreateCV.Name = "btn_CreateCV";
             this.btn_CreateCV.Size = new System.Drawing.Size(213, 67);
             this.btn_CreateCV.TabIndex = 13;
-            this.btn_CreateCV.Text = "Tạo CV sẵn";
+            this.btn_CreateCV.Text = "Tùy chỉnh cá nhân";
             this.btn_CreateCV.TextOffset = new System.Drawing.Point(2, 0);
             this.btn_CreateCV.Click += new System.EventHandler(this.btn_CreateCVAvailable_Click);
             // 
@@ -490,15 +490,15 @@
             this.flp_ContainsJobs.Dock = System.Windows.Forms.DockStyle.Left;
             this.flp_ContainsJobs.Location = new System.Drawing.Point(0, 120);
             this.flp_ContainsJobs.Name = "flp_ContainsJobs";
-            this.flp_ContainsJobs.Size = new System.Drawing.Size(464, 670);
+            this.flp_ContainsJobs.Size = new System.Drawing.Size(482, 670);
             this.flp_ContainsJobs.TabIndex = 2;
             // 
             // pnl_ContainDetailsJob
             // 
             this.pnl_ContainDetailsJob.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_ContainDetailsJob.Location = new System.Drawing.Point(464, 120);
+            this.pnl_ContainDetailsJob.Location = new System.Drawing.Point(482, 120);
             this.pnl_ContainDetailsJob.Name = "pnl_ContainDetailsJob";
-            this.pnl_ContainDetailsJob.Size = new System.Drawing.Size(853, 670);
+            this.pnl_ContainDetailsJob.Size = new System.Drawing.Size(835, 670);
             this.pnl_ContainDetailsJob.TabIndex = 3;
             // 
             // pnl_Main

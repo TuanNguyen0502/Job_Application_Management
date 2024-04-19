@@ -51,6 +51,7 @@
             // 
             // uC_CV1
             // 
+            this.uC_CV1.AutoScroll = true;
             this.uC_CV1.BackColor = System.Drawing.Color.White;
             this.uC_CV1.CddID = null;
             this.uC_CV1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -75,6 +76,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tạo CV";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FCandidate_CreateCV_Load);
             this.ResumeLayout(false);
 
         }

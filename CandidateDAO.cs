@@ -14,10 +14,7 @@ namespace Job_Application_Management
     public class CandidateDAO
     {
         DBConnection dbConn;
-        UC_Resume resume = new UC_Resume();
         string sqlQuery;
-        // Mong muốn đối tượng listCVs tồn tại trong suốt vòng đời của chương trình
-        private static List<Dictionary<string, object>> listCVs = new List<Dictionary<string, object>>();
         public CandidateDAO()
         {
             dbConn = new DBConnection();
@@ -261,9 +258,8 @@ namespace Job_Application_Management
             };
             return dbConn.ExecuteReaderData(sqlQuery, lstParam);
         }
-        public void SaveAvailableCV(string cddid)
+        public void SaveAvailableCV(CV cv,string cddid)
         {
-            CV cv = resume.GetInfoResumeAtForm();
             if (cv != null)
             {
                 sqlQuery = "INSERT INTO CV(Objective, UniversityName, Major, GPA, UniversityStartDate"+
@@ -271,7 +267,6 @@ namespace Job_Application_Management
                        "VALUES(@Objective, @UniversityName, @Major, @GPA, @UniversityStartDate, @UniversityEndDate, @CompanyName, @WorkPlace, @Detail, @CompanyStartDate, @CompanyEndDate, @CertificationName, @CertificationDate, @CVOwner)";
                 SqlParameter[] lstParams =
                     {
-                new SqlParameter("@CVOwner", SqlDbType.VarChar) {Value = cddid},
                 new SqlParameter("@Objective", SqlDbType.Text) {Value = cv.Objective},
                 new SqlParameter("@UniversityName", SqlDbType.NVarChar) {Value = cv.UniversityName},
                 new SqlParameter("@Major", SqlDbType.NVarChar) {Value = cv.Major},
@@ -285,6 +280,7 @@ namespace Job_Application_Management
                 new SqlParameter("@CompanyEndDate", SqlDbType.Date) {Value = cv.CompanyEndDate},
                 new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = cv.Certification},
                 new SqlParameter("@CertificationDate", SqlDbType.Date) {Value = cv.CertificationDate},
+                new SqlParameter("@CVOwner", SqlDbType.VarChar) {Value = cddid},
                 };
                 if(dbConn.ExecuteWriteDataCheck(sqlQuery, lstParams))
                 {
@@ -371,6 +367,21 @@ namespace Job_Application_Management
             {
                 MessageBox.Show("CV be null. Check CV");
             }
+        }
+        public bool CheckCandidateExistsInResume(string Owner)
+        {
+            sqlQuery = "IF EXISTS (SELECT * FROM CV WHERE CVOwner = @CVOwner)" +
+                       " SELECT 1" +
+                       " ELSE SELECT 0";
+            SqlParameter[] lstParam =
+            {
+                new SqlParameter("@CVOwner", SqlDbType.VarChar) {Value = Owner},
+            };
+            if (dbConn.ExecuteScalarGetInt(sqlQuery, lstParam) == 1)
+            {
+                return true;
+            }
+            return false;
         }
         // Đăng tuyển bài viết tìm việc
         public void AddJobPosting(CandidateProfile canProfile, string cddid)

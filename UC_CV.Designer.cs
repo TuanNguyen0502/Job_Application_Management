@@ -73,6 +73,7 @@
             this.btn_CreateCV = new Guna.UI2.WinForms.Guna2Button();
             this.roudingPanel13 = new Job_Application_Management.RoudingPanel();
             this.label_Status = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.roudingPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.roudingPanel2.SuspendLayout();
@@ -92,6 +93,7 @@
             // roudingPanel1
             // 
             this.roudingPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
+            this.roudingPanel1.Controls.Add(this.guna2Button1);
             this.roudingPanel1.Controls.Add(this.label_Nominee);
             this.roudingPanel1.Controls.Add(this.label_CandidateName);
             this.roudingPanel1.Controls.Add(this.guna2CirclePictureBox1);
@@ -751,6 +753,22 @@
             this.label_Status.TabIndex = 1;
             this.label_Status.Text = "Applying";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(58)))), ((int)(((byte)(69)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(869, 30);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button1.TabIndex = 3;
+            this.guna2Button1.Text = "Gỡ CV đã tạo";
+            // 
             // UC_CV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -850,5 +868,6 @@
         private System.Windows.Forms.Label label_Status;
         private Guna.UI2.WinForms.Guna2Button button_Approve;
         private Guna.UI2.WinForms.Guna2Button button_Refuse;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

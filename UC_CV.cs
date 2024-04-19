@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace Job_Application_Management
 {
@@ -49,7 +50,7 @@ namespace Job_Application_Management
             myCV.CompanyEndDate = dateTimePicker_CompanyEndDate.Value;
             myCV.WorkPlace = textBox_Workplace.Text;
             myCV.Certification = textBox_Certification.Text;
-            myCV.TimeCertificate = dateTimePicker_Certification.Value;
+            myCV.CertificationDate = dateTimePicker_Certification.Value;
             myCV.Status = label_Status.Text;
             MessageBox.Show("Get info resume successful. " + myCV.Objective);
             return myCV;
@@ -108,13 +109,14 @@ namespace Job_Application_Management
             //uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
             btn_CreateCV.Visible = false;
         }
-        public event EventHandler CreateCV;
+        public Guna2Button Btn_CreateCV { get { return btn_CreateCV; } }
+        public event EventHandler<ButtonClickEventArgs> CreateCV_Click;
         private void btn_CreateCV_Click(object sender, EventArgs e)
         {
-            CreateCV?.Invoke(this, new EventArgs());
-            /*CV cv = new CV();
-            cv.
-            candidateDAO.SaveCVToDatabase(jobID);*/
+            CV cv = GetInfoResumeAtForm();
+            CreateCV_Click?.Invoke(this, new ButtonClickEventArgs(cv));
+            /*CV cv = GetInfoResumeAtForm();
+            candidateDAO.SaveAvailableCV(cv, cddID);*/
         }
         private void button_Approve_Click(object sender, EventArgs e)
         {
