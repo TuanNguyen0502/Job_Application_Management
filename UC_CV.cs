@@ -86,7 +86,7 @@ namespace Job_Application_Management
             dateTimePicker_CompanyStartDate.Value = resume.CompanyStartDate;
             dateTimePicker_CompanyEndDate.Value = resume.CompanyEndDate;
             textBox_Certification.Text = resume.Certification;
-            dateTimePicker_Certification.Value = resume.TimeCertificate;
+            dateTimePicker_Certification.Value = resume.CertificationDate;
         }
 
         public void ReadOnlyControls()
@@ -108,6 +108,7 @@ namespace Job_Application_Management
             textBox_Certification.ReadOnly = true;
             //uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
             btn_CreateCV.Visible = false;
+            btn_RemoveCVValid.Visible = false;
         }
         public Guna2Button Btn_CreateCV { get { return btn_CreateCV; } }
         public Guna2Button Btn_RemoveCVValid { get { return btn_RemoveCVValid; } }
