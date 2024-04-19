@@ -27,7 +27,7 @@ CREATE TABLE Company (
 	BusinessLicense varchar(100),
 	NumberOfEmployee int,
 	NumberOfFollower int,
-	Introduction text
+	Introduction nvarchar(max)
 )
 CREATE TABLE WorkHistory(
 	CandidateID varchar(10) FOREIGN KEY REFERENCES Candidates(CddID),
