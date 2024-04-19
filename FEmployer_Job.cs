@@ -17,28 +17,12 @@ namespace Job_Application_Management
     public partial class FEmployer_Job : KryptonForm
     {
         private string empID;
-        private Form currentFormChild;
         private EmployerDAO employerDAO = new EmployerDAO();
 
         public FEmployer_Job(string empID)
         {
             this.empID = empID;
             InitializeComponent();
-        }
-
-        private void OpenChildForm(Form childForm)
-        {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
-
-            currentFormChild = childForm;
-            childForm.FormBorderStyle = FormBorderStyle.FixedSingle;
-            childForm.StartPosition = FormStartPosition.CenterScreen;
-            childForm.Size = new Size(1300, 600);
-            childForm.BringToFront();
-            childForm.Show();
         }
 
         private void button_Delete_Click(object sender, ButtonClickEventArgs e)
@@ -49,7 +33,12 @@ namespace Job_Application_Management
 
         private void button_Post_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_JobDetail(0, empID));
+            FEmployer_JobDetail fEmployer_JobDetail = new FEmployer_JobDetail(0, empID);
+            fEmployer_JobDetail.ShowDialog();
+            if (fEmployer_JobDetail.DialogResult == DialogResult.OK)
+            {
+                LoadInfor();
+            }
         } 
 
         private void FEmployer_Job_Load(object sender, EventArgs e)

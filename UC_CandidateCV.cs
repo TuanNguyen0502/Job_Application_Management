@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,9 @@ namespace Job_Application_Management
 {
     public partial class UC_CandidateCV : UserControl
     {
-        private Form currentFormChild;
         private int jobID;
         private string cddID;
-        public KryptonButton Button_detail { get => button_detail; set => button_detail = value; }
-        public KryptonButton Button_delete { get => button_delete; set => button_delete = value; }
+        public Guna2Button Button_detail { get => button_detail; set => button_detail = value; }
         public Label Label_Name { get => label_Name; set => label_Name = value; }
         public Label Label_University { get => label_University; set => label_University = value; }
         public Label Label_Major { get => label_Major; set => label_Major = value; }
@@ -31,29 +30,14 @@ namespace Job_Application_Management
             InitializeComponent();
         }
 
-        private void OpenChildForm(Form childForm)
-        {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
-
-            currentFormChild = childForm;
-            childForm.FormBorderStyle = FormBorderStyle.FixedSingle;
-            childForm.StartPosition = FormStartPosition.CenterScreen;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
         private void button_detail_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FResume(jobID, CddID, "Employer"));
-            
-        }
-
-        private void button_delete_Click(object sender, EventArgs e)
-        {
-
+            FResume fResume = new FResume(jobID, CddID, "Employer");
+            fResume.ShowDialog();
+            if (fResume.DialogResult == DialogResult.OK)
+            {
+                this.Parent.Controls.Remove(this);
+            }
         }
     }
 }

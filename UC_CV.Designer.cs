@@ -714,7 +714,6 @@
             this.button_Refuse.Size = new System.Drawing.Size(220, 62);
             this.button_Refuse.TabIndex = 2;
             this.button_Refuse.Text = "Refuse";
-            this.button_Refuse.Click += new System.EventHandler(this.button_Refuse_Click);
             // 
             // button_Approve
             // 
@@ -731,7 +730,6 @@
             this.button_Approve.Size = new System.Drawing.Size(220, 62);
             this.button_Approve.TabIndex = 1;
             this.button_Approve.Text = "Approve";
-            this.button_Approve.Click += new System.EventHandler(this.button_Approve_Click);
             // 
             // btn_CreateCV
             // 

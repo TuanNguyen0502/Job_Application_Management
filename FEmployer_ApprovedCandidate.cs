@@ -7,12 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
 using System.Security.Cryptography;
 
 namespace Job_Application_Management
 {
-    public partial class FEmployer_ApprovedCandidate : KryptonForm
+    public partial class FEmployer_ApprovedCandidate : Form
     {
         private int jobID;
         private EmployerDAO employerDAO;

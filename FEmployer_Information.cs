@@ -17,7 +17,6 @@ namespace Job_Application_Management
         private string empID;
         private Employer employer;
         private EmployerDAO employerDAO;
-        private Form currentFormChild;
 
         public FEmployer_Information(string empID)
         {
@@ -79,22 +78,13 @@ namespace Job_Application_Management
 
         private void button_Company_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_Company(employer.CompanyName));
-        }
-
-        private void OpenChildForm(Form childForm)
-        {
-            if (currentFormChild != null)
+            FEmployer_Company fEmployer_Company = new FEmployer_Company(employer.CompanyName);
+            fEmployer_Company.Size = new Size(1800, 500);
+            fEmployer_Company.ShowDialog();
+            if (fEmployer_Company.DialogResult == DialogResult.OK)
             {
-                currentFormChild.Close();
+                LoadInfor();
             }
-
-            currentFormChild = childForm;
-            childForm.FormBorderStyle = FormBorderStyle.FixedSingle;
-            childForm.StartPosition = FormStartPosition.CenterScreen;
-            childForm.Size = new Size(1650, 500);
-            childForm.BringToFront();
-            childForm.Show();
         }
     }
 }

@@ -129,7 +129,8 @@ namespace Job_Application_Management
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                string sqlQuery = $"SELECT Name, Address, Manager, TaxCode, BusinessLicense FROM Company WHERE Name = '{companyName}'";
+                string sqlQuery = $"SELECT Name, Address, Manager, TaxCode, BusinessLicense, NumberOfEmployee, NumberOfFollower, Introduction " +
+                    $"FROM Company WHERE Name = '{companyName}'";
                 SqlCommand cmd = new SqlCommand(sqlQuery, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
@@ -141,6 +142,9 @@ namespace Job_Application_Management
                         company.Manager = reader.GetString(2);
                         company.TaxCode = reader.GetString(3);
                         company.BusinessLicense = reader.GetString(4);
+                        company.NumberOfEmployee = reader.GetInt32(5);
+                        company.NumberOfFollower = reader.GetInt32(6);
+                        company.Introduction = reader.GetString(7);
                     }
                 }
                 else
@@ -149,6 +153,14 @@ namespace Job_Application_Management
             return company;
         }
 
+        public void UpdateCompanyInfor(Company company)
+        {
+            string sqlStr = string.Format($"UPDATE Company SET Address = N'{company.Address}', " +
+                $"Manager = N'{company.Manager}', TaxCode = '{company.TaxCode}', BusinessLicense = '{company.BusinessLicense}', " +
+                $"NumberOfEmployee = '{company.NumberOfEmployee}', NumberOfFollower = '{company.NumberOfFollower}', Introduction = N'{company.Introduction}' " +
+                $"WHERE Name = '{company.Name}'");
+            Execute(sqlStr);
+        }
         public Employer GetEmployerFromDB(string empID)
         {
             Employer employer = new Employer();
@@ -177,13 +189,6 @@ namespace Job_Application_Management
             return employer;
         }
 
-        public void UpdateCompanyInfor(Company company)
-        {
-            string sqlStr = string.Format($"UPDATE Company SET Address = N'{company.Address}', " +
-                $"Manager = N'{company.Manager}', TaxCode = '{company.TaxCode}', BusinessLicense = '{company.BusinessLicense}' " +
-                $"WHERE Name = '{company.Name}'");
-            Execute(sqlStr);
-        }
 
         public void UpdateEmployerInfor(Employer employer)
         {

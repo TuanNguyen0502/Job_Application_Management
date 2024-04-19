@@ -8,11 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
 
 namespace Job_Application_Management
 {
-    public partial class FEmployer_SeeCandidate : KryptonForm
+    public partial class FEmployer_SeeCandidate : Form
     {
         private int jobID;
         private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
