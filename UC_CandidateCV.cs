@@ -17,6 +17,7 @@ namespace Job_Application_Management
     {
         private int jobID;
         private string cddID;
+        private string empID;
         public Guna2Button Button_detail { get => button_detail; set => button_detail = value; }
         public Label Label_Name { get => label_Name; set => label_Name = value; }
         public Label Label_University { get => label_University; set => label_University = value; }
@@ -24,15 +25,16 @@ namespace Job_Application_Management
         public Label Label_GPA { get => label_GPA; set => label_GPA = value; }
         public string CddID { get => cddID; set => cddID = value; }
 
-        public UC_CandidateCV(int jobID)
+        public UC_CandidateCV(string empID, int jobID)
         {
-            this.jobID = jobID;
             InitializeComponent();
+            this.jobID = jobID;
+            this.empID = empID;
         }
 
         private void button_detail_Click(object sender, EventArgs e)
         {
-            FResume fResume = new FResume(jobID, CddID, "Employer");
+            FResume fResume = new FResume(empID, jobID, CddID, "Employer");
             fResume.ShowDialog();
             if (fResume.DialogResult == DialogResult.OK)
             {

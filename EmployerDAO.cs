@@ -54,7 +54,7 @@ namespace Job_Application_Management
             Execute(sqlStr);
         }
 
-        public List<UC_CandidateCV> GetCandidateResumeFromDB(int jobID, string status)
+        public List<UC_CandidateCV> GetCandidateResumeFromDB(string empID, int jobID, string status)
         {
             string sqlQuery = $"SELECT R.CddID, C.CddName, R.UniversityName, R.Major, R.GPA " +
                 $"FROM Resume R INNER JOIN Candidates C ON R.CddID = C.CddID " +
@@ -63,7 +63,7 @@ namespace Job_Application_Management
             List<UC_CandidateCV> items = new List<UC_CandidateCV>();
             foreach (var row in resultList)
             {
-                UC_CandidateCV item = new UC_CandidateCV(jobID);
+                UC_CandidateCV item = new UC_CandidateCV(empID, jobID);
                 item.CddID = (string)row["CddID"];
                 item.Label_Name.Text = (string)row["CddName"];
                 item.Label_University.Text = (string)row["UniversityName"];

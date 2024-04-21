@@ -31,13 +31,13 @@ namespace Job_Application_Management
 
         private void button_SeeCandidate_Click(object sender, EventArgs e)
         {
-            FEmployer_SeeCandidate fEmployer_SeeCandidate = new FEmployer_SeeCandidate(JobID);
+            FEmployer_SeeCandidate fEmployer_SeeCandidate = new FEmployer_SeeCandidate(empID, JobID);
             fEmployer_SeeCandidate.ShowDialog();
         }
 
         private void button_ApprovedCandidate_Click(object sender, EventArgs e)
         {
-            FEmployer_ApprovedCandidate fEmployer_ApprovedCandidate = new FEmployer_ApprovedCandidate(JobID);
+            FEmployer_ApprovedCandidate fEmployer_ApprovedCandidate = new FEmployer_ApprovedCandidate(empID, JobID);
             fEmployer_ApprovedCandidate.ShowDialog();
         }
 

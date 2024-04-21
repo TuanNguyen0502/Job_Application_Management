@@ -33,21 +33,23 @@
             this.textBox_TaxCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox_Manager = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox_Address = new Guna.UI2.WinForms.Guna2TextBox();
-            this.textBox_CompanyName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.button_Save = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label_CompanyName = new System.Windows.Forms.Label();
             this.label_TaxCode = new System.Windows.Forms.Label();
             this.label_Address = new System.Windows.Forms.Label();
             this.label_BusinessLicense = new System.Windows.Forms.Label();
             this.label_Manager = new System.Windows.Forms.Label();
+            this.textBox_CompanyName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_NumberEmployee = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox_NumberFollower = new Guna.UI2.WinForms.Guna2TextBox();
             this.richTextBox_Introduction = new System.Windows.Forms.RichTextBox();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.button_Save = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel1.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -177,104 +179,6 @@
             this.textBox_Address.Size = new System.Drawing.Size(500, 57);
             this.textBox_Address.TabIndex = 14;
             // 
-            // textBox_CompanyName
-            // 
-            this.textBox_CompanyName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_CompanyName.BorderRadius = 20;
-            this.textBox_CompanyName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox_CompanyName.DefaultText = "";
-            this.textBox_CompanyName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBox_CompanyName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBox_CompanyName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_CompanyName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_CompanyName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_CompanyName.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_CompanyName.ForeColor = System.Drawing.Color.Black;
-            this.textBox_CompanyName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_CompanyName.Location = new System.Drawing.Point(386, 40);
-            this.textBox_CompanyName.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.textBox_CompanyName.Name = "textBox_CompanyName";
-            this.textBox_CompanyName.PasswordChar = '\0';
-            this.textBox_CompanyName.PlaceholderText = "";
-            this.textBox_CompanyName.SelectedText = "";
-            this.textBox_CompanyName.Size = new System.Drawing.Size(500, 57);
-            this.textBox_CompanyName.TabIndex = 13;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(237, 739);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(82, 34);
-            this.gunaLabel1.TabIndex = 19;
-            this.gunaLabel1.Text = "Save";
-            // 
-            // button_Save
-            // 
-            this.button_Save.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_Save.Location = new System.Drawing.Point(21, 583);
-            this.button_Save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_Save.Name = "button_Save";
-            this.button_Save.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_Save.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.button_Save.OverrideDefault.Back.ColorAngle = 45F;
-            this.button_Save.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_Save.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.button_Save.OverrideDefault.Border.ColorAngle = 45F;
-            this.button_Save.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.button_Save.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.button_Save.OverrideDefault.Border.Rounding = 20;
-            this.button_Save.OverrideDefault.Border.Width = 1;
-            this.button_Save.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_Save.Size = new System.Drawing.Size(100, 100);
-            this.button_Save.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.button_Save.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.button_Save.StateCommon.Back.ColorAngle = 45F;
-            this.button_Save.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_save_64;
-            this.button_Save.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            this.button_Save.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_Save.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.button_Save.StateCommon.Border.ColorAngle = 45F;
-            this.button_Save.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.button_Save.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.button_Save.StateCommon.Border.Rounding = 20;
-            this.button_Save.StateCommon.Border.Width = 1;
-            this.button_Save.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.button_Save.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.button_Save.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Save.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.button_Save.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.button_Save.StatePressed.Back.ColorAngle = 135F;
-            this.button_Save.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.button_Save.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.button_Save.StatePressed.Border.ColorAngle = 135F;
-            this.button_Save.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.button_Save.StatePressed.Border.Rounding = 20;
-            this.button_Save.StatePressed.Border.Width = 1;
-            this.button_Save.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(154)))));
-            this.button_Save.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_Save.StateTracking.Back.ColorAngle = 45F;
-            this.button_Save.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.button_Save.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(154)))));
-            this.button_Save.StateTracking.Border.ColorAngle = 45F;
-            this.button_Save.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.button_Save.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.button_Save.StateTracking.Border.Rounding = 20;
-            this.button_Save.StateTracking.Border.Width = 1;
-            this.button_Save.TabIndex = 17;
-            this.button_Save.Values.Text = "";
-            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
-            // 
             // label_CompanyName
             // 
             this.label_CompanyName.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -339,6 +243,29 @@
             this.label_Manager.TabIndex = 1;
             this.label_Manager.Text = "Manager    ";
             this.label_Manager.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textBox_CompanyName
+            // 
+            this.textBox_CompanyName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_CompanyName.BorderRadius = 20;
+            this.textBox_CompanyName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_CompanyName.DefaultText = "";
+            this.textBox_CompanyName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox_CompanyName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox_CompanyName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_CompanyName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_CompanyName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_CompanyName.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_CompanyName.ForeColor = System.Drawing.Color.Black;
+            this.textBox_CompanyName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_CompanyName.Location = new System.Drawing.Point(386, 40);
+            this.textBox_CompanyName.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.textBox_CompanyName.Name = "textBox_CompanyName";
+            this.textBox_CompanyName.PasswordChar = '\0';
+            this.textBox_CompanyName.PlaceholderText = "";
+            this.textBox_CompanyName.SelectedText = "";
+            this.textBox_CompanyName.Size = new System.Drawing.Size(500, 57);
+            this.textBox_CompanyName.TabIndex = 13;
             // 
             // label1
             // 
@@ -436,14 +363,98 @@
             this.richTextBox_Introduction.TabIndex = 23;
             this.richTextBox_Introduction.Text = "";
             // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.gunaLabel1.Location = new System.Drawing.Point(119, 47);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(82, 34);
+            this.gunaLabel1.TabIndex = 19;
+            this.gunaLabel1.Text = "Save";
+            // 
+            // button_Save
+            // 
+            this.button_Save.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_Save.Location = new System.Drawing.Point(13, 12);
+            this.button_Save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_Save.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_Save.OverrideDefault.Back.ColorAngle = 45F;
+            this.button_Save.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_Save.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_Save.OverrideDefault.Border.ColorAngle = 45F;
+            this.button_Save.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.button_Save.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.button_Save.OverrideDefault.Border.Rounding = 20;
+            this.button_Save.OverrideDefault.Border.Width = 1;
+            this.button_Save.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.button_Save.Size = new System.Drawing.Size(100, 100);
+            this.button_Save.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.button_Save.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.button_Save.StateCommon.Back.ColorAngle = 45F;
+            this.button_Save.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_save_64;
+            this.button_Save.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            this.button_Save.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_Save.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_Save.StateCommon.Border.ColorAngle = 45F;
+            this.button_Save.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.button_Save.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.button_Save.StateCommon.Border.Rounding = 20;
+            this.button_Save.StateCommon.Border.Width = 1;
+            this.button_Save.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.button_Save.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.button_Save.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Save.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.button_Save.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.button_Save.StatePressed.Back.ColorAngle = 135F;
+            this.button_Save.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.button_Save.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.button_Save.StatePressed.Border.ColorAngle = 135F;
+            this.button_Save.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.button_Save.StatePressed.Border.Rounding = 20;
+            this.button_Save.StatePressed.Border.Width = 1;
+            this.button_Save.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(154)))));
+            this.button_Save.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_Save.StateTracking.Back.ColorAngle = 45F;
+            this.button_Save.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_Save.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(154)))));
+            this.button_Save.StateTracking.Border.ColorAngle = 45F;
+            this.button_Save.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.button_Save.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.button_Save.StateTracking.Border.Rounding = 20;
+            this.button_Save.StateTracking.Border.Width = 1;
+            this.button_Save.TabIndex = 17;
+            this.button_Save.Values.Text = "";
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.button_Save);
+            this.guna2Panel1.Controls.Add(this.gunaLabel1);
+            this.guna2Panel1.Location = new System.Drawing.Point(21, 582);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Padding = new System.Windows.Forms.Padding(10);
+            this.guna2Panel1.Size = new System.Drawing.Size(309, 121);
+            this.guna2Panel1.TabIndex = 20;
+            // 
             // FEmployer_Company
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1828, 846);
-            this.Controls.Add(this.gunaLabel1);
-            this.Controls.Add(this.button_Save);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FEmployer_Company";
             this.ShowIcon = false;
@@ -451,8 +462,9 @@
             this.Text = "Company";
             this.Load += new System.EventHandler(this.FEmployer_Company_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -476,5 +488,6 @@
         private Guna.UI2.WinForms.Guna2TextBox textBox_NumberEmployee;
         private Guna.UI2.WinForms.Guna2TextBox textBox_NumberFollower;
         private System.Windows.Forms.RichTextBox richTextBox_Introduction;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

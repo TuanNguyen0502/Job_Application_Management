@@ -15,17 +15,20 @@ namespace Job_Application_Management
     public partial class FResume : KryptonForm
     {
         private string role;
+        private string empID;
         private int jobID;
         private string cddID;
         private EmployerDAO employerDAO = new EmployerDAO();
 
-        public FResume(int jobID, string cddID, string role)
+        public FResume(string empID, int jobID, string cddID, string role)
         {
+            this.empID = empID;
             this.jobID = jobID;
             this.cddID = cddID;
             this.role = role;
             InitializeComponent();
             uC_CV1.Role = role;
+            uC_CV1.EmpID = empID;
             uC_CV1.JobID = jobID;
             uC_CV1.CddID = cddID;
             uC_CV1.Button_Approve.Click += button_Approve_Click;
@@ -42,6 +45,8 @@ namespace Job_Application_Management
             uC_CV1.Resume.Status = "Approved";
             uC_CV1.Label_Status.Text = uC_CV1.Resume.Status;
             employerDAO.UpdateResume(uC_CV1.Resume);
+            FEmployer_Interview fEmployer_Interview = new FEmployer_Interview(empID, cddID, jobID);
+            fEmployer_Interview.ShowDialog();
             this.DialogResult = DialogResult.OK;
         }
 

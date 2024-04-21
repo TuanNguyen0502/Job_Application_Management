@@ -16,6 +16,7 @@ namespace Job_Application_Management
         private string role;
         private int jobID;
         private string cddID;
+        private string empID;
         private CV resume;
         private EmployerDAO employerDAO = new EmployerDAO();
         private CandidateDAO candidateDAO = new CandidateDAO();
@@ -28,13 +29,14 @@ namespace Job_Application_Management
         public string Role { get => role; set => role = value; }
         public int JobID { get => jobID; set => jobID = value; }
         public string CddID { get => cddID; set => cddID = value; }
+        public string EmpID { get => empID; set => empID = value; }
         public Guna2Button Btn_CreateCV { get { return btn_CreateCV; } }
         public Guna2Button Btn_RemoveCVValid { get { return btn_RemoveCVValid; } }
-
         public CV Resume { get => resume; set => resume = value; }
         public Label Label_Status { get => label_Status; set => label_Status = value; }
         public Guna2Button Button_Approve { get => button_Approve; set => button_Approve = value; }
         public Guna2Button Button_Refuse { get => button_Refuse; set => button_Refuse = value; }
+
         public event EventHandler<ButtonClickEventArgs> CreateCV_Click;
         public event EventHandler<ButtonClickEventArgs> RemoveCVValid_Click;
 
