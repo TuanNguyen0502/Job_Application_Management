@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
@@ -17,7 +18,17 @@ namespace Job_Application_Management
         public DateTime PostDate
         {
             get { return postDate; }
-            set { postDate = value; }
+            set
+            {
+                if (value == null || value == DateTime.MinValue)
+                {
+                    MessageBox.Show("Ngày đăng chưa được chỉ định.");
+                }
+                else
+                {
+                    postDate = value;
+                }
+            }
         }
     }
 }

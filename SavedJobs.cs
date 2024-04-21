@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
@@ -14,12 +15,24 @@ namespace Job_Application_Management
         public int SavedJobID
         {
             get { return savedJobID; }
-            set { savedJobID = value; }
+            set
+            {
+                if (value < 0)
+                    MessageBox.Show("Mã công việc đã lưu chưa được chỉ định");
+                else
+                    savedJobID = value;
+            }
         }
         public DateTime TimeSaved
         {
             get { return timesaved; }
-            set { timesaved = value; }
+            set
+            {
+                if (value == null || value == DateTime.MinValue)
+                    MessageBox.Show("Thời gian lưu công việc chưa được chỉ định");
+                else
+                    timesaved = value;
+            }
         }
     }
 }
