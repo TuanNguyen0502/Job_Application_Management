@@ -36,7 +36,8 @@
             this.dateTimePicker_Time = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dateTimePicker_Date = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.textBox_Note = new Guna.UI2.WinForms.Guna2TextBox();
-            this.button_Approve = new Guna.UI2.WinForms.Guna2Button();
+            this.button_Invite = new Guna.UI2.WinForms.Guna2Button();
+            this.button_Update = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -168,23 +169,43 @@
             this.textBox_Note.Size = new System.Drawing.Size(1044, 144);
             this.textBox_Note.TabIndex = 3;
             // 
-            // button_Approve
+            // button_Invite
             // 
-            this.button_Approve.BorderRadius = 20;
-            this.button_Approve.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_Approve.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_Approve.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_Approve.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_Approve.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Approve.ForeColor = System.Drawing.Color.White;
-            this.button_Approve.Image = global::Job_Application_Management.Properties.Resources.icons8_invite_64;
-            this.button_Approve.ImageSize = new System.Drawing.Size(64, 64);
-            this.button_Approve.Location = new System.Drawing.Point(27, 438);
-            this.button_Approve.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_Approve.Name = "button_Approve";
-            this.button_Approve.Size = new System.Drawing.Size(227, 84);
-            this.button_Approve.TabIndex = 2;
-            this.button_Approve.Text = "    Invite ";
+            this.button_Invite.BorderRadius = 20;
+            this.button_Invite.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_Invite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_Invite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_Invite.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_Invite.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Invite.ForeColor = System.Drawing.Color.White;
+            this.button_Invite.Image = global::Job_Application_Management.Properties.Resources.icons8_invite_64;
+            this.button_Invite.ImageSize = new System.Drawing.Size(64, 64);
+            this.button_Invite.Location = new System.Drawing.Point(27, 438);
+            this.button_Invite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Invite.Name = "button_Invite";
+            this.button_Invite.Size = new System.Drawing.Size(227, 84);
+            this.button_Invite.TabIndex = 2;
+            this.button_Invite.Text = "    Invite ";
+            this.button_Invite.Click += new System.EventHandler(this.button_Invite_Click);
+            // 
+            // button_Update
+            // 
+            this.button_Update.BorderRadius = 20;
+            this.button_Update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_Update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_Update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_Update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_Update.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Update.ForeColor = System.Drawing.Color.White;
+            this.button_Update.Image = global::Job_Application_Management.Properties.Resources.icons8_invite_64;
+            this.button_Update.ImageSize = new System.Drawing.Size(64, 64);
+            this.button_Update.Location = new System.Drawing.Point(295, 438);
+            this.button_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Update.Name = "button_Update";
+            this.button_Update.Size = new System.Drawing.Size(227, 84);
+            this.button_Update.TabIndex = 3;
+            this.button_Update.Text = "    Update";
+            this.button_Update.Click += new System.EventHandler(this.button_Update_Click);
             // 
             // FEmployer_Interview
             // 
@@ -192,7 +213,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1511, 649);
-            this.Controls.Add(this.button_Approve);
+            this.Controls.Add(this.button_Update);
+            this.Controls.Add(this.button_Invite);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,6 +225,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Interview";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FEmployer_Interview_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -220,6 +243,7 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePicker_Time;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePicker_Date;
         private Guna.UI2.WinForms.Guna2TextBox textBox_Note;
-        private Guna.UI2.WinForms.Guna2Button button_Approve;
+        private Guna.UI2.WinForms.Guna2Button button_Invite;
+        private Guna.UI2.WinForms.Guna2Button button_Update;
     }
 }

@@ -79,5 +79,10 @@ namespace Job_Application_Management
         {
             Program.MainFormManager.CurrentForm = new FLogin();
         }
+
+        private void button_Interview_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FEmployer_Interviews(empID));
+        }
     }
 }

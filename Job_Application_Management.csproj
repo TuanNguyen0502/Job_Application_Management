@@ -173,6 +173,12 @@
     <Compile Include="FEmployer_Interview.Designer.cs">
       <DependentUpon>FEmployer_Interview.cs</DependentUpon>
     </Compile>
+    <Compile Include="FEmployer_Interviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployer_Interviews.Designer.cs">
+      <DependentUpon>FEmployer_Interviews.cs</DependentUpon>
+    </Compile>
     <Compile Include="FEmployer_Job.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +224,7 @@
     <Compile Include="GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Interview.cs" />
     <Compile Include="Job.cs" />
     <Compile Include="MainFormManager.cs" />
     <Compile Include="Person.cs" />
@@ -256,6 +263,12 @@
     </Compile>
     <Compile Include="UC_CV.Designer.cs">
       <DependentUpon>UC_CV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Employer_Interview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Employer_Interview.Designer.cs">
+      <DependentUpon>UC_Employer_Interview.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Introduction.cs">
       <SubType>UserControl</SubType>
@@ -362,6 +375,9 @@
     <EmbeddedResource Include="FEmployer_Interview.resx">
       <DependentUpon>FEmployer_Interview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FEmployer_Interviews.resx">
+      <DependentUpon>FEmployer_Interviews.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_Job.resx">
       <DependentUpon>FEmployer_Job.cs</DependentUpon>
     </EmbeddedResource>
@@ -407,6 +423,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_CV.resx">
       <DependentUpon>UC_CV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Employer_Interview.resx">
+      <DependentUpon>UC_Employer_Interview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Introduction.resx">
       <DependentUpon>UC_Introduction.cs</DependentUpon>

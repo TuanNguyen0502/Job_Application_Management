@@ -24,6 +24,72 @@ namespace Job_Application_Management
         {
             dbConnection.ExecuteWriteData(sqlStr);
         }
+        public List<UC_Employer_Interview> GetInterviewsFromDB(string empID)
+        {
+            string sqlQuery = $"SELECT J.Name, C.CddName, I.InterviewTime, I.Note " +
+                $"FROM Interviews I INNER JOIN Candidates C ON I.CddID = C.CddID " +
+                $"INNER JOIN Jobs J ON I.JobID = J.ID " +
+                $"WHERE I.EmpID = '{empID}'";
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_Employer_Interview> items = new List<UC_Employer_Interview>();
+            foreach (var row in resultList)
+            {
+                UC_Employer_Interview item = new UC_Employer_Interview();
+                item.Label_JobName.Text = (string)row["Name"];
+                item.Label_CandidateName.Text = (string)row["CddName"];
+                item.Label_InterviewTime.Text = row["InterviewTime"].ToString();
+                item.Label_Note.Text = row["Note"].ToString();
+                items.Add(item);
+            }
+            return items;
+        }
+
+
+        public void UpdateInterview(Interview interview)
+        {
+            string sqlStr = string.Format($"UPDATE Interviews SET InterviewTime = '{interview.InterviewTime}', Note = N'{interview.Note}' " +
+                $"WHERE ID = '{interview.Id}'");
+            Execute(sqlStr);
+        }
+
+        public void AddInterview(Interview interview)
+        {
+            string sqlStr = string.Format($"INSERT INTO Interviews (EmpID, CddID, JobID, InterviewTime, Note) " +
+                $"VALUES ('{interview.EmpID}', '{interview.CddID}', '{interview.JobID}', '{interview.InterviewTime}', N'{interview.Note}')");
+
+            Execute(sqlStr);
+        }
+
+        public Interview GetInterviewFormDB(string empID, string cddID, int jobID)
+        {
+            Interview interview = new Interview();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sqlQuery = $"SELECT ID, EmpID, CddID, JobID, InterviewTime, Note " +
+                    $"FROM Interviews " +
+                    $"WHERE EmpID = '{empID}' AND CddID = '{cddID}' AND JobID = '{jobID}'";
+                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        interview.Id = reader.GetInt32(0);
+                        interview.EmpID = reader.GetString(1);
+                        interview.CddID = reader.GetString(2);
+                        interview.JobID = reader.GetInt32(3);
+                        interview.InterviewTime = reader.GetDateTime(4);
+                        interview.Note = reader.GetString(5);
+                    }
+                }
+                else
+                    MessageBox.Show("No rows found");
+                conn.Close();
+            }
+            return interview;
+        }
+
         public List<UC_CoverLetter> GetCandidateProfileFromDB()
         {
             string sqlQuery = $"SELECT P.CddID, C.CddName, P.Objective, P.UniversityName, P.Major, P.GPA, P.CompanyName, P.Workplace, " +
