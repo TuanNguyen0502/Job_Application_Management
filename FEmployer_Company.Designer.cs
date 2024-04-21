@@ -44,9 +44,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_NumberEmployee = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox_NumberFollower = new Guna.UI2.WinForms.Guna2TextBox();
-            this.richTextBox_Introduction = new System.Windows.Forms.RichTextBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.button_Save = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.textBox_Introduction = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -74,7 +74,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.textBox_NumberEmployee, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBox_NumberFollower, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.richTextBox_Introduction, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBox_Introduction, 3, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -84,6 +84,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1828, 550);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
@@ -352,16 +353,114 @@
             this.textBox_NumberFollower.Size = new System.Drawing.Size(500, 57);
             this.textBox_NumberFollower.TabIndex = 22;
             // 
-            // richTextBox_Introduction
+            // gunaLabel1
             // 
-            this.richTextBox_Introduction.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox_Introduction.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox_Introduction.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.richTextBox_Introduction.Location = new System.Drawing.Point(1265, 281);
-            this.richTextBox_Introduction.Name = "richTextBox_Introduction";
-            this.richTextBox_Introduction.Size = new System.Drawing.Size(498, 123);
-            this.richTextBox_Introduction.TabIndex = 23;
-            this.richTextBox_Introduction.Text = "";
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.gunaLabel1.Location = new System.Drawing.Point(119, 52);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(82, 34);
+            this.gunaLabel1.TabIndex = 19;
+            this.gunaLabel1.Text = "Save";
+            // 
+            // button_Save
+            // 
+            this.button_Save.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_Save.Location = new System.Drawing.Point(13, 14);
+            this.button_Save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_Save.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_Save.OverrideDefault.Back.ColorAngle = 45F;
+            this.button_Save.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_Save.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_Save.OverrideDefault.Border.ColorAngle = 45F;
+            this.button_Save.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.button_Save.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.button_Save.OverrideDefault.Border.Rounding = 20;
+            this.button_Save.OverrideDefault.Border.Width = 1;
+            this.button_Save.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.button_Save.Size = new System.Drawing.Size(100, 100);
+            this.button_Save.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.button_Save.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.button_Save.StateCommon.Back.ColorAngle = 45F;
+            this.button_Save.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_save_64;
+            this.button_Save.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            this.button_Save.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_Save.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.button_Save.StateCommon.Border.ColorAngle = 45F;
+            this.button_Save.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.button_Save.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.button_Save.StateCommon.Border.Rounding = 20;
+            this.button_Save.StateCommon.Border.Width = 1;
+            this.button_Save.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.button_Save.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.button_Save.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Save.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.button_Save.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.button_Save.StatePressed.Back.ColorAngle = 135F;
+            this.button_Save.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.button_Save.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.button_Save.StatePressed.Border.ColorAngle = 135F;
+            this.button_Save.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.button_Save.StatePressed.Border.Rounding = 20;
+            this.button_Save.StatePressed.Border.Width = 1;
+            this.button_Save.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(154)))));
+            this.button_Save.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_Save.StateTracking.Back.ColorAngle = 45F;
+            this.button_Save.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.button_Save.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(154)))));
+            this.button_Save.StateTracking.Border.ColorAngle = 45F;
+            this.button_Save.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.button_Save.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.button_Save.StateTracking.Border.Rounding = 20;
+            this.button_Save.StateTracking.Border.Width = 1;
+            this.button_Save.TabIndex = 17;
+            this.button_Save.Values.Text = "";
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+            // 
+            // textBox_Introduction
+            // 
+            this.textBox_Introduction.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_Introduction.BorderRadius = 20;
+            this.textBox_Introduction.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_Introduction.DefaultText = "";
+            this.textBox_Introduction.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox_Introduction.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox_Introduction.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_Introduction.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_Introduction.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_Introduction.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Introduction.ForeColor = System.Drawing.Color.Black;
+            this.textBox_Introduction.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_Introduction.Location = new System.Drawing.Point(1264, 281);
+            this.textBox_Introduction.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.textBox_Introduction.Multiline = true;
+            this.textBox_Introduction.Name = "textBox_Introduction";
+            this.textBox_Introduction.PasswordChar = '\0';
+            this.textBox_Introduction.PlaceholderText = "";
+            this.textBox_Introduction.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox_Introduction.SelectedText = "";
+            this.textBox_Introduction.Size = new System.Drawing.Size(500, 123);
+            this.textBox_Introduction.TabIndex = 16;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.button_Save);
+            this.guna2Panel1.Controls.Add(this.gunaLabel1);
+            this.guna2Panel1.Location = new System.Drawing.Point(12, 570);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(296, 134);
+            this.guna2Panel1.TabIndex = 20;
             // 
             // gunaLabel1
             // 
@@ -487,7 +586,7 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox textBox_NumberEmployee;
         private Guna.UI2.WinForms.Guna2TextBox textBox_NumberFollower;
-        private System.Windows.Forms.RichTextBox richTextBox_Introduction;
+        private Guna.UI2.WinForms.Guna2TextBox textBox_Introduction;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

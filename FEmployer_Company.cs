@@ -39,7 +39,7 @@ namespace Job_Application_Management
             textBox_BusinessLicense.Text = company.BusinessLicense;
             textBox_NumberEmployee.Text = company.NumberOfEmployee.ToString();
             textBox_NumberFollower.Text = company.NumberOfFollower.ToString();
-            richTextBox_Introduction.Text = company.Introduction;
+            textBox_Introduction.Text = company.Introduction;
         }
 
         private void button_Save_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace Job_Application_Management
             company.BusinessLicense = textBox_BusinessLicense.Text;
             company.NumberOfEmployee = Int32.Parse(textBox_NumberEmployee.Text);
             company.NumberOfFollower = Int32.Parse(textBox_NumberFollower.Text);
-            company.Introduction = richTextBox_Introduction.Text;
+            company.Introduction = textBox_Introduction.Text;
         }
     }
 }
