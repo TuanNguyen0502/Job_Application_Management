@@ -27,7 +27,7 @@ CREATE TABLE Company (
 	BusinessLicense varchar(100),
 	NumberOfEmployee int,
 	NumberOfFollower int,
-	Introduction text
+	Introduction nvarchar(max)
 )
 CREATE TABLE WorkHistory(
 	CandidateID varchar(10) FOREIGN KEY REFERENCES Candidates(CddID),
@@ -113,6 +113,14 @@ CREATE TABLE Resume(
 	Status nvarchar(100) default N'Applying',
 	Interview datetime default null,
 	CONSTRAINT PK_AD PRIMARY KEY (CddID, JobID)
+)
+CREATE TABLE Interviews (
+	ID int IDENTITY PRIMARY KEY,
+	EmpID varchar(10) foreign key references Employers(ID),
+	CddID varchar(10) foreign key references Candidates(CddID),
+	JobID int IDENTITY(1, 1) foreign key references Jobs(ID),
+	InterviewTime datetime,
+	Note nvarchar(max)
 )
 CREATE TABLE CandidateProfile(
 	CddID varchar(10) CONSTRAINT FK_Profile_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
@@ -224,4 +232,4 @@ SELECT * FROM AppliedJobs
 
 SELECT * FROM Resume
 SELECT * FROM CV
-SELECT * FROM CandidateProfile
+SELECT * FROM WorkHistory

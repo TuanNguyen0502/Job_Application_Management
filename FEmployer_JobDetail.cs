@@ -8,13 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
 
 namespace Job_Application_Management
 {
-    public partial class FEmployer_JobDetail : KryptonForm
+    public partial class FEmployer_JobDetail : Form
     {
-        private Form currentFormChild;
         private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
         private string sqlQuery;
         private int jobID;
@@ -31,28 +29,16 @@ namespace Job_Application_Management
             InitializeComponent();
         }
 
-        private void OpenChildForm(Form childForm)
-        {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
-
-            currentFormChild = childForm;
-            childForm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            childForm.StartPosition = FormStartPosition.CenterScreen;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
         private void button_SeeCandidate_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_SeeCandidate(JobID));
+            FEmployer_SeeCandidate fEmployer_SeeCandidate = new FEmployer_SeeCandidate(empID, JobID);
+            fEmployer_SeeCandidate.ShowDialog();
         }
 
         private void button_ApprovedCandidate_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_ApprovedCandidate(JobID));
+            FEmployer_ApprovedCandidate fEmployer_ApprovedCandidate = new FEmployer_ApprovedCandidate(empID, JobID);
+            fEmployer_ApprovedCandidate.ShowDialog();
         }
 
         private void FEmployer_JobDetail_Load(object sender, EventArgs e)
@@ -111,6 +97,7 @@ namespace Job_Application_Management
                     this.Close();
                 }
             }
+            this.DialogResult = DialogResult.OK;
         }
 
         private Job GetCurrentJob()

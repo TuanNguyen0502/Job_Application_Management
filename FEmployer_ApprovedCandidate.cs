@@ -7,20 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
 using System.Security.Cryptography;
 
 namespace Job_Application_Management
 {
-    public partial class FEmployer_ApprovedCandidate : KryptonForm
+    public partial class FEmployer_ApprovedCandidate : Form
     {
+        private string empID;
         private int jobID;
-        private EmployerDAO employerDAO;
-        public FEmployer_ApprovedCandidate(int jobID)
+        private EmployerDAO employerDAO = new EmployerDAO();
+        public FEmployer_ApprovedCandidate(string empID, int jobID)
         {
-            employerDAO = new EmployerDAO();
-            this.jobID = jobID;
             InitializeComponent();
+            this.jobID = jobID;
+            this.empID = empID;
         }
 
         private void FEmployer_ApprovedCandidate_Load(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace Job_Application_Management
         private void LoadInfor()
         {
             string status = "Approved";
-            List<UC_CandidateCV> resumeItems = employerDAO.GetCandidateResumeFromDB(jobID, status);
+            List<UC_CandidateCV> resumeItems = employerDAO.GetCandidateResumeFromDB(empID, jobID, status);
             foreach (var resume in resumeItems)
             {
                 flowLayoutPanel1.Controls.Add(resume);

@@ -8,21 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
 
 namespace Job_Application_Management
 {
-    public partial class FEmployer_SeeCandidate : KryptonForm
+    public partial class FEmployer_SeeCandidate : Form
     {
+        private string empID;
         private int jobID;
         private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
-        private EmployerDAO employerDAO;
+        private EmployerDAO employerDAO = new EmployerDAO();
 
-        public FEmployer_SeeCandidate(int jobID)
+        public FEmployer_SeeCandidate(string empID, int jobID)
         {
-            this.jobID = jobID;
-            employerDAO = new EmployerDAO();    
             InitializeComponent();
+            this.empID = empID;
+            this.jobID = jobID;
         }
 
         private void FEmployer_SeeCandidate_Load(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace Job_Application_Management
         private void LoadInfor()
         {
             string status = "Applying";
-            List<UC_CandidateCV> resumeItems = employerDAO.GetCandidateResumeFromDB(jobID, status);
+            List<UC_CandidateCV> resumeItems = employerDAO.GetCandidateResumeFromDB(empID, jobID, status);
             foreach (var resume in resumeItems)
             {
                 flowLayoutPanel1.Controls.Add(resume);

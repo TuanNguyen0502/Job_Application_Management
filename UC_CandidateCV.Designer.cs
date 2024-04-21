@@ -31,10 +31,9 @@
             this.label_Name = new System.Windows.Forms.Label();
             this.label_University = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_detail = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.button_delete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label_Major = new System.Windows.Forms.Label();
             this.label_GPA = new System.Windows.Forms.Label();
+            this.button_detail = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -44,7 +43,7 @@
             // 
             this.label_Name.AutoSize = true;
             this.label_Name.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Name.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(29)))));
             this.label_Name.Location = new System.Drawing.Point(193, 10);
             this.label_Name.Name = "label_Name";
             this.label_Name.Size = new System.Drawing.Size(269, 37);
@@ -55,6 +54,7 @@
             // 
             this.label_University.AutoSize = true;
             this.label_University.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_University.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(108)))), ((int)(((byte)(146)))));
             this.label_University.Location = new System.Drawing.Point(194, 60);
             this.label_University.Name = "label_University";
             this.label_University.Size = new System.Drawing.Size(165, 33);
@@ -72,44 +72,11 @@
             this.panel1.Size = new System.Drawing.Size(177, 171);
             this.panel1.TabIndex = 2;
             // 
-            // button_detail
-            // 
-            this.button_detail.Location = new System.Drawing.Point(1061, 128);
-            this.button_detail.Name = "button_detail";
-            this.button_detail.Size = new System.Drawing.Size(100, 50);
-            this.button_detail.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_edit_241;
-            this.button_detail.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
-            this.button_detail.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            this.button_detail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.button_detail.StateCommon.Border.Rounding = 20;
-            this.button_detail.StateCommon.Border.Width = 1;
-            this.button_detail.TabIndex = 3;
-            this.button_detail.Values.Text = "";
-            this.button_detail.Click += new System.EventHandler(this.button_detail_Click);
-            // 
-            // button_delete
-            // 
-            this.button_delete.Location = new System.Drawing.Point(1167, 128);
-            this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(100, 50);
-            this.button_delete.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_delete_24;
-            this.button_delete.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
-            this.button_delete.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            this.button_delete.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.button_delete.StateCommon.Border.Rounding = 20;
-            this.button_delete.StateCommon.Border.Width = 1;
-            this.button_delete.TabIndex = 4;
-            this.button_delete.Values.Text = "";
-            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
-            // 
             // label_Major
             // 
             this.label_Major.AutoSize = true;
             this.label_Major.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Major.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(108)))), ((int)(((byte)(146)))));
             this.label_Major.Location = new System.Drawing.Point(194, 104);
             this.label_Major.Name = "label_Major";
             this.label_Major.Size = new System.Drawing.Size(120, 33);
@@ -120,11 +87,30 @@
             // 
             this.label_GPA.AutoSize = true;
             this.label_GPA.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_GPA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(108)))), ((int)(((byte)(146)))));
             this.label_GPA.Location = new System.Drawing.Point(194, 148);
             this.label_GPA.Name = "label_GPA";
             this.label_GPA.Size = new System.Drawing.Size(90, 33);
             this.label_GPA.TabIndex = 6;
             this.label_GPA.Text = "GPA: ";
+            // 
+            // button_detail
+            // 
+            this.button_detail.BorderRadius = 20;
+            this.button_detail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_detail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_detail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_detail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_detail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
+            this.button_detail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.button_detail.ForeColor = System.Drawing.Color.White;
+            this.button_detail.Image = global::Job_Application_Management.Properties.Resources.icons8_detail_100;
+            this.button_detail.ImageSize = new System.Drawing.Size(100, 100);
+            this.button_detail.Location = new System.Drawing.Point(1149, 72);
+            this.button_detail.Name = "button_detail";
+            this.button_detail.Size = new System.Drawing.Size(118, 109);
+            this.button_detail.TabIndex = 7;
+            this.button_detail.Click += new System.EventHandler(this.button_detail_Click);
             // 
             // pictureBox1
             // 
@@ -144,11 +130,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Wheat;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
+            this.Controls.Add(this.button_detail);
             this.Controls.Add(this.label_GPA);
             this.Controls.Add(this.label_Major);
-            this.Controls.Add(this.button_delete);
-            this.Controls.Add(this.button_detail);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label_University);
             this.Controls.Add(this.label_Name);
@@ -168,9 +153,8 @@
         private System.Windows.Forms.Label label_University;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton button_detail;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton button_delete;
         private System.Windows.Forms.Label label_Major;
         private System.Windows.Forms.Label label_GPA;
+        private Guna.UI2.WinForms.Guna2Button button_detail;
     }
 }

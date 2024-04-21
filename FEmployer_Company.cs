@@ -7,11 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
 
 namespace Job_Application_Management
 {
-    public partial class FEmployer_Company : KryptonForm
+    public partial class FEmployer_Company : Form
     {
         private string name;
         private Company company;
@@ -38,6 +37,9 @@ namespace Job_Application_Management
             textBox_Manager.Text = company.Manager;
             textBox_TaxCode.Text = company.TaxCode;
             textBox_BusinessLicense.Text = company.BusinessLicense;
+            textBox_NumberEmployee.Text = company.NumberOfEmployee.ToString();
+            textBox_NumberFollower.Text = company.NumberOfFollower.ToString();
+            textBox_Introduction.Text = company.Introduction;
         }
 
         private void button_Save_Click(object sender, EventArgs e)
@@ -56,6 +58,9 @@ namespace Job_Application_Management
             company.Manager = textBox_Manager.Text;
             company.TaxCode = textBox_TaxCode.Text;
             company.BusinessLicense = textBox_BusinessLicense.Text;
+            company.NumberOfEmployee = Int32.Parse(textBox_NumberEmployee.Text);
+            company.NumberOfFollower = Int32.Parse(textBox_NumberFollower.Text);
+            company.Introduction = textBox_Introduction.Text;
         }
     }
 }

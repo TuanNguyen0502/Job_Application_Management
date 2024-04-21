@@ -14,25 +14,63 @@ namespace Job_Application_Management
         private string manager;
         private string taxCode;
         private string businessLicense;
+        private int numberOfEmployee;
+        private int numberOfFollower;
+        private string introduction;
 
-        public Company(string name, string address, string manager, string taxCode, string businessLicense)
+        public Company(string name, string address, string manager, string taxCode, string businessLicense, int numberOfEmployee, int numberOfFollower, string introduction)
         {
             Name = name;
             Address = address;
             Manager = manager;
             TaxCode = taxCode;
             BusinessLicense = businessLicense;
+            NumberOfEmployee = numberOfEmployee;
+            NumberOfFollower = numberOfFollower;
+            Introduction = introduction;
         }
         public Company() { }
 
         public bool CheckAllCondition()
         {
-            if (CheckName() && CheckAddress() && CheckManager() && CheckTaxCode() && CheckBusinessLicense())
+            if (CheckName() && CheckAddress() && CheckManager() && CheckTaxCode() && CheckBusinessLicense() && CheckNumberOfEmployee()
+                && CheckNumberOfFollower() && CheckIntroduction())
             {
                 return true;
             }
             return false;
         }
+
+        private bool CheckIntroduction()
+        {
+            if (Introduction == null || introduction == "")
+            {
+                MessageBox.Show("Introduction cannot be null !");
+                return false;
+            }
+            return true;
+        }
+
+        public bool CheckNumberOfFollower()
+        {
+            if (numberOfFollower == 0 || numberOfFollower.ToString() == "")
+            {
+                MessageBox.Show("Number of follower cannot be null !");
+                return false;
+            }
+            return true;
+        }
+
+        public bool CheckNumberOfEmployee()
+        {
+            if (numberOfEmployee == 0 || numberOfEmployee.ToString() == "")
+            {
+                MessageBox.Show("Number of employee cannot be null !");
+                return false;
+            }
+            return true;
+        }
+
         public bool CheckBusinessLicense()
         {
             if (businessLicense == null || businessLicense == "")
@@ -88,5 +126,8 @@ namespace Job_Application_Management
         public string Manager { get => manager; set => manager = value; }
         public string TaxCode { get => taxCode; set => taxCode = value; }
         public string BusinessLicense { get => businessLicense; set => businessLicense = value; }
+        public int NumberOfEmployee { get => numberOfEmployee; set => numberOfEmployee = value; }
+        public int NumberOfFollower { get => numberOfFollower; set => numberOfFollower = value; }
+        public string Introduction { get => introduction; set => introduction = value; }
     }
 }

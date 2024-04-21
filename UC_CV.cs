@@ -16,6 +16,7 @@ namespace Job_Application_Management
         private string role;
         private int jobID;
         private string cddID;
+        private string empID;
         private CV resume;
         private EmployerDAO employerDAO = new EmployerDAO();
         private CandidateDAO candidateDAO = new CandidateDAO();
@@ -28,6 +29,16 @@ namespace Job_Application_Management
         public string Role { get => role; set => role = value; }
         public int JobID { get => jobID; set => jobID = value; }
         public string CddID { get => cddID; set => cddID = value; }
+        public string EmpID { get => empID; set => empID = value; }
+        public Guna2Button Btn_CreateCV { get { return btn_CreateCV; } }
+        public Guna2Button Btn_RemoveCVValid { get { return btn_RemoveCVValid; } }
+        public CV Resume { get => resume; set => resume = value; }
+        public Label Label_Status { get => label_Status; set => label_Status = value; }
+        public Guna2Button Button_Approve { get => button_Approve; set => button_Approve = value; }
+        public Guna2Button Button_Refuse { get => button_Refuse; set => button_Refuse = value; }
+
+        public event EventHandler<ButtonClickEventArgs> CreateCV_Click;
+        public event EventHandler<ButtonClickEventArgs> RemoveCVValid_Click;
 
         public CV GetInfoResumeAtForm()
         {
@@ -67,7 +78,7 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
-            resume = employerDAO.GetResumeFromDB(jobID, cddID);
+            Resume = employerDAO.GetResumeFromDB(jobID, cddID);
 
             label_CandidateName.Text = resume.CddName;
             label_Nominee.Text = resume.JobName;
@@ -87,6 +98,7 @@ namespace Job_Application_Management
             dateTimePicker_CompanyEndDate.Value = resume.CompanyEndDate;
             textBox_Certification.Text = resume.Certification;
             dateTimePicker_Certification.Value = resume.CertificationDate;
+            label_Status.Text = resume.Status;
         }
 
         public void ReadOnlyControls()
@@ -108,10 +120,18 @@ namespace Job_Application_Management
             textBox_Certification.ReadOnly = true;
             //uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
             btn_CreateCV.Visible = false;
+            btn_RemoveCVValid.Visible = false;
+            if (resume.Status == "Applying")
+            {
+                button_Refuse.Visible = false;
+            }
+            if (resume.Status == "Approved")
+            {
+                button_Approve.Visible = false;
+            }
         }
-        public Guna2Button Btn_CreateCV { get { return btn_CreateCV; } }
-        public Guna2Button Btn_RemoveCVValid { get { return btn_RemoveCVValid; } }
-        public event EventHandler<ButtonClickEventArgs> CreateCV_Click;
+
+
         private void btn_CreateCV_Click(object sender, EventArgs e)
         {
             CV cv = GetInfoResumeAtForm();
@@ -119,20 +139,7 @@ namespace Job_Application_Management
             /*CV cv = GetInfoResumeAtForm();
             candidateDAO.SaveAvailableCV(cv, cddID);*/
         }
-        private void button_Approve_Click(object sender, EventArgs e)
-        {
-            resume.Status = "Approved";
-            label_Status.Text = resume.Status;
-            employerDAO.UpdateResume(resume);
-        }
 
-        private void button_Refuse_Click(object sender, EventArgs e)
-        {
-            resume.Status = "Applying";
-            label_Status.Text = resume.Status;
-            employerDAO.UpdateResume(resume);
-        }
-        public event EventHandler<ButtonClickEventArgs> RemoveCVValid_Click;
         private void btn_RemoveCVValid_Click(object sender, EventArgs e)
         {
             RemoveCVValid_Click?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
