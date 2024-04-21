@@ -224,4 +224,4 @@ SELECT * FROM AppliedJobs
 
 SELECT * FROM Resume
 SELECT * FROM CV
-SELECT * FROM WorkHistory
+SELECT * FROM CandidateProfile

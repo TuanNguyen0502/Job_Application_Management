@@ -86,7 +86,7 @@ namespace Job_Application_Management
             dateTimePicker_CompanyStartDate.Value = resume.CompanyStartDate;
             dateTimePicker_CompanyEndDate.Value = resume.CompanyEndDate;
             textBox_Certification.Text = resume.Certification;
-            dateTimePicker_Certification.Value = resume.TimeCertificate;
+            dateTimePicker_Certification.Value = resume.CertificationDate;
         }
 
         public void ReadOnlyControls()

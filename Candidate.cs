@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
@@ -21,7 +22,21 @@ namespace Job_Application_Management
             this.address = address;
         }
         public Candidate() { }
-        public string Hometown { get => hometown; set => hometown = value; }
+        public string Hometown 
+        { 
+            get => hometown;
+            set
+            {
+                if (value == null || value == "")
+                {
+                    MessageBox.Show("Chưa chỉ định quê hương");
+                }
+                else
+                {
+                    hometown = value;
+                }
+            }
+        }
         public string Education { get => education; set => education = value; }
         public string Address { get => address; set => address = value; }
         public string JobName { get => jobname; set => jobname = value; }

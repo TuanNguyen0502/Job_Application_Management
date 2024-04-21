@@ -64,13 +64,13 @@ namespace Job_Application_Management
         public CandidateProfile GetCandidateProfileToCoverLetter()
         {
             CandidateProfile canProfile = new CandidateProfile();
-            canProfile.Objective = ktxt_CarrerGoal.Text;
-            canProfile.UniversityName = ktxt_UName.Text;
-            canProfile.Major = ktxt_Major.Text;
-            canProfile.Gpa = ktxt_Gpa.Text;
-            canProfile.CompanyName = ktxt_ComName.Text;
-            canProfile.WorkPlace = ktxt_Nominee.Text;
-            canProfile.Certification = ktxt_Certification.Text;
+            canProfile.Objective = txt_CarrerGoal.Text;
+            canProfile.UniversityName = txt_School.Text;
+            canProfile.Major = txt_Major.Text;
+            canProfile.Gpa = txt_Gpa.Text;
+            canProfile.CompanyName = txt_Company.Text;
+            canProfile.WorkPlace = txt_Nominee.Text;
+            canProfile.Certification = txt_Certificates.Text;
             return canProfile;
         }
 
@@ -91,7 +91,5 @@ namespace Job_Application_Management
             CandidateProfile canProfile = GetCandidateProfileToCoverLetter();
             canDAO.RemoveJobPosting(canProfile.WorkPlace, cddId);
         }
-
-        
     }
 }

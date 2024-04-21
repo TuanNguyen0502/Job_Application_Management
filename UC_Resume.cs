@@ -87,7 +87,7 @@ namespace Job_Application_Management
             myCV.CompanyEndDate = uC_Resume_Experience1.DateTimePicker_End.Value;
             myCV.WorkPlace = uC_Resume_Experience1.TextBox_Place.Text;
             myCV.Certification = uC_Resume_Certificate1.TextBox_CertificateName.Text;
-            myCV.TimeCertificate = uC_Resume_Certificate1.DateTimePicker_Start.Value;
+            myCV.CertificationDate = uC_Resume_Certificate1.DateTimePicker_Start.Value;
             myCV.Status = kryptonTextBox_Status.Text;
             MessageBox.Show("Get info resume successful. "+myCV.Objective);
             return myCV;
@@ -124,7 +124,7 @@ namespace Job_Application_Management
             uC_Resume_Experience1.DateTimePicker_Start.Value = resume.CompanyStartDate;
             uC_Resume_Experience1.DateTimePicker_End.Value = resume.CompanyEndDate;
             uC_Resume_Certificate1.TextBox_CertificateName.Text = resume.Certification;
-            uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
+            uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.CertificationDate;
             kryptonTextBox_Status.Text = resume.Status;
         }
 

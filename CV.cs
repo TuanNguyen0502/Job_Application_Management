@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ComponentFactory.Krypton.Toolkit;
+using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
@@ -71,28 +72,242 @@ namespace Job_Application_Management
         }
         public CV() { }
 
-        public string CddID { get => cddID; set => cddID = value; }
-        public int JobID { get => jobID; set => jobID = value; }
-        public string Objective { get => objective; set => objective = value; }
-        public string Major { get => major; set => major = value; }
-        public DateTime TimeCertificate { get; set; }
-        public string UniversityName { get => universityName; set => universityName = value; }
-        public string Gpa { get => gpa; set => gpa = value; }
-        public DateTime UniversityStartDate { get => universityStartDate; set => universityStartDate = value; }
-        public DateTime UniversityEndDate { get => universityEndDate; set => universityEndDate = value; }
-        public string WorkedDetail { get => workedDetail; set => workedDetail = value; }
-        public DateTime CompanyStartDate { get => companyStartDate; set => companyStartDate = value; }
-        public DateTime CompanyEndDate { get => companyEndDate; set => companyEndDate = value; }
-        public string CddPhone { get => cddPhone; set => cddPhone = value; }
-        public string CddEmail { get => cddEmail; set => cddEmail = value; }
-        public string CddAddress { get => cddAddress; set => cddAddress = value; }
-        public string CddName { get => cddName; set => cddName = value; }
-        public string JobName { get => jobName; set => jobName = value; }
-        public string CompanyName { get => companyName; set => companyName = value; }
-        public string WorkPlace { get => workPlace; set => workPlace = value; }
-        public string Certification { get => certification; set => certification = value; }
-        public DateTime CertificationDate { get => certificationDate; set => certificationDate = value; }
-        public string Status { get => status; set => status = value; }
+        public string CddID 
+        { 
+            get => cddID; 
+            set
+            {
+                if (value == null || value == "")
+                {
+                    MessageBox.Show("CddID chưa được chỉ định");
+                }
+                else
+                {
+                    cddID = value;
+                }
+            }
+        }
+        public int JobID 
+        { 
+            get => jobID; set
+            {
+                if (value < 0)
+                    MessageBox.Show("JobID chưa được chỉ định");
+            }
+        }
+        public string Objective 
+        { 
+            get => objective; set
+            {
+                if (value == null || value == "")
+                {
+                    MessageBox.Show("Mục tiêu nghề nghiệp chưa được chỉ định");
+                }
+                else
+                {
+                    objective = value;
+                }
+            }
+        }
+        public string Major 
+        { 
+            get => major;
+            set
+            {
+                if (value == null || value == "")
+                {
+                    MessageBox.Show("Nghề nghiệp chưa được chỉ định");
+                }
+                else
+                {
+                    major = value;
+                }
+            }
+        }
+        public string UniversityName 
+        { 
+            get => universityName; set
+            {
+                if (value == null || value == "")
+                    MessageBox.Show("Tên trường đại học/cao đẳng chưa được chỉ định");
+                else
+                    universityName = value;
+            }
+        }
+        public string Gpa 
+        { 
+            get => gpa; 
+            set
+            {
+                if (value == null || value == "")
+                    MessageBox.Show("Gpa chưa được chỉ định");
+                else
+                    gpa = value;
+            }
+        }
+        public DateTime UniversityStartDate 
+        { 
+            get => universityStartDate; set
+            {
+                if (value == null || value == DateTime.MinValue)
+                    MessageBox.Show("Ngày bắt đầu nhập học chưa được chỉ định");
+                else
+                    universityStartDate = value;
+            } 
+        }
+        public DateTime UniversityEndDate 
+        { 
+            get => universityEndDate; set
+            {
+                if (value == null || value == DateTime.MinValue)
+                    MessageBox.Show("Ngày tốt nghiệp chưa được chỉ định");
+                else
+                    universityEndDate = value;
+            }
+        }
+        public string WorkedDetail 
+        { 
+            get => workedDetail;
+            set
+            {
+                if (value == null || value == "")
+                    MessageBox.Show("Chi tiết công việc chưa được chỉ định");
+                else
+                    workedDetail = value;
+            }
+        }
+        public DateTime CompanyStartDate 
+        { 
+            get => companyStartDate;
+            set
+            {
+                if (value == null || value == DateTime.MinValue)
+                    MessageBox.Show("Ngày vào công ty chưa được chỉ định");
+                else
+                    companyStartDate = value;
+            }
+        }
+        public DateTime CompanyEndDate 
+        { 
+            get => companyEndDate;
+            set
+            {
+                if (value == null || value == DateTime.MinValue)
+                    MessageBox.Show("Ngày nghỉ công ty chưa được chỉ định");
+                else
+                    companyEndDate = value;
+            }
+        }
+        public string CddPhone 
+        { 
+            get => cddPhone;
+            set
+            {
+                if (value == null || value == "")
+                    MessageBox.Show("Gpa chưa được chỉ định");
+                else
+                    gpa = value;
+            }
+        }
+        public string CddEmail 
+        { 
+            get => cddEmail;
+            set
+            {
+                if (value == null || value == "")
+                    MessageBox.Show("Email ứng viên chưa được chỉ định");
+                else
+                    cddEmail = value;
+            }
+        }
+        public string CddAddress 
+        { 
+            get => cddAddress;
+            set
+            {
+                if (value == null || value == "")
+                    MessageBox.Show("Địa chỉ của ứng viên chưa được chỉ định");
+                else
+                    cddAddress = value;
+            }
+        }
+        public string CddName 
+        { 
+            get => cddName;
+            set
+            {
+                if (value == null || value == "")
+                    MessageBox.Show("Tên ứng viên chưa được chỉ định");
+                else
+                    cddName = value;
+            }
+        }
+        public string JobName 
+        { 
+            get => jobName;
+            set
+            {
+                if (value == null || value == "")
+                    MessageBox.Show("Tên công việc chưa được chỉ định");
+                else
+                    jobName = value;
+            }
+        }
+        public string CompanyName 
+        { 
+            get => companyName;
+            set
+            {
+                if (value == null || value == "")
+                    MessageBox.Show("Tên công ty chưa được chỉ định");
+                else
+                    companyName = value;
+            }
+        }
+        public string WorkPlace 
+        { 
+            get => workPlace;
+            set
+            {
+                if (value == null || value == "")
+                    MessageBox.Show("Vị trí làm việc chưa được chỉ định");
+                else
+                    workPlace = value;
+            }
+        }
+        public string Certification 
+        { 
+            get => certification;
+            set
+            {
+                if (value == null || value == "")
+                    MessageBox.Show("Chững chỉ chưa được chỉ định");
+                else
+                    certification = value;
+            }
+        }
+        public DateTime CertificationDate 
+        { 
+            get => certificationDate;
+            set
+            {
+                if (value == null || value == DateTime.MinValue)
+                    MessageBox.Show("Ngày/tháng/năm được cấp chứng chỉ chưa được chỉ định");
+                else
+                    certificationDate = value;
+            }
+        }
+        public string Status 
+        { 
+            get => status;
+            set
+            {
+                if (value == null || value == "")
+                    MessageBox.Show("Trạng thái CV chưa được chỉ định");
+                else
+                    status = value;
+            }
+        }
 
     }
 }

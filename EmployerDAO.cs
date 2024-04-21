@@ -108,7 +108,7 @@ namespace Job_Application_Management
                         resume.CompanyStartDate = reader.GetDateTime(11);
                         resume.CompanyEndDate = reader.GetDateTime(12);
                         resume.Certification = reader.GetString(13);
-                        resume.TimeCertificate = reader.GetDateTime(14);
+                        resume.CertificationDate = reader.GetDateTime(14);
                         resume.Status = reader.GetString(15);
                         resume.CddName = reader.GetString(16);
                         resume.CddPhone = reader.GetString(17);
