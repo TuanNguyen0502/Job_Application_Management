@@ -114,6 +114,14 @@ CREATE TABLE Resume(
 	Interview datetime default null,
 	CONSTRAINT PK_AD PRIMARY KEY (CddID, JobID)
 )
+CREATE TABLE Interviews (
+	ID int IDENTITY PRIMARY KEY,
+	EmpID varchar(10) foreign key references Employers(ID),
+	CddID varchar(10) foreign key references Candidates(CddID),
+	JobID int IDENTITY(1, 1) foreign key references Jobs(ID),
+	InterviewTime datetime,
+	Note nvarchar(max)
+)
 CREATE TABLE CandidateProfile(
 	CddID varchar(10) CONSTRAINT FK_Profile_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
 	WorkPlace nvarchar(100),
