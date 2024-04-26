@@ -200,11 +200,6 @@ namespace Job_Application_Management
 
         }
 
-        private void btn_CreateCVAvailable_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void clickInterview_Click(object sender, ClickInterviews e)
         {
             Label lbl_MessageInterview = new Label();
@@ -274,6 +269,45 @@ namespace Job_Application_Management
             FCandidate_Interviews fInterview = new FCandidate_Interviews();
             fInterview.ClickInterviews += clickInterview_Click;
             OpenChildForm(fInterview, pnl_ContainDetailsJob);
+        }
+
+
+        private void btn_WorkHistory_Click(object sender, EventArgs e)
+        {
+            SetIntroduction();
+            LoadHistory();
+        }
+        public void btnAddHistory_Click(object sender, EventArgs e)
+        {
+            UC_WorkHistory history = new UC_WorkHistory();
+            history.AddHistory += btnAddHistory_Click;
+            history.DoneAddHistory += btnDoneAddHistory_Click;
+            history.RemoveHistory += btnRemoveHistory_Click;
+            pnl_ContainDetailsJob.Controls.Add(history);
+
+        }
+        public void btnDoneAddHistory_Click(object sender, ClickAddHistory e)
+        {
+            canDAO.AddWorkHistory(lblCddID.Text, e.CompanyName, e.StartDate, e.EndDate);
+            pnl_ContainDetailsJob.Controls.Clear();
+            LoadHistory();
+        }
+        public void btnRemoveHistory_Click(object sender, ClickAddHistory e)
+        {
+            canDAO.RemoveWorkHistory(lblCddID.Text, e.CompanyName);
+            pnl_ContainDetailsJob.Controls.Clear();
+            LoadHistory();
+        }
+        public void LoadHistory()
+        {
+            List<UC_WorkHistory> historys = canDAO.GetWorkHistory();
+            foreach (var history in historys)
+            {
+                history.AddHistory += btnAddHistory_Click;
+                history.DoneAddHistory += btnDoneAddHistory_Click;
+                history.RemoveHistory += btnRemoveHistory_Click;
+                pnl_ContainDetailsJob.Controls.Add(history);
+            }
         }
     }
 }
