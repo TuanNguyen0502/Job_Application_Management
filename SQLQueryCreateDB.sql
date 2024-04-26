@@ -118,7 +118,7 @@ CREATE TABLE Interviews (
 	ID int IDENTITY PRIMARY KEY,
 	EmpID varchar(10) foreign key references Employers(ID),
 	CddID varchar(10) foreign key references Candidates(CddID),
-	JobID int IDENTITY(1, 1) foreign key references Jobs(ID),
+	JobID int foreign key references Jobs(ID),
 	InterviewTime datetime,
 	Note nvarchar(max)
 )
@@ -206,30 +206,15 @@ VALUES
 	   ('CDD001', N'Công ty TNHH một mình tao', '2020-03-01', '2021-02-10'),
 	   ('CDD001', N'Công ty Tâm Bình', '2021-09-01', '2022-02-10'),
 	   ('CDD001', N'Công ty Nhân Tâm', '2023-09-01', '2024-02-10');
-SELECT * 
-FROM CV
-WHERE CddID = 'CDD001'
-SELECT * FROM Resume
+
 SELECT * FROM Jobs
+SELECT * FROM Interviews
+SELECT j.Name, emp.CompanyName, itv.InterviewTime, itv.Note
+FROM Interviews itv
+JOIN Employers emp ON itv.EmpID = emp.ID
+JOIN Candidates can ON itv.CddID = can.CddID
+JOIN Jobs j ON itv.JobID = j.ID 
+WHERE can.CddID = 'CDD001'
 
-SELECT * FROM CandidateProfile
-SELECT * FROM Jobs
-SELECT wh.CandidateID, cdd.CddName, wh.CompanyName, wh.StartDate, wh.EndDate
-FROM WorkHistory wh
-JOIN Candidates cdd ON wh.CandidateID = cdd.CddID
-
-SELECT * 
-FROM WorkHistory wh
-JOIN Candidates c ON wh.CandidateID = c.CddID
-JOIN Company cpn ON wh.CompanyName = cpn.Name
-
-SELECT * 
-FROM WorkHistory wh
-JOIN Company c ON wh.CompanyName = c.Name
-
-SELECT * FROM SavedJobs
-SELECT * FROM AppliedJobs
-
-SELECT * FROM Resume
-SELECT * FROM CV
-SELECT * FROM WorkHistory
+INSERT INTO Interviews(EmpID,CddID,JobID,InterviewTime,Note)
+VALUES('E001','CDD001',1,'2024-05-03',N'Tác phong chuẩn bị nghiêm túc và tinh thần tốt để phỏng vấn')

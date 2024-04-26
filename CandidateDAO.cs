@@ -15,6 +15,7 @@ namespace Job_Application_Management
     {
         DBConnection dbConn;
         string sqlQuery;
+        #region Function of CandidateDAO
         public CandidateDAO()
         {
             dbConn = new DBConnection();
@@ -531,6 +532,30 @@ namespace Job_Application_Management
             {
                 MessageBox.Show("Tăng follower thất bại");
             }
+        }
+        #endregion
+        public List<UC_Candidate_Interview> GetListInterviewsToDB()
+        {
+            sqlQuery = "SELECT j.Name, emp.CompanyName, itv.InterviewTime, itv.Note"
+                       +" FROM Interviews itv"
+                       +" JOIN Employers emp ON itv.EmpID = emp.ID"
+                       +" JOIN Candidates can ON itv.CddID = can.CddID"
+                       +" JOIN Jobs j ON itv.JobID = j.ID"
+                       +" WHERE can.CddID = 'CDD001'";
+            List<Dictionary<string, object>> keyValuePairs = dbConn.ExecuteReaderData(sqlQuery);
+            List<UC_Candidate_Interview> result = new List<UC_Candidate_Interview>();
+            foreach (var reader in keyValuePairs)
+            {
+                Job job = new Job();
+                Interview interview = new Interview();
+                job.Name = (string)reader["Name"];
+                job.CompanyName = (string)reader["CompanyName"];
+                interview.InterviewTime = (DateTime)reader["InterviewTime"];
+                interview.Note = (string)reader["Note"];
+                UC_Candidate_Interview uc_interview = new UC_Candidate_Interview(job,interview);
+                result.Add(uc_interview);
+            }
+            return result;
         }
     }
 }

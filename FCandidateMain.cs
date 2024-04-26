@@ -21,20 +21,20 @@ namespace Job_Application_Management
             lblCddID.Text = cddID;
             lbl_CddName.Text = canDAO.GetNameByCddID(cddID);
         }
-        private void OpenChildForm(Form childForm)
+        private void OpenChildForm(Form childForm, Panel panel_Contains)
         {
             if (currentFormChild != null)
             {
                 currentFormChild.Close();
             }
 
-            pnl_ContainDetailsJob.BackgroundImage = null;
+            panel_Contains.BackgroundImage = null;
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            pnl_ContainDetailsJob.Controls.Add(childForm);
-            pnl_ContainDetailsJob.Tag = childForm;
+            panel_Contains.Controls.Add(childForm);
+            panel_Contains.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -91,7 +91,7 @@ namespace Job_Application_Management
         {
             
             FCandidate_SelectedJobDetails selected = new FCandidate_SelectedJobDetails(e.JobID, e.CddID);
-            OpenChildForm(selected);
+            OpenChildForm(selected, pnl_ContainDetailsJob);
             
         }
 
@@ -149,7 +149,7 @@ namespace Job_Application_Management
             UC_Introduction introduction = new UC_Introduction();
             introduction.Btn_ResponeFindJobs += btn_ResponeFindJobs_Click;
             flp_ContainsJobs.Controls.Add(introduction);
-            OpenChildForm(new FCandidate_SavedJobs(lblCddID.Text));
+            OpenChildForm(new FCandidate_SavedJobs(lblCddID.Text), pnl_ContainDetailsJob);
         }
 
         private void btn_JobsApplied_Click(object sender, EventArgs e)
@@ -158,7 +158,7 @@ namespace Job_Application_Management
             UC_Introduction introduction = new UC_Introduction();
             introduction.Btn_ResponeFindJobs += btn_ResponeFindJobs_Click;
             flp_ContainsJobs.Controls.Add(introduction);
-            OpenChildForm(new FCandidate_AppliedJobs());
+            OpenChildForm(new FCandidate_AppliedJobs(), pnl_ContainDetailsJob);
         }
 
         private void btn_Register_Click(object sender, EventArgs e)
@@ -173,7 +173,7 @@ namespace Job_Application_Management
             UC_Introduction introduction = new UC_Introduction();
             introduction.Btn_ResponeFindJobs += btn_ResponeFindJobs_Click;
             flp_ContainsJobs.Controls.Add(introduction);
-            OpenChildForm(new FCandidate_PostFindJob(lblCddID.Text));
+            OpenChildForm(new FCandidate_PostFindJob(lblCddID.Text), pnl_ContainDetailsJob);
         }
 
         private void btn_LogOut_Click_1(object sender, EventArgs e)
@@ -185,6 +185,22 @@ namespace Job_Application_Management
         private void btn_CreateCVAvailable_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ptb_Notification_Click(object sender, EventArgs e)
+        {
+            flp_ContainsJobs.Controls.Clear();
+            pnl_Main.Controls.Clear();
+            spnl_TaskBar.Controls.Clear();
+            OpenChildForm(new FCandidate_Interviews(), pnl_Main);
+        }
+
+        private void lbl_Notification_Click(object sender, EventArgs e)
+        {
+            flp_ContainsJobs.Controls.Clear();
+            pnl_Main.Controls.Clear();
+            spnl_TaskBar.Controls.Clear();
+            OpenChildForm(new FCandidate_Interviews(), pnl_Main);
         }
     }
 }

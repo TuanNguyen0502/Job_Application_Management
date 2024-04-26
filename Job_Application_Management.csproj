@@ -82,6 +82,12 @@
     <Compile Include="DBConnection.cs" />
     <Compile Include="Employer.cs" />
     <Compile Include="EmployerDAO.cs" />
+    <Compile Include="FCandidate_Interviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCandidate_Interviews.Designer.cs">
+      <DependentUpon>FCandidate_Interviews.cs</DependentUpon>
+    </Compile>
     <Compile Include="FEmployerMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +258,12 @@
     <Compile Include="UC_CandidateProfile.Designer.cs">
       <DependentUpon>UC_CandidateProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Candidate_Interview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Candidate_Interview.Designer.cs">
+      <DependentUpon>UC_Candidate_Interview.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_CoverLetter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -330,6 +342,9 @@
     <Compile Include="UC_WorkHistory.Designer.cs">
       <DependentUpon>UC_WorkHistory.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FCandidate_Interviews.resx">
+      <DependentUpon>FCandidate_Interviews.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FEmployerMain.resx">
       <DependentUpon>FEmployerMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -417,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_CandidateProfile.resx">
       <DependentUpon>UC_CandidateProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Candidate_Interview.resx">
+      <DependentUpon>UC_Candidate_Interview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_CoverLetter.resx">
       <DependentUpon>UC_CoverLetter.cs</DependentUpon>
@@ -941,6 +959,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-invite-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tick-60.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
