@@ -14,11 +14,26 @@ namespace Job_Application_Management
     {
         private Job job;
         private Interview interview;
-        public UC_Candidate_Interview(Job job, Interview interview)
+        private Candidate can;
+        public UC_Candidate_Interview(Job job, Interview interview, Candidate can)
         {
             InitializeComponent();
             this.job = job;
             this.interview = interview;
+            this.can=can;
+            SetValueForControls();
+        }
+        public void SetValueForControls()
+        {
+            lbl_CompanyName.Text = job.CompanyName;
+            label_JobName.Text = job.Name;
+            label_InterviewTime.Text = interview.InterviewTime.ToLongDateString();
+            label_Note.Text = interview.Note;
+        }
+        public event EventHandler<ClickInterviews> SeeInterview_Click;
+        private void tableLayoutPanel1_Click(object sender, EventArgs e)
+        {
+            SeeInterview_Click?.Invoke(this, new ClickInterviews(can.Name,job.CompanyName,job.Name,interview.InterviewTime,interview.Note));
         }
     }
 }

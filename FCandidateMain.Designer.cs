@@ -333,7 +333,7 @@
             this.lbl_Notification.Name = "lbl_Notification";
             this.lbl_Notification.Size = new System.Drawing.Size(21, 23);
             this.lbl_Notification.TabIndex = 14;
-            this.lbl_Notification.Text = "1";
+            this.lbl_Notification.Text = "0";
             this.lbl_Notification.Click += new System.EventHandler(this.lbl_Notification_Click);
             // 
             // btn_CreateCV

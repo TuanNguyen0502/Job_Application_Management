@@ -536,7 +536,7 @@ namespace Job_Application_Management
         #endregion
         public List<UC_Candidate_Interview> GetListInterviewsToDB()
         {
-            sqlQuery = "SELECT j.Name, emp.CompanyName, itv.InterviewTime, itv.Note"
+            sqlQuery = "SELECT j.Name, emp.CompanyName, itv.InterviewTime, itv.Note, can.CddName"
                        +" FROM Interviews itv"
                        +" JOIN Employers emp ON itv.EmpID = emp.ID"
                        +" JOIN Candidates can ON itv.CddID = can.CddID"
@@ -548,11 +548,48 @@ namespace Job_Application_Management
             {
                 Job job = new Job();
                 Interview interview = new Interview();
+                Candidate candidate = new Candidate();
                 job.Name = (string)reader["Name"];
                 job.CompanyName = (string)reader["CompanyName"];
                 interview.InterviewTime = (DateTime)reader["InterviewTime"];
                 interview.Note = (string)reader["Note"];
-                UC_Candidate_Interview uc_interview = new UC_Candidate_Interview(job,interview);
+                candidate.Name = (string)reader["CddName"];
+                UC_Candidate_Interview uc_interview = new UC_Candidate_Interview(job,interview, candidate);
+                result.Add(uc_interview);
+            }
+            return result;
+        }
+        public int CountRowsInInterviews()
+        {
+            sqlQuery = "SELECT COUNT(*) FROM Interviews";
+            int rows = dbConn.ExecuteScalarGetInt(sqlQuery);
+            return rows;
+        }
+        public List<UC_Candidate_Interview> GetListInterviewByKey(string keyword)
+        {
+            sqlQuery = " SELECT j.Name, emp.CompanyName, itv.InterviewTime, itv.Note, can.CddName"
+                       +" FROM Interviews itv"
+                       +" JOIN Employers emp ON itv.EmpID = emp.ID"
+                       +" JOIN Candidates can ON itv.CddID = can.CddID"
+                       +" JOIN Jobs j ON itv.JobID = j.ID"
+                       +" WHERE CONCAT(j.Name,emp.CompanyName) LIKE '%'+ @keyword +'%'";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@keyword", SqlDbType.NVarChar) {Value = keyword},
+            };
+            List<Dictionary<string, object>> keyValuePairs = dbConn.ExecuteReaderData(sqlQuery, lstParams);
+            List<UC_Candidate_Interview> result = new List<UC_Candidate_Interview>();
+            foreach (var reader in keyValuePairs)
+            {
+                Job job = new Job();
+                Interview interview = new Interview();
+                Candidate candidate = new Candidate();
+                job.Name = (string)reader["Name"];
+                job.CompanyName = (string)reader["CompanyName"];
+                interview.InterviewTime = (DateTime)reader["InterviewTime"];
+                interview.Note = (string)reader["Note"];
+                candidate.Name = (string)reader["CddName"];
+                UC_Candidate_Interview uc_interview = new UC_Candidate_Interview(job, interview, candidate);
                 result.Add(uc_interview);
             }
             return result;

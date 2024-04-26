@@ -209,12 +209,15 @@ VALUES
 
 SELECT * FROM Jobs
 SELECT * FROM Interviews
-SELECT j.Name, emp.CompanyName, itv.InterviewTime, itv.Note
+Declare @keyword nvarchar(MAX)
+Set @keyword = 'Soft'
+SELECT j.Name, emp.CompanyName, itv.InterviewTime, itv.Note, can.CddName
 FROM Interviews itv
 JOIN Employers emp ON itv.EmpID = emp.ID
 JOIN Candidates can ON itv.CddID = can.CddID
 JOIN Jobs j ON itv.JobID = j.ID 
-WHERE can.CddID = 'CDD001'
+WHERE CONCAT(j.Name,emp.CompanyName) LIKE '%'+ @keyword +'%'
 
 INSERT INTO Interviews(EmpID,CddID,JobID,InterviewTime,Note)
 VALUES('E001','CDD001',1,'2024-05-03',N'Tác phong chuẩn bị nghiêm túc và tinh thần tốt để phỏng vấn')
+SELECT COUNT(*) FROM Interviews

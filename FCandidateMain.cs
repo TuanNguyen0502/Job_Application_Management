@@ -15,11 +15,28 @@ namespace Job_Application_Management
     {
         CandidateDAO canDAO = new CandidateDAO();
         Form currentFormChild;
-        public FCandidateMain(string cddID)
+        public FCandidateMain()
         {
             InitializeComponent();
+        }
+        public FCandidateMain(string cddID) : this()
+        {
             lblCddID.Text = cddID;
+            lbl_Notification.Text = "0";
+            NumberOfNotification();
             lbl_CddName.Text = canDAO.GetNameByCddID(cddID);
+        }
+        public void SetIntroduction()
+        {
+            flp_ContainsJobs.Controls.Clear();
+            UC_Introduction introduction = new UC_Introduction();
+            introduction.Btn_ResponeFindJobs += btn_ResponeFindJobs_Click;
+            flp_ContainsJobs.Controls.Add(introduction);
+        }
+        public void NumberOfNotification()
+        {
+            int numberOfNotification = canDAO.CountRowsInInterviews();
+            lbl_Notification.Text = numberOfNotification.ToString();
         }
         private void OpenChildForm(Form childForm, Panel panel_Contains)
         {
@@ -61,6 +78,7 @@ namespace Job_Application_Management
         }
         private void CheckJobsSavedAndPushIntoFLP(UC_CandidateMain candidateMain)
         {
+            
             List<UC_JobsSaved> jobSaveds = canDAO.GetSavedJobsFromDB();
             foreach (var jobSaved in jobSaveds)
             {
@@ -81,6 +99,7 @@ namespace Job_Application_Management
         }
         public void ListJobs()
         {
+            
             List<UC_CandidateMain> jobItems = canDAO.GetJobsFromDB(lblCddID.Text);
             foreach (var jobItem in jobItems)
             {
@@ -97,6 +116,7 @@ namespace Job_Application_Management
 
         private void btnSearchFor_Click(object sender, EventArgs e)
         {
+            
             if (flp_ContainsJobs.Controls.Count >= 0)
             {
                 flp_ContainsJobs.Controls.Clear();
@@ -110,6 +130,7 @@ namespace Job_Application_Management
 
         private void cbb_Address_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             if (cbb_Address.SelectedItem.ToString() != "Tất cả tỉnh/TP")
             {
                 if (flp_ContainsJobs.Controls.Count > 0)
@@ -133,46 +154,43 @@ namespace Job_Application_Management
         }
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
+            
             flp_ContainsJobs.Controls.Clear();
             pnl_ContainDetailsJob.Controls.Clear();
             ListJobs();
         }
         private void btn_ResponeFindJobs_Click(object sender, EventArgs e)
         {
+            
             flp_ContainsJobs.Controls.Clear();
             pnl_ContainDetailsJob.Controls.Clear();
             ListJobs();
         }
         private void btn_JobsSaved_Click(object sender, EventArgs e)
         {
-            flp_ContainsJobs.Controls.Clear();
-            UC_Introduction introduction = new UC_Introduction();
-            introduction.Btn_ResponeFindJobs += btn_ResponeFindJobs_Click;
-            flp_ContainsJobs.Controls.Add(introduction);
+
+            SetIntroduction();
             OpenChildForm(new FCandidate_SavedJobs(lblCddID.Text), pnl_ContainDetailsJob);
         }
 
         private void btn_JobsApplied_Click(object sender, EventArgs e)
         {
-            flp_ContainsJobs.Controls.Clear();
-            UC_Introduction introduction = new UC_Introduction();
-            introduction.Btn_ResponeFindJobs += btn_ResponeFindJobs_Click;
-            flp_ContainsJobs.Controls.Add(introduction);
+
+            SetIntroduction();
             OpenChildForm(new FCandidate_AppliedJobs(), pnl_ContainDetailsJob);
         }
 
         private void btn_Register_Click(object sender, EventArgs e)
         {
+            
             FCandidate_CreateCV createCV = new FCandidate_CreateCV(lblCddID.Text);
             createCV.ShowDialog();
         }
 
         private void btn_Posting_Click(object sender, EventArgs e)
         {
-            flp_ContainsJobs.Controls.Clear();
-            UC_Introduction introduction = new UC_Introduction();
-            introduction.Btn_ResponeFindJobs += btn_ResponeFindJobs_Click;
-            flp_ContainsJobs.Controls.Add(introduction);
+
+            SetIntroduction();
             OpenChildForm(new FCandidate_PostFindJob(lblCddID.Text), pnl_ContainDetailsJob);
         }
 
@@ -187,20 +205,75 @@ namespace Job_Application_Management
 
         }
 
+        private void clickInterview_Click(object sender, ClickInterviews e)
+        {
+            Label lbl_MessageInterview = new Label();
+            // 
+            // lbl_MessageInterview
+            // 
+            lbl_MessageInterview.Anchor = System.Windows.Forms.AnchorStyles.None;
+            lbl_MessageInterview.Location = new System.Drawing.Point(3, 0);
+            lbl_MessageInterview.Name = "lbl_MessageInterview";
+            lbl_MessageInterview.Size = new System.Drawing.Size(473, 700);
+            lbl_MessageInterview.TabIndex = 0;
+            lbl_MessageInterview.Font = new Font("Segoe UI", 12);
+            lbl_MessageInterview.AutoSize = false;
+            lbl_MessageInterview.Text = $"Chào bạn [{e.CddName}],"
+
+            +$"Lời đầu tiên, chúng tôi xin cảm ơn bạn vì đã quan tâm đến vị trí ứng tuyển của công ty[{e.CompanyName}]. Thông qua hồ sơ mà bạn đã gửi về, chúng tôi nhận thấy bạn có kiến thức chuyên môn phù hợp với vị trí mà chúng tôi đang tuyển."
+
+            +$"Chúng tôi trân trọng kính mời bạn đến tham gia buổi phỏng vấn của công ty chúng tôi tại:"+
+
+                        $"Thời gian: Ngày [{e.Interview.Day}], [{e.Interview}]"+
+                        $"Địa điểm: [Địa chỉ Công ty]"+
+                        $"Ngôn ngữ phỏng vấn: [Ngôn ngữ]"+
+                        $"Để buổi phỏng vấn được diễn ra thuận lợi, bạn vui lòng phản hồi lại email này trong 24h kể từ khi nhận được. Mọi thắc mắc khác, bạn vui lòng liên hệ với chúng tôi qua: [Số điện thoại] - [E-mail]"+
+
+                        $"[{e.CompanyName}] chúc bạn sẽ có một buổi phỏng vấn thành công."+
+
+            $"Trân trọng,"+
+
+            $"[Chữ ký công ty :D]";
+            flp_ContainsJobs.Controls.Clear();
+            flp_ContainsJobs.Controls.Add(lbl_MessageInterview);
+        }
+
+        private void btn_Readload_Click(object sender, EventArgs e)
+        {
+            SetIntroduction();
+            FCandidate_Interviews fInterview = new FCandidate_Interviews();
+            fInterview.ClickInterviews += clickInterview_Click;
+            fInterview.Readload_Click += btn_Readload_Click;
+            fInterview.Search_Click += btn_Search_Click;
+            OpenChildForm(fInterview, pnl_ContainDetailsJob);
+        }
+
+        private void btn_Search_Click (object sender, EventArgs e)
+        {
+            SetIntroduction();
+            FCandidate_Interviews fInterview = new FCandidate_Interviews();
+            fInterview.ClickInterviews += clickInterview_Click;
+            fInterview.Readload_Click += btn_Readload_Click;
+            fInterview.Search_Click += btn_Search_Click;
+            OpenChildForm(fInterview, pnl_ContainDetailsJob);
+        }
+
         private void ptb_Notification_Click(object sender, EventArgs e)
         {
-            flp_ContainsJobs.Controls.Clear();
-            pnl_Main.Controls.Clear();
-            spnl_TaskBar.Controls.Clear();
-            OpenChildForm(new FCandidate_Interviews(), pnl_Main);
+            SetIntroduction();
+            FCandidate_Interviews fInterview = new FCandidate_Interviews();
+            fInterview.ClickInterviews += clickInterview_Click;
+            fInterview.Readload_Click += btn_Readload_Click;
+            fInterview.Search_Click += btn_Search_Click;
+            OpenChildForm(fInterview, pnl_ContainDetailsJob);
         }
 
         private void lbl_Notification_Click(object sender, EventArgs e)
         {
-            flp_ContainsJobs.Controls.Clear();
-            pnl_Main.Controls.Clear();
-            spnl_TaskBar.Controls.Clear();
-            OpenChildForm(new FCandidate_Interviews(), pnl_Main);
+            SetIntroduction();
+            FCandidate_Interviews fInterview = new FCandidate_Interviews();
+            fInterview.ClickInterviews += clickInterview_Click;
+            OpenChildForm(fInterview, pnl_ContainDetailsJob);
         }
     }
 }

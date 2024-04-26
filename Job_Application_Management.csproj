@@ -77,6 +77,7 @@
     <Compile Include="CandidateDAO.cs" />
     <Compile Include="CandidateProfile.cs" />
     <Compile Include="ClickAddHistory.cs" />
+    <Compile Include="ClickInterviews.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="CV.cs" />
     <Compile Include="DBConnection.cs" />

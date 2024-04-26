@@ -123,25 +123,4 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>31</value>
   </metadata>
-  <data name="lbl_Greeting.Text" xml:space="preserve">
-    <value>Xin chào Anh/Chị [Tên ứng viên],
-
-Chúc mừng Anh/Chị đã vượt qua vòng xét tuyển hồ sơ của công ty [Tên công ty] cho vị trí [Tên vị trí ứng tuyển].
-
-Công ty chúng tôi nhận thấy Anh/Chị có những kiến thức chuyên môn phù hợp để đáp ứng những công việc cho vị trí mà chúng tôi đang tuyển. Vì thế, chúng tôi xin gửi thư này để hẹn Anh/Chị một buổi phỏng vấn tại:
-
-Thời gian: [Ngày], [Thời gian]
-Địa điểm: [Địa chỉ Công ty]
-Lưu ý (nếu có)
-
-Khi đến phỏng vấn, Anh/Chị có thể liên hệ với [Người liên hệ - Số điện thoại] để nhận được hướng dẫn.
-
-Anh/Chị vui lòng phản hồi email này trước [Giờ] ngày [Ngày/Tháng/Năm] để xác nhận việc đã nhận được thông tin trên.
-
-Để giúp Anh/Chị có sự chuẩn bị tốt nhất cho buổi phỏng vấn, Anh/Chị tham khảo nội dung công việc [Link tài liệu] và tham khảo thêm các dịch vụ mà công ty cung cấp tại [Link website công ty].
-
-Trân trọng,
-
-[Chữ ký công ty]</value>
-  </data>
 </root>
