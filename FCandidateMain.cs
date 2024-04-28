@@ -15,6 +15,7 @@ namespace Job_Application_Management
     {
         CandidateDAO canDAO = new CandidateDAO();
         Form currentFormChild;
+        private FlowLayoutPanel flp_ContainsWorkHistory;
         public FCandidateMain()
         {
             InitializeComponent();
@@ -116,7 +117,7 @@ namespace Job_Application_Management
 
         private void btnSearchFor_Click(object sender, EventArgs e)
         {
-            
+            pnl_ContainDetailsJob.Controls.Clear();
             if (flp_ContainsJobs.Controls.Count >= 0)
             {
                 flp_ContainsJobs.Controls.Clear();
@@ -130,7 +131,7 @@ namespace Job_Application_Management
 
         private void cbb_Address_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            pnl_ContainDetailsJob.Controls.Clear();
             if (cbb_Address.SelectedItem.ToString() != "Tất cả tỉnh/TP")
             {
                 if (flp_ContainsJobs.Controls.Count > 0)
@@ -298,16 +299,24 @@ namespace Job_Application_Management
             pnl_ContainDetailsJob.Controls.Clear();
             LoadHistory();
         }
+
         public void LoadHistory()
         {
+            flp_ContainsWorkHistory = new FlowLayoutPanel();
+            flp_ContainsWorkHistory.Size = new System.Drawing.Size(830, 665);
+            flp_ContainsWorkHistory.AutoScroll = true;
+            pnl_ContainDetailsJob.Controls.Clear();
+            pnl_ContainDetailsJob.Controls.Add(flp_ContainsWorkHistory);
             List<UC_WorkHistory> historys = canDAO.GetWorkHistory();
             foreach (var history in historys)
             {
                 history.AddHistory += btnAddHistory_Click;
                 history.DoneAddHistory += btnDoneAddHistory_Click;
                 history.RemoveHistory += btnRemoveHistory_Click;
-                pnl_ContainDetailsJob.Controls.Add(history);
+                flp_ContainsWorkHistory.Controls.Add(history);
             }
+
+            
         }
     }
 }

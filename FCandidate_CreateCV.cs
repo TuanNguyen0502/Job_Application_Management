@@ -30,15 +30,9 @@ namespace Job_Application_Management
         }
         public void removeCVValid_Click (object sender, ButtonClickEventArgs e)
         {
-            if (canDAO.CheckCandidateExistsInResume(cddid) == false)
-            {
-                uC_CV1.Btn_RemoveCVValid.Enabled = false;
-            }
-            else
-            {
-                uC_CV1.Btn_RemoveCVValid.Enabled = true;
-
-            }
+            int jobid = canDAO.GetJobIDByCddID(e.CddID);
+            MessageBox.Show($"CddID = {e.CddID}, JobID = {e.JobID}");
+            canDAO.RemoveCVValid(e.CddID, jobid);
         }
 
         private void FCandidate_CreateCV_Load(object sender, EventArgs e)
@@ -47,10 +41,12 @@ namespace Job_Application_Management
             {
                 MessageBox.Show("Bạn đã có sẵn CV rồi. Ứng tuyển công việc ngay thôi !");
                 uC_CV1.Btn_CreateCV.Enabled = false;
+                uC_CV1.Btn_RemoveCVValid.Enabled = true;
             }
             else
             {
                 MessageBox.Show("Mời bạn đăng kí CV cho riêng mình");
+                uC_CV1.Btn_RemoveCVValid.Enabled = false;
                 uC_CV1.Btn_CreateCV.Enabled = true;
             }
         }

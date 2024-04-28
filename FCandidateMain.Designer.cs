@@ -55,7 +55,7 @@
             this.flp_ContainsJobs = new System.Windows.Forms.FlowLayoutPanel();
             this.pnl_Main = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pnl_ContainDetailsJob = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnl_ContainDetailsJob = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSlide)).BeginInit();
@@ -595,6 +595,6 @@
         private System.Windows.Forms.PictureBox ptb_Notification;
         private Guna.UI2.WinForms.Guna2Button btn_WorkHistory;
         private System.Windows.Forms.Label lbl_Notification;
-        private System.Windows.Forms.FlowLayoutPanel pnl_ContainDetailsJob;
+        private System.Windows.Forms.Panel pnl_ContainDetailsJob;
     }
 }

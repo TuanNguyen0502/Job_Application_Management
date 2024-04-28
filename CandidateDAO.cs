@@ -384,6 +384,36 @@ namespace Job_Application_Management
             }
             return false;
         }
+        public int GetJobIDByCddID(string CddID)
+        {
+            sqlQuery = "SELECT JobID"+
+                       " FROM Resume"+
+                       " WHERE CddID = @CddID";
+            SqlParameter[] lstParam =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value =CddID},   
+            };
+            int id = dbConn.ExecuteScalarGetInt(sqlQuery, lstParam);
+            return id;
+        }
+        public void RemoveCVValid(string CddID, int JobID)
+        {
+            sqlQuery = "DELETE FROM Resume"+
+                       " WHERE CddID = @CddID AND JobID = @JobID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = CddID},
+                new SqlParameter("@JobID", SqlDbType.Int) {Value = JobID},
+            };
+            if (dbConn.ExecuteDeleteDataCheck(sqlQuery, lstParams))
+            {
+                MessageBox.Show($"Đã xóa Resume với mã ứng viên {CddID} và mã công việc {JobID}");
+            }
+            else
+            {
+                MessageBox.Show("Xóa Resume không thành công");
+            }
+        }
         // Đăng tuyển bài viết tìm việc
         public void AddJobPosting(CandidateProfile canProfile, string cddid)
         {

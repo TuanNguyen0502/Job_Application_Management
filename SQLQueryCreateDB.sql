@@ -221,3 +221,10 @@ WHERE CONCAT(j.Name,emp.CompanyName) LIKE '%'+ @keyword +'%'
 INSERT INTO Interviews(EmpID,CddID,JobID,InterviewTime,Note)
 VALUES('E001','CDD001',1,'2024-05-03',N'Tác phong chuẩn bị nghiêm túc và tinh thần tốt để phỏng vấn')
 SELECT COUNT(*) FROM Interviews
+
+DELETE FROM Resume
+WHERE CddID = @CddID AND JobID = @JobID
+
+SELECT JobID
+FROM Resume
+WHERE CddID = 'CDD001'
