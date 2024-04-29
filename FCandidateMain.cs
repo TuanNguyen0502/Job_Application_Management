@@ -167,11 +167,19 @@ namespace Job_Application_Management
             pnl_ContainDetailsJob.Controls.Clear();
             ListJobs();
         }
+        private void findJobNowLoad_Click(object sender, EventArgs e)
+        {
+            flp_ContainsJobs.Controls.Clear();
+            pnl_ContainDetailsJob.Controls.Clear();
+            ListJobs();
+        }
         private void btn_JobsSaved_Click(object sender, EventArgs e)
         {
 
             SetIntroduction();
-            OpenChildForm(new FCandidate_SavedJobs(lblCddID.Text), pnl_ContainDetailsJob);
+            FCandidate_SavedJobs saved = new FCandidate_SavedJobs(lblCddID.Text);
+            saved.FindJobNowAtSavedJobClick += findJobNowLoad_Click;
+            OpenChildForm(saved, pnl_ContainDetailsJob);
         }
 
         private void btn_JobsApplied_Click(object sender, EventArgs e)
@@ -315,8 +323,6 @@ namespace Job_Application_Management
                 history.RemoveHistory += btnRemoveHistory_Click;
                 flp_ContainsWorkHistory.Controls.Add(history);
             }
-
-            
         }
     }
 }

@@ -283,6 +283,12 @@
     <Compile Include="UC_Employer_Interview.Designer.cs">
       <DependentUpon>UC_Employer_Interview.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Empty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Empty.Designer.cs">
+      <DependentUpon>UC_Empty.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Introduction.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -445,6 +451,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Employer_Interview.resx">
       <DependentUpon>UC_Employer_Interview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Empty.resx">
+      <DependentUpon>UC_Empty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Introduction.resx">
       <DependentUpon>UC_Introduction.cs</DependentUpon>

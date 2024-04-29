@@ -228,3 +228,9 @@ WHERE CddID = @CddID AND JobID = @JobID
 SELECT JobID
 FROM Resume
 WHERE CddID = 'CDD001'
+
+SELECT COUNT(*)
+FROM SavedJobs
+WHERE JobID = '2'
+
+SELECT * FROM SavedJobs

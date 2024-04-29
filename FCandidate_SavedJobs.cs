@@ -39,10 +39,34 @@ namespace Job_Application_Management
                 saved.ButtonRusbishClick += savedJobsButtonRusbish_Click;
             }
         }
+        public bool CheckEmptySavedJobs()
+        {
+            int count = canDAO.CountJobSaved();
+            if (count == 0) 
+                return true;
+            return false;
+        }
+        public event EventHandler FindJobNowAtSavedJobClick;
+        public void findJobNow_Click(object sender, EventArgs e)
+        {
+            FindJobNowAtSavedJobClick?.Invoke(this, new EventArgs());
+        }
         private void FCandidate_SavedJobs_Load(object sender, EventArgs e)
         {
-            LoadSavedJobs();
-            rdb_Nearly.Checked = true;
+            if (CheckEmptySavedJobs())
+            {
+                UC_Empty empty = new UC_Empty();
+                empty.FindJobNowClick += findJobNow_Click;
+                flpStoreUC.Controls.Add(empty);
+                rdb_Lately.Enabled = false;
+                rdb_Nearly.Enabled = false;
+                rdb_Tallest.Enabled = false;    
+            }
+            else
+            {
+                LoadSavedJobs();
+                rdb_Nearly.Checked = true;
+            }
         }
         private void savedJobsButtonApply_Click(object sender, ButtonClickEventArgs e)
         {

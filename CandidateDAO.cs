@@ -49,14 +49,7 @@ namespace Job_Application_Management
                 job.Salary = (int)row["Salary"];
                 company.Name = (string)row["Address"];
                 company.Address = (string)row["Address"];
-
                 UC_CandidateMain item = new UC_CandidateMain(candidate,job,company);
-                /*item.JobName = (string)row["JobName"];
-                item.CompanyName1 = (string)row["CompanyName"];
-                item.Salary = (int)row["Salary"];
-                item.Address = (string)row["Address"];
-                item.JobID = (int)row["JobID"];
-                item.CddID = cddid;*/
                 items.Add(item);
             }
             return items;
@@ -108,7 +101,6 @@ namespace Job_Application_Management
                 job.Salary = (int)row["Salary"];
                 company.Name = (string)row["Address"];
                 company.Address = (string)row["Address"];
-
                 UC_CandidateMain item = new UC_CandidateMain(candidate, job, company);
                 items.Add(item);
             }
@@ -623,6 +615,24 @@ namespace Job_Application_Management
                 result.Add(uc_interview);
             }
             return result;
+        }
+        public int CheckJobSaved(int jobid)
+        {
+            sqlQuery = "SELECT COUNT(*)"+
+                       " FROM SavedJobs"+
+                       " WHERE JobID = @jobid";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@jobid", SqlDbType.Int) {Value = jobid}
+            };
+            int res = dbConn.ExecuteScalarGetInt(sqlQuery, lstParams);
+            return res;
+        }
+        public int CountJobSaved()
+        {
+            sqlQuery = "SELECT COUNT(*) FROM SavedJobs";
+            int res = dbConn.ExecuteScalarGetInt(sqlQuery);
+            return res;
         }
     }
 }

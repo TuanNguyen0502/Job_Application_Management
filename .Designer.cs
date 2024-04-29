@@ -545,7 +545,7 @@
             this.Name = "FCandidate_SelectedJobDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCandidate_SelectedJobDetails";
-            this.Load += new System.EventHandler(this.FEmployer_SeeCVDetailOfCandidate_Load);
+            this.Load += new System.EventHandler(this.FCandidate_SelectedJobDetails_Load);
             this.pnl.ResumeLayout(false);
             this.pnl.PerformLayout();
             this.panel6.ResumeLayout(false);
