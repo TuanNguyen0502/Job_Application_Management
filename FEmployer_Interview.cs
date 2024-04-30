@@ -65,5 +65,13 @@ namespace Job_Application_Management
             interview.Note = textBox_Note.Text;
             employerDAO.UpdateInterview(interview);
         }
+
+        private void button_Delete_Click(object sender, EventArgs e)
+        {
+            if (interview.Id != 0)
+            {
+                employerDAO.DeleteInterview(interview);
+            }
+        }
     }
 }

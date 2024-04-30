@@ -44,6 +44,11 @@ namespace Job_Application_Management
             return items;
         }
 
+        public void DeleteInterview(Interview interview)
+        {
+            string sqlStr = string.Format($"DELETE FROM Interviews WHERE ID = '{interview.Id}'");
+            Execute(sqlStr);
+        }
 
         public void UpdateInterview(Interview interview)
         {

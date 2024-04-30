@@ -38,6 +38,7 @@
             this.textBox_Note = new Guna.UI2.WinForms.Guna2TextBox();
             this.button_Invite = new Guna.UI2.WinForms.Guna2Button();
             this.button_Update = new Guna.UI2.WinForms.Guna2Button();
+            this.button_Delete = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +52,7 @@
             this.label1.Location = new System.Drawing.Point(20, 20);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(20);
-            this.label1.Size = new System.Drawing.Size(694, 72);
+            this.label1.Size = new System.Drawing.Size(814, 78);
             this.label1.TabIndex = 0;
             this.label1.Text = "Employers must schedule interview for candidate";
             // 
@@ -65,7 +66,7 @@
             this.tableLayoutPanel1.Controls.Add(this.guna2Panel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox_Note, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 92);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 98);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -158,7 +159,7 @@
             this.textBox_Note.ForeColor = System.Drawing.Color.Black;
             this.textBox_Note.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBox_Note.Location = new System.Drawing.Point(420, 165);
-            this.textBox_Note.Margin = new System.Windows.Forms.Padding(7);
+            this.textBox_Note.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.textBox_Note.Multiline = true;
             this.textBox_Note.Name = "textBox_Note";
             this.textBox_Note.Padding = new System.Windows.Forms.Padding(5);
@@ -207,12 +208,32 @@
             this.button_Update.Text = "    Update";
             this.button_Update.Click += new System.EventHandler(this.button_Update_Click);
             // 
+            // button_Delete
+            // 
+            this.button_Delete.BorderRadius = 20;
+            this.button_Delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_Delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_Delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_Delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_Delete.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Delete.ForeColor = System.Drawing.Color.White;
+            this.button_Delete.Image = global::Job_Application_Management.Properties.Resources.icons8_delete_64;
+            this.button_Delete.ImageSize = new System.Drawing.Size(64, 64);
+            this.button_Delete.Location = new System.Drawing.Point(27, 543);
+            this.button_Delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_Delete.Name = "button_Delete";
+            this.button_Delete.Size = new System.Drawing.Size(227, 84);
+            this.button_Delete.TabIndex = 4;
+            this.button_Delete.Text = "    Delete";
+            this.button_Delete.Click += new System.EventHandler(this.button_Delete_Click);
+            // 
             // FEmployer_Interview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1511, 649);
+            this.Controls.Add(this.button_Delete);
             this.Controls.Add(this.button_Update);
             this.Controls.Add(this.button_Invite);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -245,5 +266,6 @@
         private Guna.UI2.WinForms.Guna2TextBox textBox_Note;
         private Guna.UI2.WinForms.Guna2Button button_Invite;
         private Guna.UI2.WinForms.Guna2Button button_Update;
+        private Guna.UI2.WinForms.Guna2Button button_Delete;
     }
 }
