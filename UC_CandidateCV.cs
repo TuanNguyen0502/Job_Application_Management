@@ -28,8 +28,8 @@ namespace Job_Application_Management
         public UC_CandidateCV(string empID, int jobID)
         {
             InitializeComponent();
-            this.jobID = jobID;
             this.empID = empID;
+            this.jobID = jobID;
         }
 
         private void button_detail_Click(object sender, EventArgs e)

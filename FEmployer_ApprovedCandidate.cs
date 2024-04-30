@@ -19,8 +19,8 @@ namespace Job_Application_Management
         public FEmployer_ApprovedCandidate(string empID, int jobID)
         {
             InitializeComponent();
-            this.jobID = jobID;
             this.empID = empID;
+            this.jobID = jobID;
         }
 
         private void FEmployer_ApprovedCandidate_Load(object sender, EventArgs e)

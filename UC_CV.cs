@@ -78,8 +78,7 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
-            Resume = employerDAO.GetResumeFromDB(jobID, cddID);
-
+            resume = employerDAO.GetResumeFromDB(jobID, cddID);
             label_CandidateName.Text = resume.CddName;
             label_Nominee.Text = resume.JobName;
             textBox_Phone.Text = resume.CddPhone;

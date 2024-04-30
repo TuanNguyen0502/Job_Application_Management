@@ -93,6 +93,10 @@ namespace Job_Application_Management
             {
                 if (value < 0)
                     MessageBox.Show("JobID chưa được chỉ định");
+                else 
+                { 
+                    jobID = value; 
+                }
             }
         }
         public string Objective 
@@ -206,7 +210,7 @@ namespace Job_Application_Management
                 if (value == null || value == "")
                     MessageBox.Show("Gpa chưa được chỉ định");
                 else
-                    gpa = value;
+                    cddPhone = value;
             }
         }
         public string CddEmail 

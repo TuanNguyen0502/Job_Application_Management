@@ -120,6 +120,7 @@ namespace Job_Application_Management
 
         public void UpdateResume(CV resume)
         {
+            MessageBox.Show($"{resume.Status}, {resume.CddID}, {resume.JobID}");
             string sqlStr = string.Format($"UPDATE Resume SET Status = N'{resume.Status}' WHERE CddID = '{resume.CddID}' " +
                 $"AND JobID = '{resume.JobID}'");
             Execute(sqlStr);
@@ -159,37 +160,32 @@ namespace Job_Application_Management
                     $"FROM Resume R INNER JOIN Candidates C ON R.CddID = C.CddID " +
                     $"INNER JOIN Jobs J ON R.JobID = J.ID " +
                     $"WHERE R.CddID = '{cddID}' AND R.JobID = '{jobID}'";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
+                List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+                foreach (var row in resultList)
                 {
-                    while (reader.Read())
-                    {
-                        resume.CddID = reader.GetString(0);
-                        resume.JobID = reader.GetInt32(1);
-                        resume.Objective = reader.GetString(2);
-                        resume.UniversityName = reader.GetString(3);
-                        resume.Major = reader.GetString(4);
-                        resume.Gpa = reader.GetString(5);
-                        resume.UniversityStartDate = reader.GetDateTime(6);
-                        resume.UniversityEndDate = reader.GetDateTime(7);
-                        resume.CompanyName = reader.GetString(8);
-                        resume.WorkPlace = reader.GetString(9);
-                        resume.WorkedDetail = reader.GetString(10);
-                        resume.CompanyStartDate = reader.GetDateTime(11);
-                        resume.CompanyEndDate = reader.GetDateTime(12);
-                        resume.Certification = reader.GetString(13);
-                        resume.CertificationDate = reader.GetDateTime(14);
-                        resume.Status = reader.GetString(15);
-                        resume.CddName = reader.GetString(16);
-                        resume.CddPhone = reader.GetString(17);
-                        resume.CddEmail = reader.GetString(18);
-                        resume.CddAddress = reader.GetString(19);
-                        resume.JobName = reader.GetString(20);
-                    }
+                    resume.CddID = (string)row["CddID"];
+                    resume.JobID = Int32.Parse(row["JobID"].ToString());
+                    MessageBox.Show(resume.JobID.ToString());
+                    resume.Objective = (string)row["Objective"];
+                    resume.UniversityName = (string)row["UniversityName"];
+                    resume.Major = (string)row["Major"];
+                    resume.Gpa = (string)row["GPA"];
+                    resume.UniversityStartDate = (DateTime)row["UniversityStartDate"];
+                    resume.UniversityEndDate = (DateTime)row["UniversityEndDate"];
+                    resume.CompanyName = (string)row["CompanyName"];
+                    resume.WorkPlace = (string)row["WorkPlace"];
+                    resume.WorkedDetail = (string)row["Detail"];
+                    resume.CompanyStartDate = (DateTime)row["CompanyStartDate"];
+                    resume.CompanyEndDate = (DateTime)row["CompanyEndDate"];
+                    resume.Certification = (string)row["CertificationName"];
+                    resume.CertificationDate = (DateTime)row["CertificationDate"];
+                    resume.Status = (string)row["Status"];
+                    resume.CddName = (string)row["CddName"];
+                    resume.CddPhone = (string)row["Phone"];
+                    resume.CddEmail = (string)row["Email"];
+                    resume.CddAddress = (string)row["CddAddress"];
+                    resume.JobName = (string)row["Name"];
                 }
-                else
-                    MessageBox.Show("No rows found");
             }
             return resume;
         }
