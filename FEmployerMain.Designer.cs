@@ -30,13 +30,13 @@
         {
             this.panel_Left = new Guna.UI2.WinForms.Guna2Panel();
             this.imgSlide = new System.Windows.Forms.PictureBox();
+            this.button_Interview = new Guna.UI2.WinForms.Guna2Button();
             this.button_Logout = new Guna.UI2.WinForms.Guna2Button();
             this.button_FindCandidate = new Guna.UI2.WinForms.Guna2Button();
             this.button_Job = new Guna.UI2.WinForms.Guna2Button();
             this.button_Information = new Guna.UI2.WinForms.Guna2Button();
             this.button_Home = new Guna.UI2.WinForms.Guna2Button();
             this.panel_Center = new Guna.UI2.WinForms.Guna2Panel();
-            this.button_Interview = new Guna.UI2.WinForms.Guna2Button();
             this.panel_Left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgSlide)).BeginInit();
             this.SuspendLayout();
@@ -60,12 +60,38 @@
             // 
             this.imgSlide.BackColor = System.Drawing.Color.Transparent;
             this.imgSlide.Image = global::Job_Application_Management.Properties.Resources.New_Project__3_;
-            this.imgSlide.Location = new System.Drawing.Point(151, 3);
+            this.imgSlide.Location = new System.Drawing.Point(152, 3);
             this.imgSlide.Name = "imgSlide";
             this.imgSlide.Size = new System.Drawing.Size(57, 146);
             this.imgSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgSlide.TabIndex = 2;
             this.imgSlide.TabStop = false;
+            // 
+            // button_Interview
+            // 
+            this.button_Interview.BackColor = System.Drawing.Color.Transparent;
+            this.button_Interview.BorderRadius = 22;
+            this.button_Interview.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.button_Interview.CheckedState.FillColor = System.Drawing.Color.White;
+            this.button_Interview.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.button_Interview.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_Interview.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_Interview.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_Interview.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_Interview.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.button_Interview.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button_Interview.ForeColor = System.Drawing.Color.White;
+            this.button_Interview.Image = global::Job_Application_Management.Properties.Resources.icons8_job_30;
+            this.button_Interview.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.button_Interview.ImageOffset = new System.Drawing.Point(10, 0);
+            this.button_Interview.Location = new System.Drawing.Point(12, 371);
+            this.button_Interview.Name = "button_Interview";
+            this.button_Interview.Size = new System.Drawing.Size(194, 62);
+            this.button_Interview.TabIndex = 3;
+            this.button_Interview.Text = "Interview";
+            this.button_Interview.UseTransparentBackground = true;
+            this.button_Interview.CheckedChanged += new System.EventHandler(this.button_Home_CheckedChanged);
+            this.button_Interview.Click += new System.EventHandler(this.button_Interview_Click);
             // 
             // button_Logout
             // 
@@ -206,32 +232,6 @@
             this.panel_Center.Name = "panel_Center";
             this.panel_Center.Size = new System.Drawing.Size(1060, 784);
             this.panel_Center.TabIndex = 1;
-            // 
-            // button_Interview
-            // 
-            this.button_Interview.BackColor = System.Drawing.Color.Transparent;
-            this.button_Interview.BorderRadius = 22;
-            this.button_Interview.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.button_Interview.CheckedState.FillColor = System.Drawing.Color.White;
-            this.button_Interview.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.button_Interview.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_Interview.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_Interview.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_Interview.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_Interview.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.button_Interview.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.button_Interview.ForeColor = System.Drawing.Color.White;
-            this.button_Interview.Image = global::Job_Application_Management.Properties.Resources.icons8_job_30;
-            this.button_Interview.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.button_Interview.ImageOffset = new System.Drawing.Point(10, 0);
-            this.button_Interview.Location = new System.Drawing.Point(12, 371);
-            this.button_Interview.Name = "button_Interview";
-            this.button_Interview.Size = new System.Drawing.Size(194, 62);
-            this.button_Interview.TabIndex = 3;
-            this.button_Interview.Text = "Interview";
-            this.button_Interview.UseTransparentBackground = true;
-            this.button_Interview.CheckedChanged += new System.EventHandler(this.button_Home_CheckedChanged);
-            this.button_Interview.Click += new System.EventHandler(this.button_Interview_Click);
             // 
             // FEmployerMain
             // 
