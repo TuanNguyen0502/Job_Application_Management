@@ -203,12 +203,6 @@
     <Compile Include="FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRegister.Designer.cs">
-      <DependentUpon>FRegister.cs</DependentUpon>
-    </Compile>
     <Compile Include="FResume.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,12 +276,6 @@
     <Compile Include="UC_RecruitmentCompany.Designer.cs">
       <DependentUpon>UC_RecruitmentCompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Resume_Certificate.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_Resume_Certificate.Designer.cs">
-      <DependentUpon>UC_Resume_Certificate.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_EmployerJob.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -305,24 +293,6 @@
     </Compile>
     <Compile Include="UC_JobsSaved.Designer.cs">
       <DependentUpon>UC_JobsSaved.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_Resume.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_Resume.Designer.cs">
-      <DependentUpon>UC_Resume.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_Resume_Education.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_Resume_Education.Designer.cs">
-      <DependentUpon>UC_Resume_Education.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_Resume_Experience.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_Resume_Experience.Designer.cs">
-      <DependentUpon>UC_Resume_Experience.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_WorkHistory.cs">
       <SubType>UserControl</SubType>
@@ -390,9 +360,6 @@
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRegister.resx">
-      <DependentUpon>FRegister.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FResume.resx">
       <DependentUpon>FResume.cs</DependentUpon>
     </EmbeddedResource>
@@ -433,9 +400,6 @@
     <EmbeddedResource Include="UC_RecruitmentCompany.resx">
       <DependentUpon>UC_RecruitmentCompany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Resume_Certificate.resx">
-      <DependentUpon>UC_Resume_Certificate.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UC_EmployerJob.resx">
       <DependentUpon>UC_EmployerJob.cs</DependentUpon>
     </EmbeddedResource>
@@ -444,15 +408,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_JobsSaved.resx">
       <DependentUpon>UC_JobsSaved.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Resume.resx">
-      <DependentUpon>UC_Resume.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Resume_Education.resx">
-      <DependentUpon>UC_Resume_Education.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Resume_Experience.resx">
-      <DependentUpon>UC_Resume_Experience.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_WorkHistory.resx">
       <DependentUpon>UC_WorkHistory.cs</DependentUpon>
