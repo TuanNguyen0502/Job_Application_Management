@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_Show = new Guna.UI2.WinForms.Guna2Button();
             this.label_JobName = new System.Windows.Forms.Label();
+            this.button_Show = new Guna.UI2.WinForms.Guna2Button();
             this.label_CandidateName = new System.Windows.Forms.Label();
             this.label_InterviewTime = new System.Windows.Forms.Label();
             this.label_Note = new System.Windows.Forms.Label();
@@ -59,6 +59,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1014, 60);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // label_JobName
+            // 
+            this.label_JobName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_JobName.AutoSize = true;
+            this.label_JobName.ForeColor = System.Drawing.Color.Black;
+            this.label_JobName.Location = new System.Drawing.Point(33, 13);
+            this.label_JobName.Name = "label_JobName";
+            this.label_JobName.Size = new System.Drawing.Size(157, 34);
+            this.label_JobName.TabIndex = 1;
+            this.label_JobName.Text = "Job Name";
+            this.label_JobName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // button_Show
             // 
             this.button_Show.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -76,18 +88,7 @@
             this.button_Show.Size = new System.Drawing.Size(76, 36);
             this.button_Show.TabIndex = 0;
             this.button_Show.Text = "Show";
-            // 
-            // label_JobName
-            // 
-            this.label_JobName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_JobName.AutoSize = true;
-            this.label_JobName.ForeColor = System.Drawing.Color.Black;
-            this.label_JobName.Location = new System.Drawing.Point(33, 13);
-            this.label_JobName.Name = "label_JobName";
-            this.label_JobName.Size = new System.Drawing.Size(157, 34);
-            this.label_JobName.TabIndex = 1;
-            this.label_JobName.Text = "Job Name";
-            this.label_JobName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button_Show.Click += new System.EventHandler(this.button_Show_Click);
             // 
             // label_CandidateName
             // 

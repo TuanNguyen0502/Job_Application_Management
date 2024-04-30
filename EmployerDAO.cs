@@ -26,7 +26,7 @@ namespace Job_Application_Management
         }
         public List<UC_Employer_Interview> GetInterviewsFromDB(string empID)
         {
-            string sqlQuery = $"SELECT J.Name, C.CddName, I.InterviewTime, I.Note " +
+            string sqlQuery = $"SELECT J.ID, J.Name, C.CddName, C.CddID, I.InterviewTime, I.Note " +
                 $"FROM Interviews I INNER JOIN Candidates C ON I.CddID = C.CddID " +
                 $"INNER JOIN Jobs J ON I.JobID = J.ID " +
                 $"WHERE I.EmpID = '{empID}'";
@@ -34,7 +34,7 @@ namespace Job_Application_Management
             List<UC_Employer_Interview> items = new List<UC_Employer_Interview>();
             foreach (var row in resultList)
             {
-                UC_Employer_Interview item = new UC_Employer_Interview();
+                UC_Employer_Interview item = new UC_Employer_Interview(empID, (string)row["CddID"], (int)row["ID"]);
                 item.Label_JobName.Text = (string)row["Name"];
                 item.Label_CandidateName.Text = (string)row["CddName"];
                 item.Label_InterviewTime.Text = row["InterviewTime"].ToString();
