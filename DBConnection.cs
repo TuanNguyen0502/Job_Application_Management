@@ -125,6 +125,7 @@ namespace Job_Application_Management
                 }
             }
         }
+        #region Function Check Execute ? success : not success
         public bool ExecuteDeleteDataCheck(string sqlStr, SqlParameter[] lstParam)
         {
             using (SqlConnection conn = new SqlConnection(conStr))
@@ -203,6 +204,7 @@ namespace Job_Application_Management
                 return false;
             }
         }
+        #endregion
 
         public string ExecuteReaderCount(string sqlStr)
         {
@@ -329,6 +331,33 @@ namespace Job_Application_Management
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(sqlStr, conn);
                     cmd.Parameters.AddRange(lstParam);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    int res = 0;
+                    if (reader.Read())
+                    {
+                        res = reader.GetInt32(0);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No rows found");
+                    }
+                    return res;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Read error\n"+ex.Message);
+                    return -100;
+                }
+            }
+        }
+        public int ExecuteScalarGetInt(string sqlStr)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
                     SqlDataReader reader = cmd.ExecuteReader();
                     int res = 0;
                     if (reader.Read())

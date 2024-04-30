@@ -35,7 +35,7 @@ namespace Job_Application_Management
         private void UC_Candidate_Load(object sender, EventArgs e)
         {
             lblDescrption.Text = savedJob.JobDescription;
-            lblComName.Text = savedJob.CompanyName;
+            lblComName.Text = $"     {savedJob.CompanyName}";
             lblTimeSaved.Text = $"Đã đăng: {savedJob.TimeSaved.ToShortDateString()}";
             lbl_TimePost.Text = $"Đã đăng: {savedJob.PostTime}";
             lblAddress.Text = $"      {savedJob.Address}";

@@ -15,6 +15,7 @@ namespace Job_Application_Management
     {
         DBConnection dbConn;
         string sqlQuery;
+        #region Function of CandidateDAO
         public CandidateDAO()
         {
             dbConn = new DBConnection();
@@ -48,14 +49,7 @@ namespace Job_Application_Management
                 job.Salary = (int)row["Salary"];
                 company.Name = (string)row["Address"];
                 company.Address = (string)row["Address"];
-
                 UC_CandidateMain item = new UC_CandidateMain(candidate,job,company);
-                /*item.JobName = (string)row["JobName"];
-                item.CompanyName1 = (string)row["CompanyName"];
-                item.Salary = (int)row["Salary"];
-                item.Address = (string)row["Address"];
-                item.JobID = (int)row["JobID"];
-                item.CddID = cddid;*/
                 items.Add(item);
             }
             return items;
@@ -107,7 +101,6 @@ namespace Job_Application_Management
                 job.Salary = (int)row["Salary"];
                 company.Name = (string)row["Address"];
                 company.Address = (string)row["Address"];
-
                 UC_CandidateMain item = new UC_CandidateMain(candidate, job, company);
                 items.Add(item);
             }
@@ -383,6 +376,36 @@ namespace Job_Application_Management
             }
             return false;
         }
+        public int GetJobIDByCddID(string CddID)
+        {
+            sqlQuery = "SELECT JobID"+
+                       " FROM Resume"+
+                       " WHERE CddID = @CddID";
+            SqlParameter[] lstParam =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value =CddID},   
+            };
+            int id = dbConn.ExecuteScalarGetInt(sqlQuery, lstParam);
+            return id;
+        }
+        public void RemoveCVValid(string CddID, int JobID)
+        {
+            sqlQuery = "DELETE FROM Resume"+
+                       " WHERE CddID = @CddID AND JobID = @JobID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = CddID},
+                new SqlParameter("@JobID", SqlDbType.Int) {Value = JobID},
+            };
+            if (dbConn.ExecuteDeleteDataCheck(sqlQuery, lstParams))
+            {
+                MessageBox.Show($"Đã xóa Resume với mã ứng viên {CddID} và mã công việc {JobID}");
+            }
+            else
+            {
+                MessageBox.Show("Xóa Resume không thành công");
+            }
+        }
         // Đăng tuyển bài viết tìm việc
         public void AddJobPosting(CandidateProfile canProfile, string cddid)
         {
@@ -531,6 +554,85 @@ namespace Job_Application_Management
             {
                 MessageBox.Show("Tăng follower thất bại");
             }
+        }
+        #endregion
+        public List<UC_Candidate_Interview> GetListInterviewsToDB()
+        {
+            sqlQuery = "SELECT j.Name, emp.CompanyName, itv.InterviewTime, itv.Note, can.CddName"
+                       +" FROM Interviews itv"
+                       +" JOIN Employers emp ON itv.EmpID = emp.ID"
+                       +" JOIN Candidates can ON itv.CddID = can.CddID"
+                       +" JOIN Jobs j ON itv.JobID = j.ID"
+                       +" WHERE can.CddID = 'CDD001'";
+            List<Dictionary<string, object>> keyValuePairs = dbConn.ExecuteReaderData(sqlQuery);
+            List<UC_Candidate_Interview> result = new List<UC_Candidate_Interview>();
+            foreach (var reader in keyValuePairs)
+            {
+                Job job = new Job();
+                Interview interview = new Interview();
+                Candidate candidate = new Candidate();
+                job.Name = (string)reader["Name"];
+                job.CompanyName = (string)reader["CompanyName"];
+                interview.InterviewTime = (DateTime)reader["InterviewTime"];
+                interview.Note = (string)reader["Note"];
+                candidate.Name = (string)reader["CddName"];
+                UC_Candidate_Interview uc_interview = new UC_Candidate_Interview(job,interview, candidate);
+                result.Add(uc_interview);
+            }
+            return result;
+        }
+        public int CountRowsInInterviews()
+        {
+            sqlQuery = "SELECT COUNT(*) FROM Interviews";
+            int rows = dbConn.ExecuteScalarGetInt(sqlQuery);
+            return rows;
+        }
+        public List<UC_Candidate_Interview> GetListInterviewByKey(string keyword)
+        {
+            sqlQuery = " SELECT j.Name, emp.CompanyName, itv.InterviewTime, itv.Note, can.CddName"
+                       +" FROM Interviews itv"
+                       +" JOIN Employers emp ON itv.EmpID = emp.ID"
+                       +" JOIN Candidates can ON itv.CddID = can.CddID"
+                       +" JOIN Jobs j ON itv.JobID = j.ID"
+                       +" WHERE CONCAT(j.Name,emp.CompanyName) LIKE '%'+ @keyword +'%'";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@keyword", SqlDbType.NVarChar) {Value = keyword},
+            };
+            List<Dictionary<string, object>> keyValuePairs = dbConn.ExecuteReaderData(sqlQuery, lstParams);
+            List<UC_Candidate_Interview> result = new List<UC_Candidate_Interview>();
+            foreach (var reader in keyValuePairs)
+            {
+                Job job = new Job();
+                Interview interview = new Interview();
+                Candidate candidate = new Candidate();
+                job.Name = (string)reader["Name"];
+                job.CompanyName = (string)reader["CompanyName"];
+                interview.InterviewTime = (DateTime)reader["InterviewTime"];
+                interview.Note = (string)reader["Note"];
+                candidate.Name = (string)reader["CddName"];
+                UC_Candidate_Interview uc_interview = new UC_Candidate_Interview(job, interview, candidate);
+                result.Add(uc_interview);
+            }
+            return result;
+        }
+        public int CheckJobSaved(int jobid)
+        {
+            sqlQuery = "SELECT COUNT(*)"+
+                       " FROM SavedJobs"+
+                       " WHERE JobID = @jobid";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@jobid", SqlDbType.Int) {Value = jobid}
+            };
+            int res = dbConn.ExecuteScalarGetInt(sqlQuery, lstParams);
+            return res;
+        }
+        public int CountJobSaved()
+        {
+            sqlQuery = "SELECT COUNT(*) FROM SavedJobs";
+            int res = dbConn.ExecuteScalarGetInt(sqlQuery);
+            return res;
         }
     }
 }

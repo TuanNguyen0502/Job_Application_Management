@@ -51,7 +51,7 @@
             this.label1.Location = new System.Drawing.Point(20, 20);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(20);
-            this.label1.Size = new System.Drawing.Size(814, 78);
+            this.label1.Size = new System.Drawing.Size(694, 72);
             this.label1.TabIndex = 0;
             this.label1.Text = "Employers must schedule interview for candidate";
             // 
@@ -65,7 +65,7 @@
             this.tableLayoutPanel1.Controls.Add(this.guna2Panel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox_Note, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 98);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 92);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -158,7 +158,7 @@
             this.textBox_Note.ForeColor = System.Drawing.Color.Black;
             this.textBox_Note.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBox_Note.Location = new System.Drawing.Point(420, 165);
-            this.textBox_Note.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.textBox_Note.Margin = new System.Windows.Forms.Padding(7);
             this.textBox_Note.Multiline = true;
             this.textBox_Note.Name = "textBox_Note";
             this.textBox_Note.Padding = new System.Windows.Forms.Padding(5);
@@ -209,7 +209,7 @@
             // 
             // FEmployer_Interview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 34F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1511, 649);

@@ -41,9 +41,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imgSlide = new System.Windows.Forms.PictureBox();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.btn_CreateCV = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.spnl_TaskBar = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lbl_Notification = new System.Windows.Forms.Label();
+            this.btn_WorkHistory = new Guna.UI2.WinForms.Guna2Button();
+            this.ptb_Notification = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -52,14 +53,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_SearchFor = new Guna.UI2.WinForms.Guna2TextBox();
             this.flp_ContainsJobs = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnl_ContainDetailsJob = new System.Windows.Forms.Panel();
             this.pnl_Main = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pnl_ContainDetailsJob = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSlide)).BeginInit();
-            this.guna2ShadowPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.spnl_TaskBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Notification)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnl_Main.SuspendLayout();
@@ -302,62 +303,77 @@
             this.gunaElipse1.Radius = 0;
             this.gunaElipse1.TargetControl = this;
             // 
-            // guna2ShadowPanel1
+            // spnl_TaskBar
             // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.btn_CreateCV);
-            this.guna2ShadowPanel1.Controls.Add(this.pictureBox4);
-            this.guna2ShadowPanel1.Controls.Add(this.pictureBox2);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2ControlBox1);
-            this.guna2ShadowPanel1.Controls.Add(this.pictureBox3);
-            this.guna2ShadowPanel1.Controls.Add(this.cbb_Address);
-            this.guna2ShadowPanel1.Controls.Add(this.btnSearchFor);
-            this.guna2ShadowPanel1.Controls.Add(this.label3);
-            this.guna2ShadowPanel1.Controls.Add(this.txt_SearchFor);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 2);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1313, 118);
-            this.guna2ShadowPanel1.TabIndex = 11;
+            this.spnl_TaskBar.BackColor = System.Drawing.Color.Transparent;
+            this.spnl_TaskBar.Controls.Add(this.lbl_Notification);
+            this.spnl_TaskBar.Controls.Add(this.btn_WorkHistory);
+            this.spnl_TaskBar.Controls.Add(this.ptb_Notification);
+            this.spnl_TaskBar.Controls.Add(this.pictureBox2);
+            this.spnl_TaskBar.Controls.Add(this.guna2ControlBox1);
+            this.spnl_TaskBar.Controls.Add(this.pictureBox3);
+            this.spnl_TaskBar.Controls.Add(this.cbb_Address);
+            this.spnl_TaskBar.Controls.Add(this.btnSearchFor);
+            this.spnl_TaskBar.Controls.Add(this.label3);
+            this.spnl_TaskBar.Controls.Add(this.txt_SearchFor);
+            this.spnl_TaskBar.FillColor = System.Drawing.Color.White;
+            this.spnl_TaskBar.Location = new System.Drawing.Point(0, 2);
+            this.spnl_TaskBar.Name = "spnl_TaskBar";
+            this.spnl_TaskBar.ShadowColor = System.Drawing.Color.Black;
+            this.spnl_TaskBar.Size = new System.Drawing.Size(1313, 118);
+            this.spnl_TaskBar.TabIndex = 11;
             // 
-            // btn_CreateCV
+            // lbl_Notification
             // 
-            this.btn_CreateCV.BorderRadius = 20;
-            this.btn_CreateCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_CreateCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_CreateCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_CreateCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_CreateCV.FillColor = System.Drawing.Color.SeaShell;
-            this.btn_CreateCV.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btn_CreateCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btn_CreateCV.Image = global::Job_Application_Management.Properties.Resources.icons8_person_48;
-            this.btn_CreateCV.Location = new System.Drawing.Point(1019, 14);
-            this.btn_CreateCV.Name = "btn_CreateCV";
-            this.btn_CreateCV.Size = new System.Drawing.Size(213, 67);
-            this.btn_CreateCV.TabIndex = 13;
-            this.btn_CreateCV.Text = "Tùy chỉnh cá nhân";
-            this.btn_CreateCV.TextOffset = new System.Drawing.Point(2, 0);
-            this.btn_CreateCV.Click += new System.EventHandler(this.btn_CreateCVAvailable_Click);
+            this.lbl_Notification.AutoSize = true;
+            this.lbl_Notification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbl_Notification.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Notification.ForeColor = System.Drawing.Color.Tomato;
+            this.lbl_Notification.Location = new System.Drawing.Point(994, 27);
+            this.lbl_Notification.Name = "lbl_Notification";
+            this.lbl_Notification.Size = new System.Drawing.Size(21, 23);
+            this.lbl_Notification.TabIndex = 14;
+            this.lbl_Notification.Text = "0";
+            this.lbl_Notification.Click += new System.EventHandler(this.lbl_Notification_Click);
             // 
-            // pictureBox4
+            // btn_WorkHistory
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox4.Image = global::Job_Application_Management.Properties.Resources.icons8_bell_16;
-            this.pictureBox4.Location = new System.Drawing.Point(976, 34);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(28, 29);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
+            this.btn_WorkHistory.BorderRadius = 20;
+            this.btn_WorkHistory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_WorkHistory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_WorkHistory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_WorkHistory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_WorkHistory.FillColor = System.Drawing.Color.SeaShell;
+            this.btn_WorkHistory.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btn_WorkHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btn_WorkHistory.Image = global::Job_Application_Management.Properties.Resources.icons8_person_48;
+            this.btn_WorkHistory.Location = new System.Drawing.Point(1021, 26);
+            this.btn_WorkHistory.Name = "btn_WorkHistory";
+            this.btn_WorkHistory.Size = new System.Drawing.Size(197, 49);
+            this.btn_WorkHistory.TabIndex = 13;
+            this.btn_WorkHistory.Text = "Lịch sử làm việc";
+            this.btn_WorkHistory.TextOffset = new System.Drawing.Point(2, 0);
+            this.btn_WorkHistory.Click += new System.EventHandler(this.btn_WorkHistory_Click);
+            // 
+            // ptb_Notification
+            // 
+            this.ptb_Notification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ptb_Notification.Image = global::Job_Application_Management.Properties.Resources.icons8_bell_16;
+            this.ptb_Notification.Location = new System.Drawing.Point(976, 34);
+            this.ptb_Notification.Name = "ptb_Notification";
+            this.ptb_Notification.Size = new System.Drawing.Size(35, 35);
+            this.ptb_Notification.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_Notification.TabIndex = 12;
+            this.ptb_Notification.TabStop = false;
+            this.ptb_Notification.Click += new System.EventHandler(this.ptb_Notification_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.LightGray;
             this.pictureBox2.Image = global::Job_Application_Management.Properties.Resources.icons8_instagram_24;
-            this.pictureBox2.Location = new System.Drawing.Point(902, 34);
+            this.pictureBox2.Location = new System.Drawing.Point(886, 34);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 29);
+            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
@@ -380,9 +396,9 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.LightGray;
             this.pictureBox3.Image = global::Job_Application_Management.Properties.Resources.icons8_facebook_16;
-            this.pictureBox3.Location = new System.Drawing.Point(939, 34);
+            this.pictureBox3.Location = new System.Drawing.Point(932, 34);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(28, 29);
+            this.pictureBox3.Size = new System.Drawing.Size(35, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
@@ -493,14 +509,6 @@
             this.flp_ContainsJobs.Size = new System.Drawing.Size(482, 670);
             this.flp_ContainsJobs.TabIndex = 2;
             // 
-            // pnl_ContainDetailsJob
-            // 
-            this.pnl_ContainDetailsJob.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_ContainDetailsJob.Location = new System.Drawing.Point(482, 120);
-            this.pnl_ContainDetailsJob.Name = "pnl_ContainDetailsJob";
-            this.pnl_ContainDetailsJob.Size = new System.Drawing.Size(835, 670);
-            this.pnl_ContainDetailsJob.TabIndex = 3;
-            // 
             // pnl_Main
             // 
             this.pnl_Main.BackColor = System.Drawing.Color.White;
@@ -515,12 +523,20 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.guna2ShadowPanel1);
+            this.panel3.Controls.Add(this.spnl_TaskBar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1317, 120);
             this.panel3.TabIndex = 1;
+            // 
+            // pnl_ContainDetailsJob
+            // 
+            this.pnl_ContainDetailsJob.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_ContainDetailsJob.Location = new System.Drawing.Point(482, 120);
+            this.pnl_ContainDetailsJob.Name = "pnl_ContainDetailsJob";
+            this.pnl_ContainDetailsJob.Size = new System.Drawing.Size(835, 670);
+            this.pnl_ContainDetailsJob.TabIndex = 3;
             // 
             // FCandidateMain
             // 
@@ -541,9 +557,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSlide)).EndInit();
-            this.guna2ShadowPanel1.ResumeLayout(false);
-            this.guna2ShadowPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.spnl_TaskBar.ResumeLayout(false);
+            this.spnl_TaskBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Notification)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnl_Main.ResumeLayout(false);
@@ -565,9 +581,8 @@
         private Guna.UI2.WinForms.Guna2Button btn_JobsApplied;
         private Guna.UI2.WinForms.Guna2Button btn_JobsSaved;
         private System.Windows.Forms.Panel pnl_Main;
-        private System.Windows.Forms.Panel pnl_ContainDetailsJob;
         private System.Windows.Forms.FlowLayoutPanel flp_ContainsJobs;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel spnl_TaskBar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -577,7 +592,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_SearchFor;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2Button btn_LogOut;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private Guna.UI2.WinForms.Guna2Button btn_CreateCV;
+        private System.Windows.Forms.PictureBox ptb_Notification;
+        private Guna.UI2.WinForms.Guna2Button btn_WorkHistory;
+        private System.Windows.Forms.Label lbl_Notification;
+        private System.Windows.Forms.Panel pnl_ContainDetailsJob;
     }
 }

@@ -42,6 +42,24 @@ namespace Job_Application_Management
             GetDataFromDB();
             CheckAppliedJobsAfterPushIntoPanle();
         }
+        public void CheckJobSaved()
+        {
+            int flag = canDAO.CheckJobSaved(jobid);
+            if (flag > 0)
+            {
+                btnSaved.BackColor = Color.DarkGreen;
+                btnSaved.Enabled = false;
+            }
+            else
+            {
+                btnSaved.BackColor = Color.White;
+                btnSaved.Enabled = true;
+            }
+        }
+        private void FCandidate_SelectedJobDetails_Load(object sender, EventArgs e)
+        {
+            CheckJobSaved();
+        }
         public void CheckAppliedJobsAfterPushIntoPanle()
         {
             List<UC_AppliedJobs> appliedJobs = canDAO.GetAppliedJobsFromDB();
@@ -158,10 +176,6 @@ namespace Job_Application_Management
         {
             FCandidate_CompanyDetails com = new FCandidate_CompanyDetails(companyName);
             com.ShowDialog();
-        }
-        private void FEmployer_SeeCVDetailOfCandidate_Load(object sender, EventArgs e)
-        {
-            //flpnRecruitment.Controls.Add()
         }
 
         private void btnApply_Click(object sender, EventArgs e)
