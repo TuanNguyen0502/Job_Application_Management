@@ -200,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Linen;
             this.Controls.Add(this.ptb_Cancel);
             this.Controls.Add(this.ptb_Done);
             this.Controls.Add(this.ptb_AddHistory);

@@ -51,6 +51,12 @@ namespace Job_Application_Management
         {
             FindJobNowAtSavedJobClick?.Invoke(this, new EventArgs());
         }
+        public void PerformRadioButton(bool state)
+        {
+            rdb_Lately.Enabled = state;
+            rdb_Nearly.Enabled = state;
+            rdb_Tallest.Enabled = state;
+        }
         private void FCandidate_SavedJobs_Load(object sender, EventArgs e)
         {
             if (CheckEmptySavedJobs())
@@ -58,12 +64,11 @@ namespace Job_Application_Management
                 UC_Empty empty = new UC_Empty();
                 empty.FindJobNowClick += findJobNow_Click;
                 flpStoreUC.Controls.Add(empty);
-                rdb_Lately.Enabled = false;
-                rdb_Nearly.Enabled = false;
-                rdb_Tallest.Enabled = false;    
+                PerformRadioButton(false);
             }
             else
             {
+                PerformRadioButton(true);
                 LoadSavedJobs();
                 rdb_Nearly.Checked = true;
             }

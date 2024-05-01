@@ -634,5 +634,11 @@ namespace Job_Application_Management
             int res = dbConn.ExecuteScalarGetInt(sqlQuery);
             return res;
         }
+        public int CountJobApplied()
+        {
+            sqlQuery = "SELECT COUNT(*) FROM AppliedJobs";
+            int res = dbConn.ExecuteScalarGetInt(sqlQuery);
+            return res;
+        }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_FindJobNow = new Guna.UI2.WinForms.Guna2Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_Title = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -40,7 +40,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btn_FindJobNow);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lbl_Title);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -65,15 +65,15 @@
             this.btn_FindJobNow.Text = "Tìm việc ngay";
             this.btn_FindJobNow.Click += new System.EventHandler(this.btn_FindJobNow_Click);
             // 
-            // label3
+            // lbl_Title
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(264, 228);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(256, 28);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Bạn chưa lưu công việc nào!";
+            this.lbl_Title.AutoSize = true;
+            this.lbl_Title.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.Location = new System.Drawing.Point(275, 227);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(256, 28);
+            this.lbl_Title.TabIndex = 2;
+            this.lbl_Title.Text = "Bạn chưa lưu công việc nào!";
             // 
             // pictureBox1
             // 
@@ -102,7 +102,7 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btn_FindJobNow;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_Title;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

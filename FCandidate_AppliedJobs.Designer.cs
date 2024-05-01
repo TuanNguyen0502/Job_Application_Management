@@ -36,7 +36,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.rbd_TallestSalary = new System.Windows.Forms.RadioButton();
+            this.rdb_TallestSalary = new System.Windows.Forms.RadioButton();
             this.rdb_Lately = new System.Windows.Forms.RadioButton();
             this.rdb_Nearly = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,8 +62,10 @@
             this.kryptonPanel1.Size = new System.Drawing.Size(846, 103);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
             this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
+            this.kryptonPanel1.StateCommon.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(157)))), ((int)(((byte)(76)))));
             this.kryptonPanel1.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(157)))), ((int)(((byte)(76)))));
+            this.kryptonPanel1.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPanel1.TabIndex = 7;
             // 
             // label4
@@ -114,7 +116,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.rbd_TallestSalary);
+            this.panel5.Controls.Add(this.rdb_TallestSalary);
             this.panel5.Controls.Add(this.rdb_Lately);
             this.panel5.Controls.Add(this.rdb_Nearly);
             this.panel5.Controls.Add(this.label2);
@@ -123,17 +125,17 @@
             this.panel5.Size = new System.Drawing.Size(846, 47);
             this.panel5.TabIndex = 6;
             // 
-            // rbd_TallestSalary
+            // rdb_TallestSalary
             // 
-            this.rbd_TallestSalary.AutoSize = true;
-            this.rbd_TallestSalary.Location = new System.Drawing.Point(519, 13);
-            this.rbd_TallestSalary.Name = "rbd_TallestSalary";
-            this.rbd_TallestSalary.Size = new System.Drawing.Size(119, 20);
-            this.rbd_TallestSalary.TabIndex = 4;
-            this.rbd_TallestSalary.TabStop = true;
-            this.rbd_TallestSalary.Text = "Lương cao nhất";
-            this.rbd_TallestSalary.UseVisualStyleBackColor = true;
-            this.rbd_TallestSalary.CheckedChanged += new System.EventHandler(this.rbd_TallestSalary_CheckedChanged);
+            this.rdb_TallestSalary.AutoSize = true;
+            this.rdb_TallestSalary.Location = new System.Drawing.Point(519, 13);
+            this.rdb_TallestSalary.Name = "rdb_TallestSalary";
+            this.rdb_TallestSalary.Size = new System.Drawing.Size(119, 20);
+            this.rdb_TallestSalary.TabIndex = 4;
+            this.rdb_TallestSalary.TabStop = true;
+            this.rdb_TallestSalary.Text = "Lương cao nhất";
+            this.rdb_TallestSalary.UseVisualStyleBackColor = true;
+            this.rdb_TallestSalary.CheckedChanged += new System.EventHandler(this.rbd_TallestSalary_CheckedChanged);
             // 
             // rdb_Lately
             // 
@@ -210,7 +212,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.RadioButton rbd_TallestSalary;
+        private System.Windows.Forms.RadioButton rdb_TallestSalary;
         private System.Windows.Forms.RadioButton rdb_Lately;
         private System.Windows.Forms.RadioButton rdb_Nearly;
         private System.Windows.Forms.Label label2;

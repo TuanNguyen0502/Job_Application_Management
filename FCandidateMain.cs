@@ -132,7 +132,7 @@ namespace Job_Application_Management
         private void cbb_Address_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_ContainDetailsJob.Controls.Clear();
-            if (cbb_Address.SelectedItem.ToString() != "Tất cả tỉnh/TP")
+            if (cbb_Address.SelectedItem.ToString() != "Tất cả tỉnh/thành phố")
             {
                 if (flp_ContainsJobs.Controls.Count > 0)
                 {
@@ -144,12 +144,9 @@ namespace Job_Application_Management
                     CheckJobsSavedAndPushIntoFLP(jobItem);
                 }
             }
-            else
+            else if (cbb_Address.SelectedItem.ToString() == "Tất cả tỉnh/thành phố")
             {
-                if (flp_ContainsJobs.Controls.Count >= 0)
-                {
-                    flp_ContainsJobs.Controls.Clear();
-                }
+                flp_ContainsJobs.Controls.Clear();
                 ListJobs();
             }
         }
