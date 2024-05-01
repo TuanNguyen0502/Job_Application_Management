@@ -71,6 +71,7 @@ namespace Job_Application_Management
             if (interview.Id != 0)
             {
                 employerDAO.DeleteInterview(interview);
+                this.Close();
             }
         }
     }
