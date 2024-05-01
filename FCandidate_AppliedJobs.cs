@@ -32,10 +32,41 @@ namespace Job_Application_Management
                 applied.ButtonRusbishClick += appliedJobsButtonRusbish_Click;
             }
         }
+
+        public bool CheckEmptyAppliedJobs()
+        {
+            int count = canDAO.CountJobApplied();
+            if (count == 0)
+                return true;
+            return false;
+        }
+        public event EventHandler FindJobNowAtSavedJobClick;
+        public void findJobNow_Click(object sender, EventArgs e)
+        {
+            FindJobNowAtSavedJobClick?.Invoke(this, new EventArgs());
+        }
+        public void PerformRadioButton(bool state)
+        {
+            rdb_Lately.Enabled = state;
+            rdb_Nearly.Enabled = state;
+            rdb_TallestSalary.Enabled = state;
+        }
         private void FCandidate_AppliedJobs_Load(object sender, EventArgs e)
         {
-            LoadAppliedJobs();
-            rdb_Nearly.Checked = true;
+            if (CheckEmptyAppliedJobs())
+            {
+                UC_Empty empty = new UC_Empty();
+                empty.Lbl_Title.Text = "Bạn chưa ứng tuyển công việc nào";
+                empty.FindJobNowClick += findJobNow_Click;
+                flpStoreUC.Controls.Add(empty);
+                PerformRadioButton(false);
+            }
+            else
+            {
+                PerformRadioButton(true);
+                LoadAppliedJobs();
+                rdb_Nearly.Checked = true;
+            }
         }
         private void appliedJobsButtonRusbish_Click(object sender, ButtonClickEventArgs e)
         {

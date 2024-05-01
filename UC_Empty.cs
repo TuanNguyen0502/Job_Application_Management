@@ -16,6 +16,7 @@ namespace Job_Application_Management
         {
             InitializeComponent();
         }
+        public Label Lbl_Title { get { return lbl_Title; } }
         public event EventHandler FindJobNowClick;
         private void btn_FindJobNow_Click(object sender, EventArgs e)
         {

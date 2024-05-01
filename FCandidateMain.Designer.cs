@@ -54,8 +54,8 @@
             this.txt_SearchFor = new Guna.UI2.WinForms.Guna2TextBox();
             this.flp_ContainsJobs = new System.Windows.Forms.FlowLayoutPanel();
             this.pnl_Main = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pnl_ContainDetailsJob = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSlide)).BeginInit();
@@ -506,7 +506,7 @@
             this.flp_ContainsJobs.Dock = System.Windows.Forms.DockStyle.Left;
             this.flp_ContainsJobs.Location = new System.Drawing.Point(0, 120);
             this.flp_ContainsJobs.Name = "flp_ContainsJobs";
-            this.flp_ContainsJobs.Size = new System.Drawing.Size(482, 670);
+            this.flp_ContainsJobs.Size = new System.Drawing.Size(478, 670);
             this.flp_ContainsJobs.TabIndex = 2;
             // 
             // pnl_Main
@@ -521,6 +521,14 @@
             this.pnl_Main.Size = new System.Drawing.Size(1317, 790);
             this.pnl_Main.TabIndex = 2;
             // 
+            // pnl_ContainDetailsJob
+            // 
+            this.pnl_ContainDetailsJob.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_ContainDetailsJob.Location = new System.Drawing.Point(478, 120);
+            this.pnl_ContainDetailsJob.Name = "pnl_ContainDetailsJob";
+            this.pnl_ContainDetailsJob.Size = new System.Drawing.Size(839, 670);
+            this.pnl_ContainDetailsJob.TabIndex = 3;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.spnl_TaskBar);
@@ -529,14 +537,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1317, 120);
             this.panel3.TabIndex = 1;
-            // 
-            // pnl_ContainDetailsJob
-            // 
-            this.pnl_ContainDetailsJob.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_ContainDetailsJob.Location = new System.Drawing.Point(482, 120);
-            this.pnl_ContainDetailsJob.Name = "pnl_ContainDetailsJob";
-            this.pnl_ContainDetailsJob.Size = new System.Drawing.Size(835, 670);
-            this.pnl_ContainDetailsJob.TabIndex = 3;
             // 
             // FCandidateMain
             // 
