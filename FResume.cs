@@ -12,7 +12,7 @@ using Guna.UI2.WinForms;
 
 namespace Job_Application_Management
 {
-    public partial class FResume : KryptonForm
+    public partial class FResume : Form
     {
         private string role;
         private string empID;

@@ -120,7 +120,6 @@ namespace Job_Application_Management
 
         public void UpdateResume(CV resume)
         {
-            MessageBox.Show($"{resume.Status}, {resume.CddID}, {resume.JobID}");
             string sqlStr = string.Format($"UPDATE Resume SET Status = N'{resume.Status}' WHERE CddID = '{resume.CddID}' " +
                 $"AND JobID = '{resume.JobID}'");
             Execute(sqlStr);
@@ -165,7 +164,6 @@ namespace Job_Application_Management
                 {
                     resume.CddID = (string)row["CddID"];
                     resume.JobID = Int32.Parse(row["JobID"].ToString());
-                    MessageBox.Show(resume.JobID.ToString());
                     resume.Objective = (string)row["Objective"];
                     resume.UniversityName = (string)row["UniversityName"];
                     resume.Major = (string)row["Major"];
