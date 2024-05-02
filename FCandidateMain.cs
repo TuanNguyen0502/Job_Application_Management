@@ -172,7 +172,6 @@ namespace Job_Application_Management
         }
         private void btn_JobsSaved_Click(object sender, EventArgs e)
         {
-
             SetIntroduction();
             FCandidate_SavedJobs saved = new FCandidate_SavedJobs(lblCddID.Text);
             saved.FindJobNowAtSavedJobClick += findJobNowLoad_Click;
@@ -181,9 +180,10 @@ namespace Job_Application_Management
 
         private void btn_JobsApplied_Click(object sender, EventArgs e)
         {
-
             SetIntroduction();
-            OpenChildForm(new FCandidate_AppliedJobs(), pnl_ContainDetailsJob);
+            FCandidate_AppliedJobs applied = new FCandidate_AppliedJobs();
+            applied.FindJobNowAtSavedJobClick += findJobNowLoad_Click;
+            OpenChildForm(applied, pnl_ContainDetailsJob);
         }
 
         private void btn_Register_Click(object sender, EventArgs e)
