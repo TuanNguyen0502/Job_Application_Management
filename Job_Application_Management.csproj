@@ -95,12 +95,6 @@
     <Compile Include="FEmployerMain.Designer.cs">
       <DependentUpon>FEmployerMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FCandidate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FCandidate.Designer.cs">
-      <DependentUpon>FCandidate.cs</DependentUpon>
-    </Compile>
     <Compile Include="FCandidateMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,9 +318,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployerMain.resx">
       <DependentUpon>FEmployerMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FCandidate.resx">
-      <DependentUpon>FCandidate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCandidateMain.resx">
       <DependentUpon>FCandidateMain.cs</DependentUpon>
