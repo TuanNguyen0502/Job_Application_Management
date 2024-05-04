@@ -61,7 +61,6 @@ namespace Job_Application_Management
         {
             string sqlStr = string.Format($"INSERT INTO Interviews (EmpID, CddID, JobID, InterviewTime, Note) " +
                 $"VALUES ('{interview.EmpID}', '{interview.CddID}', '{interview.JobID}', '{interview.InterviewTime}', N'{interview.Note}')");
-
             Execute(sqlStr);
         }
 

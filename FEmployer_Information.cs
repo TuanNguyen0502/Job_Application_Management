@@ -24,6 +24,10 @@ namespace Job_Application_Management
             employerDAO = new EmployerDAO();
             InitializeComponent();
         }
+        public FEmployer_Information()
+        {
+            InitializeComponent();
+        }
 
         private void FEmployer_Information_Load(object sender, EventArgs e)
         {

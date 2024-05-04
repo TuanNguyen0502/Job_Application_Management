@@ -321,5 +321,16 @@ namespace Job_Application_Management
                 flp_ContainsWorkHistory.Controls.Add(history);
             }
         }
+
+        private void ptb_CanDetails_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void shadowPanel_CanDetails_Click(object sender, EventArgs e)
+        {
+            FCandidate_UpdateInfo info = new FCandidate_UpdateInfo(lblCddID.Text);
+            info.ShowDialog();
+        }
     }
 }

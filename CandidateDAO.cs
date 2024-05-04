@@ -192,7 +192,7 @@ namespace Job_Application_Management
         }
         public List<Dictionary<string, object>> GetSelectedJobDetails(int jobid)
         {
-            sqlQuery = "SELECT j.Name JobName, c.Name CompanyName, j.Salary, c.Address, j.Experience, j.PostTime, j.JobDecription,                       j.WorkDuration, j.RequestCdd, j.Benefit"
+            sqlQuery = "SELECT j.Name JobName, c.Name CompanyName, j.Salary, c.Address, j.Experience, j.PostTime, j.JobDecription, j.WorkDuration, j.RequestCdd, j.Benefit"
                         +" FROM Jobs j"
                         +" JOIN Employers e ON j.EmpID = e.ID"
                         +" JOIN Company c ON e.CompanyName = c.Name"
@@ -640,5 +640,29 @@ namespace Job_Application_Management
             int res = dbConn.ExecuteScalarGetInt(sqlQuery);
             return res;
         }
+        #region Update Candidate Information
+        public Candidate GetCandidateInfor(string cddid)
+        {
+            sqlQuery = "SELECT * FROM Candidates WHERE CddID = @cddid";
+            SqlParameter[] lstParam =
+            {
+                new SqlParameter("@cddid", SqlDbType.VarChar) {Value = cddid}
+            };
+            Candidate candidate = new Candidate();
+            List<Dictionary<string,object>> results = dbConn.ExecuteReaderData(sqlQuery, lstParam);
+            foreach (var row in results)
+            {
+                candidate.Id = (string)row["CddID"];
+                candidate.Name = (string)row["CddName"];
+                candidate.Phone = (string)row["Phone"];
+                candidate.Email = (string)row["Email"];
+                candidate.Address = (string)row["CddAddress"];
+                candidate.Hometown = (string)row["Hometown"];
+                candidate.Sex = (string)row["Sex"];
+                candidate.Education = (string)row["Education"];
+            }
+            return candidate;
+        }
+        #endregion
     }
 }

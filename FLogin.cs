@@ -157,5 +157,10 @@ namespace Job_Application_Management
         {
             Application.Exit();
         }
+
+        private void ckb_ShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            textBox_Password.PasswordChar = ckb_ShowPass.Checked ? '\0' : '*';
+        }
     }
 }

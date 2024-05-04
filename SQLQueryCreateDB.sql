@@ -233,4 +233,6 @@ SELECT COUNT(*)
 FROM SavedJobs
 WHERE JobID = '2'
 
-SELECT * FROM SavedJobs
+SELECT * FROM Resume
+UPDATE Resume
+SET Status = 'Applying'

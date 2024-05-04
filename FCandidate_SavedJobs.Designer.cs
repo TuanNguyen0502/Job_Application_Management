@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnl_Main = new System.Windows.Forms.Panel();
-            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -42,16 +41,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.flpStoreUC = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnl_Main.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
-            this.kryptonPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Main
             // 
-            this.pnl_Main.Controls.Add(this.kryptonPanel1);
+            this.pnl_Main.Controls.Add(this.guna2ShadowPanel1);
             this.pnl_Main.Controls.Add(this.panel3);
             this.pnl_Main.Controls.Add(this.panel5);
             this.pnl_Main.Controls.Add(this.flpStoreUC);
@@ -61,25 +60,12 @@
             this.pnl_Main.Size = new System.Drawing.Size(854, 635);
             this.pnl_Main.TabIndex = 0;
             // 
-            // kryptonPanel1
-            // 
-            this.kryptonPanel1.Controls.Add(this.label4);
-            this.kryptonPanel1.Controls.Add(this.label3);
-            this.kryptonPanel1.Location = new System.Drawing.Point(3, 3);
-            this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(848, 103);
-            this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
-            this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
-            this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(157)))), ((int)(((byte)(76)))));
-            this.kryptonPanel1.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(157)))), ((int)(((byte)(76)))));
-            this.kryptonPanel1.TabIndex = 7;
-            // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
+            this.label4.BackColor = System.Drawing.Color.White;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(23, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(714, 48);
@@ -90,11 +76,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(77)))), ((int)(((byte)(61)))));
+            this.label3.BackColor = System.Drawing.Color.White;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(23, 13);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(23, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 27);
             this.label3.TabIndex = 3;
@@ -102,9 +88,9 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.MintCream;
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(3, 112);
+            this.panel3.Location = new System.Drawing.Point(3, 119);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(851, 49);
             this.panel3.TabIndex = 8;
@@ -121,12 +107,12 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackColor = System.Drawing.Color.MintCream;
             this.panel5.Controls.Add(this.rdb_Tallest);
             this.panel5.Controls.Add(this.rdb_Lately);
             this.panel5.Controls.Add(this.rdb_Nearly);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(3, 167);
+            this.panel5.Location = new System.Drawing.Point(3, 170);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(848, 47);
             this.panel5.TabIndex = 6;
@@ -190,6 +176,19 @@
             this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // guna2ShadowPanel1
+            // 
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.label3);
+            this.guna2ShadowPanel1.Controls.Add(this.label4);
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(6, 6);
+            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            this.guna2ShadowPanel1.Radius = 6;
+            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.DarkGreen;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(845, 107);
+            this.guna2ShadowPanel1.TabIndex = 10;
+            // 
             // FCandidate_SavedJobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -202,13 +201,12 @@
             this.Text = "Những công việc đã lưu";
             this.Load += new System.EventHandler(this.FCandidate_SavedJobs_Load);
             this.pnl_Main.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
-            this.kryptonPanel1.ResumeLayout(false);
-            this.kryptonPanel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.guna2ShadowPanel1.ResumeLayout(false);
+            this.guna2ShadowPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -217,7 +215,6 @@
         private System.Windows.Forms.Panel pnl_Main;
         public System.Windows.Forms.FlowLayoutPanel FlpMain;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
@@ -228,5 +225,6 @@
         private System.Windows.Forms.RadioButton rdb_Nearly;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flpStoreUC;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
     }
 }
