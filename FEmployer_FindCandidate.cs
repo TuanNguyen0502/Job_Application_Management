@@ -14,11 +14,10 @@ namespace Job_Application_Management
 {
     public partial class FEmployer_FindCandidate : Form
     {
-        private EmployerDAO employerDAO;
+        private EmployerDAO employerDAO = new EmployerDAO();
 
         public FEmployer_FindCandidate()
         {
-            employerDAO = new EmployerDAO();
             InitializeComponent();
         }
 

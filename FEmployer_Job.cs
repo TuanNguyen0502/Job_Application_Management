@@ -21,8 +21,8 @@ namespace Job_Application_Management
 
         public FEmployer_Job(string empID)
         {
-            this.empID = empID;
             InitializeComponent();
+            this.empID = empID;
         }
 
         private void button_Delete_Click(object sender, ButtonClickEventArgs e)

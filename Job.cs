@@ -108,6 +108,7 @@ namespace Job_Application_Management
             if (Deadline.CompareTo(DateTime.Now) < 0)
             {
                 MessageBox.Show("Deadline cannot be in the past or today !");
+                return false;
             }
             return true;
         }
