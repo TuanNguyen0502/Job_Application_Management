@@ -138,12 +138,6 @@
       <DependentUpon>FCandidate_SelectedJobDetails.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FEmployer_CandidateDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FEmployer_CandidateDetail.Designer.cs">
-      <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
-    </Compile>
     <Compile Include="FEmployer_ApprovedCandidate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -345,9 +339,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FCandidate_SelectedJobDetails.resx">
       <DependentUpon>FCandidate_SelectedJobDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FEmployer_CandidateDetail.resx">
-      <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_ApprovedCandidate.resx">
       <DependentUpon>FEmployer_ApprovedCandidate.cs</DependentUpon>
