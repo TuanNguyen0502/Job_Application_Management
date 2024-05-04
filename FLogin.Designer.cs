@@ -50,9 +50,9 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(68, 14);
+            this.label1.Location = new System.Drawing.Point(76, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 40);
+            this.label1.Size = new System.Drawing.Size(284, 47);
             this.label1.TabIndex = 7;
             this.label1.Text = "Welcome Back";
             // 
@@ -62,9 +62,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(76, 70);
+            this.label2.Location = new System.Drawing.Point(86, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 23);
+            this.label2.Size = new System.Drawing.Size(272, 28);
             this.label2.TabIndex = 8;
             this.label2.Text = "Login up to continue";
             // 
@@ -75,9 +75,9 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Consolas", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(76, 237);
+            this.label4.Location = new System.Drawing.Point(86, 344);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 28);
+            this.label4.Size = new System.Drawing.Size(120, 33);
             this.label4.TabIndex = 9;
             this.label4.Text = "You are";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -88,10 +88,10 @@
             this.radioButton_Candidate.BackColor = System.Drawing.Color.Transparent;
             this.radioButton_Candidate.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton_Candidate.ForeColor = System.Drawing.Color.Navy;
-            this.radioButton_Candidate.Location = new System.Drawing.Point(223, 234);
+            this.radioButton_Candidate.Location = new System.Drawing.Point(251, 340);
             this.radioButton_Candidate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton_Candidate.Name = "radioButton_Candidate";
-            this.radioButton_Candidate.Size = new System.Drawing.Size(150, 32);
+            this.radioButton_Candidate.Size = new System.Drawing.Size(175, 37);
             this.radioButton_Candidate.TabIndex = 10;
             this.radioButton_Candidate.TabStop = true;
             this.radioButton_Candidate.Text = "Candidate";
@@ -103,10 +103,10 @@
             this.radioButton_Employer.BackColor = System.Drawing.Color.Transparent;
             this.radioButton_Employer.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton_Employer.ForeColor = System.Drawing.Color.Navy;
-            this.radioButton_Employer.Location = new System.Drawing.Point(223, 269);
+            this.radioButton_Employer.Location = new System.Drawing.Point(251, 384);
             this.radioButton_Employer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton_Employer.Name = "radioButton_Employer";
-            this.radioButton_Employer.Size = new System.Drawing.Size(137, 32);
+            this.radioButton_Employer.Size = new System.Drawing.Size(160, 37);
             this.radioButton_Employer.TabIndex = 11;
             this.radioButton_Employer.TabStop = true;
             this.radioButton_Employer.Text = "Employer";
@@ -135,10 +135,10 @@
             // 
             // textBox_UserName
             // 
-            this.textBox_UserName.Location = new System.Drawing.Point(81, 120);
+            this.textBox_UserName.Location = new System.Drawing.Point(91, 150);
             this.textBox_UserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_UserName.Name = "textBox_UserName";
-            this.textBox_UserName.Size = new System.Drawing.Size(310, 42);
+            this.textBox_UserName.Size = new System.Drawing.Size(349, 47);
             this.textBox_UserName.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -160,11 +160,11 @@
             // 
             // textBox_Password
             // 
-            this.textBox_Password.Location = new System.Drawing.Point(81, 179);
+            this.textBox_Password.Location = new System.Drawing.Point(91, 224);
             this.textBox_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Password.Name = "textBox_Password";
             this.textBox_Password.PasswordChar = '*';
-            this.textBox_Password.Size = new System.Drawing.Size(310, 42);
+            this.textBox_Password.Size = new System.Drawing.Size(349, 47);
             this.textBox_Password.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.textBox_Password.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox_Password.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -182,7 +182,7 @@
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(81, 315);
+            this.btn_Login.Location = new System.Drawing.Point(91, 442);
             this.btn_Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -198,7 +198,7 @@
             this.btn_Login.OverrideDefault.Border.Rounding = 20;
             this.btn_Login.OverrideDefault.Border.Width = 1;
             this.btn_Login.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btn_Login.Size = new System.Drawing.Size(310, 53);
+            this.btn_Login.Size = new System.Drawing.Size(349, 66);
             this.btn_Login.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btn_Login.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.btn_Login.StateCommon.Back.ColorAngle = 45F;
@@ -243,7 +243,7 @@
             // 
             // btn_SignUp
             // 
-            this.btn_SignUp.Location = new System.Drawing.Point(81, 384);
+            this.btn_SignUp.Location = new System.Drawing.Point(91, 528);
             this.btn_SignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_SignUp.Name = "btn_SignUp";
             this.btn_SignUp.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -259,7 +259,7 @@
             this.btn_SignUp.OverrideDefault.Border.Rounding = 20;
             this.btn_SignUp.OverrideDefault.Border.Width = 1;
             this.btn_SignUp.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btn_SignUp.Size = new System.Drawing.Size(310, 53);
+            this.btn_SignUp.Size = new System.Drawing.Size(349, 66);
             this.btn_SignUp.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.btn_SignUp.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.btn_SignUp.StateCommon.Back.ColorAngle = 45F;
@@ -305,10 +305,10 @@
             // 
             // button_Exit
             // 
-            this.button_Exit.Location = new System.Drawing.Point(450, 11);
+            this.button_Exit.Location = new System.Drawing.Point(440, 18);
             this.button_Exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Exit.Name = "button_Exit";
-            this.button_Exit.Size = new System.Drawing.Size(42, 36);
+            this.button_Exit.Size = new System.Drawing.Size(47, 45);
             this.button_Exit.StateCommon.Back.Image = global::Job_Application_Management.Properties.Resources.icons8_close_window_48;
             this.button_Exit.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.button_Exit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -323,9 +323,11 @@
             // ckb_ShowPass
             // 
             this.ckb_ShowPass.AutoSize = true;
-            this.ckb_ShowPass.Location = new System.Drawing.Point(397, 192);
+            this.ckb_ShowPass.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckb_ShowPass.Location = new System.Drawing.Point(285, 290);
+            this.ckb_ShowPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ckb_ShowPass.Name = "ckb_ShowPass";
-            this.ckb_ShowPass.Size = new System.Drawing.Size(95, 20);
+            this.ckb_ShowPass.Size = new System.Drawing.Size(155, 32);
             this.ckb_ShowPass.TabIndex = 17;
             this.ckb_ShowPass.Text = "Show pass";
             this.ckb_ShowPass.UseVisualStyleBackColor = true;
@@ -333,12 +335,12 @@
             // 
             // FLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.BackgroundImage = global::Job_Application_Management.Properties.Resources.login_Pic;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(519, 478);
+            this.ClientSize = new System.Drawing.Size(520, 644);
             this.Controls.Add(this.ckb_ShowPass);
             this.Controls.Add(this.button_Exit);
             this.Controls.Add(this.btn_SignUp);
