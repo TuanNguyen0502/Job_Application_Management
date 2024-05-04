@@ -45,7 +45,7 @@ namespace Job_Application_Management
         {
             if (Introduction == null || introduction == "")
             {
-                MessageBox.Show("Introduction cannot be null !");
+                MessageBox.Show("Introduction cannot be empty !", "Empty introduction", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -55,7 +55,7 @@ namespace Job_Application_Management
         {
             if (numberOfFollower == 0 || numberOfFollower.ToString() == "")
             {
-                MessageBox.Show("Number of follower cannot be null !");
+                MessageBox.Show("Number of followers cannot be empty !", "Empty followers", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -65,7 +65,7 @@ namespace Job_Application_Management
         {
             if (numberOfEmployee == 0 || numberOfEmployee.ToString() == "")
             {
-                MessageBox.Show("Number of employee cannot be null !");
+                MessageBox.Show("Number of employees cannot be empty !", "Empty employees", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -75,7 +75,7 @@ namespace Job_Application_Management
         {
             if (businessLicense == null || businessLicense == "")
             {
-                MessageBox.Show("Business License cannot be null !");
+                MessageBox.Show("Business License cannot be empty !", "Empty business license", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -85,7 +85,7 @@ namespace Job_Application_Management
         {
             if (taxCode == null || taxCode == "")
             {
-                MessageBox.Show("Tax code cannot be null !");
+                MessageBox.Show("Taxcode cannot be empty !", "Empty taxcode", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -95,7 +95,7 @@ namespace Job_Application_Management
         {
             if (manager == null || manager == "")
             {
-                MessageBox.Show("Manager name cannot be null !");
+                MessageBox.Show("Manager's name cannot be empty !", "Empty Manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -105,7 +105,7 @@ namespace Job_Application_Management
         {
             if (address == null || address == "")
             {
-                MessageBox.Show("Address cannot be null !");
+                MessageBox.Show("Address cannot be empty !", "Empty address", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -115,7 +115,7 @@ namespace Job_Application_Management
         {
             if (Name == null || name == "")
             {
-                MessageBox.Show("Name cannot be null !");
+                MessageBox.Show("Company's name cannot be empty !", "Empty name", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

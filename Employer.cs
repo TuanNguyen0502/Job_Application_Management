@@ -36,7 +36,7 @@ namespace Job_Application_Management
         {
             if (this.companyName == null || companyName == "")
             {
-                MessageBox.Show("Company cannot be null !");
+                MessageBox.Show("Company's name cannot be empty !", "Empty name", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -46,7 +46,7 @@ namespace Job_Application_Management
         {
             if (this.Workplace == null || Workplace == "")
             {
-                MessageBox.Show("Workplace cannot be null !");
+                MessageBox.Show("Workplace cannot be empty !", "Empty workplace", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

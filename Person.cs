@@ -32,16 +32,9 @@ namespace Job_Application_Management
         {
             if (sex == null || sex == "")
             {
-                MessageBox.Show("Gender cannot be null !");
+                MessageBox.Show("Gender cannot be empty !", "Empty gender", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-
-            //if (sex != "Nam" || sex != "Nữ" || sex != "Male" || sex != "Female")
-            //{
-            //    MessageBox.Show("Gender is not correct !");
-            //    MessageBox.Show(sex);
-            //    return false;
-            //}
             return true;
         }
 
@@ -49,7 +42,7 @@ namespace Job_Application_Management
         {
             if (phone == null || phone == "")
             {
-                MessageBox.Show("Phone number cannot be null !");
+                MessageBox.Show("Phone number cannot be empty !", "Empty phone number", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             if (phone.StartsWith("0"))
@@ -62,7 +55,7 @@ namespace Job_Application_Management
                 if (phone.Length == 12)
                     return true;
             }
-            MessageBox.Show("Phone number is not in correct format !");
+            MessageBox.Show("Phone number is not in the correct format !", "Error format", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
 
@@ -70,12 +63,12 @@ namespace Job_Application_Management
         {
             if (this.email == null || email == "")
             {
-                MessageBox.Show("Email cannot be null !");
+                MessageBox.Show("Email cannot be empty !", "Empty email", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             if (EmailIsValid(this.email) == false)
             {
-                MessageBox.Show("Email is not in the correct form !");
+                MessageBox.Show("Email is invalid !", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return true;
         }
@@ -99,7 +92,7 @@ namespace Job_Application_Management
         {
             if (this.name == null || name == "")
             {
-                MessageBox.Show("Name cannot be null !");
+                MessageBox.Show("Name cannot be empty !", "Empty name", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -109,7 +102,7 @@ namespace Job_Application_Management
         {
             if (this.id == null)
             {
-                MessageBox.Show("ID cannot be null !");
+                MessageBox.Show("ID cannot be empty !", "Empty ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
