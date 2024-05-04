@@ -12,17 +12,11 @@ namespace Job_Application_Management
 {
     public class EmployerDAO
     {
-        private DBConnection dbConnection;
+        private DBConnection dbConnection = new DBConnection();
         private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
 
         public EmployerDAO()
         {
-            this.dbConnection = new DBConnection();
-        }
-
-        public void Execute(string sqlStr)
-        {
-            dbConnection.ExecuteWriteData(sqlStr);
         }
 
         public List<UC_Employer_Interview> SearchInterviewsFromDB(string empID, string keyword)
@@ -70,21 +64,30 @@ namespace Job_Application_Management
         public void DeleteInterview(Interview interview)
         {
             string sqlStr = string.Format($"DELETE FROM Interviews WHERE ID = '{interview.Id}'");
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Successfully cleared interview time");
+            }
         }
 
         public void UpdateInterview(Interview interview)
         {
             string sqlStr = string.Format($"UPDATE Interviews SET InterviewTime = '{interview.InterviewTime}', Note = N'{interview.Note}' " +
                 $"WHERE ID = '{interview.Id}'");
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Successfully updated interview");
+            }
         }
 
         public void AddInterview(Interview interview)
         {
             string sqlStr = string.Format($"INSERT INTO Interviews (EmpID, CddID, JobID, InterviewTime, Note) " +
                 $"VALUES ('{interview.EmpID}', '{interview.CddID}', '{interview.JobID}', '{interview.InterviewTime}', N'{interview.Note}')");
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Create new interview time successfully");
+            }
         }
 
         public Interview GetInterviewFormDB(string empID, string cddID, int jobID)
@@ -144,7 +147,10 @@ namespace Job_Application_Management
         {
             string sqlStr = string.Format($"UPDATE Resume SET Status = N'{resume.Status}' WHERE CddID = '{resume.CddID}' " +
                 $"AND JobID = '{resume.JobID}'");
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Resume approved");
+            }
         }
 
         public List<UC_CandidateCV> GetCandidateResumeFromDB(string empID, int jobID, string status)
@@ -246,7 +252,10 @@ namespace Job_Application_Management
                 $"Manager = N'{company.Manager}', TaxCode = '{company.TaxCode}', BusinessLicense = '{company.BusinessLicense}', " +
                 $"NumberOfEmployee = '{company.NumberOfEmployee}', NumberOfFollower = '{company.NumberOfFollower}', Introduction = N'{company.Introduction}' " +
                 $"WHERE Name = '{company.Name}'");
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Successfully updated company information");
+            }
         }
         public Employer GetEmployerFromDB(string empID)
         {
@@ -281,7 +290,10 @@ namespace Job_Application_Management
         {
             string sqlStr = string.Format($"UPDATE Employers SET Email = '{employer.Email}', Name = N'{employer.Name}', Sex = N'{employer.Sex}', " +
                 $"Phone = '{employer.Phone}', Workplace = N'{employer.Workplace}' WHERE ID = '{employer.Id}'");
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Successfully updated employer information");
+            }
         }
 
         public void AddJob(Job job)
@@ -291,7 +303,10 @@ namespace Job_Application_Management
                 $"'{job.JobDescription}', '{job.WorkDuration}', '{job.Experience}', '{job.Deadline.ToString("yyyy-MM-dd")}', '{job.Benefit}', " +
                 $"'{job.Request}', '{job.PostTime.ToString("yyyy-MM-dd")}', '{job.EmpID}')");
 
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Add new job successfully");
+            }
         }
 
         public void UpdateJob(Job job)
@@ -301,14 +316,20 @@ namespace Job_Application_Management
                 $"Experience = '{job.Experience}', ExpirationDate = '{job.Deadline.ToString("yyyy-MM-dd")}', Benefit = '{job.Benefit}', RequestCdd = '{job.Request}', " +
                 $"PostTime = '{job.PostTime.ToString("yyyy-MM-dd")}' WHERE ID = '{job.Id}'");
 
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Job update successful");
+            }
         }
 
         public void DeleteJob(string jobID)
         {
             string sqlStr = string.Format($"DELETE FROM Jobs WHERE ID = '{jobID}'");
 
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Deleted job successfully");
+            }
         }
 
         public Job GetJobFromDB(int jobID)
@@ -374,6 +395,5 @@ namespace Job_Application_Management
             }
             return items;
         }
-
     }
 }
