@@ -24,6 +24,29 @@ namespace Job_Application_Management
         {
             dbConnection.ExecuteWriteData(sqlStr);
         }
+
+        public List<UC_Employer_Interview> SearchInterviewsFromDB(string empID, string keyword)
+        {
+            string sqlQuery = $"SELECT * " +
+                $"FROM Interviews I INNER JOIN Candidates C ON I.CddID = C.CddID " +
+                                  $"INNER JOIN Jobs J ON I.JobID = J.ID " +
+                $"WHERE CONCAT(I.CddID, C.CddName, C.Phone, C.Email, C.CddAddress, C.Hometown, C.Sex, C.Education, " +
+                             $"I.JobID, J.Name, J.Salary, J.ExpirationDate, J.PostTime, I.InterviewTime, I.Note) LIKE N'%' + '{keyword}' + '%' " +
+                      $"AND I.EmpID = '{empID}'";
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_Employer_Interview> items = new List<UC_Employer_Interview>();
+            foreach (var row in resultList)
+            {
+                UC_Employer_Interview item = new UC_Employer_Interview(empID, (string)row["CddID"], (int)row["ID"]);
+                item.Label_JobName.Text = (string)row["Name"];
+                item.Label_CandidateName.Text = (string)row["CddName"];
+                item.Label_InterviewTime.Text = row["InterviewTime"].ToString();
+                item.Label_Note.Text = row["Note"].ToString();
+                items.Add(item);
+            }
+            return items;
+        }
+
         public List<UC_Employer_Interview> GetInterviewsFromDB(string empID)
         {
             string sqlQuery = $"SELECT J.ID, J.Name, C.CddName, C.CddID, I.InterviewTime, I.Note " +

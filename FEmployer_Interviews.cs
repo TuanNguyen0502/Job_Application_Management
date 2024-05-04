@@ -40,5 +40,21 @@ namespace Job_Application_Management
                 flowLayoutPanel1.Controls.Add(jobItem);
             }
         }
+
+        private void button_Search_Click(object sender, EventArgs e)
+        {
+            if (textBox_Search.Text == null || textBox_Search.Text == "")
+            {
+                MessageBox.Show("Enter you keyword !", "Empty keyword", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            flowLayoutPanel1.Controls.Clear();
+            List<UC_Employer_Interview> jobItems = employerDAO.SearchInterviewsFromDB(empID, textBox_Search.Text);
+            foreach (var jobItem in jobItems)
+            {
+                flowLayoutPanel1.Controls.Add(jobItem);
+            }
+        }
     }
 }

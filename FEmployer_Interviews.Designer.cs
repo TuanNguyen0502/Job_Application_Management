@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.textBox_Search = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.button_LoadData = new Guna.UI2.WinForms.Guna2Button();
             this.button_Search = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -60,23 +59,8 @@
             this.textBox_Search.PasswordChar = '\0';
             this.textBox_Search.PlaceholderText = "Type your keyword here";
             this.textBox_Search.SelectedText = "";
-            this.textBox_Search.Size = new System.Drawing.Size(481, 46);
+            this.textBox_Search.Size = new System.Drawing.Size(714, 46);
             this.textBox_Search.TabIndex = 0;
-            // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.AutoRoundedCorners = true;
-            this.guna2DateTimePicker1.BorderRadius = 22;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(671, 27);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(196, 46);
-            this.guna2DateTimePicker1.TabIndex = 1;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2024, 4, 22, 0, 42, 7, 911);
             // 
             // button_LoadData
             // 
@@ -110,6 +94,7 @@
             this.button_Search.Size = new System.Drawing.Size(133, 46);
             this.button_Search.TabIndex = 3;
             this.button_Search.Text = "Search";
+            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -191,7 +176,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button_Search);
             this.Controls.Add(this.button_LoadData);
-            this.Controls.Add(this.guna2DateTimePicker1);
             this.Controls.Add(this.textBox_Search);
             this.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -209,7 +193,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2TextBox textBox_Search;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private Guna.UI2.WinForms.Guna2Button button_LoadData;
         private Guna.UI2.WinForms.Guna2Button button_Search;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
