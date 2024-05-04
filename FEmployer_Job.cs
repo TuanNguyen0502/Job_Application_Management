@@ -33,7 +33,7 @@ namespace Job_Application_Management
 
         private void button_Post_Click(object sender, EventArgs e)
         {
-            FEmployer_JobDetail fEmployer_JobDetail = new FEmployer_JobDetail(0, empID);
+            FEmployer_JobDetail fEmployer_JobDetail = new FEmployer_JobDetail(0, empID, 0, 0);
             fEmployer_JobDetail.ShowDialog();
             if (fEmployer_JobDetail.DialogResult == DialogResult.OK)
             {

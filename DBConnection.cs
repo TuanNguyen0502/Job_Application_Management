@@ -206,9 +206,9 @@ namespace Job_Application_Management
         }
         #endregion
 
-        public string ExecuteReaderCount(string sqlStr)
+        public int ExecuteReaderCount(string sqlStr)
         {
-            string result = "0";
+            int result = 0;
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 try
@@ -220,7 +220,7 @@ namespace Job_Application_Management
                     {
                         while (reader.Read())
                         {
-                            result = reader.GetInt32(0).ToString();
+                            result = reader.GetInt32(0);
                         }
                     }
                 }

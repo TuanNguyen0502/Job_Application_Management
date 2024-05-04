@@ -350,7 +350,7 @@ namespace Job_Application_Management
                         job.Name = reader.GetString(1);
                         job.Salary = reader.GetInt32(2);
                         job.JobDescription = reader.GetString(3);
-                        job.WorkDuration = reader.GetString(4);
+                        job.WorkDuration = reader.GetInt32(4).ToString();
                         job.Experience = reader.GetString(5);
                         job.Deadline = reader.GetDateTime(6);
                         job.Benefit = reader.GetString(7);
@@ -376,9 +376,14 @@ namespace Job_Application_Management
             {
                 string sqlQuery2 = $"SELECT Count(CddID) as SL " +
                     $"FROM Resume " +
-                    $"WHERE JobID = '{(int)row["ID"]}' " +
+                    $"WHERE JobID = '{(int)row["ID"]}' AND Status = 'Applying' " +
                     $"GROUP BY JobID";
-                string number = dbConnection.ExecuteReaderCount(sqlQuery2);
+                int numberApplied = dbConnection.ExecuteReaderCount(sqlQuery2);
+                string sqlQuery3 = $"SELECT Count(CddID) as SL " +
+                    $"FROM Resume " +
+                    $"WHERE JobID = '{(int)row["ID"]}' AND Status = 'Approved' " +
+                    $"GROUP BY JobID";
+                int numberApproved = dbConnection.ExecuteReaderCount(sqlQuery3);
 
                 UC_Employer_Job item = new UC_Employer_Job(empID);
                 item.JobID = (int)row["ID"];
@@ -390,7 +395,10 @@ namespace Job_Application_Management
                 DateTime deadline = (DateTime)row["ExpirationDate"];
                 string formattedDeadline = postTime.ToString("yyyy-MM-dd");
                 item.Label_Deadline.Text += formattedDeadline;
-                item.Label_NumberCandidates.Text += number;
+                item.Label_NumberAppliedCandidates.Text += numberApplied.ToString();
+                item.Label_NumberApprovedCandidates.Text += numberApproved.ToString();
+                item.NumberApplied = numberApplied;
+                item.NumberApproved = numberApproved;
                 items.Add(item);
             }
             return items;

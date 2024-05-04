@@ -77,7 +77,7 @@
             this.tableLayoutPanel_Information.Controls.Add(this.richTextBox_JobBenefit, 1, 3);
             this.tableLayoutPanel_Information.Controls.Add(this.label_CompanyType, 2, 3);
             this.tableLayoutPanel_Information.Controls.Add(this.richTextBox_Requirement, 3, 3);
-            this.tableLayoutPanel_Information.Location = new System.Drawing.Point(11, 10);
+            this.tableLayoutPanel_Information.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel_Information.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel_Information.Name = "tableLayoutPanel_Information";
             this.tableLayoutPanel_Information.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -86,7 +86,7 @@
             this.tableLayoutPanel_Information.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel_Information.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel_Information.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel_Information.Size = new System.Drawing.Size(1596, 489);
+            this.tableLayoutPanel_Information.Size = new System.Drawing.Size(1796, 611);
             this.tableLayoutPanel_Information.TabIndex = 6;
             // 
             // label_ID
@@ -95,9 +95,9 @@
             this.label_ID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_ID.Image = global::Job_Application_Management.Properties.Resources.icons8_job_32;
             this.label_ID.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_ID.Location = new System.Drawing.Point(9, 37);
+            this.label_ID.Location = new System.Drawing.Point(11, 46);
             this.label_ID.Name = "label_ID";
-            this.label_ID.Size = new System.Drawing.Size(261, 48);
+            this.label_ID.Size = new System.Drawing.Size(294, 60);
             this.label_ID.TabIndex = 1;
             this.label_ID.Text = "Job Name           ";
             this.label_ID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -108,9 +108,9 @@
             this.label_Deadline.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label_Deadline.Image = global::Job_Application_Management.Properties.Resources.icons8_deadline_32;
             this.label_Deadline.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Deadline.Location = new System.Drawing.Point(782, 38);
+            this.label_Deadline.Location = new System.Drawing.Point(882, 48);
             this.label_Deadline.Name = "label_Deadline";
-            this.label_Deadline.Size = new System.Drawing.Size(321, 45);
+            this.label_Deadline.Size = new System.Drawing.Size(361, 56);
             this.label_Deadline.TabIndex = 5;
             this.label_Deadline.Text = "Deadline        ";
             this.label_Deadline.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -121,9 +121,9 @@
             this.label_Experience.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label_Experience.Image = global::Job_Application_Management.Properties.Resources.icons8_experience_32;
             this.label_Experience.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Experience.Location = new System.Drawing.Point(782, 281);
+            this.label_Experience.Location = new System.Drawing.Point(882, 350);
             this.label_Experience.Name = "label_Experience";
-            this.label_Experience.Size = new System.Drawing.Size(321, 48);
+            this.label_Experience.Size = new System.Drawing.Size(361, 60);
             this.label_Experience.TabIndex = 8;
             this.label_Experience.Text = "Experience        ";
             this.label_Experience.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -131,10 +131,10 @@
             // textBox_JobName
             // 
             this.textBox_JobName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_JobName.Location = new System.Drawing.Point(294, 40);
+            this.textBox_JobName.Location = new System.Drawing.Point(332, 52);
             this.textBox_JobName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_JobName.Name = "textBox_JobName";
-            this.textBox_JobName.Size = new System.Drawing.Size(444, 42);
+            this.textBox_JobName.Size = new System.Drawing.Size(500, 47);
             this.textBox_JobName.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -156,10 +156,10 @@
             // textBox_Experience
             // 
             this.textBox_Experience.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Experience.Location = new System.Drawing.Point(1146, 284);
+            this.textBox_Experience.Location = new System.Drawing.Point(1291, 356);
             this.textBox_Experience.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Experience.Name = "textBox_Experience";
-            this.textBox_Experience.Size = new System.Drawing.Size(436, 42);
+            this.textBox_Experience.Size = new System.Drawing.Size(490, 47);
             this.textBox_Experience.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -182,10 +182,10 @@
             // 
             this.dateTimePicker_Deadline.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker_Deadline.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_Deadline.Location = new System.Drawing.Point(1146, 40);
+            this.dateTimePicker_Deadline.Location = new System.Drawing.Point(1291, 53);
             this.dateTimePicker_Deadline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker_Deadline.Name = "dateTimePicker_Deadline";
-            this.dateTimePicker_Deadline.Size = new System.Drawing.Size(436, 41);
+            this.dateTimePicker_Deadline.Size = new System.Drawing.Size(490, 46);
             this.dateTimePicker_Deadline.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -202,9 +202,9 @@
             this.label_Salary.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label_Salary.Image = global::Job_Application_Management.Properties.Resources.icons8_salary_32;
             this.label_Salary.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Salary.Location = new System.Drawing.Point(9, 159);
+            this.label_Salary.Location = new System.Drawing.Point(11, 198);
             this.label_Salary.Name = "label_Salary";
-            this.label_Salary.Size = new System.Drawing.Size(261, 48);
+            this.label_Salary.Size = new System.Drawing.Size(294, 60);
             this.label_Salary.TabIndex = 4;
             this.label_Salary.Text = "Salary        ";
             this.label_Salary.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -212,10 +212,10 @@
             // textBox_Salary
             // 
             this.textBox_Salary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Salary.Location = new System.Drawing.Point(294, 162);
+            this.textBox_Salary.Location = new System.Drawing.Point(332, 204);
             this.textBox_Salary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Salary.Name = "textBox_Salary";
-            this.textBox_Salary.Size = new System.Drawing.Size(444, 42);
+            this.textBox_Salary.Size = new System.Drawing.Size(500, 47);
             this.textBox_Salary.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -240,9 +240,9 @@
             this.label_Description.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label_Description.Image = global::Job_Application_Management.Properties.Resources.icons8_description_32;
             this.label_Description.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Description.Location = new System.Drawing.Point(782, 159);
+            this.label_Description.Location = new System.Drawing.Point(882, 198);
             this.label_Description.Name = "label_Description";
-            this.label_Description.Size = new System.Drawing.Size(321, 48);
+            this.label_Description.Size = new System.Drawing.Size(361, 60);
             this.label_Description.TabIndex = 4;
             this.label_Description.Text = "Description         ";
             this.label_Description.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -250,11 +250,11 @@
             // richTextBox_JobDescripton
             // 
             this.richTextBox_JobDescripton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox_JobDescripton.Location = new System.Drawing.Point(1146, 124);
+            this.richTextBox_JobDescripton.Location = new System.Drawing.Point(1291, 155);
             this.richTextBox_JobDescripton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox_JobDescripton.Name = "richTextBox_JobDescripton";
             this.richTextBox_JobDescripton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.richTextBox_JobDescripton.Size = new System.Drawing.Size(436, 117);
+            this.richTextBox_JobDescripton.Size = new System.Drawing.Size(490, 146);
             this.richTextBox_JobDescripton.StateActive.Content.Color1 = System.Drawing.Color.Black;
             this.richTextBox_JobDescripton.StateActive.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_JobDescripton.StateActive.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -279,9 +279,9 @@
             this.label_Time.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label_Time.Image = global::Job_Application_Management.Properties.Resources.icons8_working_time_32;
             this.label_Time.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Time.Location = new System.Drawing.Point(9, 281);
+            this.label_Time.Location = new System.Drawing.Point(11, 350);
             this.label_Time.Name = "label_Time";
-            this.label_Time.Size = new System.Drawing.Size(261, 48);
+            this.label_Time.Size = new System.Drawing.Size(294, 60);
             this.label_Time.TabIndex = 6;
             this.label_Time.Text = "Working Time        ";
             this.label_Time.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -289,10 +289,10 @@
             // textBox_WorkingTime
             // 
             this.textBox_WorkingTime.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_WorkingTime.Location = new System.Drawing.Point(294, 284);
+            this.textBox_WorkingTime.Location = new System.Drawing.Point(332, 356);
             this.textBox_WorkingTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_WorkingTime.Name = "textBox_WorkingTime";
-            this.textBox_WorkingTime.Size = new System.Drawing.Size(444, 42);
+            this.textBox_WorkingTime.Size = new System.Drawing.Size(500, 47);
             this.textBox_WorkingTime.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -317,9 +317,9 @@
             this.label__Benefit.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label__Benefit.Image = global::Job_Application_Management.Properties.Resources.icons8_benefit_32;
             this.label__Benefit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label__Benefit.Location = new System.Drawing.Point(9, 403);
+            this.label__Benefit.Location = new System.Drawing.Point(11, 503);
             this.label__Benefit.Name = "label__Benefit";
-            this.label__Benefit.Size = new System.Drawing.Size(261, 48);
+            this.label__Benefit.Size = new System.Drawing.Size(294, 60);
             this.label__Benefit.TabIndex = 4;
             this.label__Benefit.Text = "Benefits        ";
             this.label__Benefit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -327,11 +327,11 @@
             // richTextBox_JobBenefit
             // 
             this.richTextBox_JobBenefit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox_JobBenefit.Location = new System.Drawing.Point(298, 368);
+            this.richTextBox_JobBenefit.Location = new System.Drawing.Point(337, 459);
             this.richTextBox_JobBenefit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox_JobBenefit.Name = "richTextBox_JobBenefit";
             this.richTextBox_JobBenefit.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.richTextBox_JobBenefit.Size = new System.Drawing.Size(436, 119);
+            this.richTextBox_JobBenefit.Size = new System.Drawing.Size(490, 149);
             this.richTextBox_JobBenefit.StateActive.Content.Color1 = System.Drawing.Color.Black;
             this.richTextBox_JobBenefit.StateActive.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_JobBenefit.StateActive.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -356,9 +356,9 @@
             this.label_CompanyType.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label_CompanyType.Image = global::Job_Application_Management.Properties.Resources.icons8_request_32;
             this.label_CompanyType.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_CompanyType.Location = new System.Drawing.Point(782, 403);
+            this.label_CompanyType.Location = new System.Drawing.Point(882, 503);
             this.label_CompanyType.Name = "label_CompanyType";
-            this.label_CompanyType.Size = new System.Drawing.Size(321, 48);
+            this.label_CompanyType.Size = new System.Drawing.Size(361, 60);
             this.label_CompanyType.TabIndex = 5;
             this.label_CompanyType.Text = "Requirements        ";
             this.label_CompanyType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -366,11 +366,11 @@
             // richTextBox_Requirement
             // 
             this.richTextBox_Requirement.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox_Requirement.Location = new System.Drawing.Point(1146, 368);
+            this.richTextBox_Requirement.Location = new System.Drawing.Point(1291, 459);
             this.richTextBox_Requirement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox_Requirement.Name = "richTextBox_Requirement";
             this.richTextBox_Requirement.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.richTextBox_Requirement.Size = new System.Drawing.Size(436, 119);
+            this.richTextBox_Requirement.Size = new System.Drawing.Size(490, 149);
             this.richTextBox_Requirement.StateActive.Content.Color1 = System.Drawing.Color.Black;
             this.richTextBox_Requirement.StateActive.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_Requirement.StateActive.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -396,10 +396,10 @@
             this.flowLayoutPanel1.Controls.Add(this.button_SeeCandidate);
             this.flowLayoutPanel1.Controls.Add(this.button_ApprovedCandidate);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 499);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 623);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1607, 85);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1808, 106);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // button_Post
@@ -421,7 +421,7 @@
             this.button_Post.OverrideDefault.Border.Rounding = 20;
             this.button_Post.OverrideDefault.Border.Width = 1;
             this.button_Post.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_Post.Size = new System.Drawing.Size(120, 80);
+            this.button_Post.Size = new System.Drawing.Size(135, 100);
             this.button_Post.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.button_Post.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.button_Post.StateCommon.Back.ColorAngle = 45F;
@@ -468,7 +468,7 @@
             // 
             // button_Delete
             // 
-            this.button_Delete.Location = new System.Drawing.Point(129, 2);
+            this.button_Delete.Location = new System.Drawing.Point(144, 2);
             this.button_Delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Delete.Name = "button_Delete";
             this.button_Delete.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -484,7 +484,7 @@
             this.button_Delete.OverrideDefault.Border.Rounding = 20;
             this.button_Delete.OverrideDefault.Border.Width = 1;
             this.button_Delete.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_Delete.Size = new System.Drawing.Size(99, 80);
+            this.button_Delete.Size = new System.Drawing.Size(111, 100);
             this.button_Delete.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.button_Delete.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.button_Delete.StateCommon.Back.ColorAngle = 45F;
@@ -532,7 +532,7 @@
             // 
             // button_SeeCandidate
             // 
-            this.button_SeeCandidate.Location = new System.Drawing.Point(234, 2);
+            this.button_SeeCandidate.Location = new System.Drawing.Point(261, 2);
             this.button_SeeCandidate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_SeeCandidate.Name = "button_SeeCandidate";
             this.button_SeeCandidate.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -548,7 +548,7 @@
             this.button_SeeCandidate.OverrideDefault.Border.Rounding = 20;
             this.button_SeeCandidate.OverrideDefault.Border.Width = 1;
             this.button_SeeCandidate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_SeeCandidate.Size = new System.Drawing.Size(145, 80);
+            this.button_SeeCandidate.Size = new System.Drawing.Size(200, 100);
             this.button_SeeCandidate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_SeeCandidate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_SeeCandidate.StateCommon.Back.ColorAngle = 45F;
@@ -588,12 +588,13 @@
             this.button_SeeCandidate.StateTracking.Border.Rounding = 20;
             this.button_SeeCandidate.StateTracking.Border.Width = 1;
             this.button_SeeCandidate.TabIndex = 20;
-            this.button_SeeCandidate.Values.Text = "Applied";
+            this.button_SeeCandidate.Values.Text = "Applied: ";
+            this.button_SeeCandidate.Visible = false;
             this.button_SeeCandidate.Click += new System.EventHandler(this.button_SeeCandidate_Click);
             // 
             // button_ApprovedCandidate
             // 
-            this.button_ApprovedCandidate.Location = new System.Drawing.Point(385, 2);
+            this.button_ApprovedCandidate.Location = new System.Drawing.Point(467, 2);
             this.button_ApprovedCandidate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_ApprovedCandidate.Name = "button_ApprovedCandidate";
             this.button_ApprovedCandidate.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -609,7 +610,7 @@
             this.button_ApprovedCandidate.OverrideDefault.Border.Rounding = 20;
             this.button_ApprovedCandidate.OverrideDefault.Border.Width = 1;
             this.button_ApprovedCandidate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.button_ApprovedCandidate.Size = new System.Drawing.Size(168, 80);
+            this.button_ApprovedCandidate.Size = new System.Drawing.Size(230, 100);
             this.button_ApprovedCandidate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.button_ApprovedCandidate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.button_ApprovedCandidate.StateCommon.Back.ColorAngle = 45F;
@@ -649,16 +650,17 @@
             this.button_ApprovedCandidate.StateTracking.Border.Rounding = 20;
             this.button_ApprovedCandidate.StateTracking.Border.Width = 1;
             this.button_ApprovedCandidate.TabIndex = 19;
-            this.button_ApprovedCandidate.Values.Text = "Approved";
+            this.button_ApprovedCandidate.Values.Text = "Approved: ";
+            this.button_ApprovedCandidate.Visible = false;
             this.button_ApprovedCandidate.Click += new System.EventHandler(this.button_ApprovedCandidate_Click);
             // 
             // FEmployer_JobDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1606, 596);
+            this.ClientSize = new System.Drawing.Size(1807, 745);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel_Information);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

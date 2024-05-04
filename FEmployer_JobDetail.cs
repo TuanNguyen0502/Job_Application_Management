@@ -13,67 +13,80 @@ namespace Job_Application_Management
 {
     public partial class FEmployer_JobDetail : Form
     {
-        private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
-        private string sqlQuery;
         private int jobID;
         private string empID;
-        private EmployerDAO employerDAO;
+        private int numberAppliedCandidates;
+        private int numberApproveCandidates;
+        private EmployerDAO employerDAO = new EmployerDAO();
 
         public int JobID { get => jobID; set => jobID = value; }
 
-        public FEmployer_JobDetail(int ID, string empID)
+        public FEmployer_JobDetail(int ID, string empID, int numberAppliedCandidates, int numberApproveCandidates)
         {
-            this.JobID = ID;
-            this.empID = empID;
-            employerDAO = new EmployerDAO();
             InitializeComponent();
+            this.jobID = ID;
+            this.empID = empID;
+            this.numberAppliedCandidates = numberAppliedCandidates;
+            this.numberApproveCandidates = numberApproveCandidates;
+        }
+
+        private void LoadButton()
+        {
+            if (this.numberAppliedCandidates > 0)
+            {
+                button_SeeCandidate.Visible = true;
+                button_SeeCandidate.Text += numberAppliedCandidates;
+            }
+            if (this.numberApproveCandidates > 0)
+            {
+                button_ApprovedCandidate.Visible = true;
+                button_ApprovedCandidate.Text += numberApproveCandidates;
+            }
         }
 
         private void button_SeeCandidate_Click(object sender, EventArgs e)
         {
             FEmployer_SeeCandidate fEmployer_SeeCandidate = new FEmployer_SeeCandidate(empID, JobID);
             fEmployer_SeeCandidate.ShowDialog();
+            if (fEmployer_SeeCandidate.DialogResult == DialogResult.OK)
+            {
+                LoadButton();
+            }
         }
 
         private void button_ApprovedCandidate_Click(object sender, EventArgs e)
         {
             FEmployer_ApprovedCandidate fEmployer_ApprovedCandidate = new FEmployer_ApprovedCandidate(empID, JobID);
             fEmployer_ApprovedCandidate.ShowDialog();
+            if (fEmployer_ApprovedCandidate.DialogResult == DialogResult.OK)
+            {
+                LoadButton();
+            }
         }
 
         private void FEmployer_JobDetail_Load(object sender, EventArgs e)
         {
             LoadInfor();
+            LoadButton();
         }
 
         private void LoadInfor()
         {
             if (JobID != 0)
             {
-                using (SqlConnection conn = new SqlConnection(connStr))
-                {
-                    conn.Open();
-                    sqlQuery = $"SELECT ID, Name, Salary, JobDecription, Workduration, Experience, ExpirationDate, Benefit, RequestCdd, " +
-                        $"PostTime FROM Jobs WHERE ID = '{JobID}'";
-                    SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            textBox_JobName.Text = reader.GetString(1);
-                            textBox_Salary.Text = reader.GetInt32(2).ToString();
-                            richTextBox_JobDescripton.Text = reader.GetString(3);
-                            textBox_WorkingTime.Text = reader.GetInt32(4).ToString();
-                            textBox_Experience.Text = reader.GetString(5);
-                            dateTimePicker_Deadline.Value = reader.GetDateTime(6);
-                            richTextBox_JobBenefit.Text = reader.GetString(7);
-                            richTextBox_Requirement.Text = reader.GetString(8);
-                        }
-                    }
-                    else
-                        MessageBox.Show("No rows found");
-                }
+                Job job = employerDAO.GetJobFromDB(JobID);
+                textBox_JobName.Text = job.Name;
+                textBox_Salary.Text = job.Salary.ToString();
+                richTextBox_JobDescripton.Text = job.JobDescription;
+                textBox_WorkingTime.Text = job.WorkDuration;
+                textBox_Experience.Text = job.Experience;
+                dateTimePicker_Deadline.Value = job.Deadline;
+                richTextBox_JobBenefit.Text = job.Benefit;
+                richTextBox_Requirement.Text = job.Request;
+            }
+            else
+            {
+                button_Delete.Visible = false;
             }
         }
 

@@ -34,10 +34,11 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label_Salary = new System.Windows.Forms.Label();
             this.label_Deadline = new System.Windows.Forms.Label();
-            this.label_NumberCandidates = new System.Windows.Forms.Label();
+            this.label_NumberAppliedCandidates = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Edit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_delete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label_NumberApprovedCandidates = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -82,13 +83,14 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.label_Salary);
             this.flowLayoutPanel2.Controls.Add(this.label_Deadline);
-            this.flowLayoutPanel2.Controls.Add(this.label_NumberCandidates);
+            this.flowLayoutPanel2.Controls.Add(this.label_NumberAppliedCandidates);
+            this.flowLayoutPanel2.Controls.Add(this.label_NumberApprovedCandidates);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 100);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(381, 208);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(381, 269);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // label_Salary
@@ -115,24 +117,24 @@
             this.label_Deadline.Text = "      Deadline: ";
             this.label_Deadline.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label_NumberCandidates
+            // label_NumberAppliedCandidates
             // 
-            this.label_NumberCandidates.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label_NumberCandidates.Image = global::Job_Application_Management.Properties.Resources.icons8_candidate_32;
-            this.label_NumberCandidates.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label_NumberCandidates.Location = new System.Drawing.Point(13, 130);
-            this.label_NumberCandidates.Name = "label_NumberCandidates";
-            this.label_NumberCandidates.Size = new System.Drawing.Size(365, 60);
-            this.label_NumberCandidates.TabIndex = 3;
-            this.label_NumberCandidates.Text = "      Aplied: ";
-            this.label_NumberCandidates.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_NumberAppliedCandidates.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.label_NumberAppliedCandidates.Image = global::Job_Application_Management.Properties.Resources.icons8_candidate_32;
+            this.label_NumberAppliedCandidates.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_NumberAppliedCandidates.Location = new System.Drawing.Point(13, 130);
+            this.label_NumberAppliedCandidates.Name = "label_NumberAppliedCandidates";
+            this.label_NumberAppliedCandidates.Size = new System.Drawing.Size(365, 60);
+            this.label_NumberAppliedCandidates.TabIndex = 3;
+            this.label_NumberAppliedCandidates.Text = "      Applied: ";
+            this.label_NumberAppliedCandidates.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.button_Edit);
             this.flowLayoutPanel3.Controls.Add(this.button_delete);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 314);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 378);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel3.Size = new System.Drawing.Size(381, 100);
@@ -266,7 +268,19 @@
             this.button_delete.Values.Text = "";
             this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
-            // UC_EmployerJob
+            // label_NumberApprovedCandidates
+            // 
+            this.label_NumberApprovedCandidates.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.label_NumberApprovedCandidates.Image = global::Job_Application_Management.Properties.Resources.icons8_candidate_32;
+            this.label_NumberApprovedCandidates.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_NumberApprovedCandidates.Location = new System.Drawing.Point(13, 190);
+            this.label_NumberApprovedCandidates.Name = "label_NumberApprovedCandidates";
+            this.label_NumberApprovedCandidates.Size = new System.Drawing.Size(365, 60);
+            this.label_NumberApprovedCandidates.TabIndex = 4;
+            this.label_NumberApprovedCandidates.Text = "      Approved: ";
+            this.label_NumberApprovedCandidates.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // UC_Employer_Job
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -274,8 +288,8 @@
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "UC_EmployerJob";
-            this.Size = new System.Drawing.Size(381, 414);
+            this.Name = "UC_Employer_Job";
+            this.Size = new System.Drawing.Size(381, 478);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -295,6 +309,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_delete;
         private System.Windows.Forms.Label label_Salary;
         private System.Windows.Forms.Label label_Deadline;
-        private System.Windows.Forms.Label label_NumberCandidates;
+        private System.Windows.Forms.Label label_NumberAppliedCandidates;
+        private System.Windows.Forms.Label label_NumberApprovedCandidates;
     }
 }
