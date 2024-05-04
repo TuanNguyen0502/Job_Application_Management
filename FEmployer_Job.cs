@@ -28,7 +28,7 @@ namespace Job_Application_Management
         private void button_Delete_Click(object sender, ButtonClickEventArgs e)
         {
             employerDAO.DeleteJob(e.CddID);
-            flowLayoutPanel_Jobs.Controls.Remove(sender as UC_EmployerJob);
+            flowLayoutPanel_Jobs.Controls.Remove(sender as UC_Employer_Job);
         }
 
         private void button_Post_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
-            List<UC_EmployerJob> jobItems = employerDAO.GetJobsFromDB(empID);
+            List<UC_Employer_Job> jobItems = employerDAO.GetJobsFromDB(empID);
             foreach (var jobItem in jobItems)
             {
                 jobItem.Button_Delete_Click += button_Delete_Click;

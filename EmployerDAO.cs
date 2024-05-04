@@ -365,12 +365,12 @@ namespace Job_Application_Management
             }
         }
 
-        public List<UC_EmployerJob> GetJobsFromDB(string empID)
+        public List<UC_Employer_Job> GetJobsFromDB(string empID)
         {
             string sqlQuery = $"SELECT Name, Salary, PostTime, ExpirationDate, ID FROM Jobs WHERE EmpID = '{empID}'";
 
             List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
-            List<UC_EmployerJob> items = new List<UC_EmployerJob>();
+            List<UC_Employer_Job> items = new List<UC_Employer_Job>();
 
             foreach (var row in resultList)
             {
@@ -380,7 +380,7 @@ namespace Job_Application_Management
                     $"GROUP BY JobID";
                 string number = dbConnection.ExecuteReaderCount(sqlQuery2);
 
-                UC_EmployerJob item = new UC_EmployerJob(empID);
+                UC_Employer_Job item = new UC_Employer_Job(empID);
                 item.JobID = (int)row["ID"];
                 item.Label_JobName.Text = (string)row["Name"];
                 item.Label_Salary.Text += row["Salary"].ToString();

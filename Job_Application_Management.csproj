@@ -295,11 +295,11 @@
     <Compile Include="UC_RecruitmentCompany.Designer.cs">
       <DependentUpon>UC_RecruitmentCompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_EmployerJob.cs">
+    <Compile Include="UC_Employer_Job.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_EmployerJob.Designer.cs">
-      <DependentUpon>UC_EmployerJob.cs</DependentUpon>
+    <Compile Include="UC_Employer_Job.Designer.cs">
+      <DependentUpon>UC_Employer_Job.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_CandidateCV.cs">
       <SubType>UserControl</SubType>
@@ -428,8 +428,8 @@
     <EmbeddedResource Include="UC_RecruitmentCompany.resx">
       <DependentUpon>UC_RecruitmentCompany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_EmployerJob.resx">
-      <DependentUpon>UC_EmployerJob.cs</DependentUpon>
+    <EmbeddedResource Include="UC_Employer_Job.resx">
+      <DependentUpon>UC_Employer_Job.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_CandidateCV.resx">
       <DependentUpon>UC_CandidateCV.cs</DependentUpon>

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class UC_EmployerJob : UserControl
+    public partial class UC_Employer_Job : UserControl
     {
         private Form currentFormChild;
         private int jobID;
@@ -27,7 +27,7 @@ namespace Job_Application_Management
         public Label Label_NumberCandidates { get => label_NumberCandidates; set => label_NumberCandidates = value; }
         public event EventHandler<ButtonClickEventArgs> Button_Delete_Click;
 
-        public UC_EmployerJob(string empID)
+        public UC_Employer_Job(string empID)
         {
             this.empID = empID;
             InitializeComponent();
