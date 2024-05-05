@@ -153,16 +153,16 @@ namespace Job_Application_Management
             }
         }
 
-        public List<UC_CandidateCV> GetCandidateResumeFromDB(string empID, int jobID, string status)
+        public List<UC_Employer_CandidateCV> GetCandidateResumeFromDB(string empID, int jobID, string status)
         {
             string sqlQuery = $"SELECT R.CddID, C.CddName, R.UniversityName, R.Major, R.GPA " +
                 $"FROM Resume R INNER JOIN Candidates C ON R.CddID = C.CddID " +
                 $"WHERE JobID = '{jobID}' AND Status = N'{status}'";
             List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
-            List<UC_CandidateCV> items = new List<UC_CandidateCV>();
+            List<UC_Employer_CandidateCV> items = new List<UC_Employer_CandidateCV>();
             foreach (var row in resultList)
             {
-                UC_CandidateCV item = new UC_CandidateCV(empID, jobID);
+                UC_Employer_CandidateCV item = new UC_Employer_CandidateCV(empID, jobID);
                 item.CddID = (string)row["CddID"];
                 item.Label_Name.Text = (string)row["CddName"];
                 item.Label_University.Text = (string)row["UniversityName"];
@@ -481,6 +481,47 @@ namespace Job_Application_Management
                 item.Label_NumberApprovedCandidates.Text += numberApproved.ToString();
                 item.NumberApplied = numberApplied;
                 item.NumberApproved = numberApproved;
+                items.Add(item);
+            }
+            return items;
+        }
+
+        public List<UC_Employer_Candidate> GetCandidatesFromDB()
+        {
+            string sqlQuery = $"SELECT * " +
+                $"FROM Candidates ";
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_Employer_Candidate> items = new List<UC_Employer_Candidate>();
+            foreach (var row in resultList)
+            {
+                UC_Employer_Candidate item = new UC_Employer_Candidate();
+                item.CddID = (string)row["CddID"];
+                item.Label_Name.Text = (string)row["CddName"];
+                item.Label_Phone.Text = (string)row["Phone"];
+                item.Label_Email.Text = (string)row["Email"];
+                item.Label_Hometown.Text = (string)row["Hometown"];
+                item.Label_University.Text = (string)row["Education"];
+                items.Add(item);
+            }
+            return items;
+        }
+
+        public List<UC_Employer_Candidate> SearchCandidatesFromDB(string keyword)
+        {
+            string sqlQuery = $"SELECT * " +
+                $"FROM Candidates " +
+                $"WHERE CONCAT(CddName, Phone, Email, CddAddress, Hometown, Sex, Education) LIKE N'%' + '{keyword}' + '%'";
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_Employer_Candidate> items = new List<UC_Employer_Candidate>();
+            foreach (var row in resultList)
+            {
+                UC_Employer_Candidate item = new UC_Employer_Candidate();
+                item.CddID = (string)row["CddID"];
+                item.Label_Name.Text = (string)row["CddName"];
+                item.Label_Phone.Text = (string)row["Phone"];
+                item.Label_Email.Text = (string)row["Email"];
+                item.Label_Hometown.Text = (string)row["Hometown"];
+                item.Label_University.Text = (string)row["Education"];
                 items.Add(item);
             }
             return items;

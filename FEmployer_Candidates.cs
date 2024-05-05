@@ -28,10 +28,34 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
-            List<UC_CoverLetter> resumeItems = employerDAO.GetCandidateProfileFromDB();
-            foreach (var resume in resumeItems)
+            List<UC_Employer_Candidate> candidates = employerDAO.GetCandidatesFromDB();
+            foreach (var candidate in candidates)
             {
-                flowLayoutPanel1.Controls.Add(resume);
+                flowLayoutPanel1.Controls.Add(candidate);
+            }
+        }
+
+        private void button_LoadData_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            LoadInfor();
+        }
+
+        private void button_Search_Click(object sender, EventArgs e)
+        {
+            if (textBox_Search.Text == null || textBox_Search.Text == "")
+            {
+                flowLayoutPanel1.Controls.Clear();
+                LoadInfor();
+            }
+            else
+            {
+                flowLayoutPanel1.Controls.Clear();
+                List<UC_Employer_Candidate> candidates = employerDAO.SearchCandidatesFromDB(textBox_Search.Text);
+                foreach (var candidate in candidates)
+                {
+                    flowLayoutPanel1.Controls.Add(candidate);
+                }
             }
         }
     }

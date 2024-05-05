@@ -271,6 +271,12 @@
     <Compile Include="UC_CV.Designer.cs">
       <DependentUpon>UC_CV.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Employer_Candidate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Employer_Candidate.Designer.cs">
+      <DependentUpon>UC_Employer_Candidate.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Employer_Interview.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -307,11 +313,11 @@
     <Compile Include="UC_Employer_Job.Designer.cs">
       <DependentUpon>UC_Employer_Job.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_CandidateCV.cs">
+    <Compile Include="UC_Employer_CandidateCV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_CandidateCV.Designer.cs">
-      <DependentUpon>UC_CandidateCV.cs</DependentUpon>
+    <Compile Include="UC_Employer_CandidateCV.Designer.cs">
+      <DependentUpon>UC_Employer_CandidateCV.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_JobsSaved.cs">
       <SubType>UserControl</SubType>
@@ -422,6 +428,9 @@
     <EmbeddedResource Include="UC_CV.resx">
       <DependentUpon>UC_CV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Employer_Candidate.resx">
+      <DependentUpon>UC_Employer_Candidate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Employer_Interview.resx">
       <DependentUpon>UC_Employer_Interview.cs</DependentUpon>
     </EmbeddedResource>
@@ -440,8 +449,8 @@
     <EmbeddedResource Include="UC_Employer_Job.resx">
       <DependentUpon>UC_Employer_Job.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_CandidateCV.resx">
-      <DependentUpon>UC_CandidateCV.cs</DependentUpon>
+    <EmbeddedResource Include="UC_Employer_CandidateCV.resx">
+      <DependentUpon>UC_Employer_CandidateCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_JobsSaved.resx">
       <DependentUpon>UC_JobsSaved.cs</DependentUpon>

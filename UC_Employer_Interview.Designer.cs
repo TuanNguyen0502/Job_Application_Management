@@ -63,10 +63,11 @@
             // 
             this.label_JobName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_JobName.AutoSize = true;
-            this.label_JobName.ForeColor = System.Drawing.Color.Black;
-            this.label_JobName.Location = new System.Drawing.Point(33, 13);
+            this.label_JobName.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_JobName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(29)))));
+            this.label_JobName.Location = new System.Drawing.Point(34, 13);
             this.label_JobName.Name = "label_JobName";
-            this.label_JobName.Size = new System.Drawing.Size(157, 34);
+            this.label_JobName.Size = new System.Drawing.Size(155, 34);
             this.label_JobName.TabIndex = 1;
             this.label_JobName.Text = "Job Name";
             this.label_JobName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
