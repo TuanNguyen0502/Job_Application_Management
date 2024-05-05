@@ -24,15 +24,30 @@ namespace Job_Application_Management
             uC_CV1.CreateCV_Click += createCV_Cick;
             uC_CV1.RemoveCVValid_Click += removeCVValid_Click;
         }
+
+        public void SetEnableCreateCVButton()
+        {
+            uC_CV1.Btn_RemoveCVValid.Enabled = false;
+            uC_CV1.Btn_CreateCV.Enabled = true;
+        }
+
+        public void SetEnableRemoveCVButton()
+        {
+            uC_CV1.Btn_CreateCV.Enabled = false;
+            uC_CV1.Btn_RemoveCVValid.Enabled = true;
+        }
+
         public void createCV_Cick(object sender, ButtonClickEventArgs e)
         {
+            SetEnableCreateCVButton();
             canDAO.SaveAvailableCV(e.Cv, cddid);
+            this.Close();
         }
         public void removeCVValid_Click (object sender, ButtonClickEventArgs e)
         {
-            int jobid = canDAO.GetJobIDByCddID(e.CddID);
-            MessageBox.Show($"CddID = {e.CddID}, JobID = {e.JobID}");
-            canDAO.RemoveCVValid(e.CddID, jobid);
+            SetEnableRemoveCVButton();
+            canDAO.RemoveCVValid(e.CddID);
+            this.Close();
         }
 
         private void FCandidate_CreateCV_Load(object sender, EventArgs e)
@@ -40,14 +55,12 @@ namespace Job_Application_Management
             if (canDAO.CheckCandidateExistsInResume(cddid))
             {
                 MessageBox.Show("Bạn đã có sẵn CV rồi. Ứng tuyển công việc ngay thôi !");
-                uC_CV1.Btn_CreateCV.Enabled = false;
-                uC_CV1.Btn_RemoveCVValid.Enabled = true;
+                SetEnableRemoveCVButton();
             }
             else
             {
                 MessageBox.Show("Mời bạn đăng kí CV cho riêng mình");
-                uC_CV1.Btn_RemoveCVValid.Enabled = false;
-                uC_CV1.Btn_CreateCV.Enabled = true;
+                SetEnableCreateCVButton();
             }
         }
     }

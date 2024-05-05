@@ -37,8 +37,6 @@ namespace Job_Application_Management
         public Guna2Button Button_Approve { get => button_Approve; set => button_Approve = value; }
         public Guna2Button Button_Refuse { get => button_Refuse; set => button_Refuse = value; }
 
-        public event EventHandler<ButtonClickEventArgs> CreateCV_Click;
-        public event EventHandler<ButtonClickEventArgs> RemoveCVValid_Click;
 
         public CV GetInfoResumeAtForm()
         {
@@ -130,7 +128,7 @@ namespace Job_Application_Management
             }
         }
 
-
+        public event EventHandler<ButtonClickEventArgs> CreateCV_Click;
         private void btn_CreateCV_Click(object sender, EventArgs e)
         {
             CV cv = GetInfoResumeAtForm();
@@ -138,7 +136,7 @@ namespace Job_Application_Management
             /*CV cv = GetInfoResumeAtForm();
             candidateDAO.SaveAvailableCV(cv, cddID);*/
         }
-
+        public event EventHandler<ButtonClickEventArgs> RemoveCVValid_Click;
         private void btn_RemoveCVValid_Click(object sender, EventArgs e)
         {
             RemoveCVValid_Click?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
