@@ -294,6 +294,33 @@ namespace Job_Application_Management
             }
             return resultList;
         }
+        public string ExecuteScalar(string sqlStr)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    string res = "";
+                    if (reader.Read())
+                    {
+                        res = reader.GetString(0);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No rows found");
+                    }
+                    return res;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Read error\n"+ex.Message);
+                    return null;
+                }
+            }
+        }
         public string ExecuteScalar(string sqlStr, SqlParameter[] lstParam)
         {
             using (SqlConnection conn = new SqlConnection(conStr))
