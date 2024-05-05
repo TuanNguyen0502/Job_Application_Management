@@ -162,11 +162,11 @@
     <Compile Include="FEmployer_Company.Designer.cs">
       <DependentUpon>FEmployer_Company.cs</DependentUpon>
     </Compile>
-    <Compile Include="FEmployer_FindCandidate.cs">
+    <Compile Include="FEmployer_Candidates.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FEmployer_FindCandidate.Designer.cs">
-      <DependentUpon>FEmployer_FindCandidate.cs</DependentUpon>
+    <Compile Include="FEmployer_Candidates.Designer.cs">
+      <DependentUpon>FEmployer_Candidates.cs</DependentUpon>
     </Compile>
     <Compile Include="FEmployer_Information.cs">
       <SubType>Form</SubType>
@@ -364,8 +364,8 @@
     <EmbeddedResource Include="FEmployer_Company.resx">
       <DependentUpon>FEmployer_Company.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FEmployer_FindCandidate.resx">
-      <DependentUpon>FEmployer_FindCandidate.cs</DependentUpon>
+    <EmbeddedResource Include="FEmployer_Candidates.resx">
+      <DependentUpon>FEmployer_Candidates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_Information.resx">
       <DependentUpon>FEmployer_Information.cs</DependentUpon>

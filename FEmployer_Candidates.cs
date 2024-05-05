@@ -12,11 +12,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Job_Application_Management
 {
-    public partial class FEmployer_FindCandidate : Form
+    public partial class FEmployer_Candidates : Form
     {
         private EmployerDAO employerDAO = new EmployerDAO();
 
-        public FEmployer_FindCandidate()
+        public FEmployer_Candidates()
         {
             InitializeComponent();
         }

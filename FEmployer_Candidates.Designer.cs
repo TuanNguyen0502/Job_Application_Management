@@ -1,6 +1,6 @@
 ﻿namespace Job_Application_Management
 {
-    partial class FEmployer_FindCandidate
+    partial class FEmployer_Candidates
     {
         /// <summary>
         /// Required designer variable.
