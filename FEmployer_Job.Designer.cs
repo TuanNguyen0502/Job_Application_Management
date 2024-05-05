@@ -31,10 +31,10 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Post = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.flowLayoutPanel_Jobs = new System.Windows.Forms.FlowLayoutPanel();
-            this.button_Search = new Guna.UI2.WinForms.Guna2Button();
             this.textBox_Search = new Guna.UI2.WinForms.Guna2TextBox();
+            this.button_Search = new Guna.UI2.WinForms.Guna2Button();
             this.comboBox_Sort = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.flowLayoutPanel_Jobs = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,34 +129,6 @@
             this.gunaLabel1.TabIndex = 20;
             this.gunaLabel1.Text = "Post new job";
             // 
-            // flowLayoutPanel_Jobs
-            // 
-            this.flowLayoutPanel_Jobs.AutoScroll = true;
-            this.flowLayoutPanel_Jobs.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel_Jobs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel_Jobs.Location = new System.Drawing.Point(0, 121);
-            this.flowLayoutPanel_Jobs.Name = "flowLayoutPanel_Jobs";
-            this.flowLayoutPanel_Jobs.Padding = new System.Windows.Forms.Padding(5);
-            this.flowLayoutPanel_Jobs.Size = new System.Drawing.Size(1266, 542);
-            this.flowLayoutPanel_Jobs.TabIndex = 7;
-            // 
-            // button_Search
-            // 
-            this.button_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_Search.AutoRoundedCorners = true;
-            this.button_Search.BorderRadius = 22;
-            this.button_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_Search.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Search.ForeColor = System.Drawing.Color.White;
-            this.button_Search.Location = new System.Drawing.Point(796, 40);
-            this.button_Search.Name = "button_Search";
-            this.button_Search.Size = new System.Drawing.Size(133, 46);
-            this.button_Search.TabIndex = 22;
-            this.button_Search.Text = "Search";
-            // 
             // textBox_Search
             // 
             this.textBox_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -180,6 +152,24 @@
             this.textBox_Search.Size = new System.Drawing.Size(431, 46);
             this.textBox_Search.TabIndex = 21;
             // 
+            // button_Search
+            // 
+            this.button_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_Search.AutoRoundedCorners = true;
+            this.button_Search.BorderRadius = 22;
+            this.button_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_Search.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Search.ForeColor = System.Drawing.Color.White;
+            this.button_Search.Location = new System.Drawing.Point(796, 40);
+            this.button_Search.Name = "button_Search";
+            this.button_Search.Size = new System.Drawing.Size(133, 46);
+            this.button_Search.TabIndex = 22;
+            this.button_Search.Text = "Search";
+            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
+            // 
             // comboBox_Sort
             // 
             this.comboBox_Sort.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -200,6 +190,18 @@
             this.comboBox_Sort.Name = "comboBox_Sort";
             this.comboBox_Sort.Size = new System.Drawing.Size(140, 36);
             this.comboBox_Sort.TabIndex = 23;
+            this.comboBox_Sort.SelectedIndexChanged += new System.EventHandler(this.comboBox_Sort_SelectedIndexChanged);
+            // 
+            // flowLayoutPanel_Jobs
+            // 
+            this.flowLayoutPanel_Jobs.AutoScroll = true;
+            this.flowLayoutPanel_Jobs.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel_Jobs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel_Jobs.Location = new System.Drawing.Point(0, 121);
+            this.flowLayoutPanel_Jobs.Name = "flowLayoutPanel_Jobs";
+            this.flowLayoutPanel_Jobs.Padding = new System.Windows.Forms.Padding(5);
+            this.flowLayoutPanel_Jobs.Size = new System.Drawing.Size(1266, 542);
+            this.flowLayoutPanel_Jobs.TabIndex = 7;
             // 
             // FEmployer_Job
             // 

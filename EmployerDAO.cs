@@ -403,5 +403,87 @@ namespace Job_Application_Management
             }
             return items;
         }
+
+        public List<UC_Employer_Job> SearchJobsFromDB(string empID, string keyword)
+        {
+            string sqlQuery = $"SELECT Name, Salary, PostTime, ExpirationDate, ID FROM Jobs " +
+                $"WHERE EmpID = '{empID}' " +
+                      $"AND CONCAT(ID, Name, Salary, JobDecription, WorkDuration, Experience, Benefit, RequestCdd, PostTime, ExpirationDate) LIKE N'%' + '{keyword}' + '%'";
+
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_Employer_Job> items = new List<UC_Employer_Job>();
+
+            foreach (var row in resultList)
+            {
+                string sqlQuery2 = $"SELECT Count(CddID) as SL " +
+                    $"FROM Resume " +
+                    $"WHERE JobID = '{(int)row["ID"]}' AND Status = 'Applying' " +
+                    $"GROUP BY JobID";
+                int numberApplied = dbConnection.ExecuteReaderCount(sqlQuery2);
+                string sqlQuery3 = $"SELECT Count(CddID) as SL " +
+                    $"FROM Resume " +
+                    $"WHERE JobID = '{(int)row["ID"]}' AND Status = 'Approved' " +
+                    $"GROUP BY JobID";
+                int numberApproved = dbConnection.ExecuteReaderCount(sqlQuery3);
+
+                UC_Employer_Job item = new UC_Employer_Job(empID);
+                item.JobID = (int)row["ID"];
+                item.Label_JobName.Text = (string)row["Name"];
+                item.Label_Salary.Text += row["Salary"].ToString();
+                DateTime postTime = (DateTime)row["PostTime"];
+                string formattedPostTime = postTime.ToString("yyyy-MM-dd");
+                item.Label_PostedTime.Text = formattedPostTime;
+                DateTime deadline = (DateTime)row["ExpirationDate"];
+                string formattedDeadline = postTime.ToString("yyyy-MM-dd");
+                item.Label_Deadline.Text += formattedDeadline;
+                item.Label_NumberAppliedCandidates.Text += numberApplied.ToString();
+                item.Label_NumberApprovedCandidates.Text += numberApproved.ToString();
+                item.NumberApplied = numberApplied;
+                item.NumberApproved = numberApproved;
+                items.Add(item);
+            }
+            return items;
+        }
+
+        public List<UC_Employer_Job> SortJobsFromDB(string empID, string keyword)
+        {
+            string sqlQuery = $"SELECT Name, Salary, PostTime, ExpirationDate, ID FROM Jobs " +
+                $"WHERE EmpID = '{empID}' " +
+                $"ORDER BY PostTime {keyword}";
+
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_Employer_Job> items = new List<UC_Employer_Job>();
+
+            foreach (var row in resultList)
+            {
+                string sqlQuery2 = $"SELECT Count(CddID) as SL " +
+                    $"FROM Resume " +
+                    $"WHERE JobID = '{(int)row["ID"]}' AND Status = 'Applying' " +
+                    $"GROUP BY JobID";
+                int numberApplied = dbConnection.ExecuteReaderCount(sqlQuery2);
+                string sqlQuery3 = $"SELECT Count(CddID) as SL " +
+                    $"FROM Resume " +
+                    $"WHERE JobID = '{(int)row["ID"]}' AND Status = 'Approved' " +
+                    $"GROUP BY JobID";
+                int numberApproved = dbConnection.ExecuteReaderCount(sqlQuery3);
+
+                UC_Employer_Job item = new UC_Employer_Job(empID);
+                item.JobID = (int)row["ID"];
+                item.Label_JobName.Text = (string)row["Name"];
+                item.Label_Salary.Text += row["Salary"].ToString();
+                DateTime postTime = (DateTime)row["PostTime"];
+                string formattedPostTime = postTime.ToString("yyyy-MM-dd");
+                item.Label_PostedTime.Text = formattedPostTime;
+                DateTime deadline = (DateTime)row["ExpirationDate"];
+                string formattedDeadline = postTime.ToString("yyyy-MM-dd");
+                item.Label_Deadline.Text += formattedDeadline;
+                item.Label_NumberAppliedCandidates.Text += numberApplied.ToString();
+                item.Label_NumberApprovedCandidates.Text += numberApproved.ToString();
+                item.NumberApplied = numberApplied;
+                item.NumberApproved = numberApproved;
+                items.Add(item);
+            }
+            return items;
+        }
     }
 }

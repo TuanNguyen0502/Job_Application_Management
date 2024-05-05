@@ -55,5 +55,47 @@ namespace Job_Application_Management
                 flowLayoutPanel_Jobs.Controls.Add(jobItem);
             }
         }
+
+        private void button_Search_Click(object sender, EventArgs e)
+        {
+            if (textBox_Search.Text == null || textBox_Search.Text == "")
+            {
+                LoadInfor();
+            }
+            else
+            {
+                flowLayoutPanel_Jobs.Controls.Clear();
+                List<UC_Employer_Job> jobItems = employerDAO.SearchJobsFromDB(empID, textBox_Search.Text);
+                foreach (var jobItem in jobItems)
+                {
+                    jobItem.Button_Delete_Click += button_Delete_Click;
+                    flowLayoutPanel_Jobs.Controls.Add(jobItem);
+                }
+            }
+        }
+
+        private void comboBox_Sort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox_Sort.SelectedIndex == 0)
+            {
+                flowLayoutPanel_Jobs.Controls.Clear();
+                List<UC_Employer_Job> jobItems = employerDAO.SortJobsFromDB(empID, "DESC");
+                foreach (var jobItem in jobItems)
+                {
+                    jobItem.Button_Delete_Click += button_Delete_Click;
+                    flowLayoutPanel_Jobs.Controls.Add(jobItem);
+                }
+            }
+            if (comboBox_Sort.SelectedIndex == 1)
+            {
+                flowLayoutPanel_Jobs.Controls.Clear();
+                List<UC_Employer_Job> jobItems = employerDAO.SortJobsFromDB(empID, "ASC");
+                foreach (var jobItem in jobItems)
+                {
+                    jobItem.Button_Delete_Click += button_Delete_Click;
+                    flowLayoutPanel_Jobs.Controls.Add(jobItem);
+                }
+            }
+        }
     }
 }
