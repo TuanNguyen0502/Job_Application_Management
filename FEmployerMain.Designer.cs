@@ -140,7 +140,7 @@
             this.button_FindCandidate.Name = "button_FindCandidate";
             this.button_FindCandidate.Size = new System.Drawing.Size(194, 62);
             this.button_FindCandidate.TabIndex = 1;
-            this.button_FindCandidate.Text = "Find";
+            this.button_FindCandidate.Text = "Candidates";
             this.button_FindCandidate.UseTransparentBackground = true;
             this.button_FindCandidate.CheckedChanged += new System.EventHandler(this.button_Home_CheckedChanged);
             this.button_FindCandidate.Click += new System.EventHandler(this.button_FindCandidate_Click);

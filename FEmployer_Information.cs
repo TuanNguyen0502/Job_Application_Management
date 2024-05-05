@@ -16,13 +16,12 @@ namespace Job_Application_Management
     {
         private string empID;
         private Employer employer;
-        private EmployerDAO employerDAO;
+        private EmployerDAO employerDAO = new EmployerDAO();
 
         public FEmployer_Information(string empID)
         {
-            this.empID = empID;
-            employerDAO = new EmployerDAO();
             InitializeComponent();
+            this.empID = empID;
         }
         public FEmployer_Information()
         {

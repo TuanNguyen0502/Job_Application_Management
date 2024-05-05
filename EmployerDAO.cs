@@ -12,18 +12,35 @@ namespace Job_Application_Management
 {
     public class EmployerDAO
     {
-        private DBConnection dbConnection;
+        private DBConnection dbConnection = new DBConnection();
         private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
 
         public EmployerDAO()
         {
-            this.dbConnection = new DBConnection();
         }
 
-        public void Execute(string sqlStr)
+        public List<UC_Employer_Interview> SearchInterviewsFromDB(string empID, string keyword)
         {
-            dbConnection.ExecuteWriteData(sqlStr);
+            string sqlQuery = $"SELECT * " +
+                $"FROM Interviews I INNER JOIN Candidates C ON I.CddID = C.CddID " +
+                                  $"INNER JOIN Jobs J ON I.JobID = J.ID " +
+                $"WHERE CONCAT(I.CddID, C.CddName, C.Phone, C.Email, C.CddAddress, C.Hometown, C.Sex, C.Education, " +
+                             $"I.JobID, J.Name, J.Salary, J.ExpirationDate, J.PostTime, I.InterviewTime, I.Note) LIKE N'%' + '{keyword}' + '%' " +
+                      $"AND I.EmpID = '{empID}'";
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_Employer_Interview> items = new List<UC_Employer_Interview>();
+            foreach (var row in resultList)
+            {
+                UC_Employer_Interview item = new UC_Employer_Interview(empID, (string)row["CddID"], (int)row["ID"]);
+                item.Label_JobName.Text = (string)row["Name"];
+                item.Label_CandidateName.Text = (string)row["CddName"];
+                item.Label_InterviewTime.Text = row["InterviewTime"].ToString();
+                item.Label_Note.Text = row["Note"].ToString();
+                items.Add(item);
+            }
+            return items;
         }
+
         public List<UC_Employer_Interview> GetInterviewsFromDB(string empID)
         {
             string sqlQuery = $"SELECT J.ID, J.Name, C.CddName, C.CddID, I.InterviewTime, I.Note " +
@@ -47,21 +64,30 @@ namespace Job_Application_Management
         public void DeleteInterview(Interview interview)
         {
             string sqlStr = string.Format($"DELETE FROM Interviews WHERE ID = '{interview.Id}'");
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Successfully cleared interview time");
+            }
         }
 
         public void UpdateInterview(Interview interview)
         {
             string sqlStr = string.Format($"UPDATE Interviews SET InterviewTime = '{interview.InterviewTime}', Note = N'{interview.Note}' " +
                 $"WHERE ID = '{interview.Id}'");
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Successfully updated interview");
+            }
         }
 
         public void AddInterview(Interview interview)
         {
             string sqlStr = string.Format($"INSERT INTO Interviews (EmpID, CddID, JobID, InterviewTime, Note) " +
                 $"VALUES ('{interview.EmpID}', '{interview.CddID}', '{interview.JobID}', '{interview.InterviewTime}', N'{interview.Note}')");
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Create new interview time successfully");
+            }
         }
 
         public Interview GetInterviewFormDB(string empID, string cddID, int jobID)
@@ -121,7 +147,10 @@ namespace Job_Application_Management
         {
             string sqlStr = string.Format($"UPDATE Resume SET Status = N'{resume.Status}' WHERE CddID = '{resume.CddID}' " +
                 $"AND JobID = '{resume.JobID}'");
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Resume approved");
+            }
         }
 
         public List<UC_CandidateCV> GetCandidateResumeFromDB(string empID, int jobID, string status)
@@ -223,7 +252,10 @@ namespace Job_Application_Management
                 $"Manager = N'{company.Manager}', TaxCode = '{company.TaxCode}', BusinessLicense = '{company.BusinessLicense}', " +
                 $"NumberOfEmployee = '{company.NumberOfEmployee}', NumberOfFollower = '{company.NumberOfFollower}', Introduction = N'{company.Introduction}' " +
                 $"WHERE Name = '{company.Name}'");
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Successfully updated company information");
+            }
         }
         public Employer GetEmployerFromDB(string empID)
         {
@@ -258,7 +290,10 @@ namespace Job_Application_Management
         {
             string sqlStr = string.Format($"UPDATE Employers SET Email = '{employer.Email}', Name = N'{employer.Name}', Sex = N'{employer.Sex}', " +
                 $"Phone = '{employer.Phone}', Workplace = N'{employer.Workplace}' WHERE ID = '{employer.Id}'");
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Successfully updated employer information");
+            }
         }
 
         public void AddJob(Job job)
@@ -268,7 +303,10 @@ namespace Job_Application_Management
                 $"'{job.JobDescription}', '{job.WorkDuration}', '{job.Experience}', '{job.Deadline.ToString("yyyy-MM-dd")}', '{job.Benefit}', " +
                 $"'{job.Request}', '{job.PostTime.ToString("yyyy-MM-dd")}', '{job.EmpID}')");
 
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Add new job successfully");
+            }
         }
 
         public void UpdateJob(Job job)
@@ -278,14 +316,20 @@ namespace Job_Application_Management
                 $"Experience = '{job.Experience}', ExpirationDate = '{job.Deadline.ToString("yyyy-MM-dd")}', Benefit = '{job.Benefit}', RequestCdd = '{job.Request}', " +
                 $"PostTime = '{job.PostTime.ToString("yyyy-MM-dd")}' WHERE ID = '{job.Id}'");
 
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Job update successful");
+            }
         }
 
         public void DeleteJob(string jobID)
         {
             string sqlStr = string.Format($"DELETE FROM Jobs WHERE ID = '{jobID}'");
 
-            Execute(sqlStr);
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Deleted job successfully");
+            }
         }
 
         public Job GetJobFromDB(int jobID)
@@ -306,7 +350,7 @@ namespace Job_Application_Management
                         job.Name = reader.GetString(1);
                         job.Salary = reader.GetInt32(2);
                         job.JobDescription = reader.GetString(3);
-                        job.WorkDuration = reader.GetString(4);
+                        job.WorkDuration = reader.GetInt32(4).ToString();
                         job.Experience = reader.GetString(5);
                         job.Deadline = reader.GetDateTime(6);
                         job.Benefit = reader.GetString(7);
@@ -321,22 +365,27 @@ namespace Job_Application_Management
             }
         }
 
-        public List<UC_EmployerJob> GetJobsFromDB(string empID)
+        public List<UC_Employer_Job> GetJobsFromDB(string empID)
         {
             string sqlQuery = $"SELECT Name, Salary, PostTime, ExpirationDate, ID FROM Jobs WHERE EmpID = '{empID}'";
 
             List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
-            List<UC_EmployerJob> items = new List<UC_EmployerJob>();
+            List<UC_Employer_Job> items = new List<UC_Employer_Job>();
 
             foreach (var row in resultList)
             {
                 string sqlQuery2 = $"SELECT Count(CddID) as SL " +
                     $"FROM Resume " +
-                    $"WHERE JobID = '{(int)row["ID"]}' " +
+                    $"WHERE JobID = '{(int)row["ID"]}' AND Status = 'Applying' " +
                     $"GROUP BY JobID";
-                string number = dbConnection.ExecuteReaderCount(sqlQuery2);
+                int numberApplied = dbConnection.ExecuteReaderCount(sqlQuery2);
+                string sqlQuery3 = $"SELECT Count(CddID) as SL " +
+                    $"FROM Resume " +
+                    $"WHERE JobID = '{(int)row["ID"]}' AND Status = 'Approved' " +
+                    $"GROUP BY JobID";
+                int numberApproved = dbConnection.ExecuteReaderCount(sqlQuery3);
 
-                UC_EmployerJob item = new UC_EmployerJob(empID);
+                UC_Employer_Job item = new UC_Employer_Job(empID);
                 item.JobID = (int)row["ID"];
                 item.Label_JobName.Text = (string)row["Name"];
                 item.Label_Salary.Text += row["Salary"].ToString();
@@ -346,11 +395,13 @@ namespace Job_Application_Management
                 DateTime deadline = (DateTime)row["ExpirationDate"];
                 string formattedDeadline = postTime.ToString("yyyy-MM-dd");
                 item.Label_Deadline.Text += formattedDeadline;
-                item.Label_NumberCandidates.Text += number;
+                item.Label_NumberAppliedCandidates.Text += numberApplied.ToString();
+                item.Label_NumberApprovedCandidates.Text += numberApproved.ToString();
+                item.NumberApplied = numberApplied;
+                item.NumberApproved = numberApproved;
                 items.Add(item);
             }
             return items;
         }
-
     }
 }

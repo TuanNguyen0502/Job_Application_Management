@@ -11,11 +11,13 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class UC_EmployerJob : UserControl
+    public partial class UC_Employer_Job : UserControl
     {
         private Form currentFormChild;
         private int jobID;
         private string empID;
+        private int numberApplied;
+        private int numberApproved;
 
         public Label Label_PostedTime { get => label_PostedTime; set => label_PostedTime = value; }
         public Label Label_JobName { get => label_JobName; set => label_JobName = value; }
@@ -24,10 +26,14 @@ namespace Job_Application_Management
         public int JobID { get => jobID; set => jobID = value; }
         public Label Label_Salary { get => label_Salary; set => label_Salary = value; }
         public Label Label_Deadline { get => label_Deadline; set => label_Deadline = value; }
-        public Label Label_NumberCandidates { get => label_NumberCandidates; set => label_NumberCandidates = value; }
+        public Label Label_NumberAppliedCandidates { get => label_NumberAppliedCandidates; set => label_NumberAppliedCandidates = value; }
+        public Label Label_NumberApprovedCandidates { get => label_NumberApprovedCandidates; set => label_NumberApprovedCandidates = value; }
+        public int NumberApplied { get => numberApplied; set => numberApplied = value; }
+        public int NumberApproved { get => numberApproved; set => numberApproved = value; }
+
         public event EventHandler<ButtonClickEventArgs> Button_Delete_Click;
 
-        public UC_EmployerJob(string empID)
+        public UC_Employer_Job(string empID)
         {
             this.empID = empID;
             InitializeComponent();
@@ -50,7 +56,7 @@ namespace Job_Application_Management
 
         private void button_Edit_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_JobDetail(JobID, empID));
+            OpenChildForm(new FEmployer_JobDetail(JobID, empID, numberApplied, numberApproved));
         }
 
         private void button_delete_Click(object sender, EventArgs e)

@@ -83,11 +83,11 @@
             this.button_Show.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_Show.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.button_Show.ForeColor = System.Drawing.Color.White;
-            this.button_Show.Location = new System.Drawing.Point(915, 12);
+            this.button_Show.Location = new System.Drawing.Point(913, 12);
             this.button_Show.Name = "button_Show";
-            this.button_Show.Size = new System.Drawing.Size(76, 36);
+            this.button_Show.Size = new System.Drawing.Size(79, 36);
             this.button_Show.TabIndex = 0;
-            this.button_Show.Text = "Show";
+            this.button_Show.Text = "Detail";
             this.button_Show.Click += new System.EventHandler(this.button_Show_Click);
             // 
             // label_CandidateName
@@ -95,11 +95,11 @@
             this.label_CandidateName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_CandidateName.AutoSize = true;
             this.label_CandidateName.ForeColor = System.Drawing.Color.Black;
-            this.label_CandidateName.Location = new System.Drawing.Point(254, 0);
+            this.label_CandidateName.Location = new System.Drawing.Point(285, 13);
             this.label_CandidateName.Name = "label_CandidateName";
-            this.label_CandidateName.Size = new System.Drawing.Size(161, 60);
+            this.label_CandidateName.Size = new System.Drawing.Size(99, 34);
             this.label_CandidateName.TabIndex = 1;
-            this.label_CandidateName.Text = "candidate name";
+            this.label_CandidateName.Text = "Name";
             this.label_CandidateName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_InterviewTime
@@ -131,7 +131,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);

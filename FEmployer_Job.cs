@@ -21,19 +21,19 @@ namespace Job_Application_Management
 
         public FEmployer_Job(string empID)
         {
-            this.empID = empID;
             InitializeComponent();
+            this.empID = empID;
         }
 
         private void button_Delete_Click(object sender, ButtonClickEventArgs e)
         {
             employerDAO.DeleteJob(e.CddID);
-            flowLayoutPanel_Jobs.Controls.Remove(sender as UC_EmployerJob);
+            flowLayoutPanel_Jobs.Controls.Remove(sender as UC_Employer_Job);
         }
 
         private void button_Post_Click(object sender, EventArgs e)
         {
-            FEmployer_JobDetail fEmployer_JobDetail = new FEmployer_JobDetail(0, empID);
+            FEmployer_JobDetail fEmployer_JobDetail = new FEmployer_JobDetail(0, empID, 0, 0);
             fEmployer_JobDetail.ShowDialog();
             if (fEmployer_JobDetail.DialogResult == DialogResult.OK)
             {
@@ -48,7 +48,7 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
-            List<UC_EmployerJob> jobItems = employerDAO.GetJobsFromDB(empID);
+            List<UC_Employer_Job> jobItems = employerDAO.GetJobsFromDB(empID);
             foreach (var jobItem in jobItems)
             {
                 jobItem.Button_Delete_Click += button_Delete_Click;

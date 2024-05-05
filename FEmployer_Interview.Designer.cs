@@ -39,8 +39,10 @@
             this.button_Invite = new Guna.UI2.WinForms.Guna2Button();
             this.button_Update = new Guna.UI2.WinForms.Guna2Button();
             this.button_Delete = new Guna.UI2.WinForms.Guna2Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -172,6 +174,7 @@
             // 
             // button_Invite
             // 
+            this.button_Invite.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_Invite.BorderRadius = 20;
             this.button_Invite.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.button_Invite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -181,7 +184,7 @@
             this.button_Invite.ForeColor = System.Drawing.Color.White;
             this.button_Invite.Image = global::Job_Application_Management.Properties.Resources.icons8_invite_64;
             this.button_Invite.ImageSize = new System.Drawing.Size(64, 64);
-            this.button_Invite.Location = new System.Drawing.Point(27, 438);
+            this.button_Invite.Location = new System.Drawing.Point(3, 2);
             this.button_Invite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Invite.Name = "button_Invite";
             this.button_Invite.Size = new System.Drawing.Size(227, 84);
@@ -191,6 +194,7 @@
             // 
             // button_Update
             // 
+            this.button_Update.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_Update.BorderRadius = 20;
             this.button_Update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.button_Update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -200,7 +204,7 @@
             this.button_Update.ForeColor = System.Drawing.Color.White;
             this.button_Update.Image = global::Job_Application_Management.Properties.Resources.icons8_invite_64;
             this.button_Update.ImageSize = new System.Drawing.Size(64, 64);
-            this.button_Update.Location = new System.Drawing.Point(295, 438);
+            this.button_Update.Location = new System.Drawing.Point(236, 2);
             this.button_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Update.Name = "button_Update";
             this.button_Update.Size = new System.Drawing.Size(227, 84);
@@ -227,15 +231,23 @@
             this.button_Delete.Text = "    Delete";
             this.button_Delete.Click += new System.EventHandler(this.button_Delete_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.button_Invite);
+            this.flowLayoutPanel1.Controls.Add(this.button_Update);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(27, 438);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(498, 100);
+            this.flowLayoutPanel1.TabIndex = 5;
+            // 
             // FEmployer_Interview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1511, 649);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.button_Delete);
-            this.Controls.Add(this.button_Update);
-            this.Controls.Add(this.button_Invite);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -249,6 +261,7 @@
             this.Load += new System.EventHandler(this.FEmployer_Interview_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +280,6 @@
         private Guna.UI2.WinForms.Guna2Button button_Invite;
         private Guna.UI2.WinForms.Guna2Button button_Update;
         private Guna.UI2.WinForms.Guna2Button button_Delete;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

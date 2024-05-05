@@ -14,13 +14,12 @@ namespace Job_Application_Management
     {
         private string name;
         private Company company;
-        private EmployerDAO employerDAO;
+        private EmployerDAO employerDAO = new EmployerDAO();
 
         public FEmployer_Company(string companyName)
         {
-            this.name = companyName;
-            employerDAO = new EmployerDAO();
             InitializeComponent();
+            this.name = companyName;
         }
 
         private void FEmployer_Company_Load(object sender, EventArgs e)

@@ -138,12 +138,6 @@
       <DependentUpon>FCandidate_SelectedJobDetails.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FEmployer_CandidateDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FEmployer_CandidateDetail.Designer.cs">
-      <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
-    </Compile>
     <Compile Include="FEmployer_ApprovedCandidate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,11 +295,11 @@
     <Compile Include="UC_RecruitmentCompany.Designer.cs">
       <DependentUpon>UC_RecruitmentCompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_EmployerJob.cs">
+    <Compile Include="UC_Employer_Job.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_EmployerJob.Designer.cs">
-      <DependentUpon>UC_EmployerJob.cs</DependentUpon>
+    <Compile Include="UC_Employer_Job.Designer.cs">
+      <DependentUpon>UC_Employer_Job.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_CandidateCV.cs">
       <SubType>UserControl</SubType>
@@ -351,9 +345,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FCandidate_SelectedJobDetails.resx">
       <DependentUpon>FCandidate_SelectedJobDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FEmployer_CandidateDetail.resx">
-      <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_ApprovedCandidate.resx">
       <DependentUpon>FEmployer_ApprovedCandidate.cs</DependentUpon>
@@ -437,8 +428,8 @@
     <EmbeddedResource Include="UC_RecruitmentCompany.resx">
       <DependentUpon>UC_RecruitmentCompany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_EmployerJob.resx">
-      <DependentUpon>UC_EmployerJob.cs</DependentUpon>
+    <EmbeddedResource Include="UC_Employer_Job.resx">
+      <DependentUpon>UC_Employer_Job.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_CandidateCV.resx">
       <DependentUpon>UC_CandidateCV.cs</DependentUpon>

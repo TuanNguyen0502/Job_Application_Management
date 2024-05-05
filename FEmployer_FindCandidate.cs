@@ -8,17 +8,16 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Job_Application_Management
 {
-    public partial class FEmployer_FindCandidate : KryptonForm
+    public partial class FEmployer_FindCandidate : Form
     {
-        private EmployerDAO employerDAO;
+        private EmployerDAO employerDAO = new EmployerDAO();
+
         public FEmployer_FindCandidate()
         {
-            employerDAO = new EmployerDAO();
             InitializeComponent();
         }
 
