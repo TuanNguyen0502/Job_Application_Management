@@ -198,4 +198,26 @@ VALUES
 INSERT INTO Interviews(EmpID,CddID,JobID,InterviewTime,Note)
 VALUES('E001','CDD001',1,'2024-05-03',N'Tác phong chuẩn bị nghiêm túc và tinh thần tốt để phỏng vấn')
 
-SELECT * FROM Interviews
+GO
+CREATE FUNCTION func_CheckCandidate(
+	@CddID varchar(10)
+)
+RETURNS BIT
+AS
+BEGIN 
+	DECLARE @Exists BIT;
+
+	SET @Exists = CASE 
+                WHEN EXISTS (SELECT 1 FROM Candidates WHERE CddID = @CddID) 
+					THEN 1 
+					ELSE 0 
+				END;
+	RETURN @Exists;
+END;
+
+SELECT TOP 1 CddID
+FROM Candidates
+ORDER BY CddID DESC;
+
+SELECT TOP 1 CddID FROM Candidates ORDER BY CddID DESC
+SELECT * FROM USERS

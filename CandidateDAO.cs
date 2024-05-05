@@ -703,5 +703,79 @@ namespace Job_Application_Management
             }
         }
         #endregion
+
+        #region Đăng ký thông tin ứng viên
+        public bool RegisterCandidateInfo(Candidate candidate)
+        {
+            sqlQuery = "INSERT INTO Candidates(CddID, CddName,Phone,Email,CddAddress,Hometown,Sex,Education)" +
+                       " VALUES(@CddID, @CddName, @Phone, @Email, @CddAddress, @Hometown, @Sex, @Education)";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CddID", SqlDbType.NVarChar) {Value = candidate.Id},
+                new SqlParameter("@CddName", SqlDbType.NVarChar) {Value = candidate.Name},
+                new SqlParameter("@Phone", SqlDbType.NVarChar) {Value = candidate.Phone},
+                new SqlParameter("@Email", SqlDbType.NVarChar) {Value = candidate.Email},
+                new SqlParameter("@CddAddress", SqlDbType.NVarChar) {Value = candidate.Address},
+                new SqlParameter("@Hometown", SqlDbType.NVarChar) {Value = candidate.Hometown},
+                new SqlParameter("@Sex", SqlDbType.NVarChar) {Value = candidate.Sex},
+                new SqlParameter("@Education", SqlDbType.NVarChar) {Value = candidate.Education},
+            };
+            if (dbConn.ExecuteWriteDataCheck(sqlQuery, lstParams))
+            {
+                return true;
+            }
+            return false;
+        }
+        public void RegisterUser(string username, string password, string cddid)
+        {
+            sqlQuery = "INSERT INTO USERS(Username,Password, CddID)" +
+                       " VALUES(@Username, @Password, @CddID)";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@Username", SqlDbType.VarChar) {Value = username},
+                new SqlParameter("@Password", SqlDbType.VarChar) {Value = password},
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid},
+            };
+            if (dbConn.ExecuteWriteDataCheck(sqlQuery, lstParams))
+            {
+                MessageBox.Show("Đăng ký tài khoản thành công");
+            }
+            else
+            {
+                MessageBox.Show("Đăng ký tài khoản thất bại");
+            }
+        }
+        public int CheckCandidateExistsInDatabase(string cddid)
+        {
+            sqlQuery = "SELECT dbo.func_CheckCandidate(@cddid);";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@cddid", SqlDbType.VarChar) {Value = cddid},
+            };
+            int flag = dbConn.ExecuteScalarGetInt(sqlQuery, lstParams);
+            return flag;
+        }
+        public string GetCddID()
+        {
+            sqlQuery = "SELECT TOP 1 CddID FROM Candidates ORDER BY CddID DESC";
+            string cddid = dbConn.ExecuteScalar(sqlQuery);
+            return cddid;
+        }
+        public int ConvertCddToNumber(string input)
+        {
+            // Giả định tiền tố có độ dài cố định là 3 ký tự
+            string numberPart = input.Substring(3);
+
+            // Chuyển đổi chuỗi thành số
+            if (int.TryParse(numberPart, out int result))
+            {
+                return result + 1;
+            }
+            else
+            {
+                throw new ArgumentException("Chuỗi không chứa một số hợp lệ.");
+            }
+        }
+        #endregion
     }
 }
