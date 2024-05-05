@@ -15,7 +15,6 @@ namespace Job_Application_Management
     {
         private string empID;
         private int jobID;
-        private string connStr = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True";
         private EmployerDAO employerDAO = new EmployerDAO();
 
         public FEmployer_SeeCandidate(string empID, int jobID)

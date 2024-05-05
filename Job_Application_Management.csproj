@@ -289,6 +289,12 @@
     <Compile Include="UC_Introduction.Designer.cs">
       <DependentUpon>UC_Introduction.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_IntroductionHotizontal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_IntroductionHotizontal.Designer.cs">
+      <DependentUpon>UC_IntroductionHotizontal.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_RecruitmentCompany.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -424,6 +430,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Introduction.resx">
       <DependentUpon>UC_Introduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_IntroductionHotizontal.resx">
+      <DependentUpon>UC_IntroductionHotizontal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_RecruitmentCompany.resx">
       <DependentUpon>UC_RecruitmentCompany.cs</DependentUpon>
@@ -936,6 +945,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-home-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-zalo-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-zalo-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

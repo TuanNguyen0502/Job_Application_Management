@@ -62,7 +62,7 @@ namespace Job_Application_Management
         }
         public void CheckAppliedJobsAfterPushIntoPanle()
         {
-            List<UC_AppliedJobs> appliedJobs = canDAO.GetAppliedJobsFromDB();
+            List<UC_AppliedJobs> appliedJobs = canDAO.GetAppliedJobsFromDB(cddid);
             foreach (var applied in appliedJobs)
             {
                 if (jobid == applied.AppliedJobs.Id)
@@ -92,7 +92,7 @@ namespace Job_Application_Management
                 {
                     lblStatus.Text = "Đã hết hạn. Ứng tuyển lại?";
                 }
-                else lblStatus.Text = "Đang ứng tuyển";
+                else lblStatus.Text = "Applying";
 
                 companyName = (string)item["CompanyName"];
 

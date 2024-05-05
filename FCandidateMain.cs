@@ -181,7 +181,7 @@ namespace Job_Application_Management
         private void btn_JobsApplied_Click(object sender, EventArgs e)
         {
             SetIntroduction();
-            FCandidate_AppliedJobs applied = new FCandidate_AppliedJobs();
+            FCandidate_AppliedJobs applied = new FCandidate_AppliedJobs(lblCddID.Text);
             applied.FindJobNowAtSavedJobClick += findJobNowLoad_Click;
             OpenChildForm(applied, pnl_ContainDetailsJob);
         }

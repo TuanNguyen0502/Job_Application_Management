@@ -21,7 +21,8 @@ namespace Job_Application_Management
         private DateTime postTime;
         private string empID;
         private string companyName;
-        public string address;
+        private string address;
+        private string status;
         public Job() { }
         public Job(string name, int salary, string jobDescription, string workDuration, string experience, DateTime deadline, string benefit, string request, string empID)
         {
@@ -175,5 +176,6 @@ namespace Job_Application_Management
         public DateTime PostTime { get => postTime; set => postTime = value; }
         public string CompanyName { get => companyName; set => companyName = value; }
         public string Address { get => address; set => address = value; }
+        public string Status { get => status; set => status = value; }
     }
 }

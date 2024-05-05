@@ -148,7 +148,20 @@ namespace Job_Application_Management
                 MessageBox.Show("Xóa công việc đã lưu thất bại");
             }
         }
-        public List<UC_AppliedJobs> GetAppliedJobsFromDB()
+        public string GetStatus(string cddid, int jobid)
+        {
+            sqlQuery = "SELECT Status" +
+                       " FROM Resume" +
+                       " WHERE CddID = @CddID AND JobID = @JobID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid},
+                new SqlParameter("@JobID", SqlDbType.Int) {Value = jobid},
+            };
+            string status = dbConn.ExecuteScalar(sqlQuery, lstParams);
+            return status;
+        }
+        public List<UC_AppliedJobs> GetAppliedJobsFromDB(string cddid)
         {
             sqlQuery = "SELECT aj.ID, j.Name, j.JobDecription, c.Name as CompanyName, aj.TimeApplied, c.Address, j.Salary, aj.JobID, j.PostTime"
                        +" FROM AppliedJobs aj"
@@ -168,6 +181,7 @@ namespace Job_Application_Management
                 applied.Salary = (int)row["Salary"];
                 applied.AppliedJobID = (int)row["ID"];
                 applied.Id= (int)row["JobID"];
+                applied.Status = GetStatus(cddid, (int)row["JobID"]);
                 UC_AppliedJobs item = new UC_AppliedJobs(applied);
                 applieds.Add(item);
             }
@@ -662,6 +676,32 @@ namespace Job_Application_Management
                 candidate.Education = (string)row["Education"];
             }
             return candidate;
+        }
+        public void UpdateCandidateInfor(Candidate candidate)
+        {
+            sqlQuery = "UPDATE Candidates"+
+                       " SET CddName = @CddName, Phone = @Phone, Email = @Email, CddAddress = @CddAddress, Hometown = @Hometown, Sex = @Sex" +
+                       ", Education = @Education" +
+                       " WHERE CddID = @CddID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CddName", SqlDbType.NVarChar) {Value = candidate.Name},
+                new SqlParameter("@Phone", SqlDbType.NVarChar) {Value = candidate.Phone},
+                new SqlParameter("@Email", SqlDbType.NVarChar) {Value = candidate.Email},
+                new SqlParameter("@CddAddress", SqlDbType.NVarChar) {Value = candidate.Address},
+                new SqlParameter("@Hometown", SqlDbType.NVarChar) {Value = candidate.Hometown},
+                new SqlParameter("@Sex", SqlDbType.NVarChar) {Value = candidate.Sex},
+                new SqlParameter("@Education", SqlDbType.NVarChar) {Value = candidate.Education},
+                new SqlParameter("@CddID", SqlDbType.NVarChar) {Value = candidate.Id},
+            };
+            if (dbConn.ExecuteWriteDataCheck(sqlQuery, lstParams))
+            {
+                MessageBox.Show("Cập nhật thông tin thành công");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thông tin thất bại. Xem lại đã điền đúng thông tin hay chưa !");
+            }
         }
         #endregion
     }

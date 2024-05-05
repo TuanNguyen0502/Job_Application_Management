@@ -14,14 +14,15 @@ namespace Job_Application_Management
     public partial class FCandidate_AppliedJobs : KryptonForm
     {
         CandidateDAO canDAO = new CandidateDAO();
-
-        public FCandidate_AppliedJobs()
+        private string cddid;
+        public FCandidate_AppliedJobs(string cddid)
         {
             InitializeComponent();
+            this.cddid = cddid;
         }
         private void LoadAppliedJobs()
         {
-            List<UC_AppliedJobs> applieds = canDAO.GetAppliedJobsFromDB();
+            List<UC_AppliedJobs> applieds = canDAO.GetAppliedJobsFromDB(cddid);
             if (flpStoreUC.Controls.Count > 0)
             {
                 flpStoreUC.Controls.Clear();
@@ -76,7 +77,7 @@ namespace Job_Application_Management
 
         private void rdb_Nearly_CheckedChanged(object sender, EventArgs e)
         {
-            List<UC_AppliedJobs> uC_AppliedJobs = canDAO.GetAppliedJobsFromDB();
+            List<UC_AppliedJobs> uC_AppliedJobs = canDAO.GetAppliedJobsFromDB(cddid);
             uC_AppliedJobs.Sort((uc1, uc2) => uc2.AppliedJobs.TimeApplied.CompareTo(uc1.AppliedJobs.TimeApplied));
             if (flpStoreUC.Controls.Count > 0)
             {
@@ -91,7 +92,7 @@ namespace Job_Application_Management
 
         private void rdb_Lately_CheckedChanged(object sender, EventArgs e)
         {
-            List<UC_AppliedJobs> uC_AppliedJobs = canDAO.GetAppliedJobsFromDB();
+            List<UC_AppliedJobs> uC_AppliedJobs = canDAO.GetAppliedJobsFromDB(cddid);
             uC_AppliedJobs.Sort((uc1, uc2) => uc2.AppliedJobs.PostTime.CompareTo(uc1.AppliedJobs.PostTime));
             if (flpStoreUC.Controls.Count > 0)
             {
@@ -106,7 +107,7 @@ namespace Job_Application_Management
 
         private void rbd_TallestSalary_CheckedChanged(object sender, EventArgs e)
         {
-            List<UC_AppliedJobs> uC_AppliedJobs = canDAO.GetAppliedJobsFromDB();
+            List<UC_AppliedJobs> uC_AppliedJobs = canDAO.GetAppliedJobsFromDB(cddid);
             uC_AppliedJobs.Sort((uc1, uc2) => uc2.AppliedJobs.Salary.CompareTo(uc1.AppliedJobs.Salary));
             if (flpStoreUC.Controls.Count > 0)
             {

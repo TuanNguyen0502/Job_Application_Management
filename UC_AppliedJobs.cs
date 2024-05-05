@@ -12,10 +12,6 @@ namespace Job_Application_Management
 {
     public partial class UC_AppliedJobs : UserControl
     {
-        public Button BtnRusbish
-        {
-            get { return btnRusbish; }
-        }
         private AppliedJobs appliedJob;
         public AppliedJobs AppliedJobs
         {
@@ -35,6 +31,16 @@ namespace Job_Application_Management
             lbl_PostTime.Text = $"Đã đăng: {appliedJob.PostTime}";
             lblAddress.Text = $"      {appliedJob.Address}";
             lblSalary.Text = $"       {appliedJob.Salary.ToString()}";
+            if (appliedJob.Status == "Applying")
+            {
+                btn_Status.Text = "Đang ứng tuyển";
+                btn_Status.BackColor = Color.Gray;
+            }
+            else
+            {
+                btn_Status.Text = "Đã được phê duyệt";
+                btn_Status.BackColor = Color.Green;
+            } 
         }
 
         public event EventHandler ButtonAddClick;

@@ -236,3 +236,5 @@ WHERE JobID = '2'
 SELECT * FROM Resume
 UPDATE Resume
 SET Status = 'Applying'
+
+TRUNCATE TABLE Resume

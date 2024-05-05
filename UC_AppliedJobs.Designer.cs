@@ -34,8 +34,8 @@
             this.lbl_PostTime = new System.Windows.Forms.Label();
             this.pictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.btnRusbish = new System.Windows.Forms.Button();
             this.lblComName = new System.Windows.Forms.Label();
+            this.btn_Status = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,22 +110,6 @@
             this.lblAddress.Text = "       Địa điểm";
             this.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnRusbish
-            // 
-            this.btnRusbish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(234)))), ((int)(((byte)(236)))));
-            this.btnRusbish.FlatAppearance.BorderSize = 0;
-            this.btnRusbish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRusbish.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRusbish.Image = global::Job_Application_Management.Properties.Resources.icons8_trash_can_16;
-            this.btnRusbish.Location = new System.Drawing.Point(572, 93);
-            this.btnRusbish.Name = "btnRusbish";
-            this.btnRusbish.Size = new System.Drawing.Size(121, 36);
-            this.btnRusbish.TabIndex = 7;
-            this.btnRusbish.Text = "   Bỏ lưu";
-            this.btnRusbish.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRusbish.UseVisualStyleBackColor = false;
-            this.btnRusbish.Click += new System.EventHandler(this.btnRusbish_Click);
-            // 
             // lblComName
             // 
             this.lblComName.AutoSize = true;
@@ -138,16 +122,34 @@
             this.lblComName.TabIndex = 4;
             this.lblComName.Text = "        Công ty";
             // 
+            // btn_Status
+            // 
+            this.btn_Status.BackColor = System.Drawing.Color.PowderBlue;
+            this.btn_Status.BorderRadius = 20;
+            this.btn_Status.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Status.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Status.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Status.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Status.Enabled = false;
+            this.btn_Status.FillColor = System.Drawing.Color.Silver;
+            this.btn_Status.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Status.ForeColor = System.Drawing.Color.White;
+            this.btn_Status.Location = new System.Drawing.Point(557, 81);
+            this.btn_Status.Name = "btn_Status";
+            this.btn_Status.Size = new System.Drawing.Size(177, 45);
+            this.btn_Status.TabIndex = 13;
+            this.btn_Status.Text = "Tình trạng";
+            // 
             // UC_AppliedJobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.btn_Status);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_PostTime);
             this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.btnRusbish);
             this.Controls.Add(this.lblSalary);
             this.Controls.Add(this.lblDescrption);
             this.Controls.Add(this.lblComName);
@@ -166,9 +168,9 @@
         private System.Windows.Forms.Label lblComName;
         private System.Windows.Forms.Label lblDescrption;
         private System.Windows.Forms.Label lblSalary;
-        private System.Windows.Forms.Button btnRusbish;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lbl_PostTime;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btn_Status;
     }
 }
