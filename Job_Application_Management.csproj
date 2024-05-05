@@ -156,6 +156,12 @@
     <Compile Include="FCandidate_CreateCV.Designer.cs">
       <DependentUpon>FCandidate_CreateCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FEmployer_CandidateDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployer_CandidateDetail.Designer.cs">
+      <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FEmployer_Company.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -366,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FCandidate_CreateCV.resx">
       <DependentUpon>FCandidate_CreateCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FEmployer_CandidateDetail.resx">
+      <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_Company.resx">
       <DependentUpon>FEmployer_Company.cs</DependentUpon>
@@ -960,6 +969,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-zalo-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile_avatar.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

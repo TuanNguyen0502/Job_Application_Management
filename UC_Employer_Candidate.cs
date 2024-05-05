@@ -28,7 +28,8 @@ namespace Job_Application_Management
 
         private void label_Name_Click(object sender, EventArgs e)
         {
-
+            FEmployer_CandidateDetail fEmployer_CandidateDetail = new FEmployer_CandidateDetail(cddID);
+            fEmployer_CandidateDetail.ShowDialog();
         }
     }
 }

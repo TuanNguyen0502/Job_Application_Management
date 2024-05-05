@@ -1533,6 +1533,16 @@ namespace Job_Application_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap profile_avatar {
+            get {
+                object obj = ResourceManager.GetObject("profile_avatar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap recruiters_company_are_looking_employees_background {
             get {
                 object obj = ResourceManager.GetObject("recruiters-company-are-looking-employees-background", resourceCulture);

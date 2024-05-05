@@ -526,5 +526,34 @@ namespace Job_Application_Management
             }
             return items;
         }
+
+        public Candidate GetCandidateFromDB(string cddID)
+        {
+            Candidate candidate = new Candidate();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sqlQuery = $"SELECT * FROM Candidates WHERE CddID = '{cddID}'";
+                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        candidate.Id = (string)reader["CddID"];
+                        candidate.Name = (string)reader["CddName"];
+                        candidate.Phone = (string)reader["Phone"];
+                        candidate.Email = (string)reader["Email"];
+                        candidate.Hometown = (string)reader["Hometown"];
+                        candidate.Sex = (string)reader["Sex"];
+                        candidate.Education = (string)reader["Education"];
+                    }
+                }
+                else
+                    MessageBox.Show("No rows found");
+
+                return candidate;
+            }
+        }
     }
 }
