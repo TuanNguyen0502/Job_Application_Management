@@ -20,6 +20,7 @@ namespace Job_Application_Management
         {
             InitializeComponent();
             this.empID = empID;
+            OpenChildForm(new FEmployer_Home());
         }
 
         private void OpenChildForm(Form childForm)
@@ -56,8 +57,7 @@ namespace Job_Application_Management
 
         private void button_Home_Click(object sender, EventArgs e)
         {
-            if (currentFormChild != null)
-                currentFormChild.Close();
+            OpenChildForm(new FEmployer_Home());
         }
 
         private void button_Information_Click(object sender, EventArgs e)
