@@ -72,7 +72,7 @@ namespace Job_Application_Management
 
         private void button_FindCandidate_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_FindCandidate());
+            OpenChildForm(new FEmployer_Candidates());
         }
 
         private void button_Logout_Click(object sender, EventArgs e)

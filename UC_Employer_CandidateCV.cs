@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class UC_CandidateCV : UserControl
+    public partial class UC_Employer_CandidateCV : UserControl
     {
         private int jobID;
         private string cddID;
@@ -25,7 +25,7 @@ namespace Job_Application_Management
         public Label Label_GPA { get => label_GPA; set => label_GPA = value; }
         public string CddID { get => cddID; set => cddID = value; }
 
-        public UC_CandidateCV(string empID, int jobID)
+        public UC_Employer_CandidateCV(string empID, int jobID)
         {
             InitializeComponent();
             this.empID = empID;

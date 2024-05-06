@@ -153,16 +153,16 @@ namespace Job_Application_Management
             }
         }
 
-        public List<UC_CandidateCV> GetCandidateResumeFromDB(string empID, int jobID, string status)
+        public List<UC_Employer_CandidateCV> GetCandidateResumeFromDB(string empID, int jobID, string status)
         {
             string sqlQuery = $"SELECT R.CddID, C.CddName, R.UniversityName, R.Major, R.GPA " +
                 $"FROM Resume R INNER JOIN Candidates C ON R.CddID = C.CddID " +
                 $"WHERE JobID = '{jobID}' AND Status = N'{status}'";
             List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
-            List<UC_CandidateCV> items = new List<UC_CandidateCV>();
+            List<UC_Employer_CandidateCV> items = new List<UC_Employer_CandidateCV>();
             foreach (var row in resultList)
             {
-                UC_CandidateCV item = new UC_CandidateCV(empID, jobID);
+                UC_Employer_CandidateCV item = new UC_Employer_CandidateCV(empID, jobID);
                 item.CddID = (string)row["CddID"];
                 item.Label_Name.Text = (string)row["CddName"];
                 item.Label_University.Text = (string)row["UniversityName"];
@@ -402,6 +402,158 @@ namespace Job_Application_Management
                 items.Add(item);
             }
             return items;
+        }
+
+        public List<UC_Employer_Job> SearchJobsFromDB(string empID, string keyword)
+        {
+            string sqlQuery = $"SELECT Name, Salary, PostTime, ExpirationDate, ID FROM Jobs " +
+                $"WHERE EmpID = '{empID}' " +
+                      $"AND CONCAT(ID, Name, Salary, JobDecription, WorkDuration, Experience, Benefit, RequestCdd, PostTime, ExpirationDate) LIKE N'%' + '{keyword}' + '%'";
+
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_Employer_Job> items = new List<UC_Employer_Job>();
+
+            foreach (var row in resultList)
+            {
+                string sqlQuery2 = $"SELECT Count(CddID) as SL " +
+                    $"FROM Resume " +
+                    $"WHERE JobID = '{(int)row["ID"]}' AND Status = 'Applying' " +
+                    $"GROUP BY JobID";
+                int numberApplied = dbConnection.ExecuteReaderCount(sqlQuery2);
+                string sqlQuery3 = $"SELECT Count(CddID) as SL " +
+                    $"FROM Resume " +
+                    $"WHERE JobID = '{(int)row["ID"]}' AND Status = 'Approved' " +
+                    $"GROUP BY JobID";
+                int numberApproved = dbConnection.ExecuteReaderCount(sqlQuery3);
+
+                UC_Employer_Job item = new UC_Employer_Job(empID);
+                item.JobID = (int)row["ID"];
+                item.Label_JobName.Text = (string)row["Name"];
+                item.Label_Salary.Text += row["Salary"].ToString();
+                DateTime postTime = (DateTime)row["PostTime"];
+                string formattedPostTime = postTime.ToString("yyyy-MM-dd");
+                item.Label_PostedTime.Text = formattedPostTime;
+                DateTime deadline = (DateTime)row["ExpirationDate"];
+                string formattedDeadline = postTime.ToString("yyyy-MM-dd");
+                item.Label_Deadline.Text += formattedDeadline;
+                item.Label_NumberAppliedCandidates.Text += numberApplied.ToString();
+                item.Label_NumberApprovedCandidates.Text += numberApproved.ToString();
+                item.NumberApplied = numberApplied;
+                item.NumberApproved = numberApproved;
+                items.Add(item);
+            }
+            return items;
+        }
+
+        public List<UC_Employer_Job> SortJobsFromDB(string empID, string keyword)
+        {
+            string sqlQuery = $"SELECT Name, Salary, PostTime, ExpirationDate, ID FROM Jobs " +
+                $"WHERE EmpID = '{empID}' " +
+                $"ORDER BY PostTime {keyword}";
+
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_Employer_Job> items = new List<UC_Employer_Job>();
+
+            foreach (var row in resultList)
+            {
+                string sqlQuery2 = $"SELECT Count(CddID) as SL " +
+                    $"FROM Resume " +
+                    $"WHERE JobID = '{(int)row["ID"]}' AND Status = 'Applying' " +
+                    $"GROUP BY JobID";
+                int numberApplied = dbConnection.ExecuteReaderCount(sqlQuery2);
+                string sqlQuery3 = $"SELECT Count(CddID) as SL " +
+                    $"FROM Resume " +
+                    $"WHERE JobID = '{(int)row["ID"]}' AND Status = 'Approved' " +
+                    $"GROUP BY JobID";
+                int numberApproved = dbConnection.ExecuteReaderCount(sqlQuery3);
+
+                UC_Employer_Job item = new UC_Employer_Job(empID);
+                item.JobID = (int)row["ID"];
+                item.Label_JobName.Text = (string)row["Name"];
+                item.Label_Salary.Text += row["Salary"].ToString();
+                DateTime postTime = (DateTime)row["PostTime"];
+                string formattedPostTime = postTime.ToString("yyyy-MM-dd");
+                item.Label_PostedTime.Text = formattedPostTime;
+                DateTime deadline = (DateTime)row["ExpirationDate"];
+                string formattedDeadline = postTime.ToString("yyyy-MM-dd");
+                item.Label_Deadline.Text += formattedDeadline;
+                item.Label_NumberAppliedCandidates.Text += numberApplied.ToString();
+                item.Label_NumberApprovedCandidates.Text += numberApproved.ToString();
+                item.NumberApplied = numberApplied;
+                item.NumberApproved = numberApproved;
+                items.Add(item);
+            }
+            return items;
+        }
+
+        public List<UC_Employer_Candidate> GetCandidatesFromDB()
+        {
+            string sqlQuery = $"SELECT * " +
+                $"FROM Candidates ";
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_Employer_Candidate> items = new List<UC_Employer_Candidate>();
+            foreach (var row in resultList)
+            {
+                UC_Employer_Candidate item = new UC_Employer_Candidate();
+                item.CddID = (string)row["CddID"];
+                item.Label_Name.Text = (string)row["CddName"];
+                item.Label_Phone.Text = (string)row["Phone"];
+                item.Label_Email.Text = (string)row["Email"];
+                item.Label_Hometown.Text = (string)row["Hometown"];
+                item.Label_University.Text = (string)row["Education"];
+                items.Add(item);
+            }
+            return items;
+        }
+
+        public List<UC_Employer_Candidate> SearchCandidatesFromDB(string keyword)
+        {
+            string sqlQuery = $"SELECT * " +
+                $"FROM Candidates " +
+                $"WHERE CONCAT(CddName, Phone, Email, CddAddress, Hometown, Sex, Education) LIKE N'%' + '{keyword}' + '%'";
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_Employer_Candidate> items = new List<UC_Employer_Candidate>();
+            foreach (var row in resultList)
+            {
+                UC_Employer_Candidate item = new UC_Employer_Candidate();
+                item.CddID = (string)row["CddID"];
+                item.Label_Name.Text = (string)row["CddName"];
+                item.Label_Phone.Text = (string)row["Phone"];
+                item.Label_Email.Text = (string)row["Email"];
+                item.Label_Hometown.Text = (string)row["Hometown"];
+                item.Label_University.Text = (string)row["Education"];
+                items.Add(item);
+            }
+            return items;
+        }
+
+        public Candidate GetCandidateFromDB(string cddID)
+        {
+            Candidate candidate = new Candidate();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sqlQuery = $"SELECT * FROM Candidates WHERE CddID = '{cddID}'";
+                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        candidate.Id = (string)reader["CddID"];
+                        candidate.Name = (string)reader["CddName"];
+                        candidate.Phone = (string)reader["Phone"];
+                        candidate.Email = (string)reader["Email"];
+                        candidate.Hometown = (string)reader["Hometown"];
+                        candidate.Sex = (string)reader["Sex"];
+                        candidate.Education = (string)reader["Education"];
+                    }
+                }
+                else
+                    MessageBox.Show("No rows found");
+
+                return candidate;
+            }
         }
     }
 }

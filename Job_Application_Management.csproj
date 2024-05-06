@@ -156,17 +156,23 @@
     <Compile Include="FCandidate_CreateCV.Designer.cs">
       <DependentUpon>FCandidate_CreateCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FEmployer_CandidateDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployer_CandidateDetail.Designer.cs">
+      <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FEmployer_Company.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FEmployer_Company.Designer.cs">
       <DependentUpon>FEmployer_Company.cs</DependentUpon>
     </Compile>
-    <Compile Include="FEmployer_FindCandidate.cs">
+    <Compile Include="FEmployer_Candidates.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FEmployer_FindCandidate.Designer.cs">
-      <DependentUpon>FEmployer_FindCandidate.cs</DependentUpon>
+    <Compile Include="FEmployer_Candidates.Designer.cs">
+      <DependentUpon>FEmployer_Candidates.cs</DependentUpon>
     </Compile>
     <Compile Include="FEmployer_Information.cs">
       <SubType>Form</SubType>
@@ -271,6 +277,12 @@
     <Compile Include="UC_CV.Designer.cs">
       <DependentUpon>UC_CV.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Employer_Candidate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Employer_Candidate.Designer.cs">
+      <DependentUpon>UC_Employer_Candidate.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Employer_Interview.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -307,11 +319,11 @@
     <Compile Include="UC_Employer_Job.Designer.cs">
       <DependentUpon>UC_Employer_Job.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_CandidateCV.cs">
+    <Compile Include="UC_Employer_CandidateCV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_CandidateCV.Designer.cs">
-      <DependentUpon>UC_CandidateCV.cs</DependentUpon>
+    <Compile Include="UC_Employer_CandidateCV.Designer.cs">
+      <DependentUpon>UC_Employer_CandidateCV.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_JobsSaved.cs">
       <SubType>UserControl</SubType>
@@ -361,11 +373,14 @@
     <EmbeddedResource Include="FCandidate_CreateCV.resx">
       <DependentUpon>FCandidate_CreateCV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FEmployer_CandidateDetail.resx">
+      <DependentUpon>FEmployer_CandidateDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_Company.resx">
       <DependentUpon>FEmployer_Company.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FEmployer_FindCandidate.resx">
-      <DependentUpon>FEmployer_FindCandidate.cs</DependentUpon>
+    <EmbeddedResource Include="FEmployer_Candidates.resx">
+      <DependentUpon>FEmployer_Candidates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_Information.resx">
       <DependentUpon>FEmployer_Information.cs</DependentUpon>
@@ -422,6 +437,9 @@
     <EmbeddedResource Include="UC_CV.resx">
       <DependentUpon>UC_CV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Employer_Candidate.resx">
+      <DependentUpon>UC_Employer_Candidate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Employer_Interview.resx">
       <DependentUpon>UC_Employer_Interview.cs</DependentUpon>
     </EmbeddedResource>
@@ -440,8 +458,8 @@
     <EmbeddedResource Include="UC_Employer_Job.resx">
       <DependentUpon>UC_Employer_Job.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_CandidateCV.resx">
-      <DependentUpon>UC_CandidateCV.cs</DependentUpon>
+    <EmbeddedResource Include="UC_Employer_CandidateCV.resx">
+      <DependentUpon>UC_Employer_CandidateCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_JobsSaved.resx">
       <DependentUpon>UC_JobsSaved.cs</DependentUpon>
@@ -951,6 +969,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-zalo-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile_avatar.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
