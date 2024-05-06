@@ -767,15 +767,29 @@ namespace Job_Application_Management
                 MessageBox.Show("Đăng ký tài khoản thất bại");
             }
         }
-        public int CheckCandidateExistsInDatabase(string cddid)
+        public bool CheckCandidateExistsInDatabase(string cddid)
         {
-            sqlQuery = "SELECT dbo.func_CheckCandidate(@cddid);";
-            SqlParameter[] lstParams =
+            try
             {
-                new SqlParameter("@cddid", SqlDbType.VarChar) {Value = cddid},
-            };
-            int flag = dbConn.ExecuteScalarGetInt(sqlQuery, lstParams);
-            return flag;
+                using (SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True"))
+                {
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand("SELECT func_CheckCandidate(@CddID)", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@CddID", cddid);
+
+                        // Since the function returns BIT, we expect a boolean value
+                        bool exists = (bool)cmd.ExecuteScalar();
+
+                        return exists;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
         public string GetCddID()
         {

@@ -215,17 +215,4 @@ BEGIN
 				END;
 	RETURN @Exists;
 END;
-SELECT * FROM SavedJobs
-SELECT * FROM Interviews
-SELECT * FROM Candidates
-SELECT * FROM Jobs
-SELECT * FROM USERS
-
-SELECT sj.ID SJID, j.Name, j.JobDecription, c.Name as CompanyName, sj.TimeSaved, c.Address, j.Salary, sj.JobID, j.PostTime
-FROM SavedJobs sj
-JOIN Jobs j ON sj.JobID = j.ID
-JOIN Employers e ON j.EmpID = e.ID
-JOIN Company c ON c.Name = e.CompanyName
-WHERE sj.CddID = 'CDD001'
-
-TRUNCATE TABLE SavedJobs
+SELECT dbo.func_CheckCandidate('CDD006')
