@@ -37,6 +37,7 @@ namespace Job_Application_Management
             fEmployer_JobDetail.ShowDialog();
             if (fEmployer_JobDetail.DialogResult == DialogResult.OK)
             {
+                flowLayoutPanel_Jobs.Controls.Clear();
                 LoadInfor();
             }
         } 
