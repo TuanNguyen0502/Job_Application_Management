@@ -36,6 +36,18 @@ namespace Job_Application_Management
             label_Sex.Text = candidate.Sex;
             label_Hometown.Text = candidate.Hometown;
             label_Education.Text = candidate.Education;
+
+            List<UC_Employer_Coverletter> coverLetters = employerDAO.GetCandidateProfileFromDB();
+            foreach (var coverLetter in coverLetters)
+            {
+                flowLayoutPanel2.Controls.Add(coverLetter);
+            }
+
+            List<UC_WorkHistory> histories = employerDAO.GetCandidateWorkHistoryFromDB(cddID);
+            foreach (var history in histories)
+            {
+                flowLayoutPanel3.Controls.Add(history);
+            }
         }
     }
 }

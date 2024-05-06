@@ -120,24 +120,24 @@ namespace Job_Application_Management
             return interview;
         }
 
-        public List<UC_CoverLetter> GetCandidateProfileFromDB()
+        public List<UC_Employer_Coverletter> GetCandidateProfileFromDB()
         {
             string sqlQuery = $"SELECT P.CddID, C.CddName, P.Objective, P.UniversityName, P.Major, P.GPA, P.CompanyName, P.Workplace, " +
                 $"P.CertificationName " +
                 $"FROM CandidateProfile P INNER JOIN Candidates C ON P.CddID = C.CddID";
             List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
-            List<UC_CoverLetter> items = new List<UC_CoverLetter>();
+            List<UC_Employer_Coverletter> items = new List<UC_Employer_Coverletter>();
             foreach (var row in resultList)
             {
-                UC_CoverLetter item = new UC_CoverLetter();
+                UC_Employer_Coverletter item = new UC_Employer_Coverletter();
                 item.CddID = (string)row["CddID"];
-                item.textBox_Name.Text = (string)row["CddName"];
-                item.textBox_University.Text = (string)row["UniversityName"];
-                item.textBox_Major.Text += row["Major"].ToString();
-                item.textBox_GPA.Text = row["GPA"].ToString();
-                item.textBox_Company.Text = (string)row["CompanyName"];
-                item.textBox_Workplace.Text = (string)row["Workplace"];
-                item.textBox_Certification.Text = (string)row["CertificationName"];
+                item.Label_Objective.Text = (string)row["Objective"];
+                item.Label_University.Text = (string)row["UniversityName"];
+                item.Label_Major.Text = row["Major"].ToString();
+                item.Label_GPA.Text = row["GPA"].ToString();
+                item.Label_Company.Text = (string)row["CompanyName"];
+                item.Label_Workplace.Text = (string)row["Workplace"];
+                item.Label_Certification.Text = (string)row["CertificationName"];
                 items.Add(item);
             }
             return items;
@@ -554,6 +554,27 @@ namespace Job_Application_Management
 
                 return candidate;
             }
+        }
+
+        public List<UC_WorkHistory> GetCandidateWorkHistoryFromDB(string cddID)
+        {
+            string sqlQuery = $"SELECT wh.CandidateID, cdd.CddName, wh.CompanyName, wh.StartDate, wh.EndDate " +
+                $"FROM WorkHistory wh JOIN Candidates cdd ON wh.CandidateID = cdd.CddID " +
+                $"WHERE wh.CandidateID = '{cddID}'";
+            List<UC_WorkHistory> lstWorkHistory = new List<UC_WorkHistory>();
+            List<Dictionary<string, object>> keyValuePairs = dbConnection.ExecuteReaderData(sqlQuery);
+            foreach (var keyValuePair in keyValuePairs)
+            {
+                CandidateProfile candidateProfile = new CandidateProfile();
+                candidateProfile.CddID = (string)keyValuePair["CandidateID"];
+                candidateProfile.CompanyName = (string)keyValuePair["CompanyName"];
+                candidateProfile.CddName = (string)keyValuePair["CddName"];
+                candidateProfile.CompanyStartDate = (DateTime)keyValuePair["StartDate"];
+                candidateProfile.CompanyEndDate = (DateTime)keyValuePair["EndDate"];
+                UC_WorkHistory uC_WorkHistory = new UC_WorkHistory(candidateProfile);
+                lstWorkHistory.Add(uC_WorkHistory);
+            }
+            return lstWorkHistory;
         }
     }
 }

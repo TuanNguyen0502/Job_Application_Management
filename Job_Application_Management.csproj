@@ -283,6 +283,12 @@
     <Compile Include="UC_Employer_Candidate.Designer.cs">
       <DependentUpon>UC_Employer_Candidate.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Employer_Coverletter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Employer_Coverletter.Designer.cs">
+      <DependentUpon>UC_Employer_Coverletter.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Employer_Interview.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -439,6 +445,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Employer_Candidate.resx">
       <DependentUpon>UC_Employer_Candidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Employer_Coverletter.resx">
+      <DependentUpon>UC_Employer_Coverletter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Employer_Interview.resx">
       <DependentUpon>UC_Employer_Interview.cs</DependentUpon>
