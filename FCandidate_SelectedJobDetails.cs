@@ -184,7 +184,7 @@ namespace Job_Application_Management
             if (cv != null)
             {
                 canDAO.SaveResumeToDatabase(cv, jobid);
-                canDAO.AddAppliedJob(jobid);
+                canDAO.AddAppliedJob(jobid, cddid);
                 btnApply.Enabled = false;
                 btnApply.BackColor = Color.Gray;
             }
@@ -196,7 +196,7 @@ namespace Job_Application_Management
 
         private void btnSaved_Click(object sender, EventArgs e)
         {
-            canDAO.AddSavedJob(jobid);
+            canDAO.AddSavedJob(jobid, cddid);
         }
     }
 }

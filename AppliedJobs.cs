@@ -11,6 +11,7 @@ namespace Job_Application_Management
     {
         private int appliedJobID;
         private DateTime timeApplied;
+        private string cddid;
         public AppliedJobs() { }
         public int AppliedJobID
         {
@@ -34,5 +35,10 @@ namespace Job_Application_Management
                     timeApplied = value;
             }
         } 
+        public string CddID
+        {
+            get { return cddid; }
+            set { cddid = value; }
+        }
     }
 }

@@ -135,18 +135,19 @@ CREATE TABLE CandidateProfile(
 	PostTime date,
 	CONSTRAINT PK_Profile PRIMARY KEY (CddID, WorkPlace)
 )
-	 
 -- Tạo bảng Saved Jobs
 CREATE TABLE SavedJobs(
 	ID int IDENTITY primary key,
 	TimeSaved date,
-	JobID int FOREIGN KEY REFERENCES Jobs(ID) 
+	JobID int FOREIGN KEY REFERENCES Jobs(ID),
+	CddID varchar(10) FOREIGN KEY REFERENCES Candidates(CddID)
 )
 -- Tạo bảng Applied Jobs
 CREATE TABLE AppliedJobs(
 	ID int IDENTITY primary key,
 	TimeApplied date,
-	JobID int FOREIGN KEY REFERENCES Jobs(ID) 
+	JobID int FOREIGN KEY REFERENCES Jobs(ID),
+	CddID varchar(10) FOREIGN KEY REFERENCES Candidates(CddID)
 )
 
 -- Dữ liệu cho bảng Candidates
@@ -214,5 +215,17 @@ BEGIN
 				END;
 	RETURN @Exists;
 END;
-
+SELECT * FROM SavedJobs
 SELECT * FROM Interviews
+SELECT * FROM Candidates
+SELECT * FROM Jobs
+SELECT * FROM USERS
+
+SELECT sj.ID SJID, j.Name, j.JobDecription, c.Name as CompanyName, sj.TimeSaved, c.Address, j.Salary, sj.JobID, j.PostTime
+FROM SavedJobs sj
+JOIN Jobs j ON sj.JobID = j.ID
+JOIN Employers e ON j.EmpID = e.ID
+JOIN Company c ON c.Name = e.CompanyName
+WHERE sj.CddID = 'CDD001'
+
+TRUNCATE TABLE SavedJobs
