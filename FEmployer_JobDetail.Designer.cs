@@ -32,24 +32,24 @@
             this.label_ID = new System.Windows.Forms.Label();
             this.label_Deadline = new System.Windows.Forms.Label();
             this.label_Experience = new System.Windows.Forms.Label();
-            this.textBox_JobName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.textBox_Experience = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.dateTimePicker_Deadline = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.label_Salary = new System.Windows.Forms.Label();
-            this.textBox_Salary = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label_Description = new System.Windows.Forms.Label();
-            this.richTextBox_JobDescripton = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.label_Time = new System.Windows.Forms.Label();
-            this.textBox_WorkingTime = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label__Benefit = new System.Windows.Forms.Label();
-            this.richTextBox_JobBenefit = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.label_CompanyType = new System.Windows.Forms.Label();
-            this.richTextBox_Requirement = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Post = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_Delete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_SeeCandidate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_ApprovedCandidate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.textBox_JobName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBox_Salary = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBox_WorkingTime = new Guna.UI2.WinForms.Guna2TextBox();
+            this.richTextBox_JobBenefit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.richTextBox_JobDescripton = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBox_Experience = new Guna.UI2.WinForms.Guna2TextBox();
+            this.richTextBox_Requirement = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel_Information.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -64,18 +64,18 @@
             this.tableLayoutPanel_Information.Controls.Add(this.label_ID, 0, 0);
             this.tableLayoutPanel_Information.Controls.Add(this.label_Deadline, 2, 0);
             this.tableLayoutPanel_Information.Controls.Add(this.label_Experience, 2, 2);
-            this.tableLayoutPanel_Information.Controls.Add(this.textBox_JobName, 1, 0);
-            this.tableLayoutPanel_Information.Controls.Add(this.textBox_Experience, 3, 2);
             this.tableLayoutPanel_Information.Controls.Add(this.dateTimePicker_Deadline, 3, 0);
             this.tableLayoutPanel_Information.Controls.Add(this.label_Salary, 0, 1);
-            this.tableLayoutPanel_Information.Controls.Add(this.textBox_Salary, 1, 1);
             this.tableLayoutPanel_Information.Controls.Add(this.label_Description, 2, 1);
-            this.tableLayoutPanel_Information.Controls.Add(this.richTextBox_JobDescripton, 3, 1);
             this.tableLayoutPanel_Information.Controls.Add(this.label_Time, 0, 2);
-            this.tableLayoutPanel_Information.Controls.Add(this.textBox_WorkingTime, 1, 2);
             this.tableLayoutPanel_Information.Controls.Add(this.label__Benefit, 0, 3);
-            this.tableLayoutPanel_Information.Controls.Add(this.richTextBox_JobBenefit, 1, 3);
             this.tableLayoutPanel_Information.Controls.Add(this.label_CompanyType, 2, 3);
+            this.tableLayoutPanel_Information.Controls.Add(this.textBox_JobName, 1, 0);
+            this.tableLayoutPanel_Information.Controls.Add(this.textBox_Salary, 1, 1);
+            this.tableLayoutPanel_Information.Controls.Add(this.textBox_WorkingTime, 1, 2);
+            this.tableLayoutPanel_Information.Controls.Add(this.richTextBox_JobBenefit, 1, 3);
+            this.tableLayoutPanel_Information.Controls.Add(this.richTextBox_JobDescripton, 3, 1);
+            this.tableLayoutPanel_Information.Controls.Add(this.textBox_Experience, 3, 2);
             this.tableLayoutPanel_Information.Controls.Add(this.richTextBox_Requirement, 3, 3);
             this.tableLayoutPanel_Information.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel_Information.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -86,16 +86,16 @@
             this.tableLayoutPanel_Information.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel_Information.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel_Information.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel_Information.Size = new System.Drawing.Size(1796, 611);
+            this.tableLayoutPanel_Information.Size = new System.Drawing.Size(1796, 796);
             this.tableLayoutPanel_Information.TabIndex = 6;
             // 
             // label_ID
             // 
             this.label_ID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_ID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ID.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label_ID.Image = global::Job_Application_Management.Properties.Resources.icons8_job_32;
             this.label_ID.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_ID.Location = new System.Drawing.Point(11, 46);
+            this.label_ID.Location = new System.Drawing.Point(11, 69);
             this.label_ID.Name = "label_ID";
             this.label_ID.Size = new System.Drawing.Size(294, 60);
             this.label_ID.TabIndex = 1;
@@ -105,10 +105,10 @@
             // label_Deadline
             // 
             this.label_Deadline.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Deadline.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label_Deadline.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label_Deadline.Image = global::Job_Application_Management.Properties.Resources.icons8_deadline_32;
             this.label_Deadline.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Deadline.Location = new System.Drawing.Point(882, 48);
+            this.label_Deadline.Location = new System.Drawing.Point(882, 71);
             this.label_Deadline.Name = "label_Deadline";
             this.label_Deadline.Size = new System.Drawing.Size(361, 56);
             this.label_Deadline.TabIndex = 5;
@@ -118,276 +118,98 @@
             // label_Experience
             // 
             this.label_Experience.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Experience.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label_Experience.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label_Experience.Image = global::Job_Application_Management.Properties.Resources.icons8_experience_32;
             this.label_Experience.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Experience.Location = new System.Drawing.Point(882, 350);
+            this.label_Experience.Location = new System.Drawing.Point(882, 467);
             this.label_Experience.Name = "label_Experience";
             this.label_Experience.Size = new System.Drawing.Size(361, 60);
             this.label_Experience.TabIndex = 8;
             this.label_Experience.Text = "Experience        ";
             this.label_Experience.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox_JobName
-            // 
-            this.textBox_JobName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_JobName.Location = new System.Drawing.Point(332, 52);
-            this.textBox_JobName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_JobName.Name = "textBox_JobName";
-            this.textBox_JobName.Size = new System.Drawing.Size(500, 47);
-            this.textBox_JobName.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_JobName.StateActive.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.textBox_JobName.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.textBox_JobName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox_JobName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox_JobName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_JobName.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.textBox_JobName.StateCommon.Border.Rounding = 20;
-            this.textBox_JobName.StateCommon.Border.Width = 1;
-            this.textBox_JobName.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.textBox_JobName.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_JobName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.textBox_JobName.TabIndex = 15;
-            // 
-            // textBox_Experience
-            // 
-            this.textBox_Experience.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Experience.Location = new System.Drawing.Point(1291, 356);
-            this.textBox_Experience.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_Experience.Name = "textBox_Experience";
-            this.textBox_Experience.Size = new System.Drawing.Size(490, 47);
-            this.textBox_Experience.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_Experience.StateActive.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.textBox_Experience.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.textBox_Experience.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox_Experience.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox_Experience.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_Experience.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.textBox_Experience.StateCommon.Border.Rounding = 20;
-            this.textBox_Experience.StateCommon.Border.Width = 1;
-            this.textBox_Experience.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.textBox_Experience.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Experience.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.textBox_Experience.TabIndex = 19;
-            // 
             // dateTimePicker_Deadline
             // 
             this.dateTimePicker_Deadline.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker_Deadline.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_Deadline.Location = new System.Drawing.Point(1291, 53);
+            this.dateTimePicker_Deadline.Location = new System.Drawing.Point(1291, 75);
             this.dateTimePicker_Deadline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker_Deadline.Name = "dateTimePicker_Deadline";
-            this.dateTimePicker_Deadline.Size = new System.Drawing.Size(490, 46);
+            this.dateTimePicker_Deadline.Size = new System.Drawing.Size(490, 49);
             this.dateTimePicker_Deadline.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.dateTimePicker_Deadline.StateCommon.Border.Rounding = 20;
             this.dateTimePicker_Deadline.StateCommon.Border.Width = 1;
             this.dateTimePicker_Deadline.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.dateTimePicker_Deadline.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_Deadline.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_Deadline.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.dateTimePicker_Deadline.TabIndex = 24;
             // 
             // label_Salary
             // 
             this.label_Salary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Salary.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label_Salary.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label_Salary.Image = global::Job_Application_Management.Properties.Resources.icons8_salary_32;
             this.label_Salary.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Salary.Location = new System.Drawing.Point(11, 198);
+            this.label_Salary.Location = new System.Drawing.Point(11, 268);
             this.label_Salary.Name = "label_Salary";
             this.label_Salary.Size = new System.Drawing.Size(294, 60);
             this.label_Salary.TabIndex = 4;
             this.label_Salary.Text = "Salary        ";
             this.label_Salary.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox_Salary
-            // 
-            this.textBox_Salary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_Salary.Location = new System.Drawing.Point(332, 204);
-            this.textBox_Salary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_Salary.Name = "textBox_Salary";
-            this.textBox_Salary.Size = new System.Drawing.Size(500, 47);
-            this.textBox_Salary.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_Salary.StateActive.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.textBox_Salary.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.textBox_Salary.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox_Salary.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox_Salary.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_Salary.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.textBox_Salary.StateCommon.Border.Rounding = 20;
-            this.textBox_Salary.StateCommon.Border.Width = 1;
-            this.textBox_Salary.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.textBox_Salary.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Salary.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.textBox_Salary.TabIndex = 17;
-            // 
             // label_Description
             // 
             this.label_Description.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Description.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label_Description.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label_Description.Image = global::Job_Application_Management.Properties.Resources.icons8_description_32;
             this.label_Description.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Description.Location = new System.Drawing.Point(882, 198);
+            this.label_Description.Location = new System.Drawing.Point(882, 268);
             this.label_Description.Name = "label_Description";
             this.label_Description.Size = new System.Drawing.Size(361, 60);
             this.label_Description.TabIndex = 4;
             this.label_Description.Text = "Description         ";
             this.label_Description.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // richTextBox_JobDescripton
-            // 
-            this.richTextBox_JobDescripton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox_JobDescripton.Location = new System.Drawing.Point(1291, 155);
-            this.richTextBox_JobDescripton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox_JobDescripton.Name = "richTextBox_JobDescripton";
-            this.richTextBox_JobDescripton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.richTextBox_JobDescripton.Size = new System.Drawing.Size(490, 146);
-            this.richTextBox_JobDescripton.StateActive.Content.Color1 = System.Drawing.Color.Black;
-            this.richTextBox_JobDescripton.StateActive.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_JobDescripton.StateActive.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.richTextBox_JobDescripton.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox_JobDescripton.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox_JobDescripton.StateCommon.Border.ColorAngle = 45F;
-            this.richTextBox_JobDescripton.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.richTextBox_JobDescripton.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.richTextBox_JobDescripton.StateCommon.Border.Rounding = 20;
-            this.richTextBox_JobDescripton.StateCommon.Border.Width = 1;
-            this.richTextBox_JobDescripton.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.richTextBox_JobDescripton.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_JobDescripton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.richTextBox_JobDescripton.TabIndex = 21;
-            this.richTextBox_JobDescripton.Text = "";
-            // 
             // label_Time
             // 
             this.label_Time.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_Time.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label_Time.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label_Time.Image = global::Job_Application_Management.Properties.Resources.icons8_working_time_32;
             this.label_Time.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_Time.Location = new System.Drawing.Point(11, 350);
+            this.label_Time.Location = new System.Drawing.Point(11, 467);
             this.label_Time.Name = "label_Time";
             this.label_Time.Size = new System.Drawing.Size(294, 60);
             this.label_Time.TabIndex = 6;
             this.label_Time.Text = "Working Time        ";
             this.label_Time.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox_WorkingTime
-            // 
-            this.textBox_WorkingTime.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox_WorkingTime.Location = new System.Drawing.Point(332, 356);
-            this.textBox_WorkingTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_WorkingTime.Name = "textBox_WorkingTime";
-            this.textBox_WorkingTime.Size = new System.Drawing.Size(500, 47);
-            this.textBox_WorkingTime.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_WorkingTime.StateActive.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.textBox_WorkingTime.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.textBox_WorkingTime.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox_WorkingTime.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox_WorkingTime.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBox_WorkingTime.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.textBox_WorkingTime.StateCommon.Border.Rounding = 20;
-            this.textBox_WorkingTime.StateCommon.Border.Width = 1;
-            this.textBox_WorkingTime.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.textBox_WorkingTime.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_WorkingTime.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.textBox_WorkingTime.TabIndex = 18;
-            // 
             // label__Benefit
             // 
             this.label__Benefit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label__Benefit.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label__Benefit.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label__Benefit.Image = global::Job_Application_Management.Properties.Resources.icons8_benefit_32;
             this.label__Benefit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label__Benefit.Location = new System.Drawing.Point(11, 503);
+            this.label__Benefit.Location = new System.Drawing.Point(11, 666);
             this.label__Benefit.Name = "label__Benefit";
             this.label__Benefit.Size = new System.Drawing.Size(294, 60);
             this.label__Benefit.TabIndex = 4;
             this.label__Benefit.Text = "Benefits        ";
             this.label__Benefit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // richTextBox_JobBenefit
-            // 
-            this.richTextBox_JobBenefit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox_JobBenefit.Location = new System.Drawing.Point(337, 459);
-            this.richTextBox_JobBenefit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox_JobBenefit.Name = "richTextBox_JobBenefit";
-            this.richTextBox_JobBenefit.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.richTextBox_JobBenefit.Size = new System.Drawing.Size(490, 149);
-            this.richTextBox_JobBenefit.StateActive.Content.Color1 = System.Drawing.Color.Black;
-            this.richTextBox_JobBenefit.StateActive.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_JobBenefit.StateActive.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.richTextBox_JobBenefit.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox_JobBenefit.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox_JobBenefit.StateCommon.Border.ColorAngle = 45F;
-            this.richTextBox_JobBenefit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.richTextBox_JobBenefit.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.richTextBox_JobBenefit.StateCommon.Border.Rounding = 20;
-            this.richTextBox_JobBenefit.StateCommon.Border.Width = 1;
-            this.richTextBox_JobBenefit.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.richTextBox_JobBenefit.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_JobBenefit.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.richTextBox_JobBenefit.TabIndex = 22;
-            this.richTextBox_JobBenefit.Text = "";
-            // 
             // label_CompanyType
             // 
             this.label_CompanyType.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_CompanyType.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label_CompanyType.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label_CompanyType.Image = global::Job_Application_Management.Properties.Resources.icons8_request_32;
             this.label_CompanyType.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label_CompanyType.Location = new System.Drawing.Point(882, 503);
+            this.label_CompanyType.Location = new System.Drawing.Point(882, 666);
             this.label_CompanyType.Name = "label_CompanyType";
             this.label_CompanyType.Size = new System.Drawing.Size(361, 60);
             this.label_CompanyType.TabIndex = 5;
             this.label_CompanyType.Text = "Requirements        ";
             this.label_CompanyType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // richTextBox_Requirement
-            // 
-            this.richTextBox_Requirement.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox_Requirement.Location = new System.Drawing.Point(1291, 459);
-            this.richTextBox_Requirement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox_Requirement.Name = "richTextBox_Requirement";
-            this.richTextBox_Requirement.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.richTextBox_Requirement.Size = new System.Drawing.Size(490, 149);
-            this.richTextBox_Requirement.StateActive.Content.Color1 = System.Drawing.Color.Black;
-            this.richTextBox_Requirement.StateActive.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_Requirement.StateActive.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.richTextBox_Requirement.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox_Requirement.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox_Requirement.StateCommon.Border.ColorAngle = 45F;
-            this.richTextBox_Requirement.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.richTextBox_Requirement.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.richTextBox_Requirement.StateCommon.Border.Rounding = 20;
-            this.richTextBox_Requirement.StateCommon.Border.Width = 1;
-            this.richTextBox_Requirement.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.richTextBox_Requirement.StateCommon.Content.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox_Requirement.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.richTextBox_Requirement.TabIndex = 20;
-            this.richTextBox_Requirement.Text = "";
             // 
             // flowLayoutPanel1
             // 
@@ -396,7 +218,7 @@
             this.flowLayoutPanel1.Controls.Add(this.button_SeeCandidate);
             this.flowLayoutPanel1.Controls.Add(this.button_ApprovedCandidate);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 623);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 812);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1808, 106);
@@ -563,7 +385,7 @@
             this.button_SeeCandidate.StateCommon.Border.Width = 1;
             this.button_SeeCandidate.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.button_SeeCandidate.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.button_SeeCandidate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_SeeCandidate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.button_SeeCandidate.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.button_SeeCandidate.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.button_SeeCandidate.StatePressed.Back.ColorAngle = 135F;
@@ -625,7 +447,7 @@
             this.button_ApprovedCandidate.StateCommon.Border.Width = 1;
             this.button_ApprovedCandidate.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.button_ApprovedCandidate.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.button_ApprovedCandidate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ApprovedCandidate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.button_ApprovedCandidate.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
             this.button_ApprovedCandidate.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
             this.button_ApprovedCandidate.StatePressed.Back.ColorAngle = 135F;
@@ -654,13 +476,181 @@
             this.button_ApprovedCandidate.Visible = false;
             this.button_ApprovedCandidate.Click += new System.EventHandler(this.button_ApprovedCandidate_Click);
             // 
+            // textBox_JobName
+            // 
+            this.textBox_JobName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_JobName.AutoRoundedCorners = true;
+            this.textBox_JobName.BorderRadius = 24;
+            this.textBox_JobName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_JobName.DefaultText = "";
+            this.textBox_JobName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox_JobName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox_JobName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_JobName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_JobName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_JobName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_JobName.ForeColor = System.Drawing.Color.Black;
+            this.textBox_JobName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_JobName.Location = new System.Drawing.Point(322, 74);
+            this.textBox_JobName.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.textBox_JobName.Name = "textBox_JobName";
+            this.textBox_JobName.PasswordChar = '\0';
+            this.textBox_JobName.PlaceholderText = "";
+            this.textBox_JobName.SelectedText = "";
+            this.textBox_JobName.Size = new System.Drawing.Size(521, 50);
+            this.textBox_JobName.TabIndex = 25;
+            // 
+            // textBox_Salary
+            // 
+            this.textBox_Salary.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_Salary.AutoRoundedCorners = true;
+            this.textBox_Salary.BorderRadius = 24;
+            this.textBox_Salary.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_Salary.DefaultText = "";
+            this.textBox_Salary.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox_Salary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox_Salary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_Salary.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_Salary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_Salary.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Salary.ForeColor = System.Drawing.Color.Black;
+            this.textBox_Salary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_Salary.Location = new System.Drawing.Point(321, 273);
+            this.textBox_Salary.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.textBox_Salary.Name = "textBox_Salary";
+            this.textBox_Salary.PasswordChar = '\0';
+            this.textBox_Salary.PlaceholderText = "";
+            this.textBox_Salary.SelectedText = "";
+            this.textBox_Salary.Size = new System.Drawing.Size(523, 50);
+            this.textBox_Salary.TabIndex = 25;
+            // 
+            // textBox_WorkingTime
+            // 
+            this.textBox_WorkingTime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_WorkingTime.AutoRoundedCorners = true;
+            this.textBox_WorkingTime.BorderRadius = 24;
+            this.textBox_WorkingTime.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_WorkingTime.DefaultText = "";
+            this.textBox_WorkingTime.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox_WorkingTime.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox_WorkingTime.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_WorkingTime.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_WorkingTime.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_WorkingTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_WorkingTime.ForeColor = System.Drawing.Color.Black;
+            this.textBox_WorkingTime.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_WorkingTime.Location = new System.Drawing.Point(321, 472);
+            this.textBox_WorkingTime.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.textBox_WorkingTime.Name = "textBox_WorkingTime";
+            this.textBox_WorkingTime.PasswordChar = '\0';
+            this.textBox_WorkingTime.PlaceholderText = "";
+            this.textBox_WorkingTime.SelectedText = "";
+            this.textBox_WorkingTime.Size = new System.Drawing.Size(523, 50);
+            this.textBox_WorkingTime.TabIndex = 25;
+            // 
+            // richTextBox_JobBenefit
+            // 
+            this.richTextBox_JobBenefit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.richTextBox_JobBenefit.BorderRadius = 20;
+            this.richTextBox_JobBenefit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBox_JobBenefit.DefaultText = "";
+            this.richTextBox_JobBenefit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.richTextBox_JobBenefit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.richTextBox_JobBenefit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBox_JobBenefit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBox_JobBenefit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.richTextBox_JobBenefit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_JobBenefit.ForeColor = System.Drawing.Color.Black;
+            this.richTextBox_JobBenefit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.richTextBox_JobBenefit.Location = new System.Drawing.Point(321, 604);
+            this.richTextBox_JobBenefit.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.richTextBox_JobBenefit.Multiline = true;
+            this.richTextBox_JobBenefit.Name = "richTextBox_JobBenefit";
+            this.richTextBox_JobBenefit.PasswordChar = '\0';
+            this.richTextBox_JobBenefit.PlaceholderText = "";
+            this.richTextBox_JobBenefit.SelectedText = "";
+            this.richTextBox_JobBenefit.Size = new System.Drawing.Size(523, 185);
+            this.richTextBox_JobBenefit.TabIndex = 25;
+            // 
+            // richTextBox_JobDescripton
+            // 
+            this.richTextBox_JobDescripton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.richTextBox_JobDescripton.BorderRadius = 20;
+            this.richTextBox_JobDescripton.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBox_JobDescripton.DefaultText = "";
+            this.richTextBox_JobDescripton.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.richTextBox_JobDescripton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.richTextBox_JobDescripton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBox_JobDescripton.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBox_JobDescripton.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.richTextBox_JobDescripton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_JobDescripton.ForeColor = System.Drawing.Color.Black;
+            this.richTextBox_JobDescripton.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.richTextBox_JobDescripton.Location = new System.Drawing.Point(1281, 206);
+            this.richTextBox_JobDescripton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.richTextBox_JobDescripton.Multiline = true;
+            this.richTextBox_JobDescripton.Name = "richTextBox_JobDescripton";
+            this.richTextBox_JobDescripton.PasswordChar = '\0';
+            this.richTextBox_JobDescripton.PlaceholderText = "";
+            this.richTextBox_JobDescripton.SelectedText = "";
+            this.richTextBox_JobDescripton.Size = new System.Drawing.Size(510, 185);
+            this.richTextBox_JobDescripton.TabIndex = 25;
+            // 
+            // textBox_Experience
+            // 
+            this.textBox_Experience.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_Experience.AutoRoundedCorners = true;
+            this.textBox_Experience.BorderRadius = 24;
+            this.textBox_Experience.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_Experience.DefaultText = "";
+            this.textBox_Experience.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox_Experience.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox_Experience.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_Experience.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_Experience.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_Experience.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Experience.ForeColor = System.Drawing.Color.Black;
+            this.textBox_Experience.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_Experience.Location = new System.Drawing.Point(1281, 472);
+            this.textBox_Experience.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.textBox_Experience.Name = "textBox_Experience";
+            this.textBox_Experience.PasswordChar = '\0';
+            this.textBox_Experience.PlaceholderText = "";
+            this.textBox_Experience.SelectedText = "";
+            this.textBox_Experience.Size = new System.Drawing.Size(510, 50);
+            this.textBox_Experience.TabIndex = 25;
+            // 
+            // richTextBox_Requirement
+            // 
+            this.richTextBox_Requirement.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.richTextBox_Requirement.BorderRadius = 20;
+            this.richTextBox_Requirement.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBox_Requirement.DefaultText = "";
+            this.richTextBox_Requirement.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.richTextBox_Requirement.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.richTextBox_Requirement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBox_Requirement.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBox_Requirement.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.richTextBox_Requirement.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_Requirement.ForeColor = System.Drawing.Color.Black;
+            this.richTextBox_Requirement.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.richTextBox_Requirement.Location = new System.Drawing.Point(1281, 604);
+            this.richTextBox_Requirement.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.richTextBox_Requirement.Multiline = true;
+            this.richTextBox_Requirement.Name = "richTextBox_Requirement";
+            this.richTextBox_Requirement.PasswordChar = '\0';
+            this.richTextBox_Requirement.PlaceholderText = "";
+            this.richTextBox_Requirement.SelectedText = "";
+            this.richTextBox_Requirement.Size = new System.Drawing.Size(510, 185);
+            this.richTextBox_Requirement.TabIndex = 25;
+            // 
             // FEmployer_JobDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1807, 745);
+            this.ClientSize = new System.Drawing.Size(1807, 944);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel_Information);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -671,7 +661,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FEmployer_JobDetail_Load);
             this.tableLayoutPanel_Information.ResumeLayout(false);
-            this.tableLayoutPanel_Information.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -687,18 +676,18 @@
         private System.Windows.Forms.Label label__Benefit;
         private System.Windows.Forms.Label label_Experience;
         private System.Windows.Forms.Label label_Salary;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_JobName;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Salary;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_WorkingTime;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBox_Experience;
-        private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox richTextBox_Requirement;
-        private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox richTextBox_JobDescripton;
-        private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox richTextBox_JobBenefit;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dateTimePicker_Deadline;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_Post;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_Delete;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_SeeCandidate;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_ApprovedCandidate;
+        private Guna.UI2.WinForms.Guna2TextBox textBox_JobName;
+        private Guna.UI2.WinForms.Guna2TextBox textBox_Salary;
+        private Guna.UI2.WinForms.Guna2TextBox textBox_WorkingTime;
+        private Guna.UI2.WinForms.Guna2TextBox richTextBox_JobBenefit;
+        private Guna.UI2.WinForms.Guna2TextBox richTextBox_JobDescripton;
+        private Guna.UI2.WinForms.Guna2TextBox textBox_Experience;
+        private Guna.UI2.WinForms.Guna2TextBox richTextBox_Requirement;
     }
 }

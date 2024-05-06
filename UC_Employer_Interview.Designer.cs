@@ -30,7 +30,6 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label_JobName = new System.Windows.Forms.Label();
-            this.button_Show = new Guna.UI2.WinForms.Guna2Button();
             this.label_CandidateName = new System.Windows.Forms.Label();
             this.label_InterviewTime = new System.Windows.Forms.Label();
             this.label_Note = new System.Windows.Forms.Label();
@@ -40,14 +39,12 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoScroll = true;
-            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.tableLayoutPanel1.Controls.Add(this.label_JobName, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button_Show, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.label_CandidateName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label_InterviewTime, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label_Note, 3, 0);
@@ -58,74 +55,63 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1014, 60);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Click += new System.EventHandler(this.button_Show_Click);
             // 
             // label_JobName
             // 
             this.label_JobName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_JobName.AutoSize = true;
-            this.label_JobName.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_JobName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_JobName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(29)))));
-            this.label_JobName.Location = new System.Drawing.Point(34, 13);
+            this.label_JobName.Location = new System.Drawing.Point(64, 14);
             this.label_JobName.Name = "label_JobName";
-            this.label_JobName.Size = new System.Drawing.Size(155, 34);
+            this.label_JobName.Size = new System.Drawing.Size(124, 32);
             this.label_JobName.TabIndex = 1;
             this.label_JobName.Text = "Job Name";
             this.label_JobName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button_Show
-            // 
-            this.button_Show.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_Show.AutoRoundedCorners = true;
-            this.button_Show.BorderRadius = 17;
-            this.button_Show.DefaultAutoSize = true;
-            this.button_Show.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_Show.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_Show.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_Show.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_Show.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button_Show.ForeColor = System.Drawing.Color.White;
-            this.button_Show.Location = new System.Drawing.Point(913, 12);
-            this.button_Show.Name = "button_Show";
-            this.button_Show.Size = new System.Drawing.Size(79, 36);
-            this.button_Show.TabIndex = 0;
-            this.button_Show.Text = "Detail";
-            this.button_Show.Click += new System.EventHandler(this.button_Show_Click);
+            this.label_JobName.Click += new System.EventHandler(this.button_Show_Click);
             // 
             // label_CandidateName
             // 
             this.label_CandidateName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_CandidateName.AutoSize = true;
+            this.label_CandidateName.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label_CandidateName.ForeColor = System.Drawing.Color.Black;
-            this.label_CandidateName.Location = new System.Drawing.Point(285, 13);
+            this.label_CandidateName.Location = new System.Drawing.Point(340, 14);
             this.label_CandidateName.Name = "label_CandidateName";
-            this.label_CandidateName.Size = new System.Drawing.Size(99, 34);
+            this.label_CandidateName.Size = new System.Drawing.Size(78, 32);
             this.label_CandidateName.TabIndex = 1;
             this.label_CandidateName.Text = "Name";
             this.label_CandidateName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_CandidateName.Click += new System.EventHandler(this.button_Show_Click);
             // 
             // label_InterviewTime
             // 
             this.label_InterviewTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_InterviewTime.AutoSize = true;
+            this.label_InterviewTime.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label_InterviewTime.ForeColor = System.Drawing.Color.Black;
-            this.label_InterviewTime.Location = new System.Drawing.Point(453, 13);
+            this.label_InterviewTime.Location = new System.Drawing.Point(549, 14);
             this.label_InterviewTime.Name = "label_InterviewTime";
-            this.label_InterviewTime.Size = new System.Drawing.Size(209, 34);
+            this.label_InterviewTime.Size = new System.Drawing.Size(166, 32);
             this.label_InterviewTime.TabIndex = 1;
             this.label_InterviewTime.Text = "Interview time";
             this.label_InterviewTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_InterviewTime.Click += new System.EventHandler(this.button_Show_Click);
             // 
             // label_Note
             // 
             this.label_Note.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_Note.AutoSize = true;
+            this.label_Note.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label_Note.ForeColor = System.Drawing.Color.Black;
-            this.label_Note.Location = new System.Drawing.Point(739, 13);
+            this.label_Note.Location = new System.Drawing.Point(853, 14);
             this.label_Note.Name = "label_Note";
-            this.label_Note.Size = new System.Drawing.Size(82, 34);
+            this.label_Note.Size = new System.Drawing.Size(67, 32);
             this.label_Note.TabIndex = 1;
             this.label_Note.Text = "Note";
             this.label_Note.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Note.Click += new System.EventHandler(this.button_Show_Click);
             // 
             // UC_Employer_Interview
             // 
@@ -147,7 +133,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2Button button_Show;
         private System.Windows.Forms.Label label_JobName;
         private System.Windows.Forms.Label label_CandidateName;
         private System.Windows.Forms.Label label_InterviewTime;
