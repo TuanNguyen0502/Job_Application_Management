@@ -48,7 +48,7 @@ namespace Job_Application_Management
             Button b = (Button)sender;
             b.Enabled = false;
             b.BackColor = Color.LightGreen;
-            canDAO.AddSavedJob(job.Id);
+            canDAO.AddSavedJob(job.Id, candidate1.Id);
         }
         private void gunaLinePanel1_Click(object sender, EventArgs e)
         {

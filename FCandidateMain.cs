@@ -80,10 +80,10 @@ namespace Job_Application_Management
         private void CheckJobsSavedAndPushIntoFLP(UC_CandidateMain candidateMain)
         {
             
-            List<UC_JobsSaved> jobSaveds = canDAO.GetSavedJobsFromDB();
+            List<UC_JobsSaved> jobSaveds = canDAO.GetSavedJobsFromDB(lblCddID.Text);
             foreach (var jobSaved in jobSaveds)
             {
-                if (candidateMain._Job.Id == jobSaved.SavedJob.Id)
+                if (candidateMain._Job.Id == jobSaved.SavedJob.Id && jobSaved.SavedJob.CddID == lblCddID.Text)
                 {
                     candidateMain.BtnApply.Enabled = false;
                     candidateMain.BtnApply.BackColor = Color.LightGreen;

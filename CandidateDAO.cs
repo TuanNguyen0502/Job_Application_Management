@@ -106,14 +106,19 @@ namespace Job_Application_Management
             }
             return items;
         }
-        public List<UC_JobsSaved> GetSavedJobsFromDB()
+        public List<UC_JobsSaved> GetSavedJobsFromDB(string cddid)
         {
             sqlQuery = "SELECT sj.ID SJID, j.Name, j.JobDecription, c.Name as CompanyName, sj.TimeSaved, c.Address, j.Salary, sj.JobID, j.PostTime"
                        +" FROM SavedJobs sj"
                        +" JOIN Jobs j ON sj.JobID = j.ID"
                        +" JOIN Employers e ON j.EmpID = e.ID"
-                       +" JOIN Company c ON c.Name = e.CompanyName";
-            List<Dictionary<string, object>> keyValueSavedJobs = dbConn.ExecuteReaderData(sqlQuery);
+                       +" JOIN Company c ON c.Name = e.CompanyName" +
+                       " WHERE sj.CddID = @CddID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid}
+            };
+            List<Dictionary<string, object>> keyValueSavedJobs = dbConn.ExecuteReaderData(sqlQuery, lstParams);
             List<UC_JobsSaved> saveds = new List<UC_JobsSaved>();
             foreach (var row in keyValueSavedJobs)
             {
@@ -126,6 +131,7 @@ namespace Job_Application_Management
                 savedJob.Salary = (int)row["Salary"];
                 savedJob.SavedJobID = (int)row["SJID"];
                 savedJob.Id= (int)row["JobID"];
+                savedJob.CddID = cddid;
                 UC_JobsSaved item = new UC_JobsSaved(savedJob);
                 saveds.Add(item);
             }
@@ -167,8 +173,13 @@ namespace Job_Application_Management
                        +" FROM AppliedJobs aj"
                        +" JOIN Jobs j ON aj.JobID = j.ID"
                        +" JOIN Employers e ON j.EmpID = e.ID"
-                       +" JOIN Company c ON c.Name = e.CompanyName";
-            List<Dictionary<string, object>> keyValueSavedJobs = dbConn.ExecuteReaderData(sqlQuery);
+                       +" JOIN Company c ON c.Name = e.CompanyName" +
+                       " WHERE aj.CddID = @CddID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid}
+            };
+            List<Dictionary<string, object>> keyValueSavedJobs = dbConn.ExecuteReaderData(sqlQuery, lstParams);
             List<UC_AppliedJobs> applieds = new List<UC_AppliedJobs>();
             foreach (var row in keyValueSavedJobs)
             {
@@ -182,6 +193,7 @@ namespace Job_Application_Management
                 applied.AppliedJobID = (int)row["ID"];
                 applied.Id= (int)row["JobID"];
                 applied.Status = GetStatus(cddid, (int)row["JobID"]);
+                applied.CddID = cddid;
                 UC_AppliedJobs item = new UC_AppliedJobs(applied);
                 applieds.Add(item);
             }
@@ -218,14 +230,15 @@ namespace Job_Application_Management
             List<Dictionary<string, object>> keyValueJobDetails = dbConn.ExecuteReaderData(sqlQuery, lstParam);
             return keyValueJobDetails;
         }
-        public void AddSavedJob(int jobid)
+        public void AddSavedJob(int jobid, string cddid)
         {
-            sqlQuery = "INSERT INTO SavedJobs(TimeSaved, JobID)" +
-                            " VALUES(@times,@jId)";
+            sqlQuery = "INSERT INTO SavedJobs(TimeSaved, JobID, CddID)" +
+                            " VALUES(@times,@jId,@CddID)";
             SqlParameter[] lstParam =
             {
                     new SqlParameter("@times", SqlDbType.Date) {Value = DateTime.Now},
                     new SqlParameter("@jId", SqlDbType.Int) { Value = jobid },
+                    new SqlParameter("@CddId", SqlDbType.VarChar) {Value = cddid}
             };
             if (dbConn.ExecuteWriteDataCheck(sqlQuery, lstParam))
             {
@@ -236,14 +249,15 @@ namespace Job_Application_Management
                 MessageBox.Show("Lưu công việc thất bại");
             }
         }
-        public void AddAppliedJob(int jobid)
+        public void AddAppliedJob(int jobid, string cddid)
         {
-            sqlQuery = "INSERT INTO AppliedJobs(TimeApplied, JobID)" +
-                            " VALUES(@times,@jId)";
+            sqlQuery = "INSERT INTO AppliedJobs(TimeApplied, JobID, CddID)" +
+                            " VALUES(@times,@jId, @CddID)";
             SqlParameter[] lstParam =
             {
                     new SqlParameter("@times", SqlDbType.Date) {Value = DateTime.Now},
                     new SqlParameter("@jId", SqlDbType.Int) { Value = jobid },
+                    new SqlParameter("@CddId", SqlDbType.VarChar) {Value = cddid}
                 };
             if (dbConn.ExecuteWriteDataCheck(sqlQuery, lstParam))
             {
@@ -753,15 +767,29 @@ namespace Job_Application_Management
                 MessageBox.Show("Đăng ký tài khoản thất bại");
             }
         }
-        public int CheckCandidateExistsInDatabase(string cddid)
+        public bool CheckCandidateExistsInDatabase(string cddid)
         {
-            sqlQuery = "SELECT dbo.func_CheckCandidate(@cddid);";
-            SqlParameter[] lstParams =
+            try
             {
-                new SqlParameter("@cddid", SqlDbType.VarChar) {Value = cddid},
-            };
-            int flag = dbConn.ExecuteScalarGetInt(sqlQuery, lstParams);
-            return flag;
+                using (SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=Jobs_Management;Integrated Security=True"))
+                {
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand("SELECT func_CheckCandidate(@CddID)", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@CddID", cddid);
+
+                        // Since the function returns BIT, we expect a boolean value
+                        bool exists = (bool)cmd.ExecuteScalar();
+
+                        return exists;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
         public string GetCddID()
         {

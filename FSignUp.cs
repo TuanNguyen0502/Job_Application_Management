@@ -36,13 +36,20 @@ namespace Job_Application_Management
             if (txt_Username.Text == "" && txt_Password.Text == "" && txt_Confirm.Text == "")
             {
                 MessageBox.Show("Tài khoản mật khẩu còn trống.", "Đăng ký thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+            }
+            else if (txt_Username.Text == "" && txt_Password.Text != "")
+            {
+                MessageBox.Show("Tài khoản còn trống.", "Đăng ký thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txt_Password.Text == "" && txt_Username.Text != "")
+            {
+                MessageBox.Show("Mật khẩu còn trống.", "Đăng ký thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (txt_Password.Text == txt_Confirm.Text)
             {
-                if (canDAO.CheckCandidateExistsInDatabase(txt_CanID.Text) == 0)
+                if (canDAO.CheckCandidateExistsInDatabase(txt_CanID.Text) == false)
                 {
-                    MessageBox.Show("Vui lòng điền thông tin của bạn ! Sau đó lưu chúng", "Đăng ký thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Vui lòng nhấn vào nút 'Chi tiết' để lưu thông tin, rồi mới đăng ký tài khoản.", "Đăng ký thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

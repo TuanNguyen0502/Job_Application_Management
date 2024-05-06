@@ -27,7 +27,7 @@ namespace Job_Application_Management
         }
         public void LoadSavedJobs()
         {
-            List<UC_JobsSaved> saveds = canDAO.GetSavedJobsFromDB();
+            List<UC_JobsSaved> saveds = canDAO.GetSavedJobsFromDB(cddID);
             if (flpStoreUC.Controls.Count > 0)
             {
                 flpStoreUC.Controls.Clear();
@@ -83,7 +83,7 @@ namespace Job_Application_Management
             List<UC_CandidateMain> jobItems = canDAO.GetJobsFromDB(cddID);
             foreach (var jobItem in jobItems)
             {
-                    List<UC_JobsSaved> jobSaveds = canDAO.GetSavedJobsFromDB();
+                    List<UC_JobsSaved> jobSaveds = canDAO.GetSavedJobsFromDB(cddID);
                     foreach (var jobSaved in jobSaveds)
                     {
                         if (jobItem._Job.Id != jobSaved.SavedJob.Id)
@@ -96,7 +96,7 @@ namespace Job_Application_Management
 
         private void rdb_Nearly_CheckedChanged(object sender, EventArgs e)
         {
-            List<UC_JobsSaved> uC_JobsSaveds = canDAO.GetSavedJobsFromDB();
+            List<UC_JobsSaved> uC_JobsSaveds = canDAO.GetSavedJobsFromDB(cddID);
             uC_JobsSaveds.Sort((uc1,uc2)=> uc2.SavedJob.TimeSaved.CompareTo(uc1.SavedJob.TimeSaved));
             if (flpStoreUC.Controls.Count > 0)
             {
@@ -112,7 +112,7 @@ namespace Job_Application_Management
 
         private void rdb_Lately_CheckedChanged(object sender, EventArgs e)
         {
-            List<UC_JobsSaved> uC_JobsSaveds = canDAO.GetSavedJobsFromDB();
+            List<UC_JobsSaved> uC_JobsSaveds = canDAO.GetSavedJobsFromDB(cddID);
             uC_JobsSaveds.Sort((uc1, uc2) => uc1.SavedJob.PostTime.CompareTo(uc2.SavedJob.PostTime));
             if (flpStoreUC.Controls.Count > 0)
             {
@@ -128,7 +128,7 @@ namespace Job_Application_Management
 
         private void rdb_Tallest_CheckedChanged(object sender, EventArgs e)
         {
-            List<UC_JobsSaved> uC_JobsSaveds = canDAO.GetSavedJobsFromDB();
+            List<UC_JobsSaved> uC_JobsSaveds = canDAO.GetSavedJobsFromDB(cddID);
             uC_JobsSaveds.Sort((uc1, uc2) => uc2.SavedJob.Salary.CompareTo(uc1.SavedJob.Salary));
             if (flpStoreUC.Controls.Count > 0)
             {

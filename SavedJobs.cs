@@ -11,6 +11,7 @@ namespace Job_Application_Management
     {
         private int savedJobID;
         private DateTime timesaved;
+        private string cddid;
         public SavedJobs() { }
         public int SavedJobID
         {
@@ -33,6 +34,11 @@ namespace Job_Application_Management
                 else
                     timesaved = value;
             }
+        }
+        public string CddID
+        {
+            get { return cddid; }
+            set { cddid = value; }
         }
     }
 }
