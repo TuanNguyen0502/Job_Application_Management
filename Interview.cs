@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
@@ -32,5 +33,39 @@ namespace Job_Application_Management
         public int JobID { get => jobID; set => jobID = value; }
         public DateTime InterviewTime { get => interviewTime; set => interviewTime = value; }
         public string Note { get => note; set => note = value; }
+
+        private bool CheckInterviewTime()
+        {
+            if (interviewTime == null)
+            {
+                MessageBox.Show("Interview time cannot be null !", "Empty interview time", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (interviewTime.CompareTo(DateTime.Now) < 0)
+            {
+                MessageBox.Show("Interview time cannot be in the past or today !", "Unaccepted deadline", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        private bool CheckNote()
+        {
+            if (string.IsNullOrEmpty(note))
+            {
+                MessageBox.Show("Note can not be empty !", "Empty note", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        private bool CheckAllConditions()
+        {
+            if (CheckInterviewTime() && CheckNote())
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

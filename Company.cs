@@ -43,7 +43,7 @@ namespace Job_Application_Management
 
         private bool CheckIntroduction()
         {
-            if (Introduction == null || introduction == "")
+            if (string.IsNullOrEmpty(introduction))
             {
                 MessageBox.Show("Introduction cannot be empty !", "Empty introduction", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -73,7 +73,7 @@ namespace Job_Application_Management
 
         public bool CheckBusinessLicense()
         {
-            if (businessLicense == null || businessLicense == "")
+            if (string.IsNullOrEmpty(businessLicense))
             {
                 MessageBox.Show("Business License cannot be empty !", "Empty business license", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -83,7 +83,7 @@ namespace Job_Application_Management
 
         public bool CheckTaxCode()
         {
-            if (taxCode == null || taxCode == "")
+            if (string.IsNullOrEmpty(taxCode))
             {
                 MessageBox.Show("Taxcode cannot be empty !", "Empty taxcode", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -93,7 +93,7 @@ namespace Job_Application_Management
 
         public bool CheckManager()
         {
-            if (manager == null || manager == "")
+            if (string.IsNullOrEmpty(manager))
             {
                 MessageBox.Show("Manager's name cannot be empty !", "Empty Manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -103,7 +103,7 @@ namespace Job_Application_Management
 
         public bool CheckAddress()
         {
-            if (address == null || address == "")
+            if (string.IsNullOrEmpty(address))
             {
                 MessageBox.Show("Address cannot be empty !", "Empty address", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -113,7 +113,7 @@ namespace Job_Application_Management
 
         public bool CheckName()
         {
-            if (Name == null || name == "")
+            if (string.IsNullOrEmpty(name))
             {
                 MessageBox.Show("Company's name cannot be empty !", "Empty name", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

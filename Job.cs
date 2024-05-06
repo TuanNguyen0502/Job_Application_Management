@@ -65,7 +65,7 @@ namespace Job_Application_Management
             Request = request;
             postTime = DateTime.Now;
             EmpID = empID;
-            CompanyName=companyName;
+            CompanyName = companyName;
             Address = address;
         }
 
@@ -81,9 +81,9 @@ namespace Job_Application_Management
 
         public bool CheckRequest()
         {
-            if (Request == null || Request == "")
+            if (string.IsNullOrEmpty(Request))
             {
-                MessageBox.Show("Request cannot be null !");
+                MessageBox.Show("Request cannot be null !", "Empty request", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -91,9 +91,9 @@ namespace Job_Application_Management
 
         public bool CheckBenefit()
         {
-            if (Benefit == null || Benefit == "")
+            if (string.IsNullOrEmpty(Benefit))
             {
-                MessageBox.Show("Benefit cannot be null !");
+                MessageBox.Show("Benefit cannot be null !", "Empty benefit", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -108,7 +108,7 @@ namespace Job_Application_Management
             }
             if (Deadline.CompareTo(DateTime.Now) < 0)
             {
-                MessageBox.Show("Deadline cannot be in the past or today !");
+                MessageBox.Show("Deadline cannot be in the past or today !", "Unaccepted deadline", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -116,9 +116,9 @@ namespace Job_Application_Management
 
         public bool CheckExperience()
         {
-            if (Experience == null || Experience == "")
+            if (string.IsNullOrEmpty(Experience))
             {
-                MessageBox.Show("Experience cannot be null !");
+                MessageBox.Show("Experience cannot be null !", "Empty experience", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -126,9 +126,9 @@ namespace Job_Application_Management
 
         public bool CheckWorkDuration()
         {
-            if (WorkDuration == null || WorkDuration == "")
+            if (string.IsNullOrEmpty(WorkDuration))
             {
-                MessageBox.Show("Work Duration cannot be number 0 !");
+                MessageBox.Show("Work Duration cannot be number 0 !", "Empty work duration", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -136,9 +136,9 @@ namespace Job_Application_Management
 
         public bool CheckJobDescription()
         {
-            if (JobDescription == null || JobDescription == "")
+            if (string.IsNullOrEmpty(JobDescription))
             {
-                MessageBox.Show("Job description cannot be null !");
+                MessageBox.Show("Job description cannot be null !", "Empty description", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -148,7 +148,7 @@ namespace Job_Application_Management
         {
             if (Salary <= 0)
             {
-                MessageBox.Show("Salary cannot be number 0 !");
+                MessageBox.Show("Salary cannot be number 0 !", "Empty salary", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -156,9 +156,9 @@ namespace Job_Application_Management
 
         public bool CheckName()
         {
-            if (Name == null || Name == "")
+            if (string.IsNullOrEmpty(Name))
             {
-                MessageBox.Show("Name cannot be null !");
+                MessageBox.Show("Name cannot be null !", "Empty name", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
