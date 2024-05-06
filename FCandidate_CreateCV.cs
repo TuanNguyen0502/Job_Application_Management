@@ -52,6 +52,8 @@ namespace Job_Application_Management
 
         private void FCandidate_CreateCV_Load(object sender, EventArgs e)
         {
+            string CddName = canDAO.GetNameByCddID(cddid);
+            uC_CV1.Label_CandidateName.Text = CddName;
             if (canDAO.CheckCandidateExistsInResume(cddid))
             {
                 MessageBox.Show("Bạn đã có sẵn CV rồi. Ứng tuyển công việc ngay thôi !");
