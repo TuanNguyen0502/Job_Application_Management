@@ -216,3 +216,5 @@ BEGIN
 	RETURN @Exists;
 END;
 SELECT dbo.func_CheckCandidate('CDD006')
+
+SELECT * FROM Interviews

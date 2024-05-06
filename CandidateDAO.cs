@@ -663,16 +663,24 @@ namespace Job_Application_Management
             int res = dbConn.ExecuteScalarGetInt(sqlQuery, lstParams);
             return res;
         }
-        public int CountJobSaved()
+        public int CountJobSaved(string cddid)
         {
-            sqlQuery = "SELECT COUNT(*) FROM SavedJobs";
-            int res = dbConn.ExecuteScalarGetInt(sqlQuery);
+            sqlQuery = "SELECT COUNT(*) FROM SavedJobs WHERE CddID = @CddID";
+            SqlParameter[] lstParam =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid}
+            };
+            int res = dbConn.ExecuteScalarGetInt(sqlQuery, lstParam);
             return res;
         }
-        public int CountJobApplied()
+        public int CountJobApplied(string cddid)
         {
-            sqlQuery = "SELECT COUNT(*) FROM AppliedJobs";
-            int res = dbConn.ExecuteScalarGetInt(sqlQuery);
+            sqlQuery = "SELECT COUNT(*) FROM AppliedJobs WHERE CddID = @CddID";
+            SqlParameter[] lstParam =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid}
+            };
+            int res = dbConn.ExecuteScalarGetInt(sqlQuery, lstParam);
             return res;
         }
         #region Update Candidate Information
