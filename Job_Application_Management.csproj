@@ -259,12 +259,6 @@
     <Compile Include="UC_CandidateMain.Designer.cs">
       <DependentUpon>UC_CandidateMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_CandidateProfile.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_CandidateProfile.Designer.cs">
-      <DependentUpon>UC_CandidateProfile.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_Candidate_Interview.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -439,9 +433,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_CandidateMain.resx">
       <DependentUpon>UC_CandidateMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_CandidateProfile.resx">
-      <DependentUpon>UC_CandidateProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Candidate_Interview.resx">
       <DependentUpon>UC_Candidate_Interview.cs</DependentUpon>
@@ -990,6 +981,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\profile_avatar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-interview-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

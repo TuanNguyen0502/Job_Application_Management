@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.roudingPanel2 = new Job_Application_Management.RoudingPanel();
+            this.label_Certificate = new System.Windows.Forms.Label();
+            this.label_Workplace = new System.Windows.Forms.Label();
+            this.label_Company = new System.Windows.Forms.Label();
+            this.label_GPA = new System.Windows.Forms.Label();
+            this.label_Major = new System.Windows.Forms.Label();
+            this.label_University = new System.Windows.Forms.Label();
+            this.label_CareerGoal = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -36,13 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label_CareerGoal = new System.Windows.Forms.Label();
-            this.label_University = new System.Windows.Forms.Label();
-            this.label_Major = new System.Windows.Forms.Label();
-            this.label_GPA = new System.Windows.Forms.Label();
-            this.label_Company = new System.Windows.Forms.Label();
-            this.label_Workplace = new System.Windows.Forms.Label();
-            this.label_Certificate = new System.Windows.Forms.Label();
             this.roudingPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,10 +70,80 @@
             this.roudingPanel2.Size = new System.Drawing.Size(857, 578);
             this.roudingPanel2.TabIndex = 20;
             // 
+            // label_Certificate
+            // 
+            this.label_Certificate.AutoSize = true;
+            this.label_Certificate.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label_Certificate.Location = new System.Drawing.Point(273, 511);
+            this.label_Certificate.Name = "label_Certificate";
+            this.label_Certificate.Size = new System.Drawing.Size(118, 32);
+            this.label_Certificate.TabIndex = 14;
+            this.label_Certificate.Text = "certificate";
+            // 
+            // label_Workplace
+            // 
+            this.label_Workplace.AutoSize = true;
+            this.label_Workplace.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label_Workplace.Location = new System.Drawing.Point(273, 431);
+            this.label_Workplace.Name = "label_Workplace";
+            this.label_Workplace.Size = new System.Drawing.Size(181, 32);
+            this.label_Workplace.TabIndex = 14;
+            this.label_Workplace.Text = "Vi tri ung tuyen";
+            // 
+            // label_Company
+            // 
+            this.label_Company.AutoSize = true;
+            this.label_Company.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label_Company.Location = new System.Drawing.Point(273, 351);
+            this.label_Company.Name = "label_Company";
+            this.label_Company.Size = new System.Drawing.Size(112, 32);
+            this.label_Company.TabIndex = 14;
+            this.label_Company.Text = "company";
+            // 
+            // label_GPA
+            // 
+            this.label_GPA.AutoSize = true;
+            this.label_GPA.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label_GPA.Location = new System.Drawing.Point(273, 191);
+            this.label_GPA.Name = "label_GPA";
+            this.label_GPA.Size = new System.Drawing.Size(56, 32);
+            this.label_GPA.TabIndex = 14;
+            this.label_GPA.Text = "GPA";
+            // 
+            // label_Major
+            // 
+            this.label_Major.AutoSize = true;
+            this.label_Major.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label_Major.Location = new System.Drawing.Point(273, 271);
+            this.label_Major.Name = "label_Major";
+            this.label_Major.Size = new System.Drawing.Size(75, 32);
+            this.label_Major.TabIndex = 14;
+            this.label_Major.Text = "major";
+            // 
+            // label_University
+            // 
+            this.label_University.AutoSize = true;
+            this.label_University.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label_University.Location = new System.Drawing.Point(273, 111);
+            this.label_University.Name = "label_University";
+            this.label_University.Size = new System.Drawing.Size(117, 32);
+            this.label_University.TabIndex = 14;
+            this.label_University.Text = "university";
+            // 
+            // label_CareerGoal
+            // 
+            this.label_CareerGoal.AutoSize = true;
+            this.label_CareerGoal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label_CareerGoal.Location = new System.Drawing.Point(273, 31);
+            this.label_CareerGoal.Name = "label_CareerGoal";
+            this.label_CareerGoal.Size = new System.Drawing.Size(252, 32);
+            this.label_CareerGoal.TabIndex = 14;
+            this.label_CareerGoal.Text = "muc tieu nghe nghiep";
+            // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
-            this.label7.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label7.Image = global::Job_Application_Management.Properties.Resources.icons8_certification_32;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label7.Location = new System.Drawing.Point(13, 485);
@@ -86,7 +156,7 @@
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
-            this.label6.Font = new System.Drawing.Font("Consolas", 12F);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label6.Image = global::Job_Application_Management.Properties.Resources.icons8_software_license_30;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label6.Location = new System.Drawing.Point(13, 405);
@@ -99,7 +169,7 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
-            this.label5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label5.Image = global::Job_Application_Management.Properties.Resources.icons8_company_30;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label5.Location = new System.Drawing.Point(13, 325);
@@ -112,7 +182,7 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
-            this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label4.Image = global::Job_Application_Management.Properties.Resources.icons8_gpa_32;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label4.Location = new System.Drawing.Point(13, 245);
@@ -126,7 +196,7 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
-            this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label3.Image = global::Job_Application_Management.Properties.Resources.icons8_resume_and_cv_32;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.Location = new System.Drawing.Point(13, 165);
@@ -140,7 +210,7 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
-            this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label2.Image = global::Job_Application_Management.Properties.Resources.icons8_university_32;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Location = new System.Drawing.Point(13, 85);
@@ -154,7 +224,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
-            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label1.Image = global::Job_Application_Management.Properties.Resources.icons8_medal_32;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(13, 5);
@@ -164,76 +234,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "    Objective";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label_CareerGoal
-            // 
-            this.label_CareerGoal.AutoSize = true;
-            this.label_CareerGoal.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CareerGoal.Location = new System.Drawing.Point(273, 31);
-            this.label_CareerGoal.Name = "label_CareerGoal";
-            this.label_CareerGoal.Size = new System.Drawing.Size(272, 28);
-            this.label_CareerGoal.TabIndex = 14;
-            this.label_CareerGoal.Text = "muc tieu nghe nghiep";
-            // 
-            // label_University
-            // 
-            this.label_University.AutoSize = true;
-            this.label_University.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_University.Location = new System.Drawing.Point(273, 111);
-            this.label_University.Name = "label_University";
-            this.label_University.Size = new System.Drawing.Size(142, 28);
-            this.label_University.TabIndex = 14;
-            this.label_University.Text = "university";
-            // 
-            // label_Major
-            // 
-            this.label_Major.AutoSize = true;
-            this.label_Major.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Major.Location = new System.Drawing.Point(273, 271);
-            this.label_Major.Name = "label_Major";
-            this.label_Major.Size = new System.Drawing.Size(77, 28);
-            this.label_Major.TabIndex = 14;
-            this.label_Major.Text = "major";
-            // 
-            // label_GPA
-            // 
-            this.label_GPA.AutoSize = true;
-            this.label_GPA.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_GPA.Location = new System.Drawing.Point(273, 191);
-            this.label_GPA.Name = "label_GPA";
-            this.label_GPA.Size = new System.Drawing.Size(51, 28);
-            this.label_GPA.TabIndex = 14;
-            this.label_GPA.Text = "GPA";
-            // 
-            // label_Company
-            // 
-            this.label_Company.AutoSize = true;
-            this.label_Company.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Company.Location = new System.Drawing.Point(273, 351);
-            this.label_Company.Name = "label_Company";
-            this.label_Company.Size = new System.Drawing.Size(103, 28);
-            this.label_Company.TabIndex = 14;
-            this.label_Company.Text = "company";
-            // 
-            // label_Workplace
-            // 
-            this.label_Workplace.AutoSize = true;
-            this.label_Workplace.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Workplace.Location = new System.Drawing.Point(273, 431);
-            this.label_Workplace.Name = "label_Workplace";
-            this.label_Workplace.Size = new System.Drawing.Size(220, 28);
-            this.label_Workplace.TabIndex = 14;
-            this.label_Workplace.Text = "Vi tri ung tuyen";
-            // 
-            // label_Certificate
-            // 
-            this.label_Certificate.AutoSize = true;
-            this.label_Certificate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Certificate.Location = new System.Drawing.Point(273, 511);
-            this.label_Certificate.Name = "label_Certificate";
-            this.label_Certificate.Size = new System.Drawing.Size(155, 28);
-            this.label_Certificate.TabIndex = 14;
-            this.label_Certificate.Text = "certificate";
             // 
             // UC_Employer_Coverletter
             // 

@@ -31,10 +31,10 @@
             this.label_Name = new System.Windows.Forms.Label();
             this.label_University = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_Major = new System.Windows.Forms.Label();
             this.label_GPA = new System.Windows.Forms.Label();
             this.button_detail = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -42,22 +42,22 @@
             // label_Name
             // 
             this.label_Name.AutoSize = true;
-            this.label_Name.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Name.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(29)))));
             this.label_Name.Location = new System.Drawing.Point(193, 10);
             this.label_Name.Name = "label_Name";
-            this.label_Name.Size = new System.Drawing.Size(269, 37);
+            this.label_Name.Size = new System.Drawing.Size(264, 45);
             this.label_Name.TabIndex = 0;
             this.label_Name.Text = "Candidate Name";
             // 
             // label_University
             // 
             this.label_University.AutoSize = true;
-            this.label_University.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_University.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_University.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(108)))), ((int)(((byte)(146)))));
             this.label_University.Location = new System.Drawing.Point(194, 60);
             this.label_University.Name = "label_University";
-            this.label_University.Size = new System.Drawing.Size(165, 33);
+            this.label_University.Size = new System.Drawing.Size(139, 38);
             this.label_University.TabIndex = 1;
             this.label_University.Text = "University";
             // 
@@ -72,25 +72,39 @@
             this.panel1.Size = new System.Drawing.Size(177, 171);
             this.panel1.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImage = global::Job_Application_Management.Properties.Resources.icons8_profile_64;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(141, 132);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // label_Major
             // 
             this.label_Major.AutoSize = true;
-            this.label_Major.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Major.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Major.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(108)))), ((int)(((byte)(146)))));
             this.label_Major.Location = new System.Drawing.Point(194, 104);
             this.label_Major.Name = "label_Major";
-            this.label_Major.Size = new System.Drawing.Size(120, 33);
+            this.label_Major.Size = new System.Drawing.Size(103, 38);
             this.label_Major.TabIndex = 5;
             this.label_Major.Text = "Major: ";
             // 
             // label_GPA
             // 
             this.label_GPA.AutoSize = true;
-            this.label_GPA.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_GPA.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_GPA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(108)))), ((int)(((byte)(146)))));
             this.label_GPA.Location = new System.Drawing.Point(194, 148);
             this.label_GPA.Name = "label_GPA";
-            this.label_GPA.Size = new System.Drawing.Size(90, 33);
+            this.label_GPA.Size = new System.Drawing.Size(82, 38);
             this.label_GPA.TabIndex = 6;
             this.label_GPA.Text = "GPA: ";
             // 
@@ -112,21 +126,7 @@
             this.button_detail.TabIndex = 7;
             this.button_detail.Click += new System.EventHandler(this.button_detail_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImage = global::Job_Application_Management.Properties.Resources.icons8_profile_64;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 132);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // UC_CandidateCV
+            // UC_Employer_CandidateCV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,7 +137,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label_University);
             this.Controls.Add(this.label_Name);
-            this.Name = "UC_CandidateCV";
+            this.Name = "UC_Employer_CandidateCV";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Size = new System.Drawing.Size(1280, 191);
             this.panel1.ResumeLayout(false);

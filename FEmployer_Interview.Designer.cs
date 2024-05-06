@@ -49,12 +49,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(29)))));
             this.label1.Location = new System.Drawing.Point(20, 20);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(20);
-            this.label1.Size = new System.Drawing.Size(694, 72);
+            this.label1.Size = new System.Drawing.Size(709, 78);
             this.label1.TabIndex = 0;
             this.label1.Text = "Employers must schedule interview for candidate";
             // 
@@ -68,7 +68,7 @@
             this.tableLayoutPanel1.Controls.Add(this.guna2Panel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox_Note, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 92);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 98);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -79,6 +79,7 @@
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label2.Image = global::Job_Application_Management.Properties.Resources.icons8_interview_64;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label2.Location = new System.Drawing.Point(23, 19);
@@ -91,6 +92,7 @@
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label3.Image = global::Job_Application_Management.Properties.Resources.icons8_note_64;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label3.Location = new System.Drawing.Point(23, 177);
@@ -117,7 +119,7 @@
             this.dateTimePicker_Time.AutoRoundedCorners = true;
             this.dateTimePicker_Time.BorderRadius = 36;
             this.dateTimePicker_Time.Checked = true;
-            this.dateTimePicker_Time.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_Time.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.dateTimePicker_Time.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker_Time.Location = new System.Drawing.Point(385, 13);
             this.dateTimePicker_Time.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -135,7 +137,7 @@
             this.dateTimePicker_Date.AutoRoundedCorners = true;
             this.dateTimePicker_Date.BorderRadius = 36;
             this.dateTimePicker_Date.Checked = true;
-            this.dateTimePicker_Date.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_Date.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.dateTimePicker_Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker_Date.Location = new System.Drawing.Point(139, 13);
             this.dateTimePicker_Date.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -157,11 +159,11 @@
             this.textBox_Note.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textBox_Note.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textBox_Note.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_Note.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Note.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.textBox_Note.ForeColor = System.Drawing.Color.Black;
             this.textBox_Note.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBox_Note.Location = new System.Drawing.Point(420, 165);
-            this.textBox_Note.Margin = new System.Windows.Forms.Padding(7);
+            this.textBox_Note.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.textBox_Note.Multiline = true;
             this.textBox_Note.Name = "textBox_Note";
             this.textBox_Note.Padding = new System.Windows.Forms.Padding(5);
@@ -180,7 +182,7 @@
             this.button_Invite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.button_Invite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.button_Invite.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_Invite.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Invite.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Invite.ForeColor = System.Drawing.Color.White;
             this.button_Invite.Image = global::Job_Application_Management.Properties.Resources.icons8_invite_64;
             this.button_Invite.ImageSize = new System.Drawing.Size(64, 64);
@@ -200,7 +202,7 @@
             this.button_Update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.button_Update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.button_Update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_Update.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Update.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Update.ForeColor = System.Drawing.Color.White;
             this.button_Update.Image = global::Job_Application_Management.Properties.Resources.icons8_invite_64;
             this.button_Update.ImageSize = new System.Drawing.Size(64, 64);
@@ -219,7 +221,7 @@
             this.button_Delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.button_Delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.button_Delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_Delete.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Delete.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Delete.ForeColor = System.Drawing.Color.White;
             this.button_Delete.Image = global::Job_Application_Management.Properties.Resources.icons8_delete_64;
             this.button_Delete.ImageSize = new System.Drawing.Size(64, 64);
@@ -242,7 +244,7 @@
             // 
             // FEmployer_Interview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1511, 649);

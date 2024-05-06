@@ -79,9 +79,9 @@
             this.button_Interview.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.button_Interview.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_Interview.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.button_Interview.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button_Interview.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Interview.ForeColor = System.Drawing.Color.White;
-            this.button_Interview.Image = global::Job_Application_Management.Properties.Resources.icons8_job_30;
+            this.button_Interview.Image = global::Job_Application_Management.Properties.Resources.icons8_interview_30;
             this.button_Interview.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.button_Interview.ImageOffset = new System.Drawing.Point(10, 0);
             this.button_Interview.Location = new System.Drawing.Point(12, 371);
@@ -105,7 +105,7 @@
             this.button_Logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.button_Logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_Logout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.button_Logout.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button_Logout.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Logout.ForeColor = System.Drawing.Color.White;
             this.button_Logout.Image = global::Job_Application_Management.Properties.Resources.icons8_logout_30;
             this.button_Logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -131,7 +131,7 @@
             this.button_FindCandidate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.button_FindCandidate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_FindCandidate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.button_FindCandidate.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button_FindCandidate.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_FindCandidate.ForeColor = System.Drawing.Color.White;
             this.button_FindCandidate.Image = global::Job_Application_Management.Properties.Resources.icons8_find_30;
             this.button_FindCandidate.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -157,7 +157,7 @@
             this.button_Job.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.button_Job.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_Job.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.button_Job.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button_Job.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Job.ForeColor = System.Drawing.Color.White;
             this.button_Job.Image = global::Job_Application_Management.Properties.Resources.icons8_job_30;
             this.button_Job.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -183,7 +183,7 @@
             this.button_Information.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.button_Information.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_Information.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.button_Information.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button_Information.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Information.ForeColor = System.Drawing.Color.White;
             this.button_Information.Image = global::Job_Application_Management.Properties.Resources.icons8_information_30;
             this.button_Information.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -210,7 +210,7 @@
             this.button_Home.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.button_Home.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_Home.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.button_Home.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.button_Home.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Home.ForeColor = System.Drawing.Color.White;
             this.button_Home.Image = global::Job_Application_Management.Properties.Resources.icons8_home_303;
             this.button_Home.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;

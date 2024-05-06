@@ -120,12 +120,12 @@
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.gunaLabel1.Location = new System.Drawing.Point(150, 10);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Padding = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.gunaLabel1.Size = new System.Drawing.Size(195, 69);
+            this.gunaLabel1.Size = new System.Drawing.Size(190, 73);
             this.gunaLabel1.TabIndex = 20;
             this.gunaLabel1.Text = "Post new job";
             // 
@@ -141,9 +141,9 @@
             this.textBox_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textBox_Search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.textBox_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_Search.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Search.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.textBox_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_Search.Location = new System.Drawing.Point(355, 40);
+            this.textBox_Search.Location = new System.Drawing.Point(350, 40);
             this.textBox_Search.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.textBox_Search.Name = "textBox_Search";
             this.textBox_Search.PasswordChar = '\0';
@@ -161,9 +161,9 @@
             this.button_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.button_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.button_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_Search.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Search.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Search.ForeColor = System.Drawing.Color.White;
-            this.button_Search.Location = new System.Drawing.Point(796, 40);
+            this.button_Search.Location = new System.Drawing.Point(791, 40);
             this.button_Search.Name = "button_Search";
             this.button_Search.Size = new System.Drawing.Size(133, 46);
             this.button_Search.TabIndex = 22;
@@ -180,13 +180,13 @@
             this.comboBox_Sort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_Sort.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.comboBox_Sort.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBox_Sort.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.comboBox_Sort.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.comboBox_Sort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboBox_Sort.ItemHeight = 30;
             this.comboBox_Sort.Items.AddRange(new object[] {
             "Newest",
             "Oldest"});
-            this.comboBox_Sort.Location = new System.Drawing.Point(935, 45);
+            this.comboBox_Sort.Location = new System.Drawing.Point(930, 45);
             this.comboBox_Sort.Name = "comboBox_Sort";
             this.comboBox_Sort.Size = new System.Drawing.Size(140, 36);
             this.comboBox_Sort.TabIndex = 23;
