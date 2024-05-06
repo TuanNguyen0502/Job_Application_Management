@@ -7,6 +7,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+
 
 namespace Job_Application_Management
 {
@@ -80,11 +82,24 @@ namespace Job_Application_Management
             }
         }
 
+        public void ConvertToDateTimeCSharp(DateTime dt)
+        {
+            
+        }
+
         public void AddInterview(Interview interview)
         {
-            string sqlStr = string.Format($"INSERT INTO Interviews (EmpID, CddID, JobID, InterviewTime, Note) " +
-                $"VALUES ('{interview.EmpID}', '{interview.CddID}', '{interview.JobID}', '{interview.InterviewTime}', N'{interview.Note}')");
-            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            string sqlStr = "INSERT INTO Interviews (EmpID, CddID, JobID, InterviewTime, Note)" +
+                            " VALUES (@EmpID, @CddID, @JobID, @InterviewTime, @Note)";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@EmpID", SqlDbType.VarChar) {Value = interview.EmpID},
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = interview.CddID},
+                new SqlParameter("@JobID", SqlDbType.Int) {Value = interview.JobID},
+                new SqlParameter("@InterviewTime", SqlDbType.DateTime) {Value = interview.InterviewTime},
+                new SqlParameter("@Note", SqlDbType.NVarChar) {Value = interview.Note},
+            };
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr, lstParams))
             {
                 MessageBox.Show("Create new interview time successfully");
             }

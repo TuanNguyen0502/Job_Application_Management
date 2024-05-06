@@ -36,7 +36,7 @@ namespace Job_Application_Management
         public Label Label_Status { get => label_Status; set => label_Status = value; }
         public Guna2Button Button_Approve { get => button_Approve; set => button_Approve = value; }
         public Guna2Button Button_Refuse { get => button_Refuse; set => button_Refuse = value; }
-
+        public Label Label_CandidateName { get => label_CandidateName; }
 
         public CV GetInfoResumeAtForm()
         {
@@ -67,6 +67,7 @@ namespace Job_Application_Management
 
         private void UC_CV_Load(object sender, EventArgs e)
         {
+
             if (Role == "Employer")
             {
                 LoadInfor();
