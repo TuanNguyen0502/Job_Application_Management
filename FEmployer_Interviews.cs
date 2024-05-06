@@ -34,10 +34,10 @@ namespace Job_Application_Management
 
         private void LoadData()
         {
-            List<UC_Employer_Interview> jobItems = employerDAO.GetInterviewsFromDB(empID);
-            foreach (var jobItem in jobItems)
+            List<UC_Employer_Interview> interviews = employerDAO.GetInterviewsFromDB(empID);
+            foreach (var interview in interviews)
             {
-                flowLayoutPanel1.Controls.Add(jobItem);
+                flowLayoutPanel1.Controls.Add(interview);
             }
         }
 

@@ -124,37 +124,37 @@ namespace Job_Application_Management
 
         private Job CreateJob()
         {
-            if (textBox_JobName.Text == null || textBox_JobName.Text == "")
+            if (string.IsNullOrEmpty(textBox_JobName.Text))
             {
                 MessageBox.Show("Job's name cannot be empty !", "Empty name", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-            if (textBox_Salary.Text == null || textBox_Salary.Text == "")
+            if (string.IsNullOrEmpty(textBox_Salary.Text))
             {
                 MessageBox.Show("Salary cannot be empty !", "Empty salary", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-            if (richTextBox_JobDescripton.Text == null || richTextBox_JobDescripton.Text == "")
+            if (string.IsNullOrEmpty(richTextBox_JobDescripton.Text))
             {
                 MessageBox.Show("Job's description cannot be empty !", "Empty description", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-            if (textBox_WorkingTime.Text == null || textBox_WorkingTime.Text == "")
+            if (string.IsNullOrEmpty(textBox_WorkingTime.Text))
             {
                 MessageBox.Show("Job's working time cannot be empty !", "Empty working time", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-            if (textBox_Experience.Text == null || textBox_Experience.Text == "")
+            if (string.IsNullOrEmpty(textBox_Experience.Text))
             {
                 MessageBox.Show("Job's experience cannot be empty !", "Empty experience", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-            if (richTextBox_JobBenefit.Text == null || richTextBox_JobBenefit.Text == "")
+            if (string.IsNullOrEmpty(richTextBox_JobBenefit.Text))
             {
                 MessageBox.Show("Job's benefit cannot be empty !", "Empty benefit", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-            if (richTextBox_Requirement.Text == null || richTextBox_Requirement.Text == "")
+            if (string.IsNullOrEmpty(richTextBox_Requirement.Text))
             {
                 MessageBox.Show("Job's requirement cannot be empty !", "Empty requirement", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
