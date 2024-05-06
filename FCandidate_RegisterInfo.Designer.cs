@@ -446,6 +446,7 @@
             this.btn_Reload.Size = new System.Drawing.Size(180, 56);
             this.btn_Reload.TabIndex = 20;
             this.btn_Reload.Text = "Reload";
+            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
             // 
             // gunaLabel1
             // 

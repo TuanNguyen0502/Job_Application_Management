@@ -36,7 +36,7 @@ namespace Job_Application_Management
         }
         public void NumberOfNotification()
         {
-            int numberOfNotification = canDAO.CountRowsInInterviews();
+            int numberOfNotification = canDAO.CountRowsInInterviews(lblCddID.Text);
             lbl_Notification.Text = numberOfNotification.ToString();
         }
         private void OpenChildForm(Form childForm, Panel panel_Contains)
@@ -242,7 +242,7 @@ namespace Job_Application_Management
         private void btn_Readload_Click(object sender, EventArgs e)
         {
             SetIntroduction();
-            FCandidate_Interviews fInterview = new FCandidate_Interviews();
+            FCandidate_Interviews fInterview = new FCandidate_Interviews(lblCddID.Text);
             fInterview.ClickInterviews += clickInterview_Click;
             fInterview.Readload_Click += btn_Readload_Click;
             fInterview.Search_Click += btn_Search_Click;
@@ -252,7 +252,7 @@ namespace Job_Application_Management
         private void btn_Search_Click (object sender, EventArgs e)
         {
             SetIntroduction();
-            FCandidate_Interviews fInterview = new FCandidate_Interviews();
+            FCandidate_Interviews fInterview = new FCandidate_Interviews(lblCddID.Text);
             fInterview.ClickInterviews += clickInterview_Click;
             fInterview.Readload_Click += btn_Readload_Click;
             fInterview.Search_Click += btn_Search_Click;
@@ -262,7 +262,7 @@ namespace Job_Application_Management
         private void ptb_Notification_Click(object sender, EventArgs e)
         {
             SetIntroduction();
-            FCandidate_Interviews fInterview = new FCandidate_Interviews();
+            FCandidate_Interviews fInterview = new FCandidate_Interviews(lblCddID.Text);
             fInterview.ClickInterviews += clickInterview_Click;
             fInterview.Readload_Click += btn_Readload_Click;
             fInterview.Search_Click += btn_Search_Click;
@@ -272,7 +272,7 @@ namespace Job_Application_Management
         private void lbl_Notification_Click(object sender, EventArgs e)
         {
             SetIntroduction();
-            FCandidate_Interviews fInterview = new FCandidate_Interviews();
+            FCandidate_Interviews fInterview = new FCandidate_Interviews(lblCddID.Text);
             fInterview.ClickInterviews += clickInterview_Click;
             OpenChildForm(fInterview, pnl_ContainDetailsJob);
         }

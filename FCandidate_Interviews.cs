@@ -14,15 +14,16 @@ namespace Job_Application_Management
     public partial class FCandidate_Interviews : Form
     {
         CandidateDAO canDAO = new CandidateDAO();
-        
-        public FCandidate_Interviews()
+        private string cddid;
+        public FCandidate_Interviews(string cddid)
         {
             InitializeComponent();
+            this.cddid=cddid;
         }
         public Guna2Button Btn_Search { get { return btn_Search; } }
         private void FCandidate_Interviews_Load(object sender, EventArgs e)
         {
-            List<UC_Candidate_Interview> lstInterviews = canDAO.GetListInterviewsToDB();
+            List<UC_Candidate_Interview> lstInterviews = canDAO.GetListInterviewsToDB(cddid);
             foreach(var item in lstInterviews)
             {
                 item.SeeInterview_Click += seeInterview_Click;

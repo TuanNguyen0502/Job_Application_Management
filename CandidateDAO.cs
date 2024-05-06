@@ -569,15 +569,19 @@ namespace Job_Application_Management
             }
         }
         #endregion
-        public List<UC_Candidate_Interview> GetListInterviewsToDB()
+        public List<UC_Candidate_Interview> GetListInterviewsToDB(string cddid)
         {
             sqlQuery = "SELECT j.Name, emp.CompanyName, itv.InterviewTime, itv.Note, can.CddName"
                        +" FROM Interviews itv"
                        +" JOIN Employers emp ON itv.EmpID = emp.ID"
                        +" JOIN Candidates can ON itv.CddID = can.CddID"
                        +" JOIN Jobs j ON itv.JobID = j.ID"
-                       +" WHERE can.CddID = 'CDD001'";
-            List<Dictionary<string, object>> keyValuePairs = dbConn.ExecuteReaderData(sqlQuery);
+                       +" WHERE can.CddID = @CddID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid}
+            };
+            List<Dictionary<string, object>> keyValuePairs = dbConn.ExecuteReaderData(sqlQuery, lstParams);
             List<UC_Candidate_Interview> result = new List<UC_Candidate_Interview>();
             foreach (var reader in keyValuePairs)
             {
@@ -594,10 +598,14 @@ namespace Job_Application_Management
             }
             return result;
         }
-        public int CountRowsInInterviews()
+        public int CountRowsInInterviews(string cddid)
         {
-            sqlQuery = "SELECT COUNT(*) FROM Interviews";
-            int rows = dbConn.ExecuteScalarGetInt(sqlQuery);
+            sqlQuery = "SELECT COUNT(*) FROM Interviews WHERE CddID = @CddID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid}
+            };
+            int rows = dbConn.ExecuteScalarGetInt(sqlQuery, lstParams);
             return rows;
         }
         public List<UC_Candidate_Interview> GetListInterviewByKey(string keyword)

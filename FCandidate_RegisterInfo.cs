@@ -59,5 +59,23 @@ namespace Job_Application_Management
                 MessageBox.Show("Đăng ký thông tin thất bại!", "Xem lại thông tin đã nhập đúng chưa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btn_Reload_Click(object sender, EventArgs e)
+        {
+            textBox_Name.Text = "";
+            textBox_Address.Text = "";
+            textBox_PhoneNumber.Text = "";
+            textBox_Email.Text = "";
+            textBox_Education.Text = "";
+            textBox_Hometown.Text = "";
+            if (radioButton_Male.Checked)
+            {
+                radioButton_Male.Checked = false;
+            } 
+            else if (radioButton_Female.Checked)
+            {
+                radioButton_Female.Checked = false;
+            }
+        }
     }
 }
