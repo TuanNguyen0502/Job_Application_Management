@@ -150,8 +150,8 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(254, 80);
             this.label7.TabIndex = 6;
-            this.label7.Text = "    Chứng chỉ";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Text = "Chứng chỉ";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -163,8 +163,8 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(254, 80);
             this.label6.TabIndex = 5;
-            this.label6.Text = "    Workplace";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Text = "Workplace";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -176,8 +176,8 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(254, 80);
             this.label5.TabIndex = 4;
-            this.label5.Text = "    Worked company";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Text = "Worked company";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -190,8 +190,8 @@
             this.label4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.label4.Size = new System.Drawing.Size(254, 80);
             this.label4.TabIndex = 3;
-            this.label4.Text = "    GPA";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Text = "GPA";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -204,8 +204,8 @@
             this.label3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.label3.Size = new System.Drawing.Size(254, 80);
             this.label3.TabIndex = 2;
-            this.label3.Text = "    Major";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Text = "Major";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -218,8 +218,8 @@
             this.label2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.label2.Size = new System.Drawing.Size(254, 80);
             this.label2.TabIndex = 1;
-            this.label2.Text = "    University";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Text = "University";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -232,8 +232,8 @@
             this.label1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.label1.Size = new System.Drawing.Size(254, 80);
             this.label1.TabIndex = 0;
-            this.label1.Text = "    Objective";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Text = "Objective";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UC_Employer_Coverletter
             // 
