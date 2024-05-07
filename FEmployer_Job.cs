@@ -49,6 +49,7 @@ namespace Job_Application_Management
 
         private void LoadInfor()
         {
+            flowLayoutPanel_Jobs.Controls.Clear();
             List<UC_Employer_Job> jobItems = employerDAO.GetJobsFromDB(empID);
             foreach (var jobItem in jobItems)
             {
@@ -65,7 +66,6 @@ namespace Job_Application_Management
             }
             else
             {
-                flowLayoutPanel_Jobs.Controls.Clear();
                 List<UC_Employer_Job> jobItems = employerDAO.SearchJobsFromDB(empID, textBox_Search.Text);
                 foreach (var jobItem in jobItems)
                 {
