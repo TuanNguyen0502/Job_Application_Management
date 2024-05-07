@@ -54,7 +54,7 @@
             this.roudingPanel9.Location = new System.Drawing.Point(3, 34);
             this.roudingPanel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roudingPanel9.Name = "roudingPanel9";
-            this.roudingPanel9.Size = new System.Drawing.Size(1156, 404);
+            this.roudingPanel9.Size = new System.Drawing.Size(1189, 404);
             this.roudingPanel9.TabIndex = 7;
             // 
             // richTextBox_Detail
@@ -66,7 +66,7 @@
             this.richTextBox_Detail.Location = new System.Drawing.Point(21, 127);
             this.richTextBox_Detail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox_Detail.Name = "richTextBox_Detail";
-            this.richTextBox_Detail.Size = new System.Drawing.Size(1123, 270);
+            this.richTextBox_Detail.Size = new System.Drawing.Size(1150, 270);
             this.richTextBox_Detail.TabIndex = 11;
             this.richTextBox_Detail.Text = resources.GetString("richTextBox_Detail.Text");
             // 
@@ -99,7 +99,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(29)))));
-            this.label6.Location = new System.Drawing.Point(916, 45);
+            this.label6.Location = new System.Drawing.Point(934, 35);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 28);
             this.label6.TabIndex = 2;
@@ -112,7 +112,7 @@
             this.dateTimePicker_CompanyEndDate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dateTimePicker_CompanyEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(108)))), ((int)(((byte)(146)))));
             this.dateTimePicker_CompanyEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_CompanyEndDate.Location = new System.Drawing.Point(940, 40);
+            this.dateTimePicker_CompanyEndDate.Location = new System.Drawing.Point(958, 30);
             this.dateTimePicker_CompanyEndDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker_CompanyEndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker_CompanyEndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -128,7 +128,7 @@
             this.dateTimePicker_CompanyStartDate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dateTimePicker_CompanyStartDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(108)))), ((int)(((byte)(146)))));
             this.dateTimePicker_CompanyStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_CompanyStartDate.Location = new System.Drawing.Point(706, 40);
+            this.dateTimePicker_CompanyStartDate.Location = new System.Drawing.Point(724, 30);
             this.dateTimePicker_CompanyStartDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker_CompanyStartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker_CompanyStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -190,7 +190,7 @@
             this.Controls.Add(this.roudingPanel6);
             this.Controls.Add(this.roudingPanel9);
             this.Name = "UC_Experiences";
-            this.Size = new System.Drawing.Size(1167, 450);
+            this.Size = new System.Drawing.Size(1195, 450);
             this.roudingPanel9.ResumeLayout(false);
             this.roudingPanel9.PerformLayout();
             this.roudingPanel6.ResumeLayout(false);

@@ -87,6 +87,12 @@
     <Compile Include="UC_Certification.Designer.cs">
       <DependentUpon>UC_Certification.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_CV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CV.Designer.cs">
+      <DependentUpon>UC_CV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Education.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -454,6 +460,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_CoverLetter.resx">
       <DependentUpon>UC_CoverLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CV.resx">
+      <DependentUpon>UC_CV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Education.resx">
       <DependentUpon>UC_Education.cs</DependentUpon>
@@ -1002,6 +1011,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-interview-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-32 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

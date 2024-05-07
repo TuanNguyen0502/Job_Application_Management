@@ -1233,6 +1233,16 @@ namespace Job_Application_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_plus_32__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-plus-32 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_post_68 {
             get {
                 object obj = ResourceManager.GetObject("icons8-post-68", resourceCulture);

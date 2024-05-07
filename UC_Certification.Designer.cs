@@ -45,7 +45,7 @@
             this.roudingPanel11.Location = new System.Drawing.Point(3, 26);
             this.roudingPanel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roudingPanel11.Name = "roudingPanel11";
-            this.roudingPanel11.Size = new System.Drawing.Size(1156, 90);
+            this.roudingPanel11.Size = new System.Drawing.Size(1185, 90);
             this.roudingPanel11.TabIndex = 9;
             // 
             // dateTimePicker_Certification
@@ -117,7 +117,7 @@
             this.Controls.Add(this.roudingPanel10);
             this.Controls.Add(this.roudingPanel11);
             this.Name = "UC_Certification";
-            this.Size = new System.Drawing.Size(1164, 127);
+            this.Size = new System.Drawing.Size(1191, 127);
             this.roudingPanel11.ResumeLayout(false);
             this.roudingPanel11.PerformLayout();
             this.roudingPanel10.ResumeLayout(false);
