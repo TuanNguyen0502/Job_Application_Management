@@ -81,6 +81,12 @@
     <Compile Include="Company.cs" />
     <Compile Include="CV.cs" />
     <Compile Include="DBConnection.cs" />
+    <Compile Include="FEmployer_Resumes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FEmployer_Resumes.Designer.cs">
+      <DependentUpon>FEmployer_Resumes.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Certification.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -307,6 +313,12 @@
     <Compile Include="UC_Employer_Interview.Designer.cs">
       <DependentUpon>UC_Employer_Interview.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Employer_Resume.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Employer_Resume.Designer.cs">
+      <DependentUpon>UC_Employer_Resume.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Empty.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -424,6 +436,9 @@
     <EmbeddedResource Include="FEmployer_JobDetail.resx">
       <DependentUpon>FEmployer_JobDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FEmployer_Resumes.resx">
+      <DependentUpon>FEmployer_Resumes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_SeeCandidate.resx">
       <DependentUpon>FEmployer_SeeCandidate.cs</DependentUpon>
     </EmbeddedResource>
@@ -475,6 +490,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Employer_Interview.resx">
       <DependentUpon>UC_Employer_Interview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Employer_Resume.resx">
+      <DependentUpon>UC_Employer_Resume.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Empty.resx">
       <DependentUpon>UC_Empty.cs</DependentUpon>
@@ -1014,6 +1032,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-plus-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-heart-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

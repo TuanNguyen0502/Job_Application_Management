@@ -37,13 +37,16 @@
             this.button_Information = new Guna.UI2.WinForms.Guna2Button();
             this.button_Home = new Guna.UI2.WinForms.Guna2Button();
             this.panel_Center = new Guna.UI2.WinForms.Guna2Panel();
+            this.button_Resumes = new Guna.UI2.WinForms.Guna2Button();
             this.panel_Left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgSlide)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Left
             // 
+            this.panel_Left.AutoScroll = true;
             this.panel_Left.Controls.Add(this.imgSlide);
+            this.panel_Left.Controls.Add(this.button_Resumes);
             this.panel_Left.Controls.Add(this.button_Interview);
             this.panel_Left.Controls.Add(this.button_Logout);
             this.panel_Left.Controls.Add(this.button_FindCandidate);
@@ -60,7 +63,7 @@
             // 
             this.imgSlide.BackColor = System.Drawing.Color.Transparent;
             this.imgSlide.Image = global::Job_Application_Management.Properties.Resources.New_Project__3_;
-            this.imgSlide.Location = new System.Drawing.Point(152, 3);
+            this.imgSlide.Location = new System.Drawing.Point(160, 3);
             this.imgSlide.Name = "imgSlide";
             this.imgSlide.Size = new System.Drawing.Size(57, 146);
             this.imgSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -110,7 +113,7 @@
             this.button_Logout.Image = global::Job_Application_Management.Properties.Resources.icons8_logout_30;
             this.button_Logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.button_Logout.ImageOffset = new System.Drawing.Point(10, 0);
-            this.button_Logout.Location = new System.Drawing.Point(12, 587);
+            this.button_Logout.Location = new System.Drawing.Point(13, 695);
             this.button_Logout.Name = "button_Logout";
             this.button_Logout.Size = new System.Drawing.Size(194, 62);
             this.button_Logout.TabIndex = 1;
@@ -136,7 +139,7 @@
             this.button_FindCandidate.Image = global::Job_Application_Management.Properties.Resources.icons8_find_30;
             this.button_FindCandidate.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.button_FindCandidate.ImageOffset = new System.Drawing.Point(10, 0);
-            this.button_FindCandidate.Location = new System.Drawing.Point(12, 479);
+            this.button_FindCandidate.Location = new System.Drawing.Point(12, 587);
             this.button_FindCandidate.Name = "button_FindCandidate";
             this.button_FindCandidate.Size = new System.Drawing.Size(194, 62);
             this.button_FindCandidate.TabIndex = 1;
@@ -233,6 +236,32 @@
             this.panel_Center.Size = new System.Drawing.Size(1060, 784);
             this.panel_Center.TabIndex = 1;
             // 
+            // button_Resumes
+            // 
+            this.button_Resumes.BackColor = System.Drawing.Color.Transparent;
+            this.button_Resumes.BorderRadius = 22;
+            this.button_Resumes.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.button_Resumes.CheckedState.FillColor = System.Drawing.Color.White;
+            this.button_Resumes.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.button_Resumes.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_Resumes.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_Resumes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_Resumes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_Resumes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.button_Resumes.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Resumes.ForeColor = System.Drawing.Color.White;
+            this.button_Resumes.Image = global::Job_Application_Management.Properties.Resources.icons8_interview_30;
+            this.button_Resumes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.button_Resumes.ImageOffset = new System.Drawing.Point(10, 0);
+            this.button_Resumes.Location = new System.Drawing.Point(12, 479);
+            this.button_Resumes.Name = "button_Resumes";
+            this.button_Resumes.Size = new System.Drawing.Size(194, 62);
+            this.button_Resumes.TabIndex = 3;
+            this.button_Resumes.Text = "Resumes";
+            this.button_Resumes.UseTransparentBackground = true;
+            this.button_Resumes.CheckedChanged += new System.EventHandler(this.button_Home_CheckedChanged);
+            this.button_Resumes.Click += new System.EventHandler(this.button_Resumes_Click);
+            // 
             // FEmployerMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -265,5 +294,6 @@
         private Guna.UI2.WinForms.Guna2Button button_Logout;
         private Guna.UI2.WinForms.Guna2Panel panel_Center;
         private Guna.UI2.WinForms.Guna2Button button_Interview;
+        private Guna.UI2.WinForms.Guna2Button button_Resumes;
     }
 }
