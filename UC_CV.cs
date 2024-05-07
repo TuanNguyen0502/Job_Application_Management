@@ -108,15 +108,16 @@ namespace Job_Application_Management
             textBox_University.ReadOnly = true;
             textBox_Major.ReadOnly = true;
             textBox_GPA.ReadOnly = true;
-            //uC_Resume_Education1.DateTimePicker_Start.
-            //uC_Resume_Education1.DateTimePicker_End.Value = resume.UniversityEndDate;
+            dateTimePicker_Dob.Enabled = false;
+            dateTimePicker_UniversityStartDate.Enabled = false;
+            dateTimePicker_UniversityEndDate.Enabled = false;
             textBox_Company.ReadOnly = true;
             textBox_Workplace.ReadOnly = true;
             richTextBox_Detail.ReadOnly = true;
-            //uC_Resume_Experience1.DateTimePicker_Start.Value = resume.CompanyStartDate;
-            //uC_Resume_Experience1.DateTimePicker_End.Value = resume.CompanyEndDate;
+            dateTimePicker_CompanyStartDate.Enabled = false;
+            dateTimePicker_CompanyEndDate.Enabled = false;
             textBox_Certification.ReadOnly = true;
-            //uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
+            dateTimePicker_Certification.Enabled = false;
             btn_CreateCV.Visible = false;
             btn_RemoveCVValid.Visible = false;
             if (resume.Status == "Applying")
@@ -134,8 +135,6 @@ namespace Job_Application_Management
         {
             CV cv = GetInfoResumeAtForm();
             CreateCV_Click?.Invoke(this, new ButtonClickEventArgs(cv));
-            /*CV cv = GetInfoResumeAtForm();
-            candidateDAO.SaveAvailableCV(cv, cddID);*/
         }
         public event EventHandler<ButtonClickEventArgs> RemoveCVValid_Click;
         private void btn_RemoveCVValid_Click(object sender, EventArgs e)
