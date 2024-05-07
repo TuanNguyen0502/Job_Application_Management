@@ -32,6 +32,13 @@ namespace Job_Application_Management
             DateTime dateTime = new DateTime(dateTimePicker_Date.Value.Year, dateTimePicker_Date.Value.Month, dateTimePicker_Date.Value.Day,
                 dateTimePicker_Time.Value.Hour, dateTimePicker_Time.Value.Minute, dateTimePicker_Time.Value.Second);
             Interview interview = new Interview(empID, cddID, jobID, dateTime, textBox_Note.Text);
+
+            if (employerDAO.CheckInterviewTimeExists(interview.InterviewTime, empID))
+            {
+                MessageBox.Show("Interview Time already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             employerDAO.AddInterview(interview);
             this.DialogResult = DialogResult.OK;
             this.Close();
