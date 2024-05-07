@@ -1,4 +1,3 @@
-USE Jobs_Management
 CREATE TABLE USERS(
 	Username varchar(100) primary key,
 	Password varchar(100),
@@ -9,7 +8,6 @@ insert into USERS (Username, Password, CddID)
 values ('hieu', '123', 'CDD001')
 insert into USERS (Username, Password, EmpID)
 values ('tuan', '123', 'E001')
-	SELECT * FROM USERS
 CREATE TABLE Candidates(
 	CddID varchar(10) CONSTRAINT PK_Cdd PRIMARY KEY,
 	CddName nvarchar(100),
@@ -153,9 +151,9 @@ CREATE TABLE AppliedJobs(
 -- Dữ liệu cho bảng Candidates
 INSERT INTO Candidates (CddID, CddName, Phone, Email, CddAddress, Hometown, Sex, Education)
 VALUES 
-('CDD001', N'Nguyễn Văn A', '1234567890', 'nguyenvana@example.com', '123 ABC Street', N'Hà Nội', N'Nam', 'Bachelor of Science in Computer Science'),
-('CDD002', N'Trần Thị B', '0987654321', 'tranthib@example.com', '456 XYZ Street', N'Hồ Chí Minh City', N'Nữ', 'Master of Business Administration'),
-('CDD003', N'Phạm Văn C', '0123456789', 'phamvanc@example.com', '789 DEF Street', N'Đà Nẵng', N'Nam', 'Bachelor of Arts in English');
+('CDD001', N'Nguyễn Văn A', '1234567890', 'nguyenvana@gmail.com', '123 ABC Street', N'Hà Nội', N'Nam', 'Bachelor of Science in Computer Science'),
+('CDD002', N'Trần Thị B', '0987654321', 'tranthib@gmail.com', '456 XYZ Street', N'Hồ Chí Minh City', N'Nữ', 'Master of Business Administration'),
+('CDD003', N'Phạm Văn C', '0123456789', 'phamvanc@gmail.com', '789 DEF Street', N'Đà Nẵng', N'Nam', 'Bachelor of Arts in English');
 
 INSERT INTO Company (Name, Address, Manager, TaxCode, BusinessLicense, NumberOfEmployee, NumberOfFollower, Introduction)
 VALUES (N'Công ty ABC', N'123 Đống Đa, Hà Nội', N'Miss.An', '123456789', 'BL-001', 100, 500, N'Công ty TNHH Grande Media chuyên cung cấp dịch vụ quảng cáo trực tuyến hàng đầu Việt Nam');
@@ -215,6 +213,5 @@ BEGIN
 				END;
 	RETURN @Exists;
 END;
-SELECT dbo.func_CheckCandidate('CDD006')
 
 SELECT * FROM Interviews
