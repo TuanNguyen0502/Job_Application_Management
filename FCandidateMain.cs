@@ -324,7 +324,8 @@ namespace Job_Application_Management
 
         private void ptb_CanDetails_Click(object sender, EventArgs e)
         {
-
+            FCandidate_UpdateInfo info = new FCandidate_UpdateInfo(lblCddID.Text);
+            info.ShowDialog();
         }
 
         private void shadowPanel_CanDetails_Click(object sender, EventArgs e)

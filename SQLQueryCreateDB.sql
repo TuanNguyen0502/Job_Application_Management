@@ -8,6 +8,10 @@ insert into USERS (Username, Password, CddID)
 values ('hieu', '123', 'CDD001')
 insert into USERS (Username, Password, EmpID)
 values ('tuan', '123', 'E001')
+
+insert into USERS (Username, Password, EmpID)
+values ('tuan2', '123', 'E002'),
+	   ('tuan3', '123', 'E003');
 CREATE TABLE Candidates(
 	CddID varchar(10) CONSTRAINT PK_Cdd PRIMARY KEY,
 	CddName nvarchar(100),

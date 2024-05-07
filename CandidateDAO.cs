@@ -279,6 +279,7 @@ namespace Job_Application_Management
             };
             return dbConn.ExecuteReaderData(sqlQuery, lstParam);
         }
+        #region Functions CV
         public void SaveAvailableCV(CV cv,string cddid)
         {
             if (cv != null)
@@ -433,10 +434,11 @@ namespace Job_Application_Management
                 MessageBox.Show("Xóa CV không thành công");
             }
         }
+        #endregion
+        #region Functions đăng tải công việc
         // Đăng tuyển bài viết tìm việc
         public void AddJobPosting(CandidateProfile canProfile, string cddid)
         {
-
             if (canProfile != null && cddid != null)
             {
                 sqlQuery = "INSERT INTO CandidateProfile(CddID, WorkPlace, Objective, UniversityName, Major, GPA, " +
@@ -512,6 +514,7 @@ namespace Job_Application_Management
                 MessageBox.Show("Xóa bài đăng tìm việc thất bại");
             }
         }
+        #endregion
         public List<UC_WorkHistory> GetWorkHistory()
         {
             sqlQuery = "SELECT wh.CandidateID, cdd.CddName, wh.CompanyName, wh.StartDate, wh.EndDate"
