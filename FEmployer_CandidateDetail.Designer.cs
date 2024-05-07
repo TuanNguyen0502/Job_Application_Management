@@ -121,12 +121,12 @@
             // 
             this.label_Email.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_Email.AutoSize = true;
-            this.label_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Email.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Email.ForeColor = System.Drawing.Color.White;
             this.label_Email.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label_Email.Location = new System.Drawing.Point(56, 9);
             this.label_Email.Name = "label_Email";
-            this.label_Email.Size = new System.Drawing.Size(74, 29);
+            this.label_Email.Size = new System.Drawing.Size(71, 32);
             this.label_Email.TabIndex = 4;
             this.label_Email.Text = "Email";
             this.label_Email.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -160,12 +160,12 @@
             // 
             this.label_Phone.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_Phone.AutoSize = true;
-            this.label_Phone.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label_Phone.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label_Phone.ForeColor = System.Drawing.Color.White;
             this.label_Phone.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label_Phone.Location = new System.Drawing.Point(56, 9);
             this.label_Phone.Name = "label_Phone";
-            this.label_Phone.Size = new System.Drawing.Size(96, 38);
+            this.label_Phone.Size = new System.Drawing.Size(82, 32);
             this.label_Phone.TabIndex = 4;
             this.label_Phone.Text = "Phone";
             this.label_Phone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -199,12 +199,12 @@
             // 
             this.label_Sex.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_Sex.AutoSize = true;
-            this.label_Sex.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label_Sex.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label_Sex.ForeColor = System.Drawing.Color.White;
             this.label_Sex.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label_Sex.Location = new System.Drawing.Point(56, 9);
             this.label_Sex.Name = "label_Sex";
-            this.label_Sex.Size = new System.Drawing.Size(108, 38);
+            this.label_Sex.Size = new System.Drawing.Size(92, 32);
             this.label_Sex.TabIndex = 4;
             this.label_Sex.Text = "Gender";
             this.label_Sex.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -238,12 +238,12 @@
             // 
             this.label_Hometown.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_Hometown.AutoSize = true;
-            this.label_Hometown.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label_Hometown.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label_Hometown.ForeColor = System.Drawing.Color.White;
             this.label_Hometown.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label_Hometown.Location = new System.Drawing.Point(56, 9);
             this.label_Hometown.Name = "label_Hometown";
-            this.label_Hometown.Size = new System.Drawing.Size(153, 38);
+            this.label_Hometown.Size = new System.Drawing.Size(132, 32);
             this.label_Hometown.TabIndex = 4;
             this.label_Hometown.Text = "Hometown";
             this.label_Hometown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -278,12 +278,12 @@
             this.label_Education.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_Education.AutoEllipsis = true;
             this.label_Education.AutoSize = true;
-            this.label_Education.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label_Education.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label_Education.ForeColor = System.Drawing.Color.White;
             this.label_Education.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label_Education.Location = new System.Drawing.Point(56, 9);
             this.label_Education.Name = "label_Education";
-            this.label_Education.Size = new System.Drawing.Size(138, 38);
+            this.label_Education.Size = new System.Drawing.Size(119, 32);
             this.label_Education.TabIndex = 4;
             this.label_Education.Text = "Education";
             this.label_Education.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
