@@ -37,6 +37,10 @@ namespace Job_Application_Management
             {
                 MessageBox.Show("Tài khoản mật khẩu còn trống.", "Đăng ký thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (txt_Password.Text != "" && txt_Confirm.Text != "" && txt_Password.Text != txt_Confirm.Text)
+            {
+                MessageBox.Show("Mật khẩu và xác nhận chưa khớp.", "Đăng ký thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else if (txt_Username.Text == "" && txt_Password.Text != "")
             {
                 MessageBox.Show("Tài khoản còn trống.", "Đăng ký thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -62,7 +66,7 @@ namespace Job_Application_Management
         {
             txt_Username.Text = "";
             txt_Password.Text = "";
-            txt_CanID.Text = "";
+            txt_Confirm.Text = "";
         }
 
         private void lbl_BackLogin_Click(object sender, EventArgs e)
@@ -72,7 +76,8 @@ namespace Job_Application_Management
 
         private void txt_CanID_Click(object sender, EventArgs e)
         {
-            
+            FCandidate_RegisterInfo register = new FCandidate_RegisterInfo(txt_CanID.Text);
+            register.ShowDialog();
         }
 
         private void lbl_InfoDetails_Click(object sender, EventArgs e)

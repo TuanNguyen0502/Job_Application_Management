@@ -81,6 +81,18 @@
     <Compile Include="Company.cs" />
     <Compile Include="CV.cs" />
     <Compile Include="DBConnection.cs" />
+    <Compile Include="UC_Certification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Certification.Designer.cs">
+      <DependentUpon>UC_Certification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Education.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Education.Designer.cs">
+      <DependentUpon>UC_Education.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employer.cs" />
     <Compile Include="EmployerDAO.cs" />
     <Compile Include="FCandidate_Interviews.cs">
@@ -271,12 +283,6 @@
     <Compile Include="UC_CoverLetter.Designer.cs">
       <DependentUpon>UC_CoverLetter.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_CV.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_CV.Designer.cs">
-      <DependentUpon>UC_CV.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_Employer_Candidate.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -300,6 +306,12 @@
     </Compile>
     <Compile Include="UC_Empty.Designer.cs">
       <DependentUpon>UC_Empty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Experiences.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Experiences.Designer.cs">
+      <DependentUpon>UC_Experiences.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Introduction.cs">
       <SubType>UserControl</SubType>
@@ -437,11 +449,14 @@
     <EmbeddedResource Include="UC_Candidate_Interview.resx">
       <DependentUpon>UC_Candidate_Interview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Certification.resx">
+      <DependentUpon>UC_Certification.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_CoverLetter.resx">
       <DependentUpon>UC_CoverLetter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_CV.resx">
-      <DependentUpon>UC_CV.cs</DependentUpon>
+    <EmbeddedResource Include="UC_Education.resx">
+      <DependentUpon>UC_Education.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Employer_Candidate.resx">
       <DependentUpon>UC_Employer_Candidate.cs</DependentUpon>
@@ -454,6 +469,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Empty.resx">
       <DependentUpon>UC_Empty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Experiences.resx">
+      <DependentUpon>UC_Experiences.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Introduction.resx">
       <DependentUpon>UC_Introduction.cs</DependentUpon>
