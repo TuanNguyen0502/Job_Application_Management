@@ -93,7 +93,7 @@
             this.radioButton_Candidate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton_Candidate.Name = "radioButton_Candidate";
             this.radioButton_Candidate.Size = new System.Drawing.Size(166, 42);
-            this.radioButton_Candidate.TabIndex = 10;
+            this.radioButton_Candidate.TabIndex = 3;
             this.radioButton_Candidate.TabStop = true;
             this.radioButton_Candidate.Text = "Candidate";
             this.radioButton_Candidate.UseVisualStyleBackColor = false;
@@ -108,7 +108,7 @@
             this.radioButton_Employer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton_Employer.Name = "radioButton_Employer";
             this.radioButton_Employer.Size = new System.Drawing.Size(158, 42);
-            this.radioButton_Employer.TabIndex = 11;
+            this.radioButton_Employer.TabIndex = 4;
             this.radioButton_Employer.TabStop = true;
             this.radioButton_Employer.Text = "Employer";
             this.radioButton_Employer.UseVisualStyleBackColor = false;
@@ -191,7 +191,7 @@
             this.btn_Login.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.btn_Login.StateTracking.Border.Rounding = 20;
             this.btn_Login.StateTracking.Border.Width = 1;
-            this.btn_Login.TabIndex = 14;
+            this.btn_Login.TabIndex = 5;
             this.btn_Login.Values.Text = "Login";
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
@@ -253,7 +253,7 @@
             this.btn_SignUp.StateTracking.Border.Rounding = 20;
             this.btn_SignUp.StateTracking.Border.Width = 1;
             this.btn_SignUp.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btn_SignUp.TabIndex = 15;
+            this.btn_SignUp.TabIndex = 6;
             this.btn_SignUp.Values.Text = "Sign Up";
             this.btn_SignUp.Click += new System.EventHandler(this.btn_SignUp_Click);
             // 
@@ -308,7 +308,7 @@
             this.textBox_UserName.PlaceholderText = "Enter user name";
             this.textBox_UserName.SelectedText = "";
             this.textBox_UserName.Size = new System.Drawing.Size(349, 50);
-            this.textBox_UserName.TabIndex = 18;
+            this.textBox_UserName.TabIndex = 1;
             // 
             // textBox_Password
             // 
@@ -332,7 +332,7 @@
             this.textBox_Password.PlaceholderText = "Enter password";
             this.textBox_Password.SelectedText = "";
             this.textBox_Password.Size = new System.Drawing.Size(349, 50);
-            this.textBox_Password.TabIndex = 18;
+            this.textBox_Password.TabIndex = 2;
             // 
             // label3
             // 
