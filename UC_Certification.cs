@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class UC_CV : UserControl
+    public partial class UC_Certification : UserControl
     {
-        public UC_CV()
+        public UC_Certification()
         {
             InitializeComponent();
         }

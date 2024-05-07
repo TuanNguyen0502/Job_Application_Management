@@ -53,14 +53,9 @@
             // 
             this.uC_CV1.AutoScroll = true;
             this.uC_CV1.BackColor = System.Drawing.Color.White;
-            this.uC_CV1.CddID = null;
             this.uC_CV1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_CV1.JobID = 0;
             this.uC_CV1.Location = new System.Drawing.Point(0, 0);
-            this.uC_CV1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_CV1.Name = "uC_CV1";
-            this.uC_CV1.Padding = new System.Windows.Forms.Padding(18, 16, 18, 16);
-            this.uC_CV1.Role = null;
             this.uC_CV1.Size = new System.Drawing.Size(1282, 1055);
             this.uC_CV1.TabIndex = 0;
             // 
