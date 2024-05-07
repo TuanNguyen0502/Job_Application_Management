@@ -34,12 +34,14 @@ namespace Job_Application_Management
             if (appliedJob.Status == "Applying")
             {
                 btn_Status.Text = "Đang ứng tuyển";
-                btn_Status.BackColor = Color.Gray;
+                btn_Status.FillColor = Color.Gray;
+                btn_Status.ForeColor = Color.White;
             }
             else
             {
                 btn_Status.Text = "Đã được phê duyệt";
-                btn_Status.BackColor = Color.Green;
+                btn_Status.FillColor = Color.Green;
+                btn_Status.ForeColor = Color.Black;
             } 
         }
 

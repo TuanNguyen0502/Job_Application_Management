@@ -36,7 +36,7 @@ namespace Job_Application_Management
 
         public bool CheckEmptyAppliedJobs()
         {
-            int count = canDAO.CountJobApplied();
+            int count = canDAO.CountJobApplied(cddid);
             if (count == 0)
                 return true;
             return false;

@@ -130,13 +130,12 @@
             this.btn_Status.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Status.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_Status.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Status.Enabled = false;
             this.btn_Status.FillColor = System.Drawing.Color.Silver;
             this.btn_Status.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Status.ForeColor = System.Drawing.Color.White;
-            this.btn_Status.Location = new System.Drawing.Point(557, 81);
+            this.btn_Status.Location = new System.Drawing.Point(579, 88);
             this.btn_Status.Name = "btn_Status";
-            this.btn_Status.Size = new System.Drawing.Size(177, 45);
+            this.btn_Status.Size = new System.Drawing.Size(158, 40);
             this.btn_Status.TabIndex = 13;
             this.btn_Status.Text = "Tình trạng";
             // 

@@ -33,7 +33,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Reload = new Guna.UI2.WinForms.Guna2Button();
             this.dtp_InterviewTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.flp_ContainsInterviews = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btn_Search = new Guna.UI2.WinForms.Guna2Button();
             this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
+            this.flp_ContainsInterviews = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,9 +52,9 @@
             // panel2
             // 
             this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.flp_ContainsInterviews);
             this.panel2.Controls.Add(this.btn_Reload);
             this.panel2.Controls.Add(this.dtp_InterviewTime);
-            this.panel2.Controls.Add(this.flp_ContainsInterviews);
             this.panel2.Controls.Add(this.tableLayoutPanel1);
             this.panel2.Controls.Add(this.btn_Search);
             this.panel2.Controls.Add(this.txt_Search);
@@ -93,14 +93,6 @@
             this.dtp_InterviewTime.Size = new System.Drawing.Size(200, 36);
             this.dtp_InterviewTime.TabIndex = 8;
             this.dtp_InterviewTime.Value = new System.DateTime(2024, 4, 26, 20, 31, 26, 838);
-            // 
-            // flp_ContainsInterviews
-            // 
-            this.flp_ContainsInterviews.AutoSize = true;
-            this.flp_ContainsInterviews.Location = new System.Drawing.Point(3, 142);
-            this.flp_ContainsInterviews.Name = "flp_ContainsInterviews";
-            this.flp_ContainsInterviews.Size = new System.Drawing.Size(790, 588);
-            this.flp_ContainsInterviews.TabIndex = 6;
             // 
             // tableLayoutPanel1
             // 
@@ -206,6 +198,14 @@
             this.txt_Search.Size = new System.Drawing.Size(281, 39);
             this.txt_Search.TabIndex = 1;
             // 
+            // flp_ContainsInterviews
+            // 
+            this.flp_ContainsInterviews.AutoScroll = true;
+            this.flp_ContainsInterviews.Location = new System.Drawing.Point(3, 142);
+            this.flp_ContainsInterviews.Name = "flp_ContainsInterviews";
+            this.flp_ContainsInterviews.Size = new System.Drawing.Size(787, 618);
+            this.flp_ContainsInterviews.TabIndex = 10;
+            // 
             // FCandidate_Interviews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -218,7 +218,6 @@
             this.Text = "FCandidate_Interviews";
             this.Load += new System.EventHandler(this.FCandidate_Interviews_Load);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -236,8 +235,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.FlowLayoutPanel flp_ContainsInterviews;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_InterviewTime;
         private Guna.UI2.WinForms.Guna2Button btn_Reload;
+        private System.Windows.Forms.FlowLayoutPanel flp_ContainsInterviews;
     }
 }
