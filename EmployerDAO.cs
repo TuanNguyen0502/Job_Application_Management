@@ -82,7 +82,19 @@ namespace Job_Application_Management
             }
         }
 
-        public bool CheckInterviewTimeExists(DateTime interviewTime, string empID)
+        public bool CheckCandidateInterviewTimeExists(DateTime interviewTime, string cddID)
+        {
+            string query = "SELECT COUNT(*) FROM Interviews WHERE InterviewTime = @InterviewTime AND CddID = @CddID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@InterviewTime", SqlDbType.DateTime) {Value = interviewTime},
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddID},
+            };
+            int count = dbConnection.ExecuteScalarGetInt(query, lstParams);
+            return count > 0; // Return true if InterviewTime already exists, false otherwise
+        }
+
+        public bool CheckEmployerInterviewTimeExists(DateTime interviewTime, string empID)
         {
             string query = "SELECT COUNT(*) FROM Interviews WHERE InterviewTime = @InterviewTime AND EmpID = @EmpID";
             SqlParameter[] lstParams =

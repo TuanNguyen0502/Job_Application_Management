@@ -27,18 +27,32 @@ namespace Job_Application_Management
             InitializeComponent();
         }
 
+        private bool CheckInterviewTime(DateTime interviewTime)
+        {
+            if (employerDAO.CheckEmployerInterviewTimeExists(interviewTime, empID))
+            {
+                MessageBox.Show("Employer is busy at this time", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (employerDAO.CheckCandidateInterviewTimeExists(interviewTime, cddID))
+            {
+                MessageBox.Show("Candidate is busy at this time", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
         private void button_Invite_Click(object sender, EventArgs e)
         {
             DateTime dateTime = new DateTime(dateTimePicker_Date.Value.Year, dateTimePicker_Date.Value.Month, dateTimePicker_Date.Value.Day,
                 dateTimePicker_Time.Value.Hour, dateTimePicker_Time.Value.Minute, dateTimePicker_Time.Value.Second);
-            Interview interview = new Interview(empID, cddID, jobID, dateTime, textBox_Note.Text);
 
-            if (employerDAO.CheckInterviewTimeExists(interview.InterviewTime, empID))
+            if (!CheckInterviewTime(dateTime))
             {
-                MessageBox.Show("Interview Time already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            Interview interview = new Interview(empID, cddID, jobID, dateTime, textBox_Note.Text);
             employerDAO.AddInterview(interview);
             this.DialogResult = DialogResult.OK;
             this.Close();
@@ -61,6 +75,7 @@ namespace Job_Application_Management
             else
             {
                 button_Update.Visible = false;
+                button_Delete.Visible = false;
             }
         }
 
@@ -68,6 +83,12 @@ namespace Job_Application_Management
         {
             DateTime dateTime = new DateTime(dateTimePicker_Date.Value.Year, dateTimePicker_Date.Value.Month, dateTimePicker_Date.Value.Day, 
                 dateTimePicker_Time.Value.Hour, dateTimePicker_Time.Value.Minute, dateTimePicker_Time.Value.Second);
+
+            if (!CheckInterviewTime(dateTime))
+            {
+                return;
+            }
+
             interview.InterviewTime = dateTime;
             interview.Note = textBox_Note.Text;
             employerDAO.UpdateInterview(interview);
