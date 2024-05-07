@@ -74,6 +74,7 @@
             this.btn_CreateCV = new Guna.UI2.WinForms.Guna2Button();
             this.roudingPanel13 = new Job_Application_Management.RoudingPanel();
             this.label_Status = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.roudingPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.roudingPanel2.SuspendLayout();
@@ -88,6 +89,7 @@
             this.roudingPanel11.SuspendLayout();
             this.roudingPanel12.SuspendLayout();
             this.roudingPanel13.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // roudingPanel1
@@ -100,7 +102,7 @@
             this.roudingPanel1.Location = new System.Drawing.Point(196, 22);
             this.roudingPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roudingPanel1.Name = "roudingPanel1";
-            this.roudingPanel1.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.roudingPanel1.Padding = new System.Windows.Forms.Padding(10);
             this.roudingPanel1.Size = new System.Drawing.Size(1300, 148);
             this.roudingPanel1.TabIndex = 0;
             // 
@@ -286,7 +288,7 @@
             this.roudingPanel4.Location = new System.Drawing.Point(704, 236);
             this.roudingPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roudingPanel4.Name = "roudingPanel4";
-            this.roudingPanel4.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.roudingPanel4.Padding = new System.Windows.Forms.Padding(10);
             this.roudingPanel4.Size = new System.Drawing.Size(792, 334);
             this.roudingPanel4.TabIndex = 2;
             // 
@@ -691,9 +693,7 @@
             // roudingPanel12
             // 
             this.roudingPanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
-            this.roudingPanel12.Controls.Add(this.button_Refuse);
-            this.roudingPanel12.Controls.Add(this.button_Approve);
-            this.roudingPanel12.Controls.Add(this.btn_CreateCV);
+            this.roudingPanel12.Controls.Add(this.flowLayoutPanel1);
             this.roudingPanel12.Location = new System.Drawing.Point(196, 1689);
             this.roudingPanel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roudingPanel12.Name = "roudingPanel12";
@@ -709,7 +709,7 @@
             this.button_Refuse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_Refuse.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Refuse.ForeColor = System.Drawing.Color.White;
-            this.button_Refuse.Location = new System.Drawing.Point(521, 52);
+            this.button_Refuse.Location = new System.Drawing.Point(455, 2);
             this.button_Refuse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Refuse.Name = "button_Refuse";
             this.button_Refuse.Size = new System.Drawing.Size(220, 62);
@@ -725,7 +725,7 @@
             this.button_Approve.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_Approve.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Approve.ForeColor = System.Drawing.Color.White;
-            this.button_Approve.Location = new System.Drawing.Point(272, 52);
+            this.button_Approve.Location = new System.Drawing.Point(229, 2);
             this.button_Approve.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Approve.Name = "button_Approve";
             this.button_Approve.Size = new System.Drawing.Size(220, 62);
@@ -741,7 +741,7 @@
             this.btn_CreateCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_CreateCV.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CreateCV.ForeColor = System.Drawing.Color.White;
-            this.btn_CreateCV.Location = new System.Drawing.Point(24, 52);
+            this.btn_CreateCV.Location = new System.Drawing.Point(3, 2);
             this.btn_CreateCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_CreateCV.Name = "btn_CreateCV";
             this.btn_CreateCV.Size = new System.Drawing.Size(220, 62);
@@ -770,6 +770,16 @@
             this.label_Status.TabIndex = 1;
             this.label_Status.Text = "Applying";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btn_CreateCV);
+            this.flowLayoutPanel1.Controls.Add(this.button_Approve);
+            this.flowLayoutPanel1.Controls.Add(this.button_Refuse);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(14, 40);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(719, 74);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
             // UC_CV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -791,7 +801,7 @@
             this.Controls.Add(this.roudingPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_CV";
-            this.Padding = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.Padding = new System.Windows.Forms.Padding(20);
             this.Size = new System.Drawing.Size(1728, 1878);
             this.Load += new System.EventHandler(this.UC_CV_Load);
             this.roudingPanel1.ResumeLayout(false);
@@ -819,6 +829,7 @@
             this.roudingPanel12.ResumeLayout(false);
             this.roudingPanel13.ResumeLayout(false);
             this.roudingPanel13.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -870,5 +881,6 @@
         private Guna.UI2.WinForms.Guna2Button button_Approve;
         private Guna.UI2.WinForms.Guna2Button button_Refuse;
         private Guna.UI2.WinForms.Guna2Button btn_RemoveCVValid;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

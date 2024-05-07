@@ -23,6 +23,8 @@ namespace Job_Application_Management
             uC_CV1.CddID = cddID;
             uC_CV1.CreateCV_Click += createCV_Cick;
             uC_CV1.RemoveCVValid_Click += removeCVValid_Click;
+            uC_CV1.Button_Approve.Visible = false;
+            uC_CV1.Button_Refuse.Visible = false;
         }
 
         public void SetEnableCreateCVButton()
