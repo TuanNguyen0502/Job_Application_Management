@@ -88,7 +88,7 @@
             this.button_Interview.Name = "button_Interview";
             this.button_Interview.Size = new System.Drawing.Size(194, 62);
             this.button_Interview.TabIndex = 3;
-            this.button_Interview.Text = "Interview";
+            this.button_Interview.Text = "Interviews";
             this.button_Interview.UseTransparentBackground = true;
             this.button_Interview.CheckedChanged += new System.EventHandler(this.button_Home_CheckedChanged);
             this.button_Interview.Click += new System.EventHandler(this.button_Interview_Click);
@@ -166,7 +166,7 @@
             this.button_Job.Name = "button_Job";
             this.button_Job.Size = new System.Drawing.Size(194, 62);
             this.button_Job.TabIndex = 1;
-            this.button_Job.Text = "Job";
+            this.button_Job.Text = "Jobs";
             this.button_Job.UseTransparentBackground = true;
             this.button_Job.CheckedChanged += new System.EventHandler(this.button_Home_CheckedChanged);
             this.button_Job.Click += new System.EventHandler(this.button_Job_Click);
