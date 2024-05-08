@@ -82,6 +82,7 @@ CREATE TABLE Certification(
 )
 CREATE TABLE CV(
 	ID int IDENTITY PRIMARY KEY,
+	Nominee nvarchar(MAX),
 	Objective text,
 	UniversityName nvarchar(100),
 	Major nvarchar(100),

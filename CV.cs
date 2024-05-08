@@ -12,6 +12,7 @@ namespace Job_Application_Management
     {
 
         private string cddID;
+        private string nominee;
         private int jobID;
         private string objective;
         private string universityName;
@@ -312,6 +313,16 @@ namespace Job_Application_Management
                     status = value;
             }
         }
-
+        public string Nominee
+        {
+            get => nominee;
+            set
+            {
+                if (value == null || value == "")
+                    MessageBox.Show("Công việc ứng tuyển chưa chỉ định");
+                else
+                    nominee = value;
+            }
+        }
     }
 }

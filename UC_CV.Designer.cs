@@ -284,6 +284,7 @@
             this.btn_RemoveCVValid.Size = new System.Drawing.Size(180, 45);
             this.btn_RemoveCVValid.TabIndex = 3;
             this.btn_RemoveCVValid.Text = "Gỡ CV đã tạo";
+            this.btn_RemoveCVValid.Click += new System.EventHandler(this.btn_RemoveCVValid_Click);
             // 
             // label_Nominee
             // 
