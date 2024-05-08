@@ -187,16 +187,16 @@ namespace Job_Application_Management
             }
         }
 
-        public List<UC_Employer_CandidateCV> GetCandidateResumeFromDB(string empID, int jobID, string status)
+        public List<UC_Employer_CandidateResume> GetCandidateResumeFromDB(string empID, int jobID, string status)
         {
             string sqlQuery = $"SELECT R.CddID, C.CddName, R.UniversityName, R.Major, R.GPA " +
                 $"FROM Resume R INNER JOIN Candidates C ON R.CddID = C.CddID " +
                 $"WHERE JobID = '{jobID}' AND Status = N'{status}'";
             List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
-            List<UC_Employer_CandidateCV> items = new List<UC_Employer_CandidateCV>();
+            List<UC_Employer_CandidateResume> items = new List<UC_Employer_CandidateResume>();
             foreach (var row in resultList)
             {
-                UC_Employer_CandidateCV item = new UC_Employer_CandidateCV(empID, jobID);
+                UC_Employer_CandidateResume item = new UC_Employer_CandidateResume(empID, jobID);
                 item.CddID = (string)row["CddID"];
                 item.Label_Name.Text = (string)row["CddName"];
                 item.Label_University.Text = (string)row["UniversityName"];
@@ -609,6 +609,39 @@ namespace Job_Application_Management
                 lstWorkHistory.Add(uC_WorkHistory);
             }
             return lstWorkHistory;
+        }
+
+        public List<UC_Employer_CV> GetCVsFromDB(string empID)
+        {
+            string sqlQuery = $"SELECT CV.ID, CV.Nominee, C.CddID, C.CddName, C.Phone, C.Email, C.CddAddress " +
+                $"FROM CV INNER JOIN Candidates C ON CV.CVOwner = C.CddID ";
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_Employer_CV> items = new List<UC_Employer_CV>();
+            foreach (var row in resultList)
+            {
+                UC_Employer_CV item = new UC_Employer_CV(empID, (string)row["CddID"], (int)row["ID"]);
+                item.Label_Name.Text = (string)row["CddName"];
+                item.Label_Job.Text = (string)row["Nominee"];
+                item.Label_Phone.Text = (string)row["Phone"];
+                item.Label_Email.Text = (string)row["Email"];
+                item.Label_Address.Text = (string)row["CddAddress"];
+                items.Add(item);
+            }
+            return items;
+        }
+
+        public List<UC_Employer_CV> GetFavoriteCVsFromDB(string empID)
+        {
+            string sqlQuery = $"SELECT CV.CVOwner, CV.ID " +
+                $"FROM FavoriteCV F INNER JOIN CV ON F.CVID = CV.ID";
+            List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
+            List<UC_Employer_CV> items = new List<UC_Employer_CV>();
+            foreach (var row in resultList)
+            {
+                UC_Employer_CV item = new UC_Employer_CV(empID, (string)row["CVOwner"], (int)row["ID"]);
+                items.Add(item);
+            }
+            return items;
         }
     }
 }

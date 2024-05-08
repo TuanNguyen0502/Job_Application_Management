@@ -152,6 +152,13 @@ CREATE TABLE AppliedJobs(
 	JobID int FOREIGN KEY REFERENCES Jobs(ID),
 	CddID varchar(10) FOREIGN KEY REFERENCES Candidates(CddID)
 )
+-- Tạo bảng CV yêu thích
+CREATE TABLE FavoriteCV(
+	ID int IDENTITY primary key,
+	TimeSaved date,
+	CVID int FOREIGN KEY REFERENCES CV(ID),
+	EmpID varchar(10) FOREIGN KEY REFERENCES Employers(ID)
+)
 
 -- Dữ liệu cho bảng Candidates
 INSERT INTO Candidates (CddID, CddName, Phone, Email, CddAddress, Hometown, Sex, Education)

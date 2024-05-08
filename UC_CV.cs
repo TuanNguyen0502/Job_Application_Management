@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,9 +27,6 @@ namespace Job_Application_Management
             InitializeComponent();
         }
 
-
-        
-
         public string Role { get => role; set => role = value; }
         public int JobID { get => jobID; set => jobID = value; }
         public string CddID { get => cddID; set => cddID = value; }
@@ -36,6 +34,7 @@ namespace Job_Application_Management
         public CV Resume { get => resume; set => resume = value; }
         public Label Label_CandidateName { get { return label_CandidateName; } }
         public Label Label_Nominee { get { return label_Nominee; } }
+        public Label Label_Status { get => label_Status; set => label_Status = value; }
         public Guna2Button Btn_RemoveCVValid { get { return btn_RemoveCVValid; } }
         public Guna2Button Btn_CreateCV { get { return btn_CreateCV; } }
         public FlowLayoutPanel Flp_Educations { get { return flp_Educations; } }
@@ -222,14 +221,24 @@ namespace Job_Application_Management
             MessageBox.Show("Get info resume successful. " + myCV.Objective);
             return myCV;
         }
+
         private void UC_CV_Load(object sender, EventArgs e)
         {
             if (Role == "Employer")
             {
-                LoadInfor();
-                //ReadOnlyControls();
+                if (jobID == 0)
+                {
+                    CV_LoadData();
+                    CV_ReadOnlyControls();
+                }
+                else
+                {
+                    Resume_LoadData();
+                    Resume_ReadOnlyControls();
+                }
             }
         }
+
         #region Set value for Education
         private void SetUniversityName(string UniversityName)
         {
@@ -244,6 +253,7 @@ namespace Job_Application_Management
                 }
             }
         }
+
         private void SetMajor(string Major)
         {
             string[] words = Major.Split('/');
@@ -257,6 +267,7 @@ namespace Job_Application_Management
                 }
             }
         }
+
         private void SetGpa(string Gpa)
         {
             string[] words = Gpa.Split('/');
@@ -270,6 +281,7 @@ namespace Job_Application_Management
                 }
             }
         }
+
         private void SetUniversityStartDate(string UniStartDate)
         {
             string[] words = UniStartDate.Split('/');
@@ -393,7 +405,8 @@ namespace Job_Application_Management
             }
         }
         #endregion
-        private void LoadInfor()
+        
+        private void Resume_LoadData()
         {
             resume = employerDAO.GetResumeFromDB(jobID, cddID);
             label_CandidateName.Text = resume.CddName;
@@ -417,26 +430,27 @@ namespace Job_Application_Management
             label_Status.Text = resume.Status;
         }
 
-        /*public void ReadOnlyControls()
+        public void Resume_ReadOnlyControls()
         {
             textBox_Phone.ReadOnly = true;
             textBox_Email.ReadOnly = true;
             textBox_Address.ReadOnly = true;
             richTextBox_CareerGoal.ReadOnly = true;
-            textBox_University.ReadOnly = true;
-            textBox_Major.ReadOnly = true;
-            textBox_GPA.ReadOnly = true;
+            //textBox_University.ReadOnly = true;
+            //textBox_Major.ReadOnly = true;
+            //textBox_GPA.ReadOnly = true;
             //uC_Resume_Education1.DateTimePicker_Start.
             //uC_Resume_Education1.DateTimePicker_End.Value = resume.UniversityEndDate;
-            textBox_Company.ReadOnly = true;
-            textBox_Workplace.ReadOnly = true;
-            richTextBox_Detail.ReadOnly = true;
+            //textBox_Company.ReadOnly = true;
+            //textBox_Workplace.ReadOnly = true;
+            //richTextBox_Detail.ReadOnly = true;
             //uC_Resume_Experience1.DateTimePicker_Start.Value = resume.CompanyStartDate;
             //uC_Resume_Experience1.DateTimePicker_End.Value = resume.CompanyEndDate;
-            textBox_Certification.ReadOnly = true;
+            //textBox_Certification.ReadOnly = true;
             //uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
             btn_CreateCV.Visible = false;
             btn_RemoveCVValid.Visible = false;
+            button_Invite.Visible = false;
             if (resume.Status == "Applying")
             {
                 button_Refuse.Visible = false;
@@ -445,9 +459,55 @@ namespace Job_Application_Management
             {
                 button_Approve.Visible = false;
             }
-        }*/
+        }
 
+        private void CV_LoadData()
+        {
+            /*resume = employerDAO.GetResumeFromDB(jobID, cddID);
+            label_CandidateName.Text = resume.CddName;
+            label_Nominee.Text = resume.JobName;
+            textBox_Phone.Text = resume.CddPhone;
+            textBox_Email.Text = resume.CddEmail;
+            textBox_Address.Text = resume.CddAddress;
+            richTextBox_CareerGoal.Text = resume.Objective;
+            SetUniversityName(resume.UniversityName);
+            SetMajor(resume.Major);
+            SetGpa(resume.Gpa);
+            SetUniversityStartDate(resume.UniversityStartDate);
+            SetUniversityEndDate(resume.UniversityEndDate);
+            SetCompanyName(resume.CompanyName);
+            SetWorkPlace(resume.WorkPlace);
+            SetDetail(resume.WorkedDetail);
+            SetCompanyStartDate(resume.CompanyStartDate);
+            SetCompanyEndDate(resume.CompanyEndDate);
+            SetCertificationName(resume.Certification);
+            SetCertificationDate(resume.CertificationDate);
+            label_Status.Text = resume.Status;*/
+        }
 
+        public void CV_ReadOnlyControls()
+        {
+            textBox_Phone.ReadOnly = true;
+            textBox_Email.ReadOnly = true;
+            textBox_Address.ReadOnly = true;
+            richTextBox_CareerGoal.ReadOnly = true;
+            //textBox_University.ReadOnly = true;
+            //textBox_Major.ReadOnly = true;
+            //textBox_GPA.ReadOnly = true;
+            //uC_Resume_Education1.DateTimePicker_Start.
+            //uC_Resume_Education1.DateTimePicker_End.Value = resume.UniversityEndDate;
+            //textBox_Company.ReadOnly = true;
+            //textBox_Workplace.ReadOnly = true;
+            //richTextBox_Detail.ReadOnly = true;
+            //uC_Resume_Experience1.DateTimePicker_Start.Value = resume.CompanyStartDate;
+            //uC_Resume_Experience1.DateTimePicker_End.Value = resume.CompanyEndDate;
+            //textBox_Certification.ReadOnly = true;
+            //uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
+            btn_CreateCV.Visible = false;
+            btn_RemoveCVValid.Visible = false;
+            button_Refuse.Visible = false;
+            button_Approve.Visible = false;
+        }
 
         public event EventHandler AddEdu;
         private void btnAdd_Education_Click(object sender, EventArgs e)
@@ -487,6 +547,5 @@ namespace Job_Application_Management
         {
             RemoveCV?.Invoke(this, new ButtonClickEventArgs(CddID,JobID));
         }
-
     }
 }

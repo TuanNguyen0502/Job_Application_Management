@@ -87,11 +87,11 @@
     <Compile Include="FCandidate_ListCVOfCandidate.Designer.cs">
       <DependentUpon>FCandidate_ListCVOfCandidate.cs</DependentUpon>
     </Compile>
-    <Compile Include="FEmployer_Resumes.cs">
+    <Compile Include="FEmployer_CVs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FEmployer_Resumes.Designer.cs">
-      <DependentUpon>FEmployer_Resumes.cs</DependentUpon>
+    <Compile Include="FEmployer_CVs.Designer.cs">
+      <DependentUpon>FEmployer_CVs.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Certification.cs">
       <SubType>UserControl</SubType>
@@ -325,11 +325,11 @@
     <Compile Include="UC_Employer_Interview.Designer.cs">
       <DependentUpon>UC_Employer_Interview.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Employer_Resume.cs">
+    <Compile Include="UC_Employer_CV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Employer_Resume.Designer.cs">
-      <DependentUpon>UC_Employer_Resume.cs</DependentUpon>
+    <Compile Include="UC_Employer_CV.Designer.cs">
+      <DependentUpon>UC_Employer_CV.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Empty.cs">
       <SubType>UserControl</SubType>
@@ -367,11 +367,11 @@
     <Compile Include="UC_Employer_Job.Designer.cs">
       <DependentUpon>UC_Employer_Job.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Employer_CandidateCV.cs">
+    <Compile Include="UC_Employer_CandidateResume.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Employer_CandidateCV.Designer.cs">
-      <DependentUpon>UC_Employer_CandidateCV.cs</DependentUpon>
+    <Compile Include="UC_Employer_CandidateResume.Designer.cs">
+      <DependentUpon>UC_Employer_CandidateResume.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_JobsSaved.cs">
       <SubType>UserControl</SubType>
@@ -451,8 +451,8 @@
     <EmbeddedResource Include="FEmployer_JobDetail.resx">
       <DependentUpon>FEmployer_JobDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FEmployer_Resumes.resx">
-      <DependentUpon>FEmployer_Resumes.cs</DependentUpon>
+    <EmbeddedResource Include="FEmployer_CVs.resx">
+      <DependentUpon>FEmployer_CVs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FEmployer_SeeCandidate.resx">
       <DependentUpon>FEmployer_SeeCandidate.cs</DependentUpon>
@@ -509,8 +509,8 @@
     <EmbeddedResource Include="UC_Employer_Interview.resx">
       <DependentUpon>UC_Employer_Interview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Employer_Resume.resx">
-      <DependentUpon>UC_Employer_Resume.cs</DependentUpon>
+    <EmbeddedResource Include="UC_Employer_CV.resx">
+      <DependentUpon>UC_Employer_CV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Empty.resx">
       <DependentUpon>UC_Empty.cs</DependentUpon>
@@ -530,8 +530,8 @@
     <EmbeddedResource Include="UC_Employer_Job.resx">
       <DependentUpon>UC_Employer_Job.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Employer_CandidateCV.resx">
-      <DependentUpon>UC_Employer_CandidateCV.cs</DependentUpon>
+    <EmbeddedResource Include="UC_Employer_CandidateResume.resx">
+      <DependentUpon>UC_Employer_CandidateResume.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_JobsSaved.resx">
       <DependentUpon>UC_JobsSaved.cs</DependentUpon>

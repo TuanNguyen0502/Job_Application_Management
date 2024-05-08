@@ -10,13 +10,15 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class FEmployer_Resumes : Form
+    public partial class FEmployer_CVs : Form
     {
+        private string empID;
         private EmployerDAO employerDAO = new EmployerDAO();
 
-        public FEmployer_Resumes()
+        public FEmployer_CVs(string empID)
         {
             InitializeComponent();
+            this.empID = empID;
         }
 
         private void button_Search_Click(object sender, EventArgs e)
@@ -39,7 +41,21 @@ namespace Job_Application_Management
 
         private void LoadData()
         {
-
+            flowLayoutPanel1.Controls.Clear();
+            List<UC_Employer_CV> cvs = employerDAO.GetCVsFromDB(empID);
+            List<UC_Employer_CV> favoriteCVs = employerDAO.GetFavoriteCVsFromDB(empID);
+            foreach (UC_Employer_CV cv in cvs)
+            {
+                foreach (var favoriteCV in favoriteCVs)
+                {
+                    if (cv.CvID == favoriteCV.CvID && cv.CddID == favoriteCV.CddID)
+                    {
+                        cv.Favorite = true;
+                        cv.Button_Favorite.BackColor = Color.LightGreen;
+                    }
+                }
+                flowLayoutPanel1.Controls.Add(cv);
+            }
         }
     }
 }

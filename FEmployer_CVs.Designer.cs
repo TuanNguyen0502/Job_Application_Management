@@ -1,6 +1,6 @@
 ﻿namespace Job_Application_Management
 {
-    partial class FEmployer_Resumes
+    partial class FEmployer_CVs
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,7 @@
             this.button_Search = new Guna.UI2.WinForms.Guna2Button();
             this.textBox_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button_Favourite = new Guna.UI2.WinForms.Guna2Button();
-            this.uC_Employer_Resume1 = new Job_Application_Management.UC_Employer_Resume();
-            this.uC_Employer_Resume2 = new Job_Application_Management.UC_Employer_Resume();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.button_Favorite = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // button_Search
@@ -79,66 +76,47 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.uC_Employer_Resume1);
-            this.flowLayoutPanel1.Controls.Add(this.uC_Employer_Resume2);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(27, 83);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1110, 560);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1136, 630);
             this.flowLayoutPanel1.TabIndex = 10;
             this.flowLayoutPanel1.WrapContents = false;
             // 
-            // button_Favourite
+            // button_Favorite
             // 
-            this.button_Favourite.AutoRoundedCorners = true;
-            this.button_Favourite.BackColor = System.Drawing.Color.Transparent;
-            this.button_Favourite.BorderRadius = 24;
-            this.button_Favourite.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_Favourite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_Favourite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_Favourite.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_Favourite.FillColor = System.Drawing.Color.Transparent;
-            this.button_Favourite.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button_Favourite.ForeColor = System.Drawing.Color.White;
-            this.button_Favourite.Image = global::Job_Application_Management.Properties.Resources.icons8_heart_50;
-            this.button_Favourite.ImageSize = new System.Drawing.Size(50, 50);
-            this.button_Favourite.Location = new System.Drawing.Point(1073, 27);
-            this.button_Favourite.Name = "button_Favourite";
-            this.button_Favourite.Size = new System.Drawing.Size(50, 50);
-            this.button_Favourite.TabIndex = 11;
-            this.button_Favourite.UseTransparentBackground = true;
+            this.button_Favorite.AutoRoundedCorners = true;
+            this.button_Favorite.BackColor = System.Drawing.Color.Transparent;
+            this.button_Favorite.BorderRadius = 24;
+            this.button_Favorite.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_Favorite.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_Favorite.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_Favorite.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_Favorite.FillColor = System.Drawing.Color.Transparent;
+            this.button_Favorite.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.button_Favorite.ForeColor = System.Drawing.Color.White;
+            this.button_Favorite.Image = global::Job_Application_Management.Properties.Resources.icons8_heart_50;
+            this.button_Favorite.ImageSize = new System.Drawing.Size(50, 50);
+            this.button_Favorite.Location = new System.Drawing.Point(1073, 27);
+            this.button_Favorite.Name = "button_Favorite";
+            this.button_Favorite.Size = new System.Drawing.Size(50, 50);
+            this.button_Favorite.TabIndex = 11;
+            this.button_Favorite.UseTransparentBackground = true;
             // 
-            // uC_Employer_Resume1
-            // 
-            this.uC_Employer_Resume1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
-            this.uC_Employer_Resume1.Location = new System.Drawing.Point(3, 3);
-            this.uC_Employer_Resume1.Name = "uC_Employer_Resume1";
-            this.uC_Employer_Resume1.Size = new System.Drawing.Size(1100, 191);
-            this.uC_Employer_Resume1.TabIndex = 0;
-            // 
-            // uC_Employer_Resume2
-            // 
-            this.uC_Employer_Resume2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
-            this.uC_Employer_Resume2.Location = new System.Drawing.Point(3, 200);
-            this.uC_Employer_Resume2.Name = "uC_Employer_Resume2";
-            this.uC_Employer_Resume2.Size = new System.Drawing.Size(1100, 191);
-            this.uC_Employer_Resume2.TabIndex = 1;
-            // 
-            // FEmployer_Resumes
+            // FEmployer_CVs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1248, 663);
-            this.Controls.Add(this.button_Favourite);
+            this.ClientSize = new System.Drawing.Size(1248, 852);
+            this.Controls.Add(this.button_Favorite);
             this.Controls.Add(this.button_Search);
             this.Controls.Add(this.textBox_Search);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "FEmployer_Resumes";
+            this.Name = "FEmployer_CVs";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Text = "FEmployer_Resumes";
             this.Load += new System.EventHandler(this.FEmployer_Resumes_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -147,8 +125,6 @@
         private Guna.UI2.WinForms.Guna2Button button_Search;
         private Guna.UI2.WinForms.Guna2TextBox textBox_Search;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2Button button_Favourite;
-        private UC_Employer_Resume uC_Employer_Resume1;
-        private UC_Employer_Resume uC_Employer_Resume2;
+        private Guna.UI2.WinForms.Guna2Button button_Favorite;
     }
 }

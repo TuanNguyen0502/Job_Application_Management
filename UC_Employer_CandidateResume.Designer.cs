@@ -1,6 +1,6 @@
 ﻿namespace Job_Application_Management
 {
-    partial class UC_Employer_CandidateCV
+    partial class UC_Employer_CandidateResume
     {
         /// <summary> 
         /// Required designer variable.

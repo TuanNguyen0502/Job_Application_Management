@@ -31,7 +31,7 @@ namespace Job_Application_Management
         private void LoadInfor()
         {
             string status = "Approved";
-            List<UC_Employer_CandidateCV> resumeItems = employerDAO.GetCandidateResumeFromDB(empID, jobID, status);
+            List<UC_Employer_CandidateResume> resumeItems = employerDAO.GetCandidateResumeFromDB(empID, jobID, status);
             foreach (var resume in resumeItems)
             {
                 flowLayoutPanel1.Controls.Add(resume);
