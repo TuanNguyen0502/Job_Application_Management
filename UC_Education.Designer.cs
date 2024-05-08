@@ -110,7 +110,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(29)))));
-            this.label5.Location = new System.Drawing.Point(929, 35);
+            this.label5.Location = new System.Drawing.Point(923, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 28);
             this.label5.TabIndex = 2;
@@ -123,7 +123,7 @@
             this.dateTimePicker_UniversityEndDate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dateTimePicker_UniversityEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(108)))), ((int)(((byte)(146)))));
             this.dateTimePicker_UniversityEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_UniversityEndDate.Location = new System.Drawing.Point(953, 30);
+            this.dateTimePicker_UniversityEndDate.Location = new System.Drawing.Point(947, 30);
             this.dateTimePicker_UniversityEndDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker_UniversityEndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker_UniversityEndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -139,7 +139,7 @@
             this.dateTimePicker_UniversityStartDate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dateTimePicker_UniversityStartDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(108)))), ((int)(((byte)(146)))));
             this.dateTimePicker_UniversityStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_UniversityStartDate.Location = new System.Drawing.Point(719, 30);
+            this.dateTimePicker_UniversityStartDate.Location = new System.Drawing.Point(713, 30);
             this.dateTimePicker_UniversityStartDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker_UniversityStartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker_UniversityStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);

@@ -337,15 +337,15 @@ namespace Job_Application_Management
                 cv.UniversityName = (string)item["UniversityName"];
                 cv.Major = (string)item["Major"];
                 cv.Gpa = (string)item["GPA"];
-                cv.UniversityStartDate = (DateTime)item["UniversityStartDate"];
-                cv.UniversityEndDate = (DateTime)item["UniversityEndDate"];
+                cv.UniversityStartDate = (string)item["UniversityStartDate"];
+                cv.UniversityEndDate = (string)item["UniversityEndDate"];
                 cv.CompanyName = (string)item["CompanyName"];
-                cv.CompanyStartDate = (DateTime)item["CompanyStartDate"];
-                cv.CompanyEndDate = (DateTime)item["CompanyEndDate"];
+                cv.CompanyStartDate = (string)item["CompanyStartDate"];
+                cv.CompanyEndDate = (string)item["CompanyEndDate"];
                 cv.WorkPlace = (string)item["WorkPlace"];
                 cv.WorkedDetail = (string)item["Detail"];
                 cv.Certification = (string)item["CertificationName"];
-                cv.CertificationDate = (DateTime)item["CertificationDate"];
+                cv.CertificationDate = (string)item["CertificationDate"];
 
                 return cv;
             }
@@ -528,8 +528,8 @@ namespace Job_Application_Management
                 candidateProfile.CddID = (string)keyValuePair["CandidateID"];
                 candidateProfile.CompanyName = (string)keyValuePair["CompanyName"];
                 candidateProfile.CddName = (string)keyValuePair["CddName"];
-                candidateProfile.CompanyStartDate = (DateTime)keyValuePair["StartDate"];
-                candidateProfile.CompanyEndDate = (DateTime)keyValuePair["EndDate"];
+                candidateProfile.CompanyStartDate = (string)keyValuePair["StartDate"];
+                candidateProfile.CompanyEndDate = (string)keyValuePair["EndDate"];
                 UC_WorkHistory uC_WorkHistory = new UC_WorkHistory(candidateProfile);
                 lstWorkHistory.Add(uC_WorkHistory);
             }
@@ -586,6 +586,7 @@ namespace Job_Application_Management
             }
         }
         #endregion
+        #region Functions cho interview
         public List<UC_Candidate_Interview> GetListInterviewsToDB(string cddid)
         {
             sqlQuery = "SELECT j.Name, emp.CompanyName, itv.InterviewTime, itv.Note, can.CddName"
@@ -654,6 +655,8 @@ namespace Job_Application_Management
             }
             return result;
         }
+        #endregion
+        #region Functions cho kiểm tra số lượng công việc đã lưu với công việc đã ứng tuyển
         public int CheckJobSaved(int jobid)
         {
             sqlQuery = "SELECT COUNT(*)"+
@@ -686,6 +689,7 @@ namespace Job_Application_Management
             int res = dbConn.ExecuteScalarGetInt(sqlQuery, lstParam);
             return res;
         }
+        #endregion
         #region Update Candidate Information
         public Candidate GetCandidateInfor(string cddid)
         {
@@ -736,7 +740,6 @@ namespace Job_Application_Management
             }
         }
         #endregion
-
         #region Đăng ký thông tin ứng viên
         public bool RegisterCandidateInfo(Candidate candidate)
         {
@@ -823,6 +826,12 @@ namespace Job_Application_Management
                 throw new ArgumentException("Chuỗi không chứa một số hợp lệ.");
             }
         }
+        #endregion
+
+        #region Tối ưu CV
+
+
+
         #endregion
     }
 }
