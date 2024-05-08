@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace Job_Application_Management
 {
-    public partial class FCandidate_ListCVOfCandidate : Form
+    public partial class UC_DescribesCV : UserControl
     {
-        public FCandidate_ListCVOfCandidate()
+        public UC_DescribesCV()
         {
             InitializeComponent();
         }
-
     }
 }

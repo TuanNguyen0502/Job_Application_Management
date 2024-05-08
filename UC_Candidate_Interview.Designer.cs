@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label_JobName = new System.Windows.Forms.Label();
             this.lbl_CompanyName = new System.Windows.Forms.Label();
             this.label_InterviewTime = new System.Windows.Forms.Label();
             this.label_Note = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.label_JobName = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,19 +59,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(750, 49);
             this.tableLayoutPanel1.TabIndex = 1;
             this.tableLayoutPanel1.Click += new System.EventHandler(this.tableLayoutPanel1_Click);
-            // 
-            // label_JobName
-            // 
-            this.label_JobName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_JobName.AutoSize = true;
-            this.label_JobName.Font = new System.Drawing.Font("Segoe UI", 8.2F);
-            this.label_JobName.ForeColor = System.Drawing.Color.Black;
-            this.label_JobName.Location = new System.Drawing.Point(51, 15);
-            this.label_JobName.Name = "label_JobName";
-            this.label_JobName.Size = new System.Drawing.Size(70, 19);
-            this.label_JobName.TabIndex = 1;
-            this.label_JobName.Text = "Job Name";
-            this.label_JobName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_CompanyName
             // 
@@ -125,6 +112,19 @@
             this.guna2CirclePictureBox1.TabIndex = 2;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // label_JobName
+            // 
+            this.label_JobName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_JobName.AutoSize = true;
+            this.label_JobName.Font = new System.Drawing.Font("Segoe UI", 8.2F);
+            this.label_JobName.ForeColor = System.Drawing.Color.Black;
+            this.label_JobName.Location = new System.Drawing.Point(51, 15);
+            this.label_JobName.Name = "label_JobName";
+            this.label_JobName.Size = new System.Drawing.Size(70, 19);
+            this.label_JobName.TabIndex = 1;
+            this.label_JobName.Text = "Job Name";
+            this.label_JobName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UC_Candidate_Interview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -143,10 +143,10 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label_JobName;
         private System.Windows.Forms.Label lbl_CompanyName;
         private System.Windows.Forms.Label label_InterviewTime;
         private System.Windows.Forms.Label label_Note;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private System.Windows.Forms.Label label_JobName;
     }
 }
