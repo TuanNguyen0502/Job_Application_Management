@@ -436,18 +436,27 @@ namespace Job_Application_Management
             textBox_Email.ReadOnly = true;
             textBox_Address.ReadOnly = true;
             richTextBox_CareerGoal.ReadOnly = true;
-            //textBox_University.ReadOnly = true;
-            //textBox_Major.ReadOnly = true;
-            //textBox_GPA.ReadOnly = true;
-            //uC_Resume_Education1.DateTimePicker_Start.
-            //uC_Resume_Education1.DateTimePicker_End.Value = resume.UniversityEndDate;
-            //textBox_Company.ReadOnly = true;
-            //textBox_Workplace.ReadOnly = true;
-            //richTextBox_Detail.ReadOnly = true;
-            //uC_Resume_Experience1.DateTimePicker_Start.Value = resume.CompanyStartDate;
-            //uC_Resume_Experience1.DateTimePicker_End.Value = resume.CompanyEndDate;
-            //textBox_Certification.ReadOnly = true;
-            //uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
+            foreach (UC_Education uc in this.flp_Educations.Controls)
+            {
+                uc.TextBox_University.ReadOnly = true;
+                uc.TextBox_Major.ReadOnly = true;
+                uc.TextBox_GPA.ReadOnly = true;
+                uc.DateTimePicker_UniversityStartDate.Enabled = false;
+                uc.DateTimePicker_UniversityEndDate.Enabled = false;
+            }
+            foreach (UC_Experiences uc in this.flp_Experiences.Controls)
+            {
+                uc.TextBox_Company.ReadOnly = true;
+                uc.TextBox_Workplace.ReadOnly = true;
+                uc.RichTextBox_Detail.ReadOnly = true;
+                uc.DateTimePicker_CompanyStartDate.Enabled = false;
+                uc.DateTimePicker_CompanyEndDate.Enabled = false;
+            }
+            foreach (UC_Certification uc in this.flp_Certifications.Controls)
+            {
+                uc.TextBox_Certification.ReadOnly = true;
+                uc.DateTimePicker_Certification.Enabled = false;
+            }
             btn_CreateCV.Visible = false;
             btn_RemoveCVValid.Visible = false;
             button_Invite.Visible = false;
@@ -487,22 +496,32 @@ namespace Job_Application_Management
 
         public void CV_ReadOnlyControls()
         {
+            dateTimePicker_Dob.Enabled = false;
             textBox_Phone.ReadOnly = true;
             textBox_Email.ReadOnly = true;
             textBox_Address.ReadOnly = true;
             richTextBox_CareerGoal.ReadOnly = true;
-            //textBox_University.ReadOnly = true;
-            //textBox_Major.ReadOnly = true;
-            //textBox_GPA.ReadOnly = true;
-            //uC_Resume_Education1.DateTimePicker_Start.
-            //uC_Resume_Education1.DateTimePicker_End.Value = resume.UniversityEndDate;
-            //textBox_Company.ReadOnly = true;
-            //textBox_Workplace.ReadOnly = true;
-            //richTextBox_Detail.ReadOnly = true;
-            //uC_Resume_Experience1.DateTimePicker_Start.Value = resume.CompanyStartDate;
-            //uC_Resume_Experience1.DateTimePicker_End.Value = resume.CompanyEndDate;
-            //textBox_Certification.ReadOnly = true;
-            //uC_Resume_Certificate1.DateTimePicker_Start.Value = resume.TimeCertificate;
+            foreach (UC_Education uc in this.flp_Educations.Controls)
+            {
+                uc.TextBox_University.ReadOnly = true;
+                uc.TextBox_Major.ReadOnly = true;
+                uc.TextBox_GPA.ReadOnly = true;
+                uc.DateTimePicker_UniversityStartDate.Enabled = false;
+                uc.DateTimePicker_UniversityEndDate.Enabled = false;
+            }
+            foreach (UC_Experiences uc in this.flp_Experiences.Controls)
+            {
+                uc.TextBox_Company.ReadOnly = true;
+                uc.TextBox_Workplace.ReadOnly = true;
+                uc.RichTextBox_Detail.ReadOnly = true;
+                uc.DateTimePicker_CompanyStartDate.Enabled = false;
+                uc.DateTimePicker_CompanyEndDate.Enabled = false;
+            }
+            foreach (UC_Certification uc in this.flp_Certifications.Controls)
+            {
+                uc.TextBox_Certification.ReadOnly = true;
+                uc.DateTimePicker_Certification.Enabled = false;
+            }
             btn_CreateCV.Visible = false;
             btn_RemoveCVValid.Visible = false;
             button_Refuse.Visible = false;

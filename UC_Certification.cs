@@ -17,7 +17,7 @@ namespace Job_Application_Management
         {
             InitializeComponent();
         }
-        public Guna2TextBox TextBox_Certification { get { return textBox_Certification; } }
-        public Guna2DateTimePicker DateTimePicker_Certification { get { return dateTimePicker_Certification; } }
+        public Guna2TextBox TextBox_Certification { get => textBox_Certification; set => textBox_Certification = value; }
+        public Guna2DateTimePicker DateTimePicker_Certification { get => dateTimePicker_Certification; set => dateTimePicker_Certification = value; }
     }
 }

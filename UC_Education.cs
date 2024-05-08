@@ -17,10 +17,10 @@ namespace Job_Application_Management
         {
             InitializeComponent();
         }
-        public Guna2TextBox TextBox_University { get { return textBox_University; } }
-        public Guna2TextBox TextBox_Major { get { return textBox_Major; } }
-        public Guna2TextBox TextBox_GPA { get { return textBox_GPA; } }
-        public Guna2DateTimePicker DateTimePicker_UniversityStartDate { get { return dateTimePicker_UniversityStartDate; } }
-        public Guna2DateTimePicker DateTimePicker_UniversityEndDate { get { return dateTimePicker_UniversityEndDate; } }
+        public Guna2TextBox TextBox_University { get => textBox_University; set => textBox_University = value;  }
+        public Guna2TextBox TextBox_Major { get => textBox_Major; set => textBox_Major = value; }
+        public Guna2TextBox TextBox_GPA { get => textBox_GPA; set => textBox_GPA = value; }
+        public Guna2DateTimePicker DateTimePicker_UniversityStartDate { get => dateTimePicker_UniversityStartDate; set => dateTimePicker_UniversityStartDate = value; }
+        public Guna2DateTimePicker DateTimePicker_UniversityEndDate { get => dateTimePicker_UniversityEndDate; set => dateTimePicker_UniversityEndDate = value; }
     }
 }
