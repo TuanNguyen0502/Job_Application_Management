@@ -42,9 +42,9 @@ namespace Job_Application_Management
 
         private void button_Approve_Click(object sender, EventArgs e)
         {
-            /*uC_CV1.Resume.Status = "Approved";
+            uC_CV1.Resume.Status = "Approved";
             uC_CV1.Label_Status.Text = uC_CV1.Resume.Status;
-            employerDAO.UpdateResume(uC_CV1.Resume);*/
+            employerDAO.UpdateResume(uC_CV1.Resume);
             FEmployer_Interview fEmployer_Interview = new FEmployer_Interview(empID, cddID, jobID);
             fEmployer_Interview.ShowDialog();
             this.DialogResult = DialogResult.OK;
@@ -52,9 +52,9 @@ namespace Job_Application_Management
 
         private void button_Refuse_Click(object sender, EventArgs e)
         {
-            /*uC_CV1.Resume.Status = "Applying";
+            uC_CV1.Resume.Status = "Applying";
             uC_CV1.Label_Status.Text = uC_CV1.Resume.Status;
-            employerDAO.UpdateResume(uC_CV1.Resume);*/
+            employerDAO.UpdateResume(uC_CV1.Resume);
             this.DialogResult = DialogResult.OK;
         }
     }
