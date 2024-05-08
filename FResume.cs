@@ -27,12 +27,12 @@ namespace Job_Application_Management
             this.cddID = cddID;
             this.role = role;
             InitializeComponent();
-            /*uC_CV1.Role = role;
+            uC_CV1.Role = role;
             uC_CV1.EmpID = empID;
             uC_CV1.JobID = jobID;
             uC_CV1.CddID = cddID;
             uC_CV1.Button_Approve.Click += button_Approve_Click;
-            uC_CV1.Button_Refuse.Click += button_Refuse_Click;*/
+            uC_CV1.Button_Refuse.Click += button_Refuse_Click;
         }
 
         public FResume()

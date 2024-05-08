@@ -28,8 +28,6 @@ namespace Job_Application_Management
             if (currentFormChild != null)
             {
                 currentFormChild.Close();
-                //var t = Task.Delay(500); //1 second/1000 ms
-                //t.Wait();
             }
 
             panel_Center.BackgroundImage = null;
@@ -87,7 +85,7 @@ namespace Job_Application_Management
 
         private void button_Resumes_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FEmployer_Resumes());
+            OpenChildForm(new FEmployer_CVs(empID));
         }
     }
 }
