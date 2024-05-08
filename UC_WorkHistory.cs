@@ -17,8 +17,8 @@ namespace Job_Application_Management
         {
             txt_CddName.Text = candidateProfile.CddName;
             txt_CompanyName.Text = candidateProfile.CompanyName;
-            //dtp_Start.Value = candidateProfile.CompanyStartDate;
-            //dtp_End.Value = candidateProfile.CompanyEndDate;
+            /*dtp_Start.Value = candidateProfile.CompanyStartDate;
+            dtp_End.Value = candidateProfile.CompanyEndDate;*/
         }
         public UC_WorkHistory()
         {

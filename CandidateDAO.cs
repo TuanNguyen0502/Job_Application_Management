@@ -289,19 +289,19 @@ namespace Job_Application_Management
                        "VALUES(@Objective, @UniversityName, @Major, @GPA, @UniversityStartDate, @UniversityEndDate, @CompanyName, @WorkPlace, @Detail, @CompanyStartDate, @CompanyEndDate, @CertificationName, @CertificationDate, @CVOwner)";
                 SqlParameter[] lstParams =
                     {
-                new SqlParameter("@Objective", SqlDbType.Text) {Value = cv.Objective},
+                new SqlParameter("@Objective", SqlDbType.NVarChar) {Value = cv.Objective},
                 new SqlParameter("@UniversityName", SqlDbType.NVarChar) {Value = cv.UniversityName},
                 new SqlParameter("@Major", SqlDbType.NVarChar) {Value = cv.Major},
                 new SqlParameter("@GPA", SqlDbType.NVarChar) {Value = cv.Gpa},
-                new SqlParameter("@UniversityStartDate", SqlDbType.Date) {Value = cv.UniversityStartDate},
-                new SqlParameter("@UniversityEndDate", SqlDbType.Date) {Value = cv.UniversityEndDate},
+                new SqlParameter("@UniversityStartDate", SqlDbType.NVarChar) {Value = cv.UniversityStartDate},
+                new SqlParameter("@UniversityEndDate", SqlDbType.NVarChar) {Value = cv.UniversityEndDate},
                 new SqlParameter("@CompanyName", SqlDbType.NVarChar) {Value = cv.CompanyName},
                 new SqlParameter("@WorkPlace", SqlDbType.NVarChar) {Value = cv.WorkPlace},
-                new SqlParameter("@Detail", SqlDbType.Text) {Value = cv.WorkedDetail},
-                new SqlParameter("@CompanyStartDate", SqlDbType.Date) {Value = cv.CompanyStartDate},
-                new SqlParameter("@CompanyEndDate", SqlDbType.Date) {Value = cv.CompanyEndDate},
+                new SqlParameter("@Detail", SqlDbType.NVarChar) {Value = cv.WorkedDetail},
+                new SqlParameter("@CompanyStartDate", SqlDbType.NVarChar) {Value = cv.CompanyStartDate},
+                new SqlParameter("@CompanyEndDate", SqlDbType.NVarChar) {Value = cv.CompanyEndDate},
                 new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = cv.Certification},
-                new SqlParameter("@CertificationDate", SqlDbType.Date) {Value = cv.CertificationDate},
+                new SqlParameter("@CertificationDate", SqlDbType.NVarChar) {Value = cv.CertificationDate},
                 new SqlParameter("@CVOwner", SqlDbType.VarChar) {Value = cddid},
                 };
                 if(dbConn.ExecuteWriteDataCheck(sqlQuery, lstParams))

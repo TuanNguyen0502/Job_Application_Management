@@ -23,6 +23,25 @@ namespace Job_Application_Management
             uC_CV1.CddID = cddID;
             uC_CV1.CreateCV += createCV_Cick;
             uC_CV1.RemoveCV += removeCVValid_Click;
+            uC_CV1.AddEdu += addEducation_Click;
+            uC_CV1.AddEx += addExperience_Click;
+            uC_CV1.AddCer += addCertification_Click;
+        }
+
+        private void addEducation_Click (object sender, EventArgs e)
+        {
+            UC_Education edu = new UC_Education();
+            uC_CV1.Flp_Educations.Controls.Add(edu);
+        }
+        private void addExperience_Click(object sender, EventArgs e)
+        {
+            UC_Experiences exp = new UC_Experiences();
+            uC_CV1.Flp_Experiences.Controls.Add(exp);
+        }
+        private void addCertification_Click(object sender, EventArgs e)
+        {
+            UC_Certification cer = new UC_Certification();
+            uC_CV1.Flp_Certifications.Controls.Add(cer);
         }
 
         public void SetEnableCreateCVButton()
