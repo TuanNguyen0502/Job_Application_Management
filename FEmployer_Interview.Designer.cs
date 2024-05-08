@@ -163,7 +163,7 @@
             this.textBox_Note.ForeColor = System.Drawing.Color.Black;
             this.textBox_Note.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBox_Note.Location = new System.Drawing.Point(420, 165);
-            this.textBox_Note.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.textBox_Note.Margin = new System.Windows.Forms.Padding(7);
             this.textBox_Note.Multiline = true;
             this.textBox_Note.Name = "textBox_Note";
             this.textBox_Note.Padding = new System.Windows.Forms.Padding(5);

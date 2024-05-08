@@ -43,10 +43,10 @@ namespace Job_Application_Management
 
         private void button_Search_Click(object sender, EventArgs e)
         {
-            if (textBox_Search.Text == null || textBox_Search.Text == "")
+            if (string.IsNullOrWhiteSpace(textBox_Search.Text))
             {
-                MessageBox.Show("Enter you keyword !", "Empty keyword", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                flowLayoutPanel1.Controls.Clear();
+                LoadData();
             }
 
             flowLayoutPanel1.Controls.Clear();

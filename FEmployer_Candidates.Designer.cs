@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.button_Search = new Guna.UI2.WinForms.Guna2Button();
-            this.button_LoadData = new Guna.UI2.WinForms.Guna2Button();
             this.textBox_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -58,23 +57,6 @@
             this.button_Search.Text = "Search";
             this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
-            // button_LoadData
-            // 
-            this.button_LoadData.AutoRoundedCorners = true;
-            this.button_LoadData.BorderRadius = 22;
-            this.button_LoadData.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_LoadData.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_LoadData.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_LoadData.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_LoadData.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_LoadData.ForeColor = System.Drawing.Color.White;
-            this.button_LoadData.Location = new System.Drawing.Point(40, 23);
-            this.button_LoadData.Name = "button_LoadData";
-            this.button_LoadData.Size = new System.Drawing.Size(147, 46);
-            this.button_LoadData.TabIndex = 5;
-            this.button_LoadData.Text = "Load All";
-            this.button_LoadData.Click += new System.EventHandler(this.button_LoadData_Click);
-            // 
             // textBox_Search
             // 
             this.textBox_Search.AutoRoundedCorners = true;
@@ -88,13 +70,13 @@
             this.textBox_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBox_Search.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.textBox_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_Search.Location = new System.Drawing.Point(197, 27);
-            this.textBox_Search.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.textBox_Search.Location = new System.Drawing.Point(41, 27);
+            this.textBox_Search.Margin = new System.Windows.Forms.Padding(7);
             this.textBox_Search.Name = "textBox_Search";
             this.textBox_Search.PasswordChar = '\0';
             this.textBox_Search.PlaceholderText = "Type your keyword here";
             this.textBox_Search.SelectedText = "";
-            this.textBox_Search.Size = new System.Drawing.Size(714, 46);
+            this.textBox_Search.Size = new System.Drawing.Size(870, 46);
             this.textBox_Search.TabIndex = 4;
             // 
             // flowLayoutPanel1
@@ -196,7 +178,6 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button_Search);
-            this.Controls.Add(this.button_LoadData);
             this.Controls.Add(this.textBox_Search);
             this.Name = "FEmployer_Candidates";
             this.Padding = new System.Windows.Forms.Padding(20);
@@ -210,7 +191,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Button button_Search;
-        private Guna.UI2.WinForms.Guna2Button button_LoadData;
         private Guna.UI2.WinForms.Guna2TextBox textBox_Search;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;

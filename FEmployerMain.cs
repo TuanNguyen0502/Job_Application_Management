@@ -84,5 +84,10 @@ namespace Job_Application_Management
         {
             OpenChildForm(new FEmployer_Interviews(empID));
         }
+
+        private void button_Resumes_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FEmployer_Resumes());
+        }
     }
 }

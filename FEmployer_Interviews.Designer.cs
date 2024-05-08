@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.textBox_Search = new Guna.UI2.WinForms.Guna2TextBox();
-            this.button_LoadData = new Guna.UI2.WinForms.Guna2Button();
             this.button_Search = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,31 +52,14 @@
             this.textBox_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBox_Search.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.textBox_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_Search.Location = new System.Drawing.Point(180, 27);
+            this.textBox_Search.Location = new System.Drawing.Point(27, 27);
             this.textBox_Search.Margin = new System.Windows.Forms.Padding(7);
             this.textBox_Search.Name = "textBox_Search";
             this.textBox_Search.PasswordChar = '\0';
             this.textBox_Search.PlaceholderText = "Type your keyword here";
             this.textBox_Search.SelectedText = "";
-            this.textBox_Search.Size = new System.Drawing.Size(714, 46);
+            this.textBox_Search.Size = new System.Drawing.Size(867, 46);
             this.textBox_Search.TabIndex = 0;
-            // 
-            // button_LoadData
-            // 
-            this.button_LoadData.AutoRoundedCorners = true;
-            this.button_LoadData.BorderRadius = 22;
-            this.button_LoadData.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_LoadData.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_LoadData.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_LoadData.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_LoadData.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_LoadData.ForeColor = System.Drawing.Color.White;
-            this.button_LoadData.Location = new System.Drawing.Point(23, 23);
-            this.button_LoadData.Name = "button_LoadData";
-            this.button_LoadData.Size = new System.Drawing.Size(147, 46);
-            this.button_LoadData.TabIndex = 2;
-            this.button_LoadData.Text = "Load All";
-            this.button_LoadData.Click += new System.EventHandler(this.button_LoadData_Click);
             // 
             // button_Search
             // 
@@ -178,7 +160,6 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button_Search);
-            this.Controls.Add(this.button_LoadData);
             this.Controls.Add(this.textBox_Search);
             this.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -196,7 +177,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2TextBox textBox_Search;
-        private Guna.UI2.WinForms.Guna2Button button_LoadData;
         private Guna.UI2.WinForms.Guna2Button button_Search;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
