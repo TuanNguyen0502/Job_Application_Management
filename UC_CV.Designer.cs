@@ -45,6 +45,7 @@
             this.btn_RemoveCVValid = new Guna.UI2.WinForms.Guna2Button();
             this.label_Nominee = new System.Windows.Forms.Label();
             this.label_CandidateName = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.uC_Education1 = new Job_Application_Management.UC_Education();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -58,7 +59,6 @@
             this.button_Approve = new Guna.UI2.WinForms.Guna2Button();
             this.btn_CreateCV = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdd_Education = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnAdd_Experiences = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdd_Certification = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
@@ -67,12 +67,12 @@
             this.roudingPanel3.SuspendLayout();
             this.roudingPanel2.SuspendLayout();
             this.roudingPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.roudingPanel13.SuspendLayout();
             this.roudingPanel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -307,6 +307,19 @@
             this.label_CandidateName.TabIndex = 1;
             this.label_CandidateName.Text = "Nguyen Ha Hong Tuan";
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_person_48;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(12, 10);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(116, 97);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 0;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoSize = true;
@@ -406,6 +419,7 @@
             this.button_Refuse.Size = new System.Drawing.Size(196, 50);
             this.button_Refuse.TabIndex = 2;
             this.button_Refuse.Text = "Refuse";
+            this.button_Refuse.Click += new System.EventHandler(this.button_Refuse_Click);
             // 
             // button_Approve
             // 
@@ -422,6 +436,7 @@
             this.button_Approve.Size = new System.Drawing.Size(196, 50);
             this.button_Approve.TabIndex = 1;
             this.button_Approve.Text = "Approve";
+            this.button_Approve.Click += new System.EventHandler(this.button_Approve_Click);
             // 
             // btn_CreateCV
             // 
@@ -438,6 +453,7 @@
             this.btn_CreateCV.Size = new System.Drawing.Size(196, 50);
             this.btn_CreateCV.TabIndex = 0;
             this.btn_CreateCV.Text = "Lưu CV";
+            this.btn_CreateCV.Click += new System.EventHandler(this.btn_CreateCV_Click);
             // 
             // btnAdd_Education
             // 
@@ -454,19 +470,7 @@
             this.btnAdd_Education.Size = new System.Drawing.Size(80, 35);
             this.btnAdd_Education.TabIndex = 13;
             this.btnAdd_Education.Text = "Add";
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = global::Job_Application_Management.Properties.Resources.icons8_person_48;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(12, 10);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(116, 97);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.btnAdd_Education.Click += new System.EventHandler(this.btnAdd_Education_Click);
             // 
             // btnAdd_Experiences
             // 
@@ -483,6 +487,7 @@
             this.btnAdd_Experiences.Size = new System.Drawing.Size(80, 35);
             this.btnAdd_Experiences.TabIndex = 16;
             this.btnAdd_Experiences.Text = "Add";
+            this.btnAdd_Experiences.Click += new System.EventHandler(this.btnAdd_Experiences_Click);
             // 
             // btnAdd_Certification
             // 
@@ -499,6 +504,7 @@
             this.btnAdd_Certification.Size = new System.Drawing.Size(80, 35);
             this.btnAdd_Certification.TabIndex = 17;
             this.btnAdd_Certification.Text = "Add";
+            this.btnAdd_Certification.Click += new System.EventHandler(this.btnAdd_Certification_Click);
             // 
             // UC_CV
             // 
@@ -526,13 +532,13 @@
             this.roudingPanel2.PerformLayout();
             this.roudingPanel1.ResumeLayout(false);
             this.roudingPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.roudingPanel13.ResumeLayout(false);
             this.roudingPanel13.PerformLayout();
             this.roudingPanel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

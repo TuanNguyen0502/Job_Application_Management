@@ -16,5 +16,35 @@ namespace Job_Application_Management
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Education_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Experiences_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Certification_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_CreateCV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Approve_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Refuse_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
