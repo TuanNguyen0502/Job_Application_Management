@@ -18,15 +18,15 @@ namespace Job_Application_Management
         private string universityName;
         private string major;
         private string gpa;
-        private DateTime universityStartDate;
-        private DateTime universityEndDate;
+        private string universityStartDate;
+        private string universityEndDate;
         private string companyName;
         private string workPlace;
         private string workedDetail;
-        private DateTime companyStartDate;
-        private DateTime companyEndDate;
+        private string companyStartDate;
+        private string companyEndDate;
         private string certification;
-        private DateTime certificationDate;
+        private string certificationDate;
         private string status;
         // Thuộc tính từ bảng khác
         private string jobName;
@@ -36,7 +36,7 @@ namespace Job_Application_Management
         private string cddPhone;
         
 
-        public CV(string cddID, int jobID, string objective, string universityName, string major, string gpa, DateTime universityStartDate, DateTime universityEndDate, string companyName, string workPlace, string workedDetail, DateTime companyStartDate, DateTime companyEndDate, string certificationName, DateTime certificationDate, string jobName, string cddName, string cddAddress, string cddEmail, string cddPhone)
+        public CV(string cddID, int jobID, string objective, string universityName, string major, string gpa, string universityStartDate, string universityEndDate, string companyName, string workPlace, string workedDetail, string companyStartDate, string companyEndDate, string certificationName, string certificationDate, string jobName, string cddName, string cddAddress, string cddEmail, string cddPhone)
         {
             CddID=cddID;
             JobID=jobID;
@@ -150,21 +150,21 @@ namespace Job_Application_Management
                     gpa = value;
             }
         }
-        public DateTime UniversityStartDate 
+        public string UniversityStartDate 
         { 
             get => universityStartDate; set
             {
-                if (value == null || value == DateTime.MinValue)
+                if (value == null || value == "")
                     MessageBox.Show("Ngày bắt đầu nhập học chưa được chỉ định");
                 else
                     universityStartDate = value;
             } 
         }
-        public DateTime UniversityEndDate 
+        public string UniversityEndDate 
         { 
             get => universityEndDate; set
             {
-                if (value == null || value == DateTime.MinValue)
+                if (value == null || value == "")
                     MessageBox.Show("Ngày tốt nghiệp chưa được chỉ định");
                 else
                     universityEndDate = value;
@@ -181,23 +181,23 @@ namespace Job_Application_Management
                     workedDetail = value;
             }
         }
-        public DateTime CompanyStartDate 
+        public string CompanyStartDate 
         { 
             get => companyStartDate;
             set
             {
-                if (value == null || value == DateTime.MinValue)
+                if (value == null || value == "")
                     MessageBox.Show("Ngày vào công ty chưa được chỉ định");
                 else
                     companyStartDate = value;
             }
         }
-        public DateTime CompanyEndDate 
+        public string CompanyEndDate 
         { 
             get => companyEndDate;
             set
             {
-                if (value == null || value == DateTime.MinValue)
+                if (value == null || value == "")
                     MessageBox.Show("Ngày nghỉ công ty chưa được chỉ định");
                 else
                     companyEndDate = value;
@@ -291,12 +291,12 @@ namespace Job_Application_Management
                     certification = value;
             }
         }
-        public DateTime CertificationDate 
+        public string CertificationDate 
         { 
             get => certificationDate;
             set
             {
-                if (value == null || value == DateTime.MinValue)
+                if (value == null || value == "")
                     MessageBox.Show("Ngày/tháng/năm được cấp chứng chỉ chưa được chỉ định");
                 else
                     certificationDate = value;

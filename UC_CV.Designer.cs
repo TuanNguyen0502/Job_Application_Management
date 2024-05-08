@@ -57,6 +57,14 @@
             this.label_Nominee = new System.Windows.Forms.Label();
             this.label_CandidateName = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.flp_Educations = new System.Windows.Forms.FlowLayoutPanel();
+            this.uC_Education1 = new Job_Application_Management.UC_Education();
+            this.flp_Experiences = new System.Windows.Forms.FlowLayoutPanel();
+            this.uC_Experiences1 = new Job_Application_Management.UC_Experiences();
+            this.flp_Certifications = new System.Windows.Forms.FlowLayoutPanel();
+            this.uC_Certification1 = new Job_Application_Management.UC_Certification();
+            this.roudingPanel13 = new Job_Application_Management.RoudingPanel();
+            this.label_Status = new System.Windows.Forms.Label();
             this.roudingPanel12 = new Job_Application_Management.RoudingPanel();
             this.button_Refuse = new Guna.UI2.WinForms.Guna2Button();
             this.button_Approve = new Guna.UI2.WinForms.Guna2Button();
@@ -74,6 +82,10 @@
             this.roudingPanel2.SuspendLayout();
             this.roudingPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            this.roudingPanel13.SuspendLayout();
             this.roudingPanel12.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
@@ -458,6 +470,78 @@
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Controls.Add(this.uC_Education1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(190, 521);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1204, 235);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // uC_Education1
+            // 
+            this.uC_Education1.BackColor = System.Drawing.Color.White;
+            this.uC_Education1.Location = new System.Drawing.Point(3, 3);
+            this.uC_Education1.Name = "uC_Education1";
+            this.uC_Education1.Size = new System.Drawing.Size(1197, 217);
+            this.uC_Education1.TabIndex = 0;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoSize = true;
+            this.flowLayoutPanel2.Controls.Add(this.uC_Experiences1);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(190, 816);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1204, 465);
+            this.flowLayoutPanel2.TabIndex = 2;
+            // 
+            // uC_Experiences1
+            // 
+            this.uC_Experiences1.BackColor = System.Drawing.Color.White;
+            this.uC_Experiences1.Location = new System.Drawing.Point(3, 3);
+            this.uC_Experiences1.Name = "uC_Experiences1";
+            this.uC_Experiences1.Size = new System.Drawing.Size(1195, 445);
+            this.uC_Experiences1.TabIndex = 0;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoSize = true;
+            this.flowLayoutPanel3.Controls.Add(this.uC_Certification1);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(187, 1341);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(1204, 139);
+            this.flowLayoutPanel3.TabIndex = 3;
+            // 
+            // uC_Certification1
+            // 
+            this.uC_Certification1.BackColor = System.Drawing.Color.White;
+            this.uC_Certification1.Location = new System.Drawing.Point(3, 3);
+            this.uC_Certification1.Name = "uC_Certification1";
+            this.uC_Certification1.Size = new System.Drawing.Size(1191, 120);
+            this.uC_Certification1.TabIndex = 0;
+            // 
+            // roudingPanel13
+            // 
+            this.roudingPanel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(246)))), ((int)(((byte)(198)))));
+            this.roudingPanel13.Controls.Add(this.label_Status);
+            this.roudingPanel13.Location = new System.Drawing.Point(211, 1510);
+            this.roudingPanel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roudingPanel13.Name = "roudingPanel13";
+            this.roudingPanel13.Size = new System.Drawing.Size(313, 43);
+            this.roudingPanel13.TabIndex = 11;
+            // 
+            // label_Status
+            // 
+            this.label_Status.AutoSize = true;
+            this.label_Status.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(29)))));
+            this.label_Status.Location = new System.Drawing.Point(5, 10);
+            this.label_Status.Name = "label_Status";
+            this.label_Status.Size = new System.Drawing.Size(97, 23);
+            this.label_Status.TabIndex = 1;
+            this.label_Status.Text = "Applying";
+            // 
             // roudingPanel12
             // 
             this.roudingPanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
@@ -555,15 +639,14 @@
             this.Controls.Add(this.btnAdd_Certification);
             this.Controls.Add(this.btnAdd_Education);
             this.Controls.Add(this.roudingPanel13);
-            this.Controls.Add(this.flowLayoutPanel3);
-            this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flp_Certifications);
+            this.Controls.Add(this.flp_Experiences);
+            this.Controls.Add(this.flp_Educations);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.roudingPanel12);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UC_CV";
-            this.Size = new System.Drawing.Size(1728, 2051);
-            this.Load += new System.EventHandler(this.UC_CV_Load);
+            this.Size = new System.Drawing.Size(1536, 1641);
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -580,6 +663,11 @@
             this.roudingPanel1.ResumeLayout(false);
             this.roudingPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.roudingPanel13.ResumeLayout(false);
+            this.roudingPanel13.PerformLayout();
             this.roudingPanel12.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -606,9 +694,9 @@
         private System.Windows.Forms.Label label_Nominee;
         private System.Windows.Forms.Label label_CandidateName;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flp_Educations;
+        private System.Windows.Forms.FlowLayoutPanel flp_Experiences;
+        private System.Windows.Forms.FlowLayoutPanel flp_Certifications;
         private RoudingPanel roudingPanel13;
         private System.Windows.Forms.Label label_Status;
         private RoudingPanel roudingPanel12;

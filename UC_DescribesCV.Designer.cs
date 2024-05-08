@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_Nominee = new System.Windows.Forms.Label();
             this.label_ID = new System.Windows.Forms.Label();
             this.lbl_UniversityName = new System.Windows.Forms.Label();
             this.label_Major = new System.Windows.Forms.Label();
             this.label_GPA = new System.Windows.Forms.Label();
-            this.lbl_Nominee = new System.Windows.Forms.Label();
             this.lblCertification = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -41,6 +41,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoScroll = true;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 6;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.897504F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.96813F));
@@ -60,6 +61,19 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1310, 64);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // lbl_Nominee
+            // 
+            this.lbl_Nominee.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Nominee.AutoSize = true;
+            this.lbl_Nominee.Font = new System.Drawing.Font("Segoe UI", 8.2F);
+            this.lbl_Nominee.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Nominee.Location = new System.Drawing.Point(182, 22);
+            this.lbl_Nominee.Name = "lbl_Nominee";
+            this.lbl_Nominee.Size = new System.Drawing.Size(64, 19);
+            this.lbl_Nominee.TabIndex = 2;
+            this.lbl_Nominee.Text = "Nominee";
+            this.lbl_Nominee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_ID
             // 
@@ -112,19 +126,6 @@
             this.label_GPA.TabIndex = 1;
             this.label_GPA.Text = "GPA";
             this.label_GPA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_Nominee
-            // 
-            this.lbl_Nominee.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_Nominee.AutoSize = true;
-            this.lbl_Nominee.Font = new System.Drawing.Font("Segoe UI", 8.2F);
-            this.lbl_Nominee.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Nominee.Location = new System.Drawing.Point(182, 22);
-            this.lbl_Nominee.Name = "lbl_Nominee";
-            this.lbl_Nominee.Size = new System.Drawing.Size(64, 19);
-            this.lbl_Nominee.TabIndex = 2;
-            this.lbl_Nominee.Text = "Nominee";
-            this.lbl_Nominee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCertification
             // 

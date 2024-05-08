@@ -20,19 +20,15 @@ namespace Job_Application_Management
         {
             InitializeComponent();
             this.cddid = cddID;
-            
+            uC_CV1.CddID = cddID;
+            uC_CV1.CreateCV += createCV_Cick;
+            uC_CV1.RemoveCV += removeCVValid_Click;
         }
 
         public void SetEnableCreateCVButton()
         {
-            /*uC_CV1.Btn_RemoveCVValid.Enabled = false;
-            uC_CV1.Btn_CreateCV.Enabled = true;*/
-        }
-
-        public void SetEnableRemoveCVButton()
-        {
-            /*uC_CV1.Btn_CreateCV.Enabled = false;
-            uC_CV1.Btn_RemoveCVValid.Enabled = true;*/
+            uC_CV1.Btn_RemoveCVValid.Enabled = false;
+            uC_CV1.Btn_CreateCV.Enabled = true;
         }
 
         public void createCV_Cick(object sender, ButtonClickEventArgs e)
@@ -43,19 +39,17 @@ namespace Job_Application_Management
         }
         public void removeCVValid_Click (object sender, ButtonClickEventArgs e)
         {
-            SetEnableRemoveCVButton();
             canDAO.RemoveCVValid(e.CddID);
             this.Close();
         }
 
         private void FCandidate_CreateCV_Load(object sender, EventArgs e)
         {
-            string CddName = canDAO.GetNameByCddID(cddid);
-            //uC_CV1.Label_CandidateName.Text = CddName;
+            uC_CV1.Label_CandidateName.Text = canDAO.GetNameByCddID(cddid);
+            uC_CV1.Label_Nominee.Text = "";
             if (canDAO.CheckCandidateExistsInResume(cddid))
             {
                 MessageBox.Show("Bạn đã có sẵn CV rồi. Ứng tuyển công việc ngay thôi !");
-                SetEnableRemoveCVButton();
             }
             else
             {
