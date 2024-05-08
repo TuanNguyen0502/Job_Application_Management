@@ -189,8 +189,8 @@ namespace Job_Application_Management
         private void btn_Register_Click(object sender, EventArgs e)
         {
             
-            FCandidate_CreateCV createCV = new FCandidate_CreateCV(lblCddID.Text);
-            createCV.ShowDialog();
+            FCandidate_ListCVOfCandidate list = new FCandidate_ListCVOfCandidate(lblCddID.Text);
+            list.ShowDialog();
         }
 
         private void btn_Posting_Click(object sender, EventArgs e)

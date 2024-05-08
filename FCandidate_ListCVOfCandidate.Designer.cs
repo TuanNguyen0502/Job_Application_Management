@@ -170,6 +170,7 @@
             this.button_Save.StateTracking.Border.Width = 1;
             this.button_Save.TabIndex = 17;
             this.button_Save.Values.Text = "";
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
             // FCandidate_ListCVOfCandidate
             // 
@@ -181,7 +182,10 @@
             this.Controls.Add(this.flp_ContainsCV);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Name = "FCandidate_ListCVOfCandidate";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FCandidate_ListCVOfCandidate";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FCandidate_ListCVOfCandidate_Load);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);

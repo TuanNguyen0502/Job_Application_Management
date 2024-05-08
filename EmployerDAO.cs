@@ -230,15 +230,15 @@ namespace Job_Application_Management
                     resume.UniversityName = (string)row["UniversityName"];
                     resume.Major = (string)row["Major"];
                     resume.Gpa = (string)row["GPA"];
-                    resume.UniversityStartDate = (DateTime)row["UniversityStartDate"];
-                    resume.UniversityEndDate = (DateTime)row["UniversityEndDate"];
+                    resume.UniversityStartDate = (string)row["UniversityStartDate"];
+                    resume.UniversityEndDate = (string)row["UniversityEndDate"];
                     resume.CompanyName = (string)row["CompanyName"];
                     resume.WorkPlace = (string)row["WorkPlace"];
                     resume.WorkedDetail = (string)row["Detail"];
-                    resume.CompanyStartDate = (DateTime)row["CompanyStartDate"];
-                    resume.CompanyEndDate = (DateTime)row["CompanyEndDate"];
+                    resume.CompanyStartDate = (string)row["CompanyStartDate"];
+                    resume.CompanyEndDate = (string)row["CompanyEndDate"];
                     resume.Certification = (string)row["CertificationName"];
-                    resume.CertificationDate = (DateTime)row["CertificationDate"];
+                    resume.CertificationDate = (string)row["CertificationDate"];
                     resume.Status = (string)row["Status"];
                     resume.CddName = (string)row["CddName"];
                     resume.CddPhone = (string)row["Phone"];
@@ -603,8 +603,8 @@ namespace Job_Application_Management
                 candidateProfile.CddID = (string)keyValuePair["CandidateID"];
                 candidateProfile.CompanyName = (string)keyValuePair["CompanyName"];
                 candidateProfile.CddName = (string)keyValuePair["CddName"];
-                candidateProfile.CompanyStartDate = (DateTime)keyValuePair["StartDate"];
-                candidateProfile.CompanyEndDate = (DateTime)keyValuePair["EndDate"];
+                candidateProfile.CompanyStartDate = (string)keyValuePair["StartDate"];
+                candidateProfile.CompanyEndDate = (string)keyValuePair["EndDate"];
                 UC_WorkHistory uC_WorkHistory = new UC_WorkHistory(candidateProfile);
                 lstWorkHistory.Add(uC_WorkHistory);
             }

@@ -38,6 +38,9 @@ namespace Job_Application_Management
         public Label Label_Nominee { get { return label_Nominee; } }
         public Guna2Button Btn_RemoveCVValid { get { return btn_RemoveCVValid; } }
         public Guna2Button Btn_CreateCV { get { return btn_CreateCV; } }
+        public FlowLayoutPanel Flp_Educations { get { return flp_Educations; } }
+        public FlowLayoutPanel Flp_Experiences { get { return flp_Experiences; } }
+        public FlowLayoutPanel Flp_Certifications { get { return flp_Certifications; } }
         #region Get Value in Educations
         private string GetUniversityNames()
         {
