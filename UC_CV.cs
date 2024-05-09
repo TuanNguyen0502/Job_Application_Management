@@ -258,7 +258,6 @@ namespace Job_Application_Management
                 }
                 else
                 {
-                    
                     Resume_LoadData();
                     Resume_ReadOnlyControls();
                 }

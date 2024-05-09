@@ -312,10 +312,6 @@ namespace Job_Application_Management
                     {
                         res = reader.GetString(0);
                     }
-                    else
-                    {
-                        MessageBox.Show("No rows found");
-                    }
                     return res;
                 }
                 catch (Exception ex)
@@ -339,10 +335,6 @@ namespace Job_Application_Management
                     if (reader.Read())
                     {
                         res = reader.GetString(0);
-                    }
-                    else
-                    {
-                        MessageBox.Show("No rows found");
                     }
                     return res;
                 }
@@ -368,10 +360,6 @@ namespace Job_Application_Management
                     {
                         res = reader.GetInt32(0);
                     }
-                    else
-                    {
-                        MessageBox.Show("No rows found");
-                    }
                     return res;
                 }
                 catch (Exception ex)
@@ -394,10 +382,6 @@ namespace Job_Application_Management
                     if (reader.Read())
                     {
                         res = reader.GetInt32(0);
-                    }
-                    else
-                    {
-                        MessageBox.Show("No rows found");
                     }
                     return res;
                 }

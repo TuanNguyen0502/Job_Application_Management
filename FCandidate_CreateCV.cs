@@ -36,15 +36,10 @@ namespace Job_Application_Management
             uC_CV1.Button_Invite.Visible = false;
             Authorization();
         }
-
+        
         public void Authorization()
         {
-            if (Role == "Read")
-            {
-                FResume resume = new FResume();
-                resume.ShowDialog();
-            }
-            else if (Role == "Write")
+            if (Role == "Write")
             {
                 CheckCV();
             }
