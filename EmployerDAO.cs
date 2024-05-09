@@ -23,7 +23,7 @@ namespace Job_Application_Management
 
         public List<UC_Employer_Interview> SearchInterviewsFromDB(string empID, string keyword)
         {
-            string sqlQuery = $"SELECT * " +
+            string sqlQuery = $"SELECT I.ID , I.CddID, I.JobID, J.Name, C.CddName, I.InterviewTime, I.Note " +
                 $"FROM Interviews I INNER JOIN Candidates C ON I.CddID = C.CddID " +
                                   $"INNER JOIN Jobs J ON I.JobID = J.ID " +
                 $"WHERE CONCAT(I.CddID, C.CddName, C.Phone, C.Email, C.CddAddress, C.Hometown, C.Sex, C.Education, " +
@@ -33,7 +33,7 @@ namespace Job_Application_Management
             List<UC_Employer_Interview> items = new List<UC_Employer_Interview>();
             foreach (var row in resultList)
             {
-                UC_Employer_Interview item = new UC_Employer_Interview(empID, (string)row["CddID"], (int)row["ID"]);
+                UC_Employer_Interview item = new UC_Employer_Interview((int)row["ID"], empID, (string)row["CddID"], (int)row["JobID"]);
                 item.Label_JobName.Text = (string)row["Name"];
                 item.Label_CandidateName.Text = (string)row["CddName"];
                 item.Label_InterviewTime.Text = row["InterviewTime"].ToString();
@@ -45,7 +45,7 @@ namespace Job_Application_Management
 
         public List<UC_Employer_Interview> GetInterviewsFromDB(string empID)
         {
-            string sqlQuery = $"SELECT J.ID, J.Name, C.CddName, C.CddID, I.InterviewTime, I.Note " +
+            string sqlQuery = $"SELECT I.ID , I.JobID, J.Name, C.CddName, C.CddID, I.InterviewTime, I.Note " +
                 $"FROM Interviews I INNER JOIN Candidates C ON I.CddID = C.CddID " +
                 $"INNER JOIN Jobs J ON I.JobID = J.ID " +
                 $"WHERE I.EmpID = '{empID}'";
@@ -53,7 +53,7 @@ namespace Job_Application_Management
             List<UC_Employer_Interview> items = new List<UC_Employer_Interview>();
             foreach (var row in resultList)
             {
-                UC_Employer_Interview item = new UC_Employer_Interview(empID, (string)row["CddID"], (int)row["ID"]);
+                UC_Employer_Interview item = new UC_Employer_Interview((int)row["ID"], empID, (string)row["CddID"], (int)row["JobID"]);
                 item.Label_JobName.Text = (string)row["Name"];
                 item.Label_CandidateName.Text = (string)row["CddName"];
                 item.Label_InterviewTime.Text = row["InterviewTime"].ToString();
@@ -97,6 +97,30 @@ namespace Job_Application_Management
         public bool CheckEmployerInterviewTimeExists(DateTime interviewTime, string empID)
         {
             string query = "SELECT COUNT(*) FROM Interviews WHERE InterviewTime = @InterviewTime AND EmpID = @EmpID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@InterviewTime", SqlDbType.DateTime) {Value = interviewTime},
+                new SqlParameter("@EmpID", SqlDbType.VarChar) {Value = empID},
+            };
+            int count = dbConnection.ExecuteScalarGetInt(query, lstParams);
+            return count > 0; // Return true if InterviewTime already exists, false otherwise
+        }
+
+        public bool CheckCandidateInterviewByCVTimeExists(DateTime interviewTime, string cddID)
+        {
+            string query = "SELECT COUNT(*) FROM InterviewsByCV WHERE InterviewTime = @InterviewTime AND CddID = @CddID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@InterviewTime", SqlDbType.DateTime) {Value = interviewTime},
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddID},
+            };
+            int count = dbConnection.ExecuteScalarGetInt(query, lstParams);
+            return count > 0; // Return true if InterviewTime already exists, false otherwise
+        }
+
+        public bool CheckEmployerInterviewByCVTimeExists(DateTime interviewTime, string empID)
+        {
+            string query = "SELECT COUNT(*) FROM InterviewsByCV WHERE InterviewTime = @InterviewTime AND EmpID = @EmpID";
             SqlParameter[] lstParams =
             {
                 new SqlParameter("@InterviewTime", SqlDbType.DateTime) {Value = interviewTime},
@@ -713,6 +737,107 @@ namespace Job_Application_Management
                     MessageBox.Show("No rows found");
 
                 return cv;
+            }
+        }
+
+        public List<UC_Employer_InterviewByCv> GetInterviewsByCVFromDB(string empID)
+        {
+            string sqlQuery = $"SELECT I.ID, I.CddID, I.JobName, C.CddName, C.CddID, I.InterviewTime, I.Note " +
+                $"FROM InterviewsByCV I INNER JOIN Candidates C ON I.CddID = C.CddID " +
+                $"WHERE I.EmpID = '{empID}'";
+            List<UC_Employer_InterviewByCv> items = new List<UC_Employer_InterviewByCv>();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            UC_Employer_InterviewByCv item = new UC_Employer_InterviewByCv((int)reader["ID"], empID, (string)reader["CddID"]);
+                            item.Label_JobName.Text = (string)reader["JobName"];
+                            item.Label_CandidateName.Text = (string)reader["CddName"];
+                            item.Label_InterviewTime.Text = reader["InterviewTime"].ToString();
+                            item.Label_Note.Text = reader["Note"].ToString();
+                            items.Add(item);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Read error\n" + ex.Message);
+                }
+            }
+            return items;
+        }
+
+        public void AddInterviewByCV(Interview interview)
+        {
+            string sqlStr = "INSERT INTO InterviewsByCV (EmpID, CddID, JobName, InterviewTime, Note)" +
+                            " VALUES (@EmpID, @CddID, @JobName, @InterviewTime, @Note)";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@EmpID", SqlDbType.VarChar) {Value = interview.EmpID},
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = interview.CddID},
+                new SqlParameter("@JobName", SqlDbType.NVarChar) {Value = interview.JobName},
+                new SqlParameter("@InterviewTime", SqlDbType.DateTime) {Value = interview.InterviewTime},
+                new SqlParameter("@Note", SqlDbType.NVarChar) {Value = interview.Note},
+            };
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr, lstParams))
+            {
+                MessageBox.Show("Create new interview time successfully");
+            }
+        }
+
+        public Interview GetInterviewByCVFromDB(int id, string empID, string cddID)
+        {
+            Interview interview = new Interview();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sqlQuery = $"SELECT I.ID, I.EmpID, I.CddID, I.JobName, I.InterviewTime, I.Note " +
+                    $"FROM InterviewsByCV I " +
+                    $"WHERE I.ID = '{id}' ";
+                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        interview.Id = reader.GetInt32(0);
+                        interview.EmpID = reader.GetString(1);
+                        interview.CddID = reader.GetString(2);
+                        interview.JobName = reader.GetString(3);
+                        interview.InterviewTime = reader.GetDateTime(4);
+                        interview.Note = reader.GetString(5);
+                    }
+                }
+                else
+                    MessageBox.Show("No rows found");
+                conn.Close();
+            }
+            return interview;
+        }
+
+        public void UpdateInterviewByCV(Interview interview)
+        {
+            string sqlStr = string.Format($"UPDATE InterviewsByCV SET InterviewTime = '{interview.InterviewTime}', Note = N'{interview.Note}' " +
+                $"WHERE ID = '{interview.Id}'");
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Successfully updated interview");
+            }
+        }
+
+        public void DeleteInterviewByCV(Interview interview)
+        {
+            string sqlStr = string.Format($"DELETE FROM InterviewsByCV WHERE ID = '{interview.Id}'");
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            {
+                MessageBox.Show("Successfully cleared interview time");
             }
         }
     }

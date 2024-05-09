@@ -635,7 +635,7 @@ namespace Job_Application_Management
         public event EventHandler<ButtonInviteCandidate> InviteCandidate;
         private void button_Invite_Click(object sender, EventArgs e)
         {
-            InviteCandidate?.Invoke(this, new ButtonInviteCandidate(empID, cddID));
+            InviteCandidate?.Invoke(this, new ButtonInviteCandidate(empID, cddID, textBox_Nominee.Text));
         }
     }
 }

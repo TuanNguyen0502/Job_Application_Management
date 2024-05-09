@@ -25,6 +25,15 @@ namespace Job_Application_Management
             this.InterviewTime = interviewTime;
             this.Note = note;
         }
+        public Interview(string empID, string cddID, string jobName, DateTime interviewTime, string note)
+        {
+            this.EmpID = empID;
+            this.CddID = cddID;
+            this.JobID = 0;
+            this.JobName = jobName;
+            this.InterviewTime = interviewTime;
+            this.Note = note;
+        }
 
         public Interview() { }
 

@@ -62,7 +62,7 @@ namespace Job_Application_Management
 
         private void button_Invite_Click(object sender, ButtonInviteCandidate e)
         {
-            FEmployer_Interview fEmployer_Interview = new FEmployer_Interview(e.EmpID, e.CddID, 0);
+            FEmployer_Interview fEmployer_Interview = new FEmployer_Interview(e.EmpID, e.CddID, e.JobName);
             fEmployer_Interview.ShowDialog();
         }
     }

@@ -26,18 +26,17 @@ namespace Job_Application_Management
             LoadData();
         }
 
-        private void button_LoadData_Click(object sender, EventArgs e)
-        {
-            flowLayoutPanel1.Controls.Clear();
-            LoadData();
-        }
-
         private void LoadData()
         {
             List<UC_Employer_Interview> interviews = employerDAO.GetInterviewsFromDB(empID);
             foreach (var interview in interviews)
             {
                 flowLayoutPanel1.Controls.Add(interview);
+            }
+            List<UC_Employer_InterviewByCv> interviewsByCV = employerDAO.GetInterviewsByCVFromDB(empID);
+            foreach (var interviewByCV in interviewsByCV)
+            {
+                flowLayoutPanel1.Controls.Add(interviewByCV);
             }
         }
 
@@ -47,6 +46,7 @@ namespace Job_Application_Management
             {
                 flowLayoutPanel1.Controls.Clear();
                 LoadData();
+                return;
             }
 
             flowLayoutPanel1.Controls.Clear();

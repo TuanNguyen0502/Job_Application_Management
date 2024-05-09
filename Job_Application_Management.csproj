@@ -333,6 +333,12 @@
     <Compile Include="UC_Employer_CV.Designer.cs">
       <DependentUpon>UC_Employer_CV.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Employer_InterviewByCv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Employer_InterviewByCv.Designer.cs">
+      <DependentUpon>UC_Employer_InterviewByCv.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Empty.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -513,6 +519,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Employer_CV.resx">
       <DependentUpon>UC_Employer_CV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Employer_InterviewByCv.resx">
+      <DependentUpon>UC_Employer_InterviewByCv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Empty.resx">
       <DependentUpon>UC_Empty.cs</DependentUpon>

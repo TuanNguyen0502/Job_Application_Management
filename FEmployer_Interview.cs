@@ -15,6 +15,7 @@ namespace Job_Application_Management
         private string empID;
         private string cddID;
         private int jobID;
+        private string jobName;
         private Interview interview;
         private EmployerDAO employerDAO = new EmployerDAO();
 
@@ -26,6 +27,24 @@ namespace Job_Application_Management
             interview = employerDAO.GetInterviewFormDB(empID, cddID, jobID);
             InitializeComponent();
         }
+        public FEmployer_Interview(int id, string empID, string cddID, string jobName)
+        {
+            this.empID = empID;
+            this.cddID = cddID;
+            this.jobID = 0;
+            this.jobName = jobName;
+            interview = employerDAO.GetInterviewByCVFromDB(id, empID, cddID);
+            InitializeComponent();
+        }
+        public FEmployer_Interview(string empID, string cddID, string jobName)
+        {
+            this.empID = empID;
+            this.cddID = cddID;
+            this.jobID = 0;
+            this.jobName = jobName;
+            interview = employerDAO.GetInterviewByCVFromDB(0, empID, cddID);
+            InitializeComponent();
+        }
 
         private bool CheckInterviewTime(DateTime interviewTime)
         {
@@ -35,6 +54,16 @@ namespace Job_Application_Management
                 return false;
             }
             if (employerDAO.CheckCandidateInterviewTimeExists(interviewTime, cddID))
+            {
+                MessageBox.Show("Candidate has an interview at this time", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (employerDAO.CheckEmployerInterviewByCVTimeExists(interviewTime, empID))
+            {
+                MessageBox.Show("Employer has an interview at this time", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (employerDAO.CheckCandidateInterviewByCVTimeExists(interviewTime, cddID))
             {
                 MessageBox.Show("Candidate has an interview at this time", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -51,11 +80,16 @@ namespace Job_Application_Management
             {
                 return;
             }
-
-            Interview interview = new Interview(empID, cddID, jobID, dateTime, textBox_Note.Text);
-            employerDAO.AddInterview(interview);
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            if (jobID == 0)
+            {
+                Interview interview = new Interview(empID, cddID, jobName, dateTime, textBox_Note.Text);
+                employerDAO.AddInterviewByCV(interview);
+            }
+            else
+            {
+                Interview interview = new Interview(empID, cddID, jobID, dateTime, textBox_Note.Text);
+                employerDAO.AddInterview(interview);
+            }
         }
 
         private void FEmployer_Interview_Load(object sender, EventArgs e)
@@ -89,19 +123,30 @@ namespace Job_Application_Management
             {
                 return;
             }
-
             interview.InterviewTime = dateTime;
             interview.Note = textBox_Note.Text;
-            employerDAO.UpdateInterview(interview);
-            this.DialogResult = DialogResult.OK;
+            if (jobID == 0)
+            {
+                employerDAO.UpdateInterviewByCV(interview);
+            }
+            else
+            {
+                employerDAO.UpdateInterview(interview);
+            }
         }
 
         private void button_Delete_Click(object sender, EventArgs e)
         {
             if (interview.Id != 0)
             {
-                employerDAO.DeleteInterview(interview);
-                this.DialogResult = DialogResult.Cancel;
+                if (jobID == 0)
+                {
+
+                }
+                else
+                {
+                    employerDAO.DeleteInterview(interview);
+                }
                 this.Close();
             }
         }

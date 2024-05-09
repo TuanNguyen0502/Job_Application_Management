@@ -10,10 +10,12 @@ namespace Job_Application_Management
     {
         public string CddID { get; }
         public string EmpID { get; }
-        public ButtonInviteCandidate(string empID, string cddID)
+        public string JobName { get; }
+        public ButtonInviteCandidate(string empID, string cddID, string jobName)
         {
             EmpID = empID;
             CddID = cddID;
+            JobName = jobName;
         }
     }
 }
