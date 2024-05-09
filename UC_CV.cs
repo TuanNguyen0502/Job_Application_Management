@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using System.Security.Cryptography;
 
 namespace Job_Application_Management
 {
@@ -19,6 +20,7 @@ namespace Job_Application_Management
         private string cddID;
         private string empID;
         private CV resume;
+        private int cvID;
         private EmployerDAO employerDAO = new EmployerDAO();
         private CandidateDAO candidateDAO = new CandidateDAO();
 
@@ -43,6 +45,8 @@ namespace Job_Application_Management
         public FlowLayoutPanel Flp_Educations { get { return flp_Educations; } }
         public FlowLayoutPanel Flp_Experiences { get { return flp_Experiences; } }
         public FlowLayoutPanel Flp_Certifications { get { return flp_Certifications; } }
+        public int CvID { get => cvID; set => cvID = value; }
+
         #region Get Value in Educations
         private string GetUniversityNames()
         {
@@ -266,6 +270,22 @@ namespace Job_Application_Management
         }
 
         #region Set value for Education
+        private void SetUniversity(string universityName, string major, string gpa, string universityStartDate, string universityEndDate)
+        {
+            string[] words = universityName.Split('/');
+            if (words.Length > 1)
+            {
+                for (int i = 0; i < words.Length - 1; i++)
+                {
+                    flp_Educations.Controls.Add(new UC_Education());
+                }
+            }
+            SetUniversityName(universityName);
+            SetMajor(major);
+            SetGpa(gpa);
+            SetUniversityStartDate(universityStartDate);
+            SetUniversityEndDate(universityEndDate);
+        }
         private void SetUniversityName(string UniversityName)
         {
             string[] words = UniversityName.Split('/');
@@ -316,7 +336,7 @@ namespace Job_Application_Management
             {
                 if (control is UC_Education uc)
                 {
-                    uc.DateTimePicker_UniversityStartDate.Value = Convert.ToDateTime(words[i]);
+                    //uc.DateTimePicker_UniversityStartDate.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }
             }
@@ -329,7 +349,7 @@ namespace Job_Application_Management
             {
                 if (control is UC_Education uc)
                 {
-                    uc.DateTimePicker_UniversityEndDate.Value = Convert.ToDateTime(words[i]);
+                    //uc.DateTimePicker_UniversityEndDate.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }
             }
@@ -337,11 +357,27 @@ namespace Job_Application_Management
 
         #endregion
         #region Set value for Experiences
-        private void SetCompanyName(string CompanyName)
+        private void SetCompany(string companyName, string workplace, string detail, string companyStartDate, string companyEndDate)
         {
-            string[] words = CompanyName.Split('/');
+            string[] words = companyName.Split('/');
+            if (words.Length > 1)
+            {
+                for (int i = 0; i < words.Length - 1; i++)
+                {
+                    flp_Experiences.Controls.Add(new UC_Experiences());
+                }
+            }
+            SetCompanyName(companyName);
+            SetWorkPlace(workplace);
+            SetDetail(detail);
+            SetCompanyStartDate(companyStartDate);
+            SetCompanyEndDate(companyEndDate);
+        }
+        private void SetCompanyName(string companyName)
+        {
+            string[] words = companyName.Split('/');
             int i = 0;
-            foreach (Control control in flp_Educations.Controls)
+            foreach (Control control in flp_Experiences.Controls)
             {
                 if (control is UC_Experiences uc)
                 {
@@ -354,7 +390,7 @@ namespace Job_Application_Management
         {
             string[] words = WorkPlace.Split('/');
             int i = 0;
-            foreach (Control control in flp_Educations.Controls)
+            foreach (Control control in flp_Experiences.Controls)
             {
                 if (control is UC_Experiences uc)
                 {
@@ -367,7 +403,7 @@ namespace Job_Application_Management
         {
             string[] words = Detail.Split('/');
             int i = 0;
-            foreach (Control control in flp_Educations.Controls)
+            foreach (Control control in flp_Experiences.Controls)
             {
                 if (control is UC_Experiences uc)
                 {
@@ -380,11 +416,11 @@ namespace Job_Application_Management
         {
             string[] words = CompanyStartDate.Split('#');
             int i = 0;
-            foreach (Control control in flp_Educations.Controls)
+            foreach (Control control in flp_Experiences.Controls)
             {
                 if (control is UC_Experiences uc)
                 {
-                    uc.DateTimePicker_CompanyStartDate.Value = Convert.ToDateTime(words[i]);
+                    //uc.DateTimePicker_CompanyStartDate.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }
             }
@@ -393,22 +429,35 @@ namespace Job_Application_Management
         {
             string[] words = CompanyEndDate.Split('#');
             int i = 0;
-            foreach (Control control in flp_Educations.Controls)
+            foreach (Control control in flp_Experiences.Controls)
             {
                 if (control is UC_Experiences uc)
                 {
-                    uc.DateTimePicker_CompanyEndDate.Value = Convert.ToDateTime(words[i]);
+                    //uc.DateTimePicker_CompanyEndDate.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }
             }
         }
         #endregion
         #region Set value for Certifications
+        private void SetCertification(string certification, string certificationDate)
+        {
+            string[] words = certification.Split('/');
+            if (words.Length > 1)
+            {
+                for (int j = 0; j < words.Length - 1; j++)
+                {
+                    flp_Certifications.Controls.Add(new UC_Certification());
+                }
+            }
+            SetCertificationName(certification);
+            SetCertificationDate(certificationDate);
+        }
         private void SetCertificationName(string Certification)
         {
             string[] words = Certification.Split('/');
             int i = 0;
-            foreach (Control control in flp_Educations.Controls)
+            foreach (Control control in flp_Certifications.Controls)
             {
                 if (control is UC_Certification uc)
                 {
@@ -421,11 +470,11 @@ namespace Job_Application_Management
         {
             string[] words = Certification.Split('#');
             int i = 0;
-            foreach (Control control in flp_Educations.Controls)
+            foreach (Control control in flp_Certifications.Controls)
             {
                 if (control is UC_Certification uc)
                 {
-                    uc.DateTimePicker_Certification.Value = Convert.ToDateTime(words[i]);
+                    //uc.DateTimePicker_Certification.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }
             }
@@ -441,18 +490,9 @@ namespace Job_Application_Management
             textBox_Email.Text = resume.CddEmail;
             textBox_Address.Text = resume.CddAddress;
             richTextBox_CareerGoal.Text = resume.Objective;
-            SetUniversityName(resume.UniversityName);
-            SetMajor(resume.Major);
-            SetGpa(resume.Gpa);
-            SetUniversityStartDate(resume.UniversityStartDate);
-            SetUniversityEndDate(resume.UniversityEndDate);
-            SetCompanyName(resume.CompanyName);
-            SetWorkPlace(resume.WorkPlace);
-            SetDetail(resume.WorkedDetail);
-            SetCompanyStartDate(resume.CompanyStartDate);
-            SetCompanyEndDate(resume.CompanyEndDate);
-            SetCertificationName(resume.Certification);
-            SetCertificationDate(resume.CertificationDate);
+            SetUniversity(resume.UniversityName, resume.Major, resume.Gpa, resume.UniversityStartDate, resume.UniversityEndDate);
+            SetCompany(resume.CompanyName, resume.WorkPlace, resume.WorkedDetail, resume.CompanyStartDate, resume.CompanyEndDate);
+            SetCertification(resume.Certification, resume.CertificationDate);
             label_Status.Text = resume.Status;
         }
 
@@ -501,30 +541,22 @@ namespace Job_Application_Management
 
         private void CV_LoadData()
         {
-            /*resume = employerDAO.GetResumeFromDB(jobID, cddID);
-            label_CandidateName.Text = resume.CddName;
-            label_Nominee.Text = resume.JobName;
-            textBox_Phone.Text = resume.CddPhone;
-            textBox_Email.Text = resume.CddEmail;
-            textBox_Address.Text = resume.CddAddress;
-            richTextBox_CareerGoal.Text = resume.Objective;
-            SetUniversityName(resume.UniversityName);
-            SetMajor(resume.Major);
-            SetGpa(resume.Gpa);
-            SetUniversityStartDate(resume.UniversityStartDate);
-            SetUniversityEndDate(resume.UniversityEndDate);
-            SetCompanyName(resume.CompanyName);
-            SetWorkPlace(resume.WorkPlace);
-            SetDetail(resume.WorkedDetail);
-            SetCompanyStartDate(resume.CompanyStartDate);
-            SetCompanyEndDate(resume.CompanyEndDate);
-            SetCertificationName(resume.Certification);
-            SetCertificationDate(resume.CertificationDate);
-            label_Status.Text = resume.Status;*/
+            CV cv = employerDAO.GetCVFromDB(cvID);
+            label_CandidateName.Text = cv.CddName;
+            textBox_Nominee.Text = cv.Nominee;
+            textBox_Phone.Text = cv.CddPhone;
+            textBox_Email.Text = cv.CddEmail;
+            textBox_Address.Text = cv.CddAddress;
+            richTextBox_CareerGoal.Text = cv.Objective;
+            SetUniversity(cv.UniversityName, cv.Major, cv.Gpa, cv.UniversityStartDate, cv.UniversityEndDate);
+            SetCompany(cv.CompanyName, cv.WorkPlace, cv.WorkedDetail, cv.CompanyStartDate, cv.CompanyEndDate);
+            SetCertification(cv.Certification, cv.CertificationDate);
+            label_Status.Text = "Applying";
         }
 
         public void CV_ReadOnlyControls()
         {
+            textBox_Nominee.ReadOnly = true;
             dateTimePicker_Dob.Enabled = false;
             textBox_Phone.ReadOnly = true;
             textBox_Email.ReadOnly = true;
@@ -600,9 +632,10 @@ namespace Job_Application_Management
             RemoveCV?.Invoke(this, new ButtonClickEventArgs(CddID,JobID));
         }
 
+        public event EventHandler<ButtonInviteCandidate> InviteCandidate;
         private void button_Invite_Click(object sender, EventArgs e)
         {
-
+            InviteCandidate?.Invoke(this, new ButtonInviteCandidate(empID, cddID));
         }
     }
 }

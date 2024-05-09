@@ -40,9 +40,12 @@
             this.button_Update = new Guna.UI2.WinForms.Guna2Button();
             this.button_Delete = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label_Job = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -63,10 +66,10 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.07614F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.92386F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.guna2Panel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox_Note, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 98);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -74,7 +77,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1471, 316);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.TabIndex = 2;
             // 
             // label2
             // 
@@ -186,7 +189,7 @@
             this.button_Invite.ForeColor = System.Drawing.Color.White;
             this.button_Invite.Image = global::Job_Application_Management.Properties.Resources.icons8_invite_64;
             this.button_Invite.ImageSize = new System.Drawing.Size(64, 64);
-            this.button_Invite.Location = new System.Drawing.Point(3, 2);
+            this.button_Invite.Location = new System.Drawing.Point(8, 7);
             this.button_Invite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Invite.Name = "button_Invite";
             this.button_Invite.Size = new System.Drawing.Size(227, 84);
@@ -206,7 +209,7 @@
             this.button_Update.ForeColor = System.Drawing.Color.White;
             this.button_Update.Image = global::Job_Application_Management.Properties.Resources.icons8_invite_64;
             this.button_Update.ImageSize = new System.Drawing.Size(64, 64);
-            this.button_Update.Location = new System.Drawing.Point(236, 2);
+            this.button_Update.Location = new System.Drawing.Point(241, 7);
             this.button_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Update.Name = "button_Update";
             this.button_Update.Size = new System.Drawing.Size(227, 84);
@@ -225,7 +228,7 @@
             this.button_Delete.ForeColor = System.Drawing.Color.White;
             this.button_Delete.Image = global::Job_Application_Management.Properties.Resources.icons8_delete_64;
             this.button_Delete.ImageSize = new System.Drawing.Size(64, 64);
-            this.button_Delete.Location = new System.Drawing.Point(27, 543);
+            this.button_Delete.Location = new System.Drawing.Point(474, 7);
             this.button_Delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Delete.Name = "button_Delete";
             this.button_Delete.Size = new System.Drawing.Size(227, 84);
@@ -235,21 +238,46 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button_Invite);
-            this.flowLayoutPanel1.Controls.Add(this.button_Update);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(27, 438);
+            this.flowLayoutPanel1.Controls.Add(this.label_Job);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 414);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(498, 100);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1471, 100);
             this.flowLayoutPanel1.TabIndex = 5;
+            // 
+            // label_Job
+            // 
+            this.label_Job.AutoSize = true;
+            this.label_Job.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Job.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(29)))));
+            this.label_Job.Location = new System.Drawing.Point(8, 5);
+            this.label_Job.Name = "label_Job";
+            this.label_Job.Padding = new System.Windows.Forms.Padding(20);
+            this.label_Job.Size = new System.Drawing.Size(102, 78);
+            this.label_Job.TabIndex = 0;
+            this.label_Job.Text = "Job";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.button_Invite);
+            this.flowLayoutPanel2.Controls.Add(this.button_Update);
+            this.flowLayoutPanel2.Controls.Add(this.button_Delete);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(20, 514);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(5);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1471, 100);
+            this.flowLayoutPanel2.TabIndex = 6;
             // 
             // FEmployer_Interview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1511, 649);
+            this.ClientSize = new System.Drawing.Size(1511, 727);
+            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.button_Delete);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,6 +292,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +313,7 @@
         private Guna.UI2.WinForms.Guna2Button button_Update;
         private Guna.UI2.WinForms.Guna2Button button_Delete;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label_Job;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }

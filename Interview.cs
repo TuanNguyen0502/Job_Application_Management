@@ -13,6 +13,7 @@ namespace Job_Application_Management
         private string empID;
         private string cddID;
         private int jobID;
+        private string jobName;
         private DateTime interviewTime;
         private string note;
 
@@ -33,6 +34,7 @@ namespace Job_Application_Management
         public int JobID { get => jobID; set => jobID = value; }
         public DateTime InterviewTime { get => interviewTime; set => interviewTime = value; }
         public string Note { get => note; set => note = value; }
+        public string JobName { get => jobName; set => jobName = value; }
 
         private bool CheckInterviewTime()
         {

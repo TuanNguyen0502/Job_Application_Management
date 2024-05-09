@@ -20,7 +20,7 @@ namespace Job_Application_Management
         private string cddID;
         private EmployerDAO employerDAO = new EmployerDAO();
 
-        public FResume(string empID, int jobID, string cddID, string role)
+        public FResume(string empID, int jobID, string cddID, string role, int cvID)
         {
             this.empID = empID;
             this.jobID = jobID;
@@ -31,8 +31,10 @@ namespace Job_Application_Management
             uC_CV1.EmpID = empID;
             uC_CV1.JobID = jobID;
             uC_CV1.CddID = cddID;
+            uC_CV1.CvID = cvID;
             uC_CV1.Button_Approve.Click += button_Approve_Click;
             uC_CV1.Button_Refuse.Click += button_Refuse_Click;
+            uC_CV1.InviteCandidate += button_Invite_Click;
         }
 
         public FResume()
@@ -56,6 +58,12 @@ namespace Job_Application_Management
             uC_CV1.Label_Status.Text = uC_CV1.Resume.Status;
             employerDAO.UpdateResume(uC_CV1.Resume);
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void button_Invite_Click(object sender, ButtonInviteCandidate e)
+        {
+            FEmployer_Interview fEmployer_Interview = new FEmployer_Interview(e.EmpID, e.CddID, 0);
+            fEmployer_Interview.ShowDialog();
         }
     }
 }

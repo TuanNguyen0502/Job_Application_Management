@@ -130,9 +130,9 @@ namespace Job_Application_Management
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                string sqlQuery = $"SELECT ID, EmpID, CddID, JobID, InterviewTime, Note " +
-                    $"FROM Interviews " +
-                    $"WHERE EmpID = '{empID}' AND CddID = '{cddID}' AND JobID = '{jobID}'";
+                string sqlQuery = $"SELECT I.ID, I.EmpID, I.CddID, I.JobID, I.InterviewTime, I.Note, J.Name " +
+                    $"FROM Interviews I INNER JOIN Jobs J ON I.JobID = J.ID " +
+                    $"WHERE I.EmpID = '{empID}' AND I.CddID = '{cddID}' AND I.JobID = '{jobID}'";
                 SqlCommand cmd = new SqlCommand(sqlQuery, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
@@ -145,6 +145,7 @@ namespace Job_Application_Management
                         interview.JobID = reader.GetInt32(3);
                         interview.InterviewTime = reader.GetDateTime(4);
                         interview.Note = reader.GetString(5);
+                        interview.JobName = reader.GetString(6);
                     }
                 }
                 else
@@ -668,6 +669,50 @@ namespace Job_Application_Management
             if (dbConnection.ExecuteWriteDataCheck(sqlStr))
             {
                 MessageBox.Show("Delete favorite CV successfully");
+            }
+        }
+
+        public CV GetCVFromDB(int cvid)
+        {
+            CV cv = new CV();
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+                string sqlQuery = $"SELECT * " +
+                    $"FROM CV INNER JOIN Candidates C ON CV.CVOwner = C.CddID " +
+                    $"WHERE CV.ID = '{cvid}'";
+                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        cv.CvID = (int)reader["ID"];
+                        cv.CddName = (string)reader["CddName"];
+                        cv.CddPhone = (string)reader["Phone"];
+                        cv.CddEmail = (string)reader["Email"];
+                        cv.CddAddress = (string)reader["CddAddress"];
+                        cv.Nominee = (string)reader["Nominee"];
+                        cv.Objective = (string)reader["Objective"];
+                        cv.UniversityName = (string)reader["UniversityName"];
+                        cv.Major = (string)reader["Major"];
+                        cv.Gpa = (string)reader["GPA"];
+                        cv.UniversityStartDate = (string)reader["UniversityStartDate"];
+                        cv.UniversityEndDate = (string)reader["UniversityEndDate"];
+                        cv.CompanyName = (string)reader["CompanyName"];
+                        cv.WorkPlace = (string)reader["Workplace"];
+                        cv.WorkedDetail = (string)reader["Detail"];
+                        cv.CompanyStartDate = (string)reader["CompanyStartDate"];
+                        cv.CompanyEndDate = (string)reader["CompanyEndDate"];
+                        cv.Certification = (string)reader["CertificationName"];
+                        cv.CertificationDate = (string)reader["CertificationDate"];
+                        cv.CddID = (string)reader["CVOwner"];
+                    }
+                }
+                else
+                    MessageBox.Show("No rows found");
+
+                return cv;
             }
         }
     }
