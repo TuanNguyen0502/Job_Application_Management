@@ -335,7 +335,7 @@ namespace Job_Application_Management
             {
                 if (control is UC_Education uc)
                 {
-                    uc.DateTimePicker_UniversityStartDate.Value = Convert.ToDateTime(words[i]);
+                    //uc.DateTimePicker_UniversityStartDate.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }
             }
@@ -348,7 +348,7 @@ namespace Job_Application_Management
             {
                 if (control is UC_Education uc)
                 {
-                    uc.DateTimePicker_UniversityEndDate.Value = Convert.ToDateTime(words[i]);
+                    //uc.DateTimePicker_UniversityEndDate.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }
             }
@@ -551,7 +551,7 @@ namespace Job_Application_Management
         {
             CV cv = employerDAO.GetCVFromDB(cvID);
             label_CandidateName.Text = cv.CddName;
-            label_Nominee.Text = cv.JobName;
+            textBox_Nominee.Text = cv.JobName;
             textBox_Phone.Text = cv.CddPhone;
             textBox_Email.Text = cv.CddEmail;
             textBox_Address.Text = cv.CddAddress;
