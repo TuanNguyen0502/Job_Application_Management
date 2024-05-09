@@ -44,7 +44,7 @@ namespace Job_Application_Management
         }
         private void btn_Describe_Click(object sender, ButtonClickEventArgs e)
         {
-            FCandidate_CreateCV createCV = new FCandidate_CreateCV(cddid);
+            FCandidate_CreateCV createCV = new FCandidate_CreateCV(cddid, "Read");
             createCV.ShowDialog();
         }
 
@@ -67,7 +67,7 @@ namespace Job_Application_Management
 
         private void button_Save_Click(object sender, EventArgs e)
         {
-            FCandidate_CreateCV createCV = new FCandidate_CreateCV(cddid);
+            FCandidate_CreateCV createCV = new FCandidate_CreateCV(cddid, "Write");
             createCV.ShowDialog();
         }
 

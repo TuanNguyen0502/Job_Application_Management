@@ -124,7 +124,7 @@ namespace Job_Application_Management
             {
                 if (control is UC_Experiences uc)
                 {
-                    CompanyName += uc.CompanyName + "/";
+                    CompanyName += uc.TextBox_Company.Text + "/";
                 }
             }
             if (CompanyName.Length > 0) { return CompanyName.Substring(0, CompanyName.Length - 1); }
@@ -137,7 +137,7 @@ namespace Job_Application_Management
             {
                 if (control is UC_Experiences uc)
                 {
-                    CompanyName += uc.TextBox_Workplace + "/";
+                    CompanyName += uc.TextBox_Workplace.Text + "/";
                 }
             }
             if (CompanyName.Length > 0) { return CompanyName.Substring(0, CompanyName.Length - 1); }
@@ -193,7 +193,7 @@ namespace Job_Application_Management
             {
                 if (control is UC_Certification uc)
                 {
-                    Certification += uc.TextBox_Certification.Text;
+                    Certification += uc.TextBox_Certification.Text + "/";
                 }
             }
             if (Certification.Length > 0) { return Certification.Substring(0, Certification.Length - 1); }
@@ -272,14 +272,6 @@ namespace Job_Application_Management
         #region Set value for Education
         private void SetUniversity(string universityName, string major, string gpa, string universityStartDate, string universityEndDate)
         {
-            string[] words = universityName.Split('/');
-            if (words.Length > 1)
-            {
-                for (int i = 0; i < words.Length - 1; i++)
-                {
-                    flp_Educations.Controls.Add(new UC_Education());
-                }
-            }
             SetUniversityName(universityName);
             SetMajor(major);
             SetGpa(gpa);
@@ -538,8 +530,7 @@ namespace Job_Application_Management
                 button_Approve.Visible = false;
             }
         }
-
-        private void CV_LoadData()
+        public void CV_LoadData()
         {
             CV cv = employerDAO.GetCVFromDB(cvID);
             label_CandidateName.Text = cv.CddName;

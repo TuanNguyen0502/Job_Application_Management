@@ -100,8 +100,8 @@ CREATE TABLE CV(
 )
 
 CREATE TABLE Resume(
-	CddID varchar(10) CONSTRAINT FK_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
-	JobID int CONSTRAINT FK_Job FOREIGN KEY REFERENCES Jobs(ID),
+	CddID varchar(10) CONSTRAINT FK_Cdd_Res FOREIGN KEY REFERENCES Candidates(CddID),
+	JobID int CONSTRAINT FK_Job_Res FOREIGN KEY REFERENCES Jobs(ID),
 	Objective nvarchar(MAX),
 	UniversityName nvarchar(MAX),
 	Major nvarchar(MAX),
@@ -116,8 +116,9 @@ CREATE TABLE Resume(
 	CertificationName nvarchar(MAX),
 	CertificationDate nvarchar(MAX),
 	Status nvarchar(100) default N'Applying',
-	CONSTRAINT PK_AD PRIMARY KEY (CddID, JobID)
+	CONSTRAINT PK_AD_J PRIMARY KEY (CddID, JobID)
 )
+
 CREATE TABLE Interviews (
 	ID int IDENTITY PRIMARY KEY,
 	EmpID varchar(10) foreign key references Employers(ID),
@@ -216,7 +217,6 @@ VALUES
 
 INSERT INTO Interviews(EmpID,CddID,JobID,InterviewTime,Note)
 VALUES('E001','CDD001',1,'2024-05-03',N'Tác phong chuẩn bị nghiêm túc và tinh thần tốt để phỏng vấn')
-
 GO
 CREATE FUNCTION func_CheckCandidate(
 	@CddID varchar(10)
@@ -227,7 +227,7 @@ BEGIN
 	DECLARE @Exists BIT;
 
 	SET @Exists = CASE 
-                WHEN EXISTS (SELECT 1 FROM Candidates WHERE CddID = @CddID) 
+                WHEN EXISTS (SELECT 1 FROM CV WHERE CVOwner = @CddID) 
 					THEN 1 
 					ELSE 0 
 				END;
@@ -235,3 +235,8 @@ BEGIN
 END;
 
 SELECT * FROM CV
+
+
+SELECT *
+FROM CV INNER JOIN Candidates C ON CV.CVOwner = C.CddID
+WHERE CV.ID = 3
