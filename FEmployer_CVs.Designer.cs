@@ -102,6 +102,7 @@
             this.button_Favorite.Size = new System.Drawing.Size(50, 50);
             this.button_Favorite.TabIndex = 11;
             this.button_Favorite.UseTransparentBackground = true;
+            this.button_Favorite.Click += new System.EventHandler(this.button_Favorite_Click);
             // 
             // FEmployer_CVs
             // 

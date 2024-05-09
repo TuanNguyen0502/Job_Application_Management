@@ -156,10 +156,10 @@ CREATE TABLE AppliedJobs(
 )
 -- Tạo bảng CV yêu thích
 CREATE TABLE FavoriteCV(
-	ID int IDENTITY primary key,
 	TimeSaved date,
 	CVID int FOREIGN KEY REFERENCES CV(ID),
-	EmpID varchar(10) FOREIGN KEY REFERENCES Employers(ID)
+	EmpID varchar(10) FOREIGN KEY REFERENCES Employers(ID),
+	Primary Key (CVID, EmpID)
 )
 
 -- Dữ liệu cho bảng Candidates

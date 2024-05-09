@@ -81,6 +81,7 @@
     <Compile Include="Company.cs" />
     <Compile Include="CV.cs" />
     <Compile Include="DBConnection.cs" />
+    <Compile Include="FavoriteCV.cs" />
     <Compile Include="FCandidate_ListCVOfCandidate.cs">
       <SubType>Form</SubType>
     </Compile>
