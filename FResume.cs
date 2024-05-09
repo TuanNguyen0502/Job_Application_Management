@@ -20,7 +20,7 @@ namespace Job_Application_Management
         private string cddID;
         private EmployerDAO employerDAO = new EmployerDAO();
 
-        public FResume(string empID, int jobID, string cddID, string role)
+        public FResume(string empID, int jobID, string cddID, string role, int cvID)
         {
             this.empID = empID;
             this.jobID = jobID;
@@ -31,6 +31,7 @@ namespace Job_Application_Management
             uC_CV1.EmpID = empID;
             uC_CV1.JobID = jobID;
             uC_CV1.CddID = cddID;
+            uC_CV1.CvID = cvID;
             uC_CV1.Button_Approve.Click += button_Approve_Click;
             uC_CV1.Button_Refuse.Click += button_Refuse_Click;
         }

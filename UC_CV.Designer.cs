@@ -31,17 +31,6 @@ namespace Job_Application_Management
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CV));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flp_Educations = new System.Windows.Forms.FlowLayoutPanel();
-            this.flp_Experiences = new System.Windows.Forms.FlowLayoutPanel();
-            this.flp_Certifications = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnAdd_Education = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd_Experiences = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd_Certification = new Guna.UI2.WinForms.Guna2Button();
-            this.roudingPanel13 = new Job_Application_Management.RoudingPanel();
-            this.label_Status = new System.Windows.Forms.Label();
-            this.uC_Certification1 = new Job_Application_Management.UC_Certification();
-            this.uC_Experiences1 = new Job_Application_Management.UC_Experiences();
-            this.uC_Education1 = new Job_Application_Management.UC_Education();
             this.roudingPanel5 = new Job_Application_Management.RoudingPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.roudingPanel4 = new Job_Application_Management.RoudingPanel();
@@ -58,6 +47,17 @@ namespace Job_Application_Management
             this.label_Nominee = new System.Windows.Forms.Label();
             this.label_CandidateName = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.flp_Educations = new System.Windows.Forms.FlowLayoutPanel();
+            this.uC_Education1 = new Job_Application_Management.UC_Education();
+            this.flp_Experiences = new System.Windows.Forms.FlowLayoutPanel();
+            this.uC_Experiences1 = new Job_Application_Management.UC_Experiences();
+            this.flp_Certifications = new System.Windows.Forms.FlowLayoutPanel();
+            this.uC_Certification1 = new Job_Application_Management.UC_Certification();
+            this.btnAdd_Education = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd_Experiences = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd_Certification = new Guna.UI2.WinForms.Guna2Button();
+            this.roudingPanel13 = new Job_Application_Management.RoudingPanel();
+            this.label_Status = new System.Windows.Forms.Label();
             this.roudingPanel12 = new Job_Application_Management.RoudingPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_CreateCV = new Guna.UI2.WinForms.Guna2Button();
@@ -65,16 +65,16 @@ namespace Job_Application_Management
             this.button_Refuse = new Guna.UI2.WinForms.Guna2Button();
             this.button_Invite = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
-            this.flp_Educations.SuspendLayout();
-            this.flp_Experiences.SuspendLayout();
-            this.flp_Certifications.SuspendLayout();
-            this.roudingPanel13.SuspendLayout();
             this.roudingPanel5.SuspendLayout();
             this.roudingPanel4.SuspendLayout();
             this.roudingPanel3.SuspendLayout();
             this.roudingPanel2.SuspendLayout();
             this.roudingPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.flp_Educations.SuspendLayout();
+            this.flp_Experiences.SuspendLayout();
+            this.flp_Certifications.SuspendLayout();
+            this.roudingPanel13.SuspendLayout();
             this.roudingPanel12.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -92,129 +92,6 @@ namespace Job_Application_Management
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1728, 579);
             this.panel1.TabIndex = 0;
-            // 
-            // flp_Educations
-            // 
-            this.flp_Educations.AutoScroll = true;
-            this.flp_Educations.Controls.Add(this.uC_Education1);
-            this.flp_Educations.Location = new System.Drawing.Point(190, 521);
-            this.flp_Educations.Name = "flp_Educations";
-            this.flp_Educations.Size = new System.Drawing.Size(1204, 282);
-            this.flp_Educations.TabIndex = 1;
-            // 
-            // flp_Experiences
-            // 
-            this.flp_Experiences.AutoScroll = true;
-            this.flp_Experiences.Controls.Add(this.uC_Experiences1);
-            this.flp_Experiences.Location = new System.Drawing.Point(190, 858);
-            this.flp_Experiences.Name = "flp_Experiences";
-            this.flp_Experiences.Size = new System.Drawing.Size(1204, 529);
-            this.flp_Experiences.TabIndex = 2;
-            // 
-            // flp_Certifications
-            // 
-            this.flp_Certifications.AutoScroll = true;
-            this.flp_Certifications.Controls.Add(this.uC_Certification1);
-            this.flp_Certifications.Location = new System.Drawing.Point(186, 1441);
-            this.flp_Certifications.Name = "flp_Certifications";
-            this.flp_Certifications.Size = new System.Drawing.Size(1204, 207);
-            this.flp_Certifications.TabIndex = 3;
-            // 
-            // btnAdd_Education
-            // 
-            this.btnAdd_Education.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd_Education.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd_Education.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd_Education.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd_Education.FillColor = System.Drawing.Color.Silver;
-            this.btnAdd_Education.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAdd_Education.ForeColor = System.Drawing.Color.White;
-            this.btnAdd_Education.Image = global::Job_Application_Management.Properties.Resources.icons8_plus_32__1_;
-            this.btnAdd_Education.Location = new System.Drawing.Point(190, 474);
-            this.btnAdd_Education.Name = "btnAdd_Education";
-            this.btnAdd_Education.Size = new System.Drawing.Size(80, 35);
-            this.btnAdd_Education.TabIndex = 13;
-            this.btnAdd_Education.Text = "Add";
-            this.btnAdd_Education.Click += new System.EventHandler(this.btnAdd_Education_Click);
-            // 
-            // btnAdd_Experiences
-            // 
-            this.btnAdd_Experiences.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd_Experiences.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd_Experiences.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd_Experiences.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd_Experiences.FillColor = System.Drawing.Color.Silver;
-            this.btnAdd_Experiences.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAdd_Experiences.ForeColor = System.Drawing.Color.White;
-            this.btnAdd_Experiences.Image = global::Job_Application_Management.Properties.Resources.icons8_plus_32__1_;
-            this.btnAdd_Experiences.Location = new System.Drawing.Point(193, 812);
-            this.btnAdd_Experiences.Name = "btnAdd_Experiences";
-            this.btnAdd_Experiences.Size = new System.Drawing.Size(80, 35);
-            this.btnAdd_Experiences.TabIndex = 16;
-            this.btnAdd_Experiences.Text = "Add";
-            this.btnAdd_Experiences.Click += new System.EventHandler(this.btnAdd_Experiences_Click);
-            // 
-            // btnAdd_Certification
-            // 
-            this.btnAdd_Certification.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd_Certification.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd_Certification.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd_Certification.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd_Certification.FillColor = System.Drawing.Color.Silver;
-            this.btnAdd_Certification.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAdd_Certification.ForeColor = System.Drawing.Color.White;
-            this.btnAdd_Certification.Image = global::Job_Application_Management.Properties.Resources.icons8_plus_32__1_;
-            this.btnAdd_Certification.Location = new System.Drawing.Point(186, 1395);
-            this.btnAdd_Certification.Name = "btnAdd_Certification";
-            this.btnAdd_Certification.Size = new System.Drawing.Size(80, 35);
-            this.btnAdd_Certification.TabIndex = 17;
-            this.btnAdd_Certification.Text = "Add";
-            this.btnAdd_Certification.Click += new System.EventHandler(this.btnAdd_Certification_Click);
-            // 
-            // roudingPanel13
-            // 
-            this.roudingPanel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(246)))), ((int)(((byte)(198)))));
-            this.roudingPanel13.Controls.Add(this.label_Status);
-            this.roudingPanel13.Location = new System.Drawing.Point(207, 1660);
-            this.roudingPanel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.roudingPanel13.Name = "roudingPanel13";
-            this.roudingPanel13.Size = new System.Drawing.Size(313, 43);
-            this.roudingPanel13.TabIndex = 11;
-            // 
-            // label_Status
-            // 
-            this.label_Status.AutoSize = true;
-            this.label_Status.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(29)))));
-            this.label_Status.Location = new System.Drawing.Point(5, 10);
-            this.label_Status.Name = "label_Status";
-            this.label_Status.Size = new System.Drawing.Size(97, 23);
-            this.label_Status.TabIndex = 1;
-            this.label_Status.Text = "Applying";
-            // 
-            // uC_Certification1
-            // 
-            this.uC_Certification1.BackColor = System.Drawing.Color.White;
-            this.uC_Certification1.Location = new System.Drawing.Point(3, 3);
-            this.uC_Certification1.Name = "uC_Certification1";
-            this.uC_Certification1.Size = new System.Drawing.Size(1191, 120);
-            this.uC_Certification1.TabIndex = 0;
-            // 
-            // uC_Experiences1
-            // 
-            this.uC_Experiences1.BackColor = System.Drawing.Color.White;
-            this.uC_Experiences1.Location = new System.Drawing.Point(3, 3);
-            this.uC_Experiences1.Name = "uC_Experiences1";
-            this.uC_Experiences1.Size = new System.Drawing.Size(1195, 445);
-            this.uC_Experiences1.TabIndex = 0;
-            // 
-            // uC_Education1
-            // 
-            this.uC_Education1.BackColor = System.Drawing.Color.White;
-            this.uC_Education1.Location = new System.Drawing.Point(3, 3);
-            this.uC_Education1.Name = "uC_Education1";
-            this.uC_Education1.Size = new System.Drawing.Size(1197, 217);
-            this.uC_Education1.TabIndex = 0;
             // 
             // roudingPanel5
             // 
@@ -452,60 +329,117 @@ namespace Job_Application_Management
             // 
             // flp_Educations
             // 
-            this.flp_Educations.AutoSize = true;
+            this.flp_Educations.AutoScroll = true;
             this.flp_Educations.Controls.Add(this.uC_Education1);
-            this.flp_Educations.Location = new System.Drawing.Point(190, 521);
+            this.flp_Educations.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flp_Educations.Location = new System.Drawing.Point(221, 586);
             this.flp_Educations.Name = "flp_Educations";
-            this.flp_Educations.Size = new System.Drawing.Size(1204, 235);
+            this.flp_Educations.Size = new System.Drawing.Size(1204, 319);
             this.flp_Educations.TabIndex = 1;
             // 
             // uC_Education1
             // 
             this.uC_Education1.BackColor = System.Drawing.Color.White;
-            this.uC_Education1.Location = new System.Drawing.Point(3, 3);
+            this.uC_Education1.Location = new System.Drawing.Point(3, 4);
+            this.uC_Education1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uC_Education1.Name = "uC_Education1";
-            this.uC_Education1.Size = new System.Drawing.Size(1197, 217);
+            this.uC_Education1.Size = new System.Drawing.Size(1197, 281);
             this.uC_Education1.TabIndex = 0;
             // 
             // flp_Experiences
             // 
-            this.flp_Experiences.AutoSize = true;
+            this.flp_Experiences.AutoScroll = true;
             this.flp_Experiences.Controls.Add(this.uC_Experiences1);
-            this.flp_Experiences.Location = new System.Drawing.Point(190, 816);
+            this.flp_Experiences.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flp_Experiences.Location = new System.Drawing.Point(217, 938);
             this.flp_Experiences.Name = "flp_Experiences";
-            this.flp_Experiences.Size = new System.Drawing.Size(1204, 465);
+            this.flp_Experiences.Size = new System.Drawing.Size(1424, 552);
             this.flp_Experiences.TabIndex = 2;
             // 
             // uC_Experiences1
             // 
             this.uC_Experiences1.BackColor = System.Drawing.Color.White;
-            this.uC_Experiences1.Location = new System.Drawing.Point(3, 3);
+            this.uC_Experiences1.Location = new System.Drawing.Point(3, 4);
+            this.uC_Experiences1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uC_Experiences1.Name = "uC_Experiences1";
-            this.uC_Experiences1.Size = new System.Drawing.Size(1195, 445);
+            this.uC_Experiences1.Size = new System.Drawing.Size(1324, 547);
             this.uC_Experiences1.TabIndex = 0;
             // 
             // flp_Certifications
             // 
+            this.flp_Certifications.AutoScroll = true;
             this.flp_Certifications.AutoSize = true;
             this.flp_Certifications.Controls.Add(this.uC_Certification1);
-            this.flp_Certifications.Location = new System.Drawing.Point(187, 1341);
+            this.flp_Certifications.Location = new System.Drawing.Point(190, 1493);
             this.flp_Certifications.Name = "flp_Certifications";
-            this.flp_Certifications.Size = new System.Drawing.Size(1204, 139);
+            this.flp_Certifications.Size = new System.Drawing.Size(1357, 167);
             this.flp_Certifications.TabIndex = 3;
             // 
             // uC_Certification1
             // 
             this.uC_Certification1.BackColor = System.Drawing.Color.White;
-            this.uC_Certification1.Location = new System.Drawing.Point(3, 3);
+            this.uC_Certification1.Location = new System.Drawing.Point(3, 4);
+            this.uC_Certification1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uC_Certification1.Name = "uC_Certification1";
-            this.uC_Certification1.Size = new System.Drawing.Size(1191, 120);
+            this.uC_Certification1.Size = new System.Drawing.Size(1351, 159);
             this.uC_Certification1.TabIndex = 0;
+            // 
+            // btnAdd_Education
+            // 
+            this.btnAdd_Education.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd_Education.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd_Education.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd_Education.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd_Education.FillColor = System.Drawing.Color.Silver;
+            this.btnAdd_Education.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAdd_Education.ForeColor = System.Drawing.Color.White;
+            this.btnAdd_Education.Image = global::Job_Application_Management.Properties.Resources.icons8_plus_32__1_;
+            this.btnAdd_Education.Location = new System.Drawing.Point(190, 474);
+            this.btnAdd_Education.Name = "btnAdd_Education";
+            this.btnAdd_Education.Size = new System.Drawing.Size(80, 35);
+            this.btnAdd_Education.TabIndex = 13;
+            this.btnAdd_Education.Text = "Add";
+            this.btnAdd_Education.Click += new System.EventHandler(this.btnAdd_Education_Click);
+            // 
+            // btnAdd_Experiences
+            // 
+            this.btnAdd_Experiences.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd_Experiences.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd_Experiences.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd_Experiences.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd_Experiences.FillColor = System.Drawing.Color.Silver;
+            this.btnAdd_Experiences.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAdd_Experiences.ForeColor = System.Drawing.Color.White;
+            this.btnAdd_Experiences.Image = global::Job_Application_Management.Properties.Resources.icons8_plus_32__1_;
+            this.btnAdd_Experiences.Location = new System.Drawing.Point(193, 767);
+            this.btnAdd_Experiences.Name = "btnAdd_Experiences";
+            this.btnAdd_Experiences.Size = new System.Drawing.Size(80, 35);
+            this.btnAdd_Experiences.TabIndex = 16;
+            this.btnAdd_Experiences.Text = "Add";
+            this.btnAdd_Experiences.Click += new System.EventHandler(this.btnAdd_Experiences_Click);
+            // 
+            // btnAdd_Certification
+            // 
+            this.btnAdd_Certification.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd_Certification.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd_Certification.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd_Certification.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd_Certification.FillColor = System.Drawing.Color.Silver;
+            this.btnAdd_Certification.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAdd_Certification.ForeColor = System.Drawing.Color.White;
+            this.btnAdd_Certification.Image = global::Job_Application_Management.Properties.Resources.icons8_plus_32__1_;
+            this.btnAdd_Certification.Location = new System.Drawing.Point(190, 1293);
+            this.btnAdd_Certification.Name = "btnAdd_Certification";
+            this.btnAdd_Certification.Size = new System.Drawing.Size(80, 35);
+            this.btnAdd_Certification.TabIndex = 17;
+            this.btnAdd_Certification.Text = "Add";
+            this.btnAdd_Certification.Click += new System.EventHandler(this.btnAdd_Certification_Click);
             // 
             // roudingPanel13
             // 
             this.roudingPanel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(246)))), ((int)(((byte)(198)))));
             this.roudingPanel13.Controls.Add(this.label_Status);
-            this.roudingPanel13.Location = new System.Drawing.Point(211, 1510);
+            this.roudingPanel13.Location = new System.Drawing.Point(214, 1685);
             this.roudingPanel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roudingPanel13.Name = "roudingPanel13";
             this.roudingPanel13.Size = new System.Drawing.Size(313, 43);
@@ -518,7 +452,7 @@ namespace Job_Application_Management
             this.label_Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(29)))));
             this.label_Status.Location = new System.Drawing.Point(5, 10);
             this.label_Status.Name = "label_Status";
-            this.label_Status.Size = new System.Drawing.Size(97, 23);
+            this.label_Status.Size = new System.Drawing.Size(118, 30);
             this.label_Status.TabIndex = 1;
             this.label_Status.Text = "Applying";
             // 
@@ -526,7 +460,7 @@ namespace Job_Application_Management
             // 
             this.roudingPanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
             this.roudingPanel12.Controls.Add(this.flowLayoutPanel1);
-            this.roudingPanel12.Location = new System.Drawing.Point(214, 1906);
+            this.roudingPanel12.Location = new System.Drawing.Point(190, 1732);
             this.roudingPanel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roudingPanel12.Name = "roudingPanel12";
             this.roudingPanel12.Size = new System.Drawing.Size(1354, 136);
@@ -610,57 +544,6 @@ namespace Job_Application_Management
             this.button_Invite.TabIndex = 1;
             this.button_Invite.Text = "Invite for an interview";
             // 
-            // btnAdd_Education
-            // 
-            this.btnAdd_Education.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd_Education.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd_Education.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd_Education.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd_Education.FillColor = System.Drawing.Color.Silver;
-            this.btnAdd_Education.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAdd_Education.ForeColor = System.Drawing.Color.White;
-            this.btnAdd_Education.Image = global::Job_Application_Management.Properties.Resources.icons8_plus_32__1_;
-            this.btnAdd_Education.Location = new System.Drawing.Point(190, 474);
-            this.btnAdd_Education.Name = "btnAdd_Education";
-            this.btnAdd_Education.Size = new System.Drawing.Size(80, 35);
-            this.btnAdd_Education.TabIndex = 13;
-            this.btnAdd_Education.Text = "Add";
-            this.btnAdd_Education.Click += new System.EventHandler(this.btnAdd_Education_Click);
-            // 
-            // btnAdd_Experiences
-            // 
-            this.btnAdd_Experiences.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd_Experiences.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd_Experiences.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd_Experiences.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd_Experiences.FillColor = System.Drawing.Color.Silver;
-            this.btnAdd_Experiences.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAdd_Experiences.ForeColor = System.Drawing.Color.White;
-            this.btnAdd_Experiences.Image = global::Job_Application_Management.Properties.Resources.icons8_plus_32__1_;
-            this.btnAdd_Experiences.Location = new System.Drawing.Point(193, 767);
-            this.btnAdd_Experiences.Name = "btnAdd_Experiences";
-            this.btnAdd_Experiences.Size = new System.Drawing.Size(80, 35);
-            this.btnAdd_Experiences.TabIndex = 16;
-            this.btnAdd_Experiences.Text = "Add";
-            this.btnAdd_Experiences.Click += new System.EventHandler(this.btnAdd_Experiences_Click);
-            // 
-            // btnAdd_Certification
-            // 
-            this.btnAdd_Certification.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd_Certification.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd_Certification.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd_Certification.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd_Certification.FillColor = System.Drawing.Color.Silver;
-            this.btnAdd_Certification.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAdd_Certification.ForeColor = System.Drawing.Color.White;
-            this.btnAdd_Certification.Image = global::Job_Application_Management.Properties.Resources.icons8_plus_32__1_;
-            this.btnAdd_Certification.Location = new System.Drawing.Point(190, 1293);
-            this.btnAdd_Certification.Name = "btnAdd_Certification";
-            this.btnAdd_Certification.Size = new System.Drawing.Size(80, 35);
-            this.btnAdd_Certification.TabIndex = 17;
-            this.btnAdd_Certification.Text = "Add";
-            this.btnAdd_Certification.Click += new System.EventHandler(this.btnAdd_Certification_Click);
-            // 
             // UC_CV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -680,11 +563,6 @@ namespace Job_Application_Management
             this.Size = new System.Drawing.Size(1728, 2051);
             this.Load += new System.EventHandler(this.UC_CV_Load);
             this.panel1.ResumeLayout(false);
-            this.flp_Educations.ResumeLayout(false);
-            this.flp_Experiences.ResumeLayout(false);
-            this.flp_Certifications.ResumeLayout(false);
-            this.roudingPanel13.ResumeLayout(false);
-            this.roudingPanel13.PerformLayout();
             this.roudingPanel5.ResumeLayout(false);
             this.roudingPanel5.PerformLayout();
             this.roudingPanel4.ResumeLayout(false);
@@ -695,9 +573,15 @@ namespace Job_Application_Management
             this.roudingPanel1.ResumeLayout(false);
             this.roudingPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.flp_Educations.ResumeLayout(false);
+            this.flp_Experiences.ResumeLayout(false);
+            this.flp_Certifications.ResumeLayout(false);
+            this.roudingPanel13.ResumeLayout(false);
+            this.roudingPanel13.PerformLayout();
             this.roudingPanel12.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

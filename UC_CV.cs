@@ -19,6 +19,7 @@ namespace Job_Application_Management
         private string cddID;
         private string empID;
         private CV resume;
+        private int cvID;
         private EmployerDAO employerDAO = new EmployerDAO();
         private CandidateDAO candidateDAO = new CandidateDAO();
 
@@ -42,6 +43,8 @@ namespace Job_Application_Management
         public FlowLayoutPanel Flp_Educations { get { return flp_Educations; } }
         public FlowLayoutPanel Flp_Experiences { get { return flp_Experiences; } }
         public FlowLayoutPanel Flp_Certifications { get { return flp_Certifications; } }
+        public int CvID { get => cvID; set => cvID = value; }
+
         #region Get Value in Educations
         private string GetUniversityNames()
         {
@@ -242,6 +245,22 @@ namespace Job_Application_Management
         }
 
         #region Set value for Education
+        private void SetUniversity(string universityName, string major, string gpa, string universityStartDate, string universityEndDate)
+        {
+            string[] words = universityName.Split('/');
+            if (words.Length > 1)
+            {
+                for (int i = 0; i < words.Length - 1; i++)
+                {
+                    flp_Educations.Controls.Add(new UC_Education());
+                }
+            }
+            SetUniversityName(universityName);
+            SetMajor(major);
+            SetGpa(gpa);
+            SetUniversityStartDate(universityStartDate);
+            SetUniversityEndDate(universityEndDate);
+        }
         private void SetUniversityName(string UniversityName)
         {
             string[] words = UniversityName.Split('/');
@@ -313,6 +332,22 @@ namespace Job_Application_Management
 
         #endregion
         #region Set value for Experiences
+        private void SetCompany(string companyName, string workplace, string detail, string companyStartDate, string companyEndDate)
+        {
+            string[] words = CompanyName.Split('/');
+            if (words.Length > 1)
+            {
+                for (int i = 0; i < words.Length - 1; i++)
+                {
+                    flp_Experiences.Controls.Add(new UC_Experiences());
+                }
+            }
+            SetCompanyName(companyName);
+            SetWorkPlace(workplace);
+            SetDetail(detail);
+            SetCompanyStartDate(companyStartDate);
+            SetCompanyEndDate(companyEndDate);
+        }
         private void SetCompanyName(string CompanyName)
         {
             string[] words = CompanyName.Split('/');
@@ -380,6 +415,19 @@ namespace Job_Application_Management
         }
         #endregion
         #region Set value for Certifications
+        private void SetCertification(string certification, string certificationDate)
+        {
+            string[] words = certification.Split('/');
+            if (words.Length > 1)
+            {
+                for (int j = 0; j < words.Length - 1; j++)
+                {
+                    flp_Certifications.Controls.Add(new UC_Certification());
+                }
+            }
+            SetCertificationName(certification);
+            SetCertificationDate(certificationDate);
+        }
         private void SetCertificationName(string Certification)
         {
             string[] words = Certification.Split('/');
@@ -477,26 +525,17 @@ namespace Job_Application_Management
 
         private void CV_LoadData()
         {
-            /*resume = employerDAO.GetResumeFromDB(jobID, cddID);
-            label_CandidateName.Text = resume.CddName;
-            label_Nominee.Text = resume.JobName;
-            textBox_Phone.Text = resume.CddPhone;
-            textBox_Email.Text = resume.CddEmail;
-            textBox_Address.Text = resume.CddAddress;
-            richTextBox_CareerGoal.Text = resume.Objective;
-            SetUniversityName(resume.UniversityName);
-            SetMajor(resume.Major);
-            SetGpa(resume.Gpa);
-            SetUniversityStartDate(resume.UniversityStartDate);
-            SetUniversityEndDate(resume.UniversityEndDate);
-            SetCompanyName(resume.CompanyName);
-            SetWorkPlace(resume.WorkPlace);
-            SetDetail(resume.WorkedDetail);
-            SetCompanyStartDate(resume.CompanyStartDate);
-            SetCompanyEndDate(resume.CompanyEndDate);
-            SetCertificationName(resume.Certification);
-            SetCertificationDate(resume.CertificationDate);
-            label_Status.Text = resume.Status;*/
+            CV cv = employerDAO.GetCVFromDB(cvID);
+            label_CandidateName.Text = cv.CddName;
+            label_Nominee.Text = cv.JobName;
+            textBox_Phone.Text = cv.CddPhone;
+            textBox_Email.Text = cv.CddEmail;
+            textBox_Address.Text = cv.CddAddress;
+            richTextBox_CareerGoal.Text = cv.Objective;
+            SetUniversity(cv.UniversityName, cv.Major, cv.Gpa, cv.UniversityStartDate, cv.UniversityEndDate);
+            SetCompany(cv.CompanyName, cv.WorkPlace, cv.WorkedDetail, cv.CompanyStartDate, cv.CompanyEndDate);
+            SetCertification(cv.Certification, cv.CertificationDate);
+            label_Status.Text = cv.Status;
         }
 
         public void CV_ReadOnlyControls()

@@ -34,7 +34,7 @@ namespace Job_Application_Management
 
         private void button_detail_Click(object sender, EventArgs e)
         {
-            FResume fResume = new FResume(empID, jobID, CddID, "Employer");
+            FResume fResume = new FResume(empID, jobID, CddID, "Employer", 0);
             fResume.ShowDialog();
             if (fResume.DialogResult == DialogResult.OK)
             {

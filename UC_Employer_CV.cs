@@ -43,7 +43,7 @@ namespace Job_Application_Management
 
         private void button_detail_Click(object sender, EventArgs e)
         {
-            FResume fResume = new FResume(empID, 0, CddID, "Employer");
+            FResume fResume = new FResume(empID, 0, CddID, "Employer", cvID);
             fResume.ShowDialog();
         }
 

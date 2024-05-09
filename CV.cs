@@ -10,7 +10,7 @@ namespace Job_Application_Management
 {
     public class CV
     {
-
+        private int cvID;
         private string cddID;
         private string nominee;
         private int jobID;
@@ -324,5 +324,7 @@ namespace Job_Application_Management
                     nominee = value;
             }
         }
+
+        public int CvID { get => cvID; set => cvID = value; }
     }
 }
