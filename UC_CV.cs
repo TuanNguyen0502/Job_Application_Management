@@ -490,18 +490,9 @@ namespace Job_Application_Management
             textBox_Email.Text = resume.CddEmail;
             textBox_Address.Text = resume.CddAddress;
             richTextBox_CareerGoal.Text = resume.Objective;
-            SetUniversityName(resume.UniversityName);
-            SetMajor(resume.Major);
-            SetGpa(resume.Gpa);
-            SetUniversityStartDate(resume.UniversityStartDate);
-            SetUniversityEndDate(resume.UniversityEndDate);
-            SetCompanyName(resume.CompanyName);
-            SetWorkPlace(resume.WorkPlace);
-            SetDetail(resume.WorkedDetail);
-            SetCompanyStartDate(resume.CompanyStartDate);
-            SetCompanyEndDate(resume.CompanyEndDate);
-            SetCertificationName(resume.Certification);
-            SetCertificationDate(resume.CertificationDate);
+            SetUniversity(resume.UniversityName, resume.Major, resume.Gpa, resume.UniversityStartDate, resume.UniversityEndDate);
+            SetCompany(resume.CompanyName, resume.WorkPlace, resume.WorkedDetail, resume.CompanyStartDate, resume.CompanyEndDate);
+            SetCertification(resume.Certification, resume.CertificationDate);
             label_Status.Text = resume.Status;
         }
 
@@ -641,9 +632,10 @@ namespace Job_Application_Management
             RemoveCV?.Invoke(this, new ButtonClickEventArgs(CddID,JobID));
         }
 
+        public event EventHandler<ButtonInviteCandidate> InviteCandidate;
         private void button_Invite_Click(object sender, EventArgs e)
         {
-
+            InviteCandidate?.Invoke(this, new ButtonInviteCandidate(empID, cddID));
         }
     }
 }

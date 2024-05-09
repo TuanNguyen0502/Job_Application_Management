@@ -130,9 +130,9 @@ namespace Job_Application_Management
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                string sqlQuery = $"SELECT ID, EmpID, CddID, JobID, InterviewTime, Note " +
-                    $"FROM Interviews " +
-                    $"WHERE EmpID = '{empID}' AND CddID = '{cddID}' AND JobID = '{jobID}'";
+                string sqlQuery = $"SELECT I.ID, I.EmpID, I.CddID, I.JobID, I.InterviewTime, I.Note, J.Name " +
+                    $"FROM Interviews I INNER JOIN Jobs J ON I.JobID = J.ID " +
+                    $"WHERE I.EmpID = '{empID}' AND I.CddID = '{cddID}' AND I.JobID = '{jobID}'";
                 SqlCommand cmd = new SqlCommand(sqlQuery, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
@@ -145,6 +145,7 @@ namespace Job_Application_Management
                         interview.JobID = reader.GetInt32(3);
                         interview.InterviewTime = reader.GetDateTime(4);
                         interview.Note = reader.GetString(5);
+                        interview.JobName = reader.GetString(6);
                     }
                 }
                 else

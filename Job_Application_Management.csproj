@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="AppliedJobs.cs" />
     <Compile Include="ButtonClickEventArgs.cs" />
+    <Compile Include="ButtonInviteCandidate.cs" />
     <Compile Include="Candidate.cs" />
     <Compile Include="CandidateDAO.cs" />
     <Compile Include="CandidateProfile.cs" />

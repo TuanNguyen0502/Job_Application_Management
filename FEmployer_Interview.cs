@@ -31,12 +31,12 @@ namespace Job_Application_Management
         {
             if (employerDAO.CheckEmployerInterviewTimeExists(interviewTime, empID))
             {
-                MessageBox.Show("Employer is busy at this time", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Employer has an interview at this time", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             if (employerDAO.CheckCandidateInterviewTimeExists(interviewTime, cddID))
             {
-                MessageBox.Show("Candidate is busy at this time", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Candidate has an interview at this time", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -67,6 +67,7 @@ namespace Job_Application_Management
         {
             if (interview.Id != 0)
             {
+                label_Job.Text = interview.JobName;
                 dateTimePicker_Date.Value = interview.InterviewTime;
                 dateTimePicker_Time.Value = interview.InterviewTime;
                 textBox_Note.Text = interview.Note;
@@ -84,7 +85,7 @@ namespace Job_Application_Management
             DateTime dateTime = new DateTime(dateTimePicker_Date.Value.Year, dateTimePicker_Date.Value.Month, dateTimePicker_Date.Value.Day, 
                 dateTimePicker_Time.Value.Hour, dateTimePicker_Time.Value.Minute, dateTimePicker_Time.Value.Second);
 
-            if (!CheckInterviewTime(dateTime))
+            if (interview.InterviewTime != dateTime && !CheckInterviewTime(dateTime))
             {
                 return;
             }
