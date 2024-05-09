@@ -128,6 +128,14 @@ CREATE TABLE Interviews (
 	InterviewTime datetime,
 	Note nvarchar(max)
 )
+CREATE TABLE InterviewsByCV (
+	ID int IDENTITY PRIMARY KEY,
+	EmpID varchar(10) foreign key references Employers(ID),
+	CddID varchar(10) foreign key references Candidates(CddID),
+	JobName nvarchar(max),
+	InterviewTime datetime,
+	Note nvarchar(max)
+)
 CREATE TABLE CandidateProfile(
 	CddID varchar(10) CONSTRAINT FK_Profile_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
 	WorkPlace nvarchar(100),
