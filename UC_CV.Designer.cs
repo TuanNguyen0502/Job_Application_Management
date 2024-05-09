@@ -54,7 +54,6 @@ namespace Job_Application_Management
             this.textBox_Phone = new Guna.UI2.WinForms.Guna2TextBox();
             this.dateTimePicker_Dob = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.roudingPanel1 = new Job_Application_Management.RoudingPanel();
-            this.textBox_Nominee = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_RemoveCVValid = new Guna.UI2.WinForms.Guna2Button();
             this.label_CandidateName = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -64,6 +63,7 @@ namespace Job_Application_Management
             this.button_Approve = new Guna.UI2.WinForms.Guna2Button();
             this.button_Refuse = new Guna.UI2.WinForms.Guna2Button();
             this.button_Invite = new Guna.UI2.WinForms.Guna2Button();
+            this.textBox_Nominee = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.flp_Educations.SuspendLayout();
             this.flp_Experiences.SuspendLayout();
@@ -412,26 +412,6 @@ namespace Job_Application_Management
             this.roudingPanel1.Size = new System.Drawing.Size(1354, 148);
             this.roudingPanel1.TabIndex = 4;
             // 
-            // textBox_Nominee
-            // 
-            this.textBox_Nominee.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox_Nominee.DefaultText = "";
-            this.textBox_Nominee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBox_Nominee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBox_Nominee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_Nominee.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_Nominee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_Nominee.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBox_Nominee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_Nominee.Location = new System.Drawing.Point(209, 74);
-            this.textBox_Nominee.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.textBox_Nominee.Name = "textBox_Nominee";
-            this.textBox_Nominee.PasswordChar = '\0';
-            this.textBox_Nominee.PlaceholderText = "Công việc ứng tuyển";
-            this.textBox_Nominee.SelectedText = "";
-            this.textBox_Nominee.Size = new System.Drawing.Size(339, 44);
-            this.textBox_Nominee.TabIndex = 4;
-            // 
             // btn_RemoveCVValid
             // 
             this.btn_RemoveCVValid.BorderRadius = 18;
@@ -453,11 +433,11 @@ namespace Job_Application_Management
             // label_CandidateName
             // 
             this.label_CandidateName.AutoSize = true;
-            this.label_CandidateName.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_CandidateName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_CandidateName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(29)))));
             this.label_CandidateName.Location = new System.Drawing.Point(202, 12);
             this.label_CandidateName.Name = "label_CandidateName";
-            this.label_CandidateName.Size = new System.Drawing.Size(363, 38);
+            this.label_CandidateName.Size = new System.Drawing.Size(362, 45);
             this.label_CandidateName.TabIndex = 1;
             this.label_CandidateName.Text = "Nguyen Ha Hong Tuan";
             // 
@@ -562,6 +542,30 @@ namespace Job_Application_Management
             this.button_Invite.Size = new System.Drawing.Size(356, 62);
             this.button_Invite.TabIndex = 1;
             this.button_Invite.Text = "Invite for an interview";
+            // 
+            // textBox_Nominee
+            // 
+            this.textBox_Nominee.AutoSize = true;
+            this.textBox_Nominee.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
+            this.textBox_Nominee.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_Nominee.DefaultText = "";
+            this.textBox_Nominee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox_Nominee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox_Nominee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_Nominee.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_Nominee.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(239)))), ((int)(((byte)(245)))));
+            this.textBox_Nominee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_Nominee.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Nominee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(108)))), ((int)(((byte)(146)))));
+            this.textBox_Nominee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_Nominee.Location = new System.Drawing.Point(210, 66);
+            this.textBox_Nominee.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.textBox_Nominee.Name = "textBox_Nominee";
+            this.textBox_Nominee.PasswordChar = '\0';
+            this.textBox_Nominee.PlaceholderText = "";
+            this.textBox_Nominee.SelectedText = "";
+            this.textBox_Nominee.Size = new System.Drawing.Size(401, 67);
+            this.textBox_Nominee.TabIndex = 5;
             // 
             // UC_CV
             // 
