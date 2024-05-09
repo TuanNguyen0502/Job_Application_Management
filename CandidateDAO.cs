@@ -829,8 +829,31 @@ namespace Job_Application_Management
         #endregion
 
         #region Tối ưu CV
-
-
+        public List<UC_DescribesCV> GetListDescribesCV(string cddid)
+        {
+            sqlQuery = "SELECT ID, Nominee, UniversityName, Major, GPA, CertificationName" +
+                       " FROM CV" +
+                       " WHERE CVOwner = @CddID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid}
+            };
+            List<Dictionary<string, object>> keyValuePairs = dbConn.ExecuteReaderData(sqlQuery, lstParams);
+            List<UC_DescribesCV> lstItems = new List<UC_DescribesCV>();
+            foreach (var key in keyValuePairs)
+            {
+                CV cv = new CV();
+                cv.CddID = (string)key["ID"];
+                cv.Nominee = (string)key["Nominee"];
+                cv.UniversityName = (string)key["UniversityName"];
+                cv.Major = (string)key["Major"];
+                cv.Gpa = (string)key["GPA"];
+                cv.Certification = (string)key["Certification"];
+                UC_DescribesCV item = new UC_DescribesCV(cv);
+                lstItems.Add(item);
+            }
+            return lstItems;
+        }
 
         #endregion
     }

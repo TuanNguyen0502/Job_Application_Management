@@ -98,6 +98,9 @@ CREATE TABLE CV(
 	CertificationDate nvarchar(MAX),
 	CVOwner varchar(10) CONSTRAINT FK_CV_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
 )
+SELECT ID, Nominee, UniversityName, Major, GPA, CertificationName
+FROM CV
+WHERE CVOwner = 'CDD001'
 CREATE TABLE Resume(
 	CddID varchar(10) CONSTRAINT FK_Cdd FOREIGN KEY REFERENCES Candidates(CddID),
 	JobID int CONSTRAINT FK_Job FOREIGN KEY REFERENCES Jobs(ID),

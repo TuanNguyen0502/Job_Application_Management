@@ -59,7 +59,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1310, 64);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1310, 61);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // lbl_Nominee
@@ -68,7 +68,7 @@
             this.lbl_Nominee.AutoSize = true;
             this.lbl_Nominee.Font = new System.Drawing.Font("Segoe UI", 8.2F);
             this.lbl_Nominee.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Nominee.Location = new System.Drawing.Point(182, 22);
+            this.lbl_Nominee.Location = new System.Drawing.Point(182, 21);
             this.lbl_Nominee.Name = "lbl_Nominee";
             this.lbl_Nominee.Size = new System.Drawing.Size(64, 19);
             this.lbl_Nominee.TabIndex = 2;
@@ -81,7 +81,7 @@
             this.label_ID.AutoSize = true;
             this.label_ID.Font = new System.Drawing.Font("Segoe UI", 8.2F);
             this.label_ID.ForeColor = System.Drawing.Color.Black;
-            this.label_ID.Location = new System.Drawing.Point(33, 22);
+            this.label_ID.Location = new System.Drawing.Point(33, 21);
             this.label_ID.Name = "label_ID";
             this.label_ID.Size = new System.Drawing.Size(23, 19);
             this.label_ID.TabIndex = 1;
@@ -94,7 +94,7 @@
             this.lbl_UniversityName.AutoSize = true;
             this.lbl_UniversityName.Font = new System.Drawing.Font("Segoe UI", 8.2F);
             this.lbl_UniversityName.ForeColor = System.Drawing.Color.Black;
-            this.lbl_UniversityName.Location = new System.Drawing.Point(447, 22);
+            this.lbl_UniversityName.Location = new System.Drawing.Point(447, 21);
             this.lbl_UniversityName.Name = "lbl_UniversityName";
             this.lbl_UniversityName.Size = new System.Drawing.Size(106, 19);
             this.lbl_UniversityName.TabIndex = 1;
@@ -107,7 +107,7 @@
             this.label_Major.AutoSize = true;
             this.label_Major.Font = new System.Drawing.Font("Segoe UI", 8.2F);
             this.label_Major.ForeColor = System.Drawing.Color.Black;
-            this.label_Major.Location = new System.Drawing.Point(764, 22);
+            this.label_Major.Location = new System.Drawing.Point(764, 21);
             this.label_Major.Name = "label_Major";
             this.label_Major.Size = new System.Drawing.Size(45, 19);
             this.label_Major.TabIndex = 1;
@@ -120,7 +120,7 @@
             this.label_GPA.AutoSize = true;
             this.label_GPA.Font = new System.Drawing.Font("Segoe UI", 8.2F);
             this.label_GPA.ForeColor = System.Drawing.Color.Black;
-            this.label_GPA.Location = new System.Drawing.Point(959, 22);
+            this.label_GPA.Location = new System.Drawing.Point(959, 21);
             this.label_GPA.Name = "label_GPA";
             this.label_GPA.Size = new System.Drawing.Size(35, 19);
             this.label_GPA.TabIndex = 1;
@@ -133,7 +133,7 @@
             this.lblCertification.AutoSize = true;
             this.lblCertification.Font = new System.Drawing.Font("Segoe UI", 8.2F);
             this.lblCertification.ForeColor = System.Drawing.Color.Black;
-            this.lblCertification.Location = new System.Drawing.Point(1135, 22);
+            this.lblCertification.Location = new System.Drawing.Point(1135, 21);
             this.lblCertification.Name = "lblCertification";
             this.lblCertification.Size = new System.Drawing.Size(82, 19);
             this.lblCertification.TabIndex = 3;
@@ -147,6 +147,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "UC_DescribesCV";
             this.Size = new System.Drawing.Size(1316, 67);
+            this.Load += new System.EventHandler(this.UC_DescribesCV_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
