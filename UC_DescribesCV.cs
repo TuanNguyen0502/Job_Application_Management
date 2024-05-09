@@ -12,9 +12,26 @@ namespace Job_Application_Management
 {
     public partial class UC_DescribesCV : UserControl
     {
-        public UC_DescribesCV()
+        private CV cv;
+        public UC_DescribesCV(CV cv)
         {
             InitializeComponent();
+            this.cv = cv;
+        }
+
+        public void LoadValueForTable()
+        {
+            label_ID.Text = cv.CddID;
+            lbl_Nominee.Text = cv.Nominee;
+            label_Major.Text = cv.Major;
+            label_GPA.Text = cv.Gpa;
+            lbl_UniversityName.Text = cv.UniversityName;
+            lblCertification.Text = cv.Certification;
+        }
+
+        private void UC_DescribesCV_Load(object sender, EventArgs e)
+        {
+            LoadValueForTable();
         }
     }
 }
