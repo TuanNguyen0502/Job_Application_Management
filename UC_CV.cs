@@ -33,7 +33,7 @@ namespace Job_Application_Management
         public string EmpID { get => empID; set => empID = value; }
         public CV Resume { get => resume; set => resume = value; }
         public Label Label_CandidateName { get { return label_CandidateName; } }
-        public Label Label_Nominee { get { return label_Nominee; } }
+        public Guna2TextBox Label_Nominee { get { return textBox_Nominee; } }
         public Label Label_Status { get => label_Status; set => label_Status = value; }
         public Guna2Button Btn_RemoveCVValid { get { return btn_RemoveCVValid; } }
         public Guna2Button Btn_CreateCV { get { return btn_CreateCV; } }
@@ -50,10 +50,11 @@ namespace Job_Application_Management
             {
                 if (control is UC_Education uc)
                 {
-                    UniversityNames = uc.TextBox_University.Text + "/";
+                    UniversityNames += uc.TextBox_University.Text + "/";
                 }
             }
-            return UniversityNames.Substring(0, UniversityNames.Length - 1);
+            if (UniversityNames.Length > 0) { return UniversityNames.Substring(0, UniversityNames.Length - 1); }
+            return null;
         }
         private string GetMajors()
         {
@@ -62,10 +63,11 @@ namespace Job_Application_Management
             {
                 if (control is UC_Education uc)
                 {
-                    Majors = uc.TextBox_Major.Text + "/";
+                    Majors += uc.TextBox_Major.Text + "/";
                 }
             }
-            return Majors.Substring(0, Majors.Length - 1);
+            if (Majors.Length > 0) { return Majors.Substring(0, Majors.Length - 1); }
+            return null;
         }
         private string GetGPAs()
         {
@@ -74,10 +76,11 @@ namespace Job_Application_Management
             {
                 if (control is UC_Education uc)
                 {
-                    Gpas = uc.TextBox_GPA.Text + "/";
+                    Gpas += uc.TextBox_GPA.Text + "/";
                 }
             }
-            return Gpas.Substring(0, Gpas.Length - 1);
+            if (Gpas.Length > 0) { return Gpas.Substring(0, Gpas.Length - 1); }
+            return null;
         }
         private string GetUniversityStartDate()
         {
@@ -86,10 +89,11 @@ namespace Job_Application_Management
             {
                 if (control is UC_Education uc)
                 {
-                    StartDate = uc.DateTimePicker_UniversityStartDate.Value.ToShortDateString() + "/";
+                    StartDate += uc.DateTimePicker_UniversityStartDate.Value.ToShortDateString() + "#";
                 }
             }
-            return StartDate.Substring(0, StartDate.Length - 1);
+            if (StartDate.Length > 0) { return StartDate.Substring(0, StartDate.Length - 1); }
+            return null;
         }
         private string GetUniversityEndDate()
         {
@@ -98,10 +102,11 @@ namespace Job_Application_Management
             {
                 if (control is UC_Education uc)
                 {
-                    EndDate = uc.DateTimePicker_UniversityEndDate.Value.ToShortDateString() + "/";
+                    EndDate += uc.DateTimePicker_UniversityEndDate.Value.ToShortDateString() + "#";
                 }
             }
-            return EndDate.Substring(0, EndDate.Length - 1);
+            if (EndDate.Length > 0) { return EndDate.Substring(0, EndDate.Length - 1); }
+            return null;
         }
         #endregion
 
@@ -114,10 +119,11 @@ namespace Job_Application_Management
             {
                 if (control is UC_Experiences uc)
                 {
-                    CompanyName = uc.CompanyName + "/";
+                    CompanyName += uc.CompanyName + "/";
                 }
             }
-            return CompanyName.Substring(0, CompanyName.Length - 1);
+            if (CompanyName.Length > 0) { return CompanyName.Substring(0, CompanyName.Length - 1); }
+            return null;
         }
         private string GetWorkPlace()
         {
@@ -126,10 +132,11 @@ namespace Job_Application_Management
             {
                 if (control is UC_Experiences uc)
                 {
-                    CompanyName = uc.TextBox_Workplace + "/";
+                    CompanyName += uc.TextBox_Workplace + "/";
                 }
             }
-            return CompanyName.Substring(0, CompanyName.Length - 1);
+            if (CompanyName.Length > 0) { return CompanyName.Substring(0, CompanyName.Length - 1); }
+            return null;
         }
         private string GetDetail()
         {
@@ -138,10 +145,11 @@ namespace Job_Application_Management
             {
                 if (control is UC_Experiences uc)
                 {
-                    CompanyName = uc.RichTextBox_Detail + "/";
+                    CompanyName += uc.RichTextBox_Detail + "/";
                 }
             }
-            return CompanyName.Substring(0, CompanyName.Length - 1);
+            if (CompanyName.Length > 0) { return CompanyName.Substring(0, CompanyName.Length - 1); }
+            return null;
         }
         private string GetCompanyStartDate()
         {
@@ -150,10 +158,11 @@ namespace Job_Application_Management
             {
                 if (control is UC_Experiences uc)
                 {
-                    StartDate = uc.DateTimePicker_CompanyStartDate.Value.ToShortDateString() + "/";
+                    StartDate += uc.DateTimePicker_CompanyStartDate.Value.ToShortDateString() + "#";
                 }
             }
-            return StartDate.Substring(0, StartDate.Length - 1);
+            if (StartDate.Length > 0) { return StartDate; }
+            return null;
         }
         private string GetCompanyEndDate()
         {
@@ -162,10 +171,11 @@ namespace Job_Application_Management
             {
                 if (control is UC_Experiences uc)
                 {
-                    EndDate = uc.DateTimePicker_CompanyEndDate.Value.ToShortDateString() + "/";
+                    EndDate += uc.DateTimePicker_CompanyEndDate.Value.ToShortDateString() + "#";
                 }
             }
-            return EndDate.Substring(0, EndDate.Length - 1);
+            if (EndDate.Length > 0) { return EndDate.Substring(0, EndDate.Length - 1); }
+            return null;
         }
 
         #endregion
@@ -178,10 +188,11 @@ namespace Job_Application_Management
             {
                 if (control is UC_Certification uc)
                 {
-                    Certification = uc.TextBox_Certification.Text;
+                    Certification += uc.TextBox_Certification.Text;
                 }
             }
-            return Certification.Substring(0, Certification.Length - 1);
+            if (Certification.Length > 0) { return Certification.Substring(0, Certification.Length - 1); }
+            return null;
         }
         private string GetCertificationDate()
         {
@@ -190,10 +201,11 @@ namespace Job_Application_Management
             {
                 if (control is UC_Certification uc)
                 {
-                    Certification = uc.DateTimePicker_Certification.Value.ToShortTimeString();
+                    Certification += uc.DateTimePicker_Certification.Value.ToShortTimeString() + "#";
                 }
             }
-            return Certification.Substring(0, Certification.Length - 1);
+            if (Certification.Length > 0) { return Certification.Substring(0, Certification.Length - 1); }
+            return null;
         }
         #endregion
 
@@ -202,7 +214,7 @@ namespace Job_Application_Management
             CV myCV = new CV();
 
             myCV.CddName = label_CandidateName.Text;
-            myCV.Nominee = label_Nominee.Text;
+            myCV.Nominee = textBox_Nominee.Text;
             myCV.CddPhone = textBox_Phone.Text;
             myCV.CddAddress = textBox_Address.Text;
             myCV.CddEmail = textBox_Email.Text;
@@ -220,10 +232,17 @@ namespace Job_Application_Management
             myCV.Certification = GetCertificationName();
             myCV.CertificationDate = GetCertificationDate();
             myCV.Status = label_Status.Text;
-            MessageBox.Show("Get info resume successful. " + myCV.Objective);
+            MessageBox.Show("Get info resume successful. " + myCV.UniversityStartDate + " " + myCV.UniversityEndDate);
             return myCV;
         }
-
+        public void LoadCandidateInfo()
+        {
+            Candidate can = candidateDAO.GetCandidateInfor(CddID);
+            label_CandidateName.Text = can.Name;
+            textBox_Address.Text = can.Address;
+            textBox_Phone.Text = can.Phone;
+            textBox_Email.Text = can.Email;
+        }
         private void UC_CV_Load(object sender, EventArgs e)
         {
             if (Role == "Employer")
@@ -235,9 +254,14 @@ namespace Job_Application_Management
                 }
                 else
                 {
+                    
                     Resume_LoadData();
                     Resume_ReadOnlyControls();
                 }
+            }
+            else
+            {
+                LoadCandidateInfo();
             }
         }
 
@@ -286,7 +310,7 @@ namespace Job_Application_Management
 
         private void SetUniversityStartDate(string UniStartDate)
         {
-            string[] words = UniStartDate.Split('/');
+            string[] words = UniStartDate.Split('#');
             int i = 0;
             foreach (Control control in flp_Educations.Controls)
             {
@@ -299,7 +323,7 @@ namespace Job_Application_Management
         }
         private void SetUniversityEndDate(string EndDate)
         {
-            string[] words = EndDate.Split('/');
+            string[] words = EndDate.Split('#');
             int i = 0;
             foreach (Control control in flp_Educations.Controls)
             {
@@ -354,7 +378,7 @@ namespace Job_Application_Management
         }
         private void SetCompanyStartDate(string CompanyStartDate)
         {
-            string[] words = CompanyStartDate.Split('/');
+            string[] words = CompanyStartDate.Split('#');
             int i = 0;
             foreach (Control control in flp_Educations.Controls)
             {
@@ -367,7 +391,7 @@ namespace Job_Application_Management
         }
         private void SetCompanyEndDate(string CompanyEndDate)
         {
-            string[] words = CompanyEndDate.Split('/');
+            string[] words = CompanyEndDate.Split('#');
             int i = 0;
             foreach (Control control in flp_Educations.Controls)
             {
@@ -395,7 +419,7 @@ namespace Job_Application_Management
         }
         private void SetCertificationDate(string Certification)
         {
-            string[] words = Certification.Split('/');
+            string[] words = Certification.Split('#');
             int i = 0;
             foreach (Control control in flp_Educations.Controls)
             {
@@ -412,7 +436,7 @@ namespace Job_Application_Management
         {
             resume = employerDAO.GetResumeFromDB(jobID, cddID);
             label_CandidateName.Text = resume.CddName;
-            label_Nominee.Text = resume.JobName;
+            textBox_Nominee.Text = resume.JobName;
             textBox_Phone.Text = resume.CddPhone;
             textBox_Email.Text = resume.CddEmail;
             textBox_Address.Text = resume.CddAddress;
@@ -554,7 +578,8 @@ namespace Job_Application_Management
         public event EventHandler<ButtonClickEventArgs> CreateCV;
         private void btn_CreateCV_Click(object sender, EventArgs e)
         {
-            CreateCV?.Invoke(this, new ButtonClickEventArgs(CddID, JobID));
+            CV cv = GetInfoResumeAtForm();
+            CreateCV?.Invoke(this, new ButtonClickEventArgs(cv));
         }
         public event EventHandler ApproveCV;
 
@@ -573,6 +598,11 @@ namespace Job_Application_Management
         private void btn_RemoveCVValid_Click(object sender, EventArgs e)
         {
             RemoveCV?.Invoke(this, new ButtonClickEventArgs(CddID,JobID));
+        }
+
+        private void button_Invite_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

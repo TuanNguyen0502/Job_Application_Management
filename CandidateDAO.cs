@@ -284,12 +284,13 @@ namespace Job_Application_Management
         {
             if (cv != null)
             {
-                sqlQuery = "INSERT INTO CV(Objective, UniversityName, Major, GPA, UniversityStartDate"+
+                sqlQuery = "INSERT INTO CV(Objective, Nominee, UniversityName, Major, GPA, UniversityStartDate"+
                        ", UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName,"+ "CertificationDate,CVOwner)"+
-                       "VALUES(@Objective, @UniversityName, @Major, @GPA, @UniversityStartDate, @UniversityEndDate, @CompanyName, @WorkPlace, @Detail, @CompanyStartDate, @CompanyEndDate, @CertificationName, @CertificationDate, @CVOwner)";
+                       " VALUES(@Objective, @Nominee, @UniversityName, @Major, @GPA, @UniversityStartDate, @UniversityEndDate, @CompanyName, @WorkPlace, @Detail, @CompanyStartDate, @CompanyEndDate, @CertificationName, @CertificationDate, @CVOwner)";
                 SqlParameter[] lstParams =
                     {
                 new SqlParameter("@Objective", SqlDbType.NVarChar) {Value = cv.Objective},
+                new SqlParameter("@Nominee", SqlDbType.NVarChar) {Value = cv.Nominee},
                 new SqlParameter("@UniversityName", SqlDbType.NVarChar) {Value = cv.UniversityName},
                 new SqlParameter("@Major", SqlDbType.NVarChar) {Value = cv.Major},
                 new SqlParameter("@GPA", SqlDbType.NVarChar) {Value = cv.Gpa},
@@ -315,7 +316,7 @@ namespace Job_Application_Management
             }
             else
             {
-                MessageBox.Show("CV be bull");
+                MessageBox.Show("CV be null");
             }
         }
 
@@ -333,6 +334,7 @@ namespace Job_Application_Management
             foreach(var item in keyValues)
             {
                 cv.CddID = cddid;
+                cv.Nominee = (string)item["Nominee"];
                 cv.Objective = (string)item["Objective"];
                 cv.UniversityName = (string)item["UniversityName"];
                 cv.Major = (string)item["Major"];
@@ -853,6 +855,28 @@ namespace Job_Application_Management
                 lstItems.Add(item);
             }
             return lstItems;
+        }
+        public Candidate GetCandidateInfoByID(string cddid)
+        {
+            sqlQuery = "SELECT * FROM Candidates WHERE CddID = @cddid";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@cddid", SqlDbType.VarChar) {Value = cddid}
+            };
+            List<Dictionary<string, object>> keyValuePairs = dbConn.ExecuteReaderData(sqlQuery, lstParams);
+            Candidate can = new Candidate();
+            foreach (var key in keyValuePairs)
+            {
+                can.Id = (string)key["CddID"];
+                can.Name = (string)key["CddName"];
+                can.Phone = (string)key["Phone"];
+                can.Email = (string)key["Email"];
+                can.Address = (string)key["CddAddress"];
+                can.Hometown = (string)key["Hometown"];
+                can.Sex = (string)key["Sex"];
+                can.Education = (string)key["Education"];
+            }
+            return can;
         }
 
         #endregion
