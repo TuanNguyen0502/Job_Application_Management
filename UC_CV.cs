@@ -37,6 +37,7 @@ namespace Job_Application_Management
         public Label Label_Status { get => label_Status; set => label_Status = value; }
         public Guna2Button Btn_RemoveCVValid { get { return btn_RemoveCVValid; } }
         public Guna2Button Btn_CreateCV { get { return btn_CreateCV; } }
+        public Guna2Button Button_Invite { get { return button_Invite; } }
         public Guna2Button Button_Approve { get => button_Approve; set => button_Approve = value; }
         public Guna2Button Button_Refuse { get => button_Refuse; set => button_Refuse = value; }
         public FlowLayoutPanel Flp_Educations { get { return flp_Educations; } }
@@ -154,7 +155,7 @@ namespace Job_Application_Management
         private string GetCompanyStartDate()
         {
             string StartDate = "";
-            foreach (Control control in flp_Educations.Controls)
+            foreach (Control control in flp_Experiences.Controls)
             {
                 if (control is UC_Experiences uc)
                 {
@@ -167,7 +168,7 @@ namespace Job_Application_Management
         private string GetCompanyEndDate()
         {
             string EndDate = "";
-            foreach (Control control in flp_Educations.Controls)
+            foreach (Control control in flp_Experiences.Controls)
             {
                 if (control is UC_Experiences uc)
                 {
@@ -232,7 +233,6 @@ namespace Job_Application_Management
             myCV.Certification = GetCertificationName();
             myCV.CertificationDate = GetCertificationDate();
             myCV.Status = label_Status.Text;
-            MessageBox.Show("Get info resume successful. " + myCV.UniversityStartDate + " " + myCV.UniversityEndDate);
             return myCV;
         }
         public void LoadCandidateInfo()

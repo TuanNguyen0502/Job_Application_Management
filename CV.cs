@@ -10,7 +10,7 @@ namespace Job_Application_Management
 {
     public class CV
     {
-
+        private int id;
         private string cddID;
         private string nominee;
         private int jobID;
@@ -34,7 +34,7 @@ namespace Job_Application_Management
         private string cddAddress;
         private string cddEmail;
         private string cddPhone;
-        
+
 
         public CV(string cddID, int jobID, string objective, string universityName, string major, string gpa, string universityStartDate, string universityEndDate, string companyName, string workPlace, string workedDetail, string companyStartDate, string companyEndDate, string certificationName, string certificationDate, string jobName, string cddName, string cddAddress, string cddEmail, string cddPhone)
         {
@@ -59,7 +59,7 @@ namespace Job_Application_Management
             CddEmail=cddEmail;
             CddPhone=cddPhone;
         }
-        public CV (string cddID, string objective, string universityName, string major, string gpa, string companyName, string workPlace, string certificationName, string cddName)
+        public CV(string cddID, string objective, string universityName, string major, string gpa, string companyName, string workPlace, string certificationName, string cddName)
         {
             CddID=cddID;
             this.objective=objective;
@@ -72,7 +72,7 @@ namespace Job_Application_Management
             this.cddName=cddName;
         }
         public CV() { }
-
+        public int ID { get => id; set => id = value; }
         public string CddID 
         { 
             get => cddID; 

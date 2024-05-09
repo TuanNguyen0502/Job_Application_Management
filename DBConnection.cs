@@ -178,9 +178,13 @@ namespace Job_Application_Management
                     if (cmd.ExecuteNonQuery() > 0)
                         return true;
                 }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show("Lỗi SQL !\n" + sqlEx.Message);
+                }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error !\n" + ex.Message);
+                    MessageBox.Show("Lỗi\n" + ex.Message);
                 }
                 return false;
             }
