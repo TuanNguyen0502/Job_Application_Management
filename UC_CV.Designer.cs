@@ -61,9 +61,9 @@ namespace Job_Application_Management
             this.roudingPanel12 = new Job_Application_Management.RoudingPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_CreateCV = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd_Education = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd_Experiences = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd_Certification = new Guna.UI2.WinForms.Guna2Button();
+            this.button_Approve = new Guna.UI2.WinForms.Guna2Button();
+            this.button_Refuse = new Guna.UI2.WinForms.Guna2Button();
+            this.button_Invite = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.flp_Educations.SuspendLayout();
             this.flp_Experiences.SuspendLayout();
