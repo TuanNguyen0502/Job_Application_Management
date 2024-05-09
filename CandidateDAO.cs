@@ -288,24 +288,24 @@ namespace Job_Application_Management
                        ", UniversityEndDate, CompanyName, WorkPlace, Detail, CompanyStartDate, CompanyEndDate, CertificationName,"+ "CertificationDate,CVOwner)"+
                        " VALUES(@Objective, @Nominee, @UniversityName, @Major, @GPA, @UniversityStartDate, @UniversityEndDate, @CompanyName, @WorkPlace, @Detail, @CompanyStartDate, @CompanyEndDate, @CertificationName, @CertificationDate, @CVOwner)";
                 SqlParameter[] lstParams =
-                    {
-                new SqlParameter("@Objective", SqlDbType.NVarChar) {Value = cv.Objective},
-                new SqlParameter("@Nominee", SqlDbType.NVarChar) {Value = cv.Nominee},
-                new SqlParameter("@UniversityName", SqlDbType.NVarChar) {Value = cv.UniversityName},
-                new SqlParameter("@Major", SqlDbType.NVarChar) {Value = cv.Major},
-                new SqlParameter("@GPA", SqlDbType.NVarChar) {Value = cv.Gpa},
-                new SqlParameter("@UniversityStartDate", SqlDbType.NVarChar) {Value = cv.UniversityStartDate},
-                new SqlParameter("@UniversityEndDate", SqlDbType.NVarChar) {Value = cv.UniversityEndDate},
-                new SqlParameter("@CompanyName", SqlDbType.NVarChar) {Value = cv.CompanyName},
-                new SqlParameter("@WorkPlace", SqlDbType.NVarChar) {Value = cv.WorkPlace},
-                new SqlParameter("@Detail", SqlDbType.NVarChar) {Value = cv.WorkedDetail},
-                new SqlParameter("@CompanyStartDate", SqlDbType.NVarChar) {Value = cv.CompanyStartDate},
-                new SqlParameter("@CompanyEndDate", SqlDbType.NVarChar) {Value = cv.CompanyEndDate},
-                new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = cv.Certification},
-                new SqlParameter("@CertificationDate", SqlDbType.NVarChar) {Value = cv.CertificationDate},
-                new SqlParameter("@CVOwner", SqlDbType.VarChar) {Value = cddid},
+                {
+                    new SqlParameter("@Objective", SqlDbType.NVarChar) {Value = cv.Objective ?? string.Empty},
+                    new SqlParameter("@Nominee", SqlDbType.NVarChar) {Value = cv.Nominee ?? string.Empty},
+                    new SqlParameter("@UniversityName", SqlDbType.NVarChar) {Value = cv.UniversityName ?? string.Empty},
+                    new SqlParameter("@Major", SqlDbType.NVarChar) {Value = cv.Major ?? string.Empty},
+                    new SqlParameter("@GPA", SqlDbType.NVarChar) {Value = cv.Gpa ?? string.Empty},
+                    new SqlParameter("@UniversityStartDate", SqlDbType.NVarChar) {Value = cv.UniversityStartDate ?? string.Empty},
+                    new SqlParameter("@UniversityEndDate", SqlDbType.NVarChar) {Value = cv.UniversityEndDate ?? string.Empty},
+                    new SqlParameter("@CompanyName", SqlDbType.NVarChar) {Value = cv.CompanyName ?? string.Empty},
+                    new SqlParameter("@WorkPlace", SqlDbType.NVarChar) {Value = cv.WorkPlace ?? string.Empty},
+                    new SqlParameter("@Detail", SqlDbType.NVarChar) {Value = cv.WorkedDetail ?? string.Empty},
+                    new SqlParameter("@CompanyStartDate", SqlDbType.NVarChar) {Value = cv.CompanyStartDate ?? string.Empty},
+                    new SqlParameter("@CompanyEndDate", SqlDbType.NVarChar) {Value = cv.CompanyEndDate ?? string.Empty},
+                    new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = cv.Certification ?? string.Empty},
+                    new SqlParameter("@CertificationDate", SqlDbType.NVarChar) {Value = cv.CertificationDate ?? string.Empty},
+                    new SqlParameter("@CVOwner", SqlDbType.VarChar) {Value = cddid}
                 };
-                if(dbConn.ExecuteWriteDataCheck(sqlQuery, lstParams))
+                if (dbConn.ExecuteWriteDataCheck(sqlQuery, lstParams))
                 {
                     MessageBox.Show("Lưu hồ sơ có hiệu lực thành công");
                 }
@@ -419,13 +419,13 @@ namespace Job_Application_Management
             int id = dbConn.ExecuteScalarGetInt(sqlQuery, lstParam);
             return id;
         }
-        public void RemoveCVValid(string CddID)
+        public void RemoveCVValid(int id)
         {
             sqlQuery = "DELETE FROM CV"+
-                       " WHERE CVOwner = @CddID";
+                       " WHERE ID = @ID";
             SqlParameter[] lstParams =
             {
-                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = CddID},
+                new SqlParameter("@ID", SqlDbType.Int) {Value = id},
             };
             if (dbConn.ExecuteDeleteDataCheck(sqlQuery, lstParams))
             {
@@ -845,12 +845,12 @@ namespace Job_Application_Management
             foreach (var key in keyValuePairs)
             {
                 CV cv = new CV();
-                cv.CddID = (string)key["ID"];
+                cv.ID = (int)key["ID"];
                 cv.Nominee = (string)key["Nominee"];
                 cv.UniversityName = (string)key["UniversityName"];
                 cv.Major = (string)key["Major"];
                 cv.Gpa = (string)key["GPA"];
-                cv.Certification = (string)key["Certification"];
+                cv.Certification = (string)key["CertificationName"];
                 UC_DescribesCV item = new UC_DescribesCV(cv);
                 lstItems.Add(item);
             }

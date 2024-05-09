@@ -79,7 +79,7 @@
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.guna2Panel1.Size = new System.Drawing.Size(522, 113);
+            this.guna2Panel1.Size = new System.Drawing.Size(628, 113);
             this.guna2Panel1.TabIndex = 10;
             // 
             // btn_Reload
@@ -91,11 +91,12 @@
             this.btn_Reload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_Reload.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Reload.ForeColor = System.Drawing.Color.White;
-            this.btn_Reload.Location = new System.Drawing.Point(294, 29);
+            this.btn_Reload.Location = new System.Drawing.Point(348, 27);
             this.btn_Reload.Name = "btn_Reload";
             this.btn_Reload.Size = new System.Drawing.Size(180, 56);
             this.btn_Reload.TabIndex = 20;
             this.btn_Reload.Text = "Reload";
+            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
             // 
             // gunaLabel1
             // 
@@ -111,7 +112,7 @@
             // button_Save
             // 
             this.button_Save.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button_Save.Location = new System.Drawing.Point(13, 20);
+            this.button_Save.Location = new System.Drawing.Point(13, 14);
             this.button_Save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Save.Name = "button_Save";
             this.button_Save.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
