@@ -462,6 +462,9 @@ namespace Job_Application_Management
             btn_CreateCV.Visible = false;
             btn_RemoveCVValid.Visible = false;
             button_Invite.Visible = false;
+            btnAdd_Education.Visible = false;
+            btnAdd_Experiences.Visible = false;
+            btnAdd_Certification.Visible = false;
             if (resume.Status == "Applying")
             {
                 button_Refuse.Visible = false;
@@ -528,6 +531,9 @@ namespace Job_Application_Management
             btn_RemoveCVValid.Visible = false;
             button_Refuse.Visible = false;
             button_Approve.Visible = false;
+            btnAdd_Education.Visible = false;
+            btnAdd_Experiences.Visible = false;
+            btnAdd_Certification.Visible = false;
         }
 
         public event EventHandler AddEdu;
