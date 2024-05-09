@@ -57,5 +57,22 @@ namespace Job_Application_Management
                 flowLayoutPanel1.Controls.Add(cv);
             }
         }
+
+        private void LoadFavoriteCV()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            List<UC_Employer_CV> favoriteCVs = employerDAO.GetFavoriteCVsFromDB(empID);
+            foreach (UC_Employer_CV cv in favoriteCVs)
+            {
+                cv.Favorite = true;
+                cv.Button_Favorite.BackColor = Color.LightGreen;
+                flowLayoutPanel1.Controls.Add(cv);
+            }
+        }
+
+        private void button_Favorite_Click(object sender, EventArgs e)
+        {
+            LoadFavoriteCV();
+        }
     }
 }
