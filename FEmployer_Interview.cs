@@ -92,6 +92,7 @@ namespace Job_Application_Management
             interview.InterviewTime = dateTime;
             interview.Note = textBox_Note.Text;
             employerDAO.UpdateInterview(interview);
+            this.DialogResult = DialogResult.OK;
         }
 
         private void button_Delete_Click(object sender, EventArgs e)
@@ -99,6 +100,7 @@ namespace Job_Application_Management
             if (interview.Id != 0)
             {
                 employerDAO.DeleteInterview(interview);
+                this.DialogResult = DialogResult.Cancel;
                 this.Close();
             }
         }
