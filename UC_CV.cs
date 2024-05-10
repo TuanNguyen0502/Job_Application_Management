@@ -346,7 +346,6 @@ namespace Job_Application_Management
 
         private void SetUniversityStartDate(string UniStartDate)
         {
-            MessageBox.Show(UniStartDate);
             string[] words = UniStartDate.Split('/');
             int i = 0;
             foreach (Control control in flp_Educations.Controls)

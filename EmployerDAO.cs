@@ -638,8 +638,10 @@ namespace Job_Application_Management
                 candidateProfile.CddID = (string)keyValuePair["CandidateID"];
                 candidateProfile.CompanyName = (string)keyValuePair["CompanyName"];
                 candidateProfile.CddName = (string)keyValuePair["CddName"];
-                candidateProfile.CompanyStartDate = (string)keyValuePair["StartDate"];
-                candidateProfile.CompanyEndDate = (string)keyValuePair["EndDate"];
+                DateTime startDate = (DateTime)keyValuePair["StartDate"];
+                candidateProfile.CompanyStartDate = startDate.ToShortDateString();
+                DateTime endDate = (DateTime)keyValuePair["EndDate"];
+                candidateProfile.CompanyEndDate = endDate.ToShortDateString();
                 UC_WorkHistory uC_WorkHistory = new UC_WorkHistory(candidateProfile);
                 lstWorkHistory.Add(uC_WorkHistory);
             }
