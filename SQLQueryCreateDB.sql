@@ -51,14 +51,14 @@ CREATE TABLE Employers(
 )
 CREATE TABLE Jobs(
 	ID int IDENTITY(1, 1) CONSTRAINT PK_Job PRIMARY KEY,
-	Name nvarchar(250),
+	Name nvarchar(max),
 	Salary int,
-	JobDecription text,
-	WorkDuration int,
-	Experience nvarchar(250),
+	JobDecription nvarchar(max),
+	WorkDuration nvarchar(max),
+	Experience nvarchar(max),
 	ExpirationDate date,
-	Benefit text,
-	RequestCdd text,
+	Benefit nvarchar(max),
+	RequestCdd nvarchar(max),
 	PostTime datetime,
 	EmpID varchar(10) CONSTRAINT FK_EmpID FOREIGN KEY REFERENCES Employers(ID)
 )

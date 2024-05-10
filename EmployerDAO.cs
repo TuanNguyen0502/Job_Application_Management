@@ -367,10 +367,8 @@ namespace Job_Application_Management
 
         public void AddJob(Job job)
         {
-            string sqlStr = string.Format($"INSERT INTO Jobs (Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, " +
-                $"Benefit, RequestCdd, PostTime, EmpID) VALUES (N'{job.Name}', '{job.Salary}', " +
-                $"'{job.JobDescription}', '{job.WorkDuration}', '{job.Experience}', '{job.Deadline.ToString("yyyy-MM-dd")}', '{job.Benefit}', " +
-                $"'{job.Request}', '{job.PostTime.ToString("yyyy-MM-dd")}', '{job.EmpID}')");
+            string sqlStr = string.Format($"INSERT INTO Jobs (Name, Salary, JobDecription, WorkDuration, Experience, ExpirationDate, Benefit, RequestCdd, PostTime, EmpID) " +
+                $"VALUES (N'{job.Name}', '{job.Salary}', N'{job.JobDescription}', '{job.WorkDuration}', N'{job.Experience}', '{job.Deadline.ToString("yyyy-MM-dd")}', N'{job.Benefit}', N'{job.Request}', '{job.PostTime.ToString("yyyy-MM-dd")}', '{job.EmpID}')");
 
             if (dbConnection.ExecuteWriteDataCheck(sqlStr))
             {
@@ -419,7 +417,7 @@ namespace Job_Application_Management
                         job.Name = reader.GetString(1);
                         job.Salary = reader.GetInt32(2);
                         job.JobDescription = reader.GetString(3);
-                        job.WorkDuration = reader.GetInt32(4).ToString();
+                        job.WorkDuration = reader.GetString(4);
                         job.Experience = reader.GetString(5);
                         job.Deadline = reader.GetDateTime(6);
                         job.Benefit = reader.GetString(7);
