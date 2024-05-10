@@ -161,30 +161,19 @@ namespace Job_Application_Management
         public Interview GetInterviewFormDB(string empID, string cddID, int jobID)
         {
             Interview interview = new Interview();
-            using (SqlConnection conn = new SqlConnection(connStr))
+            string sqlQuery = $"SELECT I.ID, I.EmpID, I.CddID, I.JobID, I.InterviewTime, I.Note, J.Name " +
+                $"FROM Interviews I INNER JOIN Jobs J ON I.JobID = J.ID " +
+                $"WHERE I.EmpID = '{empID}' AND I.CddID = '{cddID}' AND I.JobID = '{jobID}'";
+            List<Dictionary<string, object>> results = dbConnection.ExecuteReaderData(sqlQuery);
+            foreach (var row in results)
             {
-                conn.Open();
-                string sqlQuery = $"SELECT I.ID, I.EmpID, I.CddID, I.JobID, I.InterviewTime, I.Note, J.Name " +
-                    $"FROM Interviews I INNER JOIN Jobs J ON I.JobID = J.ID " +
-                    $"WHERE I.EmpID = '{empID}' AND I.CddID = '{cddID}' AND I.JobID = '{jobID}'";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        interview.Id = reader.GetInt32(0);
-                        interview.EmpID = reader.GetString(1);
-                        interview.CddID = reader.GetString(2);
-                        interview.JobID = reader.GetInt32(3);
-                        interview.InterviewTime = reader.GetDateTime(4);
-                        interview.Note = reader.GetString(5);
-                        interview.JobName = reader.GetString(6);
-                    }
-                }
-                else
-                    MessageBox.Show("No rows found");
-                conn.Close();
+                interview.Id = (int)row["ID"];
+                interview.EmpID = (string)row["EmpID"];
+                interview.CddID = (string)row["CddID"];
+                interview.JobID = (int)row["JobID"];
+                interview.InterviewTime = (DateTime)row["InterviewTime"];
+                interview.Note = (string)row["Note"];
+                interview.JobName = (string)row["Name"];
             }
             return interview;
         }
@@ -245,10 +234,7 @@ namespace Job_Application_Management
         public CV GetResumeFromDB(int jobID, string cddID)
         {
             CV resume = new CV();
-            using (SqlConnection conn = new SqlConnection(connStr))
-            {
-                conn.Open();
-                string sqlQuery = $"SELECT R.CddID, R.JobID, R.Objective, R.UniversityName, R.Major, R.GPA, R.UniversityStartDate, R.UniversityEndDate, " +
+            string sqlQuery = $"SELECT R.CddID, R.JobID, R.Objective, R.UniversityName, R.Major, R.GPA, R.UniversityStartDate, R.UniversityEndDate, " +
                     $"R.CompanyName, R.WorkPlace, R.Detail, R.CompanyStartDate, R.CompanyEndDate, R.CertificationName, R.CertificationDate, " +
                     $"R.Status, " +
                     $"C.CddName, C.Phone, C.Email, C.CddAddress, " +
@@ -256,31 +242,30 @@ namespace Job_Application_Management
                     $"FROM Resume R INNER JOIN Candidates C ON R.CddID = C.CddID " +
                     $"INNER JOIN Jobs J ON R.JobID = J.ID " +
                     $"WHERE R.CddID = '{cddID}' AND R.JobID = '{jobID}'";
-                List<Dictionary<string, object>> resultList = dbConnection.ExecuteReaderData(sqlQuery);
-                foreach (var row in resultList)
-                {
-                    resume.CddID = (string)row["CddID"];
-                    resume.JobID = Int32.Parse(row["JobID"].ToString());
-                    resume.Objective = (string)row["Objective"];
-                    resume.UniversityName = (string)row["UniversityName"];
-                    resume.Major = (string)row["Major"];
-                    resume.Gpa = (string)row["GPA"];
-                    resume.UniversityStartDate = (string)row["UniversityStartDate"];
-                    resume.UniversityEndDate = (string)row["UniversityEndDate"];
-                    resume.CompanyName = (string)row["CompanyName"];
-                    resume.WorkPlace = (string)row["WorkPlace"];
-                    resume.WorkedDetail = (string)row["Detail"];
-                    resume.CompanyStartDate = (string)row["CompanyStartDate"];
-                    resume.CompanyEndDate = (string)row["CompanyEndDate"];
-                    resume.Certification = (string)row["CertificationName"];
-                    resume.CertificationDate = (string)row["CertificationDate"];
-                    resume.Status = (string)row["Status"];
-                    resume.CddName = (string)row["CddName"];
-                    resume.CddPhone = (string)row["Phone"];
-                    resume.CddEmail = (string)row["Email"];
-                    resume.CddAddress = (string)row["CddAddress"];
-                    resume.JobName = (string)row["Name"];
-                }
+            List<Dictionary<string, object>> results = dbConnection.ExecuteReaderData(sqlQuery);
+            foreach (var row in results)
+            {
+                resume.CddID = (string)row["CddID"];
+                resume.JobID = Int32.Parse(row["JobID"].ToString());
+                resume.Objective = (string)row["Objective"];
+                resume.UniversityName = (string)row["UniversityName"];
+                resume.Major = (string)row["Major"];
+                resume.Gpa = (string)row["GPA"];
+                resume.UniversityStartDate = (string)row["UniversityStartDate"];
+                resume.UniversityEndDate = (string)row["UniversityEndDate"];
+                resume.CompanyName = (string)row["CompanyName"];
+                resume.WorkPlace = (string)row["WorkPlace"];
+                resume.WorkedDetail = (string)row["Detail"];
+                resume.CompanyStartDate = (string)row["CompanyStartDate"];
+                resume.CompanyEndDate = (string)row["CompanyEndDate"];
+                resume.Certification = (string)row["CertificationName"];
+                resume.CertificationDate = (string)row["CertificationDate"];
+                resume.Status = (string)row["Status"];
+                resume.CddName = (string)row["CddName"];
+                resume.CddPhone = (string)row["Phone"];
+                resume.CddEmail = (string)row["Email"];
+                resume.CddAddress = (string)row["CddAddress"];
+                resume.JobName = (string)row["Name"];
             }
             return resume;
         }
@@ -288,30 +273,21 @@ namespace Job_Application_Management
         public Company GetCompanyFromDB(string companyName)
         {
             Company company = new Company();
-            using (SqlConnection conn = new SqlConnection(connStr))
-            {
-                conn.Open();
-                string sqlQuery = $"SELECT Name, Address, Manager, TaxCode, BusinessLicense, NumberOfEmployee, NumberOfFollower, Introduction " +
+            string sqlQuery = $"SELECT Name, Address, Manager, TaxCode, BusinessLicense, NumberOfEmployee, NumberOfFollower, Introduction " +
                     $"FROM Company WHERE Name = '{companyName}'";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        company.Name = reader.GetString(0);
-                        company.Address = reader.GetString(1);
-                        company.Manager = reader.GetString(2);
-                        company.TaxCode = reader.GetString(3);
-                        company.BusinessLicense = reader.GetString(4);
-                        company.NumberOfEmployee = reader.GetInt32(5);
-                        company.NumberOfFollower = reader.GetInt32(6);
-                        company.Introduction = reader.GetString(7);
-                    }
-                }
-                else
-                    MessageBox.Show("No rows found");
+            List<Dictionary<string, object>> results = dbConnection.ExecuteReaderData(sqlQuery);
+            foreach (var row in results)
+            {
+                company.Name = (string)row["Name"];
+                company.Address = (string)row["Address"];
+                company.Manager = (string)row["Manager"];
+                company.TaxCode = (string)row["TaxCode"];
+                company.BusinessLicense = (string)row["BusinessLicense"];
+                company.NumberOfEmployee = (int)row["NumberOfEmployee"];
+                company.NumberOfFollower = (int)row["NumberOfFollower"];
+                company.Introduction = (string)row["Introduction"];
             }
+
             return company;
         }
 
@@ -329,27 +305,18 @@ namespace Job_Application_Management
         public Employer GetEmployerFromDB(string empID)
         {
             Employer employer = new Employer();
-            using (SqlConnection conn = new SqlConnection(connStr))
+            string sqlQuery = $"SELECT ID, Email, Name, Sex, Phone, Workplace, CompanyName FROM Employers " +
+                $"WHERE ID = '{empID}'";
+            List<Dictionary<string, object>> results = dbConnection.ExecuteReaderData(sqlQuery);
+            foreach (var row in results)
             {
-                conn.Open();
-                string sqlQuery = $"SELECT ID, Email, Name, Sex, Phone, Workplace, CompanyName FROM Employers WHERE ID = '{empID}'";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        employer.Id = reader.GetString(0);
-                        employer.Email = reader.GetString(1);
-                        employer.Name = reader.GetString(2);
-                        employer.Sex = reader.GetString(3);
-                        employer.Phone = reader.GetString(4);
-                        employer.Workplace = reader.GetString(5);
-                        employer.CompanyName = reader.GetString(6);
-                    }
-                }
-                else
-                    MessageBox.Show("No rows found");
+                employer.Id = (string)row["ID"];
+                employer.Email = (string)row["Email"];
+                employer.Name = (string)row["Name"];
+                employer.Sex = (string)row["Sex"];
+                employer.Phone = (string)row["Phone"];
+                employer.Workplace = (string)row["Workplace"];
+                employer.CompanyName = (string)row["CompanyName"];
             }
             return employer;
         }
@@ -402,34 +369,23 @@ namespace Job_Application_Management
         public Job GetJobFromDB(int jobID)
         {
             Job job = new Job();
-            using (SqlConnection conn = new SqlConnection(connStr))
-            {
-                conn.Open();
-                string sqlQuery = $"SELECT ID, Name, Salary, JobDecription, Workduration, Experience, ExpirationDate, Benefit, RequestCdd, " +
+            string sqlQuery = $"SELECT ID, Name, Salary, JobDecription, Workduration, Experience, ExpirationDate, Benefit, RequestCdd, " +
                     $"PostTime FROM Jobs WHERE ID = '{jobID}'";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        job.Id = Convert.ToInt32(reader["ID"]);
-                        job.Name = reader.GetString(1);
-                        job.Salary = reader.GetInt32(2);
-                        job.JobDescription = reader.GetString(3);
-                        job.WorkDuration = reader.GetString(4);
-                        job.Experience = reader.GetString(5);
-                        job.Deadline = reader.GetDateTime(6);
-                        job.Benefit = reader.GetString(7);
-                        job.Request = reader.GetString(8);
-                        job.PostTime = reader.GetDateTime(9);
-                    }
-                }
-                else
-                    MessageBox.Show("No rows found");
-
-                return job;
+            List<Dictionary<string, object>> results = dbConnection.ExecuteReaderData(sqlQuery);
+            foreach (var row in results)
+            {
+                job.Id = (int)row["ID"];
+                job.Name = (string)row["Name"];
+                job.Salary = (int)row["Salary"];
+                job.JobDescription = (string)row["JobDecription"];
+                job.WorkDuration = (string)row["Workduration"];
+                job.Experience = (string)row["Experience"];
+                job.Deadline = (DateTime)row["ExpirationDate"];
+                job.Benefit = (string)row["Benefit"];
+                job.Request = (string)row["RequestCdd"];
+                job.PostTime = (DateTime)row["PostTime"];
             }
+            return job;
         }
 
         public List<UC_Employer_Job> GetJobsFromDB(string empID)
@@ -597,30 +553,19 @@ namespace Job_Application_Management
         public Candidate GetCandidateFromDB(string cddID)
         {
             Candidate candidate = new Candidate();
-            using (SqlConnection conn = new SqlConnection(connStr))
+            string sqlQuery = $"SELECT * FROM Candidates WHERE CddID = '{cddID}'";
+            List<Dictionary<string, object>> results = dbConnection.ExecuteReaderData(sqlQuery);
+            foreach (var row in results)
             {
-                conn.Open();
-                string sqlQuery = $"SELECT * FROM Candidates WHERE CddID = '{cddID}'";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        candidate.Id = (string)reader["CddID"];
-                        candidate.Name = (string)reader["CddName"];
-                        candidate.Phone = (string)reader["Phone"];
-                        candidate.Email = (string)reader["Email"];
-                        candidate.Hometown = (string)reader["Hometown"];
-                        candidate.Sex = (string)reader["Sex"];
-                        candidate.Education = (string)reader["Education"];
-                    }
-                }
-                else
-                    MessageBox.Show("No rows found");
-
-                return candidate;
+                candidate.Id = (string)row["CddID"];
+                candidate.Name = (string)row["CddName"];
+                candidate.Phone = (string)row["Phone"];
+                candidate.Email = (string)row["Email"];
+                candidate.Hometown = (string)row["Hometown"];
+                candidate.Sex = (string)row["Sex"];
+                candidate.Education = (string)row["Education"];
             }
+            return candidate;
         }
 
         public List<UC_WorkHistory> GetCandidateWorkHistoryFromDB(string cddID)
@@ -709,45 +654,34 @@ namespace Job_Application_Management
         public CV GetCVFromDB(int cvid)
         {
             CV cv = new CV();
-            using (SqlConnection conn = new SqlConnection(connStr))
-            {
-                conn.Open();
-                string sqlQuery = $"SELECT * " +
+            string sqlQuery = $"SELECT * " +
                     $"FROM CV INNER JOIN Candidates C ON CV.CVOwner = C.CddID " +
                     $"WHERE CV.ID = '{cvid}'";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        cv.CvID = (int)reader["ID"];
-                        cv.CddName = (string)reader["CddName"];
-                        cv.CddPhone = (string)reader["Phone"];
-                        cv.CddEmail = (string)reader["Email"];
-                        cv.CddAddress = (string)reader["CddAddress"];
-                        cv.Nominee = (string)reader["Nominee"];
-                        cv.Objective = (string)reader["Objective"];
-                        cv.UniversityName = (string)reader["UniversityName"];
-                        cv.Major = (string)reader["Major"];
-                        cv.Gpa = (string)reader["GPA"];
-                        cv.UniversityStartDate = (string)reader["UniversityStartDate"];
-                        cv.UniversityEndDate = (string)reader["UniversityEndDate"];
-                        cv.CompanyName = (string)reader["CompanyName"];
-                        cv.WorkPlace = (string)reader["Workplace"];
-                        cv.WorkedDetail = (string)reader["Detail"];
-                        cv.CompanyStartDate = (string)reader["CompanyStartDate"];
-                        cv.CompanyEndDate = (string)reader["CompanyEndDate"];
-                        cv.Certification = (string)reader["CertificationName"];
-                        cv.CertificationDate = (string)reader["CertificationDate"];
-                        cv.CddID = (string)reader["CVOwner"];
-                    }
-                }
-                else
-                    MessageBox.Show("No rows found");
-
-                return cv;
+            List<Dictionary<string, object>> results = dbConnection.ExecuteReaderData(sqlQuery);
+            foreach (var row in results)
+            {
+                cv.CvID = (int)row["ID"];
+                cv.CddName = (string)row["CddName"];
+                cv.CddPhone = (string)row["Phone"];
+                cv.CddEmail = (string)row["Email"];
+                cv.CddAddress = (string)row["CddAddress"];
+                cv.Nominee = (string)row["Nominee"];
+                cv.Objective = (string)row["Objective"];
+                cv.UniversityName = (string)row["UniversityName"];
+                cv.Major = (string)row["Major"];
+                cv.Gpa = (string)row["GPA"];
+                cv.UniversityStartDate = (string)row["UniversityStartDate"];
+                cv.UniversityEndDate = (string)row["UniversityEndDate"];
+                cv.CompanyName = (string)row["CompanyName"];
+                cv.WorkPlace = (string)row["Workplace"];
+                cv.WorkedDetail = (string)row["Detail"];
+                cv.CompanyStartDate = (string)row["CompanyStartDate"];
+                cv.CompanyEndDate = (string)row["CompanyEndDate"];
+                cv.Certification = (string)row["CertificationName"];
+                cv.CertificationDate = (string)row["CertificationDate"];
+                cv.CddID = (string)row["CVOwner"];
             }
+            return cv;
         }
 
         public List<UC_Employer_InterviewByCv> GetInterviewsByCVFromDB(string empID)
@@ -805,30 +739,20 @@ namespace Job_Application_Management
         public Interview GetInterviewByCVFromDB(int id, string empID, string cddID)
         {
             Interview interview = new Interview();
-            using (SqlConnection conn = new SqlConnection(connStr))
-            {
-                conn.Open();
-                string sqlQuery = $"SELECT I.ID, I.EmpID, I.CddID, I.JobName, I.InterviewTime, I.Note " +
+            string sqlQuery = $"SELECT I.ID, I.EmpID, I.CddID, I.JobName, I.InterviewTime, I.Note " +
                     $"FROM InterviewsByCV I " +
                     $"WHERE I.ID = '{id}' ";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        interview.Id = reader.GetInt32(0);
-                        interview.EmpID = reader.GetString(1);
-                        interview.CddID = reader.GetString(2);
-                        interview.JobName = reader.GetString(3);
-                        interview.InterviewTime = reader.GetDateTime(4);
-                        interview.Note = reader.GetString(5);
-                    }
-                }
-                else
-                    MessageBox.Show("No rows found");
-                conn.Close();
+            List<Dictionary<string, object>> results = dbConnection.ExecuteReaderData(sqlQuery);
+            foreach (var row in results)
+            {
+                interview.Id = (int)row["ID"];
+                interview.EmpID = (string)row["EmpID"];
+                interview.CddID = (string)row["CddID"];
+                interview.JobName = (string)row["JobName"];
+                interview.InterviewTime = (DateTime)row["InterviewTime"];
+                interview.Note = (string)row["Note"];
             }
+
             return interview;
         }
 
