@@ -615,7 +615,37 @@ namespace Job_Application_Management
                 interview.InterviewTime = (DateTime)reader["InterviewTime"];
                 interview.Note = (string)reader["Note"];
                 candidate.Name = (string)reader["CddName"];
-                UC_Candidate_Interview uc_interview = new UC_Candidate_Interview(job,interview, candidate);
+                UC_Candidate_Interview uc_interview = new UC_Candidate_Interview(job,interview, candidate, "Interview");
+                result.Add(uc_interview);
+            }
+            return result;
+        }
+        public List<UC_Candidate_Interview> GetListInterviewsByCVToDB(string cddid)
+        {
+            sqlQuery = "SELECT j.Name, emp.CompanyName, itv.InterviewTime, itv.Note, can.CddName, cv.Nominee"
+                       +" FROM InterviewsByCV itv"
+                       +" JOIN Employers emp ON itv.EmpID = emp.ID"
+                       +" JOIN Candidates can ON itv.CddID = can.CddID" +
+                       " JOIN CV cv ON can.CddID = cv.CVOwner"
+                       +" WHERE can.CddID = @CddID";
+            SqlParameter[] lstParams =
+            {
+                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid}
+            };
+            List<Dictionary<string, object>> keyValuePairs = dbConn.ExecuteReaderData(sqlQuery, lstParams);
+            List<UC_Candidate_Interview> result = new List<UC_Candidate_Interview>();
+            foreach (var reader in keyValuePairs)
+            {
+                Job job = new Job();
+                Interview interview = new Interview();
+                Candidate candidate = new Candidate();
+                job.Name = (string)reader["Name"];
+                job.CompanyName = (string)reader["CompanyName"];
+                interview.InterviewTime = (DateTime)reader["InterviewTime"];
+                interview.Note = (string)reader["Note"];
+                candidate.Name = (string)reader["CddName"];
+                candidate.Nominee = (string)reader["Nominee"];
+                UC_Candidate_Interview uc_interview = new UC_Candidate_Interview(job, interview, candidate, "InterviewByCV");
                 result.Add(uc_interview);
             }
             return result;
@@ -654,7 +684,7 @@ namespace Job_Application_Management
                 interview.InterviewTime = (DateTime)reader["InterviewTime"];
                 interview.Note = (string)reader["Note"];
                 candidate.Name = (string)reader["CddName"];
-                UC_Candidate_Interview uc_interview = new UC_Candidate_Interview(job, interview, candidate);
+                UC_Candidate_Interview uc_interview = new UC_Candidate_Interview(job, interview, candidate, "Interview");
                 result.Add(uc_interview);
             }
             return result;

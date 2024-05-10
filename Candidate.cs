@@ -9,17 +9,19 @@ namespace Job_Application_Management
 {
     public class Candidate : Person
     {
+        private string nominee;
         private string hometown;
         private string education;
         private string address;
         private string jobname;
 
-        public Candidate(string id, string name, string email, string phone, string sex, string address, string hometown, string education) 
+        public Candidate(string id, string name, string email, string phone, string sex, string address, string hometown, string education, string nominee)
             : base(id, name, email, phone, sex)
         {
             this.hometown = hometown;
             this.education = education;
             this.address = address;
+            this.nominee=nominee;
         }
         public Candidate() { }
         public string Hometown 
@@ -37,6 +39,7 @@ namespace Job_Application_Management
                 }
             }
         }
+        public string Nominee { get => nominee; set => nominee = value; }
         public string Education { get => education; set => education = value; }
         public string Address { get => address; set => address = value; }
         public string JobName { get => jobname; set => jobname = value; }

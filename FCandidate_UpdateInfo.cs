@@ -76,7 +76,7 @@ namespace Job_Application_Management
         public void UpdateCandidateInfor()
         {
             string sex = radioButton_Male.Checked ? "Nam" : "Nữ";
-            Candidate candidate = new Candidate(textBox_ID.Text, textBox_Name.Text, textBox_Email.Text, textBox_PhoneNumber.Text, sex, textBox_Address.Text, textBox_Hometown.Text, textBox_Education.Text);
+            Candidate candidate = new Candidate(textBox_ID.Text, textBox_Name.Text, textBox_Email.Text, textBox_PhoneNumber.Text, sex, textBox_Address.Text, textBox_Hometown.Text, textBox_Education.Text, null);
             candidateDAO.UpdateCandidateInfor(candidate);
         }
 
