@@ -30,7 +30,6 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label_PostedTime = new System.Windows.Forms.Label();
-            this.label_JobName = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label_Salary = new System.Windows.Forms.Label();
             this.label_Deadline = new System.Windows.Forms.Label();
@@ -39,6 +38,7 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button_Edit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button_delete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.textBox_JobName = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -47,13 +47,13 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.label_PostedTime);
-            this.flowLayoutPanel1.Controls.Add(this.label_JobName);
+            this.flowLayoutPanel1.Controls.Add(this.textBox_JobName);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(381, 100);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(381, 207);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // label_PostedTime
@@ -67,18 +67,6 @@
             this.label_PostedTime.TabIndex = 0;
             this.label_PostedTime.Text = "Posted";
             // 
-            // label_JobName
-            // 
-            this.label_JobName.AutoSize = true;
-            this.label_JobName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_JobName.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label_JobName.Location = new System.Drawing.Point(90, 10);
-            this.label_JobName.Name = "label_JobName";
-            this.label_JobName.Padding = new System.Windows.Forms.Padding(10);
-            this.label_JobName.Size = new System.Drawing.Size(191, 65);
-            this.label_JobName.TabIndex = 1;
-            this.label_JobName.Text = "Job Name";
-            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.label_Salary);
@@ -87,7 +75,7 @@
             this.flowLayoutPanel2.Controls.Add(this.label_NumberApprovedCandidates);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 100);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 207);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel2.Size = new System.Drawing.Size(381, 269);
@@ -146,7 +134,7 @@
             this.flowLayoutPanel3.Controls.Add(this.button_Edit);
             this.flowLayoutPanel3.Controls.Add(this.button_delete);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 378);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 483);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel3.Size = new System.Drawing.Size(381, 100);
@@ -280,6 +268,31 @@
             this.button_delete.Values.Text = "";
             this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
+            // textBox_JobName
+            // 
+            this.textBox_JobName.BorderThickness = 0;
+            this.textBox_JobName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_JobName.DefaultText = "";
+            this.textBox_JobName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox_JobName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox_JobName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_JobName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_JobName.FillColor = System.Drawing.Color.LightCyan;
+            this.textBox_JobName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_JobName.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_JobName.ForeColor = System.Drawing.Color.DarkOrange;
+            this.textBox_JobName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_JobName.Location = new System.Drawing.Point(16, 46);
+            this.textBox_JobName.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.textBox_JobName.Multiline = true;
+            this.textBox_JobName.Name = "textBox_JobName";
+            this.textBox_JobName.PasswordChar = '\0';
+            this.textBox_JobName.PlaceholderText = "";
+            this.textBox_JobName.ReadOnly = true;
+            this.textBox_JobName.SelectedText = "";
+            this.textBox_JobName.Size = new System.Drawing.Size(356, 136);
+            this.textBox_JobName.TabIndex = 1;
+            // 
             // UC_Employer_Job
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -289,7 +302,7 @@
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "UC_Employer_Job";
-            this.Size = new System.Drawing.Size(381, 478);
+            this.Size = new System.Drawing.Size(381, 583);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -302,7 +315,6 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label_PostedTime;
-        private System.Windows.Forms.Label label_JobName;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton button_Edit;
@@ -311,5 +323,6 @@
         private System.Windows.Forms.Label label_Deadline;
         private System.Windows.Forms.Label label_NumberAppliedCandidates;
         private System.Windows.Forms.Label label_NumberApprovedCandidates;
+        private Guna.UI2.WinForms.Guna2TextBox textBox_JobName;
     }
 }
