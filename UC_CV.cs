@@ -352,7 +352,6 @@ namespace Job_Application_Management
             {
                 if (control is UC_Education uc)
                 {
-                    MessageBox.Show(words[i]);
                     uc.DateTimePicker_UniversityStartDate.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }
