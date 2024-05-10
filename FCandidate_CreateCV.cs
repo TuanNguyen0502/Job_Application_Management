@@ -16,11 +16,12 @@ namespace Job_Application_Management
         private string cddid;
         // Danh sách các CV được tạo ban đầu từ các ứng viên
         private string role;
-        public FCandidate_CreateCV(string cddID, string role)
+        public FCandidate_CreateCV(string cddID, string role, CV cv)
         {
             InitializeComponent();
             this.cddid = cddID;
             uC_CV1.CddID = cddID;
+            uC_CV1.CvID = cv.ID;
             uC_CV1.CreateCV += createCV_Cick;
             uC_CV1.RemoveCV += removeCVValid_Click;
             uC_CV1.AddEdu += addEducation_Click;
