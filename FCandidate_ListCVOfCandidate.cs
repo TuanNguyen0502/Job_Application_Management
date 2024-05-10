@@ -28,8 +28,14 @@ namespace Job_Application_Management
             foreach (var item in lstItems)
             {
                 item.Remove_DescribeCV += btn_RemoveDescibesCV_Click;
+                item.Describe_Click += btn_Describe_Click;
                 flp_ContainsCV.Controls.Add(item);
             }
+        }
+        private void btn_Describe_Click(object sender, ButtonClickEventArgs e)
+        {
+            FCandidate_CreateCV create = new FCandidate_CreateCV(cddid, "Read");
+            create.ShowDialog();
         }
 
         private void btn_RemoveDescibesCV_Click(object sender, ButtonClickEventArgs e)

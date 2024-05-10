@@ -28,6 +28,7 @@ namespace Job_Application_Management
             uC_CV1.AddCer += addCertification_Click;
             this.role=role;
         }
+        public UserControl UC_CV1 { get { return uC_CV1; } }
         public string Role { get => role; set => role = value; }
         private void FCandidate_CreateCV_Load(object sender, EventArgs e)
         {

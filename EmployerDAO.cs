@@ -74,11 +74,17 @@ namespace Job_Application_Management
 
         public void UpdateInterview(Interview interview)
         {
-            string sqlStr = string.Format($"UPDATE Interviews SET InterviewTime = '{interview.InterviewTime}', Note = N'{interview.Note}' " +
-                $"WHERE ID = '{interview.Id}'");
-            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            string sqlStr = "UPDATE Interviews SET InterviewTime = @InterviewTime, Note = @Note " +
+                            "WHERE ID = @ID";
+            SqlParameter[] lstParams =
             {
-                MessageBox.Show("Successfully updated interview");
+                new SqlParameter("@ID", SqlDbType.Int) {Value = interview.Id},
+                new SqlParameter("@InterviewTime", SqlDbType.DateTime) {Value = interview.InterviewTime},
+                new SqlParameter("@Note", SqlDbType.NVarChar) {Value = interview.Note},
+            };
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr, lstParams))
+            {
+                MessageBox.Show("Update interview time successfully");
             }
         }
 

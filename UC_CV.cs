@@ -246,6 +246,7 @@ namespace Job_Application_Management
             textBox_Address.Text = can.Address;
             textBox_Phone.Text = can.Phone;
             textBox_Email.Text = can.Email;
+            richTextBox_CareerGoal.Text = "02 năm kinh nghiệm đào tạo kỹ năng bán hàng và kỹ năng mềm tại trường đại học và doanh nghiệp. Kinh nghiệm đứng lớp 50 - 500 học viên. Có thế mạnh về thiết kế chương trình, đào tạo trực tuyến và xây dựng chuẩn đầu ra. Đang tìm kiếm cơ hội làm việc tại vị trí [X] để đóng góp gia tăng chất lượng chương trình đào tạo cho công ty [Y]";
         }
         private void UC_CV_Load(object sender, EventArgs e)
         {
@@ -264,6 +265,7 @@ namespace Job_Application_Management
             }
             else
             {
+                CV_LoadData();
                 LoadCandidateInfo();
             }
         }
@@ -271,11 +273,25 @@ namespace Job_Application_Management
         #region Set value for Education
         private void SetUniversity(string universityName, string major, string gpa, string universityStartDate, string universityEndDate)
         {
-            SetUniversityName(universityName);
-            SetMajor(major);
-            SetGpa(gpa);
-            SetUniversityStartDate(universityStartDate);
-            SetUniversityEndDate(universityEndDate);
+
+            if (universityName != null && major != null && gpa != null && universityStartDate != null && universityEndDate != null)
+            {
+                string[] words = universityName.Split('/');
+                int i = 0;
+                foreach (Control control in flp_Educations.Controls)
+                {
+                    if (control is UC_Education uc)
+                    {
+                        uc.TextBox_University.Text = words[i];
+                        i++;
+                    }
+                }
+                SetUniversityName(universityName);
+                SetMajor(major);
+                SetGpa(gpa);
+                SetUniversityStartDate(universityStartDate);
+                SetUniversityEndDate(universityEndDate);
+            }
         }
         private void SetUniversityName(string UniversityName)
         {
@@ -350,19 +366,22 @@ namespace Job_Application_Management
         #region Set value for Experiences
         private void SetCompany(string companyName, string workplace, string detail, string companyStartDate, string companyEndDate)
         {
-            string[] words = companyName.Split('/');
-            if (words.Length > 1)
+            if (companyName != null && workplace != null && detail != null && companyStartDate != null && companyEndDate != null)
             {
-                for (int i = 0; i < words.Length - 1; i++)
+                string[] words = companyName.Split('/');
+                if (words.Length > 1)
                 {
-                    flp_Experiences.Controls.Add(new UC_Experiences());
+                    for (int i = 0; i < words.Length - 1; i++)
+                    {
+                        flp_Experiences.Controls.Add(new UC_Experiences());
+                    }
                 }
-            }
-            SetCompanyName(companyName);
-            SetWorkPlace(workplace);
-            SetDetail(detail);
-            SetCompanyStartDate(companyStartDate);
-            SetCompanyEndDate(companyEndDate);
+                SetCompanyName(companyName);
+                SetWorkPlace(workplace);
+                SetDetail(detail);
+                SetCompanyStartDate(companyStartDate);
+                SetCompanyEndDate(companyEndDate);
+            }    
         }
         private void SetCompanyName(string companyName)
         {
@@ -433,16 +452,19 @@ namespace Job_Application_Management
         #region Set value for Certifications
         private void SetCertification(string certification, string certificationDate)
         {
-            string[] words = certification.Split('/');
-            if (words.Length > 1)
+            if (certification != null && certificationDate != null)
             {
-                for (int j = 0; j < words.Length - 1; j++)
+                string[] words = certification.Split('/');
+                if (words.Length > 1)
                 {
-                    flp_Certifications.Controls.Add(new UC_Certification());
+                    for (int j = 0; j < words.Length - 1; j++)
+                    {
+                        flp_Certifications.Controls.Add(new UC_Certification());
+                    }
                 }
-            }
-            SetCertificationName(certification);
-            SetCertificationDate(certificationDate);
+                SetCertificationName(certification);
+                SetCertificationDate(certificationDate);
+            }    
         }
         private void SetCertificationName(string Certification)
         {

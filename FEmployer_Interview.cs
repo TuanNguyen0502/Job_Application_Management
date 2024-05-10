@@ -118,7 +118,7 @@ namespace Job_Application_Management
         {
             DateTime dateTime = new DateTime(dateTimePicker_Date.Value.Year, dateTimePicker_Date.Value.Month, dateTimePicker_Date.Value.Day, 
                 dateTimePicker_Time.Value.Hour, dateTimePicker_Time.Value.Minute, dateTimePicker_Time.Value.Second);
-
+            
             if (interview.InterviewTime != dateTime && !CheckInterviewTime(dateTime))
             {
                 return;
@@ -132,6 +132,7 @@ namespace Job_Application_Management
             else
             {
                 employerDAO.UpdateInterview(interview);
+                MessageBox.Show("ok");
             }
         }
 
