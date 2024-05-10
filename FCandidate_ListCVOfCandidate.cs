@@ -49,10 +49,11 @@ namespace Job_Application_Management
                 LoadCvs();
             }
         }
-
+        public event EventHandler<ButtonClickEventArgs> SelectCV_Click;
         private void btn_Select_Click(object sender, ButtonClickEventArgs e)
         {
-
+            this.Close();
+            SelectCV_Click?.Invoke(this, new ButtonClickEventArgs(e.Cv));
         }
 
         public void SetEmpty()

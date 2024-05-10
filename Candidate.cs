@@ -39,9 +39,65 @@ namespace Job_Application_Management
                 }
             }
         }
-        public string Nominee { get => nominee; set => nominee = value; }
-        public string Education { get => education; set => education = value; }
-        public string Address { get => address; set => address = value; }
-        public string JobName { get => jobname; set => jobname = value; }
+        public string Nominee 
+        { 
+            get => nominee; 
+            set
+            {
+                if (value == null || value == "")
+                {
+                    MessageBox.Show("Chưa chỉ định công việc muốn ứng tuyển");
+                }
+                else
+                {
+                    nominee = value;
+                }
+            } 
+        }
+        public string Education 
+        { 
+            get => education;
+            set
+            {
+                if (value == null || value == "")
+                {
+                    MessageBox.Show("Chưa chỉ định trường đại học");
+                }
+                else
+                {
+                    education = value;
+                }
+            }
+        }
+        public string Address 
+        { 
+            get => address;
+            set
+            {
+                if (value == null || value == "")
+                {
+                    MessageBox.Show("Chưa chỉ định địa chỉ");
+                }
+                else
+                {
+                    address = value;
+                }
+            }
+        }
+        public string JobName 
+        { 
+            get => jobname;
+            set
+            {
+                if (value == null || value == "")
+                {
+                    MessageBox.Show("Chưa chỉ định tên công việc");
+                }
+                else
+                {
+                    jobname = value;
+                }
+            }
+        }
     }
 }

@@ -178,20 +178,29 @@ namespace Job_Application_Management
             com.ShowDialog();
         }
 
-        private void btnApply_Click(object sender, EventArgs e)
+        private void btn_SelectCV_Click (object sender, ButtonClickEventArgs e)
         {
-            CV cv = canDAO.GetAvailableCVByCandidateID(cddid);
+            CV cv = canDAO.GetAvailableCVByCandidateID(e.Cv.ID, cddid);
             if (cv != null)
             {
-                canDAO.SaveResumeToDatabase(cv, jobid);
-                canDAO.AddAppliedJob(jobid, cddid);
-                btnApply.Enabled = false;
-                btnApply.BackColor = Color.Gray;
+                if (canDAO.SaveResumeToDatabase(cv, jobid))
+                {
+                    canDAO.AddAppliedJob(jobid, cddid);
+                    btnApply.Enabled = false;
+                    btnApply.BackColor = Color.Gray;
+                }
             }
             else
             {
                 MessageBox.Show("CV chưa được tạo sẵn. Hãy tạo sẵn (đăng ký) CV trước khi ứng tuyển");
             }
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            FCandidate_ListCVOfCandidate lstCV = new FCandidate_ListCVOfCandidate(cddid);
+            lstCV.SelectCV_Click += btn_SelectCV_Click;
+            lstCV.ShowDialog();
         }
 
         private void btnSaved_Click(object sender, EventArgs e)

@@ -320,19 +320,20 @@ namespace Job_Application_Management
             }
         }
 
-        public CV GetAvailableCVByCandidateID(string cddid)
+        public CV GetAvailableCVByCandidateID(int cvID, string cddid)
         {
             CV cv = new CV();
             sqlQuery = "SELECT *"+
                        " FROM CV"+
-                       " WHERE CVOwner = @CddID";
+                       " WHERE ID = @ID";
             SqlParameter[] lstParam =
             {
-                new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cddid},
+                new SqlParameter("@ID", SqlDbType.VarChar) {Value = cvID},
             };
             List<Dictionary<string,object>> keyValues = dbConn.ExecuteReaderData(sqlQuery, lstParam);
             foreach(var item in keyValues)
             {
+                cv.ID = cvID;
                 cv.CddID = cddid;
                 cv.Nominee = (string)item["Nominee"];
                 cv.Objective = (string)item["Objective"];
@@ -353,7 +354,7 @@ namespace Job_Application_Management
             }
             return null;
         }
-        public void SaveResumeToDatabase(CV cv, int JobID)
+        public bool SaveResumeToDatabase(CV cv, int JobID)
         {
             if (cv != null)
             {
@@ -364,32 +365,35 @@ namespace Job_Application_Management
                 {
                 new SqlParameter("@CddID", SqlDbType.VarChar) {Value = cv.CddID},
                 new SqlParameter("@JobID", SqlDbType.Int) {Value = JobID},
-                new SqlParameter("@Objective", SqlDbType.Text) {Value = cv.Objective},
+                new SqlParameter("@Objective", SqlDbType.NVarChar) {Value = cv.Objective},
                 new SqlParameter("@UniversityName", SqlDbType.NVarChar) {Value = cv.UniversityName},
                 new SqlParameter("@Major", SqlDbType.NVarChar) {Value = cv.Major},
                 new SqlParameter("@GPA", SqlDbType.NVarChar) {Value = cv.Gpa},
-                new SqlParameter("@UniversityStartDate", SqlDbType.Date) {Value = cv.UniversityStartDate},
-                new SqlParameter("@UniversityEndDate", SqlDbType.Date) {Value = cv.UniversityEndDate},
+                new SqlParameter("@UniversityStartDate", SqlDbType.NVarChar) {Value = cv.UniversityStartDate},
+                new SqlParameter("@UniversityEndDate", SqlDbType.NVarChar) {Value = cv.UniversityEndDate},
                 new SqlParameter("@CompanyName", SqlDbType.NVarChar) {Value = cv.CompanyName},
                 new SqlParameter("@WorkPlace", SqlDbType.NVarChar) {Value = cv.WorkPlace},
-                new SqlParameter("@Detail", SqlDbType.Text) {Value = cv.WorkedDetail},
-                new SqlParameter("@CompanyStartDate", SqlDbType.Date) {Value = cv.CompanyStartDate},
-                new SqlParameter("@CompanyEndDate", SqlDbType.Date) {Value = cv.CompanyEndDate},
+                new SqlParameter("@Detail", SqlDbType.NVarChar) {Value = cv.WorkedDetail},
+                new SqlParameter("@CompanyStartDate", SqlDbType.NVarChar) {Value = cv.CompanyStartDate},
+                new SqlParameter("@CompanyEndDate", SqlDbType.NVarChar) {Value = cv.CompanyEndDate},
                 new SqlParameter("@CertificationName", SqlDbType.NVarChar) {Value = cv.Certification},
-                new SqlParameter("@CertificationDate", SqlDbType.Date) {Value = cv.CertificationDate},
+                new SqlParameter("@CertificationDate", SqlDbType.NVarChar) {Value = cv.CertificationDate},
                 };
                 if (dbConn.ExecuteWriteDataCheck(sqlQuery, lstParams))
                 {
                     MessageBox.Show("Lưu hồ sơ ứng tuyển của ứng viên thành công");
+                    return true;
                 }
                 else
                 {
                     MessageBox.Show("Lưu hồ sơ ứng viên thất bại");
+                    return false;
                 }
             }
             else
             {
                 MessageBox.Show("CV be null. Check CV");
+                return false;
             }
         }
         public bool CheckCandidateExistsInResume(string Owner)

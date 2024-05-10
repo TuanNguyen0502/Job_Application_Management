@@ -241,7 +241,8 @@ SELECT *
 FROM CV INNER JOIN Candidates C ON CV.CVOwner = C.CddID
 WHERE CV.ID = 3
 
-SELECT * FROM CV
+SELECT * FROM AppliedJobs
+DELETE CV WHERE ID = 4
 
 SELECT emp.CompanyName, itv.InterviewTime, itv.Note, can.CddName, cv.Nominee
 FROM InterviewsByCV itv

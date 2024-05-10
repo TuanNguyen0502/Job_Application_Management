@@ -155,7 +155,7 @@ namespace Job_Application_Management
             {
                 if (control is UC_Experiences uc)
                 {
-                    CompanyName += uc.RichTextBox_Detail + "/";
+                    CompanyName += uc.RichTextBox_Detail.Text + "/";
                 }
             }
             if (CompanyName.Length > 0) { return CompanyName.Substring(0, CompanyName.Length - 1); }
@@ -352,7 +352,6 @@ namespace Job_Application_Management
             {
                 if (control is UC_Education uc)
                 {
-                    MessageBox.Show(words[i]);
                     uc.DateTimePicker_UniversityStartDate.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }

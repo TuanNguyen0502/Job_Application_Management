@@ -21,7 +21,8 @@ namespace Job_Application_Management
             InitializeComponent();
             this.cddid = cddID;
             uC_CV1.CddID = cddID;
-            uC_CV1.CvID = cv.ID;
+            if (cv != null)
+                uC_CV1.CvID = cv.ID;
             uC_CV1.CreateCV += createCV_Cick;
             uC_CV1.RemoveCV += removeCVValid_Click;
             uC_CV1.AddEdu += addEducation_Click;
