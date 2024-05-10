@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,7 @@ namespace Job_Application_Management
         private int numberApproved;
 
         public Label Label_PostedTime { get => label_PostedTime; set => label_PostedTime = value; }
-        public Label Label_JobName { get => label_JobName; set => label_JobName = value; }
+        public Guna2TextBox Label_JobName { get => textBox_JobName; set => textBox_JobName = value; }
         public KryptonButton Button_Edit { get => button_Edit; set => button_Edit = value; }
         public KryptonButton Button_delete { get => button_delete; set => button_delete = value; }
         public int JobID { get => jobID; set => jobID = value; }
