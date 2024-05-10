@@ -44,10 +44,6 @@ namespace Job_Application_Management
         {
             FEmployer_Interview fEmployer_Interview = new FEmployer_Interview(empID, cddID, jobID);
             fEmployer_Interview.ShowDialog();
-            if (fEmployer_Interview.DialogResult == DialogResult.Cancel)
-            {
-                Parent.Controls.Remove(this);
-            }
         }
     }
 }

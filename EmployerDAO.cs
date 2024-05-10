@@ -65,10 +65,14 @@ namespace Job_Application_Management
 
         public void DeleteInterview(Interview interview)
         {
-            string sqlStr = string.Format($"DELETE FROM Interviews WHERE ID = '{interview.Id}'");
-            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            string sqlStr = "DELETE FROM Interviews WHERE ID = @ID";
+            SqlParameter[] lstParams =
             {
-                MessageBox.Show("Successfully cleared interview time");
+                new SqlParameter("@ID", SqlDbType.Int) {Value = interview.Id},
+            };
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr, lstParams))
+            {
+                MessageBox.Show("Successfully Delete interview time");
             }
         }
 
@@ -830,20 +834,29 @@ namespace Job_Application_Management
 
         public void UpdateInterviewByCV(Interview interview)
         {
-            string sqlStr = string.Format($"UPDATE InterviewsByCV SET InterviewTime = '{interview.InterviewTime}', Note = N'{interview.Note}' " +
-                $"WHERE ID = '{interview.Id}'");
-            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            string sqlStr = "UPDATE InterviewsByCV SET InterviewTime = @InterviewTime, Note = @Note WHERE ID = @ID ";
+            SqlParameter[] lstParams =
             {
-                MessageBox.Show("Successfully updated interview");
+                new SqlParameter("@ID", SqlDbType.VarChar) {Value = interview.Id},
+                new SqlParameter("@InterviewTime", SqlDbType.DateTime) {Value = interview.InterviewTime},
+                new SqlParameter("@Note", SqlDbType.NVarChar) {Value = interview.Note},
+            };
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr, lstParams))
+            {
+                MessageBox.Show("Update interview time successfully");
             }
         }
 
         public void DeleteInterviewByCV(Interview interview)
         {
-            string sqlStr = string.Format($"DELETE FROM InterviewsByCV WHERE ID = '{interview.Id}'");
-            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+            string sqlStr = "DELETE FROM InterviewsByCV WHERE ID = @ID";
+            SqlParameter[] lstParams =
             {
-                MessageBox.Show("Successfully cleared interview time");
+                new SqlParameter("@ID", SqlDbType.Int) {Value = interview.Id},
+            };
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr, lstParams))
+            {
+                MessageBox.Show("Successfully Delete interview time");
             }
         }
     }
