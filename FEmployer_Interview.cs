@@ -141,7 +141,7 @@ namespace Job_Application_Management
             {
                 if (jobID == 0)
                 {
-
+                    employerDAO.DeleteInterviewByCV(interview);
                 }
                 else
                 {
