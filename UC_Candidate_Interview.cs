@@ -15,18 +15,34 @@ namespace Job_Application_Management
         private Job job;
         private Interview interview;
         private Candidate can;
-        public UC_Candidate_Interview(Job job, Interview interview, Candidate can)
+        private string role;
+        public UC_Candidate_Interview(Job job, Interview interview, Candidate can, string role)
         {
             InitializeComponent();
             this.job = job;
             this.interview = interview;
             this.can=can;
-            SetValueForControls();
+            this.role=role;
+            if (role == "Interview")
+            {
+                SetValueForControls();
+            }
+            else
+            {
+                SetValueForControlsOfCV();
+            }
         }
         public void SetValueForControls()
         {
             lbl_CompanyName.Text = job.CompanyName;
             label_JobName.Text = job.Name;
+            label_InterviewTime.Text = interview.InterviewTime.ToLongDateString();
+            label_Note.Text = interview.Note;
+        }
+        public void SetValueForControlsOfCV()
+        {
+            lbl_CompanyName.Text = job.CompanyName;
+            label_JobName.Text = can.Nominee;
             label_InterviewTime.Text = interview.InterviewTime.ToLongDateString();
             label_Note.Text = interview.Note;
         }

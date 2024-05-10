@@ -241,4 +241,11 @@ SELECT *
 FROM CV INNER JOIN Candidates C ON CV.CVOwner = C.CddID
 WHERE CV.ID = 3
 
-SELECT * FROM Jobs
+SELECT * FROM CV
+
+SELECT emp.CompanyName, itv.InterviewTime, itv.Note, can.CddName, cv.Nominee
+FROM InterviewsByCV itv
+JOIN Employers emp ON itv.EmpID = emp.ID
+JOIN Candidates can ON itv.CddID = can.CddID
+JOIN CV cv ON can.CddID = cv.CVOwner
+WHERE can.CddID = 'CDD001';
