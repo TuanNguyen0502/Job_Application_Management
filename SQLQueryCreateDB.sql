@@ -250,3 +250,18 @@ JOIN Employers emp ON itv.EmpID = emp.ID
 JOIN Candidates can ON itv.CddID = can.CddID
 JOIN CV cv ON can.CddID = cv.CVOwner
 WHERE can.CddID = 'CDD001';
+
+ALTER TABLE Jobs
+ALTER  COLUMN Name nvarchar(max) 
+ALTER TABLE Jobs
+ALTER  COLUMN JobDecription nvarchar(max) 
+ALTER TABLE Jobs
+ALTER  COLUMN Experience nvarchar(max) 
+ALTER TABLE Jobs
+ALTER  COLUMN Benefit nvarchar(max) 
+ALTER TABLE Jobs
+ALTER  COLUMN RequestCdd nvarchar(max) 
+ALTER TABLE Jobs
+ALTER  COLUMN JobDecription nvarchar(max)
+ALTER TABLE Jobs
+ALTER  COLUMN WorkDuration nvarchar(max)

@@ -673,7 +673,7 @@ namespace Job_Application_Management
                 cv.UniversityStartDate = (string)row["UniversityStartDate"];
                 cv.UniversityEndDate = (string)row["UniversityEndDate"];
                 cv.CompanyName = (string)row["CompanyName"];
-                cv.WorkPlace = (string)row["Workplace"];
+                cv.WorkPlace = (string)row["WorkPlace"];
                 cv.WorkedDetail = (string)row["Detail"];
                 cv.CompanyStartDate = (string)row["CompanyStartDate"];
                 cv.CompanyEndDate = (string)row["CompanyEndDate"];
