@@ -29,12 +29,14 @@ namespace Job_Application_Management
             {
                 item.Remove_DescribeCV += btn_RemoveDescibesCV_Click;
                 item.Describe_Click += btn_Describe_Click;
+                item.Select_Click += btn_Select_Click;
                 flp_ContainsCV.Controls.Add(item);
             }
         }
         private void btn_Describe_Click(object sender, ButtonClickEventArgs e)
         {
-            FCandidate_CreateCV create = new FCandidate_CreateCV(cddid, "Read");
+            
+            FCandidate_CreateCV create = new FCandidate_CreateCV(cddid, "Read", e.Cv);
             create.ShowDialog();
         }
 
@@ -46,6 +48,11 @@ namespace Job_Application_Management
                 canDAO.RemoveCVValid(e.Cv.ID);
                 LoadCvs();
             }
+        }
+
+        private void btn_Select_Click(object sender, ButtonClickEventArgs e)
+        {
+
         }
 
         public void SetEmpty()
@@ -67,7 +74,7 @@ namespace Job_Application_Management
 
         private void button_Save_Click(object sender, EventArgs e)
         {
-            FCandidate_CreateCV createCV = new FCandidate_CreateCV(cddid, "Write");
+            FCandidate_CreateCV createCV = new FCandidate_CreateCV(cddid, "Write", null);
             createCV.ShowDialog();
         }
 

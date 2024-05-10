@@ -48,5 +48,10 @@ namespace Job_Application_Management
         {
             Describe_Click?.Invoke(this, new ButtonClickEventArgs(cv));
         }
+        public event EventHandler<ButtonClickEventArgs> Select_Click;
+        private void circleButton_Select_Click(object sender, EventArgs e)
+        {
+            Select_Click?.Invoke(this, new ButtonClickEventArgs(cv));
+        }
     }
 }

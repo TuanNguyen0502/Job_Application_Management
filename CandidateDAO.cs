@@ -842,7 +842,16 @@ namespace Job_Application_Management
             }
             return lstItems;
         }
-
+        public string GetCVOwnerByCVID(int cvID)
+        {
+            sqlQuery = "SELECT CVOwner FROM CV WHERE ID = @cvID";
+            SqlParameter[] lstParam =
+            {
+                new SqlParameter("@cvID", SqlDbType.Int) {Value = cvID }
+            };
+            string cddid = dbConn.ExecuteScalar(sqlQuery, lstParam);
+            return cddid;
+        }
         #endregion
     }
 }
