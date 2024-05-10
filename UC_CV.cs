@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using System.Security.Cryptography;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace Job_Application_Management
 {
@@ -94,7 +95,9 @@ namespace Job_Application_Management
             {
                 if (control is UC_Education uc)
                 {
-                    StartDate += uc.DateTimePicker_UniversityStartDate.Value.ToShortDateString() + "#";
+                    StartDate += uc.DateTimePicker_UniversityStartDate.Value.Year + "-" +
+                        uc.DateTimePicker_UniversityStartDate.Value.Month + "-" +
+                        uc.DateTimePicker_UniversityStartDate.Value.Day + "/";
                 }
             }
             if (StartDate.Length > 0) { return StartDate.Substring(0, StartDate.Length - 1); }
@@ -107,7 +110,9 @@ namespace Job_Application_Management
             {
                 if (control is UC_Education uc)
                 {
-                    EndDate += uc.DateTimePicker_UniversityEndDate.Value.ToShortDateString() + "#";
+                    EndDate += uc.DateTimePicker_UniversityEndDate.Value.Year + "-" +
+                        uc.DateTimePicker_UniversityEndDate.Value.Month + "-" +
+                        uc.DateTimePicker_UniversityEndDate.Value.Day + "/";
                 }
             }
             if (EndDate.Length > 0) { return EndDate.Substring(0, EndDate.Length - 1); }
@@ -163,7 +168,9 @@ namespace Job_Application_Management
             {
                 if (control is UC_Experiences uc)
                 {
-                    StartDate += uc.DateTimePicker_CompanyStartDate.Value.ToShortDateString() + "#";
+                    StartDate += uc.DateTimePicker_CompanyStartDate.Value.Year + "-" +
+                        uc.DateTimePicker_CompanyStartDate.Value.Month + "-" +
+                        uc.DateTimePicker_CompanyStartDate.Value.Day + "/";
                 }
             }
             if (StartDate.Length > 0) { return StartDate; }
@@ -176,7 +183,9 @@ namespace Job_Application_Management
             {
                 if (control is UC_Experiences uc)
                 {
-                    EndDate += uc.DateTimePicker_CompanyEndDate.Value.ToShortDateString() + "#";
+                    EndDate += uc.DateTimePicker_CompanyEndDate.Value.Year + "-" +
+                                uc.DateTimePicker_CompanyEndDate.Value.Month + "-" +
+                                uc.DateTimePicker_CompanyEndDate.Value.Day + "/";
                 }
             }
             if (EndDate.Length > 0) { return EndDate.Substring(0, EndDate.Length - 1); }
@@ -206,7 +215,9 @@ namespace Job_Application_Management
             {
                 if (control is UC_Certification uc)
                 {
-                    Certification += uc.DateTimePicker_Certification.Value.ToShortTimeString() + "#";
+                    Certification += uc.DateTimePicker_Certification.Value.Year + "-" +
+                        uc.DateTimePicker_Certification.Value.Month + "-" +
+                        uc.DateTimePicker_Certification.Value.Day + "/";
                 }
             }
             if (Certification.Length > 0) { return Certification.Substring(0, Certification.Length - 1); }
@@ -277,13 +288,11 @@ namespace Job_Application_Management
             if (universityName != null && major != null && gpa != null && universityStartDate != null && universityEndDate != null)
             {
                 string[] words = universityName.Split('/');
-                int i = 0;
-                foreach (Control control in flp_Educations.Controls)
+                if (words.Length > 1)
                 {
-                    if (control is UC_Education uc)
+                    for (int i = 0; i < words.Length - 1; i++)
                     {
-                        uc.TextBox_University.Text = words[i];
-                        i++;
+                        flp_Educations.Controls.Add(new UC_Education());
                     }
                 }
                 SetUniversityName(universityName);
@@ -337,26 +346,28 @@ namespace Job_Application_Management
 
         private void SetUniversityStartDate(string UniStartDate)
         {
-            string[] words = UniStartDate.Split('#');
+            MessageBox.Show(UniStartDate);
+            string[] words = UniStartDate.Split('/');
             int i = 0;
             foreach (Control control in flp_Educations.Controls)
             {
                 if (control is UC_Education uc)
                 {
-                    //uc.DateTimePicker_UniversityStartDate.Value = Convert.ToDateTime(words[i]);
+                    MessageBox.Show(words[i]);
+                    uc.DateTimePicker_UniversityStartDate.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }
             }
         }
         private void SetUniversityEndDate(string EndDate)
         {
-            string[] words = EndDate.Split('#');
+            string[] words = EndDate.Split('/');
             int i = 0;
             foreach (Control control in flp_Educations.Controls)
             {
                 if (control is UC_Education uc)
                 {
-                    //uc.DateTimePicker_UniversityEndDate.Value = Convert.ToDateTime(words[i]);
+                    uc.DateTimePicker_UniversityEndDate.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }
             }
@@ -424,26 +435,26 @@ namespace Job_Application_Management
         }
         private void SetCompanyStartDate(string CompanyStartDate)
         {
-            string[] words = CompanyStartDate.Split('#');
+            string[] words = CompanyStartDate.Split('/');
             int i = 0;
             foreach (Control control in flp_Experiences.Controls)
             {
                 if (control is UC_Experiences uc)
                 {
-                    //uc.DateTimePicker_CompanyStartDate.Value = Convert.ToDateTime(words[i]);
+                    uc.DateTimePicker_CompanyStartDate.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }
             }
         }
         private void SetCompanyEndDate(string CompanyEndDate)
         {
-            string[] words = CompanyEndDate.Split('#');
+            string[] words = CompanyEndDate.Split('/');
             int i = 0;
             foreach (Control control in flp_Experiences.Controls)
             {
                 if (control is UC_Experiences uc)
                 {
-                    //uc.DateTimePicker_CompanyEndDate.Value = Convert.ToDateTime(words[i]);
+                    uc.DateTimePicker_CompanyEndDate.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }
             }
@@ -481,13 +492,13 @@ namespace Job_Application_Management
         }
         private void SetCertificationDate(string Certification)
         {
-            string[] words = Certification.Split('#');
+            string[] words = Certification.Split('/');
             int i = 0;
             foreach (Control control in flp_Certifications.Controls)
             {
                 if (control is UC_Certification uc)
                 {
-                    //uc.DateTimePicker_Certification.Value = Convert.ToDateTime(words[i]);
+                    uc.DateTimePicker_Certification.Value = Convert.ToDateTime(words[i]);
                     i++;
                 }
             }
