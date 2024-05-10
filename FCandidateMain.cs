@@ -90,13 +90,13 @@ namespace Job_Application_Management
                     break;
                 }
             }
-            flp_ContainsJobs.Controls.Add(candidateMain);
             candidateMain.ClickToJob += clickToShowJobDetails_Click;
             candidateMain.Lbl_Salary += clickToShowJobDetails_Click;
             candidateMain.Lbl_Address += clickToShowJobDetails_Click;
             candidateMain.Lbl_JobName += clickToShowJobDetails_Click;
             candidateMain.Lbl_CompanyName += clickToShowJobDetails_Click;
             candidateMain.Cptb_Company += clickToShowJobDetails_Click;
+            flp_ContainsJobs.Controls.Add(candidateMain);
         }
         public void ListJobs()
         {

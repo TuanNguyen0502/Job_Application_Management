@@ -15,8 +15,8 @@ namespace Job_Application_Management
         CandidateDAO canDAO = new CandidateDAO();
         private string cddid;
         // Danh sách các CV được tạo ban đầu từ các ứng viên
-        
-        public FCandidate_CreateCV(string cddID)
+        private string role;
+        public FCandidate_CreateCV(string cddID, string role)
         {
             InitializeComponent();
             this.cddid = cddID;
@@ -26,12 +26,23 @@ namespace Job_Application_Management
             uC_CV1.AddEdu += addEducation_Click;
             uC_CV1.AddEx += addExperience_Click;
             uC_CV1.AddCer += addCertification_Click;
+            this.role=role;
         }
+        public string Role { get => role; set => role = value; }
         private void FCandidate_CreateCV_Load(object sender, EventArgs e)
         {
             uC_CV1.Button_Approve.Visible = false;
             uC_CV1.Button_Refuse.Visible = false;
-            CheckCV();
+            uC_CV1.Button_Invite.Visible = false;
+            Authorization();
+        }
+        
+        public void Authorization()
+        {
+            if (Role == "Write")
+            {
+                CheckCV();
+            }
         }
 
         private void CheckCV()

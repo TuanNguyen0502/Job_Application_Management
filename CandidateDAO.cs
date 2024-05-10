@@ -530,8 +530,10 @@ namespace Job_Application_Management
                 candidateProfile.CddID = (string)keyValuePair["CandidateID"];
                 candidateProfile.CompanyName = (string)keyValuePair["CompanyName"];
                 candidateProfile.CddName = (string)keyValuePair["CddName"];
-                candidateProfile.CompanyStartDate = (string)keyValuePair["StartDate"];
-                candidateProfile.CompanyEndDate = (string)keyValuePair["EndDate"];
+                DateTime startDate = (DateTime)keyValuePair["StartDate"];
+                candidateProfile.CompanyStartDate = startDate.ToLongDateString();
+                DateTime endDate = (DateTime)keyValuePair["EndDate"];
+                candidateProfile.CompanyEndDate = endDate.ToLongDateString();
                 UC_WorkHistory uC_WorkHistory = new UC_WorkHistory(candidateProfile);
                 lstWorkHistory.Add(uC_WorkHistory);
             }
@@ -659,18 +661,6 @@ namespace Job_Application_Management
         }
         #endregion
         #region Functions cho kiểm tra số lượng công việc đã lưu với công việc đã ứng tuyển
-        public int CheckJobSaved(int jobid)
-        {
-            sqlQuery = "SELECT COUNT(*)"+
-                       " FROM SavedJobs"+
-                       " WHERE JobID = @jobid";
-            SqlParameter[] lstParams =
-            {
-                new SqlParameter("@jobid", SqlDbType.Int) {Value = jobid}
-            };
-            int res = dbConn.ExecuteScalarGetInt(sqlQuery, lstParams);
-            return res;
-        }
         public int CountJobSaved(string cddid)
         {
             sqlQuery = "SELECT COUNT(*) FROM SavedJobs WHERE CddID = @CddID";
@@ -695,13 +685,9 @@ namespace Job_Application_Management
         #region Update Candidate Information
         public Candidate GetCandidateInfor(string cddid)
         {
-            sqlQuery = "SELECT * FROM Candidates WHERE CddID = @cddid";
-            SqlParameter[] lstParam =
-            {
-                new SqlParameter("@cddid", SqlDbType.VarChar) {Value = cddid}
-            };
+            sqlQuery = $"SELECT * FROM Candidates WHERE CddID = '{cddid}'";
             Candidate candidate = new Candidate();
-            List<Dictionary<string,object>> results = dbConn.ExecuteReaderData(sqlQuery, lstParam);
+            List<Dictionary<string,object>> results = dbConn.ExecuteReaderData(sqlQuery);
             foreach (var row in results)
             {
                 candidate.Id = (string)row["CddID"];
@@ -791,7 +777,7 @@ namespace Job_Application_Management
                 {
                     conn.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("SELECT func_CheckCandidate(@CddID)", conn))
+                    using (SqlCommand cmd = new SqlCommand("SELECT dbo.func_CheckCandidate(@CddID)", conn))
                     {
                         cmd.Parameters.AddWithValue("@CddID", cddid);
 
@@ -855,28 +841,6 @@ namespace Job_Application_Management
                 lstItems.Add(item);
             }
             return lstItems;
-        }
-        public Candidate GetCandidateInfoByID(string cddid)
-        {
-            sqlQuery = "SELECT * FROM Candidates WHERE CddID = @cddid";
-            SqlParameter[] lstParams =
-            {
-                new SqlParameter("@cddid", SqlDbType.VarChar) {Value = cddid}
-            };
-            List<Dictionary<string, object>> keyValuePairs = dbConn.ExecuteReaderData(sqlQuery, lstParams);
-            Candidate can = new Candidate();
-            foreach (var key in keyValuePairs)
-            {
-                can.Id = (string)key["CddID"];
-                can.Name = (string)key["CddName"];
-                can.Phone = (string)key["Phone"];
-                can.Email = (string)key["Email"];
-                can.Address = (string)key["CddAddress"];
-                can.Hometown = (string)key["Hometown"];
-                can.Sex = (string)key["Sex"];
-                can.Education = (string)key["Education"];
-            }
-            return can;
         }
 
         #endregion

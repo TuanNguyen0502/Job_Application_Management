@@ -44,7 +44,7 @@ namespace Job_Application_Management
         }
         public void CheckJobSaved()
         {
-            int flag = canDAO.CheckJobSaved(jobid);
+            int flag = canDAO.CountJobSaved(cddid);
             if (flag > 0)
             {
                 btnSaved.BackColor = Color.DarkGreen;
@@ -65,7 +65,7 @@ namespace Job_Application_Management
             List<UC_AppliedJobs> appliedJobs = canDAO.GetAppliedJobsFromDB(cddid);
             foreach (var applied in appliedJobs)
             {
-                if (jobid == applied.AppliedJobs.Id)
+                if (jobid == applied.AppliedJobs.Id && applied.AppliedJobs.CddID == cddid)
                 {
                     btnApply.Enabled = false;
                     btnApply.BackColor = Color.Gray;
