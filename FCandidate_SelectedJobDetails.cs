@@ -122,8 +122,7 @@ namespace Job_Application_Management
                 this.lblWorkingDuration.Size = new System.Drawing.Size(300, 30);
                 this.lblWorkingDuration.AutoSize = false;
                 this.lblWorkingDuration.TabIndex = 4;
-                int workDuration = (int)item["WorkDuration"];
-                this.lblWorkingDuration.Text = workDuration.ToString();
+                this.lblWorkingDuration.Text = (string)item["WorkDuration"];
                 this.lblWorkingDuration.Font = new Font("Arial", 9, FontStyle.Regular);
                 flpnRecruitment.Controls.Add(lblWorkingDuration);
                 // Request candidate
