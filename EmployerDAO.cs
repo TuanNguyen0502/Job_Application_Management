@@ -632,11 +632,16 @@ namespace Job_Application_Management
         public void AddFavoriteCV(FavoriteCV cv)
         {
             string sqlStr = string.Format($"INSERT INTO FavoriteCV (TimeSaved, CVID, EmpID) " +
-                $"VALUES ('{cv.TimeSaved}', '{cv.CvID}', '{cv.EmpID}')");
-
-            if (dbConnection.ExecuteWriteDataCheck(sqlStr))
+                $"VALUES (@TimeSaved, @CVID, @EmpID)");
+            SqlParameter[] lstParams =
             {
-                MessageBox.Show("Add favorite CV successfully");
+                new SqlParameter("@TimeSaved", SqlDbType.DateTime) {Value = cv.TimeSaved},
+                new SqlParameter("@CVID", SqlDbType.VarChar) {Value = cv.CvID},
+                new SqlParameter("@EmpID", SqlDbType.VarChar) {Value = cv.EmpID},
+            };
+            if (dbConnection.ExecuteWriteDataCheck(sqlStr, lstParams))
+            {
+                MessageBox.Show("Create new interview time successfully");
             }
         }
 
